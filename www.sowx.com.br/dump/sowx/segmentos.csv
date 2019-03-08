@@ -1,0 +1,10 @@
+ID_SEGMENTO,DM_LINK,NR_ORDEM,TX_SEGMENTO,NM_SEGMENTO,DM_SITUACAO
+1,N,10,NULL,Distribuição e Logística,A
+2,N,20,NULL,Manufatura e Produção,A
+3,N,30,NULL,Saúde,A
+4,N,40,NULL,Varejo,A
+5,N,50,NULL,Hotéis,A
+6,N,60,NULL,Lavanderia Industrial,A
+7,N,70,NULL,Moveleiro,A
+8,N,80,NULL,Curtumes,A
+

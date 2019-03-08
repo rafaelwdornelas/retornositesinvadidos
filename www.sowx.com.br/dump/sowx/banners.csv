@@ -1,0 +1,14 @@
+ID_BANNER,TX_LINK,NR_ORDEM,NM_BANNER,DM_SITUACAO
+1,NULL,2,Expedição,A
+2,NULL,2,Banner 2,I
+3,NULL,3,Banner 3,I
+4,NULL,4,Banner 4,I
+5,NULL,5,Banner 5,I
+6,NULL,6,Banner 6,I
+7,NULL,7,Banner 7,I
+8,NULL,8,Banner 8,I
+9,NULL,9,Banner 9,I
+10,NULL,10,Banner 10,I
+11,NULL,4,Transporte,A
+12,http://www.sowx.com.br/solucoes-detalhe.php?id=18,1,iDriving,A
+

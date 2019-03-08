@@ -1,0 +1,17 @@
+oid_programa,tx_texto,nm_imagem,nm_arquivo,nm_programa,nm_descricao,nm_estrutura
+1,.Sistema||Sistema|,NULL,NULL,Sistema,Sistema,1
+2,..Usuário|Filtro_Usuario.php|Usuário|,NULL,Filtro_Usuario.php,Usuário,Usuário,1.01
+3,..Programa|Filtro_Programa.php|Programa|,NULL,Filtro_Programa.php,Programa,Programa,1.02
+4,.Cadastros||Cadastros|,NULL,NULL,Cadastros,Cadastros,2
+5,..Banner|Filtro_Banner.php|Banner|,NULL,Filtro_Banner.php,Banner,Banner,2.01
+6,..Produto|Filtro_Produto.php|Produto|,NULL,Filtro_Produto.php,Produto,Produto,2.02
+7,..Solução|Filtro_Servico.php|Solução|,NULL,Filtro_Servico.php,Solução,Solução,2.03
+8,..Case|Filtro_Case.php|Case|,NULL,Filtro_Case.php,Case,Case,2.04
+9,..Segmento|Filtro_Segmento.php|Segmento|,NULL,Filtro_Segmento.php,Segmento,Segmento,2.05
+10,.Mail||Mail|,NULL,NULL,Mail,Mail,3
+11,..Grupo Mail|Filtro_Grupo_Mail.php|Grupo Mail|,NULL,Filtro_Grupo_Mail.php,Grupo Mail,Grupo Mail,3.01
+12,..Mail|Filtro_Mail.php|Mail|,NULL,Filtro_Mail.php,Mail,Mail,3.02
+13,.Logoff|../login.php|Logoff|,NULL,../login.php,Logoff,Logoff,9
+16,..Exporta E-Mails|Filtro_Gera_Mail.php|Exporta E-Mails|,NULL,Filtro_Gera_Mail.php,Exporta E-Mails,Exporta E-Mails,3.03
+17,..Parceiro|Filtro_Parceiro.php|Parceiro|,NULL,Filtro_Parceiro.php,Parceiro,Parceiro,2.05
+
