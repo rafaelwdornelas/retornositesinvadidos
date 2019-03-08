@@ -1,0 +1,35 @@
+Id,StrObs,StrTime,StrLocal,TxtEvent,BitPublic,DtEndDate,DtStartDate
+48,NULL,14:00,Seminрrio BetРnia,Reuniсo de CLJ III,\x01,NULL,2017-06-03 23:00:00
+23,NULL,09:00,Bispado,Reuniсo de Coordenadores Paroquiais,\x01,NULL,2017-10-06 23:00:00
+22,NULL,09:00,Bispado,Reuniсo de Coordenadores Paroquiais,\x01,NULL,2017-09-01 23:00:00
+21,NULL,09:00,Bispado,Reuniсo de Coordenadores Paroquiais,\x01,NULL,2017-08-04 23:00:00
+15,NULL,09:00,Bispado,Reuniсo de Coordenadores Paroquiais,\x01,NULL,2017-02-03 21:00:00
+16,NULL,09:00,Bispado,Reuniсo de Coordenadores Paroquiais,\x01,NULL,2017-03-03 22:00:00
+17,NULL,09:00,Bispado,Reuniсo de Coordenadores Paroquiais,\x01,NULL,2017-03-31 23:00:00
+18,NULL,09:00,Bispado,Reuniсo de Coordenadores Paroquiais,\x01,NULL,2017-05-05 23:00:00
+19,NULL,09:00,Bispado,Reuniсo de Coordenadores Paroquiais,\x01,NULL,2017-06-02 23:00:00
+20,NULL,09:00,Bispado,Reuniсo de Coordenadores Paroquiais,\x01,NULL,2017-06-30 23:00:00
+25,NULL,10:30,Bispado,Reuniсo de Secretariado Diocesano,\x01,NULL,2017-08-04 23:00:00
+26,NULL,09:00,Bispado,Assemblжia Diocesana,\x01,NULL,2017-11-10 21:00:00
+27,NULL,10:30,Bispado,Avaliaусo com os Departamentos Diocesanos,\x01,NULL,2017-11-10 21:00:00
+28,NULL,09:00,Bispado,Planejamento 2018,\x01,NULL,2017-12-01 21:00:00
+29,NULL,09:00,A Definir,Picnicсo,\x01,NULL,2017-12-02 21:00:00
+30,NULL,14:00,Seminрrio BetРnia,Reuniсo de CLJ III,\x01,NULL,2017-03-18 23:00:00
+31,NULL,14:00,Seminрrio BetРnia,Reuniсo de CLJ III,\x01,NULL,2017-04-01 23:00:00
+32,NULL,14:00,Taquara,Reuniсo de CLJ III,\x01,NULL,2017-05-06 23:00:00
+33,NULL,14:00,Catedral Sсo Luiz,Reuniсo de CLJ III,\x01,NULL,2017-07-08 23:00:00
+34,NULL,09:00,Seminрrio BetРnia,Reuniсo de CLJ III,\x01,NULL,2017-08-19 23:00:00
+35,NULL,14:00,Canela,Reuniсo de CLJ III,\x01,NULL,2017-09-02 23:00:00
+36,NULL,:,Juvenato - Bom Princьpio,Retiro de CLJ III,\x01,2017-11-04 22:00:00,2017-11-03 22:00:00
+37,NULL,14:30,Catedral Sсo Luiz,Ordenaушes Diaconais,\x01,NULL,2017-08-05 23:00:00
+38,NULL,:,A Definir,XIV FAC,\x01,NULL,2017-09-16 23:00:00
+40,NULL,09:00,Catedral/Bispado,"Encontrсo de Formaусo para tios e departamentos de Prж, Pзs, Liturgia, Folclore e Promoушes",\x01,NULL,2017-03-11 22:00:00
+41,NULL,:,Mariрpolis,Retiro de Tios,\x01,2017-05-20 23:00:00,2017-05-19 23:00:00
+42,NULL,08:30,Canela,5ф Jornada Diocesana da Juventude,\x01,NULL,2017-05-26 23:00:00
+43,NULL,09:00,Catedral/Bispado,Encontrсo de Prж e Pзs ќ Celebraусo dos Padroeiros do CLJ,\x01,NULL,2017-07-08 23:00:00
+44,NULL,:,Juvenato - Bom Princьpio,Retiro de Folclore e Liturgia,\x01,2017-05-06 23:00:00,2017-05-05 23:00:00
+45,NULL,:,A Definir,Baile do Amigсo,\x01,NULL,2017-08-04 23:00:00
+50,NULL,08:00,Bispado,Reuniсo de Secretariado Diocesano\t,\x01,NULL,2017-02-03 21:00:00
+47,NULL,:,Parзquias,Adoraусo ao Santьssimo com Indicaусo Coordenaусo Paroquial,\x01,NULL,2017-11-10 21:00:00
+49,NULL,14:00,Seminрrio BetРnia,Reuniсo de CLJ III,\x01,NULL,2017-10-07 23:00:00
+
