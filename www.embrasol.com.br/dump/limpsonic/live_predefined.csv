@@ -1,0 +1,4 @@
+id,group_id,internal_id,browser_ident,welcome,lang_iso,is_default,invitation,auto_welcome,website_push
+0,Atendimento,<blank>,1,"Hello %external_name%, my name is %name%, how may I help you?",EN,0,"Hello, my name is %name%. Do you need help? Start Live-Chat now to get assistance.",1,Website Operator %name% would like to redirect you to this URL:\r\n\r\n%url%
+1,Atendimento,<blank>,1,"Bem vindo ao nosso Chat!  %external_name% , em que posso ajudar? ",PT,1,<blank>,1,<blank>
+

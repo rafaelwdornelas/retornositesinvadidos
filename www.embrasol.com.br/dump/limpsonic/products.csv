@@ -1,0 +1,86 @@
+id_categ,capacidade,peso,index,preco,model,ativo,stock,voltage,dim_gab,dim_cuba,potencia,descricao,image_prod,acabamento,aquecimento,image_thumb
+0,21,22000,,"8.519,95",LS-21-WJ-1/X,1,5,110,540x330x340,504x300x150,300,"Lavadora por ultra-som para canulados, 21 litros , 110 Volts, com aquecimento, gabinete em aรงo inox. Incluso cesto em inox, tampa acrĂ­lica e dreno.",<blank>,Inox,Sim,LS21WJX_th.jpg
+0,21,22000,,"8.519,95",LS-21-WJ-2/X,1,5,220,540x330x340,504x300x150,300,"Lavadora por ultra-som para canulados, 21 litros , 220 Volts, com aquecimento, gabinete em aรงo inox. Incluso cesto em inox, tampa acrĂ­lica e dreno.",<blank>,Inox,Sim,LS21WJX_th.jpg
+1,0.8,4000,,"443,90","LS-0,8D-1",1,5,110,171x180x215,132x145x65,35,"Lavadora por ultra som, 0,8 litros , 110 Volts, sem aquecimento. Leve grรกtis cesto e tampa em inox.",0813detail.jpg,Pintado,Nao,0813acodetail.jpg
+1,1.3,0,,0,"LS-1,3D-3/X",0,0,Bivolt,171x180x215,132x145x100,35,<blank>,<blank>,Inox,Nao,<blank>
+1,1.3,0,,0,"LS-1,3D-2/X",0,0,220,171x180x215,132x145x100,35,<blank>,<blank>,Inox,Nao,<blank>
+1,1.3,0,,0,"LS-1,3D-1/X",0,0,110,171x180x215,132x145x100,35,<blank>,<blank>,Inox,Nao,<blank>
+1,0.8,0,,0,"LS-0,8D-3/X",0,0,Bivolt,171x180x215,132x145x65,35,<blank>,<blank>,Inox,Nao,<blank>
+1,1.3,0,,0,"LS-1,3D-3",0,0,Bivolt,171x180x215,132x145x100,35,<blank>,<blank>,Pintado,Nao,<blank>
+1,1.3,4000,,"530,42","LS-1,3D-2",1,5,220,171x180x215,132x145x100,35,"Lavadora por ultra som, 1,3 litros , 220 Volts, sem aquecimento. Leve grรกtis cesto e tampa em inox.",<blank>,Pintado,Nao,0813acodetail.jpg
+1,0.8,4000,,"472,68","LS-0,8D-2",1,5,220,171x180x215,132x145x65,35,"Lavadora por ultra som, 0,8 litros , 220 Volts, sem aquecimento. Leve grรกtis cesto e tampa em inox.",0813acodetail.jpg,Pintado,Nao,0813acodetail.jpg
+1,0.8,0,,0,"LS-0,8D-3",0,0,Bivolt,171x180x215,132x145x65,35,<blank>,<blank>,Pintado,Nao,<blank>
+1,0.8,0,,0,"LS-0,8D-1/X",0,0,110,171x180x215,132x145x65,35,<blank>,<blank>,Inox,Nao,<blank>
+1,0.8,0,,0,"LS-0,8D-2/X",0,0,220,171x180x215,132x145x65,35,<blank>,<blank>,Inox,Nao,<blank>
+1,1.3,4000,,"492,95","LS-1,3D-1",1,5,110,171x180x215,132x145x100,35,"Lavadora por ultra som, 1,3 litros , 110 Volts, sem aquecimento. Leve grรกtis cesto e tampa em inox.",<blank>,Pintado,Nao,0813acodetail.jpg
+2,2.9,0,,0,LS-3D-3,0,0,Bivolt,171x290x220,140x240x100,70,<blank>,<blank>,Pintado,Nao,<blank>
+2,2.9,5000,,"791,05",LS-3D-1/X,1,5,110,171x290x220,140x240x100,70,"Lavadora por ultra som, 2,9 litros , 110 Volts, sem aquecimento, gabinete em aรงo inox. Incluso cesto e tampa em inox.",<blank>,Inox,Nao,1830detail.jpg
+2,2.9,5000,,"791,05",LS-3D-2/X,1,5,220,171x290x220,140x240x100,70,"Lavadora por ultra som, 2,9 litros , 220 Volts, sem aquecimento, gabinete em aรงo inox. Incluso cesto e tampa em inox.",<blank>,Inox,Nao,1830detail.jpg
+2,2.9,0,,0,LS-3D-3/X,0,0,Bivolt,171x290x220,140x240x100,70,<blank>,<blank>,Inox,Nao,<blank>
+2,2.9,5000,,"811,35",LS-3DA-1,1,5,110,171x290x220,140x240x100,70,"Lavadora por ultra som, 2,9 litros , 110 Volts, com aquecimento. Incluso cesto e tampa em inox.",<blank>,Pintado,Sim,1830acodetail.jpg
+2,2.9,5000,,"811,35",LS-3DA-2,1,5,220,171x290x220,140x240x100,70,"Lavadora por ultra som, 2,9 litros , 220 Volts, com aquecimento. Incluso cesto e tampa em inox.",<blank>,Pintado,Sim,1830acodetail.jpg
+2,2.9,5000,,"892,52",LS-3DA-1/X,1,5,110,171x290x220,140x240x100,70,"Lavadora por ultra som, 2,9 litros , 110 Volts, com aquecimento, gabinete em aรงo inox. Incluso cesto e tampa em inox.",<blank>,Inox,Sim,1830detail.jpg
+2,2.9,5000,,"892,52",LS-3DA-2/X,1,5,220,171x290x220,140x240x100,70,"Lavadora por ultra som, 2,9 litros , 220 Volts, com aquecimento, gabinete em aรงo inox. Incluso cesto e tampa em inox.",<blank>,Inox,Sim,1830detail.jpg
+2,2.9,5000,,"719,45",LS-3D-2,1,5,220,171x290x220,140x240x100,70,"Lavadora por ultra som, 2,9 litros , 220 Volts, sem aquecimento. Incluso cesto e tampa em inox.",<blank>,Pintado,Nao,1830acodetail.jpg
+2,2.9,5000,,"639,97",LS-3D-1,1,5,110,171x290x220,140x240x100,70,"Lavadora por ultra som, 2,9 litros , 110 Volts, sem aquecimento. Incluso cesto e tampa em inox.",<blank>,Pintado,Nao,1830acodetail.jpg
+2,1.8,5000,,"586,97","LS-1,8D-1",1,5,110,171x290x220,140x240x65,70,"Lavadora por ultra som, 1,8 litros , 110 Volts, sem aquecimento. Incluso cesto e tampa em inox.",<blank>,Pintado,Nao,1830acodetail.jpg
+2,1.8,5000,,"654,48","LS-1,8D-2",1,5,220,171x290x220,140x240x65,70,"Lavadora por ultra som, 1,8 litros , 220 Volts, sem aquecimento. Incluso cesto e tampa em inox.",<blank>,Pintado,Nao,1830acodetail.jpg
+2,1.8,0,,0,"LS-1,8D-3",0,0,Bivolt,171x290x220,140x240x65,70,<blank>,<blank>,Pintado,Nao,<blank>
+2,1.8,5000,,"737,28","LS-1,8DA-1",1,5,110,171x290x220,140x240x65,70,"Lavadora por ultra som, 1,8 litros , 110 Volts, com aquecimento. Incluso cesto e tampa em inox.",<blank>,Pintado,Sim,1830acodetail.jpg
+2,1.8,5000,,"737,28","LS-1,8DA-2",1,5,220,171x290x220,140x240x65,70,"Lavadora por ultra som, 1,8 litros , 220 Volts, com aquecimento. Incluso cesto e tampa em inox.",<blank>,Pintado,Sim,1830acodetail.jpg
+2,1.8,5000,,"719,12","LS-1,8D-1/X",1,5,110,171x290x220,140x240x65,70,"Lavadora por ultra som, 1,8 litros , 110 Volts, sem aquecimento. Gabinete em aรงo inox. Incluso cesto e tampa em inox.",<blank>,Inox,Nao,1830detail.jpg
+2,1.8,5000,,"719,12","LS-1,8D-2/X",1,5,220,171x290x220,140x240x65,70,"Lavadora por ultra som, 1,8 litros , 220 Volts, sem aquecimento. Gabinete em aรงo inox. Incluso cesto e tampa em inox.",<blank>,Inox,Nao,1830detail.jpg
+2,1.8,0,,0,"LS-1,8D-3/X",0,0,Bivolt,171x290x220,140x240x65,70,<blank>,<blank>,Inox,Nao,<blank>
+2,1.8,5000,,"811,35","LS-1,8DA-1/X",1,5,110,171x290x220,140x240x65,70,"Lavadora por ultra som, 1,8 litros , 110 Volts, com aquecimento. Gabinete em aรงo inox . Incluso cesto e tampa em inox.",<blank>,Inox,Sim,1830detail.jpg
+2,1.8,5000,,"811,35","LS-1,8DA-2/X",1,5,220,171x290x220,140x240x65,70,"Lavadora por ultra som, 1,8 litros , 220 Volts, com aquecimento. Gabinete em aรงo inox . Incluso cesto e tampa em inox.",<blank>,Inox,Sim,1830detail.jpg
+3,4.7,0,,0,"LS-4,7DA-2",0,0,220,152x255x315, 140 x 240 x 150,90,<blank>,<blank>,Pintado,Sim,<blank>
+3,4.7,0,,0,"LS-4,7DA-1",0,0,110,152x255x315, 140 x 240 x 150,90,<blank>,<blank>,Pintado,Sim,<blank>
+3,4.7,9000,,"1.838,05","LS-4,7DA-2/X",1,5,220,152x255x315, 140 x 240 x 150,90,"Lavadora por ultra som, 4,7 litros , 220 Volts, com aquecimento, gabinete em aรงo inox Incluso cesto,  tampa em inox e dreno.",<blank>,Inox,Sim,47detail.jpg
+3,4.7,9000,,"1.838,05","LS-4,7DA-1/X",1,5,110,152x255x315, 140 x 240 x 150,90,"Lavadora por ultra som, 4,7 litros , 110 Volts, com aquecimento, gabinete em aรงo inox. Incluso cesto,  tampa em inox e dreno.",<blank>,Inox,Sim,47detail.jpg
+3,4.7,0,,0,"LS-4,7D-3",0,0,Bivolt,152x255x315, 140 x 240 x 150,90,<blank>,<blank>,Pintado,Nao,<blank>
+3,4.7,9000,,"1.533,99","LS-4,7D-2",1,5,220,152x255x315, 140 x 240 x 150,90,"Lavadora por ultra som, 4,7 litros , 220 Volts, sem aquecimento. Incluso cesto,  tampa em inox e dreno.",<blank>,Pintado,Nao,47detail.jpg
+3,4.7,9000,,"1.533,99","LS-4,7D-1",1,5,110,152x255x315, 140 x 240 x 150,90,"Lavadora por ultra som, 4,7 litros , 110 Volts, sem aquecimento. Incluso cesto,  tampa em inox e dreno.",<blank>,Pintado,Nao,47detail.jpg
+3,4.7,0,,0,"LS-4,7D-1/X",0,0,110,152x255x315, 140 x 240 x 150,90,<blank>,<blank>,Inox,Nao,<blank>
+3,4.7,0,,0,"LS-4,7D-2/X",0,0,220,152x255x315, 140 x 240 x 150,90,<blank>,<blank>,Inox,Nao,<blank>
+3,4.7,0,,0,"LS-4,7D-3/X",0,0,Bivolt,152x255x315, 140 x 240 x 150,90,<blank>,<blank>,Inox,Nao,<blank>
+4,12,16000,,"2.127,32",LS-12D-2,1,5,220,325x400x340, 295x322x150,210,"Lavadora por ultra som, 12,7 litros , 220 Volts, sem aquecimento. Incluso cesto, tampa em inox e dreno.",<blank>,Pintado,Nao,8012acodetail.jpg
+4,12,0,,0,LS-12DA-1,0,0,110,325x400x340, 295x322x150,210,<blank>,<blank>,Pintado,Sim,<blank>
+4,12,0,,0,LS-12DA-2,0,0,220,325x400x340, 295x322x150,210,<blank>,<blank>,Pintado,Sim,<blank>
+4,12,0,,0,LS-12D-1/X,0,0,110,325x400x340, 295x322x150,210,<blank>,<blank>,Inox,Nao,<blank>
+4,12,0,,0,LS-12D-2/X,0,0,220,325x400x340, 295x322x150,210,<blank>,<blank>,Inox,Nao,<blank>
+4,12,16000,,"2.575,21",LS-12DA-1/X,1,5,110,325x400x340, 295x322x150,210,"Lavadora por ultra som, 12,7 litros , 110 Volts, com aquecimento, gabinete em aรงo inox. Incluso cesto, tampa em inox e dreno.",<blank>,Inox,Sim,8012detail.jpg
+4,12,16000,,"2.575,21",LS-12DA-2/X,1,5,220,325x400x340, 295x322x150,210,"Lavadora por ultra som, 12 ,7litros , 220 Volts, com aquecimento, gabinete em aรงo inox. Incluso cesto, tampa em inox e dreno.",<blank>,Inox,Sim,8012detail.jpg
+4,12,16000,,"2.127,32",LS-12D-1,1,5,110,325x400x340, 295x322x150,210,"Lavadora por ultra som, 12,7 litros , 110 Volts, sem aquecimento. Incluso cesto, tampa em inox e dreno.",<blank>,Pintado,Nao,8012acodetail.jpg
+4,8,13000,,"2.251,50",LS-8DA-2/X,1,5,220,325x400x290, 295x322x100,140,"Lavadora por ultra som, 8,3 litros , 220 Volts, com aquecimento, gabinete em aรงo inox. Incluso cesto,  tampa em inox e dreno.",<blank>,Inox,Sim,8012detail.jpg
+4,8,13000,,"1.859,45",LS-8D-1,1,5,110,325x400x290, 295x322x100,140,"Lavadora por ultra som, 8,3 litros , 110 Volts, sem aquecimento. Incluso  cesto,  tampa em inox e dreno.",<blank>,Pintado,Nao,8012acodetail.jpg
+4,8,0,,0,LS-8DA-1,0,0,110,325x400x290, 295x322x100,140,<blank>,<blank>,Pintado,Sim,<blank>
+4,8,0,,0,LS-8DA-2,0,0,220,325x400x290, 295x322x100,140,<blank>,<blank>,Pintado,Sim,<blank>
+4,8,0,,0,LS-8D-1/X,0,0,110,325x400x290, 295x322x100,140,<blank>,<blank>,Inox,Nao,<blank>
+4,8,0,,0,LS-8D-2/X,0,0,220,325x400x290, 295x322x100,140,<blank>,<blank>,Inox,Nao,<blank>
+4,8,13000,,"1.859,45",LS-8D-2,1,5,220,325x400x290, 295x322x100,140,"Lavadora por ultra som, 8,3 litros , 220 Volts, sem aquecimento. Incluso cesto,  tampa em inox e dreno.",<blank>,Pintado,Nao,8012acodetail.jpg
+4,8,13000,,"2.251,50",LS-8DA-1/X,1,5,110,325x400x290, 295x322x100,140,"Lavadora por ultra som, 8,3 litros , 110 Volts, com aquecimento, gabinete em aรงo inox. Incluso cesto,  tampa em inox e dreno.",<blank>,Inox,Sim,8012detail.jpg
+5,16,22000,,"3.755,78",LS-16DA-2/X,1,5,220,325x400x390, 295x322x200,250,"Lavadora por ultra som, 16,4 litros , 220 Volts, com aquecimento, gabinete em aรงo inox. Incluso cesto, tampa em inox e dreno.",<blank>,Inox,Sim,16detail.jpg
+5,16,0,,0,LS-16DA-2,0,0,220,325x400x390, 295x322x200,250,<blank>,<blank>,Pintado,Sim,<blank>
+5,16,22000,,"3.755,78",LS-16DA-1/X,1,5,110,325x400x390, 295x322x200,250,"Lavadora por ultra som, 16,4 litros , 110 Volts, com aquecimento, gabinete em aรงo inox. Incluso cesto, tampa em inox e dreno.",<blank>,Inox,Sim,16detail.jpg
+5,16,0,,0,LS-16DA-1,0,0,110,325x400x390, 295x322x200,250,<blank>,<blank>,Pintado,Sim,<blank>
+5,16,22000,,"3.280,35",LS-16D-1,1,5,110,325x400x390, 295x322x200,250,"Lavadora por ultra som, 16,4 litros , 110 Volts, sem aquecimento. Incluso cesto, tampa em inox e dreno.",<blank>,Pintado,Nao,16acodetail.jpg
+5,16,0,,0,LS-16D-1/X,0,0,110,325x400x390, 295x322x200,250,<blank>,<blank>,Inox,Nao,<blank>
+5,16,0,,0,LS-16D-2/X,0,0,220,325x400x390, 295x322x200,250,<blank>,<blank>,Inox,Nao,<blank>
+5,16,22000,,"3.280,35",LS-16D-2,1,5,220,325x400x390, 295x322x200,250,"Lavadora por ultra som, 16,4 litros , 220 Volts, sem aquecimento. Incluso cesto, tampa em inox e dreno.",<blank>,Pintado,Nao,16acodetail.jpg
+6,26,0,,0,LS-26DA-2/X,0,0,220,580x482x590, 497x398x150,450,<blank>,<blank>,Inox,Sim,<blank>
+6,55,0,,0,LS-55DA-2/X,0,0,220,580x482x730, 497x398x300,1000,<blank>,<blank>,Inox,Sim,<blank>
+6,55,0,,0,LS-55DA-2,0,0,220,580x482x730, 497x398x300,1000,<blank>,<blank>,Pintado,Sim,<blank>
+6,55,0,,0,LS-55D-2,0,0,220,580x482x730, 497x398x300,1000,<blank>,<blank>,Pintado,Nao,<blank>
+6,44,0,,0,LS-44DA-2/X,0,0,220,580x482x730, 497x398x240,750,<blank>,<blank>,Inox,Sim,<blank>
+6,44,0,,0,LS-44DA-2,0,0,220,580x482x730, 497x398x240,750,<blank>,<blank>,Pintado,Sim,<blank>
+6,44,0,,0,LS-44D-2,0,0,220,580x482x730, 497x398x240,750,<blank>,<blank>,Pintado,Nao,<blank>
+6,35,0,,0,LS-35DA-2/X,0,0,220,580x482x590, 497x398x200,600,<blank>,<blank>,Inox,Sim,<blank>
+6,35,0,,0,LS-35DA-2,0,0,220,580x482x590, 497x398x200,600,<blank>,<blank>,Pintado,Sim,<blank>
+6,17,22000,,"5.331,62",LS-17DA-2/X,1,5,220,580x482x400, 497x398x100,250,"Lavadora por ultra som, 17 litros , 220 Volts, com aquecimento, gabinete em aรงo inox. Incluso cesto, tampa em inox e dreno.",<blank>,Inox,Sim,1755detail.jpg
+6,26,0,,0,LS-26D-2,0,0,220,580x482x590, 497x398x150,450,<blank>,<blank>,Pintado,Nao,<blank>
+6,17,22000,,"4.865,83",LS-17DA-2,1,5,220,580x482x400, 497x398x100,250,"Lavadora por ultra som, 17 litros , 220 Volts, com aquecimento. Incluso cesto, tampa em inox e dreno.",<blank>,Pintado,Sim,1755detail.jpg
+6,17,0,,0,LS-17D-2/X,0,0,220,580x482x400, 497x398x100,250,<blank>,<blank>,Inox,Nao,<blank>
+6,26,0,,0,LS-26DA-2,0,0,220,580x482x590, 497x398x150,450,<blank>,<blank>,Pintado,Sim,<blank>
+6,17,0,,0,LS-17D-2,0,0,220,580x482x400,497x398x100,250,<blank>,<blank>,Pintado,Nao,<blank>
+6,35,0,,0,LS-35D-2,0,0,220,580x482x590, 497x398x200,600,<blank>,<blank>,Pintado,Nao,<blank>
+
