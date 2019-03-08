@@ -1,0 +1,23 @@
+tipo,nome,cargo,ordem,email,status,codigo
+Conselho Consultivo,Alan Derlan de Oliveira Souza,Diretor,0,alan@iquine.com.br,EXC,14
+Conselho Consultivo,Everaldo Apolinário Silva,Diretor,9,everaldo@zaite.com.br,SIM,5
+Conselho Diretor,Francisco Carneiro da Cunha,Diretor Secretário,2,fcunha@tgi.com.br,SIM,7
+Conselho Consultivo,Hamilton Darci Marcondes,Diretor,13,hmarcondes@hmconsultoria.com.br,SIM,17
+Conselho Diretor,Henrique César Araújo Carvalho,Diretor,5,planebrasae@terra.com.br,SIM,18
+Conselho Fiscal,Henrique César Araújo Carvalho,Diretor,16,planebrasae@terra.com.br,SIM,20
+Conselho Consultivo,Hermano Freire Menezes,Diretor,8,hermano.menezes@multinvestcapital.com.br,SIM,12
+Conselho Consultivo,Jenner Guimarães do Rego,Diretor,12,jenner@addiper.pe.gov.br,SIM,16
+Conselho Fiscal,José Argemiro da Silva,Diretor,15,jasconsultoria@ig.com.br,SIM,19
+Conselho Consultivo,José Augusto Sarmento,Diretor,11,jac.sarmento@globomail.com,SIM,24
+Conselho Diretor,José Carlos Pereira Santos,Diretor,3,carlossantos@carlossantosimoveis.com.br,SIM,13
+Conselho Consultivo,José Emilio Calado,Diretor,14,jcalado@deloitte.com,SIM,25
+Conselho Diretor,Lourenço Cunha Filho,Diretor,0,lcunha@terra.com.br,EXC,10
+Conselho Diretor,Luiza Maria Jucá de Barros,Suplente,6,luizamjuca@ig.com.br,SIM,11
+Conselho Diretor,Marcio LuizTadeu de Seixas Borba,Diretor Presidente,1,escritorio@borbaconsultoria.com.br,SIM,6
+Conselho Consultivo,Mônica Ayub,Diretora,0,mayub@mp-ac.com.br,EXC,15
+Conselho Consultivo,Mônica Lustosa,Diretora,0,mlustosa@siqueiracastro.com.br,EXC,21
+Conselho Consultivo,Paulo Monteiro,Diretor,7,pmreviverecife@cdlrecife.com.br,SIM,23
+Conselho Diretor,Paulo Sérgio Bastos Oliva,Diretor,4,olivadesign@olivadesign.com.br,SIM,9
+Conselho Consultivo,Rozemberg Bandeira Milito,Diretor,10,rbmilito@hotmail.com,SIM,22
+Conselho Diretor,Samuel Gueiros Lira,Diretor,0,sgueiros@cedrusbrasil.com.br,EXC,8
+

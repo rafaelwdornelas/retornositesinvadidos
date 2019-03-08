@@ -1,0 +1,18 @@
+nome,menu,status,codigo,arquivo
+01. Perfis,01. Usuários,SIM,1,admPerfil.php
+02. Permissões,01. Usuários,SIM,2,admPermissao.php
+03. Cadastros,01. Usuários,SIM,3,admUsuario.php
+06. Informações,02. Site,SIM,26,admInformacao.php
+07. Entrevistas,02. Site,SIM,25,admEntrevista.php
+05. Artigos,02. Site,SIM,24,admArtigo.php
+08. Links,02. Site,SIM,23,admLink.php
+09. Contato,02. Site,SIM,22,admCadastro.php
+04. Notícias,02. Site,SIM,21,admNoticia.php
+03. Diretoria,02. Site,SIM,20,admDiretoria.php
+02. A SPPE,02. Site,SIM,19,admEmpresa.php
+01. Chamadas,02. Site,SIM,18,admChamada.php
+09. Fórum,02. Site,SIM,27,admForumPerg.php
+11. Zbox,02. Site,SIM,28,admZbox.php
+05. Colunas,02. Site,SIM,29,admColunas.php
+12. Audios,02. Site,SIM,30,admAudios.php
+

