@@ -1,0 +1,34 @@
+id,id_categorias,id_subCategoria,nome,carga,descricao,especificacoes
+2,6,0,Laminados,<blank>,produtos__descricao_2.jpg,<blank>
+3,3,0,Chapas Frizadas e Galvanizadas Bobinas,<blank>,produtos__descricao_3.jpg,<blank>
+4,2,0,"Acessórios, Rufos e Calhas",<blank>,produtos__descricao_4.jpg,<blank>
+5,1,2,Telha Bandeja,<blank>,produtos__descricao_5.jpg,<blank>
+6,1,4,Telha Ondulada BZM 17,produtos__carga_6.jpg,produtos__descricao_6.jpg,produtos__especificacoes_6.jpg
+7,4,0,Cumeeiras e Multidobras,<blank>,produtos__descricao_7.jpg,produtos__especificacoes_7.jpg
+8,5,0,Perfis U,<blank>,produtos__descricao_8.jpg,produtos__especificacoes_8.jpg
+10,8,0,Tubos de Aço,<blank>,produtos__descricao_10.jpg,<blank>
+11,1,5,Telha Trapezoidal BZM 25,produtos__carga_11.jpg,produtos__descricao_11.jpg,produtos__especificacoes_11.jpg
+12,1,6,Telha Trapezoidal BZM 35,produtos__carga_12.jpg,produtos__descricao_12.jpg,produtos__especificacoes_12.jpg
+13,1,7,Telha Trapezoidal BZM 40,produtos__carga_13.jpg,produtos__descricao_13.jpg,produtos__especificacoes_13.jpg
+14,1,3,Telha ZIPADA,produtos__carga_14.jpg,produtos__descricao_14.jpg,produtos__especificacoes_14.jpg
+15,1,8,Telha Trapezoidal BZM 100,produtos__carga_15.jpg,produtos__descricao_15.jpg,produtos__especificacoes_15.jpg
+16,1,9,Telhas Termoacústicas e Painéis,<blank>,produtos__descricao_16.jpg,<blank>
+17,10,11,Cantoneira de Forro Lisa 25x30,<blank>,produtos__descricao_17.jpg,produtos__especificacoes_17.jpg
+18,10,12,Cantoneira de Proteção 23X23,<blank>,produtos__descricao_18.jpg,produtos__especificacoes_18.jpg
+19,10,13,Guia 48-70,<blank>,produtos__descricao_19.jpg,produtos__especificacoes_19.jpg
+20,10,14,Montante de 48,<blank>,produtos__descricao_20.jpg,produtos__especificacoes_20.jpg
+21,10,15,Montante de 70,<blank>,produtos__descricao_21.jpg,produtos__especificacoes_21.jpg
+22,10,16,Perfil J,<blank>,produtos__descricao_22.jpg,produtos__especificacoes_22.jpg
+23,10,17,Perfil para Forro 17x17,<blank>,produtos__descricao_23.jpg,produtos__especificacoes_23.jpg
+24,10,18,Perfil para Forro F530,<blank>,produtos__descricao_24.jpg,produtos__especificacoes_24.jpg
+25,10,19,Perfil Z,<blank>,produtos__descricao_25.jpg,produtos__especificacoes_25.jpg
+26,10,20,Tabica 40x48 Lisa,<blank>,produtos__descricao_26.jpg,produtos__especificacoes_26.jpg
+27,10,30,Gesso Acartonado,<blank>,produtos__descricao_27.jpg,<blank>
+28,12,22,Guia Estrutural,<blank>,produtos__descricao_28.jpg,produtos__especificacoes_28.jpg
+29,12,23,Montante de 90,<blank>,produtos__descricao_29.jpg,produtos__especificacoes_29.jpg
+30,12,24,Montante de 140,<blank>,produtos__descricao_30.jpg,produtos__especificacoes_30.jpg
+31,12,25,Montante de 200,<blank>,produtos__descricao_31.jpg,produtos__especificacoes_31.jpg
+33,13,0,Tabela de Rufos,<blank>,produtos__descricao_33.jpg,<blank>
+37,14,26,Ripa Metálica,<blank>,produtos__descricao_37.jpg,<blank>
+38,17,0,Viga Metálica,<blank>,produtos__descricao_38.jpg,<blank>
+

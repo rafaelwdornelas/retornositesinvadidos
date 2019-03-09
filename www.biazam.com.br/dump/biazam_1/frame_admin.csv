@@ -1,0 +1,4 @@
+id,nome,senha,login,ativo,email,visitas,descricao,permissoes,login_atual,ultimo_login,tipo_usuario
+1,OH Soluções,hos951,admin,Sim,contato@officehosting.com.br,50,<blank>,xxx,1247054080,1247054080,Administrador
+12,Biazam,telhas2013biazam,biazam,Sim,<blank>,23,<p>cs</p>,principal--usuarios--empresa--categorias--subCategorias--produtos--eventosCat--eventosFotos--editarTexto,1410814548,1410814548,Usuário
+
