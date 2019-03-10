@@ -1,0 +1,94 @@
+id,id_cliente,nome,senha,email,usuario
+1,0,Criweb,8e60bf4670acab8248861fd085cbd37e,suporte@criweb.com.br,criweb
+2,0,Administrador,08fb3751e13ec793b99e9ef7f1dac625,frimagazine@yahoo.com.br,admin
+3,302,Cliente de teste,d4d935dc00305a407cf420daa0cd7c2d,cliteste@criweb.com.br,cliteste
+4,303,yure mÃ³veis e eletro,4dca46afb6ca4a8d047a04507d31c716,yuremegastore@yahoo.com.br,yure
+5,304,yure mega store,88a199611ac2b85bd3f76e8ee7e55650 (1581),yuremegastore@yahoo.com.br,yure mega store
+7,293,Ã¡gua e luz hidraulica e elÃ©trica,81dc9bdb52d04dc20036dbd8313ed055 (1234),aguaeluzhid.eletltda@hotmail.com,izabel
+8,239,marchon auto peÃ§as  ,ef84d0668112a82c846b2ed4cb58105c (774477),frimagazine@yahoo.com.br,<blank>
+10,307,Cliente de teste,195a84643f1d6e36a1de67c49d9d072a,samuel@criweb.com.br,cliteste
+11,298,imobcred,e5f454b9f6819f8dc0a030ab078808a3,martinho.carlos@bol.com.br,martinho
+12,306,raÃ§Ãµes tamoyo,ebc80e694304e91a76530fde652d8473,racoestamoyo@gmail.com,renato
+13,297,top car veÃ­culos,076ee773543ea9dd1450507166342f7b,viniciusmaia6@gmail.com,vinicius
+14,296,manu gourmet,3d37a4953c1a5dc56218726adf28d861,hocnf@hotmail.com,Manu
+15,308,shao-lin colchÃ£o magnÃ©tico,e10adc3949ba59abbe56e057f20f883e (123456),contato@colchaoshaolin.com.br,shao
+16,309,REFRIGERAÃ?Ã?O ALFA,e10adc3949ba59abbe56e057f20f883e (123456),alfanf@gigalink.com.br,alfa
+17,310,gessos decor,d93591bdf7860e1e4ee2fca799911215 (4321),gessosdecor4@hotmail.com,davi
+18,283,everex  tuning,e10adc3949ba59abbe56e057f20f883e (123456),lucasom89@hotmail.com,everex
+19,162,cursos cetepro,4054306c018b26d6a22b79867643e379,cetepro7@gmail.com,cetepro
+20,286,akkipÃ£o padaria,8ef267ea01d3a0e1cda0c105c25719c2,fabianarosags@hotmail.com,fabianarl
+21,231,Lorena Baterias,628cd7bf77cc117c0f810710e665e461,lorena_baterias@hotmail.com,emjunior
+22,311,clÃ­nica dentÃ¡ria em nova friburgo,d41d8cd98f00b204e9800998ecf8427e (<empty>),<blank>,<blank>
+23,312,mecÃ¢nica lucas car,d41d8cd98f00b204e9800998ecf8427e (<empty>),<blank>,<blank>
+24,273,vr distribuidora de bebidas,e10adc3949ba59abbe56e057f20f883e (123456),vrdistribuidoradebebidas@gmail.com,bebidas
+25,313,hotel garlipp,e10adc3949ba59abbe56e057f20f883e (123456),hgarlipp@netflash.com.br,garlipp
+26,314,terraplenagem em nova friburgo,e10adc3949ba59abbe56e057f20f883e (123456),convale@convaleterraplenagem.com.br,convale
+27,315,fisioterapia em nova friburgo,d41d8cd98f00b204e9800998ecf8427e (<empty>),<blank>,<blank>
+28,316,ZAP PEDAGÃ?GICOS,81dc9bdb52d04dc20036dbd8313ed055 (1234),zappedagogicos@gmail.com,brinquedos
+29,317,escola rumo certo,d41d8cd98f00b204e9800998ecf8427e (<empty>),<blank>,<blank>
+30,318,vidros temperados em nova friburgo,3d5fa13a63c0ef9fa47c51b538c3d606,pwvidros@gmail.com,paulo
+31,319,cama elÃ¡stica em nova friburgo,d41d8cd98f00b204e9800998ecf8427e (<empty>),<blank>,<blank>
+32,320,ZAP PEDAGÃ?GICOS,81dc9bdb52d04dc20036dbd8313ed055 (1234),zappedagogicos@gmail.com,brinquedos
+33,321,antiguidades em nova friburgo,d41d8cd98f00b204e9800998ecf8427e (<empty>),<blank>,<blank>
+34,322,"toldos residenciais e comerciais em nova friburgo, toldos friburguense  em nova friburgo",260dc080cd09fe7c6bc3ac60546633d1,toldosfriburguense@hotmail.com,friburguense
+35,323,espaÃ§o serra   eventos,e10adc3949ba59abbe56e057f20f883e (123456),naturezaeeventos@hotmail.com,serra
+36,294,lili festas e eventos,5a57ce72b502e30aa76d62623a1dca88 (010200),lili_festas@hotmail.com,
+37,324,imÃ³veis na regiÃ£o serrana,d41d8cd98f00b204e9800998ecf8427e (<empty>),<blank>,<blank>
+38,325,fazenda rancho eldorado,d41d8cd98f00b204e9800998ecf8427e (<empty>),<blank>,<blank>
+39,326,frinova,c9916f184ea35042a075eb5136902f59,frinovamoveis@hotmail.com,frinova
+40,289,aÃ§ougue do baiano,421493fa48fc8df84d1f5f3478cf247a (jai),jadilsonjesus@hotamail.com,jadilson
+41,7,Emabalagens plÃ¡sticas em Nova Friburgo,d7632cfcee604a1b3860f1ed81a76844,oliveiraplasticos@hotmail.com,Oliveira
+42,146,suporte,3a88c37e7c24d2d10ffbb9d54a836fa2 (ninja123),contato@bottosinformatica.com.br,bottos
+43,261,genezes schumacker ,25f9e794323b453885f5181f1b624d0b (123456789),dim_friba@hotmail.com,genezes
+44,327,bar edinho & edesio,d41d8cd98f00b204e9800998ecf8427e (<empty>),<blank>,<blank>
+45,328,calhas instalaÃ§Ãµes nova friburgo,d41d8cd98f00b204e9800998ecf8427e (<empty>),<blank>,<blank>
+46,329,Bar AmÃ©rica,d41d8cd98f00b204e9800998ecf8427e (<empty>),<blank>,<blank>
+,330,bronco bili,d41d8cd98f00b204e9800998ecf8427e (<empty>),<blank>,<blank>
+48,331,fazendo arte nova friburgo.,8e565ff7f2c8a190e43b87427f2f5928,,anna
+49,332,victÃ³ria perfumaria,,<blank>,<blank>
+,333,mÃ³veis para salÃ£o de beleza em nova friburgo.,7eca143caaf49d9e3dc5c04961a314a0 (8818),victoriadefriburgoperfumaria@hotmail.com,
+,334,artesanatos em nova friburgo,d41d8cd98f00b204e9800998ecf8427e (<empty>),<blank>,<blank>
+52,335,relojoeiro em nova friburgo,0e837756839c4ebf0cfae0ffc77f771f,haroldorelojoeiro@frionline.com.br,haroldo
+,11,,77a17f801ea923d45b44a8c5c68bbb9b,hmcc.friburgo@hotmail.com,Crislan
+,103,L  Lingerie friburgo,f4294fb5e267d9b66cca3a05be00b3b0,mercadinholingerie@hotmail.com,marcelolopes
+55,102,,c97e2b57a6c44cb28aa98211dad2811f (caio),pointdastintas@hotmail.com,edson
+56,336,,,lessamoto@ig.com.br,lessa
+57,18,rs motores friburgo,8d19d0da93305e026413af04379f3430,rsmotores@gmail.com,rsmotores
+,301,o barato de minas,188ec8edc3a62aec438c7752f6724c89,obaratodeminas@gmail.com,hilarion
+59,243, despachante em rio das ostras - antÃ´nio despachante,e10adc3949ba59abbe56e057f20f883e (123456),credenciado.antonio@gmail.com,antonio2
+60,249,drogarias macabÃº,66f141b4573ae1258072d0f87c60e7d3,thiagomacabu@yahoo.com.br,thiago
+61,337,hortifruti em casimiro de abreu,d41d8cd98f00b204e9800998ecf8427e (<empty>),<blank>,<blank>
+62,257,okay boutique,a3b2739d675aa2d0b3e65cc03e8d4ee0,okayboutique@hotmail.com,lais
+63,255,menta rio,e6052a2764b52a205d1fb83fdb2655fa,menta_rio@yahoo.com.br,lais
+64,256,menta rio festa,127878f427a7eae4abecd797abf528ac,menta_rio@yahoo.com.br,Sara
+65,259,fabricaÃ§Ã£o de estofados sob medidas ,a5c55e0a0581fcbff3ced1262e9ed4f5,fabiocatengoestofados@hotmail.com,fabio
+66,338,vidraÃ§aria em casimiro de abreu,d41d8cd98f00b204e9800998ecf8427e (<empty>),<blank>,<blank>
+67,339,sabores do poeta,d41d8cd98f00b204e9800998ecf8427e (<empty>),<blank>,<blank>
+68,340,salÃ£o de festas em casimiro de abreu,d41d8cd98f00b204e9800998ecf8427e (<empty>),<blank>,<blank>
+69,341,essÃªncia da terra em nova friburgo,d41d8cd98f00b204e9800998ecf8427e (<empty>),<blank>,
+70,233,aluguel de andaimes mury,e10adc3949ba59abbe56e057f20f883e (123456),japonesdoandaime@hotmail.com,japones
+71,,ms imÃ³veis,89e2c8f458dda133118ac4a0a762cb3d (bambam),marcossardinha@oi.com.br,imobiliaria
+72,230,r.f fÃ¡brica de estofados,7795594c87ebaf373b701e84097411ef,rf.estofados@yahoo.com.br,
+73,3,Limpar,80a9efd37c62cbdee2351192983a43d6 (8731),limparnf@hotmail.com,limpar
+74,343,gama corretora de imÃ³veis,e10adc3949ba59abbe56e057f20f883e (123456),fatimabgama@yahoo.com.br,gama
+75,55,Ricardo Pneus,5b2d77d8d80e4818c7487942682a1c80,Ricardo.pneus@yahoo.com.br,Ricardo
+76,344,oficina lourinho,d41d8cd98f00b204e9800998ecf8427e (<empty>),<blank>,<blank>
+77,345,casa do notebook,e10adc3949ba59abbe56e057f20f883e (123456),frimagazine@yahoo.com.br,
+78,346,aluguel de fantasias em nova friburgo,040d45ccc13c070fcec9d46ccd0cc543,bellesfantasias@gmail.com,bellas
+79,347,restaurente sol,d41d8cd98f00b204e9800998ecf8427e (<empty>),<blank>,<blank>
+80,348,serralheria miranda,4d8dc64457f77a1a18fdc3f9669bf918,admin,<blank>
+81,349,veterinÃ¡ria mury,d41d8cd98f00b204e9800998ecf8427e (<empty>),<blank>,<blank>
+82,350,dr.attila mattos,d41d8cd98f00b204e9800998ecf8427e (<empty>),<blank>,<blank>
+83,351,                                       granlider nova friburgo,e10adc3949ba59abbe56e057f20f883e (123456),ganlidermarmores@gmail.com,granlider
+84,352,deguste restaurante,d41d8cd98f00b204e9800998ecf8427e (<empty>),<blank>,<blank>
+85,353,assistÃªncia tÃ©cnica em macuco,d41d8cd98f00b204e9800998ecf8427e (<empty>),<blank>,<blank>
+86,354,assistÃªncia tÃ©cnica em cordeiro,d41d8cd98f00b204e9800998ecf8427e (<empty>),<blank>,<blank>
+87,355,visual artÂ´s modas,,<blank>,
+88,,maurat centro automotivo,,oficinamaurat@gmail.com,maurat
+,357,autoescola rodrigues  cachoeiras de macacu,9fc4be8a9394c3034eb12c6eb5f2ae33,ninoautoescola@hotmail.com,rodrigues
+90,88,Auto Posto Soledade 1,999f0e881338ce106d3b4be106e2c926,autopostosoledade@hotmail.com,amilton
+91,358,armazÃ©m sabores da serra,7bebb512f6225462481a6b17773677d2,armazemsaboresdaserra@yahoo.com.br,alvchaves
+93,360,bar do campo lumiar futebol clube,d41d8cd98f00b204e9800998ecf8427e (<empty>),<blank>,<blank>
+94,361,lc muniz imÃ³veis,d41d8cd98f00b204e9800998ecf8427e (<empty>),frimagazine@yahoo.com.br,<blank>
+95,362,construarte,46081baf5feab62d8f293151d07dd946,construarte@msn.com,construarte
+

