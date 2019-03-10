@@ -1,0 +1,10 @@
+idxProCol,EmlUsr,DscEmp,TelUsr,RmlUsr,DscDpt,DscCtt,NroCtt,CodDpt,CodUsr,NomSol,CodSto,NroCar,CodEmp,DtaProCol,StsProCol,ResProCol,DtaBaiAgf,ObsProCol
+8,suporte1@visualset.com.br,ANA PAULA,<blank>,0,ANA PAULA  TESTE2,<blank>,<blank>,0004,000230004,o mesmo,71000000,<blank>,00023,2018-10-10 11:49:59,1,NULL,NULL,<blank>
+9,suporte1@visualset.com.br,ANA PAULA,<blank>,0,ANA PAULA  TESTE2,<blank>,<blank>,0004,000230004,o mesmo,71000000,<blank>,00023,2018-10-10 11:50:09,1,NULL,NULL,<blank>
+10,suporte1@visualset.com.br,ANA PAULA,<blank>,0,ANA PAULA  TESTE1,<blank>,<blank>,0001,000230001,teste 1,71000000,<blank>,00023,2018-10-10 11:50:50,1,NULL,NULL,<blank>
+11,suporte1@visualset.com.br,ANA PAULA,<blank>,0,ANA PAULA  TESTE1,<blank>,<blank>,0001,000230001,teste 1,71000000,<blank>,00023,2018-10-10 11:51:00,1,NULL,NULL,<blank>
+12,suporte1@visualset.com.br,ANA PAULA,<blank>,0,(Raiz),<blank>,<blank>,0000,000230000,o mesmo,71000000,<blank>,00023,2018-10-10 11:51:29,1,NULL,NULL,<blank>
+13,suporte1@visualset.com.br,ANA PAULA,<blank>,0,(Raiz),<blank>,<blank>,0000,000230000,o mesmo,71000000,<blank>,00023,2018-10-10 11:51:37,1,NULL,NULL,<blank>
+14,ana-paula1503@hotmail.com,VISUALSET TECNOLOGIA,(11) 9673-33210,0,(Raiz),<blank>,<blank>,0000,000010000,teste,71000000,<blank>,00001,2018-11-08 15:10:46,1,NULL,NULL,<blank>
+15,katinhamm@gmail.com,VISUALSET TECNOLOGIA,(11) 3737-8999,0,(Raiz),<blank>,<blank>,0000,000010000,nome do solicitante,71000000,<blank>,00001,2018-11-21 13:45:13,1,NULL,NULL,<blank>
+

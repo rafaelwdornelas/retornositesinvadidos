@@ -1,0 +1,5 @@
+PflId,IdFtpAuto,UsrFtpAuto,UrlFtpAuto,PwdFtpAuto,PutFtpAuto,GetFtpAuto,DelArqFtpAuto,RemGetFtpAuto,RemPutFtpAuto,PrefGetFtpAuto,PrefPutFtpAuto
+162,1,correios,200.182.6.117,correiosedi,1,0,1,./edi_enviado,/edi_recebido/,*,RAS
+345,2,ftp_XVNovembro,200.201.213.53,XVNovembro@123sat,1,0,1,./correioLGX,/correioLGX,*,RAS
+445,3,ftp_XVNovembro,200.201.213.53,XVNovembro@123sat,1,0,1,./correioGRU,/correioGRU,*,RAS
+

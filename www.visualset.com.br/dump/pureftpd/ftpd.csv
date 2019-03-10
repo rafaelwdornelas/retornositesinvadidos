@@ -1,0 +1,119 @@
+Gid,Uid,EpsId,PflId,CtrId,FilId,DLBandwidth,ULBandwidth,Eml,Dir,status,User,comment,Password,ipaccess,QuotaSize,QuotaFiles
+100,1000,19,40,4,4,10000,10000,<blank>,/var/www/html/uploads/dominios/acfencantado/imagensAR,1,acfencantado,<blank>,2798c7531145050cd0c8522d62568625,*,30000,30000
+8,30,17,38,2,2,10000,10000,<blank>,/var/www/html/vippuploads/FTP/,1,fjk01,<blank>,7fcb779d7e8adb9a93aaaf55bc9ccd33,*,30000,30000
+8,30,17,38,2,2,10000,10000,suporte1@visualset.com.br,/var/www/html/vippuploads/FTP/,1,pierre,<blank>,7fcb779d7e8adb9a93aaaf55bc9ccd33,*,30000,30000
+8,30,17,48,2,2,10000,10000,NULL,/var/www/html/vippuploads/FTP/000000000048,1,fjkes0097,<blank>,7fcb779d7e8adb9a93aaaf55bc9ccd33,*,30000,30000
+8,30,17,61,2,2,10000,10000,NULL,/var/www/html/vippuploads/FTP/000000000061,1,fjkba0063,<blank>,7fcb779d7e8adb9a93aaaf55bc9ccd33,*,30000,30000
+8,30,17,38,2,2,10000,10000,NULL,/var/www/html/vippuploads/FTP/000000000038,1,fjkdf0037,<blank>,7fcb779d7e8adb9a93aaaf55bc9ccd33,*,30000,30000
+8,30,17,13,2,0,10000,10000,NULL,/var/www/html/vippuploads/FTP/000000000013,1,fjkgo0049,<blank>,7fcb779d7e8adb9a93aaaf55bc9ccd33,*,30000,30000
+8,30,0,0,0,0,10000,10000,arturo.salzano@monster.com,/home/aes,1,aes_eletropaulo,<blank>,0f6665eb0b0210fbc97e9a559cd06dee,*,30000,30000
+8,30,0,0,0,0,10000,10000,NULL,/home/aes,1,alto_santana,<blank>,aebfa88d69731780a58d82ad5247841d,*,30000,30000
+8,30,2,100,4,0,10000,10000,adenilson@visualset.com.br,/var/www/html/vippuploads/FTP/000000000100,1,vipp_000002,<blank>,e10adc3949ba59abbe56e057f20f883e (123456),*,30000,30000
+8,30,NULL,NULL,NULL,NULL,10000,10000,NULL,/var/www/html/vippuploads/FTP/Lucas,1,lucas,<blank>,7fcb779d7e8adb9a93aaaf55bc9ccd33,*,30000,30000
+8,30,17,99,9,5,10000,10000,suporte4@visualset.com.br,/var/www/html/vippuploads/FTP/000000000099,1,vipp_000003,<blank>,e10adc3949ba59abbe56e057f20f883e (123456),*,30000,30000
+8,30,17,150,9,6,10000,10000,helpdesk@fujioka.com.br,/var/www/html/vippuploads/FTP/000000000150,1,vipp_000004,<blank>,e10adc3949ba59abbe56e057f20f883e (123456),*,30000,30000
+8,30,17,0,9,6,10000,10000,helpdesk@fujioka.com.br,<blank>,1,vipp_000005,<blank>,e10adc3949ba59abbe56e057f20f883e (123456),*,30000,30000
+8,30,17,149,9,7,10000,10000,helpdesk@fujioka.com.br,/var/www/html/vippuploads/FTP/000000000149,1,vipp_000006,<blank>,e10adc3949ba59abbe56e057f20f883e (123456),*,30000,30000
+8,30,17,48,2,2,10000,10000,NULL,/var/www/html/vippuploads/FTP/000000000048,1,fjkes0097,<blank>,7fcb779d7e8adb9a93aaaf55bc9ccd33,*,30000,30000
+8,30,17,48,2,2,10000,10000,NULL,/var/www/html/vippuploads/FTP/000000000048,1,fjkes0097,<blank>,7fcb779d7e8adb9a93aaaf55bc9ccd33,*,30000,30000
+8,30,17,48,2,2,10000,10000,NULL,/var/www/html/vippuploads/FTP/000000000048,1,fjkes0097,<blank>,7fcb779d7e8adb9a93aaaf55bc9ccd33,*,30000,30000
+8,30,17,48,2,2,10000,10000,NULL,/var/www/html/vippuploads/FTP/000000000048,1,fjkes0097,<blank>,7fcb779d7e8adb9a93aaaf55bc9ccd33,*,30000,30000
+8,30,17,48,2,2,10000,10000,NULL,/var/www/html/vippuploads/FTP/000000000048,1,fjkes0097,<blank>,7fcb779d7e8adb9a93aaaf55bc9ccd33,*,30000,30000
+8,30,17,48,2,2,10000,10000,NULL,/var/www/html/vippuploads/FTP/000000000048,1,fjkes0097,<blank>,7fcb779d7e8adb9a93aaaf55bc9ccd33,*,30000,30000
+8,30,17,48,2,2,10000,10000,NULL,/var/www/html/vippuploads/FTP/000000000048,1,fjkes0097,<blank>,7fcb779d7e8adb9a93aaaf55bc9ccd33,*,30000,30000
+8,30,17,48,2,2,10000,10000,NULL,/var/www/html/vippuploads/FTP/000000000048,1,fjkes0097,<blank>,7fcb779d7e8adb9a93aaaf55bc9ccd33,*,30000,30000
+8,30,17,48,2,2,10000,10000,NULL,/var/www/html/vippuploads/FTP/000000000048,1,fjkes0097,<blank>,7fcb779d7e8adb9a93aaaf55bc9ccd33,*,30000,30000
+8,30,17,48,2,2,10000,10000,NULL,/var/www/html/vippuploads/FTP/000000000048,1,fjkes0097,<blank>,7fcb779d7e8adb9a93aaaf55bc9ccd33,*,30000,30000
+8,30,17,48,2,2,10000,10000,NULL,/var/www/html/vippuploads/FTP/000000000048,1,fjkes0097,<blank>,7fcb779d7e8adb9a93aaaf55bc9ccd33,*,30000,30000
+8,30,17,48,2,2,10000,10000,NULL,/var/www/html/vippuploads/FTP/000000000048,1,fjkes0097,<blank>,7fcb779d7e8adb9a93aaaf55bc9ccd33,*,30000,30000
+8,30,17,48,2,2,10000,10000,NULL,/var/www/html/vippuploads/FTP/000000000048,1,fjkes0097,<blank>,7fcb779d7e8adb9a93aaaf55bc9ccd33,*,30000,30000
+8,30,17,48,2,2,10000,10000,NULL,/var/www/html/vippuploads/FTP/000000000048,1,fjkes0097,<blank>,7fcb779d7e8adb9a93aaaf55bc9ccd33,*,30000,30000
+8,30,17,48,2,2,10000,10000,NULL,/var/www/html/vippuploads/FTP/000000000048,1,fjkes0097,<blank>,7fcb779d7e8adb9a93aaaf55bc9ccd33,*,30000,30000
+8,30,17,48,2,2,10000,10000,NULL,/var/www/html/vippuploads/FTP/000000000048,1,fjkes0097,<blank>,7fcb779d7e8adb9a93aaaf55bc9ccd33,*,30000,30000
+8,30,17,48,2,2,10000,10000,NULL,/var/www/html/vippuploads/FTP/000000000048,1,fjkes0097,<blank>,7fcb779d7e8adb9a93aaaf55bc9ccd33,*,30000,30000
+8,30,2,152,4,0,10000,10000,suporte@visualset.com.br,/var/www/html/vippuploads/FTP/000000000152,1,vipp_000008,<blank>,e10adc3949ba59abbe56e057f20f883e (123456),*,30000,30000
+8,30,2,152,4,0,10000,10000,suporte@visualset.com.br,/var/www/html/vippuploads/FTP/000000000152,1,vipp_000008,<blank>,e10adc3949ba59abbe56e057f20f883e (123456),*,30000,30000
+8,30,2,158,4,0,10000,10000,adenilson@visualset.com.br,/var/www/html/vippuploads/FTP/000000000158,1,vipp_000009,<blank>,e10adc3949ba59abbe56e057f20f883e (123456),*,30000,30000
+8,30,2,158,4,0,10000,10000,adenilson@visualset.com.br,/var/www/html/vippuploads/FTP/000000000158,1,vipp_000009,<blank>,e10adc3949ba59abbe56e057f20f883e (123456),*,30000,30000
+8,30,115,174,16,0,10000,10000,dev@pitzi.com.br,/var/www/html/vippuploads/FTP/000000000174,1,vipp_000010,<blank>,55175821e66eb7b021cb6aaf966a4a15,*,30000,30000
+8,30,115,174,16,0,10000,10000,dev@pitzi.com.br,/var/www/html/vippuploads/FTP/000000000174,1,vipp_000010,<blank>,55175821e66eb7b021cb6aaf966a4a15,*,30000,30000
+8,30,17,0,9,8,10000,10000,helpdesk@fujioka.com.br,<blank>,1,vipp_000011,<blank>,c33367701511b4f6020ec61ded352059 (654321),*,30000,30000
+8,30,17,0,9,8,10000,10000,helpdesk@fujioka.com.br,<blank>,1,vipp_000011,<blank>,c33367701511b4f6020ec61ded352059 (654321),*,30000,30000
+8,30,17,185,9,8,10000,10000,helpdesk@fujioka.com.br,/var/www/html/vippuploads/FTP/000000000185,1,vipp_000012,<blank>,c33367701511b4f6020ec61ded352059 (654321),*,30000,30000
+8,30,17,185,9,8,10000,10000,helpdesk@fujioka.com.br,/var/www/html/vippuploads/FTP/000000000185,1,vipp_000012,<blank>,c33367701511b4f6020ec61ded352059 (654321),*,30000,30000
+8,30,29,202,14,0,10000,10000,erik.vila@cp7.com.br,/var/www/html/vippuploads/FTP/000000000202,1,vipp_000013,<blank>,085a389c6aeffae95e9386c9977f1371,*,30000,30000
+8,30,29,202,14,0,10000,10000,erik.vila@cp7.com.br,/var/www/html/vippuploads/FTP/000000000202,1,vipp_000013,<blank>,085a389c6aeffae95e9386c9977f1371,*,30000,30000
+8,30,187,0,30,0,10000,10000,suporte4@visualset.com.br,<blank>,1,vipp_000014,<blank>,e10adc3949ba59abbe56e057f20f883e (123456),*,30000,30000
+8,30,187,0,30,0,10000,10000,suporte4@visualset.com.br,<blank>,1,vipp_000014,<blank>,e10adc3949ba59abbe56e057f20f883e (123456),*,30000,30000
+8,30,2,224,4,0,10000,10000,adenilson@visualset.com.br,/var/www/html/vippuploads/FTP/000000000224,1,vipp_000015,<blank>,e10adc3949ba59abbe56e057f20f883e (123456),*,30000,30000
+8,30,2,224,4,0,10000,10000,adenilson@visualset.com.br,/var/www/html/vippuploads/FTP/000000000224,1,vipp_000015,<blank>,e10adc3949ba59abbe56e057f20f883e (123456),*,30000,30000
+8,30,187,229,30,0,10000,10000,suporte4@visualset.com.br,/var/www/html/vippuploads/FTP/000000000229,1,vipp_000016,<blank>,e10adc3949ba59abbe56e057f20f883e (123456),*,30000,30000
+8,30,187,229,30,0,10000,10000,suporte4@visualset.com.br,/var/www/html/vippuploads/FTP/000000000229,1,vipp_000016,<blank>,e10adc3949ba59abbe56e057f20f883e (123456),*,30000,30000
+8,30,192,237,65,0,10000,10000,operacao@allarmi.com.br,/var/www/html/vippuploads/FTP/000000000237,1,vipp_000017,<blank>,e10adc3949ba59abbe56e057f20f883e (123456),*,30000,30000
+8,30,192,237,65,0,10000,10000,operacao@allarmi.com.br,/var/www/html/vippuploads/FTP/000000000237,1,vipp_000017,<blank>,e10adc3949ba59abbe56e057f20f883e (123456),*,30000,30000
+8,30,2,238,4,0,10000,10000,teste@hotmail.com,/var/www/html/vippuploads/FTP/000000000238,1,vipp_000018,<blank>,e10adc3949ba59abbe56e057f20f883e (123456),*,30000,30000
+8,30,2,238,4,0,10000,10000,teste@hotmail.com,/var/www/html/vippuploads/FTP/000000000238,1,vipp_000018,<blank>,e10adc3949ba59abbe56e057f20f883e (123456),*,30000,30000
+8,30,2,0,4,0,10000,10000,akjdghsjd@klasdhsdja.com,<blank>,1,vipp_000019,<blank>,e10adc3949ba59abbe56e057f20f883e (123456),*,30000,30000
+8,30,2,0,4,0,10000,10000,akjdghsjd@klasdhsdja.com,<blank>,1,vipp_000019,<blank>,e10adc3949ba59abbe56e057f20f883e (123456),*,30000,30000
+8,30,2,238,4,0,10000,10000,teste@visualset.com.br,/var/www/html/vippuploads/FTP/000000000238,1,vipp_000020,<blank>,e10adc3949ba59abbe56e057f20f883e (123456),*,30000,30000
+8,30,2,238,4,0,10000,10000,teste@visualset.com.br,/var/www/html/vippuploads/FTP/000000000238,1,vipp_000020,<blank>,e10adc3949ba59abbe56e057f20f883e (123456),*,30000,30000
+8,30,198,243,67,0,10000,10000,henry@sameka.com.br,/var/www/html/vippuploads/FTP/000000000243,1,vipp_000021,<blank>,b0cac9b9d9fb49e7e87f8cdd0ba2b280,*,30000,30000
+8,30,198,243,67,0,10000,10000,henry@sameka.com.br,/var/www/html/vippuploads/FTP/000000000243,1,vipp_000021,<blank>,b0cac9b9d9fb49e7e87f8cdd0ba2b280,*,30000,30000
+8,30,210,246,55,0,10000,10000,wagner.manzano@upessencia.com.br,/var/www/html/vippuploads/FTP/000000000246,1,vipp_000022,<blank>,c33367701511b4f6020ec61ded352059 (654321),*,30000,30000
+8,30,210,246,55,0,10000,10000,wagner.manzano@upessencia.com.br,/var/www/html/vippuploads/FTP/000000000246,1,vipp_000022,<blank>,c33367701511b4f6020ec61ded352059 (654321),*,30000,30000
+8,30,210,247,55,0,10000,10000,wagner.manzano@upessencia.com.br,/var/www/html/vippuploads/FTP/000000000247,1,vipp_000023,<blank>,c33367701511b4f6020ec61ded352059 (654321),*,30000,30000
+8,30,503,446,70,0,10000,10000,adriana.fernandes@abrileducacao.com.br,/var/www/html/vippuploads/FTP/000000000446,1,vipp_000055,<blank>,6d926899428b4be9389a8cd408c0b365,*,30000,30000
+8,30,542,451,23,0,10000,10000,alexandre-bh@visualset.com.br,/var/www/html/vippuploads/FTP/000000000451,1,vipp_000056,<blank>,c33367701511b4f6020ec61ded352059 (654321),*,30000,30000
+8,30,108,162,37,0,10000,10000,C.HERBERT@GRUPOSBF.COM.BR,/var/www/html/vippuploads/FTP/000000000162,1,vipp_000057,<blank>,96e79218965eb72c92a549dd5a330112 (111111),*,30000,30000
+8,30,108,163,37,0,10000,10000,C.HERBERT@GRUPOSBF.COM.BR,/var/www/html/vippuploads/FTP/000000000163,1,vipp_000058,<blank>,96e79218965eb72c92a549dd5a330112 (111111),*,30000,30000
+8,30,535,456,34,0,10000,10000,vendas@armarinhoambar.com.br,/var/www/html/vippuploads/FTP/000000000456,1,vipp_000059,<blank>,6325ae85d932504df0319223a2d5e7e7 (786786),*,30000,30000
+8,30,535,458,34,0,10000,10000,vendas@armarinhoambar.com.br,/var/www/html/vippuploads/FTP/000000000458,1,vipp_000060,<blank>,6325ae85d932504df0319223a2d5e7e7 (786786),*,30000,30000
+8,30,535,457,34,0,10000,10000,vendas@armarinhoambar.com.br,/var/www/html/vippuploads/FTP/000000000457,1,vipp_000061,<blank>,6325ae85d932504df0319223a2d5e7e7 (786786),*,30000,30000
+8,30,535,459,34,0,10000,10000,vendas@armarinhoambar.com.br,/var/www/html/vippuploads/FTP/000000000459,1,vipp_000062,<blank>,6325ae85d932504df0319223a2d5e7e7 (786786),*,30000,30000
+8,30,564,472,89,0,10000,10000,atendimento@clickfolheados.com.br,/var/www/html/vippuploads/FTP/000000000472,1,vipp_000063,<blank>,4e9e77c3968b1e76d7d18e948cae4f4d,*,30000,30000
+8,30,563,471,89,0,10000,10000,pamella@ferlon.com.br,/var/www/html/vippuploads/FTP/000000000471,1,vipp_000064,<blank>,4e9e77c3968b1e76d7d18e948cae4f4d,*,30000,30000
+8,30,588,486,89,0,10000,10000,contato@casaagricola.com.br,/var/www/html/vippuploads/FTP/000000000486,1,vipp_000065,<blank>,4e9e77c3968b1e76d7d18e948cae4f4d,*,30000,30000
+8,30,564,0,89,0,10000,10000,atendimento@clickfolheados.com.br,<blank>,1,vipp_000066,<blank>,4e9e77c3968b1e76d7d18e948cae4f4d,*,30000,30000
+8,30,564,488,89,0,10000,10000,atendimento@clickfolheados.com.br,/var/www/html/vippuploads/FTP/000000000488,1,vipp_000067,<blank>,4e9e77c3968b1e76d7d18e948cae4f4d,*,30000,30000
+8,30,2,489,4,0,10000,10000,teste@teste.com.br,/var/www/html/vippuploads/FTP/000000000489,1,vipp_000068,<blank>,96e79218965eb72c92a549dd5a330112 (111111),*,30000,30000
+8,30,477,0,98,0,10000,10000,gerenteonline@gmail.com,<blank>,1,vipp_000069,<blank>,3a50ec798d55fc02354463a61e134d70,*,30000,30000
+8,30,477,0,98,0,10000,10000,gerenteonline@gmail.com,<blank>,1,vipp_000070,<blank>,3a50ec798d55fc02354463a61e134d70,*,30000,30000
+8,30,477,428,98,0,10000,10000,gerenteonline@gmail.com,/var/www/html/vippuploads/FTP/000000000428,1,vipp_000071,<blank>,3a50ec798d55fc02354463a61e134d70,*,30000,30000
+8,30,477,429,98,0,10000,10000,gerenteonline@gmail.com,/var/www/html/vippuploads/FTP/000000000429,1,vipp_000072,<blank>,3a50ec798d55fc02354463a61e134d70,*,30000,30000
+8,30,624,500,114,0,10000,10000,a@ab.tv.br,/var/www/html/vippuploads/FTP/000000000500,1,vipp_000073,<blank>,46f94c8de14fb36680850768ff1b7f2a (123qwe),*,30000,30000
+8,30,425,407,7,0,10000,10000,luissialho@essentra.com,/var/www/html/vippuploads/FTP/000000000407,1,vipp_000074,<blank>,bfae3e1fa3cf3a2cf79c0531071a609a,*,30000,30000
+8,30,333,0,34,0,10000,10000,sac@smartusmagazine.com.br,<blank>,1,vipp_000075,<blank>,e10adc3949ba59abbe56e057f20f883e (123456),*,30000,30000
+8,30,333,0,34,0,10000,10000,sac@smartusmagazine.com.br,<blank>,1,vipp_000076,<blank>,e10adc3949ba59abbe56e057f20f883e (123456),*,30000,30000
+8,30,333,0,34,0,10000,10000,sac@smartusmagazine.com.br,<blank>,1,vipp_000077,<blank>,e99a18c428cb38d5f260853678922e03 (abc123),*,30000,30000
+8,30,333,533,34,0,10000,10000,suporte4@visualset.com.br,/var/www/html/vippuploads/FTP/000000000533,1,vipp_000078,<blank>,e10adc3949ba59abbe56e057f20f883e (123456),*,30000,30000
+8,30,333,337,34,0,10000,10000,suporte4@visualset.com.br,/var/www/html/vippuploads/FTP/000000000337,1,vipp_000079,<blank>,e99a18c428cb38d5f260853678922e03 (abc123),*,30000,30000
+8,30,503,534,70,0,10000,10000,suporte4@visualset.com.br,/var/www/html/vippuploads/FTP/000000000534,1,vipp_000080,<blank>,6d926899428b4be9389a8cd408c0b365,*,30000,30000
+8,30,692,567,108,0,10000,10000,fernando.santos@vallee.com.br,/var/www/html/vippuploads/FTP/000000000567,1,vipp_000081,<blank>,e10adc3949ba59abbe56e057f20f883e (123456),*,30000,30000
+8,30,2,571,4,0,10000,10000,alexandre-bh@visualset.com.br,/var/www/html/vippuploads/FTP/000000000571,1,vipp_000082,<blank>,e10adc3949ba59abbe56e057f20f883e (123456),*,30000,30000
+8,30,714,592,124,0,10000,10000,administrativo@brindeleve.com.br,/var/www/html/vippuploads/FTP/000000000592,1,vipp_000083,<blank>,60f697ce273a53b22f2cedab03c93581,*,30000,30000
+8,30,714,593,124,0,10000,10000,administrativo@brindeleve.com.br,/var/www/html/vippuploads/FTP/000000000593,1,vipp_000084,<blank>,60f697ce273a53b22f2cedab03c93581,*,30000,30000
+8,30,741,615,70,0,10000,10000,C.HERBERT@GRUPOSBF.COM.BR,/var/www/html/vippuploads/FTP/000000000615,1,vipp_000085,<blank>,96e79218965eb72c92a549dd5a330112 (111111),*,30000,30000
+8,30,741,617,70,0,10000,10000,C.HERBERT@GRUPOSBF.COM.BR,/var/www/html/vippuploads/FTP/000000000617,1,vipp_000086,<blank>,96e79218965eb72c92a549dd5a330112 (111111),*,30000,30000
+8,30,418,0,95,0,10000,10000,alexandre-bh@visualset.com.br,<blank>,1,vipp_000087,<blank>,c33367701511b4f6020ec61ded352059 (654321),*,30000,30000
+8,30,751,0,127,0,10000,10000,renato@aunimaq.com.br,<blank>,1,vipp_000088,<blank>,51eb0ad527c0a880ed40ea18d8534891,*,30000,30000
+8,30,751,626,127,0,10000,10000,renato@aunimaq.com.br,/var/www/html/vippuploads/FTP/000000000626,1,vipp_000089,<blank>,51eb0ad527c0a880ed40ea18d8534891,*,30000,30000
+8,30,754,628,23,0,10000,10000,suporte3@visualset.com.br,/var/www/html/vippuploads/FTP/000000000628,1,vipp_000090,<blank>,96e79218965eb72c92a549dd5a330112 (111111),*,30000,30000
+8,30,754,629,23,0,10000,10000,suporte3@visualset.com.br,/var/www/html/vippuploads/FTP/000000000629,1,vipp_000091,<blank>,96e79218965eb72c92a549dd5a330112 (111111),*,30000,30000
+8,30,768,639,129,0,10000,10000,paradizi@gmail.com,/var/www/html/vippuploads/FTP/000000000639,1,vipp_000092,<blank>,e10adc3949ba59abbe56e057f20f883e (123456),*,30000,30000
+8,30,768,640,129,0,10000,10000,paradizi@gmail.com,/var/www/html/vippuploads/FTP/000000000640,1,vipp_000093,<blank>,e10adc3949ba59abbe56e057f20f883e (123456),*,30000,30000
+8,30,768,641,129,0,10000,10000,paradizi@gmail.com,/var/www/html/vippuploads/FTP/000000000641,1,vipp_000094,<blank>,e10adc3949ba59abbe56e057f20f883e (123456),*,30000,30000
+8,30,271,675,63,0,10000,10000,agfsaojose@uol.com.br,/var/www/html/vippuploads/FTP/000000000675,1,vipp_000095,<blank>,e10adc3949ba59abbe56e057f20f883e (123456),*,30000,30000
+8,30,333,337,34,0,10000,10000,sac@zylionmagazine.com.br,/var/www/html/vippuploads/FTP/000000000337,1,vipp_000096,<blank>,e10adc3949ba59abbe56e057f20f883e (123456),*,30000,30000
+8,30,333,337,34,0,10000,10000,sac@zylionmagazine.com.br,/var/www/html/vippuploads/FTP/000000000337,1,vipp_000097,<blank>,e10adc3949ba59abbe56e057f20f883e (123456),*,30000,30000
+8,30,271,687,63,0,10000,10000,agfsaojose@uol.com.br,/var/www/html/vippuploads/FTP/000000000687,1,vipp_000098,<blank>,e10adc3949ba59abbe56e057f20f883e (123456),*,30000,30000
+8,30,271,688,63,0,10000,10000,agfsaojose@uol.com.br,/var/www/html/vippuploads/FTP/000000000688,1,vipp_000099,<blank>,e10adc3949ba59abbe56e057f20f883e (123456),*,30000,30000
+8,30,297,693,56,0,10000,10000,agfcidadenova@com4.com.br,/var/www/html/vippuploads/FTP/000000000693,1,vipp_000100,<blank>,e10adc3949ba59abbe56e057f20f883e (123456),*,30000,30000
+8,30,791,696,129,0,10000,10000,alexandre-bh@visualset.com.br,/var/www/html/vippuploads/FTP/000000000696,1,vipp_000101,<blank>,e10adc3949ba59abbe56e057f20f883e (123456),*,30000,30000
+8,30,791,0,129,0,10000,10000,alexandre-bh@visualset.com.br,<blank>,1,vipp_000102,<blank>,e10adc3949ba59abbe56e057f20f883e (123456),*,30000,30000
+8,30,848,699,130,0,10000,10000,agfafranio@uber.com.br,/var/www/html/vippuploads/FTP/000000000699,1,vipp_000103,<blank>,e10adc3949ba59abbe56e057f20f883e (123456),*,30000,30000
+8,30,852,701,130,0,10000,10000,rodrigo@provanza.com.br,/var/www/html/vippuploads/FTP/000000000701,1,vipp_000104,<blank>,e85a203e8ca146102f5cd7ecff912580 (102525),*,30000,30000
+8,30,852,702,130,0,10000,10000,rodrigo@provanza.com.br,/var/www/html/vippuploads/FTP/000000000702,1,vipp_000105,<blank>,e85a203e8ca146102f5cd7ecff912580 (102525),*,30000,30000
+8,30,849,703,130,0,10000,10000,leticia@tresscabelos.com.br,/var/www/html/vippuploads/FTP/000000000703,1,vipp_000106,<blank>,e10adc3949ba59abbe56e057f20f883e (123456),*,30000,30000
+8,30,849,704,130,0,10000,10000,leticia@tresscabelos.com.br,/var/www/html/vippuploads/FTP/000000000704,1,vipp_000107,<blank>,e10adc3949ba59abbe56e057f20f883e (123456),*,30000,30000
+8,30,854,707,121,0,10000,10000,logistica@mixdist.com.br,/var/www/html/vippuploads/FTP/000000000707,1,vipp_000109,<blank>,e10adc3949ba59abbe56e057f20f883e (123456),*,30000,30000
+
