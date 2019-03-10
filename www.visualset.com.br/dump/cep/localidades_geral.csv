@@ -1,0 +1,693 @@
+localidade,uf,cep,tipo,nome,ch_bai,bairro,ch_loc,tip_log,prefixo,cxa_pos,endlimpo,endereco,descricao,logradouro,complemento
+ABACATE DA PEDREIRA (MACAPA),AP,68912350,<blank>,<blank>,0,<blank>,278,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ABADIA (JANDAIRA),BA,48320000,<blank>,<blank>,0,<blank>,325,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ABADIA DE GOIAS,GO,75345000,<blank>,<blank>,0,<blank>,2049,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ABADIA DOS DOURADOS,MG,38540000,<blank>,<blank>,0,<blank>,2620,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ABADIANIA,GO,72940000,<blank>,<blank>,0,<blank>,2050,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ABAETE,MG,35620000,<blank>,<blank>,0,<blank>,2621,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ABAETE DOS MENDES (RIO PARANAIBA),MG,38812000,<blank>,<blank>,0,<blank>,2622,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ABAETETUBA,PA,68440000,<blank>,<blank>,0,<blank>,4522,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ABAIARA,CE,63240000,<blank>,<blank>,0,<blank>,1122,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ABAIBA (LEOPOLDINA),MG,36704000,<blank>,<blank>,0,<blank>,2623,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ABAIRA,BA,46690000,<blank>,<blank>,0,<blank>,326,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ABAPA (CASTRO),PR,84185000,<blank>,<blank>,0,<blank>,5730,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ABARE,BA,48680000,<blank>,<blank>,0,<blank>,327,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ABARRACAMENTO (RIO DAS FLORES),RJ,27670000,<blank>,<blank>,0,<blank>,6839,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ABATIA,PR,86460000,<blank>,<blank>,0,<blank>,5731,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ABDON BATISTA,SC,89636000,<blank>,<blank>,0,<blank>,8319,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ABEL FIGUEIREDO,PA,68527000,<blank>,<blank>,0,<blank>,4523,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ABELARDO LUZ,SC,89830000,<blank>,<blank>,0,<blank>,8320,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ABELHAS (VITORIA DA CONQUISTA),BA,45112000,<blank>,<blank>,0,<blank>,328,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ABILIO MARTINS (IPU),CE,62252000,<blank>,<blank>,0,<blank>,1123,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ABOBORA (JUAZEIRO),BA,48922700,<blank>,<blank>,0,<blank>,329,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ABRANTES,BA,0,<blank>,<blank>,0,<blank>,330,0,<blank>,0,CidadeDeCEPUnico,VER > CAMACARI,Cidade De CEP Unico,<blank>,<blank>
+ABRE CAMPO,MG,35365000,<blank>,<blank>,0,<blank>,2624,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ABREULANDIA,TO,77693000,<blank>,<blank>,0,<blank>,9791,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ABREUS (ALTO RIO DOCE),MG,36263000,<blank>,<blank>,0,<blank>,2625,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ABUNA (PORTO VELHO),RO,76843000,<blank>,<blank>,0,<blank>,7310,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ACAIACA,MG,35438000,<blank>,<blank>,0,<blank>,2626,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ACAILANDIA,MA,65930000,<blank>,<blank>,0,<blank>,2369,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ACAJUTIBA,BA,48360000,<blank>,<blank>,0,<blank>,331,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ACAMPAMENTO DAS MINAS (TELEMACO BORBA),PR,84277500,<blank>,<blank>,0,<blank>,5732,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ACARA,PA,68690000,<blank>,<blank>,0,<blank>,4524,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ACARAPE,CE,62785000,<blank>,<blank>,0,<blank>,1124,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ACARAU,CE,62580000,<blank>,<blank>,0,<blank>,1125,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ACARI,RN,59370000,<blank>,<blank>,0,<blank>,7124,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ACAUA,PI,64748000,<blank>,<blank>,0,<blank>,5508,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ACEGUA,RS,96445000,<blank>,<blank>,0,<blank>,7388,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ACIOLI (JOAO NEIVA),ES,29687000,<blank>,<blank>,0,<blank>,1797,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ACOITA CAVALO (ESPERANCA DO SUL),RS,98636000,<blank>,<blank>,0,<blank>,12560,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ACOPIARA,CE,63560000,<blank>,<blank>,0,<blank>,1126,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ACORIZAL,MT,78480000,<blank>,<blank>,0,<blank>,4272,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ACRELANDIA,AC,69945000,<blank>,<blank>,0,<blank>,1,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ACREUNA,GO,75960000,<blank>,<blank>,0,<blank>,2051,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ACU,RN,59650000,<blank>,<blank>,0,<blank>,7125,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ACU DA TORRE (MATA DE SAO JOAO),BA,48288000,<blank>,<blank>,0,<blank>,332,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ACUCENA,MG,35147000,<blank>,<blank>,0,<blank>,2627,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ACUDE DOS PINHEIROS (IBICUITINGA),CE,62957000,<blank>,<blank>,0,<blank>,12216,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ACUDINA (SANTA MARIA DA VITORIA),BA,47645000,<blank>,<blank>,0,<blank>,333,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ACUDINHO (TAMBORIL),CE,63779001,<blank>,<blank>,0,<blank>,13652,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ACUDINHO DOS COSTAS (MOMBACA),CE,63619000,<blank>,<blank>,0,<blank>,12680,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ACUNGUI (RIO BRANCO DO SUL),PR,83550000,<blank>,<blank>,0,<blank>,5733,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ACUPE (SANTO AMARO),BA,44218000,<blank>,<blank>,0,<blank>,334,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ACURUI (ITABIRITO),MG,35451000,<blank>,<blank>,0,<blank>,2628,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ADAMANTINA,SP,17800000,<blank>,<blank>,0,<blank>,8853,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ADAO COLARES (BOTUMIRIM),MG,39597000,<blank>,<blank>,0,<blank>,2629,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ADELANDIA,GO,76155000,<blank>,<blank>,0,<blank>,2052,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ADHEMAR DE BARROS (TERRA RICA),PR,87895000,<blank>,<blank>,0,<blank>,5734,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ADOLFO,SP,15230000,<blank>,<blank>,0,<blank>,8854,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ADRIANOPOLIS,PR,83490000,<blank>,<blank>,0,<blank>,5735,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ADRIANOPOLIS (GRANJA),CE,62435000,<blank>,<blank>,0,<blank>,1127,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ADRO DE SAO GONCALO (ITIUBA),BA,48859000,<blank>,<blank>,0,<blank>,12410,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ADUSTINA,BA,48435000,<blank>,<blank>,0,<blank>,335,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AFLIGIDOS (SAO GONCALO DOS CAMPOS),BA,44338000,<blank>,<blank>,0,<blank>,336,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AFOGADOS DA INGAZEIRA,PE,56800000,<blank>,<blank>,0,<blank>,5136,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AFONSO ARINOS (COMENDADOR LEVY GASPARIAN),RJ,25875000,<blank>,<blank>,0,<blank>,6841,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AFONSO BEZERRA,RN,59510000,<blank>,<blank>,0,<blank>,7126,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AFONSO CLAUDIO,ES,29600000,<blank>,<blank>,0,<blank>,1798,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AFONSO CUNHA,MA,65505000,<blank>,<blank>,0,<blank>,2370,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AFONSO RODRIGUES (SAO LUIZ GONZAGA),RS,97825000,<blank>,<blank>,0,<blank>,7389,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AFRANIO,PE,56360000,<blank>,<blank>,0,<blank>,5137,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AFRANIO PEIXOTO (LENCOIS),BA,46965000,<blank>,<blank>,0,<blank>,337,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AFUA,PA,68890000,<blank>,<blank>,0,<blank>,4525,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGHA (PIUMA),ES,29287000,<blank>,<blank>,0,<blank>,1799,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGISSE (RANCHARIA),SP,19610000,<blank>,<blank>,0,<blank>,8855,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGOSTINHO (CASTRO),PR,84194200,<blank>,<blank>,0,<blank>,5736,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGRESTINA,PE,55495000,<blank>,<blank>,0,<blank>,5138,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGRICOLANDIA,PI,64440000,<blank>,<blank>,0,<blank>,5509,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGROLANDIA,SC,88420000,<blank>,<blank>,0,<blank>,8321,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGRONOMICA,SC,89188000,<blank>,<blank>,0,<blank>,8322,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGROPOLIS BELA VISTA (SANTAREM),PA,68111000,<blank>,<blank>,0,<blank>,4526,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGROVILA SAO SEBASTIAO DO CABURI (PARINTINS),AM,69159000,<blank>,<blank>,0,<blank>,11095,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUA AZUL (LAPA),PR,83770000,<blank>,<blank>,0,<blank>,5737,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUA AZUL DO NORTE,PA,68533000,<blank>,<blank>,0,<blank>,4527,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUA BOA,MG,39790000,<blank>,<blank>,0,<blank>,2630,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUA BOA,MT,78635000,<blank>,<blank>,0,<blank>,4273,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUA BOA (PAICANDU),PR,87145000,<blank>,<blank>,0,<blank>,5738,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUA BOA (ROCHEDO),MS,79452000,<blank>,<blank>,0,<blank>,4102,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUA BRANCA,AL,57490000,<blank>,<blank>,0,<blank>,23,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUA BRANCA,PB,58748000,<blank>,<blank>,0,<blank>,4848,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUA BRANCA,PI,64460000,<blank>,<blank>,0,<blank>,5510,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUA BRANCA (GUARAPUAVA),PR,85139500,<blank>,<blank>,0,<blank>,5739,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUA BRANCA DE MINAS (COMERCINHO),MG,39629000,<blank>,<blank>,0,<blank>,2631,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUA CLARA,MS,79680000,<blank>,<blank>,0,<blank>,4103,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUA COMPRIDA,MG,38110000,<blank>,<blank>,0,<blank>,2632,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUA DA PRATA (BRASNORTE),MT,78358000,<blank>,<blank>,0,<blank>,12068,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUA DOCE,SC,89654000,<blank>,<blank>,0,<blank>,8323,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUA DOCE (IBICUI),BA,45295000,<blank>,<blank>,0,<blank>,338,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUA DOCE DO MARANHAO,MA,65578000,<blank>,<blank>,0,<blank>,2371,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUA DOCE DO NORTE,ES,29820000,<blank>,<blank>,0,<blank>,1800,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUA FRIA,BA,48170000,<blank>,<blank>,0,<blank>,339,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUA FRIA (BELO JARDIM),PE,55168000,<blank>,<blank>,0,<blank>,5139,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUA FRIA (CHAPADA DOS GUIMARAES),MT,78197000,<blank>,<blank>,0,<blank>,4274,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUA FRIA (QUIXERE),CE,62929000,<blank>,<blank>,0,<blank>,13893,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUA FRIA (XINGUARA),PA,68559300,<blank>,<blank>,0,<blank>,4528,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUA FRIA DE GOIAS,GO,73780000,<blank>,<blank>,0,<blank>,2053,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUA LIMPA,GO,75665000,<blank>,<blank>,0,<blank>,2054,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUA MINERAL (GUARAPUAVA),PR,85126000,<blank>,<blank>,0,<blank>,5741,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUA NOVA,RN,59995000,<blank>,<blank>,0,<blank>,7127,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUA PRETA,PE,55550000,<blank>,<blank>,0,<blank>,5140,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUA SANTA,RS,99965000,<blank>,<blank>,0,<blank>,7390,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUA SANTA DE MINAS (TOMBOS),MG,36845000,<blank>,<blank>,0,<blank>,12892,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUA VERDE (GUAIUBA),CE,61895000,<blank>,<blank>,0,<blank>,1128,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUA VERMELHA (CASTRO),PR,84197700,<blank>,<blank>,0,<blank>,5742,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUA VERMELHA (SAO CARLOS),SP,13578000,<blank>,<blank>,0,<blank>,8856,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUA VIVA (ESTRELA DALVA),MG,36728000,<blank>,<blank>,0,<blank>,2633,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUACU (CUIABA),MT,78108000,<blank>,<blank>,0,<blank>,4275,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUAI,SP,13860000,<blank>,<blank>,0,<blank>,8857,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUAI (ITAPAJE),CE,62602000,<blank>,<blank>,0,<blank>,1129,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUANIL,MG,37273000,<blank>,<blank>,0,<blank>,2634,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUAPEI (VILA BELA DA SANTISSIMA TRINDADE),MT,78248000,<blank>,<blank>,0,<blank>,4276,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUAPES (OSORIO),RS,95529000,<blank>,<blank>,0,<blank>,11100,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUAS BELAS,PE,55340000,<blank>,<blank>,0,<blank>,5141,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUAS BELAS (BOA VIAGEM),CE,63887000,<blank>,<blank>,0,<blank>,12993,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUAS BRANCAS (URUBICI),SC,88655000,<blank>,<blank>,0,<blank>,8324,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUAS CLARAS (JUARA),MT,78577000,<blank>,<blank>,0,<blank>,4277,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUAS CLARAS (MAFRA),SC,89320000,<blank>,<blank>,0,<blank>,8325,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUAS CLARAS (VIAMAO),RS,94760000,<blank>,<blank>,0,<blank>,7391,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUAS DA PRATA,SP,13890000,<blank>,<blank>,0,<blank>,8858,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUAS DE ARAXA,MG,0,<blank>,<blank>,0,<blank>,2635,0,<blank>,0,CidadeDeCEPUnico,VER > ARAXA,Cidade De CEP Unico,<blank>,<blank>
+AGUAS DE CHAPECO,SC,89883000,<blank>,<blank>,0,<blank>,8326,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUAS DE CONTENDAS (CONCEICAO DO RIO VERDE),MG,37435000,<blank>,<blank>,0,<blank>,2636,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUAS DE LINDOIA,SP,13940000,<blank>,<blank>,0,<blank>,8859,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUAS DE SANTA BARBARA,SP,18770000,<blank>,<blank>,0,<blank>,8860,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUAS DE SAO PEDRO,SP,13525000,<blank>,<blank>,0,<blank>,8861,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUAS DO PAULISTA (PARATINGA),BA,47505000,<blank>,<blank>,0,<blank>,340,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUAS FERREAS (SAO PEDRO DOS FERROS),MG,35362000,<blank>,<blank>,0,<blank>,2637,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUAS FORMOSAS,MG,39880000,<blank>,<blank>,0,<blank>,2638,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUAS FRIAS,SC,89843000,<blank>,<blank>,0,<blank>,8327,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUAS MORNAS,SC,88150000,<blank>,<blank>,0,<blank>,8328,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUAS VERMELHAS,MG,39990000,<blank>,<blank>,0,<blank>,2639,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUDO,RS,96540000,<blank>,<blank>,0,<blank>,7392,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUDOS DO SUL,PR,83850000,<blank>,<blank>,0,<blank>,5743,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUIA BRANCA,ES,29795000,<blank>,<blank>,0,<blank>,1801,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUIAR,PB,58778000,<blank>,<blank>,0,<blank>,4849,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGUIARNOPOLIS,TO,77908000,<blank>,<blank>,0,<blank>,9792,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGULHA (FERNANDO PRESTES),SP,15945000,<blank>,<blank>,0,<blank>,8863,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AGULHAS NEGRAS,RJ,0,<blank>,<blank>,0,<blank>,6842,0,<blank>,0,CidadeDeCEPUnico,VER > RESENDE,Cidade De CEP Unico,<blank>,<blank>
+AGUTI (NOVA TRENTO),SC,88280000,<blank>,<blank>,0,<blank>,8329,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AIMORES,MG,35200000,<blank>,<blank>,0,<blank>,2640,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AINHUMAS (RONDONOPOLIS),MT,78751000,<blank>,<blank>,0,<blank>,4278,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AIQUARA,BA,45220000,<blank>,<blank>,0,<blank>,341,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AIRI (FLORESTA),PE,56410000,<blank>,<blank>,0,<blank>,5142,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AIRITUBA (SAO JOSE DO CALCADO),ES,29477000,<blank>,<blank>,0,<blank>,1802,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AIUA (MASSAPE),CE,62143000,<blank>,<blank>,0,<blank>,1130,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AIUABA,CE,63575000,<blank>,<blank>,0,<blank>,1131,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AIURE (GRAO PARA),SC,88892000,<blank>,<blank>,0,<blank>,8330,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AIURUOCA,MG,37450000,<blank>,<blank>,0,<blank>,2641,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AJAPI,SP,0,<blank>,<blank>,0,<blank>,8864,0,<blank>,0,CidadeDeCEPUnico,VER > RIO CLARO,Cidade De CEP Unico,<blank>,<blank>
+AJURICABA,RS,98750000,<blank>,<blank>,0,<blank>,7393,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALAGOA,MG,37458000,<blank>,<blank>,0,<blank>,2642,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALAGOA GRANDE,PB,58388000,<blank>,<blank>,0,<blank>,4850,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALAGOA NOVA,PB,58125000,<blank>,<blank>,0,<blank>,4851,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALAGOINHA,PB,58390000,<blank>,<blank>,0,<blank>,4852,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALAGOINHA,PE,55260000,<blank>,<blank>,0,<blank>,5143,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALAGOINHA (ARARIPE),CE,63174000,<blank>,<blank>,0,<blank>,1132,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALAGOINHA (PARAIPABA),CE,62686000,<blank>,<blank>,0,<blank>,1133,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALAGOINHA DO PIAUI,PI,64655000,<blank>,<blank>,0,<blank>,5511,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALAMBARI,SP,18220000,<blank>,<blank>,0,<blank>,8865,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALAZANS (IPUEIRAS),CE,62249000,<blank>,<blank>,0,<blank>,13374,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALBARDAO (RIO PARDO),RS,96670000,<blank>,<blank>,0,<blank>,7394,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALBERTINA,MG,37596000,<blank>,<blank>,0,<blank>,2643,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALBERTO ISAACSON (MARTINHO CAMPOS),MG,35608000,<blank>,<blank>,0,<blank>,2644,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALBERTO MOREIRA (BARRETOS),SP,14788000,<blank>,<blank>,0,<blank>,8866,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALBERTOS (FORMIGA),MG,35576000,<blank>,<blank>,0,<blank>,2645,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALBUQUERQUE (CORUMBA),MS,79362000,<blank>,<blank>,0,<blank>,4104,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALBUQUERQUE NE (SERTANIA),PE,56610000,<blank>,<blank>,0,<blank>,5144,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALCANTARA,MA,65250000,<blank>,<blank>,0,<blank>,2372,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALCANTARAS,CE,62120000,<blank>,<blank>,0,<blank>,1134,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALCANTIL,PB,58460000,<blank>,<blank>,0,<blank>,4853,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALCANTILADO (GUIRATINGA),MT,78762000,<blank>,<blank>,0,<blank>,4279,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALCINOPOLIS,MS,79530000,<blank>,<blank>,0,<blank>,4105,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALCOBACA,BA,45910000,<blank>,<blank>,0,<blank>,343,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALDEIA,SP,0,<blank>,<blank>,0,<blank>,8867,0,<blank>,0,CidadeDeCEPUnico,VER > BARUERI,Cidade De CEP Unico,<blank>,<blank>
+ALDEIA (CONSELHEIRO PENA),MG,35245000,<blank>,<blank>,0,<blank>,2646,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALDEIA DE CARAPICUIBA,SP,0,<blank>,<blank>,0,<blank>,8868,0,<blank>,0,CidadeDeCEPUnico,VER > CARAPICUIBA,Cidade De CEP Unico,<blank>,<blank>
+ALDEIAS ALTAS,MA,65610000,<blank>,<blank>,0,<blank>,2373,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALECRIM,RS,98950000,<blank>,<blank>,0,<blank>,7395,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALECRIM (CURIUVA),PR,84284000,<blank>,<blank>,0,<blank>,5744,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALECRIM (PAO DE ACUCAR),AL,57405000,<blank>,<blank>,0,<blank>,25,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALEGRE,ES,29500000,<blank>,<blank>,0,<blank>,1803,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALEGRE (CONDEUBA),BA,46203000,<blank>,<blank>,0,<blank>,344,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALEGRE (COROMANDEL),MG,38560000,<blank>,<blank>,0,<blank>,2647,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALEGRETE DO PIAUI,PI,64675000,<blank>,<blank>,0,<blank>,5512,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALEGRIA,RS,98905000,<blank>,<blank>,0,<blank>,7397,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALEGRIA (SIMONESIA),MG,36935000,<blank>,<blank>,0,<blank>,2648,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALEM PARAIBA,MG,36660000,<blank>,<blank>,0,<blank>,2649,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALENQUER,PA,68200000,<blank>,<blank>,0,<blank>,4529,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALEXANDRA (PARANAGUA),PR,83250000,<blank>,<blank>,0,<blank>,5745,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALEXANDRIA,RN,59965000,<blank>,<blank>,0,<blank>,7128,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALEXANDRITA (ITURAMA),MG,38282000,<blank>,<blank>,0,<blank>,2650,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALEXANIA,GO,72930000,<blank>,<blank>,0,<blank>,2056,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALFREDO BRENNER (IBIRUBA),RS,98210000,<blank>,<blank>,0,<blank>,7398,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALFREDO CHAVES,ES,29240000,<blank>,<blank>,0,<blank>,1804,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALFREDO GUEDES (LENCOIS PAULISTA),SP,18688000,<blank>,<blank>,0,<blank>,8869,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALFREDO MARCONDES,SP,19180000,<blank>,<blank>,0,<blank>,8870,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALFREDO VASCONCELOS,MG,36272000,<blank>,<blank>,0,<blank>,2652,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALFREDO WAGNER,SC,88450000,<blank>,<blank>,0,<blank>,8331,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALGODAO (IBIRATAIA),BA,45582000,<blank>,<blank>,0,<blank>,345,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALGODAO DE JANDAIRA,PB,58399000,<blank>,<blank>,0,<blank>,4854,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALGODOAL (MARACANA),PA,68712000,<blank>,<blank>,0,<blank>,4530,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALGODOES (QUIJINGUE),BA,48832000,<blank>,<blank>,0,<blank>,346,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALGODOES (QUITERIANOPOLIS),CE,63655000,<blank>,<blank>,0,<blank>,1135,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALGODOES (SERTANIA),PE,56625000,<blank>,<blank>,0,<blank>,5145,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALHANDRA,PB,58320000,<blank>,<blank>,0,<blank>,4855,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALIANCA,PE,55890000,<blank>,<blank>,0,<blank>,5146,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALIANCA DO TOCANTINS,TO,77455000,<blank>,<blank>,0,<blank>,9793,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALMADINA,BA,45640000,<blank>,<blank>,0,<blank>,347,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALMAS,TO,77310000,<blank>,<blank>,0,<blank>,9794,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALMEIDA (JABOTICATUBAS),MG,35835000,<blank>,<blank>,0,<blank>,2653,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALMEIDAS (CONSELHEIRO LAFAIETE),MG,36409200,<blank>,<blank>,0,<blank>,14833,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALMEIRIM,PA,68230000,<blank>,<blank>,0,<blank>,4531,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALMENARA,MG,39900000,<blank>,<blank>,0,<blank>,2654,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALMINO AFONSO,RN,59760000,<blank>,<blank>,0,<blank>,7129,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALMIRANTE TAMANDARE DO SUL,RS,99523000,<blank>,<blank>,0,<blank>,7399,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALMOCO (BRAGANCA),PA,68608000,<blank>,<blank>,0,<blank>,4532,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALMOFALA (ITAREMA),CE,62592000,<blank>,<blank>,0,<blank>,1136,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALOANDIA,GO,75615000,<blank>,<blank>,0,<blank>,2057,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALPERCATA,MG,35138000,<blank>,<blank>,0,<blank>,2655,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALPESTRE,RS,98480000,<blank>,<blank>,0,<blank>,7400,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALPINOPOLIS,MG,37940000,<blank>,<blank>,0,<blank>,2656,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTA FLORESTA,MT,78580000,<blank>,<blank>,0,<blank>,4280,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTA FLORESTA D OESTE,RO,76954000,<blank>,<blank>,0,<blank>,7312,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTA PARA (SANTAREM),PA,68112000,<blank>,<blank>,0,<blank>,4533,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTAIR,SP,15430000,<blank>,<blank>,0,<blank>,8871,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTAMIRA DO MARANHAO,MA,65310000,<blank>,<blank>,0,<blank>,2374,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTAMIRA DO PARANA,PR,85280000,<blank>,<blank>,0,<blank>,5747,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTANEIRA,CE,63195000,<blank>,<blank>,0,<blank>,1137,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTANEIRA (MARINGA),PR,87108000,<blank>,<blank>,0,<blank>,5748,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTER DO CHAO (SANTAREM),PA,68109000,<blank>,<blank>,0,<blank>,4535,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTEROSA,MG,37145000,<blank>,<blank>,0,<blank>,2657,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTINHO,PE,55490000,<blank>,<blank>,0,<blank>,5147,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTINOPOLIS,SP,14350000,<blank>,<blank>,0,<blank>,8872,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO ALEGRE,RR,69350000,<blank>,<blank>,0,<blank>,7373,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO ALEGRE,RS,99430000,<blank>,<blank>,0,<blank>,7401,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO ALEGRE,SP,16310000,<blank>,<blank>,0,<blank>,8873,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO ALEGRE (CAPINZAL),SC,89666000,<blank>,<blank>,0,<blank>,8332,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO ALEGRE (CERRITO),RS,96399000,<blank>,<blank>,0,<blank>,12503,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO ALEGRE (COLORADO),PR,86695000,<blank>,<blank>,0,<blank>,5749,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO ALEGRE (PEDRO OSORIO),RS,96380000,<blank>,<blank>,0,<blank>,7402,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO ALEGRE (UMUARAMA),PR,87523200,<blank>,<blank>,0,<blank>,5750,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO ALEGRE DO IGUACU (CAPITAO LEONIDAS MARQUES),PR,85794000,<blank>,<blank>,0,<blank>,5751,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO ALEGRE DO MARANHAO,MA,65413000,<blank>,<blank>,0,<blank>,2375,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO ALEGRE DO PINDARE,MA,65398000,<blank>,<blank>,0,<blank>,2376,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO ALEGRE DOS PARECIS,RO,76952000,<blank>,<blank>,0,<blank>,7311,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO ALVORADA (ORIZONA),GO,75283000,<blank>,<blank>,0,<blank>,2058,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO AMPARO (TELEMACO BORBA),PR,84277700,<blank>,<blank>,0,<blank>,5752,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO ARAGUAIA,MT,78780000,<blank>,<blank>,0,<blank>,4281,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO BELA VISTA,SC,89730000,<blank>,<blank>,0,<blank>,8333,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO BELO (BOCAIUVA),MG,39394000,<blank>,<blank>,0,<blank>,3621,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO BOA VISTA,MT,78665000,<blank>,<blank>,0,<blank>,4282,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO BONITO (MUNDO NOVO),BA,44805000,<blank>,<blank>,0,<blank>,348,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO CALCADO (SAO JOSE DO CALCADO),ES,29475000,<blank>,<blank>,0,<blank>,1805,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO CALDEIRAO (SANTA TERESA),ES,29656000,<blank>,<blank>,0,<blank>,1806,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO CAPARAO,MG,36979000,<blank>,<blank>,0,<blank>,2658,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO CAPIM (AIMORES),MG,35210000,<blank>,<blank>,0,<blank>,2659,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO CASTELINHO (VARGEM ALTA),ES,29296000,<blank>,<blank>,0,<blank>,10111,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO COITE (POXOREU),MT,78803000,<blank>,<blank>,0,<blank>,4283,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO DA SERRA (CHAPECO),SC,89816300,<blank>,<blank>,0,<blank>,8334,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO DA UNIAO (IJUI),RS,98713000,<blank>,<blank>,0,<blank>,7403,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO DE SANTA HELENA (GOVERNADOR VALADARES),MG,35102000,<blank>,<blank>,0,<blank>,2660,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO DO AMPARO (TIBAGI),PR,84305000,<blank>,<blank>,0,<blank>,5753,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO DO RODRIGUES,RN,59507000,<blank>,<blank>,0,<blank>,7130,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO ERVAL NOVO (TRES PASSOS),RS,98610000,<blank>,<blank>,0,<blank>,12558,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO FELIZ,RS,95773000,<blank>,<blank>,0,<blank>,7404,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO GARCAS,MT,78770000,<blank>,<blank>,0,<blank>,4284,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO HORIZONTE,GO,76560000,<blank>,<blank>,0,<blank>,2059,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO JEQUITIBA,MG,36976000,<blank>,<blank>,0,<blank>,2661,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO JURUENA (COMODORO),MT,78318000,<blank>,<blank>,0,<blank>,4285,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO LINDO (IBIAPINA),CE,62362000,<blank>,<blank>,0,<blank>,12148,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO LONGA,PI,64360000,<blank>,<blank>,0,<blank>,5513,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO MARANHAO (CONGONHAS),MG,36417000,<blank>,<blank>,0,<blank>,2662,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO MUTUM PRETO (BAIXO GUANDU),ES,29737000,<blank>,<blank>,0,<blank>,1807,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO NORTE (MUNIZ FREIRE),ES,29387000,<blank>,<blank>,0,<blank>,14612,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO PARA (CASCAVEL),PR,85823950,<blank>,<blank>,0,<blank>,5754,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO PARAGUAI,MT,78410000,<blank>,<blank>,0,<blank>,4286,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO PARAISO,PR,87528000,<blank>,<blank>,0,<blank>,6812,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO PARAISO,RO,76862000,<blank>,<blank>,0,<blank>,7313,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO PARAISO (ALTA FLORESTA),MT,78584000,<blank>,<blank>,0,<blank>,4287,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO PARAISO DE GOIAS,GO,73770000,<blank>,<blank>,0,<blank>,2060,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO PARANA,PR,87750000,<blank>,<blank>,0,<blank>,5755,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO PAREDAO (SANTA CRUZ DO SUL),RS,96853000,<blank>,<blank>,0,<blank>,7405,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO PARNAIBA,MA,65810000,<blank>,<blank>,0,<blank>,2377,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO PIQUIRI,PR,87580000,<blank>,<blank>,0,<blank>,5756,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO PORA (IVAIPORA),PR,86875000,<blank>,<blank>,0,<blank>,5757,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO PORA (PEDREGULHO),SP,14480000,<blank>,<blank>,0,<blank>,8874,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO RECREIO (RONDA ALTA),RS,99673000,<blank>,<blank>,0,<blank>,7406,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO RIO DOCE,MG,36260000,<blank>,<blank>,0,<blank>,2663,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO RIO NOVO,ES,29760000,<blank>,<blank>,0,<blank>,1808,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO SABIA (GUARAPUAVA),PR,85138400,<blank>,<blank>,0,<blank>,5758,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO SANTA FE (NOVA SANTA ROSA),PR,85931000,<blank>,<blank>,0,<blank>,5759,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO SANTA MARIA (SANTA TERESA),ES,29662000,<blank>,<blank>,0,<blank>,1809,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO SANTO,CE,62970000,<blank>,<blank>,0,<blank>,1138,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO SAO JOAO (RONCADOR),PR,87323000,<blank>,<blank>,0,<blank>,5760,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO SUCURIU (PARAISO DAS AGUAS),MS,79558000,<blank>,<blank>,0,<blank>,4106,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO TAQUARI,MT,78785000,<blank>,<blank>,0,<blank>,4288,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO URUGUAI (TIRADENTES DO SUL),RS,98683000,<blank>,<blank>,0,<blank>,12566,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTO URUGUAI (TRES PASSOS),RS,98630000,<blank>,<blank>,0,<blank>,7407,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTOLANDIA (TAPIRAI),MG,38985000,<blank>,<blank>,0,<blank>,2664,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTONIA,PR,87550000,<blank>,<blank>,0,<blank>,5761,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTOS,PI,64290000,<blank>,<blank>,0,<blank>,5514,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALTOS VERDES (CARIRA),SE,49555000,<blank>,<blank>,0,<blank>,8767,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALUMINIO,SP,18125000,<blank>,<blank>,0,<blank>,8875,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALVACAO (CORACAO DE JESUS),MG,39347000,<blank>,<blank>,0,<blank>,2665,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALVARAES,AM,69540000,<blank>,<blank>,0,<blank>,191,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALVARENGA,MG,35249000,<blank>,<blank>,0,<blank>,2666,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALVARES FLORENCE,SP,15540000,<blank>,<blank>,0,<blank>,8876,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALVARES MACHADO,SP,19160000,<blank>,<blank>,0,<blank>,8877,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALVARO DE CARVALHO,SP,17410000,<blank>,<blank>,0,<blank>,8878,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALVERNE (ALAGOINHA),PE,55265500,<blank>,<blank>,0,<blank>,11700,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALVINLANDIA,SP,17430000,<blank>,<blank>,0,<blank>,8879,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALVINOPOLIS,MG,35950000,<blank>,<blank>,0,<blank>,2667,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALVORADA,TO,77480000,<blank>,<blank>,0,<blank>,9795,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALVORADA (CARANGOLA),MG,36803000,<blank>,<blank>,0,<blank>,2668,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALVORADA (ITAITUBA),PA,68191700,<blank>,<blank>,0,<blank>,4536,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALVORADA (URUARA),PA,68142000,<blank>,<blank>,0,<blank>,11141,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALVORADA D OESTE,RO,76930000,<blank>,<blank>,0,<blank>,7314,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALVORADA DE MINAS,MG,39140000,<blank>,<blank>,0,<blank>,2669,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALVORADA DO GURGUEIA,PI,64923000,<blank>,<blank>,0,<blank>,5515,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALVORADA DO IGUACU (FOZ DO IGUACU),PR,85872000,<blank>,<blank>,0,<blank>,5762,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALVORADA DO NORTE,GO,73950000,<blank>,<blank>,0,<blank>,2061,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ALVORADA DO SUL,PR,86150000,<blank>,<blank>,0,<blank>,5763,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AMADEU AMARAL,SP,0,<blank>,<blank>,0,<blank>,8880,0,<blank>,0,CidadeDeCEPUnico,VER > MARILIA,Cidade De CEP Unico,<blank>,<blank>
+AMADO BAHIA (MATA DE SAO JOAO),BA,48282000,<blank>,<blank>,0,<blank>,349,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AMAJARI,RR,69343000,<blank>,<blank>,0,<blank>,7374,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AMAMBAI,MS,79990000,<blank>,<blank>,0,<blank>,4107,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AMANAIARA (RERIUTABA),CE,62263000,<blank>,<blank>,0,<blank>,1139,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AMANARI (MARANGUAPE),CE,61979000,<blank>,<blank>,0,<blank>,1140,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AMANDA (BALDIM),MG,35734000,<blank>,<blank>,0,<blank>,2670,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AMANDABA (MIRANDOPOLIS),SP,16820000,<blank>,<blank>,0,<blank>,8881,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AMANDINA (IVINHEMA),MS,79742000,<blank>,<blank>,0,<blank>,4108,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AMANHECE (ARAGUARI),MG,38455000,<blank>,<blank>,0,<blank>,2671,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AMANIU (SENTO SE),BA,47380000,<blank>,<blank>,0,<blank>,350,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AMANIUTUBA (LAVRAS DA MANGABEIRA),CE,63306000,<blank>,<blank>,0,<blank>,1141,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AMAPA,AP,68950000,<blank>,<blank>,0,<blank>,280,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AMAPA DO MARANHAO,MA,65293000,<blank>,<blank>,0,<blank>,2378,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AMAPORA,PR,87850000,<blank>,<blank>,0,<blank>,5764,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AMARAJI,PE,55515000,<blank>,<blank>,0,<blank>,5148,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AMARAL FERRADOR,RS,96635000,<blank>,<blank>,0,<blank>,7409,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AMARALINA,GO,76493000,<blank>,<blank>,0,<blank>,2062,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AMARANTE,PI,64400000,<blank>,<blank>,0,<blank>,5516,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AMARANTE DO MARANHAO,MA,65923000,<blank>,<blank>,0,<blank>,2379,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AMARANTINA (OURO PRETO),MG,35412000,<blank>,<blank>,0,<blank>,2672,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AMARELAS (CAMOCIM),CE,62405000,<blank>,<blank>,0,<blank>,1142,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AMARGOSA,BA,45300000,<blank>,<blank>,0,<blank>,351,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AMARO (ASSARE),CE,63144000,<blank>,<blank>,0,<blank>,1143,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AMATARI (ITACOATIARA),AM,69110000,<blank>,<blank>,0,<blank>,192,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AMATURA,AM,69620000,<blank>,<blank>,0,<blank>,193,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AMBE (MACAPA),AP,68912000,<blank>,<blank>,0,<blank>,282,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AMEIXAS (CUMARU),PE,55658000,<blank>,<blank>,0,<blank>,5149,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AMELIA RODRIGUES,BA,44230000,<blank>,<blank>,0,<blank>,352,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AMELIOPOLIS,SP,0,<blank>,<blank>,0,<blank>,8882,0,<blank>,0,CidadeDeCEPUnico,VER > PRESIDENTE PRUDENTE,Cidade De CEP Unico,<blank>,<blank>
+AMERICA (IPUEIRAS),CE,62240000,<blank>,<blank>,0,<blank>,1144,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AMERICA DOURADA,BA,44910000,<blank>,<blank>,0,<blank>,353,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AMERICANO (SANTA ISABEL DO PARA),PA,68792000,<blank>,<blank>,0,<blank>,4537,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AMERICANO DO BRASIL,GO,76165000,<blank>,<blank>,0,<blank>,2063,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AMERICO ALVES (SENTO SE),BA,47370000,<blank>,<blank>,0,<blank>,354,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AMERICO BRASILIENSE,SP,14820000,<blank>,<blank>,0,<blank>,8884,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AMERICO DE CAMPOS,SP,15550000,<blank>,<blank>,0,<blank>,8885,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AMETISTA DO SUL,RS,98465000,<blank>,<blank>,0,<blank>,7410,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AMOLAR (CORUMBA),MS,79357000,<blank>,<blank>,0,<blank>,4109,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AMONTADA,CE,62540000,<blank>,<blank>,0,<blank>,1145,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AMORAS (TAQUARI),RS,95862000,<blank>,<blank>,0,<blank>,12475,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AMORINHA (IBAITI),PR,84910000,<blank>,<blank>,0,<blank>,5765,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AMORINOPOLIS,GO,76140000,<blank>,<blank>,0,<blank>,2064,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AMPARO,PB,58548000,<blank>,<blank>,0,<blank>,4856,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AMPARO,RJ,0,<blank>,<blank>,0,<blank>,6843,0,<blank>,0,CidadeDeCEPUnico,VER > NOVA FRIBURGO,Cidade De CEP Unico,<blank>,<blank>
+AMPARO DA SERRA,MG,35444000,<blank>,<blank>,0,<blank>,2673,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AMPARO DE SAO FRANCISCO,SE,49920000,<blank>,<blank>,0,<blank>,8768,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AMPERE,PR,85640000,<blank>,<blank>,0,<blank>,5766,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANA DIAS (ITARIRI),SP,11770000,<blank>,<blank>,0,<blank>,8887,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANADIA,AL,57660000,<blank>,<blank>,0,<blank>,26,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANAGE,BA,45180000,<blank>,<blank>,0,<blank>,355,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANAHY,PR,85425000,<blank>,<blank>,0,<blank>,5767,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANAJANOPOLIS (PEDRO AFONSO),TO,77712000,<blank>,<blank>,0,<blank>,9796,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANAJAS,PA,68810000,<blank>,<blank>,0,<blank>,4538,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANAJATUBA,MA,65490000,<blank>,<blank>,0,<blank>,2380,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANALANDIA,SP,13550000,<blank>,<blank>,0,<blank>,8888,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANALANDIA DO NORTE (MARCELANDIA),MT,78538000,<blank>,<blank>,0,<blank>,4289,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANAMA,AM,69445000,<blank>,<blank>,0,<blank>,194,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANANAS,TO,77890000,<blank>,<blank>,0,<blank>,9797,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANAPOLIS (IACRI),SP,17685000,<blank>,<blank>,0,<blank>,8889,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANAPU,PA,68365000,<blank>,<blank>,0,<blank>,4540,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANAPURUS,MA,65525000,<blank>,<blank>,0,<blank>,2381,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANASTACIO,MS,79210000,<blank>,<blank>,0,<blank>,4110,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANAUA (MAURITI),CE,63217000,<blank>,<blank>,0,<blank>,1146,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANAURILANDIA,MS,79770000,<blank>,<blank>,0,<blank>,4111,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANCHIETA,ES,29230000,<blank>,<blank>,0,<blank>,1810,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANCHIETA,SC,89970000,<blank>,<blank>,0,<blank>,8335,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANDARAI,BA,46830000,<blank>,<blank>,0,<blank>,356,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANDES,SP,0,<blank>,<blank>,0,<blank>,8890,0,<blank>,0,CidadeDeCEPUnico,VER > BEBEDOURO,Cidade De CEP Unico,<blank>,<blank>
+ANDIRA,PR,86380000,<blank>,<blank>,0,<blank>,5768,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANDIROBA (ESMERALDAS),MG,35745000,<blank>,<blank>,0,<blank>,2674,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANDORINHA,BA,48990000,<blank>,<blank>,0,<blank>,357,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANDORINHAS (CASTRO),PR,84194500,<blank>,<blank>,0,<blank>,5769,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANDRADAS,MG,37795000,<blank>,<blank>,0,<blank>,2675,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANDRADE PINTO (VASSOURAS),RJ,27770000,<blank>,<blank>,0,<blank>,6844,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANDRE DA ROCHA,RS,95310000,<blank>,<blank>,0,<blank>,7411,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANDRELANDIA,MG,37300000,<blank>,<blank>,0,<blank>,2676,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANDREQUICE (TRES MARIAS),MG,39207000,<blank>,<blank>,0,<blank>,2677,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANEL (VICOSA),AL,57710000,<blank>,<blank>,0,<blank>,27,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANGAI (FERNANDES PINHEIRO),PR,84538000,<blank>,<blank>,0,<blank>,5770,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANGATUBA,SP,18240000,<blank>,<blank>,0,<blank>,8892,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANGATURAMA (RECREIO),MG,36746000,<blank>,<blank>,0,<blank>,2678,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANGELANDIA,MG,39685000,<blank>,<blank>,0,<blank>,2679,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANGELICA,MS,79785000,<blank>,<blank>,0,<blank>,4112,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANGELIM,PE,55430000,<blank>,<blank>,0,<blank>,5150,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANGELINA,SC,88460000,<blank>,<blank>,0,<blank>,8336,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANGELO FRECHIANI (COLATINA),ES,29718000,<blank>,<blank>,0,<blank>,1811,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANGICAL,BA,47960000,<blank>,<blank>,0,<blank>,358,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANGICAL DO PIAUI,PI,64410000,<blank>,<blank>,0,<blank>,5517,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANGICO,TO,77905000,<blank>,<blank>,0,<blank>,9798,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANGICO (MAIRI),BA,44633000,<blank>,<blank>,0,<blank>,359,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANGICOS,RN,59515000,<blank>,<blank>,0,<blank>,7131,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANGICOS DE MINAS (BRASILIA DE MINAS),MG,39332000,<blank>,<blank>,0,<blank>,2680,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANGUERA,BA,44670000,<blank>,<blank>,0,<blank>,360,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANGUERETA (CURVELO),MG,35793000,<blank>,<blank>,0,<blank>,2681,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANGULO,PR,86755000,<blank>,<blank>,0,<blank>,5771,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANGUSTURA (ALEM PARAIBA),MG,36664000,<blank>,<blank>,0,<blank>,2682,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANHANDUI (CAMPO GRANDE),MS,79125000,<blank>,<blank>,0,<blank>,4113,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANHANGUERA,GO,75770000,<blank>,<blank>,0,<blank>,2066,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANHEMBI,SP,18620000,<blank>,<blank>,0,<blank>,8893,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANHUMAS,SP,19580000,<blank>,<blank>,0,<blank>,8894,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANICUNS,GO,76170000,<blank>,<blank>,0,<blank>,2067,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANIL,MA,0,<blank>,<blank>,0,<blank>,2382,0,<blank>,0,CidadeDeCEPUnico,VER > SAO LUIS,Cidade De CEP Unico,<blank>,<blank>
+ANIL (MERUOCA),CE,62137000,<blank>,<blank>,0,<blank>,12077,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANINGAS (HORIZONTE),CE,62897000,<blank>,<blank>,0,<blank>,1147,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANISIO DE ABREU,PI,64780000,<blank>,<blank>,0,<blank>,5518,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANITA GARIBALDI,SC,88590000,<blank>,<blank>,0,<blank>,8337,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANITAPOLIS,SC,88475000,<blank>,<blank>,0,<blank>,8338,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANJINHOS (SANTANA DO CARIRI),CE,63193000,<blank>,<blank>,0,<blank>,1148,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANORI,AM,69440000,<blank>,<blank>,0,<blank>,195,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANTA (SAPUCAIA),RJ,25882000,<blank>,<blank>,0,<blank>,6846,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANTA GORDA,RS,95980000,<blank>,<blank>,0,<blank>,7412,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANTA GORDA (VIDEIRA),SC,89569000,<blank>,<blank>,0,<blank>,8339,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANTARI (BARRA DO MENDES),BA,44996001,<blank>,<blank>,0,<blank>,12105,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANTAS,BA,48420000,<blank>,<blank>,0,<blank>,361,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANTAS (LARANJEIRAS DO SUL),PR,85322000,<blank>,<blank>,0,<blank>,5772,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANTAS (TELEMACO BORBA),PR,84277000,<blank>,<blank>,0,<blank>,5773,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANTONINA,PR,83370000,<blank>,<blank>,0,<blank>,5774,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANTONINA DO NORTE,CE,63570000,<blank>,<blank>,0,<blank>,1149,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANTONIO ALMEIDA,PI,64855000,<blank>,<blank>,0,<blank>,5519,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANTONIO BEZERRA,CE,0,<blank>,<blank>,0,<blank>,1150,0,<blank>,0,CidadeDeCEPUnico,VER > FORTALEZA,Cidade De CEP Unico,<blank>,<blank>
+ANTONIO BRANDAO DE OLIVEIRA (JATAIZINHO),PR,86213000,<blank>,<blank>,0,<blank>,5775,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANTONIO CARDOSO,BA,44180000,<blank>,<blank>,0,<blank>,362,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANTONIO CARLOS,MG,36220000,<blank>,<blank>,0,<blank>,2683,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANTONIO CARLOS,SC,88180000,<blank>,<blank>,0,<blank>,8340,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANTONIO DIAS,MG,35177000,<blank>,<blank>,0,<blank>,2684,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANTONIO DIOGO (REDENCAO),CE,62791000,<blank>,<blank>,0,<blank>,1151,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANTONIO DOS SANTOS (CAETE),MG,34960000,<blank>,<blank>,0,<blank>,2685,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANTONIO FERREIRA (FRANCISCOPOLIS),MG,39697000,<blank>,<blank>,0,<blank>,2686,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANTONIO GONCALVES,BA,44780000,<blank>,<blank>,0,<blank>,363,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANTONIO JOAO,MS,79910000,<blank>,<blank>,0,<blank>,4114,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANTONIO KERPEL (CORONEL BICACO),RS,98583000,<blank>,<blank>,0,<blank>,7413,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANTONIO LEMOS (BREVES),PA,68803000,<blank>,<blank>,0,<blank>,4541,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANTONIO MARQUES (MARANGUAPE),CE,61994000,<blank>,<blank>,0,<blank>,1152,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANTONIO MARTINS,RN,59870000,<blank>,<blank>,0,<blank>,7132,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANTONIO OLINTO,PR,83980000,<blank>,<blank>,0,<blank>,5776,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANTONIO PEREIRA (OURO PRETO),MG,35411000,<blank>,<blank>,0,<blank>,2687,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANTONIO PRADO,RS,95250000,<blank>,<blank>,0,<blank>,7414,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANTONIO PRADO DE MINAS,MG,36850000,<blank>,<blank>,0,<blank>,2688,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANTUNES (IGARATINGA),MG,35698000,<blank>,<blank>,0,<blank>,2689,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANUM NOVO (PALMEIRA DOS INDIOS),AL,57610100,<blank>,<blank>,0,<blank>,28,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANUM VELHO (PALMEIRA DOS INDIOS),AL,57610200,<blank>,<blank>,0,<blank>,29,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANUNCIACAO (SANTA IZABEL DO OESTE),PR,85654000,<blank>,<blank>,0,<blank>,5777,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ANUTIBA (ALEGRE),ES,29530000,<blank>,<blank>,0,<blank>,1812,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+APARECIDA,PB,58823000,<blank>,<blank>,0,<blank>,4857,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+APARECIDA,SP,12570000,<blank>,<blank>,0,<blank>,8896,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+APARECIDA (SANCLERLANDIA),GO,76163000,<blank>,<blank>,0,<blank>,2068,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+APARECIDA D OESTE,SP,15735000,<blank>,<blank>,0,<blank>,8897,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+APARECIDA DE GOIAS (ITAPACI),GO,76363000,<blank>,<blank>,0,<blank>,2070,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+APARECIDA DE MINAS (FRUTAL),MG,38205000,<blank>,<blank>,0,<blank>,2690,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+APARECIDA DE MONTE ALTO (MONTE ALTO),SP,15915000,<blank>,<blank>,0,<blank>,8898,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+APARECIDA DE SAO MANUEL (SAO MANUEL),SP,18655000,<blank>,<blank>,0,<blank>,8899,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+APARECIDA DO BONITO (SANTA RITA D OESTE),SP,15783000,<blank>,<blank>,0,<blank>,8900,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+APARECIDA DO IVAI (SANTA MONICA),PR,87919000,<blank>,<blank>,0,<blank>,12790,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+APARECIDA DO MUNDO NOVO (MONTES CLAROS),MG,39429100,<blank>,<blank>,0,<blank>,14252,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+APARECIDA DO OESTE (TUNEIRAS DO OESTE),PR,87455000,<blank>,<blank>,0,<blank>,5778,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+APARECIDA DO RIO CLARO (MONTES CLAROS DE GOIAS),GO,76256000,<blank>,<blank>,0,<blank>,2071,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+APARECIDA DO RIO DOCE,GO,75827000,<blank>,<blank>,0,<blank>,2072,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+APARECIDA DO RIO NEGRO,TO,77620000,<blank>,<blank>,0,<blank>,9799,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+APARECIDA DO TABOADO,MS,79570000,<blank>,<blank>,0,<blank>,4115,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+APERIBE,RJ,28495000,<blank>,<blank>,0,<blank>,6847,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+APEU (CASTANHAL),PA,68747000,<blank>,<blank>,0,<blank>,4542,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+APIABA (IMBITUVA),PR,84433000,<blank>,<blank>,0,<blank>,5779,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+APIACA,ES,29450000,<blank>,<blank>,0,<blank>,1813,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+APIACAS,MT,78595000,<blank>,<blank>,0,<blank>,4290,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+APIAI,SP,18320000,<blank>,<blank>,0,<blank>,8901,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+APIAI-MIRIM (CAPAO BONITO),SP,18309000,<blank>,<blank>,0,<blank>,8902,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+APICUM-ACU,MA,65275000,<blank>,<blank>,0,<blank>,2383,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+APINAGES (SAO JOAO DO ARAGUAIA),PA,68519000,<blank>,<blank>,0,<blank>,4544,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+APINAJE (SAO VALERIO DA NATIVIDADE),TO,77393000,<blank>,<blank>,0,<blank>,9800,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+APIUNA,SC,89135000,<blank>,<blank>,0,<blank>,8341,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+APODI,RN,59700000,<blank>,<blank>,0,<blank>,7133,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+APORA,BA,48350000,<blank>,<blank>,0,<blank>,364,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+APORE,GO,75825000,<blank>,<blank>,0,<blank>,2073,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+APOREMA (TARTARUGALZINHO),AP,68994000,<blank>,<blank>,0,<blank>,283,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+APOTI (GLORIA DO GOITA),PE,55625000,<blank>,<blank>,0,<blank>,5151,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+APRAZIVEL (SOBRAL),CE,62114000,<blank>,<blank>,0,<blank>,1153,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+APUAREMA,BA,45355000,<blank>,<blank>,0,<blank>,365,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+APUI,AM,69265000,<blank>,<blank>,0,<blank>,196,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+APUIARES,CE,62630000,<blank>,<blank>,0,<blank>,1154,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AQUIDABA,SE,49790000,<blank>,<blank>,0,<blank>,8769,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AQUIDABAN (MARIALVA),PR,86995000,<blank>,<blank>,0,<blank>,5781,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AQUIDAUANA,MS,79200000,<blank>,<blank>,0,<blank>,4116,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AQUINOPOLIS (JAGUARIBE),CE,63479000,<blank>,<blank>,0,<blank>,1155,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AQUIRAZ,CE,61700000,<blank>,<blank>,0,<blank>,1156,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARABA (OUROESTE),SP,15688000,<blank>,<blank>,0,<blank>,11092,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARABELA (OURO VERDE),SP,17925000,<blank>,<blank>,0,<blank>,8903,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARABUTA,SC,89740000,<blank>,<blank>,0,<blank>,8342,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARACACU (BURI),SP,18295000,<blank>,<blank>,0,<blank>,8904,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARACAGI,PB,58270000,<blank>,<blank>,0,<blank>,4858,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARACAI,MG,35777000,<blank>,<blank>,0,<blank>,2691,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARACAIBA (APIAI),SP,18323000,<blank>,<blank>,0,<blank>,8905,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARACAJI DE MINAS (PEDRA AZUL),MG,39976000,<blank>,<blank>,0,<blank>,12683,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARACARIGUAMA,SP,18147000,<blank>,<blank>,0,<blank>,8906,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARACAS,BA,48108000,<blank>,<blank>,0,<blank>,366,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARACAS (PARACURU),CE,62682000,<blank>,<blank>,0,<blank>,1157,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARACATI,CE,62800000,<blank>,<blank>,0,<blank>,1158,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARACATI DE MINAS (CATAGUASES),MG,36776000,<blank>,<blank>,0,<blank>,2692,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARACATIACU (SOBRAL),CE,62111000,<blank>,<blank>,0,<blank>,1159,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARACATIARA (AMONTADA),CE,62548000,<blank>,<blank>,0,<blank>,1160,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARACATIBA (VIANA),ES,29138000,<blank>,<blank>,0,<blank>,1814,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARACATU,BA,46130000,<blank>,<blank>,0,<blank>,367,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARACE (DOMINGOS MARTINS),ES,29278000,<blank>,<blank>,0,<blank>,1815,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARACI,BA,48760000,<blank>,<blank>,0,<blank>,368,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARACITABA,MG,36255000,<blank>,<blank>,0,<blank>,2693,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARACOIABA,CE,62750000,<blank>,<blank>,0,<blank>,1161,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARACOIABA,PE,53690000,<blank>,<blank>,0,<blank>,5152,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARACOIABA DA SERRA,SP,18190000,<blank>,<blank>,0,<blank>,8908,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARACU,GO,75410000,<blank>,<blank>,0,<blank>,2074,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARACUAI,MG,39600000,<blank>,<blank>,0,<blank>,2694,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARACUI (CASTELO),ES,29365000,<blank>,<blank>,0,<blank>,1817,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARAGACUI (CASEARA),TO,77683000,<blank>,<blank>,0,<blank>,9801,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARAGARCAS,GO,76240000,<blank>,<blank>,0,<blank>,2075,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARAGOIANIA,GO,75360000,<blank>,<blank>,0,<blank>,2076,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARAGOMINAS,TO,77845000,<blank>,<blank>,0,<blank>,9802,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARAGUACEMA,TO,77690000,<blank>,<blank>,0,<blank>,9803,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARAGUACU,TO,77475000,<blank>,<blank>,0,<blank>,9804,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARAGUAIA (MARECHAL FLORIANO),ES,29258000,<blank>,<blank>,0,<blank>,1818,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARAGUAIANA,MT,78685000,<blank>,<blank>,0,<blank>,4291,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARAGUAINHA,MT,78615000,<blank>,<blank>,0,<blank>,4292,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARAGUANA,MA,65368000,<blank>,<blank>,0,<blank>,2384,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARAGUANA,TO,77855000,<blank>,<blank>,0,<blank>,9806,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARAGUAPAZ,GO,76720000,<blank>,<blank>,0,<blank>,2077,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARAGUATINS,TO,77950000,<blank>,<blank>,0,<blank>,9807,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARAIOSES,MA,65570000,<blank>,<blank>,0,<blank>,2385,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARAJARA (BARBALHA),CE,63183000,<blank>,<blank>,0,<blank>,1162,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARAL MOREIRA,MS,79930000,<blank>,<blank>,0,<blank>,4117,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARAMARI,BA,48130000,<blank>,<blank>,0,<blank>,369,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARAMBARE,RS,96178000,<blank>,<blank>,0,<blank>,7415,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARAME,MA,65945000,<blank>,<blank>,0,<blank>,2386,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARAMINA,SP,14550000,<blank>,<blank>,0,<blank>,8909,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARAMIRIM (ACUCENA),MG,35147100,<blank>,<blank>,0,<blank>,2696,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARANAU (ACARAU),CE,62585000,<blank>,<blank>,0,<blank>,1163,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARANDU,SP,18710000,<blank>,<blank>,0,<blank>,8910,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARANHA (BRUMADINHO),MG,35462000,<blank>,<blank>,0,<blank>,2697,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARANHA (COLOMBO),PR,83419000,<blank>,<blank>,0,<blank>,5782,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARANTINA,MG,37360000,<blank>,<blank>,0,<blank>,2698,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARANTINA (ACREUNA),GO,75969000,<blank>,<blank>,0,<blank>,11472,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARAPA (TIANGUA),CE,62328000,<blank>,<blank>,0,<blank>,1164,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARAPARI (ITAPIPOCA),CE,62512000,<blank>,<blank>,0,<blank>,1165,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARAPEI,SP,12870000,<blank>,<blank>,0,<blank>,8911,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARAPIRANGA (RIO DE CONTAS),BA,46177000,<blank>,<blank>,0,<blank>,370,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARAPIXUNA (SANTAREM),PA,68128000,<blank>,<blank>,0,<blank>,4545,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARAPOEMA,TO,77780000,<blank>,<blank>,0,<blank>,9808,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARAPONGA,MG,36594000,<blank>,<blank>,0,<blank>,2699,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARAPORA,MG,38465000,<blank>,<blank>,0,<blank>,2700,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARAPORANGA (SANTANA DO CARIRI),CE,63194000,<blank>,<blank>,0,<blank>,1166,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARAPOTI,PR,84990000,<blank>,<blank>,0,<blank>,5784,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARAPUA,MG,38860000,<blank>,<blank>,0,<blank>,2701,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARAPUA,PR,86884000,<blank>,<blank>,0,<blank>,5785,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARAPUA (TRES LAGOAS),MS,79654000,<blank>,<blank>,0,<blank>,4118,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARAPUAN (JANIOPOLIS),PR,87385000,<blank>,<blank>,0,<blank>,5786,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARAPUTANGA,MT,78260000,<blank>,<blank>,0,<blank>,4293,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARAQUAIM (CURUCA),PA,68752000,<blank>,<blank>,0,<blank>,4546,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARAQUARI,SC,89245000,<blank>,<blank>,0,<blank>,8343,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARAQUEM (COREAU),CE,62165000,<blank>,<blank>,0,<blank>,1167,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARARA,PB,58396000,<blank>,<blank>,0,<blank>,4859,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARARAI (ALEGRE),ES,29535000,<blank>,<blank>,0,<blank>,1819,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARARAPIRA (GUARAQUECABA),PR,83393000,<blank>,<blank>,0,<blank>,5787,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARARAS (CAAPIRANGA),AM,69429800,<blank>,<blank>,0,<blank>,11770,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARARENDA,CE,62210000,<blank>,<blank>,0,<blank>,1168,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARARI,MA,65480000,<blank>,<blank>,0,<blank>,2387,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARARICA,RS,93880000,<blank>,<blank>,0,<blank>,7416,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARARIPE,CE,63170000,<blank>,<blank>,0,<blank>,1169,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARARIPINA,PE,56280000,<blank>,<blank>,0,<blank>,5153,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARARIUS (CARIRE),CE,62186000,<blank>,<blank>,0,<blank>,1170,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARARUAMA,RJ,28970000,<blank>,<blank>,0,<blank>,6848,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARARUNA,PB,58233000,<blank>,<blank>,0,<blank>,4860,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARARUNA,PR,87260000,<blank>,<blank>,0,<blank>,5788,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARATACA,BA,45695000,<blank>,<blank>,0,<blank>,371,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARATAMA (ASSARE),CE,63143000,<blank>,<blank>,0,<blank>,1171,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARATIBA,RS,99770000,<blank>,<blank>,0,<blank>,7417,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARATICUM (UBAJARA),CE,62352000,<blank>,<blank>,0,<blank>,1172,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARATUBA,CE,62762000,<blank>,<blank>,0,<blank>,1173,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARATUIPE,BA,44490000,<blank>,<blank>,0,<blank>,372,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARAUA,SE,49220000,<blank>,<blank>,0,<blank>,8771,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARAUJOS,MG,35603000,<blank>,<blank>,0,<blank>,2702,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARAUNA (GUAPE),MG,37180000,<blank>,<blank>,0,<blank>,2703,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARAXAS (PRESIDENTE BERNARDES),SP,19310000,<blank>,<blank>,0,<blank>,8914,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARCADAS,SP,0,<blank>,<blank>,0,<blank>,8915,0,<blank>,0,CidadeDeCEPUnico,VER > AMPARO,Cidade De CEP Unico,<blank>,<blank>
+ARCEBURGO,MG,37820000,<blank>,<blank>,0,<blank>,2706,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARCO VERDE (CARLOS BARBOSA),RS,95186000,<blank>,<blank>,0,<blank>,7418,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARCO-IRIS,SP,17630000,<blank>,<blank>,0,<blank>,8916,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARCO-IRIS (ERVAL SECO),RS,98393000,<blank>,<blank>,0,<blank>,7419,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARCO-IRIS (PARAGOMINAS),PA,68631200,<blank>,<blank>,0,<blank>,4547,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARCOS,MG,35588000,<blank>,<blank>,0,<blank>,2707,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AREADO,MG,37140000,<blank>,<blank>,0,<blank>,2708,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AREADO (SAO GABRIEL DO OESTE),MS,79492000,<blank>,<blank>,0,<blank>,4119,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AREAL,RJ,25845000,<blank>,<blank>,0,<blank>,6849,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AREALVA,SP,17160000,<blank>,<blank>,0,<blank>,8917,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AREIA,PB,58397000,<blank>,<blank>,0,<blank>,4861,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AREIA BRANCA,RN,59655000,<blank>,<blank>,0,<blank>,7134,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AREIA BRANCA,SE,49580000,<blank>,<blank>,0,<blank>,8772,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AREIA BRANCA (JUSSARI),BA,45624000,<blank>,<blank>,0,<blank>,13172,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AREIA BRANCA DOS ASSIS (MANDIRITUBA),PR,83810000,<blank>,<blank>,0,<blank>,5790,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AREIA DE BARAUNAS,PB,58732000,<blank>,<blank>,0,<blank>,4862,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AREIAL,PB,58140000,<blank>,<blank>,0,<blank>,4863,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AREIAL (SANTA QUITERIA),CE,62290000,<blank>,<blank>,0,<blank>,1174,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AREIAS,BA,0,<blank>,<blank>,0,<blank>,373,0,<blank>,0,CidadeDeCEPUnico,VER > CAMACARI,Cidade De CEP Unico,<blank>,<blank>
+AREIAS,SP,12820000,<blank>,<blank>,0,<blank>,8918,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AREIAS (BEZERROS),PE,55664500,<blank>,<blank>,0,<blank>,11704,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AREIAS (CASTRO),PR,84198400,<blank>,<blank>,0,<blank>,5791,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AREIAS (MELGACO),PA,68495000,<blank>,<blank>,0,<blank>,4548,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AREIAS (UIRAUNA),PB,58916000,<blank>,<blank>,0,<blank>,4864,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AREIOPOLIS,SP,18670000,<blank>,<blank>,0,<blank>,8919,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AREMBEPE,BA,0,<blank>,<blank>,0,<blank>,374,0,<blank>,0,CidadeDeCEPUnico,VER > CAMACARI,Cidade De CEP Unico,<blank>,<blank>
+ARENAPOLIS,MT,78420000,<blank>,<blank>,0,<blank>,4294,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARENOPOLIS,GO,76235000,<blank>,<blank>,0,<blank>,2078,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARERE (BARREIRA),CE,62795700,<blank>,<blank>,0,<blank>,12111,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AREZ,RN,59170000,<blank>,<blank>,0,<blank>,7135,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARGENITA (IBIA),MG,38955000,<blank>,<blank>,0,<blank>,2709,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARGIRITA,MG,36710000,<blank>,<blank>,0,<blank>,2710,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARGOIM (RAFAEL JAMBEIRO),BA,44525000,<blank>,<blank>,0,<blank>,375,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARGOLAS,ES,0,<blank>,<blank>,0,<blank>,1820,0,<blank>,0,CidadeDeCEPUnico,VER > VILA VELHA,Cidade De CEP Unico,<blank>,<blank>
+ARGOLO (NOVA VICOSA),BA,45925000,<blank>,<blank>,0,<blank>,376,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARIAU (BARREIRINHA),AM,69165000,<blank>,<blank>,0,<blank>,197,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARIAU (IRANDUBA),AM,69424000,<blank>,<blank>,0,<blank>,12661,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARIBICE (EUCLIDES DA CUNHA),BA,48504000,<blank>,<blank>,0,<blank>,377,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARICANDUVA,MG,39678000,<blank>,<blank>,0,<blank>,2711,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARICANDUVA (ARAPONGAS),PR,86719000,<blank>,<blank>,0,<blank>,5792,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARINOS,MG,38680000,<blank>,<blank>,0,<blank>,2712,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARIPIBU (RIBEIRAO),PE,55524000,<blank>,<blank>,0,<blank>,5155,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARIPUANA,MT,78325000,<blank>,<blank>,0,<blank>,4295,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARIRANHA,SP,15960000,<blank>,<blank>,0,<blank>,8920,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARIRANHA DO IVAI,PR,86880000,<blank>,<blank>,0,<blank>,5793,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARIRI (CANANEIA),SP,11995000,<blank>,<blank>,0,<blank>,8921,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARIRI (MACAPA),AP,68912050,<blank>,<blank>,0,<blank>,284,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARISCOS DOS MARIANOS (OCARA),CE,62759000,<blank>,<blank>,0,<blank>,1175,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARISTIDES BATISTA (CORACAO DE JESUS),MG,39341000,<blank>,<blank>,0,<blank>,2713,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARITAGUA (ILHEUS),BA,45663000,<blank>,<blank>,0,<blank>,378,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARIZONA (AFRANIO),PE,56365000,<blank>,<blank>,0,<blank>,5156,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARLINDO (VENANCIO AIRES),RS,95814000,<blank>,<blank>,0,<blank>,12466,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARMACAO DOS BUZIOS,RJ,28950000,<blank>,<blank>,0,<blank>,6850,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARMAZEM,SC,88740000,<blank>,<blank>,0,<blank>,8345,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARNEIROZ,CE,63670000,<blank>,<blank>,0,<blank>,1176,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARNOPOLIS (ALFREDO WAGNER),SC,88452000,<blank>,<blank>,0,<blank>,8346,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AROAZES,PI,64310000,<blank>,<blank>,0,<blank>,5520,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AROEIRA (CASCAVEL),PR,85822800,<blank>,<blank>,0,<blank>,5794,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AROEIRAS,PB,58489000,<blank>,<blank>,0,<blank>,4865,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AROEIRAS (COREAU),CE,62163000,<blank>,<blank>,0,<blank>,1177,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AROEIRAS (PANTANO GRANDE),RS,96692000,<blank>,<blank>,0,<blank>,12515,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+AROEIRAS DO ITAIM,PI,64612000,<blank>,<blank>,0,<blank>,11019,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARQUIMEDES (CASCAVEL),PR,85824750,<blank>,<blank>,0,<blank>,5795,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARRAIAL,PI,64480000,<blank>,<blank>,0,<blank>,5521,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARRAIAL D AJUDA (PORTO SEGURO),BA,45816000,<blank>,<blank>,0,<blank>,10209,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARRAIAL DO CABO,RJ,28930000,<blank>,<blank>,0,<blank>,6851,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARRAIAS,TO,77330000,<blank>,<blank>,0,<blank>,9809,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARROIO BONITO (MATO LEITAO),RS,95838000,<blank>,<blank>,0,<blank>,12472,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARROIO CANOAS (BARAO),RS,95733000,<blank>,<blank>,0,<blank>,7420,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARROIO DO MEIO,RS,95940000,<blank>,<blank>,0,<blank>,7421,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARROIO DO OURO (VALE REAL),RS,95779000,<blank>,<blank>,0,<blank>,12707,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARROIO DO PADRE,RS,96155000,<blank>,<blank>,0,<blank>,7422,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARROIO DO SAL,RS,95585000,<blank>,<blank>,0,<blank>,7423,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARROIO DO SO (SANTA MARIA),RS,97165000,<blank>,<blank>,0,<blank>,7424,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARROIO DO TIGRE,RS,96950000,<blank>,<blank>,0,<blank>,7425,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARROIO DOS MENGUES (DOM PEDRO DE ALCANTARA),RS,95569000,<blank>,<blank>,0,<blank>,12453,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARROIO DOS RATOS,RS,96740000,<blank>,<blank>,0,<blank>,7426,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARROIO GRANDE,RS,96330000,<blank>,<blank>,0,<blank>,7427,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARROIO GRANDE (SANTA MARIA),RS,97120000,<blank>,<blank>,0,<blank>,7428,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARROIO GRANDE (SELBACH),RS,99455000,<blank>,<blank>,0,<blank>,7429,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+ARROIO TEIXEIRA (CAPAO DA CANOA),RS,95559000,<blank>,<blank>,0,<blank>,12452,0,<blank>,0,CidadeDeCEPUnico,Cidade De CEP Unico,Cidade De CEP Unico,<blank>,<blank>
+

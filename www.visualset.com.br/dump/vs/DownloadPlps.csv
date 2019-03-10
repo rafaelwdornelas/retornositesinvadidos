@@ -1,0 +1,233 @@
+PdtIdx,UsrIdx,idDownload,AgeLib,SrvIpx,UsrNom,SrvUrl,DboNom,AgeNom,CodSto,DboTip
+1,CRUZADMIN,1,1,172.31.37.250,Administrador da ACF CRUZEIRO NOVO,acfdf.postal.net.br,acfdf,CRUZEIRO BRASILIA,10900691,2
+1,ASASADMIN,2,1,172.31.37.250,Administrador da ASA SUL 514,acfdf.postal.net.br,acfdf,ASA SUL 514,10900799,2
+1,BRASADMIN,3,1,172.31.37.250,Administrador da ACF SAA,acfdf.postal.net.br,acfdf,SAAN,10900934,2
+1,MARAADMIN,4,1,172.31.37.250,Administrador da ACF MARAPONGA,www.postal.net.br,acfsp_10012017,MARAPONGA,12900028,2
+1,PAJEADMIN,5,1,172.31.37.250,Administrador da AGF PAJEU,ce.postal.net.br,acfce,PAJEU,12900044,2
+1,MISSADMIN,6,1,172.31.37.250,Administrador da MISSIONARIAS,ce.postal.net.br,acfce,MISSIONARIAS,12900061,2
+1,ESUNADMIN,7,1,172.31.37.250,Administrador da ACF ESTADOS UNIDOS,agfmeireles.postal.net.br,acfestadosunidos,MEIRELES,12900079,2
+1,CLOVADMIN,8,1,172.31.37.250,Administrador da CLOVIS BEVILAQUA,ce.postal.net.br,acfce,CLOVIS BEVILAQUA,12900133,2
+1,BEZEADMIN,9,1,172.31.37.250,Administrador da AGF BEZERRA DE MENEZES,ce.postal.net.br,acfce,BEZERRA DE MENEZES,12900150,2
+1,AGNBADMIN,10,1,172.31.37.250,Administrador da ACF,agfjosebonifacio.postal.net.br,acfaguanambi,JOSE BONIFACIO,12900176,2
+1,MZLCADMIN,11,1,172.31.37.250,Administrador da MOZART LUCENA,ce.postal.net.br,acfce,MOZART LUCENA,12900231,2
+1,DINDADMIN,12,1,172.31.37.250,Administrador da ACF DISTRITO INDUSTRIAL,agfmendel.postal.net.br,acfdistritoindustrial,DR MENDEL STEINBRUCH,12900257,2
+1,LARAADMIN,13,1,172.31.37.250,Administrador da LARANJEIRAS,es.postal.net.br,acfes,PARQUE LARANJEIRAS,14901412,2
+1,mbadmin,14,1,172.31.37.250,Administrador ACF Monte Belo,www.postal.net.br,acfsp_10012017,AVENIDA VITORIA,14901455,2
+1,GOIABEIRAS,15,1,172.31.37.250,Administrador da ACF,www.acfgoiabeiras.com.br,acfgoiabeiras,FERNANDO FERRARI,14901463,2
+1,BRASADMIN,3,1,172.31.37.250,Administrador da ACF SAA,acfdf.postal.net.br,acfdf,SAAN,10900934,2
+1,BRASADMIN,3,1,172.31.37.250,Administrador da ACF SAA,acfdf.postal.net.br,acfdf,SAAN,10900934,2
+1,BRASADMIN,3,1,172.31.37.250,Administrador da ACF SAA,acfdf.postal.net.br,acfdf,SAAN,10900934,2
+1,BRASADMIN,3,1,172.31.37.250,Administrador da ACF SAA,acfdf.postal.net.br,acfdf,SAAN,10900934,2
+1,BRASADMIN,3,1,172.31.37.250,Administrador da ACF SAA,acfdf.postal.net.br,acfdf,SAAN,10900934,2
+1,BRASADMIN,3,1,172.31.37.250,Administrador da ACF SAA,acfdf.postal.net.br,acfdf,SAAN,10900934,2
+1,BRASADMIN,3,1,172.31.37.250,Administrador da ACF SAA,acfdf.postal.net.br,acfdf,SAAN,10900934,2
+1,BRASADMIN,3,1,172.31.37.250,Administrador da ACF SAA,acfdf.postal.net.br,acfdf,SAAN,10900934,2
+1,BRASADMIN,3,1,172.31.37.250,Administrador da ACF SAA,acfdf.postal.net.br,acfdf,SAAN,10900934,2
+1,BRASADMIN,3,1,172.31.37.250,Administrador da ACF SAA,acfdf.postal.net.br,acfdf,SAAN,10900934,2
+1,BRASADMIN,3,1,172.31.37.250,Administrador da ACF SAA,acfdf.postal.net.br,acfdf,SAAN,10900934,2
+1,BRASADMIN,3,1,172.31.37.250,Administrador da ACF SAA,acfdf.postal.net.br,acfdf,SAAN,10900934,2
+1,BRASADMIN,3,1,172.31.37.250,Administrador da ACF SAA,acfdf.postal.net.br,acfdf,SAAN,10900934,2
+1,BRASADMIN,3,1,172.31.37.250,Administrador da ACF SAA,acfdf.postal.net.br,acfdf,SAAN,10900934,2
+1,BRASADMIN,3,1,172.31.37.250,Administrador da ACF SAA,acfdf.postal.net.br,acfdf,SAAN,10900934,2
+1,BRASADMIN,3,1,172.31.37.250,Administrador da ACF SAA,acfdf.postal.net.br,acfdf,SAAN,10900934,2
+1,BRASADMIN,3,1,172.31.37.250,Administrador da ACF SAA,acfdf.postal.net.br,acfdf,SAAN,10900934,2
+1,MUQBADMIN,16,1,172.31.37.250,Administrador da ACF MUQUIÇABA,es.postal.net.br,acfes,BAIRRO MUQUICABA,14901471,2
+1,MUQBADMIN,16,1,172.31.37.250,Administrador da ACF MUQUIÇABA,es.postal.net.br,acfes,BAIRRO MUQUICABA,14901471,2
+1,ESPLADMIN,17,1,172.31.37.250,Administrador da ACF ESPLANADA,www.acfesplanada.com.br,acfesplanada,PRACA GETULIO VARGAS,14901528,2
+1,ESPLADMIN,17,1,172.31.37.250,Administrador da ACF ESPLANADA,www.acfesplanada.com.br,acfesplanada,PRACA GETULIO VARGAS,14901528,2
+1,AVENADMIN,18,1,172.31.37.250,Administrador da ACF AVENIDA REPUBLICA,www.postal.net.br,acfsp_10012017,PARQUE MOSCOSO,14901625,2
+1,AVENADMIN,18,1,172.31.37.250,Administrador da ACF AVENIDA REPUBLICA,www.postal.net.br,acfsp_10012017,PARQUE MOSCOSO,14901625,2
+1,JALIADMIN,19,1,172.31.37.250,Administrador da AGF LIMOEIRO,es.postal.net.br,acfes,LIMOEIRO,14901633,2
+1,JALIADMIN,19,1,172.31.37.250,Administrador da AGF LIMOEIRO,es.postal.net.br,acfes,LIMOEIRO,14901633,2
+1,QUATROADMIN,20,1,172.31.37.250,Administrador da ACF,www.postal.net.br,acfsp_10012017,PRACA DO BANDEIRANTE,16900197,2
+1,QUATROADMIN,20,1,172.31.37.250,Administrador da ACF,www.postal.net.br,acfsp_10012017,PRACA DO BANDEIRANTE,16900197,2
+1,DUNSADMIN,21,1,172.31.37.250,Administrador da ACF DUNAS,pb.postal.net.br,acfpb,COHAMA,18900071,2
+1,DUNSADMIN,21,1,172.31.37.250,Administrador da ACF DUNAS,pb.postal.net.br,acfpb,COHAMA,18900071,2
+1,NOVAADMIN,22,1,172.31.37.250,Administrador da ACF CIDADE NOVA,www.acfcidadenova.com.br,acfcidadenova,JOSE CANDIDO,20900031,2
+1,NOVAADMIN,22,1,172.31.37.250,Administrador da ACF CIDADE NOVA,www.acfcidadenova.com.br,acfcidadenova,JOSE CANDIDO,20900031,2
+1,PLANADMIN,23,1,172.31.37.250,Administrador da ACF PLANALTO,www.agenciaplanalto.com.br,acfplanalto,DOUTOR CRISTIANO GUIMARAES,20900058,2
+1,PLANADMIN,23,1,172.31.37.250,Administrador da ACF PLANALTO,www.agenciaplanalto.com.br,acfplanalto,DOUTOR CRISTIANO GUIMARAES,20900058,2
+1,MELOADMIN,24,1,172.31.37.250,Administrador da ACF ALIPIO DE MELO,www.acfalipiodemelo.com.br,acfalipiodemelo,HABILIO MACHADO,20900139,2
+1,MELOADMIN,24,1,172.31.37.250,Administrador da ACF ALIPIO DE MELO,www.acfalipiodemelo.com.br,acfalipiodemelo,HABILIO MACHADO,20900139,2
+1,SAMOADMIN,25,1,172.31.37.250,Administrador da ACF SANTA MONICA,mg.postal.net.br,acfmg,BELARMINO COTA PACHECO,20900376,2
+1,SAMOADMIN,25,1,172.31.37.250,Administrador da ACF SANTA MONICA,mg.postal.net.br,acfmg,BELARMINO COTA PACHECO,20900376,2
+1,AFRDADMIN,26,1,172.31.37.250,Administrador da AFRANIO RODRIGUES,mg.postal.net.br,acfmg,AFRANIO RODRIGUES,20900392,2
+1,AFRDADMIN,26,1,172.31.37.250,Administrador da AFRANIO RODRIGUES,mg.postal.net.br,acfmg,AFRANIO RODRIGUES,20900392,2
+1,CARRADMIN,27,1,172.31.37.250,Administrador da ACF CARREFOUR,www.agenciacarrefour.com.br,acfcarrefour_mg,RIACHO DAS PEDRAS,20908784,2
+1,CARRADMIN,27,1,172.31.37.250,Administrador da ACF CARREFOUR,www.agenciacarrefour.com.br,acfcarrefour_mg,RIACHO DAS PEDRAS,20908784,2
+1,JOAOADMIN,28,1,172.31.37.250,Administrador da ACACIA,mg.postal.net.br,acfmg,JOAO MACHADO,20908903,2
+1,JOAOADMIN,28,1,172.31.37.250,Administrador da ACACIA,mg.postal.net.br,acfmg,JOAO MACHADO,20908903,2
+1,SVICADMIN,29,1,172.31.37.250,Administrador da ACF SAO VICENTE,mg.postal.net.br,acfmg,PAULO CHIARADIA,20908997,2
+1,SVICADMIN,29,1,172.31.37.250,Administrador da ACF SAO VICENTE,mg.postal.net.br,acfmg,PAULO CHIARADIA,20908997,2
+1,PESTADMIN,30,1,172.31.37.250,Administrador da ACF,agfestacaocentral.postal.net.br,acfpracadaestacao,ESTACAO CENTRAL,20909136,2
+1,PESTADMIN,30,1,172.31.37.250,Administrador da ACF,agfestacaocentral.postal.net.br,acfpracadaestacao,ESTACAO CENTRAL,20909136,2
+1,RODUADMIN,31,1,172.31.37.250,Administrador da ACF RODOVIARIA(UBERLAND),www.postal.net.br,acfsp_10012017,TERM ROD DE UBERLANDIA,20909322,2
+1,RODUADMIN,31,1,172.31.37.250,Administrador da ACF RODOVIARIA(UBERLAND),www.postal.net.br,acfsp_10012017,TERM ROD DE UBERLANDIA,20909322,2
+1,ABCADMIN,32,1,172.31.37.250,Administrador da ACF,www.correiosabc.com.br,acfabc,GETULIO VARGAS,20909331,2
+1,ABCADMIN,32,1,172.31.37.250,Administrador da ACF,www.correiosabc.com.br,acfabc,GETULIO VARGAS,20909331,2
+1,QUATROADMIN,20,1,172.31.37.250,Administrador da ACF,www.postal.net.br,acfsp_10012017,PRACA DO BANDEIRANTE,16900197,2
+1,QUATROADMIN,20,1,172.31.37.250,Administrador da ACF,www.postal.net.br,acfsp_10012017,PRACA DO BANDEIRANTE,16900197,2
+1,DUNSADMIN,21,1,172.31.37.250,Administrador da ACF DUNAS,pb.postal.net.br,acfpb,COHAMA,18900071,2
+1,DUNSADMIN,21,1,172.31.37.250,Administrador da ACF DUNAS,pb.postal.net.br,acfpb,COHAMA,18900071,2
+1,DUNSADMIN,21,1,172.31.37.250,Administrador da ACF DUNAS,pb.postal.net.br,acfpb,COHAMA,18900071,2
+1,DUNSADMIN,21,1,172.31.37.250,Administrador da ACF DUNAS,pb.postal.net.br,acfpb,COHAMA,18900071,2
+1,NOVAADMIN,22,1,172.31.37.250,Administrador da ACF CIDADE NOVA,www.acfcidadenova.com.br,acfcidadenova,JOSE CANDIDO,20900031,2
+1,NOVAADMIN,22,1,172.31.37.250,Administrador da ACF CIDADE NOVA,www.acfcidadenova.com.br,acfcidadenova,JOSE CANDIDO,20900031,2
+1,NOVAADMIN,22,1,172.31.37.250,Administrador da ACF CIDADE NOVA,www.acfcidadenova.com.br,acfcidadenova,JOSE CANDIDO,20900031,2
+1,NOVAADMIN,22,1,172.31.37.250,Administrador da ACF CIDADE NOVA,www.acfcidadenova.com.br,acfcidadenova,JOSE CANDIDO,20900031,2
+1,PLANADMIN,23,1,172.31.37.250,Administrador da ACF PLANALTO,www.agenciaplanalto.com.br,acfplanalto,DOUTOR CRISTIANO GUIMARAES,20900058,2
+1,PLANADMIN,23,1,172.31.37.250,Administrador da ACF PLANALTO,www.agenciaplanalto.com.br,acfplanalto,DOUTOR CRISTIANO GUIMARAES,20900058,2
+1,PLANADMIN,23,1,172.31.37.250,Administrador da ACF PLANALTO,www.agenciaplanalto.com.br,acfplanalto,DOUTOR CRISTIANO GUIMARAES,20900058,2
+1,PLANADMIN,23,1,172.31.37.250,Administrador da ACF PLANALTO,www.agenciaplanalto.com.br,acfplanalto,DOUTOR CRISTIANO GUIMARAES,20900058,2
+1,MELOADMIN,24,1,172.31.37.250,Administrador da ACF ALIPIO DE MELO,www.acfalipiodemelo.com.br,acfalipiodemelo,HABILIO MACHADO,20900139,2
+1,MELOADMIN,24,1,172.31.37.250,Administrador da ACF ALIPIO DE MELO,www.acfalipiodemelo.com.br,acfalipiodemelo,HABILIO MACHADO,20900139,2
+1,MELOADMIN,24,1,172.31.37.250,Administrador da ACF ALIPIO DE MELO,www.acfalipiodemelo.com.br,acfalipiodemelo,HABILIO MACHADO,20900139,2
+1,MELOADMIN,24,1,172.31.37.250,Administrador da ACF ALIPIO DE MELO,www.acfalipiodemelo.com.br,acfalipiodemelo,HABILIO MACHADO,20900139,2
+1,SAMOADMIN,25,1,172.31.37.250,Administrador da ACF SANTA MONICA,mg.postal.net.br,acfmg,BELARMINO COTA PACHECO,20900376,2
+1,SAMOADMIN,25,1,172.31.37.250,Administrador da ACF SANTA MONICA,mg.postal.net.br,acfmg,BELARMINO COTA PACHECO,20900376,2
+1,SAMOADMIN,25,1,172.31.37.250,Administrador da ACF SANTA MONICA,mg.postal.net.br,acfmg,BELARMINO COTA PACHECO,20900376,2
+1,SAMOADMIN,25,1,172.31.37.250,Administrador da ACF SANTA MONICA,mg.postal.net.br,acfmg,BELARMINO COTA PACHECO,20900376,2
+1,AFRDADMIN,26,1,172.31.37.250,Administrador da AFRANIO RODRIGUES,mg.postal.net.br,acfmg,AFRANIO RODRIGUES,20900392,2
+1,AFRDADMIN,26,1,172.31.37.250,Administrador da AFRANIO RODRIGUES,mg.postal.net.br,acfmg,AFRANIO RODRIGUES,20900392,2
+1,AFRDADMIN,26,1,172.31.37.250,Administrador da AFRANIO RODRIGUES,mg.postal.net.br,acfmg,AFRANIO RODRIGUES,20900392,2
+1,AFRDADMIN,26,1,172.31.37.250,Administrador da AFRANIO RODRIGUES,mg.postal.net.br,acfmg,AFRANIO RODRIGUES,20900392,2
+1,CARRADMIN,27,1,172.31.37.250,Administrador da ACF CARREFOUR,www.agenciacarrefour.com.br,acfcarrefour_mg,RIACHO DAS PEDRAS,20908784,2
+1,CARRADMIN,27,1,172.31.37.250,Administrador da ACF CARREFOUR,www.agenciacarrefour.com.br,acfcarrefour_mg,RIACHO DAS PEDRAS,20908784,2
+1,CARRADMIN,27,1,172.31.37.250,Administrador da ACF CARREFOUR,www.agenciacarrefour.com.br,acfcarrefour_mg,RIACHO DAS PEDRAS,20908784,2
+1,CARRADMIN,27,1,172.31.37.250,Administrador da ACF CARREFOUR,www.agenciacarrefour.com.br,acfcarrefour_mg,RIACHO DAS PEDRAS,20908784,2
+1,JOAOADMIN,28,1,172.31.37.250,Administrador da ACACIA,mg.postal.net.br,acfmg,JOAO MACHADO,20908903,2
+1,JOAOADMIN,28,1,172.31.37.250,Administrador da ACACIA,mg.postal.net.br,acfmg,JOAO MACHADO,20908903,2
+1,JOAOADMIN,28,1,172.31.37.250,Administrador da ACACIA,mg.postal.net.br,acfmg,JOAO MACHADO,20908903,2
+1,BRAVADMIN,100,1,172.31.37.250,Administrador da ACF BARRO VERMELHO,barrovermelho.postal.net.br,acfbarrovermelho,MADUREIRA SHOPPING,50905864,2
+1,encantadoadmin,101,1,172.31.37.250,Administrador da ACF,agfamarocavalcante.postal.net.br,acfencantado,AMARO CAVALCANTE,50905937,2
+1,OUVIADMIN,102,1,172.31.37.250,Administrador da ACF OUVIDOR,www.postal.net.br,acfsp_10012017,PERRONE,50905953,2
+1,BOTAADMIN,103,1,172.31.37.250,Administrador da ACF ESTACAO BOTAFOGO,www.postal.net.br,acfsp_10012017,PAULINO FERNANDES,50906003,2
+1,LINSADMIN,104,1,172.31.37.250,Administrador da ACF LINS DE VASCONCELOS,agftorresdeoliveira.postal.net.br,acflinsdevasconcelos,TORRES DE OLIVEIRA,50906071,2
+1,SAFEADMIN,105,1,172.31.37.250,Administrador da ACF SANTA FE,www.acfsantafe.com.br,acfsantafe,ARISTIDES CAIRE,50906445,2
+1,STBRADMIN,106,1,172.31.37.250,Administrador da SANTA BARBARA,rj.postal.net.br,acfrj,SANTA BARBARA,50906496,2
+1,FATIADMIN,107,1,172.31.37.250,Administrador da ACF F?TIMA,www.postal.net.br,acfsp_10012017,NOSSA SENHORA DE FATIMA,50906569,2
+1,ERLIADMIN,108,1,172.31.37.250,Administrador da AGF ERLI,rj.postal.net.br,acfrj,ERLI,50906704,2
+1,JACAREPAGUA,109,1,172.31.37.250,Administrador da ACF,agfestradadejacarepagua.postal.net.br,acfjacarepagua,ESTRADA JACAREPAGUA,50906712,2
+1,NOVOADMIN,110,1,172.31.37.250,Administrador da ACF TUNEL NOVO,www.acftunelnovo.com.br,acftunelnovo,SECTOR,50906747,2
+1,MBARADMIN,111,1,172.31.37.250,Administrador da ACF MARIZ E BARROS,www.postal.net.br,acfsp_10012017,MARIZ,50906810,2
+1,CARRADMIN,112,1,172.31.37.250,Administrador da ACF,agfbarraletter.postal.net.br,acfcarrefour,BARRA LETTER,50906879,2
+1,ACFCANUDOS,113,1,172.31.37.250,Administrador da ACF,www.acfcanudos.com.br,acfcanudosb,BARTOLOMEU DE GUSMAO,64900096,2
+1,rgraadmin,114,1,172.31.37.250,Administrador ACF Rua Grande,acfrs.postal.net.br,acfrs,VINTE E CINCO DE JULHO,64900380,2
+1,ALPAADMIN,115,1,172.31.37.250,Administrador da ACF ALBERTO PASQUALINI,acfrs.postal.net.br,acfrs,ALBERTO PASQUALINI,64900550,2
+1,CRISADMIN,116,1,172.31.37.250,Administrador da ACF CRISTAL,acfrs.postal.net.br,acfrs,CIDADE ALTA,64900584,2
+1,pioxadmin,117,1,172.31.37.250,Administrador ACF Pio X,acfrs.postal.net.br,acfrs,PAPA PIO X,64900649,2
+1,RBCAADMIN,118,1,172.31.37.250,Administrador da ACF RIO BRANCO (CANOAS),acfrs.postal.net.br,acfrs,GUILHERME SCHELL,64901246,2
+1,ITAJAIADMIN,119,1,172.31.37.250,Administrador da ACF,sc.postal.net.br,acfsc,SAO JOAO,68904096,2
+1,RBADMIN,120,1,172.31.37.250,Administrador ACF Rio Branco,www.postal.net.br,acfsp_10012017,AVENIDA RIO BRANCO,68904142,2
+1,SSADMIN,121,1,172.31.37.250,ACF SANTO SARAIVA,agfrsantossaraiva.postal.net.br,acfsantossaraiva,RUA SANTOS SARAIVA,68904151,2
+1,PROSADMIN,122,1,172.31.37.250,Administrador da ACF PROSPERA,sc.postal.net.br,acfsc,BAIRRO PROSPERA,68904185,2
+1,CTNRADM,123,1,172.31.37.250,ADM ACF Centenário,sc.postal.net.br,acfsc,RUI BARBOSA,68904207,2
+1,ILHSADM,124,1,172.31.37.250,ADM ACF Ilhéus,sc.postal.net.br,acfsc,RUA ILHEUS,68904215,2
+1,ITPNADMIN,125,1,172.31.37.250,Administrador da ACF ITOUPAVA NORTE,sc.postal.net.br,acfsc,BAIRRO ITOUPAVA NORTE,68904231,2
+1,velhaadm,126,1,172.31.37.250,Administrador ACF VELHA,sc.postal.net.br,acfsc,BAIRRO VELHA,68904240,2
+1,AZBJADM,127,1,172.31.37.250,Adm ACF Azambuja,sc.postal.net.br,acfsc,BEIRA RIO,68904274,2
+1,JCADMIN,128,1,172.31.37.250,Admin. ACF Joinville Centro,sc.postal.net.br,acfsc,JACOB RICHLIN,68904304,2
+1,JSULADMIN,129,1,172.31.37.250,Administrador da ACF JOINVILLE SUL,www.acfsul.com.br,acfjoinvillesul,CORONEL FRANCISCO GOMES,68904312,2
+1,STESADMIN,130,1,172.31.37.250,Administrador da ACF JOINVILLE NORTE,www.satescorreios.com.br,acfjoinvillenorte,AMERICA,68904321,2
+1,TRDEADM,131,1,172.31.37.250,ADM ACF Trindade,sc.postal.net.br,acfsc,BAIRRO TRINDADE,68904355,2
+1,BELAADMIN,132,1,172.31.37.250,Administrador da ACF BELA VISTA,sc.postal.net.br,acfsc,BAIRRO BELA VISTA,68904703,2
+1,GARCADMIN,133,1,172.31.37.250,Administrador ACF Garcia,sc.postal.net.br,acfsc,GLORIA,68904738,2
+1,IRIRADMIN,134,1,172.31.37.250,Administrador da AGF IRIRIU,sc.postal.net.br,acfsc,IRIRIU,68904789,2
+1,SHAMADM,135,1,172.31.37.250,ADM ACF Shopping Americanas,sc.postal.net.br,acfsc,AMERICANAS,68904797,2
+1,ALCAADM,136,1,172.31.37.250,Adm ACF Álvaro de Carvalho,sc.postal.net.br,acfsc,RUA ALVARO DE CARVALHO,68904843,2
+1,PIRA00094,137,1,172.31.37.250,GRACIANA COMERCIO REPR LTDA,sc.postal.net.br,acfsc,DISTRITO INDUSTRIAL NORTE,68904851,2
+1,R600ADMIN,138,1,172.31.37.250,Administrador da AGF RUA 600,sc.postal.net.br,acfsc,RUA 600,68904941,2
+1,BCVAADM,139,1,172.31.37.250,ADM ACF Bocaiúva,sc.postal.net.br,acfsc,RUA BOCAIUVA,68904959,2
+1,CARLOSJOFRE,140,1,172.31.37.250,Administrador da ACF,sc.postal.net.br,acfsc,RUA CARLOS JOFRE,68905050,2
+1,santADMIN,141,1,172.31.37.250,Administrador da ACF,sc.postal.net.br,acfsc,BAIRRO SANTA RITA,68905114,2
+1,BMARADMIN,142,1,172.31.37.250,Administrador da ACF BEIRAMAR SHOPPING,www.beiramarpost.com.br,acf_accibeiramar,BEIRAMAR SHOPPING,68912714,2
+1,PERDADMIN,143,1,172.31.37.250,Administrador da AGF PERDIZES,spi.postal.net.br,acfspi,PERDIZES,72900067,2
+1,SANTADMIN,144,1,172.31.37.250,Administrador da ACF,agfsantacruz.postal.net.br,acfloefgreen,SANTA CRUZ,72900148,2
+1,ACF PIO XI,145,1,172.31.37.250,ACF PIO XI/ AZUL MARINHO,agfvilaromana.postal.net.br,acfpio11,VILA ROMANA,72900164,2
+1,PENTADMIN,146,1,172.31.37.250,Administrador da ACF TIMOTEO PENTEADO,www.acftimoteopenteado.com.br,acftimoteopenteado,JARDIM SANTA MENA,72900334,2
+1,RACHADMIN,147,1,172.31.37.250,Administrador da AGF RAGUEB CHOHFI,www.postal.net.br,acfsp_10012017,RAGUEB CHOHFI,72900342,2
+1,MAZZADMIN,148,1,172.31.37.250,Administrador da ACF AVENIDA MAZZEI,spi.postal.net.br,acfspi,AVENIDA MAZZEI,72900369,2
+1,JDCDADMIN,149,1,172.31.37.250,Administrador da JARDIM CIDALIA,spi.postal.net.br,acfspi,JARDIM CIDALIA,72900377,2
+1,CURSADMIN,150,1,172.31.37.250,Administrador da ACF CURSINO,agfcursino.postal.net.br,acfcursino,DO CURSINO,72900393,2
+1,BERRINI,151,1,172.31.37.250,Administrador da ACF,www.acfberrini.com.br,acfberrini,LUIS CARLOS BERRINI,72900440,2
+1,INTLADMIN,152,1,172.31.37.250,Administrador da ACF INTERLAGOS,agfavinterlagos.postal.net.br,acfinterlagos,AVENIDA INTERLAGOS,72900458,2
+1,VBADMIN,153,1,172.31.37.250,Administrador da ACF Vital Brasil,www.vitalbr.com.br,acfvitalbrasil,DOUTOR VITAL BRASIL,72900491,2
+1,RIOPADMIN,154,1,172.31.37.250,Administrador da ACF RIO PEQUENO,www.acfriopequeno.com.br,acfriopequeno,SAO PATRICIO,72900521,2
+1,vimoadmin,155,1,172.31.37.250,Administrador Village Morumbi,www.acfvillagemorumbi.com.br,acfvillagemorumbi,MORUMBI,72900555,2
+1,BRASADMIN,156,1,172.31.37.250,Administrador da AGF BRASILIA,spi.postal.net.br,acfspi,BRASILIA,72900571,2
+1,19JNADMIN,157,1,172.31.37.250,Administrador da ACF,agfamarosobrinho.postal.net.br,acf19dejaneiro,AMARO SOBRINHO,72900601,2
+1,AVCEADMIN,158,1,172.31.37.250,Administrador da AVENIDA CELSO GARCIA,spi.postal.net.br,acfspi,AVENIDA CELSO GARCIA,72900628,2
+1,CECOADMIN,159,1,172.31.37.250,Administrador da ACF,www.acfcerrocora.com.br,acfcerrocora,ALTO DA LAPA,72900652,2
+1,POMOADMIN,160,1,172.31.37.250,Administrador da ACF,agfportal.postal.net.br,acfportaldomorumbi,PORTAL,72900661,2
+1,BURTADMIN,161,1,172.31.37.250,Administrador da ACF BURITIS,agfengarmandodearruda.postal.net.br,acfburitis,ENGENHEIRO ARMANDO DE ARRUDA,72900695,2
+1,marejdias,162,1,172.31.37.250,Administrador da AGF TENENTE SILVA ARAUJO,agftenentesilva.postal.net.br,acfjoaodias,TENENTE SILVA ARAUJO,72900733,2
+1,RANGADMIN,163,1,172.31.37.250,Administrador da ACF RANGEL PESTANA,www.acfrangel.com.br,acfrangelpestana,JULIO DE MESQUITA,72900741,2
+1,GRJUADMIN,164,1,172.31.37.250,Administrador da ACF GRANJA JULIETA,www.postal.net.br,acfsp_10012017,ADOLFO PINHEIRO,72900750,2
+1,CEBRADMIN,165,1,172.31.37.250,Administrador da ACF Center Bras,www.acfcenterbras.com.br,acfcenterbras,ALFANDEGA,72900792,2
+1,LAPCADMIN,166,1,172.31.37.250,Administrador da LAPA CENTRO,www.postal.net.br,acfsp_10012017,GEORGE SCHIMIDT,72900806,2
+1,AYSEADMIN,167,1,172.31.37.250,Administrador da AGF AYRTON SENNA,agfayrtonsenna.postal.net.br,acfspi,AYRTON SENNA,72900873,2
+1,FLRSADMIN,168,1,172.31.37.250,Administrador da ACF Flores,tibaji.postal.net.br,acfflores,BARRA DO TIBAJI,72900890,2
+1,SDOMADMIN,169,1,172.31.37.250,Administrador da ACF,agfparquesaodomingos.postal.net.br,acfparquesaodomingos,PARQUE SAO DOMINGOS,72900903,2
+1,ANCHADMIN,170,1,172.31.37.250,Administrador da ACF ANCHIETA,acfanchietasp.postal.net.br,acfanchieta_sp,SACOMA,72900911,2
+1,BESTADMIN,171,1,172.31.37.250,Administrador da ACF BEST SHOPPING,www.postal.net.br,acfsp_10012017,KENNEDY,72900920,2
+1,ITABADMIN,172,1,172.31.37.250,Administrador da ACF ITABERABA,agffreguesiadoo.postal.net.br,acfitaberaba,FREGUESIA DO O,72900954,2
+1,NOVOADMIN,173,1,172.31.37.250,Administrador da ACF NOVO MUNDO,spi.postal.net.br,acfspi,PARQUE NOVO MUNDO,72900971,2
+1,PAFEADMIN,174,1,172.31.37.250,Administrador da ACF PAULA FERREIRA,www.dellpost.com.br,acfpaulaferreira,PEREIRA BARRETO,72900997,2
+1,VINOADMIN,175,1,172.31.37.250,Administrador da VILA NOGUEIRA,spi.postal.net.br,acfspi,NOGUEIRA,72901004,2
+1,LICOADMIN,176,1,172.31.37.250,ADMINISTRADOR AGF LICO MAIA,spi.postal.net.br,acfspi,LICO MAIA,72901012,2
+1,SEJAADMIN,177,1,172.31.37.250,Administrador da ACF SERRA DO JAPI,www.acfserradojapi.com.br,acfserradojapi,VILA GOMES CARDIM,72901063,2
+1,JSULADMIN,178,1,172.31.37.250,Administrador da ACF SHOPPING JARDIM SUL,www.nossocorreio.com.br,acfshoppingjardimsul,GIOVANNI GRONCHI,72901098,2
+1,VBELADMIN,179,1,172.31.37.250,Administrador da ACF,www.acfviladasbelezas.com.br,acfviladasbelezas,JARDIM SAO LUIS,72901101,2
+1,CBELADMIN,180,1,172.31.37.250,Administrador da ACF CAMPO BELO,agfvieirademorais.postal.net.br,acfcampobelo,VIEIRA DE MORAIS,72901128,2
+1,INCMADMIN,181,1,172.31.37.250,Administrador da ACF INCONF. MINEIRA,agfvilaantonieta.postal.net.br,acfinconfidenciamineira,VILA ANTONIETA,72901136,2
+1,PBRRADMIN,182,1,172.31.37.250,Administrador da ACF PAES DE BARROS,agfjumana.postal.net.br,acfpaesdebarros,JUMANA,72901225,2
+1,MAPLADMIN,183,1,172.31.37.250,Administrador da ACF MARIA PAULA,agfnovedejulho.postal.net.br,acfmariapaula,NOVE DE JULHO,72901250,2
+1,VLANADMIN,184,1,172.31.37.250,Administrador da ACF VILA ANASTACIO,www.scmpostal.com.br,acfvilaanastacio,ANASTACIO,72901276,2
+1,ZILDADMIN,185,1,172.31.37.250,Administrador da ACF ZILDA,agfcaetanoalvares.postal.net.br,acfzilda,CAETANO ALVARES,72901292,2
+1,PALMADMIN,186,1,172.31.37.250,Administrador da ACF PALMEIRAS,www.acfpalmeiras.com.br,acfpalmeiras,CAMPOS ELISIOS,72901438,2
+1,MIGS05122,187,1,172.31.37.250,ACF ADMINISTRAÇÃO,miguelstefano.postal.net.br,acfmiguelstefano,JARDIM BOTANICO,72901454,2
+1,ACLIADMIN,188,1,172.31.37.250,Administrador da ACF ACLIMACAO,www.acfaclimacao.com.br,acfaclimacao,PARQUE ACLIMACAO,72901471,2
+1,FENIADMIN,189,1,172.31.37.250,Administrador da ACF FENIX,agflog.postal.net.br,acffenix,XV DE NOVEMBRO,72901489,2
+1,JAGUADMIN,190,1,172.31.37.250,Administrador da ACF JAGUARA (SP),agfvilajaguara.postal.net.br,acfjaguara,VILA JAGUARA,72901527,2
+1,EFIGADMIN,191,1,172.31.37.250,Administrador da ACF,www.postal.net.br,acfsp_10012017,EFIGENIA,72901535,2
+1,LPDBADMIN,192,1,172.31.37.250,Administrador da ACF,cedecom.postal.net.br,acflapadebaixo,ENGENHEIRO AUBERTIN,72901578,2
+1,DOMPADMIN,193,1,172.31.37.250,Administrador da AGF DOM PEDRO I,spi.postal.net.br,acfspi,DOM PEDRO I,72901594,2
+1,CLIMADMIN,194,1,172.31.37.250,Administrador da ACF BOM CLIMA,agfbomclima.postal.net.br,acfbomclima,JARDIM BOM CLIMA,72901608,2
+1,POPEADMIN,195,1,172.31.37.250,Administrador da AGF PONTE PEQUENA,spi.postal.net.br,acfspi,PONTE PEQUENA,72901730,2
+1,OSAKADMIN,196,1,172.31.37.250,Administrador da AGF OSAKA,spi.postal.net.br,acfspi,OSAKA,72901756,2
+1,master,197,1,172.31.37.250,ACF NOVA CANTAREIRA,agfaltodesantana.postal.net.br,acfnovacantareira,ALTO DE SANTANA,72901764,2
+1,ALFRADMIN,198,1,172.31.37.250,Administrador da ACF ALFREDO PUJOL,www.postal.net.br,acfsp_10012017,LEAO XIII,72901772,2
+1,vlaladmin,199,1,172.31.37.250,Administrador da Vila Alpina,www.acfvilaalpina.com.br,acfvilaalpina,COSTA BARROS,72901811,2
+1,WITEADMIN,200,1,172.31.37.250,Administrador da RUA ANTONIO DE BARROS,witepapelaria.postal.net.br,acfspi,RUA ANTONIO DE BARROS,72901829,2
+1,SIROADMIN,201,1,172.31.37.250,Administrador da ACF SILVIO ROMERO,www.acfsilvioromero.com.br,acfsilvioromero,PRACA SILVIO ROMERO,72901926,2
+1,TUPIADMIN,202,1,172.31.37.250,Administrador da ACF TUPI,www.acftupi.com.br,acftupi,PACAEMBU,72901934,2
+1,PQDLADMIN,203,1,172.31.37.250,Administrador da AGF PARQUE DO LAGO,agfparquedolago.postal.net.br,acfspi,PARQUE DO LAGO,72901977,2
+1,CORFADMIN,204,1,172.31.37.250,Administrador da ACF CORIFEU,agfbenjamimmansur.postal.net.br,acfcorifeu,BENJAMIM MANSUR,72902027,2
+1,DIRCADMIN,205,1,172.31.37.250,Administrador da ACF VILA DIRCE,www.acfviladirce.com.br,acfviladirce,VILA ARTEM,72902035,2
+1,ALVGADMIN,206,1,172.31.37.250,Administrador da ACF ALVARO GUIMARÃES,agfplanalto.postal.net.br,acfalvaroguimaraes,PLANALTO,72902051,2
+1,AMBUADMIN,207,1,172.31.37.250,Administrador da AMADOR BUENO,spi.postal.net.br,acfspi,AVENIDA  AMADOR BUENO,72902124,2
+1,ARICADMIN,208,1,172.31.37.250,Administrador da AGF JARDIM MARILIA,agfjardimmarilia.postal.net.br,acfshoppingaricanduva,JARDIM MARILIA,72902221,2
+1,JOMDADMIN,209,1,172.31.37.250,Administrador da AGF DOUTOR JOAO MENDES,agfjoaomendes.postal.net.br,acfspi,DOUTOR JOAO MENDES,72902302,2
+1,JURMADMIN,210,1,172.31.37.250,Administrador da ACF JUREMA,agfcaetanoalvares.postal.net.br,acfzilda,JARDIM ALBERTINA,72902311,2
+1,paulinho,211,1,172.31.37.250,PAULO HENRIQUE DA SILVA,agfjardimdospimentas.postal.net.br,acfpimentas,JARDIM DOS PIMENTAS,72902329,2
+1,PAADMIN,212,1,172.31.37.250,Administrador ACF Presidente Altino,www.postal.net.br,acfsp_10012017,OSWALDO COLLINO,72902418,2
+1,SATEADMIN,213,1,172.31.37.250,Administrador da ACF SANTA TEREZA,www.acfsantatereza.com.br,acfsantatereza,JARDIM SANTA TEREZA,72902442,2
+1,seadmin,214,1,172.31.37.250,Administrador ACF SE,www.postal.net.br,acfsp_10012017,BOA VISTA,72902477,2
+1,CENTADMIN,215,1,172.31.37.250,Administrador da ACF VILA BUARQUE,agfrepublica.postal.net.br,acfvilabuarque,REPUBLICA,72902485,2
+1,CONSADMIN,216,1,172.31.37.250,Administrador da AGF CONSELHEIRO NEBIAS,spi.postal.net.br,acfspi,CONSELHEIRO NEBIAS,72902507,2
+1,AGHAADMIN,217,1,172.31.37.250,Administrador da ACF AGUIA DE HAIA,agfpqpaineiras.postal.net.br,acfaguiadehaia,PARQUE PAINEIRAS,72902523,2
+1,ANFRADMIN,218,1,172.31.37.250,Administrador da ACF AN?LIA FRANCO,www.postal.net.br,acfsp_10012017,APARECIDA,72902604,2
+1,CARMADMIN,219,1,172.31.37.250,Administrador da ACF PARQUE DO CARMO,agfjardimaricanduva.postal.net.br,acfparquedocarmo,JARDIM ARICANDUVA,72902621,2
+1,PARQADMIN,220,1,172.31.37.250,Administrador da PARQUE MARIA LUISA,spi.postal.net.br,acfspi,RIO DAS PEDRAS,72902639,2
+1,ALTOADMIN,221,1,172.31.37.250,Administrador da ACF ALTO DA MOOCA,www.agfbairrodamooca.com.br,acfaltodamooca,BAIRRO DA MOOCA,72902655,2
+1,ALFOADMIN,222,1,172.31.37.250,Administrador da ACF ALFONSO BOVERO,www.acfalfonsobovero.com.br,acfalfonsobovero,VILA POMPEIA,72902663,2
+1,anmark,223,1,172.31.37.250,ANMARK SERVIÇOS POSTAIS LTDA,www.rcaherculano.com.br,acfalexandreherculano,VILA RICA,72902680,2
+1,BRIGADMIN,224,1,172.31.37.250,Administrador da AGF BRIGADEIRO FARIA LIMA,spi.postal.net.br,acfspi,BRIGADEIRO FARIA LIMA,72902710,2
+1,PIRADMIN,225,1,172.31.37.250,Administrador da ACF,www.postal.net.br,acfsp_10012017,PRACA PIRAPORINHA,72902744,2
+1,cladmin,226,1,172.31.37.250,Administrador da ACF,www.riclo.com.br,acfcampolimpo,VILA PREL,72902817,2
+1,REMEADMIN,227,1,172.31.37.250,Administrador da ACF,agfremedios.postal.net.br,acfviladosremedios,PRACA DOS REMEDIOS,72902841,2
+1,VCMAADMIN,228,1,172.31.37.250,Administrador da ACF Vinte e cinco de Março,bj.postal.net.br,acf25marco,BASILIO JAFET,72902868,2
+1,GUARADMIN,229,1,172.31.37.250,Administrador da VILA GUARANI,agfvilaguarani.postal.net.br,acfvilaguarani,VILA GUARANI,72902884,2
+1,CDUTADMIN,230,1,172.31.37.250,Administrador da AGF SENADOR TEOTONIO,spi.postal.net.br,acfspi,SENADOR TEOTONIO,72902892,2
+1,VALAADMIN,231,1,172.31.37.250,Administrador da ACF,www.postal.net.br,acfsp_10012017,JARDIM INDEPENDENCIA,72902922,2
+

@@ -1,0 +1,10 @@
+IdxAdicional,CodAdicionalPlp,CodAdicionalViPP,DescricaoAdicional
+1,001,AR,Aviso De Recebimento
+2,002,MP,Mão Própria
+7,007,OF,Outros Formatos
+19,019,VD,"Valor Declarado 10.000,00"
+21,021,AD,Aviso De Recebimento Digital
+25,025,RG,Registro Nacional
+35,035,VD,"Valor Declarado 500,00"
+64,064,VD,"Valor Declarado 3.000,00"
+

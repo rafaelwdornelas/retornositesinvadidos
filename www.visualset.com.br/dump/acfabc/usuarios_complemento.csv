@@ -1,0 +1,7 @@
+id,quantidade,valor,cod_usuario,dias_semana,tipo_objetos
+2,0,0,000560000,segunda;terca;quarta;quinta;sexta;,sedex;carta_registrada;carta_simples;
+3,0,0,000110000,segunda;terca;quarta;quinta;sexta;,sedex;internacional;carta_simples;
+5,0,0,004020000,segunda;terca;quarta;quinta;sexta;,sedex;carta_registrada;carta_simples;
+6,0,0,005090000,<blank>,<blank>
+7,0,0,001190000,<blank>,<blank>
+

@@ -1,0 +1,56 @@
+CadIdx,PdtIdx,AgeLib,AgeUrl,UpdUrl,AgeSto,AgeDsc,PdtDsc,DboEng,DboDsc,DboIpx,AgeUsr
+1,1,1,acfes.postal.net.br,<blank>,00062045,ACF PRACA DO PAPA,POPP,1,acfes,172.31.37.250,PAPAADMIN
+2,1,1,acfsp.postal.net.br,NULL,00234716,RECREIO,POPP,1,acfsp_10012017,172.31.37.250,RECRADMIN
+3,1,1,ba.postal.net.br,<blank>,00235633,CAMPINAS DE PIRAJA,POPP,1,acfpb,172.31.37.250,CAPAADMIN
+4,3,1,vipp.visualset.com.br,http://vpsrv.visualset.com.br,<blank>,AGF SOMENZARI,VIPP,1,acfspi,172.31.37.250,Alterado Por Ri
+5,1,1,pr.postal.net.br,<blank>,00236741,AGF DO LAGO,POPP,1,acfpr,172.31.37.250,LAGOADMIN
+6,1,1,rj.postal.net.br,<blank>,00423134,AGF BATURITE BONSUCESSO,POPP,1,acfrj,172.31.37.250,BATUADMIN
+7,1,1,es.postal.net.br,<blank>,00423955,AGF BAIRRO VILA RUBIM,POPP,1,acfes,172.31.37.250,VLRBADMIN
+8,1,1,spi.postal.net.br,<blank>,00424228,AGF JESUINO MARCONDES,POPP,1,acfspi,172.31.37.250,JESUADMIN
+9,1,1,spi.postal.net.br,<blank>,00424256,AGF SENADOR VERGUEIRO,POPP,1,acfspi,172.31.37.250,SNVGADMIN
+10,1,1,spi.postal.net.br,<blank>,00424263,MARIA MONTESSORI,POPP,1,acfspi,172.31.37.250,MAMOADMIN
+11,1,1,agfshoppingmorumbi.postal.net.br,<blank>,00424298,AGF SHOPPING MORUMBI,POPP,1,acfshoppingmorumbi,172.31.37.250,MORBADMIN
+12,1,1,ce.postal.net.br,<blank>,00424360,JOAO XXIII,POPP,1,acfce,172.31.37.250,JOAOADMIN
+14,1,1,spi.postal.net.br,<blank>,00424509,AGF GLICERIO,POPP,1,acfspi,172.31.37.250,GLICADMIN
+15,1,1,spi.postal.net.br,<blank>,00424512,JARDIM UNIVERSO,POPP,1,acfspi,172.31.37.250,JDUNADMIN
+16,1,1,spi.postal.net.br,<blank>,00424514,PRACA 08 DE DEZEMBRO,POPP,1,acfspi,172.31.37.250,P8DDADMIN
+17,1,1,rj.postal.net.br,<blank>,00424540,AGF AMARAL PEIXOTO,POPP,1,acfrj,172.31.37.250,AMPEADMIN
+18,1,1,rj.postal.net.br,<blank>,00424577,ACF BARREIROS,POPP,1,acfrj,172.31.37.250,BARRADMIN
+19,1,1,spi.postal.net.br,<blank>,00424741,SANTA TEREZINHA,POPP,1,acfspi,172.31.37.250,SANTADMIN
+20,1,1,spi.postal.net.br,<blank>,00424772,BARAO DE DUPRAT,POPP,1,acfspi,172.31.37.250,BADUADMIN
+21,1,1,spi.postal.net.br,<blank>,00424856,AGF PRACA DOS EXPEDICIONARIOS,POPP,1,acfspi,172.31.37.250,PRACADMIN
+22,1,1,spi.postal.net.br,<blank>,00425897,DA GRACA,POPP,1,acfspi,172.31.37.250,GRACADMIN
+23,1,1,www.acffarol.com.br,<blank>,04900821,TEMA SERVICOS LTDA - ME,POPP,1,acffarol,172.31.37.250,FAROLADMIN
+24,1,1,www.postal.net.br,<blank>,08900272,AGF DUNAS DE ITAPUA,POPP,1,acfsp_10012017,172.31.37.250,CAYMADMIN
+25,1,1,ba.postal.net.br,<blank>,08901503,GEO CENTER,POPP,1,acfpb,172.31.37.250,GECTADMIN
+26,1,1,www.postal.net.br,<blank>,10900586,ACF CONIC,POPP,1,acfsp_10012017,172.31.37.250,CONIADMIN
+27,1,1,acfdf.postal.net.br,<blank>,10900691,ACF CRUZEIRO NOVO,POPP,1,acfdf,172.31.37.250,CRUZADMIN
+28,1,1,acfdf.postal.net.br,<blank>,10900934,ACF SAA,POPP,1,acfdf,172.31.37.250,BRASADMIN
+30,1,0,ce.postal.net.br,<blank>,12900044,AGF PAJEU,POPP,1,acfce,172.31.37.250,PAJEADMIN
+31,1,1,agfmeireles.postal.net.br,<blank>,12900079,AGF MEIRELES,POPP,1,acfestadosunidos,172.31.37.250,ESUNADMIN
+32,1,1,agfjosebonifacio.postal.net.br,<blank>,12900176,AGF JOSE BONIFACIO,POPP,1,acfaguanambi,172.31.37.250,AGNBADMIN
+33,1,1,ce.postal.net.br,<blank>,12900231,MOZART LUCENA,POPP,1,acfce,172.31.37.250,MZLCADMIN
+34,1,1,agfmendel.postal.net.br,<blank>,12900257,ACF DISTRITO INDUSTRIAL,POPP,1,acfdistritoindustrial,172.31.37.250,DINDADMIN
+35,1,1,www.postal.net.br,<blank>,14901455,ACF MONTE BELO,POPP,1,acfsp_10012017,172.31.37.250,mbadmin
+36,1,1,www.acfgoiabeiras.com.br,<blank>,14901463,ACF GOIABEIRAS,POPP,1,acfgoiabeiras,172.31.37.250,GOIABEIRAS
+37,1,1,acfes.postal.net.br,<blank>,14901471,ACF MUQUICABA,POPP,1,acfes,172.31.37.250,MUQBADMIN
+38,1,1,www.acfesplanada.com.br,<blank>,14901528,ACF ESPLANADA,POPP,1,acfesplanada,172.31.37.250,ESPLADMIN
+39,1,1,www.postal.net.br,<blank>,14901625,ACF AVENIDA REPUBLICA,POPP,1,acfsp_10012017,172.31.37.250,AVENADMIN
+40,1,1,es.postal.net.br,<blank>,14901633,AGF LIMOEIRO,POPP,1,acfes,172.31.37.250,JALIADMIN
+41,1,1,www.postal.net.br,<blank>,16900197,ACF QUATRO,POPP,1,acfsp_10012017,172.31.37.250,QUATROADMIN
+42,1,1,www.postal.net.br,<blank>,16900197,ACF QUATRO,POPP,1,acfsp_10012017,172.31.37.250,VIDA FARMA
+43,1,1,pb.postal.net.br,<blank>,18900071,ACF DUNAS,POPP,1,acfpb,172.31.37.250,DUNSADMIN
+44,1,1,www.acfcidadenova.com.br,<blank>,20900031,ACF CIDADE NOVA,POPP,1,acfcidadenova,172.31.37.250,NOVAADMIN
+45,1,1,www.agenciaplanalto.com.br,<blank>,20900058,AGF DR. CRISTIANO GUIMARAES,POPP,1,acfplanalto,172.31.37.250,PLANADMIN
+46,1,1,www.acfalipiodemelo.com.br,<blank>,20900139,ACF ALIPIO DE MELO,POPP,1,acfalipiodemelo,172.31.37.250,MELOADMIN
+47,1,1,acfmg.postal.net.br,<blank>,20900376,AGF BERLAMINIO COTTA PACHECO,POPP,1,acfmg,172.31.37.250,SAMOADMIN
+48,1,1,www.agenciacarrefour.com.br,<blank>,20908784,AGF RIACHO DAS PEDRAS,POPP,1,acfcarrefour_mg,172.31.37.250,CARRADMIN
+49,1,1,acfmg.postal.net.br,<blank>,20908997,AGF PAULO CHIARADIA,POPP,1,acfmg,172.31.37.250,SVICADMIN
+50,1,1,agfestacaocentral.postal.net.br,<blank>,20909136,AGF ESTACAO CENTRAL,POPP,1,acfpracadaestacao,172.31.37.250,PESTADMIN
+51,1,1,www.postal.net.br,<blank>,20909322,AGF TERMINAL ROD. UBERLANDIA,POPP,1,acfsp_10012017,172.31.37.250,RODUADMIN
+52,1,1,www.correiosabc.com.br,<blank>,20909331,ACF ABC,POPP,1,acfabc,172.31.37.250,ABCADMIN
+53,1,1,agfbernardomonteiro.postal.net.br,<blank>,20909438,AGF BERNARDO MONTEIRO,POPP,1,acfhabit,172.31.37.250,HABITADMIN
+54,1,1,www.acfleste.com.br,<blank>,20909519,ACF LESTE,POPP,1,acfleste,172.31.37.250,LESTADMIN
+55,1,1,acfmg.postal.net.br,<blank>,20909535,ACF MARIA CARNEIRO,POPP,1,acfmg,172.31.37.250,CARNADMIN
+57,1,1,mg.postal.net.br,<blank>,20909705,SAO SEBASTIAO,POPP,1,acfmg,172.31.37.250,SABTADMIN
+

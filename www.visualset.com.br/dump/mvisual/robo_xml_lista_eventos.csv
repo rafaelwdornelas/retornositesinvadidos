@@ -1,0 +1,50 @@
+id,tipo,status,descricao,procuravel
+1,<blank>,<blank>,<blank>,1
+2,BDE,41,Aguardando parte do lote,1
+3,BDE,41,Aguardando parte do lote (BDE),1
+4,BDI,41,Aguardando parte do lote (BDI),1
+5,BDR,41,Aguardando parte do lote (BDR),1
+6,LDI,01,Aguardando retirada,1
+7,LDI,02,Caixa postal,1
+8,CO,<blank>,Coletado,1
+9,FC,02,Com entrega agendada,1
+10,CAR,<blank>,Conferido,1
+11,CAR,01,Conferido (CAR),1
+12,CD,01,Conferido (CD),1
+13,CMR,01,Conferido (CMR),1
+14,CO,01,Conferido (CO),1
+15,CUN,01,Conferido (CUN),1
+16,PAR,15,Conferido (PAR),1
+17,BDI,28,Conteúdo avariado,1
+18,NEN,98,Descartado pelo Sistema,1
+19,BDE,02,Destinatário ausente,1
+20,BDE,02,Destinatário ausente (BDE) - Encaminhado para entrega interna,1
+21,BDE,21,Destinatário ausente (BDE) - O objeto está sendo devolvido ao remetente,1
+22,BDE,20,Destinatário ausente (BDE) - Será realizada uma nova tentativa de entrega,1
+23,BDI,02,Destinatário ausente (BDI) - Encaminhado para entrega interna,1
+24,BDI,21,Destinatário ausente (BDI) - O objeto está sendo devolvido ao remetente,1
+25,BDI,20,Destinatário ausente (BDI) - Será realizada uma nova tentativa de entrega,1
+26,BDR,02,Destinatário ausente (BDR) - Encaminhado para entrega interna,1
+27,BDR,21,Destinatário ausente (BDR) - O objeto está sendo devolvido ao remetente,1
+28,BDR,20,Destinatário ausente (BDR) - Será realizada uma nova tentativa de entrega,1
+29,BDE,06,Destinatário desconhecido no endereço,1
+30,BDE,06,Destinatário desconhecido no endereço (BDE),1
+31,BDI,06,Destinatário desconhecido no endereço (BDI),1
+32,BDR,06,Destinatário desconhecido no endereço (BDR),1
+33,BDE,10,Destinatário mudou-se,1
+34,BDE,10,Destinatário mudou-se (BDE),1
+35,BDI,10,Destinatário mudou-se (BDI),1
+36,BDR,10,Destinatário mudou-se (BDR),1
+37,FC,01,Devolvido a pedido do Cliente,1
+38,BDE,42,Devolvido ao remetente,1
+39,BDE,42,Devolvido ao remetente (BDE) - Lote incompleto,1
+40,BDI,40,Devolvido ao remetente (BDI) - Importação não autorizada,1
+41,BDI,42,Devolvido ao remetente (BDI) - Lote incompleto,1
+42,BDR,42,Devolvido ao remetente (BDR) - Lote incompleto,1
+43,BDE,24,Disponivel em caixa postal,1
+44,BDE,24,Disponivel em caixa postal (BDE),1
+45,BDI,24,Disponivel em Caixa Postal (BDI),1
+46,BDR,24,Disponivel em Caixa Postal (BDR),1
+47,BDI,24,Disponivel na Caixa Postal,1
+48,BDE,23,Distribuido ao remetente,1
+

@@ -1,0 +1,44 @@
+cep_id,localidade,uf,cep,tipo,nome,ch_bai,bairro,ch_loc,tip_log,prefixo,cxa_pos,endlimpo,endereco,descricao,logradouro,complemento
+1,FAZENDINHA,AP,0,<blank>,<blank>,0,<blank>,295,5,<blank>,1,VER>MACAPA,VER > MACAPA,Caixa Postal Comunitária,<blank>,<blank>
+2,ABRANTES,BA,0,<blank>,<blank>,0,<blank>,330,5,<blank>,1,VER>CAMACARI,VER > CAMACARI,Caixa Postal Comunitária,<blank>,<blank>
+3,AREIAS,BA,0,<blank>,<blank>,0,<blank>,373,5,<blank>,1,VER>CAMACARI,VER > CAMACARI,Caixa Postal Comunitária,<blank>,<blank>
+4,AREMBEPE,BA,0,<blank>,<blank>,0,<blank>,374,5,<blank>,1,VER>CAMACARI,VER > CAMACARI,Caixa Postal Comunitária,<blank>,<blank>
+5,BARRA DO POJUCA,BA,0,<blank>,<blank>,0,<blank>,399,5,<blank>,1,VER>CAMACARI,VER > CAMACARI,Caixa Postal Comunitária,<blank>,<blank>
+6,BURIS DE ABRANTES,BA,0,<blank>,<blank>,0,<blank>,449,5,<blank>,1,VER>CAMACARI,VER > CAMACARI,Caixa Postal Comunitária,<blank>,<blank>
+7,CATU DE ABRANTES,BA,0,<blank>,<blank>,0,<blank>,520,5,<blank>,1,VER>CAMACARI,VER > CAMACARI,Caixa Postal Comunitária,<blank>,<blank>
+8,ITACIMIRIM,BA,0,<blank>,<blank>,0,<blank>,687,5,<blank>,1,VER>CAMACARI,VER > CAMACARI,Caixa Postal Comunitária,<blank>,<blank>
+9,JAUA,BA,0,<blank>,<blank>,0,<blank>,748,5,<blank>,1,VER>CAMACARI,VER > CAMACARI,Caixa Postal Comunitária,<blank>,<blank>
+10,FERRADAS,BA,0,<blank>,<blank>,0,<blank>,583,5,<blank>,1,VER>ITABUNA,VER > ITABUNA,Caixa Postal Comunitária,<blank>,<blank>
+11,CANTO DO SOL,BA,0,<blank>,<blank>,0,<blank>,494,5,<blank>,1,VER>CAMACARI,VER > CAMACARI,Caixa Postal Comunitária,<blank>,<blank>
+12,GUARAJUBA,BA,0,<blank>,<blank>,0,<blank>,608,5,<blank>,1,VER>CAMACARI,VER > CAMACARI,Caixa Postal Comunitária,<blank>,<blank>
+13,ILHA DE BOM JESUS DOS PASSOS,BA,0,<blank>,<blank>,0,<blank>,10611,5,<blank>,1,VER>SALVADOR,VER > SALVADOR,Caixa Postal Comunitária,<blank>,<blank>
+14,ILHA DE MARE,BA,0,<blank>,<blank>,0,<blank>,658,5,<blank>,1,VER>SALVADOR,VER > SALVADOR,Caixa Postal Comunitária,<blank>,<blank>
+15,ILHA DOS FRADES,BA,0,<blank>,<blank>,0,<blank>,10612,5,<blank>,1,VER>SALVADOR,VER > SALVADOR,Caixa Postal Comunitária,<blank>,<blank>
+16,MONTE GORDO,BA,0,<blank>,<blank>,0,<blank>,844,5,<blank>,1,VER>CAMACARI,VER > CAMACARI,Caixa Postal Comunitária,<blank>,<blank>
+17,POLO PETROQUIMICO DE CAMACARI,BA,0,<blank>,<blank>,0,<blank>,940,5,<blank>,1,VER>CAMACARI,VER > CAMACARI,Caixa Postal Comunitária,<blank>,<blank>
+18,ANTONIO BEZERRA,CE,0,<blank>,<blank>,0,<blank>,1150,5,<blank>,1,VER>FORTALEZA,VER > FORTALEZA,Caixa Postal Comunitária,<blank>,<blank>
+19,PARAFUSO,BA,0,<blank>,<blank>,0,<blank>,900,5,<blank>,1,VER>CAMACARI,VER > CAMACARI,Caixa Postal Comunitária,<blank>,<blank>
+20,MURITI,CE,0,<blank>,<blank>,0,<blank>,1537,5,<blank>,1,VER>CRATO,VER > CRATO,Caixa Postal Comunitária,<blank>,<blank>
+21,PARANGABA,CE,0,<blank>,<blank>,0,<blank>,1582,5,<blank>,1,VER>FORTALEZA,VER > FORTALEZA,Caixa Postal Comunitária,<blank>,<blank>
+22,PAVUNA,CE,0,<blank>,<blank>,0,<blank>,1592,5,<blank>,1,VER>PACATUBA,VER > PACATUBA,Caixa Postal Comunitária,<blank>,<blank>
+23,JUREMA,CE,0,<blank>,<blank>,0,<blank>,1454,5,<blank>,1,VER>CAUCAIA,VER > CAUCAIA,Caixa Postal Comunitária,<blank>,<blank>
+24,MESSEJANA,CE,0,<blank>,<blank>,0,<blank>,1503,5,<blank>,1,VER>FORTALEZA,VER > FORTALEZA,Caixa Postal Comunitária,<blank>,<blank>
+25,MONDUBIM,CE,0,<blank>,<blank>,0,<blank>,1517,5,<blank>,1,VER>FORTALEZA,VER > FORTALEZA,Caixa Postal Comunitária,<blank>,<blank>
+26,MONGUBA,CE,0,<blank>,<blank>,0,<blank>,1518,5,<blank>,1,VER>PACATUBA,VER > PACATUBA,Caixa Postal Comunitária,<blank>,<blank>
+27,ARGOLAS,ES,0,<blank>,<blank>,0,<blank>,1820,5,<blank>,1,VER>VILAVELHA,VER > VILA VELHA,Caixa Postal Comunitária,<blank>,<blank>
+28,SENADOR CARLOS JEREISSATI,CE,0,<blank>,<blank>,0,<blank>,1709,5,<blank>,1,VER>PACATUBA,VER > PACATUBA,Caixa Postal Comunitária,<blank>,<blank>
+29,GOIABEIRAS,ES,0,<blank>,<blank>,0,<blank>,1872,5,<blank>,1,VER>VITORIA,VER > VITORIA,Caixa Postal Comunitária,<blank>,<blank>
+30,NESTOR GOMES,ES,0,<blank>,<blank>,0,<blank>,1943,5,<blank>,1,VER>SAOMATEUS,VER > SAO MATEUS,Caixa Postal Comunitária,<blank>,<blank>
+31,NOVA ALMEIDA,ES,0,<blank>,<blank>,0,<blank>,1944,5,<blank>,1,VER>SERRA,VER > SERRA,Caixa Postal Comunitária,<blank>,<blank>
+32,NOVA VERONA,ES,0,<blank>,<blank>,0,<blank>,1947,5,<blank>,1,VER>SAOMATEUS,VER > SAO MATEUS,Caixa Postal Comunitária,<blank>,<blank>
+33,RIO QUARTEL,ES,0,<blank>,<blank>,0,<blank>,14355,5,<blank>,1,VER>LINHARES,VER > LINHARES,Caixa Postal Comunitária,<blank>,<blank>
+34,SANTA CRUZ,ES,0,<blank>,<blank>,0,<blank>,1986,5,<blank>,1,VER>ARACRUZ,VER > ARACRUZ,Caixa Postal Comunitária,<blank>,<blank>
+35,VILA GUARANA,ES,0,<blank>,<blank>,0,<blank>,1878,5,<blank>,1,VER>ARACRUZ,VER > ARACRUZ,Caixa Postal Comunitária,<blank>,<blank>
+36,BAIA NOVA,ES,0,<blank>,<blank>,0,<blank>,1822,5,<blank>,1,VER>GUARAPARI,VER > GUARAPARI,Caixa Postal Comunitária,<blank>,<blank>
+37,BARRA DO RIACHO,ES,0,<blank>,<blank>,0,<blank>,1969,5,<blank>,1,VER>ARACRUZ,VER > ARACRUZ,Caixa Postal Comunitária,<blank>,<blank>
+38,BARRA DO SAHY,ES,0,<blank>,<blank>,0,<blank>,10711,5,<blank>,1,VER>ARACRUZ,VER > ARACRUZ,Caixa Postal Comunitária,<blank>,<blank>
+39,BARRA NOVA,ES,0,<blank>,<blank>,0,<blank>,1827,5,<blank>,1,VER>SAOMATEUS,VER > SAO MATEUS,Caixa Postal Comunitária,<blank>,<blank>
+40,BEBEDOURO,ES,0,<blank>,<blank>,0,<blank>,1830,5,<blank>,1,VER>LINHARES,VER > LINHARES,Caixa Postal Comunitária,<blank>,<blank>
+41,CALOGI,ES,0,<blank>,<blank>,0,<blank>,1841,5,<blank>,1,VER>SERRA,VER > SERRA,Caixa Postal Comunitária,<blank>,<blank>
+43,JACUPEMBA,ES,0,<blank>,<blank>,0,<blank>,1914,5,<blank>,1,VER>ARACRUZ,VER > ARACRUZ,Caixa Postal Comunitária,<blank>,<blank>
+
