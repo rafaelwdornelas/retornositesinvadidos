@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html;charset=utf8">
+<meta name="generator" content="sqlmap/1.3.3.14#dev" />
+<title>ceciliavasconc.presentes</title>
+<style>
+table{
+    margin:10;
+    background-color:#FFFFFF;
+    font-family:verdana;
+    font-size:12px;
+    align:center;
+}
+thead{
+    font-weight:bold;
+    background-color:#4F81BD;
+    color:#FFFFFF;
+}
+tr:nth-child(even) {
+    background-color: #D3DFEE
+}
+td{
+    font-size:12px;
+}
+th{
+    font-size:12px;
+}
+</style>
+</head>
+<body>
+<table>
+<thead>
+<tr>
+<th>id</th><th>evento_id</th><th>local</th><th>descricao</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>1</td><td>58</td><td>http://www.icasei.com.br/RenataBrandaoeAndreAlfano</td><td>Cotas de Lua de Mel</td></tr>
+<tr><td>2</td><td>58</td><td>http://www.pontofrio.com.br/ListaDeCasamento/Listas/RenataBrandaoeAndreAlfano.aspx</td><td>Ponto Frio</td></tr>
+<tr><td>3</td><td>58</td><td>Lojas Leader</td><td>Leader</td></tr>
+<tr><td>4</td><td>43</td><td>https://carrinho.americanas.com.br/ctpl/pageFlows/Entrada/EntradaController.jpf</td><td>americanas.com</td></tr>
+<tr><td>5</td><td>43</td><td>http://www.tokstok.com.br/lic/faces/index.jsp?</td><td>tok&amp;stok</td></tr>
+<tr><td>6</td><td>43</td><td> Rua Cel. Moreira C&#233;sar, 211 - Lj 119 e 120 - Icara&#237; - Niter&#243;i/RJ</td><td>Aurora Vieira (loja)</td></tr>
+<tr><td>7</td><td>51</td><td>www.fastshop.com.br</td><td>Fast Shop</td></tr>
+<tr><td>9</td><td>49</td><td>http://www.tokstok.com.br/app?service=page&amp;page=LicVer&amp;idLic=149619</td><td>Tok Stok</td></tr>
+<tr><td>10</td><td>49</td><td>http://www.pontofrio.com.br/Site/ListaGerenciadaLandingPage.aspx?idListaCompra=145931</td><td>Ponto Frio</td></tr>
+<tr><td>11</td><td>49</td><td>Rua Gavi&#227;o Peixoto 183 Lj 101 e 102 Icara&#237; / Shopping Itaipu Multicenter Itaip&#250;</td><td>Atrio Presentes</td></tr>
+<tr><td>12</td><td>45</td><td>Loja e site http://www.fastshop.com.br/ListaCasamento/ListaCasamentoVerProdutos.aspx?ID=98374</td><td>Fast Shop</td></tr>
+<tr><td>13</td><td>45</td><td>Loja e site: http://www.tokstok.com.br/lic/faces/convidados/index.jsp?idListaLic=148256</td><td>Tok&amp;Stok</td></tr>
+<tr><td>15</td><td>34</td><td>Loja</td><td>Leader Magazine</td></tr>
+<tr><td>16</td><td>34</td><td>Loja e internet</td><td>Lojas Tok&amp;Stok</td></tr>
+<tr><td>17</td><td>48</td><td>Lojas e site www.leader.com.br</td><td>Leader</td></tr>
+<tr><td>18</td><td>48</td><td>Lojas e site www.fastshop.com.br</td><td>Fast Shop</td></tr>
+<tr><td>19</td><td>48</td><td>site www.firstclass.com.br</td><td>First Class</td></tr>
+<tr><td>21</td><td>54</td><td>site www.fastshop.com.br</td><td>Fast Shop</td></tr>
+<tr><td>22</td><td>54</td><td>site</td><td>Atrio Presentes</td></tr>
+<tr><td>23</td><td>62</td><td>Loja e site www.atriopresentes.com.br</td><td>Atrio Presentes</td></tr>
+<tr><td>24</td><td>62</td><td>Loja e site www.fastshop.com.br</td><td>Fast Shop</td></tr>
+<tr><td>25</td><td>46</td><td>https://www.meumoveldemadeira.com.br/moveis/racks-de-tv/rack-para-tv-euro</td><td>RACK TV EURO</td></tr>
+<tr><td>27</td><td>46</td><td>https://www.meumoveldemadeira.com.br/produto/cristaleira-alta-euro?</td><td>CRISTALEIRA ALTA EURO</td></tr>
+<tr><td>28</td><td>46</td><td>https://www.meumoveldemadeira.com.br/produto/armario-harmonia</td><td>ARM&#193;RIO HARMONIA</td></tr>
+<tr><td>29</td><td>46</td><td>https://www.meumoveldemadeira.com.br/produto/comoda-8-gavetas-harmonia</td><td>COMODA 8 GAVETAS HARMONIA</td></tr>
+<tr><td>30</td><td>46</td><td>http://www.americanas.com.br</td><td>Lista de Casamento</td></tr>
+<tr><td>31</td><td>46</td><td>www.shoptime.com.br</td><td>Lista de Casamento</td></tr>
+<tr><td>32</td><td>45</td><td>http://www.leader.com.br/Site/ListaGerenciadaLandingPage.aspx?idListaCompra=9786</td><td>Leader</td></tr>
+<tr><td>33</td><td>61</td><td>www.tokstok.com.br</td><td>Tok Stok</td></tr>
+<tr><td>34</td><td>61</td><td>www.pontofrio.com.br</td><td>Ponto Frio</td></tr>
+<tr><td>35</td><td>61</td><td>www.extra.com.br</td><td>Extra</td></tr>
+<tr><td>36</td><td>61</td><td>Loja &#193;trio presentes</td><td>Atrio Presentes</td></tr>
+<tr><td>37</td><td>64</td><td>http://www.pontofrio.com.br/Site/ListaGerenciadaCasamentoWelCome.aspx</td><td>Ponto Frio</td></tr>
+<tr><td>38</td><td>64</td><td>http://www.icasei.com.br/template15-1/default.asp</td><td>Lojas Braga</td></tr>
+<tr><td>39</td><td>64</td><td>http://www.tokstok.com.br/lic/faces/index.jsp?</td><td>Tok Stok</td></tr>
+<tr><td>40</td><td>97</td><td>www.fastshop.com.br</td><td>Eletrodom&#233;sticos e Eletr&#243;nicos</td></tr>
+<tr><td>41</td><td>97</td><td>www.tokstok.com.br</td><td>M&#243;veis, Decora&#231;&#227;o e Utens&#237;lios</td></tr>
+<tr><td>42</td><td>97</td><td>Qualquer Loja Leader</td><td>Roupas de Cama, Mesa e Banho e Decora&#231;&#227;o</td></tr>
+<tr><td>44</td><td>113</td><td>Lojas</td><td>Leader</td></tr>
+<tr><td>47</td><td>113</td><td>http://www.pontofrio.com.br</td><td>Pontofrio.com</td></tr>
+<tr><td>49</td><td>63</td><td>http://www.tokstok.com.br/lic/faces/index.jsp?</td><td>Tok&amp;Stok</td></tr>
+<tr><td>51</td><td>63</td><td>http://www.atriopresentes.com.br/lista_casamento.asp</td><td>Atrio Presentes</td></tr>
+<tr><td>52</td><td>63</td><td>http://www.pontofrio.com.br/Site/ListaGerenciadaCasamentoWelCome.aspx</td><td>Ponto Frio</td></tr>
+<tr><td>57</td><td>65</td><td>www.walmart.com.br</td><td>Walmart</td></tr>
+<tr><td>58</td><td>65</td><td>www.tokstok.com.br</td><td>Tok &amp; Stok</td></tr>
+<tr><td>59</td><td>65</td><td>www.americanas.com</td><td>Americanas</td></tr>
+<tr><td>61</td><td>51</td><td>www.pontofrio.com.br</td><td>Ponto Frio</td></tr>
+<tr><td>66</td><td>51</td><td>www.tokstok.com.br</td><td>Loja Tok&amp;Stok</td></tr>
+<tr><td>67</td><td>99</td><td>www.leader.com.br</td><td>Leader </td></tr>
+<tr><td>68</td><td>99</td><td>loja f&#237;sica ou www.fastshop.com.br</td><td>Fast Shop</td></tr>
+<tr><td>69</td><td>99</td><td>loja f&#237;sica ou www.etna.com.br</td><td>Etna</td></tr>
+<tr><td>70</td><td>99</td><td>loja f&#237;sica</td><td>First Class</td></tr>
+<tr><td>71</td><td>99</td><td>www.pontofrio.com.br</td><td>Ponto Frio</td></tr>
+<tr><td>72</td><td>157</td><td>www.tokstok.com.br</td><td>Tok E Stok</td></tr>
+<tr><td>73</td><td>157</td><td>www.pontofrio.com.br</td><td>Ponto Frio</td></tr>
+<tr><td>74</td><td>157</td><td>www.firstclass.com.br</td><td>First Class</td></tr>
+<tr><td>75</td><td>62</td><td>www.pontofrio.com.br</td><td>Ponto Frio</td></tr>
+<tr><td>83</td><td>102</td><td>http://www.tokstok.com.br/lic/faces/convidados/index.jsp?idListaLic=157787</td><td>Tok &amp; Stok</td></tr>
+<tr><td>84</td><td>102</td><td>http://www.fastshop.com.br/ListaCasamento/ListaCasamentoVerProdutos.aspx?ID=104948&amp;tipo=convidado</td><td>Fast Shop</td></tr>
+<tr><td>86</td><td>102</td><td>http://utilidadesdomesticas.pontofrio.com.br/Site/ListaGerenciadaLandingPage.aspx?idListaCompra=158157</td><td>Ponto Frio</td></tr>
+<tr><td>87</td><td>114</td><td>www.prometo.com.br/thabataeanderson/</td><td>"Cotas e de Lua de Mel" e "Lista de Presentes"</td></tr>
+<tr><td>92</td><td>112</td><td>http://www.fastshop.com.br/ListaCasamento/ListaCasamentoVerProdutos.aspx?ID=104899&amp;tipo=convidado</td><td>Lista Fast Shop</td></tr>
+<tr><td>93</td><td>112</td><td>http://www.tokstok.com.br/lic/faces/convidados/index.jsp?idListaLic=156327</td><td>Lista Tok Stok</td></tr>
+<tr><td>100</td><td>112</td><td>Banco do Brasil- CC: 12.388-9, AG.: 2907-6. Mariana Machado Simis. CPF: 091.818.777-06</td><td>Cotas de lua de mel</td></tr>
+<tr><td>101</td><td>105</td><td>www.fabianaefabio.com</td><td>Lista de Presentes</td></tr>
+<tr><td>104</td><td>111</td><td>www.pontofrio.com.br</td><td>lista ponto frio</td></tr>
+<tr><td>105</td><td>115</td><td>http://www.fastshop.com.br/ListaCasamento/ListaCasamentoVerProdutos.aspx?ID=106289&amp;tipo=convidado</td><td>Fast Shop</td></tr>
+<tr><td>115</td><td>115</td><td>http://www.tokstok.com.br/lic/faces/convidados/index.jsp?idListaLic=159269</td><td>Tok&amp;Stok</td></tr>
+<tr><td>116</td><td>115</td><td>http://g.co/maps/c6dm3</td><td>Como chegar &#224; Igreja - Estacionamento (Fundos)</td></tr>
+<tr><td>118</td><td>115</td><td>http://g.co/maps/vmvhm</td><td>Como chegar &#224; Festa</td></tr>
+<tr><td>119</td><td>107</td><td>Ponto Frio</td><td>Lista de presente</td></tr>
+<tr><td>120</td><td>107</td><td>First Class</td><td>Lista de Presente</td></tr>
+<tr><td>121</td><td>107</td><td>Tok Stok</td><td>Lista de Presente</td></tr>
+<tr><td>123</td><td>112</td><td>http://www.atriopresentes.com.br/lista_casamento_loja.asp?CodListaCasamento=4704</td><td>Atrio Presentes</td></tr>
+<tr><td>128</td><td>159</td><td>http://www.fastshop.com.br/ListaCasamento/ListaCasamentoVerProdutos.aspx?ID=107614&amp;tipo=convidado</td><td>Lojas Fast Shop</td></tr>
+<tr><td>130</td><td>111</td><td>Qualquer loja f&#237;sica da leader</td><td>lista nas lojas leader</td></tr>
+<tr><td>131</td><td>111</td><td>http://www.leader.com.br/Site/ListaGerenciadaLandingPage.aspx?idListaCompra=13604</td><td>lista no site da loja leader</td></tr>
+<tr><td>133</td><td>111</td><td>Qualquer loja da Tok &amp; Stok ou atrav&#233;s do site: http://www.tokstok.com.br/lic/faces/convidados/index.jsp?idListaLic=159986</td><td>lista nas lojas tok&amp;stok</td></tr>
+<tr><td>134</td><td>123</td><td>www.fastshop.com.br</td><td>Fast Shop</td></tr>
+<tr><td>136</td><td>123</td><td>www.tokstok.com.br</td><td>Tok Stok</td></tr>
+<tr><td>137</td><td>159</td><td>http://www.spicy.com.br/ListaPresenteBusca.aspx?blnBusca=1</td><td>Lojas Spicy</td></tr>
+<tr><td>138</td><td>160</td><td>www.wix.com/micheliebinho/micheliebinho_casamento</td><td>Cotas para lua de mel</td></tr>
+<tr><td>139</td><td>165</td><td>www.guilhermeflavia.com</td><td>Lista e Cotas de Lua de Mel no Site dos noivos</td></tr>
+<tr><td>141</td><td>163</td><td>http://www.pontofrio.com.br/Site/ListaGerenciadaLandingPage.aspx?idListaCompra=174352</td><td>Pontofrio.com</td></tr>
+<tr><td>142</td><td>163</td><td>www.camicado.com.br</td><td>Camicado</td></tr>
+<tr><td>143</td><td>163</td><td>www.monikethiago.com</td><td>Cotas lua de mel</td></tr>
+<tr><td>144</td><td>123</td><td>Qualquer loja Leader.</td><td>Leader</td></tr>
+<tr><td>146</td><td>162</td><td>http://www.atriopresentes.com.br/index.asp</td><td>Atrio</td></tr>
+<tr><td>147</td><td>162</td><td>http://www.fastshop.com.br/ListaCasamento/ListaCasamentoHome.aspx</td><td>FAST</td></tr>
+<tr><td>152</td><td>167</td><td>loja ou site www.fastshop.com.br</td><td>Fast Shop</td></tr>
+<tr><td>153</td><td>167</td><td>loja ou site www.tokstok.com.br</td><td>Tok&amp;Stok</td></tr>
+<tr><td>154</td><td>172</td><td>www.pontofrio.com.br</td><td>Ponto Frio</td></tr>
+<tr><td>155</td><td>172</td><td>tokstok.com.br</td><td>Tok e Stok</td></tr>
+<tr><td>156</td><td>194</td><td>www.icasei.com.br/felipemariana</td><td>No nosso site</td></tr>
+<tr><td>163</td><td>174</td><td>http://www.casasbahia.com.br/Blu-Ray-Player-Samsung-BD-D5100-ZD-c-Cabo-HDMI-e-Entrada-USB-c-3-Filmes-X-men-Origens-Wolverine-Os-Simpsons-O-Filme-Nosso-Lar-437234.html#detalhes</td><td>Blu Ray</td></tr>
+<tr><td>171</td><td>176</td><td>www.camicado.com.br</td><td>Camicado</td></tr>
+<tr><td>172</td><td>176</td><td>www.pontofrio.com.br</td><td>Ponto Frio</td></tr>
+<tr><td>173</td><td>176</td><td>www.leader.com.br</td><td>Leader</td></tr>
+<tr><td>178</td><td>217</td><td>www.fabiolaemarco.com</td><td>Cotas de Lua de Mel</td></tr>
+<tr><td>179</td><td>174</td><td>http://shopping.achecerto.com.br/brastemp-ative-bwl11ar-superior-11-kg-inox-279483.html?utm_source=google&amp;utm_medium=google_shopping&amp;utm_campaign=lavadora-de-roupas</td><td>Lavadora de roupas</td></tr>
+<tr><td>184</td><td>174</td><td>http://loja.brastemp.com.br/ch/produto/detalhes.aspx?pc=3658</td><td>Aspirador de p&#243;</td></tr>
+<tr><td>189</td><td>174</td><td>http://fornoeletrico.pontofrio.com.br/Forno-Eletrico-Philco-Steel-c-Grelha-Deslizante-Assadeira-e-Pegador-42L-421939.html?csParam={"feature":"ultimatebuy","source":"product details","recType":"ultimatebuy"}</td><td>Forno el&#233;trico</td></tr>
+<tr><td>194</td><td>181</td><td>Lojas Leader</td><td>Lista de presentes</td></tr>
+<tr><td>199</td><td>181</td><td>www.americanas.com.br</td><td>americanas.com</td></tr>
+<tr><td>201</td><td>181</td><td>www.fastshop.com.br</td><td>Fast shop</td></tr>
+<tr><td>202</td><td>181</td><td>http://www.pontofrio.com.br/Site/ListaGerenciadaCasamentoWelCome.aspx</td><td>pontofrio.com</td></tr>
+<tr><td>205</td><td>183</td><td>http://www.pontofrio.com.br/Site/ListaGerenciadaBuscaListaCasamento.aspx?noivo=Frederico&amp;noiva=Fernanda+&amp;data=&amp;cidade=&amp;uf=&amp;IDListadeCompra=</td><td>Ponto Frio</td></tr>
+<tr><td>206</td><td>183</td><td>http://www.tokstok.com.br/lic/faces/convidados/index.jsp?idListaLic=171436</td><td>Tok Stok</td></tr>
+<tr><td>207</td><td>199</td><td>www.pontofrio.com.br</td><td>Ponto Frio</td></tr>
+<tr><td>208</td><td>199</td><td>www.fastshop.com.br</td><td>Fast Shop</td></tr>
+<tr><td>209</td><td>199</td><td>www.icasei.com.br</td><td>Cotas para Lua de Mel</td></tr>
+<tr><td>210</td><td>199</td><td>www.leader.com.br</td><td>Leader</td></tr>
+<tr><td>211</td><td>199</td><td>www.atriopresentes.com.br</td><td>Atrio</td></tr>
+<tr><td>217</td><td>218</td><td>www.tokstok.com.br</td><td>Tok Stok</td></tr>
+<tr><td>218</td><td>218</td><td>www.pontofrio.com.br</td><td>Ponto Frio</td></tr>
+<tr><td>223</td><td>222</td><td>www.thaishenrique.com</td><td>Lista de Presentes no site Icasei (clique aqui)</td></tr>
+<tr><td>224</td><td>190</td><td>www.fastshop.com.br</td><td>Fast Shop</td></tr>
+<tr><td>225</td><td>190</td><td>www.pontofrio.com.br</td><td>Ponto Frio</td></tr>
+<tr><td>226</td><td>190</td><td>www.tuttoperlacasa.com.br </td><td>Tutto Per La Casa</td></tr>
+<tr><td>227</td><td>193</td><td>www.tokstok.com.br/</td><td>Tok Stok </td></tr>
+<tr><td>228</td><td>193</td><td>www.fastshop.com.br/</td><td>Fast Shop</td></tr>
+<tr><td>229</td><td>226</td><td>http://www.tokstok.com.br/lic/faces/index.jsp?</td><td>Tok Stok</td></tr>
+<tr><td>230</td><td>226</td><td>http://www.fastshop.com.br/ListaCasamento/ListaCasamentoHome.aspx</td><td>Fast Shop</td></tr>
+<tr><td>231</td><td>226</td><td>http://www.prometo.com.br/rafaeismael/</td><td>Cotas de Lua de mel</td></tr>
+<tr><td>232</td><td>224</td><td>www.tokstok.com.br</td><td>Tok Stok</td></tr>
+<tr><td>233</td><td>224</td><td>www.fastshop.com.br</td><td>Fast Shop</td></tr>
+<tr><td>234</td><td>224</td><td>http://www.icasei.com.br/Paularodolfo</td><td>Icasei</td></tr>
+<tr><td>235</td><td>221</td><td>www.fastshop.com.br</td><td>Fast Shop </td></tr>
+<tr><td>237</td><td>221</td><td>www.atriopresentes.com.br</td><td>Atrio presentes</td></tr>
+<tr><td>238</td><td>195</td><td>Lojas Leader</td><td>Lojas Leader</td></tr>
+<tr><td>239</td><td>195</td><td>www.pontofrio.com.br</td><td>Ponto Frio</td></tr>
+<tr><td>240</td><td>195</td><td>www.fastshop.com.br</td><td>Fast Shop</td></tr>
+<tr><td>241</td><td>183</td><td>apenas nas lojas</td><td>Leader</td></tr>
+<tr><td>242</td><td>224</td><td>www.atriopresentes.com</td><td>Atrio Presentes</td></tr>
+<tr><td>243</td><td>218</td><td>www.mmartan.com.br</td><td>M Martan</td></tr>
+<tr><td>246</td><td>204</td><td>http://www.camicado.com.br/weddinglistProducts.aspx?id=60099515</td><td>Camicado</td></tr>
+<tr><td>247</td><td>204</td><td>http://www.tokstok.com.br/lic/faces/convidados/index.jsp?idListaLic=174244</td><td>Tok&amp;Stok</td></tr>
+<tr><td>248</td><td>204</td><td>http://www.pontofrio.com.br/Site/ListaGerenciadaLandingPage.aspx?idListaCompra=195787</td><td>Ponto Frio</td></tr>
+<tr><td>250</td><td>200</td><td>http://www.tokstok.com.br/app?page=VitrineCapa2&amp;service=page&amp;ps=1,14830&amp;gclid=CO6Ey9_W4q8CFYeR7QodlXgWIQ</td><td>Tok e Stok</td></tr>
+<tr><td>251</td><td>200</td><td>http://www.fastshop.com.br/</td><td>Fast Shop</td></tr>
+<tr><td>252</td><td>200</td><td>Rua Coronel Moreira C&#233;sar,211, T&#233;rreo - Loja 119 -Icara&#237;</td><td>Aurora Vieira</td></tr>
+<tr><td>253</td><td>200</td><td>Rua Gavi&#227;o Peixoto,183, Ljs 101 e 102 - Icara&#237;</td><td>&#193;trio Presentes </td></tr>
+<tr><td>255</td><td>201</td><td>http://www.pontofrio.com.br/Site/ListaGerenciadaCasamentoWelCome.aspx</td><td>PONTO FRIO</td></tr>
+<tr><td>256</td><td>201</td><td>http://www.atriopresentes.com.br/lista_casamento_presenteie.asp</td><td>&#193;TRIO</td></tr>
+<tr><td>258</td><td>196</td><td>www.rafaefer.com</td><td>Site do casal (icasei)</td></tr>
+<tr><td>259</td><td>196</td><td>www.pontofrio.com.br</td><td>Ponto Frio </td></tr>
+<tr><td>260</td><td>235</td><td>http://www.tokstok.com.br/lic/faces/convidados/index.jsp?idListaLic=176057</td><td>Tok &amp; Stok </td></tr>
+<tr><td>261</td><td>235</td><td>http://www.pontofrio.com.br/Site/ListaGerenciadaLandingPage.aspx?idListaCompra=200674</td><td>Ponto Frio</td></tr>
+<tr><td>266</td><td>248</td><td>http://www.spicy.com.br/</td><td>Spicy</td></tr>
+<tr><td>267</td><td>248</td><td>http://www.fastshop.com.br/</td><td>FastShop</td></tr>
+<tr><td>269</td><td>248</td><td>Http://www.mmartan.com.br</td><td>MMartan </td></tr>
+<tr><td>270</td><td>208</td><td>C&#243;digo Cliente: 119124</td><td>Lojas Leader</td></tr>
+<tr><td>271</td><td>208</td><td>Lojas</td><td>Atrio Presentes</td></tr>
+<tr><td>272</td><td>208</td><td>http://www.pontofrio.com.br/Site/ListaGerenciadaLandingPage.aspx?idListaCompra=200102</td><td>Ponto Frio</td></tr>
+<tr><td>273</td><td>208</td><td>http://www.tokstok.com.br/lic/faces/convidados/index.jsp?idListaLic=176405</td><td>Tok &amp; Stok</td></tr>
+<tr><td>274</td><td>201</td><td>http://www.tokstok.com.br/lic/faces/convidados/index.jsp?idListaLic=176363</td><td>TOK STOK</td></tr>
+<tr><td>276</td><td>242</td><td>http://www.pontofrio.com.br/Site/ListaGerenciadaCasamentoWelCome.aspx</td><td>Ponto Frio</td></tr>
+<tr><td>277</td><td>242</td><td>http://www.fastshop.com.br/ListaCasamento/ListaCasamentoHome.aspx</td><td>Fast Shop</td></tr>
+<tr><td>278</td><td>209</td><td>www.fastshop.com.br</td><td>Fast Shop</td></tr>
+<tr><td>281</td><td>237</td><td>www.rachel.com.br </td><td>Loja Rachel</td></tr>
+<tr><td>283</td><td>214</td><td>http://www.fastshop.com.br/ </td><td>Fast Shop</td></tr>
+<tr><td>284</td><td>214</td><td>http://www.atriopresentes.com.br/ </td><td>Atrio presentes</td></tr>
+<tr><td>285</td><td>214</td><td>http://www.tokstok.com.br/app?service=page&amp;page=LicVer&amp;idLic=176457</td><td>Tok &amp; Stok</td></tr>
+<tr><td>287</td><td>237</td><td>http://www.flaviaeivson.com/</td><td>Site do casal</td></tr>
+<tr><td>288</td><td>205</td><td>www.fastshop.com.br</td><td>Fast Shop</td></tr>
+<tr><td>289</td><td>205</td><td>www.tokstok.com.br</td><td>Tok Stok </td></tr>
+<tr><td>290</td><td>205</td><td>www.robertosimoes.com.br</td><td>Roberto Sim&#245;es</td></tr>
+<tr><td>291</td><td>210</td><td>Loja</td><td>Aurora Vieira</td></tr>
+<tr><td>294</td><td>242</td><td>http://www.atriopresentes.com.br/lista_casamento.asp</td><td>&#193;trio</td></tr>
+<tr><td>296</td><td>210</td><td>http://www.spicy.com.br/ListaPresenteBusca.aspx?blnBusca=1&amp;idLista=7066 </td><td>Spicy</td></tr>
+<tr><td>298</td><td>249</td><td>http://www.fastshop.com.br/ListaCasamento/ListaCasamentoVerProdutos.aspx?ID=121348&amp;tipo=convidado</td><td>FAST SHOP</td></tr>
+<tr><td>299</td><td>251</td><td>http://www.icasei.com.br/analuemarcelo</td><td>Site do casal</td></tr>
+<tr><td>300</td><td>210</td><td>http://nossalistadecasamento.wordpress.com</td><td>Mini lista Shoptime</td></tr>
+<tr><td>301</td><td>211</td><td>www.tokstok.com.br</td><td>TokStok</td></tr>
+<tr><td>302</td><td>211</td><td>www.fastshop.com.br</td><td>FastShop</td></tr>
+<tr><td>303</td><td>238</td><td>http://www.explorerturismo.com.br/lista01_2012.htm</td><td>Explorer Turismo</td></tr>
+<tr><td>304</td><td>238</td><td>http://www.tokstok.com.br/lic/faces/convidados/index.jsp?idListaLic=178072</td><td>Tok &amp; Stok</td></tr>
+<tr><td>305</td><td>238</td><td>http://develop-mariapresenteira.vtexcommerce.com.br/listadepresente/debbieevictor</td><td>Maria Presenteira</td></tr>
+<tr><td>306</td><td>238</td><td>http://www.fastshop.com.br/ListaCasamento/ListaCasamentoVerProdutos.aspx?ID=120735&amp;tipo=convidado</td><td>Fast Shop</td></tr>
+<tr><td>307</td><td>238</td><td>http://www.pontofrio.com.br/Site/ListaGerenciadaLandingPage.aspx?idListaCompra=188139</td><td>Ponto Frio</td></tr>
+<tr><td>308</td><td>275</td><td>www.casamentorenataediego.com</td><td>Acesse o nosso site: </td></tr>
+<tr><td>309</td><td>212</td><td>http://www.paulaeeric.com.br/</td><td>Site dos noivos</td></tr>
+<tr><td>310</td><td>244</td><td>Lojas</td><td>Atrio Presentes</td></tr>
+<tr><td>311</td><td>244</td><td>site e lojas</td><td>Tok &amp; Stok</td></tr>
+<tr><td>312</td><td>244</td><td>Site e Loja</td><td>Fast Shop</td></tr>
+<tr><td>313</td><td>239</td><td>http://www.jymmyecarla.com/</td><td>site dos noivos</td></tr>
+<tr><td>314</td><td>246</td><td>www.leader.com.br</td><td>Leader</td></tr>
+<tr><td>315</td><td>246</td><td>www.americanas.com.br</td><td>Lojas americanas</td></tr>
+<tr><td>316</td><td>216</td><td>www.ricardoelorene.com</td><td>Site do casal</td></tr>
+<tr><td>317</td><td>216</td><td>www.pontofrio.com.br</td><td>Ponto frio</td></tr>
+<tr><td>318</td><td>216</td><td>www.camicado.com.br</td><td>Camicado</td></tr>
+<tr><td>319</td><td>215</td><td>www.fastshop.com.br</td><td>FastShop</td></tr>
+<tr><td>320</td><td>215</td><td>www.tokstok.com.br</td><td>TokStok</td></tr>
+<tr><td>321</td><td>215</td><td> www.atriopresentes.com.br</td><td>Atrio Presentes</td></tr>
+<tr><td>322</td><td>240</td><td>www.icasei.com.br/carolethyago</td><td>Site do casal</td></tr>
+<tr><td>325</td><td>254</td><td>http://www.fastshop.com.br/ListaCasamento/ListaCasamentoVerProdutos.aspx?ID=123057&amp;tipo=convidado</td><td>Fast Shop</td></tr>
+<tr><td>327</td><td>254</td><td>http://www.tokstok.com.br/app?service=page&amp;page=LicVer&amp;idLic=179530</td><td>Tok Stok</td></tr>
+<tr><td>328</td><td>254</td><td>http://www.pontofrio.com.br/Site/ListaGerenciadaLandingPage.aspx?idListaCompra=208643</td><td>Ponto Frio</td></tr>
+<tr><td>332</td><td>287</td><td>http://www.pontofrio.com.br/Site/ListaGerenciadaCasamentoWelCome.aspx</td><td>Ponto Frio</td></tr>
+<tr><td>333</td><td>287</td><td>http://www.tokstok.com.br/lic/faces/index.jsp?</td><td>Tok&amp;Stok</td></tr>
+<tr><td>334</td><td>287</td><td>http://www.robertosimoes.com.br/?pag=lista</td><td>Roberto Sim&#245;es</td></tr>
+<tr><td>337</td><td>252</td><td>Pelos sites www.pontofrio.com.br ; www.tokstok.com.br ou Lojas Tok &amp; Stok </td><td>Sugest&#245;es de Presentes</td></tr>
+<tr><td>338</td><td>239</td><td>no nosso site</td><td>cota de lua de mel</td></tr>
+<tr><td>339</td><td>249</td><td>http://robertosimoes.com.br/lista2.asp?lista=44840</td><td>Roberto Sim&#245;es</td></tr>
+<tr><td>340</td><td>256</td><td>Site</td><td>Ponto Frio</td></tr>
+<tr><td>341</td><td>256</td><td>Site</td><td>Spicy</td></tr>
+<tr><td>342</td><td>256</td><td>Lojas e site</td><td>M Martan</td></tr>
+<tr><td>343</td><td>256</td><td>http://www.virginiaeeduardo.com/</td><td>site noivos</td></tr>
+<tr><td>344</td><td>245</td><td>www.pontofrio.com.br</td><td>Ponto Frio (Cod: 208133)</td></tr>
+<tr><td>345</td><td>245</td><td>www.spicy.com.br</td><td>Spicy (Cod: 7329)</td></tr>
+<tr><td>349</td><td>259</td><td>www.pontofrio.com.br</td><td>Ponto Frio</td></tr>
+<tr><td>351</td><td>259</td><td>www.firstclass.com.br</td><td>First Class</td></tr>
+<tr><td>352</td><td>259</td><td>www.tokstok.com.br</td><td>Tok &amp; Stok</td></tr>
+<tr><td>353</td><td>257</td><td>www.lojasbraga.com.br</td><td>Lojas Braga (Itaperuna)</td></tr>
+<tr><td>354</td><td>257</td><td>Rua Briolanjo Nogueira n&#186;32 centro/ itaperuna tel:(022) 3822-9451</td><td>Casa e Companhia (Itaperuna loja)</td></tr>
+<tr><td>355</td><td>257</td><td>www.fastshop.com.br</td><td>Fast Shop</td></tr>
+<tr><td>356</td><td>257</td><td>www.atriopresentes.com.br</td><td>Atrio Presentes </td></tr>
+<tr><td>357</td><td>257</td><td>http://www.rachel.com.br/loja/ListasDetalhes.aspx?LMID=ff767ed5016825927537191a648ca3ae&amp;LID=-2478e258</td><td>Rachel </td></tr>
+<tr><td>358</td><td>268</td><td>www.fastshop.com.br</td><td>Fast Shop</td></tr>
+<tr><td>359</td><td>268</td><td>www.tokstok.com.br</td><td>Tok Stok</td></tr>
+<tr><td>360</td><td>253</td><td>LEADER </td><td>LISTA</td></tr>
+<tr><td>361</td><td>253</td><td>EXTRA.COM</td><td>LISTA</td></tr>
+<tr><td>362</td><td>253</td><td>FIRST CLASS</td><td>LISTA</td></tr>
+<tr><td>363</td><td>253</td><td>FELICITA</td><td>LISTA</td></tr>
+<tr><td>364</td><td>290</td><td>http://www.cassioeisabela.com/</td><td>Site</td></tr>
+<tr><td>365</td><td>277</td><td>Tok &amp; Stok</td><td>Lista</td></tr>
+<tr><td>366</td><td>277</td><td>Ponto Frio</td><td>Lista </td></tr>
+<tr><td>367</td><td>277</td><td>Fast Shop</td><td>Lista </td></tr>
+<tr><td>368</td><td>277</td><td>Balaios Itaipu</td><td>Lista</td></tr>
+<tr><td>369</td><td>261</td><td>http://www.casamentoflaviaegustavo.com/</td><td>site casal</td></tr>
+<tr><td>371</td><td>264</td><td>www.prometo.com.br/moniquedaniel</td><td>site do casal</td></tr>
+<tr><td>373</td><td>274</td><td>www.liviaeelias.com</td><td>Site do Casal</td></tr>
+<tr><td>374</td><td>277</td><td>M Martan</td><td>Lista</td></tr>
+<tr><td>375</td><td>298</td><td>Site ( http://www.fastshop.com.br/ListaCasamento/ListaCasamentoVerProdutos.aspx?ID=128381&amp;tipo=convidado) ou qualquer loja f&#237;sica</td><td>Fast Shop</td></tr>
+<tr><td>376</td><td>298</td><td>Site (http://www.tokstok.com.br/app?service=page&amp;page=LicVer&amp;idLic=187551) ou em qualquer loja f&#237;sica</td><td>Tok&amp;Stok</td></tr>
+<tr><td>382</td><td>303</td><td>www.thayanaeromulo.com</td><td>Nosso Site</td></tr>
+<tr><td>384</td><td>271</td><td>www.icasei.com.br/wellingtoneviviane</td><td>Site do casal</td></tr>
+<tr><td>385</td><td>272</td><td>http://www.fastshop.com.br/ListaCasamento/ListaCasamentoVerProdutos.aspx?ID=127264&amp;tipo=convidado</td><td>Fast Shop</td></tr>
+<tr><td>386</td><td>272</td><td>www.walmart.com.br</td><td>Walmart</td></tr>
+<tr><td>387</td><td>269</td><td>http://www.theoecarol.com/</td><td>site dos noivos</td></tr>
+<tr><td>389</td><td>264</td><td>http://www.pontofrio.com.br/</td><td>Lojas Ponto Frio</td></tr>
+<tr><td>390</td><td>264</td><td>www.camicado.com.br</td><td>Lojas Camicado</td></tr>
+<tr><td>391</td><td>264</td><td>www.tokstok.com.br/</td><td>Lojas Tok&amp;Stok</td></tr>
+<tr><td>394</td><td>299</td><td>Clube de Viagens situado a Rua XV de Novembro, 118 sala 303 Centro, Niter&#243;i - Rio de Janeiro - CEP 24020-125. Tel: (21) 2613-2990 (21) 2721-4526 (21) 3619-0088. Site: www.clubedeviagens.com.br</td><td>Cotas para LUA DE MEL</td></tr>
+<tr><td>395</td><td>298</td><td>Lojas F&#237;sicas</td><td>Leader Magazine</td></tr>
+<tr><td>396</td><td>297</td><td>http://www.glauciamapaolo.com/</td><td>Nossa lua de mel ser&#225; seu presente em nosso casamento!</td></tr>
+<tr><td>397</td><td>312</td><td>http://www.tokstok.com.br/lic/faces/convidados/index.jsp?idListaLic=190448</td><td>Tok Stok</td></tr>
+<tr><td>398</td><td>312</td><td>http://www.pontofrio.com.br/Site/ListaGerenciadaLandingPage.aspx?idListaCompra=236882</td><td>Ponto Frio</td></tr>
+<tr><td>399</td><td>312</td><td>http://www.etna.com.br/listasNova/comprar.aspx?id=GIDKKzGKDRKu</td><td>Etna</td></tr>
+<tr><td>401</td><td>311</td><td>www.casaremos.com/thaisevinicius</td><td>Site dos Noivos</td></tr>
+<tr><td>402</td><td>307</td><td>http://www.atriopresentes.com.br/</td><td>- &#193;trio presentes</td></tr>
+<tr><td>403</td><td>307</td><td>http://www.fastshop.com.br/</td><td>- Fast Shop</td></tr>
+<tr><td>404</td><td>307</td><td>http://www.pontofrio.com.br/</td><td>- Pontofrio</td></tr>
+<tr><td>405</td><td>309</td><td>Site</td><td>Fast Shop</td></tr>
+<tr><td>406</td><td>309</td><td>Site</td><td>Tok Stok</td></tr>
+<tr><td>408</td><td>308</td><td>www.futurocasal.com.br/jenniferesalomao</td><td>Lista Virtual - Futuro Casal</td></tr>
+<tr><td>409</td><td>318</td><td>http://www.fastshop.com.br/ListaCasamento/ListaCasamentoVerProdutos.aspx?ID=135821&amp;tipo=convidado</td><td>Fast Shop</td></tr>
+<tr><td>410</td><td>318</td><td>http://www.pontofrio.com.br/Site/ListaGerenciadaLandingPage.aspx?idListaCompra=249757</td><td>Ponto Frio</td></tr>
+<tr><td>421</td><td>322</td><td>http://www.cvc.com.br/travel/lista/comprar-cota.aspx?Evento=98252</td><td>Deseja nos presentear com um jantar a luz de velas, um mergulho fascinante, um dia de spa ou um passeio em uma praia paradis&#237;aca na nossa lua de mel?? Acesse nossa p&#225;gina na CVC Viagens</td></tr>
+<tr><td>429</td><td>322</td><td>http://www.lojasleader.com.br/servicos/localizador-de-lojas</td><td>Lojas LEADER (somente lojas f&#237;sicas)</td></tr>
+<tr><td>430</td><td>322</td><td>http://www.pontofrio.com.br/Site/ListaGerenciadaLandingPage.aspx?idListaCompra=250901</td><td>Ponto Frio (somente online)</td></tr>
+<tr><td>432</td><td>314</td><td>http://www.fastshop.com.br/ListaCasamento/ListaCasamentoVerProdutos.aspx?ID=133399&amp;tipo=convidado</td><td>Fastshop</td></tr>
+<tr><td>433</td><td>314</td><td>http://www.atriopresentes.com.br/weddinglistProducts.aspx?id=151&amp;idproduct=</td><td>Atrio presentes</td></tr>
+<tr><td>434</td><td>314</td><td>http://www.rachelpresentes.com.br/loja/ListasDetalhes.aspx?LMID=9ba5d8c527aeb61e0b9d86f9118c7fff&amp;LID=-9993083e422</td><td>Rachel Presentes</td></tr>
+<tr><td>436</td><td>327</td><td>http://www.tokstok.com.br/lic/faces/convidados/index.jsp?idListaLic=194704</td><td>Lista Tok Stok</td></tr>
+<tr><td>437</td><td>327</td><td>http://www.pontofrio.com.br/Site/ListaGerenciadaLandingPage.aspx?idListaCompra=248297</td><td>Lista Ponto Frio</td></tr>
+<tr><td>438</td><td>341</td><td>http://www.pontofrio.com.br/</td><td>Ponto Frio</td></tr>
+<tr><td>439</td><td>341</td><td>http://www.camicado.com.br/</td><td>Camicado</td></tr>
+<tr><td>445</td><td>342</td><td>www.pontofrio.com.br</td><td>c&#243;digo do ponto frio para escolha dos presentes: 255593</td></tr>
+<tr><td>446</td><td>342</td><td>Qualquer loja Leader com o nosso nome ou o codigo: 135697.</td><td>Nossa lista tamb&#233;m est&#225; na Leader como ch&#225; de panela. C&#243;digo: 135697.</td></tr>
+<tr><td>448</td><td>335</td><td>&#193;trio Presentes</td><td>Utilidades </td></tr>
+<tr><td>449</td><td>335</td><td>Tok Stok</td><td>Utilidades</td></tr>
+<tr><td>450</td><td>335</td><td>Mmartan</td><td>Cama, Mesa e Banho</td></tr>
+<tr><td>451</td><td>319</td><td>http://carrinho.americanas.com.br/lista-de-casamento/pages/BridalRegistrySearchResultPage/brideName/sabrina tauil mussi/groomName/michel/</td><td>Americanas.com</td></tr>
+<tr><td>452</td><td>319</td><td>http://www.atriopresentes.com.br/weddingListSearch.aspx?dsBrideName=sabrina tauil&amp;dsGroomName=sabrina tauil&amp;dtWedding=</td><td>Atrio presentes</td></tr>
+<tr><td>453</td><td>319</td><td>http://www.fastshop.com.br/ListaCasamento/ListaCasamentoBusca.aspx?Nome=sabrina tauil&amp;Data=30/04/2013</td><td>Fast Shop</td></tr>
+<tr><td>455</td><td>322</td><td>http://www.atriopresentes.com.br/weddingListSearch.aspx?dsBrideName=andre&amp;dsGroomName=andre&amp;dtWedding=</td><td>ATRIO Presentes (Lojas Icara&#237; e Shopping Itaipu Multicenter)</td></tr>
+<tr><td>456</td><td>324</td><td>www.icasei.com.br/lizzieebruno</td><td>Site dos noivos</td></tr>
+<tr><td>457</td><td>350</td><td>http://www.fastshop.com.br/ListaCasamento/ListaCasamentoProdutos.aspx?ID=139421</td><td>FAST SHOP</td></tr>
+<tr><td>459</td><td>360</td><td>http://www.fastshop.com.br/ListaCasamento/ListaCasamentoHome.aspx</td><td>Fast Shop</td></tr>
+<tr><td>461</td><td>350</td><td>http://www.firstclass.com.br/site/listapresentes-exibir.cfm?IdLista=331088097037044</td><td>First Class</td></tr>
+<tr><td>465</td><td>356</td><td>http://www.fastshop.com.br/ListaCasamento/ListaCasamentoProdutos.aspx?ID=140130</td><td>Fast Shop - loja (inclusive Plaza) ou neste link</td></tr>
+<tr><td>466</td><td>356</td><td>http://carrinho.americanas.com.br/lista-de-casamento/pages/BridalRegistryHomePage/bridalRegistryId/01-02-2227779/</td><td>Americanas.com (somente internet - neste link)</td></tr>
+<tr><td>472</td><td>356</td><td>http://www.tokstok.com.br/lic/convidados/default.jsf?idLista=198523</td><td>Tok &amp; Stok - loja (inclusive Plaza) ou neste link</td></tr>
+<tr><td>475</td><td>352</td><td>http://www.pontofrio.com.br/Site/ListaGerenciadaCasamentoWelCome.aspx</td><td>Ponto Frio</td></tr>
+<tr><td>476</td><td>352</td><td>http://www.fastshop.com.br/ListaCasamento/ListaCasamentoHome.aspx</td><td>Fast Shop</td></tr>
+<tr><td>477</td><td>358</td><td>Site americanas.com</td><td>http://carrinho.americanas.com.br/lista-de-casamento/pages/HomePage?chave=home_boxservicos_casamento&amp;WT.mc_id=home_boxservicos_casamento</td></tr>
+<tr><td>478</td><td>358</td><td>Site pontofrio.com</td><td>http://www.pontofrio.com.br/Site/ListaGerenciadaCasamentoWelCome.aspx</td></tr>
+<tr><td>479</td><td>356</td><td>http://www.camicado.com.br/weddinglistProducts.aspx?id=60139857</td><td>Camicado - loja (Norte Shopping) ou neste link</td></tr>
+<tr><td>481</td><td>344</td><td>Atrav&#233;s da loja f&#237;sica (Rua Gavi&#227;o Peixoto, 183, Icara&#237;, Niter&#243;i/RJ) ou pelo site www.atriopresentes.com.br</td><td>&#193;trio Presentes</td></tr>
+<tr><td>482</td><td>344</td><td>Atrav&#233;s do site www.fastshop.com.br</td><td>Fast Shop</td></tr>
+<tr><td>486</td><td>350</td><td>http://www.camicado.com.br/weddinglistProducts.aspx?id=60144126</td><td>Camicado</td></tr>
+<tr><td>487</td><td>351</td><td>&#193;trio www.atriopresentes.com.br</td><td>Lista de Presente</td></tr>
+<tr><td>488</td><td>351</td><td>Ponto Frio www.pontofrio.com.br</td><td>Lista de Presente</td></tr>
+<tr><td>489</td><td>333</td><td>http://www.fastshop.com.br/</td><td>Fast shop e Tokstok</td></tr>
+<tr><td>491</td><td>333</td><td>https://www.tokstok.com.br/lic/default.jsf</td><td>Tokstok</td></tr>
+<tr><td>493</td><td>349</td><td>http://www.fastshop.com.br/ListaCasamento/ListaCasamentoProdutos.aspx?ID=138557</td><td>Fast Shop</td></tr>
+<tr><td>494</td><td>349</td><td>http://www.atriopresentes.com.br/weddinglistProducts.aspx?id=214&amp;idproduct</td><td>&#193;trio</td></tr>
+<tr><td>495</td><td>349</td><td>https://www.spicy.com.br/lista/convidados_compra.aspx?n=9013</td><td>Spicy</td></tr>
+<tr><td>496</td><td>371</td><td>www.icasei.com.br/paulavidalegustavopinheiro</td><td>www.icasei.com.br/paulavidalegustavopinheiro</td></tr>
+<tr><td>502</td><td>360</td><td>Praia Jo&#227;o Caetano, 145 / 904, Ing&#225;, Niter&#243;i / RJ. CEP: 24.210-405</td><td>Endere&#231;o dos noivos</td></tr>
+<tr><td>504</td><td>360</td><td>www.atriopresentes.com.br</td><td>&#193;trio Presentes - site ou loja (Rua Gavi&#227;o Peixoto, ljs 101/102, Icara&#237;, Niter&#243;i)</td></tr>
+<tr><td>506</td><td>360</td><td>www.tokstok.com.br</td><td>Tok&amp;Stok - site ou loja</td></tr>
+<tr><td>508</td><td>343</td><td>lojas e site</td><td>fast shop</td></tr>
+<tr><td>509</td><td>343</td><td>site</td><td>ponto frio</td></tr>
+<tr><td>512</td><td>359</td><td>www.fastshop.com.br</td><td>FAST SHOP</td></tr>
+<tr><td>514</td><td>355</td><td>http://www.fastshop.com.br/ListaCasamento/ListaCasamentoProdutos.aspx?ID=140395</td><td>Fast shop</td></tr>
+<tr><td>516</td><td>352</td><td>http://www.atriopresentes.com.br/weddingListSearch.aspx?dsBrideName=&amp;dsGroomName=&amp;dtWedding=//&amp;idListType=1</td><td>Atrio</td></tr>
+<tr><td>517</td><td>374</td><td>lojas e site</td><td>Fast shop</td></tr>
+<tr><td>518</td><td>374</td><td>Lojas e site</td><td>Tok e stok</td></tr>
+<tr><td>519</td><td>349</td><td>http://www.spicy.com.br/lista/lista_casamento.aspx</td><td>Spicy</td></tr>
+<tr><td>522</td><td>355</td><td>www.tokstok.com.br/lic/convidados/default.jsf?idLista=198343</td><td>Tok Stok</td></tr>
+<tr><td>524</td><td>386</td><td>http://www.fastshop.com</td><td>Fastshop</td></tr>
+<tr><td>526</td><td>386</td><td>http://www.tokstok.com.br/lic/convidados/listaPresentes.jsf?idLista=203220</td><td>Tok&amp;Stok</td></tr>
+<tr><td>530</td><td>375</td><td>http://listadecasamento.fastshop.com.br/ListaCasamento/ListaCasamentoProdutos.aspx?ID=143557</td><td>Fast Shop </td></tr>
+<tr><td>531</td><td>375</td><td>http://www.pontofrio.com.br/Site/ListaGerenciadaLandingPage.aspx?idListaCompra=273017</td><td>Ponto frio </td></tr>
+<tr><td>532</td><td>375</td><td>http://www.tokstok.com.br/lic/convidados/default.jsf</td><td>Tok Stok </td></tr>
+<tr><td>534</td><td>388</td><td>http://listadecasamento.fastshop.com.br/ListaCasamento/ListaCasamentoHome.aspx</td><td>Fast Shop</td></tr>
+<tr><td>535</td><td>388</td><td>http://www.pontofrio.com.br/Site/ListaGerenciadaCasamentoWelCome.aspx</td><td>Ponto Frio</td></tr>
+<tr><td>540</td><td>387</td><td>www.fastshop.com.br</td><td>Fast shop</td></tr>
+<tr><td>542</td><td>387</td><td>www.pontofrio.com.br</td><td>Ponto frio</td></tr>
+<tr><td>543</td><td>367</td><td>http://www.leader.com.br/list/robsonepriscilla</td><td>Cobertor Queen Microfibra Vermelho - Andreza Enxovais</td></tr>
+<tr><td>544</td><td>367</td><td>http://www.leader.com.br/list/robsonepriscilla</td><td>Cafeteira El&#233;trica Mais Voc&#234; 2 X&#237;caras Tsk 7040 Preta 110V </td></tr>
+<tr><td>545</td><td>367</td><td>http://www.leader.com.br/list/robsonepriscilla</td><td>Jogo de Banho 4 Pe&#231;as Nazca Azul c&#233;u/ mediterraneo </td></tr>
+<tr><td>546</td><td>367</td><td>http://www.leader.com.br/list/robsonepriscilla</td><td>Conjunto de Assadeiras Antiaderentes 5 Pe&#231;as Tramontina</td></tr>
+<tr><td>547</td><td>367</td><td>http://www.leader.com.br/list/robsonepriscilla</td><td>Kit com 2 Rechauds Retangulares de 30cm em Porcelana com Tampa de Vidro</td></tr>
+<tr><td>548</td><td>367</td><td>http://www.leader.com.br/list/robsonepriscilla</td><td>Aspirador de P&#243; XTE 600 NB 1500W 2 Litros Filtro Lav&#225;vel - DeLonghi</td></tr>
+<tr><td>549</td><td>367</td><td>http://www.leader.com.br/list/robsonepriscilla</td><td>Conjunto de Panelas 5 pe&#231;as Inox com Tampas de Vidro - Rich Well</td></tr>
+<tr><td>550</td><td>367</td><td>http://www.leader.com.br/list/robsonepriscilla</td><td>Faqueiro de 24 pe&#231;as com suporte EG Cook 20003 Laranja &#8211; Bon Gourmet</td></tr>
+<tr><td>551</td><td>367</td><td>http://www.leader.com.br/list/robsonepriscilla</td><td>Jogo de Cama Queen 100% Algod&#227;o Kayla - Karsten</td></tr>
+<tr><td>553</td><td>367</td><td>http://www.ricardoeletro.com.br/Produto/Espremedor-de-Frutas-Multiuso-Verona-Brinox/805-834-840-29646</td><td>Espremedor de Frutas Multiuso Verona - Brinox</td></tr>
+<tr><td>554</td><td>367</td><td>http://www.ricardoeletro.com.br/Produto/Panela-Pipoqueira-em-Aluminio-Polido-Perola-MTA/805-818-824-88500</td><td>Panela Pipoqueira em Alum&#237;nio Polido</td></tr>
+<tr><td>555</td><td>367</td><td>http://www.ricardoeletro.com.br/Produto/Conjunto-de-Panelas-em-Aluminio-Amarela-com-5-Pecas-Tramontina/805-818-821-72930</td><td>Conjunto de Panelas em Aluminio Amarela com 5 Pe&#231;as - Tramontina</td></tr>
+<tr><td>556</td><td>367</td><td>http://www.ricardoeletro.com.br/Produto/Faqueiro-42-Pecas-Aco-Inox-Malibu-Tramontina/805-812-814-23936</td><td>Faqueiro 42 Pe&#231;as A&#231;o Inox Malibu - Tramontina</td></tr>
+<tr><td>557</td><td>367</td><td>http://www.ricardoeletro.com.br/Produto/Conjunto-de-Facas-Inox-Athus-10-Pecas-Tramontina/805-812-813-237860</td><td>Conjunto de Facas Inox Athus 10 Pe&#231;as - Tramontina</td></tr>
+<tr><td>558</td><td>367</td><td>http://www.americanas.com.br/produto/108569055/hand-mixer-m-03-mondial-</td><td>Hand Mixer M-03 - Mondial </td></tr>
+<tr><td>559</td><td>367</td><td>http://www.leader.com.br/list/robsonepriscilla</td><td>Jogo de Banho 4 pe&#231;as 100% Algod&#227;o Frap&#234; Laranja</td></tr>
+<tr><td>560</td><td>367</td><td>http://www.americanas.com.br/produto/108402360/escada-em-aluminio-4-degraus-mor?chave=casa_xn5_108402360&amp;WT.mc_id=casaxn5</td><td>Escada em Alum&#237;nio 4 Degraus</td></tr>
+<tr><td>561</td><td>367</td><td>http://www.americanas.com.br/produto/7404775/rack-porto-com-2-gavetas-imbuia-preto-artely</td><td>Rack Porto com 2 Gavetas - Imbuia/Preto</td></tr>
+<tr><td>562</td><td>392</td><td>http://sites.icasei.com.br/wanessaeluizotavio/</td><td>Nossa lista est&#225; disponivel no nosso site no icasei.com.br na op&#231;&#227;o presentes virtuais e cotas de lua-de-mel !!</td></tr>
+<tr><td>563</td><td>399</td><td>http://www.ceciliavasconcelos.com.br/paginaEvento.php?e=399</td><td>presente solid&#225;rio- doa&#231;&#227;o de fraldas, cadernos e leite em p&#243; local de entrega- praia de icara&#237;, 103 apto. 1202</td></tr>
+<tr><td>565</td><td>416</td><td>http://carrinho.americanas.com.br/lista-de-casamento/pages/GuestGiftListPage/bridalRegistryId/01-02-2877742/</td><td>Site: Americanas</td></tr>
+<tr><td>567</td><td>416</td><td>http://www.leader.com.br/list/fabianaeleonardo</td><td>Site e loja: Leader</td></tr>
+<tr><td>569</td><td>416</td><td>Loja f&#237;sica em qualquer cidade do Rio de Janeiro</td><td>Loja : First Class</td></tr>
+<tr><td>572</td><td>376</td><td>www.tokstok.com.br/lic/default.jsf</td><td>Tok &amp; Stok lista n&#176; 203948</td></tr>
+<tr><td>573</td><td>376</td><td>http://carrinho.americanas.com.br/lista-de-casamento/pages/HomePage?WT.mc_id=bc_lista_de_casamento&amp;WT.mc_ev=click</td><td>Lojas Americanas</td></tr>
+<tr><td>574</td><td>376</td><td>http://www.cvc.com.br/lista-de-casamento/index.aspx</td><td>Cotas de viagem (CVC) lista n&#176; 127347</td></tr>
+<tr><td>575</td><td>389</td><td>www.cvc.com.br</td><td>CVC - Cota lua de mel</td></tr>
+<tr><td>576</td><td>389</td><td>www.tokstok.com.br</td><td>Tok Stok</td></tr>
+<tr><td>577</td><td>389</td><td>www.americanas.com.br</td><td>Americanas</td></tr>
+<tr><td>578</td><td>389</td><td>www.atriopresentes.com.br</td><td>Atrio</td></tr>
+<tr><td>579</td><td>396</td><td>www.pontofrio.com.br</td><td>Ponto Frio (c&#243;digo 291241)</td></tr>
+<tr><td>580</td><td>396</td><td>www.leader.com.br</td><td>Leader</td></tr>
+<tr><td>581</td><td>396</td><td>www.tokstok.com.br</td><td>Tok &amp; Stok (c&#243;digo 205699)</td></tr>
+<tr><td>582</td><td>409</td><td>http://www.atriopresentes.com.br/weddinglistProducts.aspx?id=320&amp;idproduct=</td><td>&#193;TRIO</td></tr>
+<tr><td>583</td><td>409</td><td>http://listadecasamento.fastshop.com.br/ListaCasamento/ListaCasamentoProdutos.aspx?ID=150389</td><td>FAST</td></tr>
+<tr><td>584</td><td>387</td><td>www.tokstok.com.br   Ir em lista de casamento</td><td>TokStok</td></tr>
+<tr><td>585</td><td>407</td><td>www.fastshop.com.br</td><td>Fast Shop</td></tr>
+<tr><td>586</td><td>407</td><td>www.pontofrio.com.br</td><td>Ponto Frio - COD: 304868</td></tr>
+<tr><td>587</td><td>407</td><td>www.leader.com.br</td><td>Leader</td></tr>
+<tr><td>594</td><td>406</td><td>www.pontofrio.com.br</td><td>Ponto Frio</td></tr>
+<tr><td>595</td><td>406</td><td>www.tokstok.com.br</td><td>Tok &amp; Stok</td></tr>
+<tr><td>596</td><td>406</td><td>www.atriopresentes.com.br</td><td>&#193;trio Presentes</td></tr>
+<tr><td>597</td><td>401</td><td>Ponto Frio</td><td>Lista de presentes</td></tr>
+<tr><td>598</td><td>401</td><td>Tok Stok</td><td>Lista de Presentes</td></tr>
+<tr><td>599</td><td>401</td><td>Mmartan</td><td>Lista de Presentes</td></tr>
+<tr><td>600</td><td>414</td><td>www.pontofrio.com.br</td><td>Ponto Frio</td></tr>
+<tr><td>608</td><td>418</td><td>antonela</td><td>sapatilha n. 38</td></tr>
+<tr><td>609</td><td>418</td><td>ferni</td><td>sapatilha n. 38</td></tr>
+<tr><td>610</td><td>418</td><td>santa lolla</td><td>sapatilha n. 38</td></tr>
+<tr><td>611</td><td>418</td><td>ferni</td><td>rasteira n. 38</td></tr>
+<tr><td>612</td><td>418</td><td>antonela</td><td>rasteira n. 38</td></tr>
+<tr><td>613</td><td>418</td><td>carolina herrera</td><td>perfume carolina herrera</td></tr>
+<tr><td>614</td><td>418</td><td>Boticario</td><td>Perfume Linda</td></tr>
+<tr><td>615</td><td>418</td><td>Botswana</td><td>Blusa</td></tr>
+<tr><td>616</td><td>418</td><td>espa&#231;o fashion</td><td>Blusa </td></tr>
+<tr><td>617</td><td>418</td><td>Agata</td><td>blusa</td></tr>
+<tr><td>618</td><td>418</td><td>Antonela</td><td>Mochila</td></tr>
+<tr><td>619</td><td>418</td><td>mac</td><td>maquiagem</td></tr>
+<tr><td>620</td><td>418</td><td>Boticario</td><td>maquiagem</td></tr>
+<tr><td>621</td><td>418</td><td>Botswana</td><td>short</td></tr>
+<tr><td>622</td><td>418</td><td>espa&#231;o fashion</td><td>short n.38</td></tr>
+<tr><td>623</td><td>418</td><td>Dress to</td><td>short n.38</td></tr>
+<tr><td>624</td><td>418</td><td>one million</td><td>Perfume</td></tr>
+<tr><td>625</td><td>418</td><td>qualquer</td><td>Bolsa de franja</td></tr>
+<tr><td>626</td><td>418</td><td>qualquer</td><td>Carteira de festa</td></tr>
+<tr><td>627</td><td>418</td><td>qualquer</td><td>Pulseira</td></tr>
+<tr><td>628</td><td>418</td><td>qualquer</td><td>Cordao dourado</td></tr>
+<tr><td>629</td><td>418</td><td>imaginarium</td><td>Lembran&#231;a</td></tr>
+<tr><td>630</td><td>417</td><td>http://www1.fastshop.com.br/ListaCasamento/ListaCasamentoHome.aspx </td><td>FAST</td></tr>
+<tr><td>632</td><td>419</td><td>www.digoetaty.com</td><td>Site dos Noivos</td></tr>
+<tr><td>633</td><td>480</td><td>http://www.pontofrio.com.br/Site/ListaGerenciadaBuscaListaCasamento.aspx?noivo=Emerson&amp;noiva=Rita&amp;data=&amp;cidade=&amp;uf=&amp;IDListadeCompra=</td><td>Ponto Frio</td></tr>
+<tr><td>634</td><td>480</td><td>http://www.leader.com.br/lista-de-casamento-finder</td><td>Leader</td></tr>
+<tr><td>643</td><td>479</td><td>http://www.atriopresentes.com.br/weddinglistProducts.aspx?id=370&amp;idproduct=</td><td>Atrio Presentes</td></tr>
+<tr><td>644</td><td>479</td><td>http://listadecasamento.fastshop.com.br/ListaCasamento/ListaCasamentoProdutos.aspx?ID=155174</td><td>Fast Shop</td></tr>
+<tr><td>645</td><td>479</td><td>http://www.pontofrio.com.br/Site/ListaGerenciadaLandingPage.aspx?idListaCompra=323669</td><td>Ponto Frio</td></tr>
+<tr><td>652</td><td>438</td><td>https://sites.icasei.com.br/duduefe/pt_br/store/index/10</td><td>Cotas de lua de mel</td></tr>
+<tr><td>654</td><td>438</td><td>http://sites.icasei.com.br/duduefe/home</td><td>Presentes virtuais</td></tr>
+<tr><td>663</td><td>482</td><td>www.paulaeharley.com</td><td>Site dos Noivos</td></tr>
+<tr><td>665</td><td>485</td><td>http://www.extra.com.br/Site/ListaGerenciadaLandingPage.aspx?idListaCompra=322950</td><td>Extra</td></tr>
+<tr><td>668</td><td>436</td><td>www.alanaewell.com</td><td>Site do casal</td></tr>
+<tr><td>670</td><td>439</td><td>www.fastshop.com.br/loja</td><td>Fast Shop</td></tr>
+<tr><td>671</td><td>439</td><td>www.tokstok.com.br/</td><td>Tok Stok</td></tr>
+<tr><td>673</td><td>439</td><td>www.robertosimoes.com.br</td><td>Roberto Sim&#245;es</td></tr>
+<tr><td>674</td><td>440</td><td>http://www.pontofrio.com.br/Site/ListaGerenciadaBuscaListaCasamento.aspx?noivo=david&amp;noiva=caroline&amp;data=635352768000000000&amp;cidade=&amp;uf=&amp;IDListadeCompra=</td><td>Ponto Frio</td></tr>
+<tr><td>677</td><td>440</td><td>www.tokstok.com.br/lic/convidados/default.jsf?idLista=216105</td><td>Tok e stok</td></tr>
+<tr><td>678</td><td>441</td><td>camicado.com.br</td><td>Lista de Casamento</td></tr>
+<tr><td>679</td><td>441</td><td>americanas.com</td><td>Lista de Casamento</td></tr>
+<tr><td>680</td><td>441</td><td>mmartan.com.br</td><td>Lista de Casamento</td></tr>
+<tr><td>681</td><td>446</td><td>http://listadecasamento.fastshop.com.br/ListaCasamento/ListaCasamentoProdutos.aspx?ID=158520</td><td>Fast Shop</td></tr>
+<tr><td>682</td><td>446</td><td>http://www.atriopresentes.com.br/weddinglistProducts.aspx?id=407&amp;idproduct=</td><td>&#193;trio Presentes </td></tr>
+<tr><td>684</td><td>451</td><td>Fast Shop</td><td>Lista de presentes</td></tr>
+<tr><td>685</td><td>451</td><td>Tok &amp; Stok</td><td>Lista de presentes</td></tr>
+<tr><td>686</td><td>489</td><td>Ponto Frio</td><td>361265</td></tr>
+<tr><td>691</td><td>497</td><td>www.leleevictor.com</td><td>Site dos Noivos</td></tr>
+<tr><td>692</td><td>490</td><td>http://www.atriopresentes.com.br/weddinglistProducts.aspx?id=453&amp;idproduct=</td><td>&#193;trio Presentes</td></tr>
+<tr><td>694</td><td>490</td><td>http://listadecasamento.fastshop.com.br/ListaCasamento/ListaCasamentoProdutos.aspx?ID=165686</td><td>Fast Shop</td></tr>
+<tr><td>698</td><td>497</td><td>www.fastshop.com.br</td><td>Fast Shop</td></tr>
+<tr><td>699</td><td>497</td><td>www.tokstok.com.br</td><td>TokStok</td></tr>
+<tr><td>700</td><td>497</td><td>www.americanas.com</td><td>Americanas</td></tr>
+<tr><td>701</td><td>497</td><td>www.leader.com.br</td><td>Leader</td></tr>
+<tr><td>703</td><td>490</td><td>www.tokstok.com.br/lic/convidados/default.jsf?idLista=219305</td><td>Tok&amp;Stok</td></tr>
+<tr><td>704</td><td>527</td><td>lojas e site</td><td>Spicy</td></tr>
+<tr><td>710</td><td>526</td><td>http://www.pontofrio.com.br/Site/ListaGerenciadaLandingPage.aspx?idListaCompra=369748</td><td>Ponto Frio</td></tr>
+<tr><td>711</td><td>526</td><td>http://www.camicado.com.br/weddinglistProducts.aspx?id=60223527</td><td>Camicado</td></tr>
+<tr><td>712</td><td>527</td><td>Lojas e site</td><td>Tok Stok</td></tr>
+<tr><td>713</td><td>527</td><td>Lojas e sites</td><td>Fast Shop</td></tr>
+<tr><td>714</td><td>495</td><td>http://www.cvc.com.br/lista-de-casamento/index.aspx</td><td>CVC Cotas de Lua-de-mel   N&#250;mero 271254</td></tr>
+<tr><td>715</td><td>495</td><td>http://www.fastshop.com.br/loja/</td><td>Fast Shop</td></tr>
+<tr><td>716</td><td>505</td><td>http://listadecasamento.fastshop.com.br/ListaCasamento/ListaCasamentoHome.aspx</td><td>Fast Shop</td></tr>
+<tr><td>717</td><td>505</td><td>http://www.atriopresentes.com.br/</td><td>Atrio Presentes</td></tr>
+<tr><td>718</td><td>505</td><td>www.robertosimoes.com.br</td><td>Roberto Sim&#245;es</td></tr>
+<tr><td>722</td><td>511</td><td>http://www.pontofrio.com.br/Site/ListaGerenciadaLandingPage.aspx?idListaCompra=361470</td><td>Lista de Presentes - Ponto Frio</td></tr>
+<tr><td>723</td><td>511</td><td>http://listadecasamento.fastshop.com.br/ListaCasamento/ListaCasamentoProdutos.aspx?ID=164306</td><td>Lista de Presentes - Fast Shop</td></tr>
+<tr><td>724</td><td>467</td><td>lojas e site</td><td>Fast shop</td></tr>
+<tr><td>725</td><td>467</td><td>loja e site</td><td>Tok e Stok</td></tr>
+<tr><td>726</td><td>467</td><td>site</td><td>Lojas Americanas</td></tr>
+<tr><td>727</td><td>471</td><td>http://www.atriopresentes.com.br/weddinglistProducts.aspx?id=482&amp;idproduct=</td><td>&#225;trio presentes </td></tr>
+<tr><td>728</td><td>471</td><td>http://listadecasamento.fastshop.com.br/ListaCasamento/ListaCasamentoProdutos.aspx?ID=168434</td><td> fast shop</td></tr>
+<tr><td>729</td><td>471</td><td>https://www.tokstok.com.br/lic/convidados/listaPresentes.jsf?idLista=222141</td><td>tok stok</td></tr>
+<tr><td>730</td><td>511</td><td>http://www.camicado.com.br/weddinglistProducts.aspx?id=60232852</td><td>Camicado</td></tr>
+<tr><td>731</td><td>546</td><td>http://www.pontofrio.com.br/Site/ListaGerenciadaLandingPage.aspx?idListaCompra=393221</td><td>Ponto Frio</td></tr>
+<tr><td>737</td><td>550</td><td>www.pontofrio.com.br</td><td>Lista de casamento Ponto Frio</td></tr>
+<tr><td>738</td><td>550</td><td>www.spicy.com.br</td><td>Lista de casamento Spicy</td></tr>
+<tr><td>739</td><td>550</td><td>www.fastshop.com.br</td><td>Lista de casamento Fast Shop</td></tr>
+<tr><td>740</td><td>546</td><td>www.tokstok.com.br/lic/convidados/default.jsf?idLista=225205</td><td>tok e stok</td></tr>
+<tr><td>741</td><td>516</td><td>www.fastshop.com.br</td><td>Fast shop </td></tr>
+<tr><td>742</td><td>516</td><td>www.atriopresentes.com.br</td><td>&#193;trio presentes</td></tr>
+<tr><td>743</td><td>552</td><td>www.fastshop.com.br</td><td>Lista de casamento Fast Shop</td></tr>
+<tr><td>744</td><td>547</td><td>Visualizar "Mensagem aos convidados".</td><td>Visualizar "Mensagem aos convidados".</td></tr>
+<tr><td>745</td><td>549</td><td>www.annaluciaechristian.com</td><td>Site dos Noivos</td></tr>
+<tr><td>753</td><td>560</td><td>https://www.tokstok.com.br/lic/convidados/default.jsf?idLista=229915</td><td>TOK&amp;STOK - www.tokstok.com.br</td></tr>
+<tr><td>754</td><td>560</td><td>https://carrinho.americanas.com.br/lista-de-casamento/pages/BridalRegistrySearchResultPage/brideName/khadine/</td><td>AMERICANAS.COM - www.americanas.com.br</td></tr>
+<tr><td>755</td><td>560</td><td>Rua Gavi&#227;o Peixoto, ljs 101/102, Icara&#237;, Niter&#243;i - RJ.</td><td>LOJA &#193;TRIO</td></tr>
+<tr><td>758</td><td>561</td><td>https://sites.icasei.com.br/manayraerodrigo/en/store/index/9?id_loja=2</td><td>Cotas de Lua de mel</td></tr>
+<tr><td>760</td><td>561</td><td>http://listadecasamento.fastshop.com.br/ListaCasamento/ListaCasamentoHome.aspx</td><td>Fast Shop</td></tr>
+<tr><td>763</td><td>613</td><td>http://www.pontofrio.com.br/Site/ListaGerenciadaLandingPage.aspx?idListaCompra=419544</td><td>Ponto Frio</td></tr>
+<tr><td>764</td><td>622</td><td>http://www.pontofrio.com.br/lista-de-casamento/home.aspx</td><td>Ponto Frio</td></tr>
+<tr><td>765</td><td>561</td><td>https://www.tokstok.com.br/lic/convidados/listaPresentes.jsf?idLista=227240</td><td>Tok&amp;Stok</td></tr>
+<tr><td>766</td><td>585</td><td>www.lojasamericanas.com.br/casamento</td><td>Lojas Americanas</td></tr>
+<tr><td>770</td><td>576</td><td>http://www.pontofrio.com.br/lista-de-casamento/home.aspx</td><td>Ponto Frio (site) - C&#243;digo da lista: 413427</td></tr>
+<tr><td>774</td><td>572</td><td>http://www.pontofrio.com.br/Site/ListaGerenciadaLandingPage.aspx?idListaCompra=434583</td><td>Lista Presente Ponto Frio</td></tr>
+<tr><td>775</td><td>572</td><td>http://www.atriopresentes.com.br/weddinglistProducts.aspx?id=578</td><td>Atrio Presentes</td></tr>
+<tr><td>778</td><td>609</td><td>www.icasei.com.br/deboraematheus</td><td>Lista de Casamento Virtual</td></tr>
+<tr><td>780</td><td>575</td><td>www.shoptime.com.br</td><td>Shoptime</td></tr>
+<tr><td>781</td><td>575</td><td>www.fastshop.com.br</td><td>Fast Shop</td></tr>
+<tr><td>783</td><td>572</td><td>http://www.danithadeu.com/home</td><td>Site iCasei</td></tr>
+<tr><td>784</td><td>570</td><td>www.nataliaeadriano.com</td><td>site dos noivos</td></tr>
+<tr><td>792</td><td>623</td><td>                           </td><td>A lista de presentes est&#225; dispon&#237;vel na Tok &amp; Stok e na Ponto Frio, como segue o link abaixo. Vale lembrar, que as listas n&#227;o estar&#227;o dispon&#237;veis na loja f&#237;sica, s&#243; na loja online. </td></tr>
+<tr><td>793</td><td>623</td><td>https://www.tokstok.com.br/lic/convidados/default.jsf?idLista=233660</td><td>Lista Tok &amp; Stok</td></tr>
+<tr><td>794</td><td>623</td><td>http://www.pontofrio.com.br/Site/ListaGerenciadaLandingPage.aspx?idListaCompra=432610</td><td>Lista Ponto Frio </td></tr>
+<tr><td>796</td><td>622</td><td>http://www.americanas.com.br/</td><td>Lojas Americanas</td></tr>
+<tr><td>797</td><td>579</td><td>http://www.pontofrio.com.br/Site/ListaGerenciadaLandingPage.aspx?idListaCompra=437186</td><td>Ponto Frio</td></tr>
+<tr><td>803</td><td>579</td><td>http://www.tokstok.com.br/lic/convidados/listaPresentes.jsf?idLista=233472</td><td>Tok &amp; Stok</td></tr>
+<tr><td>804</td><td>569</td><td>site</td><td>ponto frio</td></tr>
+<tr><td>805</td><td>569</td><td>loja</td><td>atrio presentes</td></tr>
+<tr><td>806</td><td>626</td><td>www.carolewyra.com</td><td>www.carolewyra.com</td></tr>
+<tr><td>809</td><td>584</td><td>loja e site</td><td>tok e stok</td></tr>
+<tr><td>810</td><td>584</td><td>site</td><td>ponto frio</td></tr>
+<tr><td>813</td><td>576</td><td>www.tokstok.com.br/lic/buscaLista.jsf?nomeBusca=isabela&amp;idListaBusca=234179&amp;diaBusca=06&amp;mesBusca=06&amp;anoBusca=2015</td><td>Tok&amp;Stok (loja/site) - N&#250;mero da lista: 234179</td></tr>
+<tr><td>814</td><td>587</td><td>http://www.jonasemarthinha.com/br</td><td>site</td></tr>
+<tr><td>817</td><td>630</td><td>www.etna.com.br/etna/lista-de-presentes-inicio</td><td>Etna</td></tr>
+<tr><td>819</td><td>630</td><td>www.tokstok.com.br</td><td>Tok&amp;Stok</td></tr>
+<tr><td>820</td><td>592</td><td>Loja f&#237;sica e no site: www.camicado.com.br</td><td>Camicado</td></tr>
+<tr><td>821</td><td>592</td><td>Site: www.pontofrio.com.br</td><td>Ponto Frio</td></tr>
+<tr><td>823</td><td>630</td><td>http://www.pontofrio.com.br/Site/ListaGerenciadaLandingPage.aspx?idListaCompra=468195</td><td>Ponto Frio</td></tr>
+<tr><td>833</td><td>628</td><td>http://listadecasamento.fastshop.com.br/ListaCasamento/ListaCasamentoProdutos.aspx?ID=187503</td><td>Fast Shop - Lojas ou Site</td></tr>
+<tr><td>834</td><td>628</td><td>http://www.mmartan.com.br/weddinglistProducts.aspx?id=14046&amp;idproduct=&amp;qty=</td><td>M Martan - Lojas ou Site</td></tr>
+<tr><td>836</td><td>628</td><td>http://www.tokstok.com.br/lic/convidados/default.jsf?idLista=237773</td><td>Tok &amp; Stok - Lojas ou Site</td></tr>
+<tr><td>839</td><td>610</td><td>Site da loja Ponto Frio </td><td>www.pontofrio.com.br</td></tr>
+<tr><td>840</td><td>653</td><td>https://www.atriopresentes.com.br/</td><td>&#193;trio Presentes</td></tr>
+<tr><td>841</td><td>653</td><td>http://www.fastshop.com.br/loja/</td><td>Fast Shop</td></tr>
+<tr><td>842</td><td>602</td><td>www.pontofrio.com</td><td>Lista de Presentes</td></tr>
+<tr><td>843</td><td>608</td><td>www.patriciaevitor.com</td><td>site noivos</td></tr>
+<tr><td>844</td><td>636</td><td>Tok stock</td><td>https://www.tokstok.com.br/lic/convidados/default.jsf?idLista=241472</td></tr>
+<tr><td>845</td><td>636</td><td>fast shop</td><td>http://listadecasamento.fastshop.com.br/ListaCasamento/ListaCasamentoProdutos.aspx?ID=188704</td></tr>
+<tr><td>846</td><td>636</td><td>Atrio Presentes</td><td>https://www.atriopresentes.com.br</td></tr>
+<tr><td>847</td><td>641</td><td>www.icasei.com/renataejosefrancisco</td><td>site noivos</td></tr>
+<tr><td>848</td><td>597</td><td>http://juliaeleonardo.com/site/</td><td>site noivos</td></tr>
+<tr><td>849</td><td>600</td><td>www.danielleethiago.com.br</td><td>site noivos</td></tr>
+<tr><td>850</td><td>642</td><td>www.carolinaejoaovicente.com</td><td>site dos noivos</td></tr>
+<tr><td>851</td><td>601</td><td>www.larissaejarbas.com</td><td>site dos noivos</td></tr>
+<tr><td>852</td><td>603</td><td>www.icasei.com.br/jessicaejp</td><td>site dos noivos</td></tr>
+<tr><td>853</td><td>648</td><td>https://sites.icasei.com.br/veronicaeabel/pt_br/store</td><td>Cotas para Lua de Mel</td></tr>
+<tr><td>855</td><td>664</td><td>Lojas</td><td>First Class</td></tr>
+<tr><td>861</td><td>664</td><td>Site - C&#243;digo da Lista: 451887. Acesse o site colocando somete os nomes do noivo e data e ser&#225; f&#225;cil o acesso!</td><td>Ponto Frio</td></tr>
+<tr><td>862</td><td>676</td><td>http://sabrineetiago.com.br/sabrineetiago/store</td><td>Como estamos morando juntos e a nossa casa est&#225; praticamente montada, ent&#227;o pensamos em uma lista de presentes que falta em uma incr&#237;vel e inesquec&#237;vel lua de mel!!!</td></tr>
+<tr><td>863</td><td>675</td><td>www.pontofrio.com.br</td><td>Sugest&#245;es de Presentes na loja Ponto Frio</td></tr>
+<tr><td>864</td><td>681</td><td>www.pontofrio.com/listadecasamento</td><td>Confira nossa lista no site da Ponto Frio - C&#243;digo 509076</td></tr>
+<tr><td>871</td><td>679</td><td>www.fastshop.com.br</td><td>FAST SHOP</td></tr>
+<tr><td>872</td><td>679</td><td>www.robertosimoes.com.br</td><td>Roberto Sim&#245;es Presentes</td></tr>
+<tr><td>873</td><td>683</td><td>Camicado</td><td>Lista de presentes </td></tr>
+<tr><td>874</td><td>683</td><td>Fastshop</td><td>Lista de presentes </td></tr>
+<tr><td>875</td><td>683</td><td>Tokstok</td><td>Lista de presentes </td></tr>
+<tr><td>877</td><td>724</td><td>http://www.casasbahia.com.br/listadecasamento/home.aspx</td><td>Casas Bahia</td></tr>
+<tr><td>878</td><td>724</td><td>http://www.pontofrio.com.br/lista-de-casamento/home.aspx</td><td>Ponto Frio</td></tr>
+<tr><td>879</td><td>692</td><td>site e lojas</td><td>tok e stok</td></tr>
+<tr><td>880</td><td>692</td><td>site</td><td>Ponto Frio</td></tr>
+<tr><td>881</td><td>692</td><td>site e lojas</td><td>camicado</td></tr>
+<tr><td>884</td><td>702</td><td>http://listadecasamento.fastshop.com.br/ListaCasamento/ListaCasamentoProdutos.aspx?ID=215087</td><td>Fast Shop - lojas e site</td></tr>
+<tr><td>885</td><td>702</td><td>http://www.camicado.com.br/weddinglist/products/60309214</td><td>Camicado - Lojas e site</td></tr>
+<tr><td>886</td><td>743</td><td>https://www.icasei.com.br/laisearthur</td><td>Para quem quiser...</td></tr>
+<tr><td>887</td><td>720</td><td>www.casamentocaero.com.br</td><td>Lista de Presentes</td></tr>
+<tr><td>888</td><td>737</td><td>www.icasei.com.br/priegustavo</td><td>Lista de presentes online</td></tr>
+<tr><td>892</td><td>713</td><td>www.camicado.com.br</td><td>Camicado</td></tr>
+<tr><td>894</td><td>706</td><td>http://sites.icasei.com.br/thaysfabio/home</td><td>Lista de Presentes</td></tr>
+<tr><td>895</td><td>745</td><td>www.monicaehenrique.com.br</td><td>Nossa lista encontra-se em nosso site.</td></tr>
+<tr><td>896</td><td>718</td><td>http://listadecasamento.fastshop.com.br/ListaCasamento/ListaCasamentoProdutos.aspx?ID=220112</td><td>Fast Shop</td></tr>
+<tr><td>897</td><td>718</td><td>http://www.camicado.com.br/weddinglist/products/60312311</td><td>Camicado</td></tr>
+<tr><td>898</td><td>750</td><td>www.icasei.com.br</td><td>www.icasei.com.br/jaqueeanderson</td></tr>
+<tr><td>899</td><td>710</td><td>Tok Stok - n. 253327</td><td>Lista de Presentes - Tok Stok </td></tr>
+<tr><td>900</td><td>710</td><td>Ponto Frio n. 562771</td><td>Lista de Presentes - Ponto Frio</td></tr>
+<tr><td>901</td><td>742</td><td>www.fastshop.com.br</td><td>Fast Shop</td></tr>
+<tr><td>902</td><td>742</td><td>www.camicado.com.br/</td><td>Camicado</td></tr>
+<tr><td>903</td><td>742</td><td>www.tokstok.com.br/</td><td>Tok&amp;Stok - Lista 253893</td></tr>
+<tr><td>904</td><td>713</td><td>www.tokstok.com.br</td><td>Tok Stok</td></tr>
+<tr><td>905</td><td>713</td><td>www.pontofrio.com.br</td><td>Ponto Frio</td></tr>
+<tr><td>906</td><td>707</td><td>http://listadecasamento.fastshop.com.br/ListaCasamento/ListaCasamentoHome.aspx</td><td>Lista de presente - Fast Shop</td></tr>
+<tr><td>907</td><td>707</td><td>http://www.camicado.com.br/WeddingList?IdWeddingListType=1</td><td>Lista de presente - Camicado</td></tr>
+<tr><td>908</td><td>751</td><td>http://sites.icasei.com.br/julianaebarry/home</td><td>site</td></tr>
+<tr><td>909</td><td>712</td><td>http://www.bebelefelipe.com/home</td><td>site noivos</td></tr>
+<tr><td>913</td><td>719</td><td>http://luaneecarlos.zankyou.com/br/lista-casamento/presente/id/3460743</td><td>Contribui&#231;&#227;o Lua de Mel</td></tr>
+<tr><td>915</td><td>758</td><td>www.denisethompsonmotta.zankyou.com</td><td>site</td></tr>
+<tr><td>916</td><td>761</td><td>www.nandaepismd.com</td><td>Lista Virtual</td></tr>
+<tr><td>917</td><td>762</td><td>Site</td><td>Lojas Americanas</td></tr>
+<tr><td>918</td><td>762</td><td>Niter&#243;i , S&#227;o Gon&#231;alo e Rio de Janeiro. Qualquer loja voc&#234;s encontram nossa lista.</td><td>First Class</td></tr>
+<tr><td>920</td><td>771</td><td>http://www.pontofrio.com.br/Site/ListaGerenciadaLandingPage.aspx?idListaCompra=590822</td><td>Lista de presente Ponto Frio</td></tr>
+<tr><td>923</td><td>778</td><td>Farm&#225;cias e mercados.</td><td>Agradecemos o carinho. Entretanto, reiteramos que ficar&#237;amos muito gratos se, no lugar de presentes, nossos convidados ofertassem  fralda geri&#225;trica ou leite em p&#243; que ser&#227;o destinados a institui&#231;&#245;es que deles necessitem.</td></tr>
+<tr><td>926</td><td>780</td><td>http://lucaseevellyn.loja2.com.br/</td><td>Este site foi desenvolvido pelos noivos. Montamos uma lista com sugest&#245;es de presentes para que voc&#234;, familiar e amigo, possa nos presentear. Ao navegar pelo site, poder&#225; encontrar presentes de diversos valores e prefer&#234;ncias.</td></tr>
+<tr><td>927</td><td>784</td><td>https://listadecasamento.americanas.com.br/pages/BridalRegistryHomePage/bridalRegistryId/01-02-15239061/</td><td>Loja Online - Americanas.com</td></tr>
+<tr><td>928</td><td>784</td><td>http://sites.icasei.com.br/rafaelaegabriel/about</td><td>Lista Online - Icasei</td></tr>
+<tr><td>929</td><td>795</td><td>http://listadecasamento.fastshop.com.br/ListaCasamento/ListaCasamentoProdutos.aspx?ID=232292</td><td>Fast Shop</td></tr>
+<tr><td>930</td><td>795</td><td>https://lianeericardo.zankyou.com/br?_ga=2.152095665.948657258.1496009126-1092637043.1491526284</td><td>Zankyou</td></tr>
+<tr><td>931</td><td>793</td><td>www.casamentogabiebe.com</td><td>Nossas listas de presentes est&#227;o no nosso site!</td></tr>
+<tr><td>933</td><td>802</td><td>http://www.camicado.com.br/weddinglist/products/60344921</td><td>Loja CAMICADO</td></tr>
+<tr><td>934</td><td>802</td><td>http://www2.zelo.com.br/weddinglistProducts.aspx?id=79474&amp;idproduct=&amp;qty=</td><td>Loja ZELO</td></tr>
+<tr><td>935</td><td>808</td><td>N&#227;o especificado</td><td>Ficaremos felizes de receber alimentos n&#227;o perec&#237;veis e/ou fraldas geri&#225;tricas para doarmos &#224; Casa Maria de Magdala.</td></tr>
+<tr><td>936</td><td>817</td><td>https://www.etna.com.br/etna/pagina-de-lista?page=1&amp;giftlistId=gl378626114</td><td>Etna</td></tr>
+<tr><td>938</td><td>817</td><td>https://lic.tokstok.com.br/lic/convidados/default.jsf?idLista=264315</td><td>Tok Stok</td></tr>
+<tr><td>939</td><td>817</td><td>http://nossosite.fastshop.com.br/tainaefabio/productList</td><td>Fast Shop</td></tr>
+<tr><td>944</td><td>810</td><td>www.zelo.com.br</td><td>Zelo</td></tr>
+<tr><td>945</td><td>810</td><td>www.tokstok.com.br</td><td>Tok Stok</td></tr>
+<tr><td>946</td><td>810</td><td>www.fastshop.com.br</td><td>Fast Shop</td></tr>
+<tr><td>947</td><td>801</td><td>cleoejoagabriel.com</td><td>LISTA</td></tr>
+<tr><td>948</td><td>805</td><td>http://www.camicado.com.br/</td><td>Camicado</td></tr>
+<tr><td>949</td><td>805</td><td>http://casamento.pontofrio.com.br/#/</td><td>Ponto Frio</td></tr>
+<tr><td>951</td><td>804</td><td>SITE - PONTOFRIO.COM</td><td>Lista de presentes - Ponto frio</td></tr>
+<tr><td>955</td><td>791</td><td>Ponto Frio : 659563</td><td>C&#243;digo Lista de Casamento </td></tr>
+<tr><td>961</td><td>815</td><td>www.adrianaerenato.com</td><td>Fast Shop e Tok&amp;Stok</td></tr>
+<tr><td>962</td><td>851</td><td>https://casamento.pontofrio.com.br/</td><td>Ponto Frio</td></tr>
+<tr><td>968</td><td>850</td><td>https://casamento.extra.com.br/#/</td><td>Extra</td></tr>
+<tr><td>969</td><td>850</td><td>https://listapresente.leader.com.br/</td><td>Leader</td></tr>
+<tr><td>970</td><td>850</td><td>http://www.lojasfirstclass.com.br/listadecasamento/index.jsp</td><td>First Class</td></tr>
+<tr><td>972</td><td>861</td><td>http://www.clarissaedaniel.com.br/br/lista-casamento</td><td>site</td></tr>
+</tbody>
+</table>
+</body>
+</html>
