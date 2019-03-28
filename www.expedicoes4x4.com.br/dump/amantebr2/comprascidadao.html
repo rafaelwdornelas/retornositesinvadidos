@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html;charset=utf8">
+<meta name="generator" content="sqlmap/1.3.3.14#dev" />
+<title>amantebr2.comprascidadao</title>
+<style>
+table{
+    margin:10;
+    background-color:#FFFFFF;
+    font-family:verdana;
+    font-size:12px;
+    align:center;
+}
+thead{
+    font-weight:bold;
+    background-color:#4F81BD;
+    color:#FFFFFF;
+}
+tr:nth-child(even) {
+    background-color: #D3DFEE
+}
+td{
+    font-size:12px;
+}
+th{
+    font-size:12px;
+}
+</style>
+</head>
+<body>
+<table>
+<thead>
+<tr>
+<th>id_user</th><th>id_cliente</th><th>quantidade</th><th>pacote</th><th>comprador</th><th>data_compra</th><th>codigo_compra</th><th>passagens_extras</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>0</td><td>36</td><td>3</td><td>0</td><td>Marli Ketzer</td><td>2003-12-13</td><td>18</td><td>0</td></tr>
+<tr><td>0</td><td>35</td><td>4</td><td>0</td><td>Maria Carolina Ketzer</td><td>2003-12-13</td><td>17</td><td>0</td></tr>
+<tr><td>0</td><td>34</td><td>3</td><td>0</td><td>Carlos Henrique dos Santos Salgado</td><td>2003-12-13</td><td>16</td><td>0</td></tr>
+<tr><td>0</td><td>34</td><td>1</td><td>0</td><td>Carlos Henrique dos Santos Salgado</td><td>2003-12-13</td><td>15</td><td>0</td></tr>
+<tr><td>0</td><td>21</td><td>4</td><td>0</td><td>Nelson Luis Barbosa</td><td>2003-12-10</td><td>14</td><td>2</td></tr>
+<tr><td>0</td><td>9</td><td>1</td><td>0</td><td>Luiz Dittrich</td><td>2003-12-03</td><td>12</td><td>0</td></tr>
+<tr><td>0</td><td>16</td><td>4</td><td>0</td><td>Jo&#227;o Vicente Moraes</td><td>2003-12-08</td><td>13</td><td>2</td></tr>
+<tr><td>0</td><td>38</td><td>4</td><td>0</td><td>Vera Lucia Fonseca</td><td>2003-12-13</td><td>19</td><td>0</td></tr>
+<tr><td>0</td><td>41</td><td>3</td><td>0</td><td>Emmanuel Pacheco da Silva</td><td>2003-12-15</td><td>20</td><td>0</td></tr>
+<tr><td>0</td><td>42</td><td>1</td><td>0</td><td>Julieta Pacheco da Silva</td><td>2003-12-15</td><td>21</td><td>0</td></tr>
+<tr><td>0</td><td>43</td><td>4</td><td>0</td><td>Josemar Aristeu Pereira</td><td>2003-12-15</td><td>22</td><td>1</td></tr>
+<tr><td>0</td><td>33</td><td>2</td><td>0</td><td>Jose Moura de Souza</td><td>2003-12-16</td><td>23</td><td>0</td></tr>
+<tr><td>0</td><td>49</td><td>1</td><td>0</td><td>Fernanda Serraglio Polucha</td><td>2003-12-16</td><td>24</td><td>0</td></tr>
+<tr><td>0</td><td>50</td><td>2</td><td>0</td><td>Alcion Sponholz</td><td>2003-12-16</td><td>25</td><td>0</td></tr>
+<tr><td>0</td><td>45</td><td>2</td><td>0</td><td>Maria Spada</td><td>2003-12-16</td><td>26</td><td>0</td></tr>
+<tr><td>0</td><td>47</td><td>3</td><td>0</td><td>Julia Thomaz dos santos</td><td>2003-12-16</td><td>27</td><td>0</td></tr>
+<tr><td>0</td><td>32</td><td>1</td><td>0</td><td>Jefferson Ferreira</td><td>2003-12-16</td><td>28</td><td>0</td></tr>
+<tr><td>0</td><td>32</td><td>1</td><td>0</td><td>Luciane Bontorin</td><td>2003-12-16</td><td>29</td><td>0</td></tr>
+<tr><td>0</td><td>32</td><td>1</td><td>0</td><td>Lidia da Luz Schepainski</td><td>2003-12-16</td><td>30</td><td>0</td></tr>
+<tr><td>0</td><td>31</td><td>1</td><td>0</td><td>Margarida Fumiko Tsurukawa</td><td>2003-12-16</td><td>31</td><td>0</td></tr>
+<tr><td>0</td><td>31</td><td>1</td><td>0</td><td>Fernando  Koiti  Tsurukawa</td><td>2003-12-16</td><td>32</td><td>0</td></tr>
+<tr><td>0</td><td>31</td><td>1</td><td>0</td><td>Luiz Augusto Shoiti Tsurukawa</td><td>2003-12-16</td><td>33</td><td>0</td></tr>
+<tr><td>0</td><td>54</td><td>1</td><td>0</td><td>Robson Luiz Danczura Galv&#227;o</td><td>2003-12-16</td><td>34</td><td>0</td></tr>
+<tr><td>0</td><td>54</td><td>1</td><td>0</td><td>Marilene do Rocio Galv&#227;o</td><td>2003-12-16</td><td>35</td><td>0</td></tr>
+<tr><td>0</td><td>55</td><td>4</td><td>0</td><td>Adriana Colombelli</td><td>2003-12-17</td><td>36</td><td>0</td></tr>
+<tr><td>0</td><td>58</td><td>4</td><td>0</td><td>Antonio Freire Assun&#231;ao</td><td>2003-12-17</td><td>37</td><td>0</td></tr>
+<tr><td>0</td><td>59</td><td>1</td><td>0</td><td>Francine Lipinski Jusinskas</td><td>2003-12-17</td><td>38</td><td>0</td></tr>
+<tr><td>0</td><td>59</td><td>1</td><td>0</td><td>Renan Lipinski Jusinskas</td><td>2003-12-17</td><td>39</td><td>0</td></tr>
+<tr><td>0</td><td>59</td><td>1</td><td>0</td><td>Renan Lipinski Jusinskas</td><td>2003-12-17</td><td>40</td><td>0</td></tr>
+<tr><td>0</td><td>60</td><td>1</td><td>0</td><td>Francisca Bozaski Lipinski</td><td>2003-12-17</td><td>41</td><td>0</td></tr>
+<tr><td>0</td><td>68</td><td>2</td><td>0</td><td>Magna Joelma Vacarelli Knopik</td><td>2003-12-19</td><td>42</td><td>0</td></tr>
+<tr><td>0</td><td>18</td><td>3</td><td>0</td><td>CILETE  CARNEIRO</td><td>2003-12-20</td><td>43</td><td>0</td></tr>
+<tr><td>0</td><td>66</td><td>1</td><td>0</td><td>ROBERTO REGIS PUSCH RODRIGUES ALVES</td><td>2003-12-20</td><td>44</td><td>0</td></tr>
+<tr><td>0</td><td>65</td><td>4</td><td>0</td><td>Jackson Luis Barp</td><td>2003-12-20</td><td>45</td><td>2</td></tr>
+<tr><td>0</td><td>64</td><td>2</td><td>0</td><td>Cleusa de Oliveira Freitas</td><td>2003-12-22</td><td>46</td><td>0</td></tr>
+<tr><td>0</td><td>72</td><td>2</td><td>0</td><td>Sergio Gon&#231;alves</td><td>2003-12-22</td><td>47</td><td>0</td></tr>
+<tr><td>0</td><td>79</td><td>2</td><td>0</td><td>Guilherme Jose Nunes Marques Rocha</td><td>2003-12-23</td><td>48</td><td>0</td></tr>
+<tr><td>0</td><td>53</td><td>1</td><td>0</td><td>Maria Cecilia Cesario de Holanda</td><td>2003-12-23</td><td>49</td><td>0</td></tr>
+<tr><td>0</td><td>53</td><td>1</td><td>0</td><td>Arthur Cesario de Holanda</td><td>2003-12-23</td><td>50</td><td>0</td></tr>
+<tr><td>0</td><td>53</td><td>1</td><td>0</td><td>Geralda Gouveia da Silva</td><td>2003-12-23</td><td>51</td><td>6</td></tr>
+<tr><td>0</td><td>81</td><td>3</td><td>0</td><td>Jose Marcelo Rocha Aranha</td><td>2003-12-24</td><td>52</td><td>6</td></tr>
+<tr><td>0</td><td>83</td><td>3</td><td>0</td><td>ROSEMAR TEREZINHA BIAVATTI</td><td>2003-12-24</td><td>53</td><td>0</td></tr>
+<tr><td>0</td><td>85</td><td>1</td><td>0</td><td>Bonifacio Solak</td><td>2003-12-24</td><td>54</td><td>0</td></tr>
+<tr><td>0</td><td>86</td><td>4</td><td>0</td><td>Marcia Braz</td><td>2003-12-24</td><td>55</td><td>0</td></tr>
+<tr><td>0</td><td>88</td><td>2</td><td>0</td><td>Aline Fonseca da Silva</td><td>2003-12-24</td><td>56</td><td>0</td></tr>
+<tr><td>0</td><td>87</td><td>3</td><td>0</td><td>Luis Marcelo Sotoriva</td><td>2003-12-24</td><td>57</td><td>0</td></tr>
+<tr><td>0</td><td>94</td><td>4</td><td>0</td><td>INES BERNADETE ANDREUCCI</td><td>2003-12-26</td><td>58</td><td>0</td></tr>
+<tr><td>0</td><td>90</td><td>3</td><td>0</td><td>Nelson Taciano Rossi da Silva</td><td>2003-12-29</td><td>59</td><td>0</td></tr>
+<tr><td>0</td><td>107</td><td>4</td><td>0</td><td>Aglair Iglesias Duran</td><td>2003-12-29</td><td>60</td><td>1</td></tr>
+<tr><td>0</td><td>118</td><td>2</td><td>0</td><td>Odemir Ferreira Monteiro</td><td>2003-12-30</td><td>61</td><td>0</td></tr>
+<tr><td>0</td><td>91</td><td>2</td><td>0</td><td>Carlos Eduardo de Paulo Cardoso</td><td>2003-12-30</td><td>62</td><td>0</td></tr>
+<tr><td>0</td><td>119</td><td>1</td><td>0</td><td>Wilson Alexandro dos Santos</td><td>2003-12-30</td><td>63</td><td>0</td></tr>
+<tr><td>0</td><td>119</td><td>1</td><td>0</td><td>Maria Bastos dos Santos</td><td>2003-12-30</td><td>64</td><td>0</td></tr>
+<tr><td>0</td><td>119</td><td>1</td><td>0</td><td>Theodoro Jose dos Santos</td><td>2003-12-30</td><td>65</td><td>0</td></tr>
+<tr><td>0</td><td>119</td><td>1</td><td>0</td><td>Christiane Danezi Gon&#231;alves</td><td>2003-12-30</td><td>66</td><td>0</td></tr>
+<tr><td>0</td><td>105</td><td>3</td><td>0</td><td>Marcio Freire de Carvalho</td><td>2003-12-30</td><td>67</td><td>0</td></tr>
+<tr><td>0</td><td>131</td><td>2</td><td>0</td><td>JOSE EDSON HAESBAERT</td><td>2004-01-02</td><td>68</td><td>2</td></tr>
+<tr><td>0</td><td>130</td><td>1</td><td>0</td><td>Luciane Cristina Simionato</td><td>2004-01-03</td><td>69</td><td>0</td></tr>
+<tr><td>0</td><td>130</td><td>1</td><td>0</td><td>Mauricio Schafranski</td><td>2004-01-03</td><td>70</td><td>0</td></tr>
+<tr><td>0</td><td>130</td><td>1</td><td>0</td><td>Fernando Cesar L. Geraldino</td><td>2004-01-03</td><td>71</td><td>0</td></tr>
+<tr><td>0</td><td>130</td><td>1</td><td>0</td><td>Julliana Isabelle Simionato</td><td>2004-01-03</td><td>72</td><td>0</td></tr>
+<tr><td>0</td><td>100</td><td>3</td><td>0</td><td>Viviane Maciel Ferreira</td><td>2004-01-04</td><td>73</td><td>0</td></tr>
+<tr><td>0</td><td>129</td><td>3</td><td>0</td><td>Vanessa Rodrigues de Souza</td><td>2004-01-04</td><td>74</td><td>0</td></tr>
+<tr><td>0</td><td>112</td><td>4</td><td>0</td><td>Marcos Aurelio Cordeiro</td><td>2004-01-04</td><td>75</td><td>0</td></tr>
+<tr><td>0</td><td>9</td><td>1</td><td>0</td><td>Luiz Dittrich</td><td>2004-01-06</td><td>76</td><td>0</td></tr>
+<tr><td>0</td><td>124</td><td>1</td><td>0</td><td>Jose Cesar Felipe</td><td>2004-01-06</td><td>77</td><td>0</td></tr>
+<tr><td>0</td><td>124</td><td>1</td><td>0</td><td>Gustavo Nicola Felipe</td><td>2004-01-06</td><td>78</td><td>0</td></tr>
+<tr><td>0</td><td>126</td><td>1</td><td>0</td><td>Catrinus Deen</td><td>2004-01-07</td><td>79</td><td>1</td></tr>
+<tr><td>0</td><td>126</td><td>1</td><td>0</td><td>Elizabeth Deen</td><td>2004-01-07</td><td>80</td><td>1</td></tr>
+<tr><td>0</td><td>137</td><td>1</td><td>0</td><td>Fernando Miner Navarro</td><td>2004-01-07</td><td>81</td><td>0</td></tr>
+<tr><td>0</td><td>137</td><td>1</td><td>0</td><td>Cynthia Regina de Lima Passos Winer</td><td>2004-01-07</td><td>82</td><td>0</td></tr>
+<tr><td>0</td><td>137</td><td>1</td><td>0</td><td>Juana Navarro de Miner</td><td>2004-01-07</td><td>83</td><td>0</td></tr>
+<tr><td>0</td><td>156</td><td>1</td><td>0</td><td>Marlene Vilela R&#233;us</td><td>2004-01-07</td><td>84</td><td>0</td></tr>
+<tr><td>0</td><td>156</td><td>1</td><td>0</td><td>Rosani Lainetti</td><td>2004-01-07</td><td>85</td><td>0</td></tr>
+<tr><td>0</td><td>156</td><td>1</td><td>0</td><td>Pedro Vilela Sobrinho</td><td>2004-01-07</td><td>86</td><td>0</td></tr>
+<tr><td>0</td><td>149</td><td>1</td><td>0</td><td>Edson Olivir Zotto Andrade</td><td>2004-01-08</td><td>87</td><td>0</td></tr>
+<tr><td>0</td><td>140</td><td>4</td><td>0</td><td>Vilna Cunha Fran&#231;a</td><td>2004-01-08</td><td>88</td><td>0</td></tr>
+<tr><td>0</td><td>141</td><td>1</td><td>0</td><td>Denize Cunha Fran&#231;a</td><td>2004-01-08</td><td>89</td><td>0</td></tr>
+<tr><td>0</td><td>136</td><td>2</td><td>0</td><td>Julia Mitsuko Matsuda</td><td>2004-01-08</td><td>90</td><td>1</td></tr>
+<tr><td>0</td><td>158</td><td>3</td><td>0</td><td>Rosangela Tilamar Kaufmann</td><td>2004-01-08</td><td>91</td><td>0</td></tr>
+<tr><td>0</td><td>164</td><td>1</td><td>0</td><td>Ronaldo da Silva</td><td>2004-01-08</td><td>92</td><td>0</td></tr>
+<tr><td>0</td><td>164</td><td>1</td><td>0</td><td>Solange Dias</td><td>2004-01-08</td><td>93</td><td>0</td></tr>
+<tr><td>0</td><td>166</td><td>1</td><td>0</td><td>Camilo Renato dos Santos Vale Amado</td><td>2004-01-08</td><td>94</td><td>0</td></tr>
+<tr><td>0</td><td>166</td><td>1</td><td>0</td><td>Ana Lucia da Silva Vale Amado</td><td>2004-01-08</td><td>95</td><td>0</td></tr>
+<tr><td>0</td><td>166</td><td>1</td><td>0</td><td>Bruno Silva Vale Amado</td><td>2004-01-08</td><td>96</td><td>0</td></tr>
+<tr><td>0</td><td>166</td><td>1</td><td>0</td><td>Lucas Silva Vale Amado</td><td>2004-01-08</td><td>97</td><td>0</td></tr>
+<tr><td>0</td><td>173</td><td>4</td><td>0</td><td>HENRIQUE GLUCK</td><td>2004-01-09</td><td>98</td><td>0</td></tr>
+<tr><td>0</td><td>177</td><td>3</td><td>0</td><td>Benjamin Cillento</td><td>2004-01-10</td><td>99</td><td>1</td></tr>
+<tr><td>0</td><td>178</td><td>4</td><td>0</td><td>Jose Bueno de Miranda</td><td>2004-01-10</td><td>100</td><td>0</td></tr>
+<tr><td>0</td><td>172</td><td>2</td><td>0</td><td>Rodrigo Bernardo</td><td>2004-01-10</td><td>101</td><td>0</td></tr>
+<tr><td>0</td><td>168</td><td>3</td><td>0</td><td>CIBELE LEMOS FREIRE</td><td>2004-01-13</td><td>102</td><td>0</td></tr>
+<tr><td>0</td><td>188</td><td>1</td><td>0</td><td>Jucimara Ferreira</td><td>2004-01-13</td><td>103</td><td>0</td></tr>
+<tr><td>0</td><td>188</td><td>1</td><td>0</td><td>Teodoro Walkowicz</td><td>2004-01-13</td><td>104</td><td>0</td></tr>
+<tr><td>0</td><td>188</td><td>1</td><td>0</td><td>Marina M. Walkowicz</td><td>2004-01-13</td><td>105</td><td>0</td></tr>
+<tr><td>0</td><td>188</td><td>1</td><td>0</td><td>Jussara Walkowicz</td><td>2004-01-13</td><td>106</td><td>0</td></tr>
+<tr><td>0</td><td>193</td><td>2</td><td>0</td><td>Flavia Zanetti Ribeiro</td><td>2004-01-15</td><td>107</td><td>0</td></tr>
+<tr><td>0</td><td>198</td><td>4</td><td>0</td><td>Jose Tonon</td><td>2004-01-16</td><td>108</td><td>0</td></tr>
+<tr><td>0</td><td>181</td><td>4</td><td>0</td><td>Davi da Silva Fernandes</td><td>2004-01-16</td><td>109</td><td>0</td></tr>
+<tr><td>0</td><td>191</td><td>4</td><td>0</td><td>Rosana da Silva Fernandes Teisen Camargo</td><td>2004-01-16</td><td>110</td><td>0</td></tr>
+<tr><td>0</td><td>189</td><td>1</td><td>0</td><td>HERON SANTANA RUM&#195;O</td><td>2004-01-16</td><td>111</td><td>0</td></tr>
+<tr><td>0</td><td>189</td><td>1</td><td>0</td><td>ALCIMERI APARECIDA SAROT</td><td>2004-01-16</td><td>112</td><td>0</td></tr>
+<tr><td>0</td><td>201</td><td>1</td><td>0</td><td>Andrea Hubner</td><td>2004-01-16</td><td>113</td><td>0</td></tr>
+<tr><td>0</td><td>201</td><td>1</td><td>0</td><td>Ezequiel Milani Machado</td><td>2004-01-16</td><td>114</td><td>0</td></tr>
+<tr><td>0</td><td>201</td><td>1</td><td>0</td><td>Solange Jaras</td><td>2004-01-16</td><td>115</td><td>0</td></tr>
+<tr><td>0</td><td>201</td><td>1</td><td>0</td><td>Thiago Milani Machado</td><td>2004-01-16</td><td>116</td><td>0</td></tr>
+<tr><td>0</td><td>93</td><td>4</td><td>0</td><td>Alvaro Jos&#233; Noe Fogaca</td><td>2004-01-17</td><td>117</td><td>0</td></tr>
+<tr><td>0</td><td>190</td><td>4</td><td>0</td><td>Marcos Jo&#227;o Rodrigues Salanunes</td><td>2004-01-17</td><td>118</td><td>0</td></tr>
+<tr><td>0</td><td>206</td><td>2</td><td>0</td><td>JULIANA SEBBEN</td><td>2004-01-18</td><td>119</td><td>0</td></tr>
+<tr><td>0</td><td>213</td><td>1</td><td>0</td><td>Marcio Sergio Batista S Oliveira</td><td>2004-01-19</td><td>120</td><td>0</td></tr>
+<tr><td>0</td><td>213</td><td>1</td><td>0</td><td>Mayra Miranda de Oliveira</td><td>2004-01-19</td><td>121</td><td>0</td></tr>
+<tr><td>0</td><td>215</td><td>4</td><td>0</td><td>Antonio Ivan Bastos Sobrinho</td><td>2004-01-20</td><td>122</td><td>0</td></tr>
+<tr><td>0</td><td>217</td><td>2</td><td>1</td><td>TEREZINHA DA SILVA SCHMITT</td><td>2004-01-21</td><td>123</td><td>0</td></tr>
+<tr><td>0</td><td>218</td><td>4</td><td>1</td><td>ROGERIO SCHMITT</td><td>2004-01-21</td><td>124</td><td>0</td></tr>
+<tr><td>0</td><td>219</td><td>3</td><td>0</td><td>Sylvio Cesar Friedlaender</td><td>2004-01-21</td><td>125</td><td>0</td></tr>
+<tr><td>0</td><td>225</td><td>2</td><td>0</td><td>Andr&#233; Luiz Drimel Dias</td><td>2004-01-22</td><td>126</td><td>0</td></tr>
+<tr><td>0</td><td>216</td><td>1</td><td>0</td><td>JAQUELINE ROSA SANTOS</td><td>2004-01-22</td><td>127</td><td>0</td></tr>
+<tr><td>0</td><td>216</td><td>1</td><td>0</td><td>MARTA ROSA DE JESUS DOS SANTOS</td><td>2004-01-22</td><td>128</td><td>0</td></tr>
+<tr><td>0</td><td>216</td><td>1</td><td>0</td><td>LUIZ HENRIQUE ROSA DOS SANTOS</td><td>2004-01-22</td><td>129</td><td>0</td></tr>
+<tr><td>0</td><td>208</td><td>1</td><td>0</td><td>CARLOS ALBERTO BROSTT</td><td>2004-01-22</td><td>130</td><td>4</td></tr>
+<tr><td>0</td><td>208</td><td>1</td><td>0</td><td>ROSANE K. DA SILVEIRA</td><td>2004-01-22</td><td>131</td><td>0</td></tr>
+<tr><td>0</td><td>214</td><td>1</td><td>0</td><td>EDSON DANIEL LIMA BROSTT</td><td>2004-01-22</td><td>132</td><td>0</td></tr>
+<tr><td>0</td><td>208</td><td>1</td><td>0</td><td>NOAN C BROSTT</td><td>2004-01-22</td><td>133</td><td>0</td></tr>
+<tr><td>0</td><td>208</td><td>1</td><td>0</td><td>ALAN C. BROSTT</td><td>2004-01-22</td><td>134</td><td>0</td></tr>
+<tr><td>0</td><td>228</td><td>2</td><td>0</td><td>Paulo Roberto Sampaio de Almeida</td><td>2004-01-23</td><td>135</td><td>0</td></tr>
+<tr><td>0</td><td>205</td><td>2</td><td>0</td><td>Sandra Margonari campos</td><td>2004-01-23</td><td>136</td><td>0</td></tr>
+<tr><td>0</td><td>230</td><td>3</td><td>1</td><td>SERGIO MAGALHAES BORGES</td><td>2004-01-23</td><td>137</td><td>0</td></tr>
+<tr><td>0</td><td>232</td><td>1</td><td>0</td><td>Leila de Fatima Sellinger Silva</td><td>2004-01-24</td><td>138</td><td>0</td></tr>
+<tr><td>0</td><td>232</td><td>1</td><td>0</td><td>Wagner Silva</td><td>2004-01-24</td><td>139</td><td>0</td></tr>
+<tr><td>0</td><td>226</td><td>2</td><td>0</td><td>Jeffrey do Ros&#225;rio Guimar&#227;es Rodrigues</td><td>2004-01-24</td><td>140</td><td>0</td></tr>
+<tr><td>0</td><td>235</td><td>2</td><td>0</td><td>Ademir Scotti</td><td>2004-01-28</td><td>141</td><td>0</td></tr>
+<tr><td>0</td><td>244</td><td>2</td><td>0</td><td>Alcides de Labio Jr</td><td>2004-01-29</td><td>142</td><td>0</td></tr>
+<tr><td>0</td><td>238</td><td>4</td><td>0</td><td>GERSON LUIZ CLETO DAL COL</td><td>2004-01-30</td><td>143</td><td>0</td></tr>
+<tr><td>0</td><td>249</td><td>4</td><td>0</td><td>SERGIO LUIZ FERREIRA</td><td>2004-02-04</td><td>144</td><td>0</td></tr>
+<tr><td>0</td><td>237</td><td>1</td><td>0</td><td>CELSO VILLELA BATISTA JUNIOR</td><td>2004-02-05</td><td>145</td><td>0</td></tr>
+<tr><td>0</td><td>236</td><td>3</td><td>0</td><td>LUZIA CARVALHO DOS SANTOS</td><td>2004-02-05</td><td>146</td><td>0</td></tr>
+<tr><td>0</td><td>243</td><td>1</td><td>0</td><td>Eduardo Ifuki</td><td>2004-02-05</td><td>147</td><td>0</td></tr>
+<tr><td>0</td><td>243</td><td>1</td><td>0</td><td>Eduardo Ifuki</td><td>2004-02-05</td><td>148</td><td>0</td></tr>
+<tr><td>0</td><td>261</td><td>1</td><td>0</td><td>Therese Marie Odile Ledieu</td><td>2004-02-07</td><td>149</td><td>0</td></tr>
+<tr><td>0</td><td>260</td><td>1</td><td>0</td><td>Nilza de Assun&#231;ao Hultmann</td><td>2004-02-07</td><td>150</td><td>0</td></tr>
+<tr><td>0</td><td>245</td><td>1</td><td>0</td><td>Rogerio Jesus Hultmann</td><td>2004-02-07</td><td>151</td><td>0</td></tr>
+<tr><td>0</td><td>245</td><td>1</td><td>0</td><td>Bernali Alessandra Lopes Kultmann</td><td>2004-02-07</td><td>152</td><td>0</td></tr>
+<tr><td>0</td><td>126</td><td>1</td><td>0</td><td>Catrinus Deen</td><td>2004-02-08</td><td>153</td><td>0</td></tr>
+<tr><td>0</td><td>239</td><td>2</td><td>0</td><td>Gladiston Jose Cordeiro</td><td>2004-02-10</td><td>154</td><td>0</td></tr>
+<tr><td>0</td><td>252</td><td>3</td><td>0</td><td>Anderson Gon&#231;alves dos Santos</td><td>2004-02-10</td><td>155</td><td>0</td></tr>
+<tr><td>0</td><td>266</td><td>4</td><td>0</td><td>Joao Maria Lemiski</td><td>2004-02-11</td><td>156</td><td>0</td></tr>
+<tr><td>0</td><td>267</td><td>2</td><td>0</td><td>Renata Janaina de Macedo</td><td>2004-02-11</td><td>157</td><td>1</td></tr>
+<tr><td>0</td><td>268</td><td>3</td><td>0</td><td>Daniele Moraes</td><td>2004-02-11</td><td>158</td><td>0</td></tr>
+<tr><td>0</td><td>253</td><td>3</td><td>0</td><td>Katia Maria Trinkel</td><td>2004-02-13</td><td>159</td><td>0</td></tr>
+<tr><td>0</td><td>277</td><td>1</td><td>0</td><td>Oriana Dagna Lansoni da Silva</td><td>2004-02-13</td><td>160</td><td>0</td></tr>
+<tr><td>0</td><td>276</td><td>2</td><td>0</td><td>NOEMI BASTOS</td><td>2004-02-13</td><td>161</td><td>0</td></tr>
+<tr><td>0</td><td>29</td><td>3</td><td>0</td><td>Marcelo Caetano Pereira</td><td>2004-02-13</td><td>162</td><td>0</td></tr>
+<tr><td>0</td><td>270</td><td>3</td><td>0</td><td>Antonio Servienski</td><td>2004-02-13</td><td>163</td><td>0</td></tr>
+<tr><td>0</td><td>269</td><td>4</td><td>0</td><td>Daeane Valente</td><td>2004-02-13</td><td>164</td><td>0</td></tr>
+<tr><td>0</td><td>279</td><td>4</td><td>1</td><td>CLOVIS MARASSI</td><td>2004-02-13</td><td>165</td><td>0</td></tr>
+<tr><td>0</td><td>264</td><td>1</td><td>0</td><td>Sidiomar Maioli</td><td>2004-02-14</td><td>166</td><td>0</td></tr>
+<tr><td>0</td><td>30</td><td>2</td><td>0</td><td>Marisa Rosa Fonseca</td><td>2004-02-16</td><td>167</td><td>0</td></tr>
+<tr><td>0</td><td>288</td><td>3</td><td>0</td><td>Ariovaldo Correa Daniel</td><td>2004-02-16</td><td>168</td><td>0</td></tr>
+<tr><td>0</td><td>287</td><td>4</td><td>0</td><td>Adriano G Canestraro</td><td>2004-02-16</td><td>169</td><td>0</td></tr>
+<tr><td>0</td><td>289</td><td>2</td><td>0</td><td>Jorge Toshio Kawano</td><td>2004-02-16</td><td>170</td><td>0</td></tr>
+<tr><td>0</td><td>292</td><td>3</td><td>0</td><td>Alfeu Eleandro Fabiane</td><td>2004-02-17</td><td>171</td><td>0</td></tr>
+<tr><td>0</td><td>290</td><td>2</td><td>0</td><td>Helga Horn</td><td>2004-02-17</td><td>172</td><td>0</td></tr>
+<tr><td>0</td><td>290</td><td>1</td><td>0</td><td>Helga Horn</td><td>2004-02-17</td><td>173</td><td>0</td></tr>
+<tr><td>0</td><td>289</td><td>1</td><td>0</td><td>Jorge Toshio Kawano</td><td>2004-02-17</td><td>174</td><td>0</td></tr>
+<tr><td>0</td><td>293</td><td>2</td><td>1</td><td>Maria Fernanda Monteiro Rosalini</td><td>2004-02-17</td><td>175</td><td>0</td></tr>
+<tr><td>0</td><td>302</td><td>4</td><td>0</td><td>Madelon Cristiane Zolet</td><td>2004-02-17</td><td>176</td><td>0</td></tr>
+<tr><td>0</td><td>303</td><td>1</td><td>0</td><td>Leonildo Zolet</td><td>2004-02-17</td><td>177</td><td>0</td></tr>
+<tr><td>0</td><td>304</td><td>3</td><td>0</td><td>Carlo Alberto Tesch</td><td>2004-02-17</td><td>178</td><td>0</td></tr>
+<tr><td>0</td><td>283</td><td>3</td><td>0</td><td>Ana Rita Baggio de Oliveira</td><td>2004-02-17</td><td>179</td><td>0</td></tr>
+<tr><td>0</td><td>282</td><td>4</td><td>0</td><td>Jaqueson Mendes Santos</td><td>2004-02-17</td><td>180</td><td>0</td></tr>
+<tr><td>0</td><td>275</td><td>2</td><td>0</td><td>Vania Patricia Faustino</td><td>2004-02-18</td><td>181</td><td>0</td></tr>
+<tr><td>0</td><td>301</td><td>4</td><td>0</td><td>Nadieje de Mari Pepler</td><td>2004-02-18</td><td>182</td><td>0</td></tr>
+<tr><td>0</td><td>357</td><td>2</td><td>0</td><td>Vivian de Fatima Daldin</td><td>2004-02-18</td><td>183</td><td>0</td></tr>
+<tr><td>0</td><td>358</td><td>2</td><td>0</td><td>Edison  Luiz Kruger Junior</td><td>2004-02-18</td><td>184</td><td>0</td></tr>
+<tr><td>0</td><td>286</td><td>3</td><td>0</td><td>Roanito Marcos Dambroski</td><td>2004-02-18</td><td>185</td><td>0</td></tr>
+<tr><td>0</td><td>406</td><td>2</td><td>0</td><td>Andressa Bolsi</td><td>2004-02-18</td><td>186</td><td>0</td></tr>
+<tr><td>0</td><td>273</td><td>3</td><td>0</td><td>Brenadete Dakiw Piaceski</td><td>2004-02-19</td><td>187</td><td>0</td></tr>
+<tr><td>0</td><td>299</td><td>4</td><td>0</td><td>Angela Dakiw Piaceski</td><td>2004-02-19</td><td>188</td><td>0</td></tr>
+<tr><td>0</td><td>445</td><td>4</td><td>0</td><td>Fabio Lima De Moraes</td><td>2004-02-20</td><td>189</td><td>0</td></tr>
+<tr><td>0</td><td>404</td><td>2</td><td>1</td><td>claudio antonio tobaldini</td><td>2004-02-21</td><td>190</td><td>0</td></tr>
+<tr><td>0</td><td>296</td><td>4</td><td>0</td><td>Mariane Christine Boldori</td><td>2004-02-21</td><td>191</td><td>0</td></tr>
+<tr><td>0</td><td>73</td><td>2</td><td>0</td><td>Luiz Aparecido Marques Abrantes</td><td>2004-02-21</td><td>192</td><td>0</td></tr>
+<tr><td>0</td><td>475</td><td>2</td><td>0</td><td>Carlos Gustavo Botelho Niemeyer</td><td>2004-02-22</td><td>193</td><td>0</td></tr>
+<tr><td>0</td><td>475</td><td>2</td><td>0</td><td>Carlos Gustavo Botelho Niemeyer</td><td>2004-02-22</td><td>194</td><td>0</td></tr>
+<tr><td>0</td><td>471</td><td>1</td><td>0</td><td>Armando Luis Yoshio Ito</td><td>2004-02-22</td><td>195</td><td>0</td></tr>
+<tr><td>0</td><td>470</td><td>1</td><td>0</td><td>Milene Silveira Matoso</td><td>2004-02-22</td><td>196</td><td>0</td></tr>
+<tr><td>0</td><td>477</td><td>2</td><td>0</td><td>Silvino Schlickmann Junior</td><td>2004-02-23</td><td>197</td><td>0</td></tr>
+<tr><td>0</td><td>479</td><td>3</td><td>0</td><td>Tarciso Maciel Paese</td><td>2004-02-23</td><td>198</td><td>0</td></tr>
+<tr><td>0</td><td>480</td><td>4</td><td>0</td><td>AMANDA DUARTE MARGULHAO</td><td>2004-02-23</td><td>199</td><td>0</td></tr>
+<tr><td>0</td><td>444</td><td>4</td><td>0</td><td>Kelley Joy Mormelo</td><td>2004-02-23</td><td>200</td><td>0</td></tr>
+<tr><td>0</td><td>481</td><td>4</td><td>1</td><td>LUIZ EDUARDO SILVA</td><td>2004-02-23</td><td>201</td><td>0</td></tr>
+<tr><td>0</td><td>482</td><td>4</td><td>0</td><td>Sergio Vicente Nascimento</td><td>2004-02-24</td><td>202</td><td>0</td></tr>
+<tr><td>0</td><td>483</td><td>4</td><td>0</td><td>Maria Oliveira Nascimento</td><td>2004-02-24</td><td>203</td><td>0</td></tr>
+<tr><td>0</td><td>9</td><td>1</td><td>0</td><td>Luiz Dittrich</td><td>2004-02-25</td><td>204</td><td>0</td></tr>
+<tr><td>0</td><td>484</td><td>3</td><td>0</td><td>Joao Manoel Barros de Moura</td><td>2004-02-25</td><td>205</td><td>0</td></tr>
+<tr><td>0</td><td>271</td><td>3</td><td>0</td><td>Pedro Antonio Alvarez</td><td>2004-02-27</td><td>206</td><td>0</td></tr>
+<tr><td>0</td><td>478</td><td>1</td><td>0</td><td>DIOGO KAWAKAMI DE REZENDE</td><td>2004-02-27</td><td>207</td><td>0</td></tr>
+<tr><td>0</td><td>495</td><td>2</td><td>0</td><td>Aline Fran&#231;a Bueno Branco</td><td>2004-02-27</td><td>208</td><td>0</td></tr>
+<tr><td>0</td><td>9</td><td>1</td><td>0</td><td>Luiz Dittrich</td><td>2004-03-05</td><td>209</td><td>0</td></tr>
+<tr><td>0</td><td>266</td><td>1</td><td>0</td><td>Joao Maria Lemiski</td><td>2004-03-05</td><td>210</td><td>0</td></tr>
+<tr><td>0</td><td>278</td><td>1</td><td>0</td><td>Maria Eleni Leminski</td><td>2004-03-05</td><td>211</td><td>0</td></tr>
+<tr><td>0</td><td>497</td><td>2</td><td>0</td><td>Janaina Catlin Santos</td><td>2004-03-07</td><td>212</td><td>0</td></tr>
+<tr><td>0</td><td>499</td><td>2</td><td>0</td><td>VANDA KUBELISKI</td><td>2004-03-07</td><td>213</td><td>0</td></tr>
+<tr><td>0</td><td>510</td><td>1</td><td>0</td><td>Fatima Becker Guedes</td><td>2004-03-11</td><td>214</td><td>0</td></tr>
+<tr><td>0</td><td>505</td><td>3</td><td>0</td><td>Takako Morikami</td><td>2004-03-13</td><td>215</td><td>0</td></tr>
+<tr><td>0</td><td>40</td><td>1</td><td>0</td><td>Iber&#234; Merhy Correia</td><td>2004-03-14</td><td>216</td><td>0</td></tr>
+<tr><td>0</td><td>520</td><td>4</td><td>0</td><td>Cinara Prado da Silva</td><td>2004-03-20</td><td>217</td><td>0</td></tr>
+<tr><td>0</td><td>518</td><td>2</td><td>0</td><td>Jorge L DE Paula Martins</td><td>2004-03-25</td><td>218</td><td>0</td></tr>
+<tr><td>0</td><td>263</td><td>3</td><td>0</td><td>Fernando Sesterheim</td><td>2004-03-25</td><td>219</td><td>0</td></tr>
+<tr><td>0</td><td>212</td><td>3</td><td>0</td><td>INGRIET ROGALSKI</td><td>2004-03-31</td><td>220</td><td>0</td></tr>
+<tr><td>0</td><td>537</td><td>3</td><td>0</td><td>Cristiane Muller Sounis Saporiti</td><td>2004-04-01</td><td>221</td><td>0</td></tr>
+<tr><td>0</td><td>538</td><td>4</td><td>0</td><td>Rosane Sounis Saporiti</td><td>2004-04-01</td><td>222</td><td>0</td></tr>
+<tr><td>0</td><td>547</td><td>4</td><td>0</td><td>MANUEL ALCEU SANTOS DE ALMEIDA</td><td>2004-04-01</td><td>223</td><td>1</td></tr>
+<tr><td>0</td><td>548</td><td>4</td><td>0</td><td>MAURICIO DA CUNHA MILLEO COSTA</td><td>2004-04-01</td><td>224</td><td>0</td></tr>
+<tr><td>0</td><td>300</td><td>3</td><td>0</td><td>MARIA DE JESUS AVILA ALBUQUEQUE</td><td>2004-04-02</td><td>225</td><td>0</td></tr>
+<tr><td>0</td><td>551</td><td>4</td><td>0</td><td>Elivaldo Da Cruz Moraes</td><td>2004-04-02</td><td>226</td><td>0</td></tr>
+<tr><td>0</td><td>552</td><td>2</td><td>0</td><td>Sylvia Evrard</td><td>2004-04-02</td><td>227</td><td>0</td></tr>
+<tr><td>0</td><td>549</td><td>1</td><td>0</td><td>RAQUEL MONTOTO PINTO</td><td>2004-04-07</td><td>228</td><td>0</td></tr>
+<tr><td>0</td><td>549</td><td>1</td><td>0</td><td>MARIA DE LAS MERCEDES M. PINTO</td><td>2004-04-07</td><td>229</td><td>0</td></tr>
+<tr><td>0</td><td>554</td><td>2</td><td>1</td><td>Poliane Nudelmann</td><td>2004-04-07</td><td>230</td><td>0</td></tr>
+<tr><td>0</td><td>563</td><td>2</td><td>0</td><td>Alan Martin Jones</td><td>2004-04-08</td><td>231</td><td>0</td></tr>
+<tr><td>0</td><td>545</td><td>2</td><td>0</td><td>Juliano Palmiro Cunha</td><td>2004-04-08</td><td>232</td><td>0</td></tr>
+<tr><td>0</td><td>40</td><td>1</td><td>0</td><td>Iber&#234; Merhy Correia</td><td>2004-04-09</td><td>233</td><td>0</td></tr>
+<tr><td>0</td><td>569</td><td>2</td><td>1</td><td>Leonilda Enke</td><td>2004-04-13</td><td>234</td><td>0</td></tr>
+<tr><td>0</td><td>576</td><td>1</td><td>0</td><td>Josane Sokolowski</td><td>2004-04-17</td><td>235</td><td>0</td></tr>
+<tr><td>0</td><td>9</td><td>1</td><td>0</td><td>Luiz Dittrich</td><td>2004-04-22</td><td>236</td><td>0</td></tr>
+<tr><td>0</td><td>699</td><td>1</td><td>0</td><td>Edson Teofilo Guedes</td><td>2004-05-14</td><td>237</td><td>0</td></tr>
+<tr><td>0</td><td>699</td><td>1</td><td>0</td><td>Vera Maria Alves Guedes</td><td>2004-05-14</td><td>238</td><td>0</td></tr>
+<tr><td>0</td><td>741</td><td>1</td><td>0</td><td>Maria Aparecida Mota Fernandes</td><td>2004-05-14</td><td>239</td><td>0</td></tr>
+<tr><td>0</td><td>741</td><td>1</td><td>0</td><td>Casimiro Henriques Fernandes</td><td>2004-05-14</td><td>240</td><td>0</td></tr>
+<tr><td>0</td><td>1089</td><td>1</td><td>0</td><td>ANELIZE SCHWIND</td><td>2004-05-27</td><td>241</td><td>0</td></tr>
+<tr><td>0</td><td>1238</td><td>1</td><td>0</td><td>LUIZ ROBERTO VALENTE</td><td>2004-06-03</td><td>242</td><td>0</td></tr>
+<tr><td>0</td><td>1239</td><td>1</td><td>1</td><td>JOSIANE FREITAS DOS SANTOS</td><td>2004-06-03</td><td>243</td><td>0</td></tr>
+<tr><td>0</td><td>1241</td><td>2</td><td>0</td><td>Osvaldo Mamoru Sato</td><td>2004-06-05</td><td>244</td><td>0</td></tr>
+<tr><td>0</td><td>1241</td><td>2</td><td>0</td><td>Osvaldo Mamoru Sato</td><td>2004-06-05</td><td>245</td><td>0</td></tr>
+<tr><td>0</td><td>1266</td><td>4</td><td>0</td><td>Maria Isabel Pereira</td><td>2004-06-09</td><td>246</td><td>0</td></tr>
+<tr><td>0</td><td>903</td><td>4</td><td>0</td><td>Thiago Pereira Agrelo Lusquinos</td><td>2004-06-12</td><td>247</td><td>0</td></tr>
+<tr><td>0</td><td>1599</td><td>3</td><td>0</td><td>PEDRO PAULO PEREIRA</td><td>2004-07-02</td><td>248</td><td>0</td></tr>
+<tr><td>0</td><td>1657</td><td>3</td><td>0</td><td>EDGARD LUIZ DA CUNHA FRANCA</td><td>2004-07-08</td><td>249</td><td>0</td></tr>
+<tr><td>0</td><td>1607</td><td>1</td><td>0</td><td>RAUL SUZUKI LUONGO</td><td>2004-07-08</td><td>250</td><td>0</td></tr>
+<tr><td>0</td><td>1606</td><td>3</td><td>0</td><td>JOS&#201; LUIZ FAVALLE</td><td>2004-07-08</td><td>251</td><td>0</td></tr>
+<tr><td>0</td><td>1652</td><td>2</td><td>0</td><td>Samuel alexandre Amorim</td><td>2004-07-09</td><td>252</td><td>0</td></tr>
+<tr><td>0</td><td>1633</td><td>2</td><td>0</td><td>DANIEL VIEIRA DE VASCONCELOS</td><td>2004-07-09</td><td>253</td><td>0</td></tr>
+<tr><td>0</td><td>1613</td><td>3</td><td>0</td><td>MARIA CLAUDIA BASTOS GALLINA</td><td>2004-07-10</td><td>254</td><td>0</td></tr>
+<tr><td>0</td><td>1667</td><td>4</td><td>0</td><td>ELIANE MARA CESARIO PEREIRA MALUF</td><td>2004-07-12</td><td>255</td><td>0</td></tr>
+<tr><td>0</td><td>1675</td><td>2</td><td>0</td><td>Juliana Fleury de Freitas</td><td>2004-07-13</td><td>256</td><td>0</td></tr>
+<tr><td>0</td><td>1672</td><td>3</td><td>0</td><td>Patricia Roesler Teixeira</td><td>2004-07-13</td><td>257</td><td>0</td></tr>
+<tr><td>0</td><td>1669</td><td>2</td><td>0</td><td>IONY MARTINS DOS SANTOS</td><td>2004-07-13</td><td>258</td><td>0</td></tr>
+<tr><td>0</td><td>1671</td><td>3</td><td>0</td><td>Roberto Daniel Giurdanella</td><td>2004-07-13</td><td>259</td><td>0</td></tr>
+<tr><td>0</td><td>1674</td><td>2</td><td>0</td><td>Paula Wrobel Schatz Rocco</td><td>2004-07-13</td><td>260</td><td>0</td></tr>
+<tr><td>0</td><td>1670</td><td>2</td><td>0</td><td>Suzana Riedel Dereti</td><td>2004-07-13</td><td>261</td><td>0</td></tr>
+<tr><td>0</td><td>1676</td><td>2</td><td>0</td><td>ROSILENE DE CREDDO ALBERTI</td><td>2004-07-13</td><td>262</td><td>0</td></tr>
+<tr><td>0</td><td>1673</td><td>3</td><td>0</td><td>Ines Midori Ogama</td><td>2004-07-13</td><td>263</td><td>0</td></tr>
+<tr><td>0</td><td>1678</td><td>3</td><td>0</td><td>ROSEMERI FERNANDES DE CARVALHO</td><td>2004-07-13</td><td>264</td><td>0</td></tr>
+<tr><td>0</td><td>1544</td><td>2</td><td>0</td><td>SHERYL LEE NELSON NITSCHKE</td><td>2004-07-14</td><td>265</td><td>0</td></tr>
+<tr><td>0</td><td>298</td><td>2</td><td>0</td><td>Renato Fallero</td><td>2004-07-15</td><td>266</td><td>0</td></tr>
+<tr><td>0</td><td>1681</td><td>3</td><td>0</td><td>Orlando Jose Pellanda Jr</td><td>2004-07-16</td><td>267</td><td>0</td></tr>
+<tr><td>0</td><td>1682</td><td>2</td><td>0</td><td>Walmira Oliveira Moraes Finau</td><td>2004-07-16</td><td>268</td><td>0</td></tr>
+<tr><td>0</td><td>1699</td><td>3</td><td>0</td><td>VILMA ALVES DE ANDRADE E OLIVEIRA</td><td>2004-07-16</td><td>269</td><td>0</td></tr>
+<tr><td>0</td><td>1784</td><td>1</td><td>0</td><td>Elisangela Batista de Magalhaes</td><td>2004-08-31</td><td>270</td><td>0</td></tr>
+<tr><td>0</td><td>1783</td><td>2</td><td>0</td><td>Tania Mara Gormanns</td><td>2004-08-31</td><td>271</td><td>0</td></tr>
+<tr><td>0</td><td>1782</td><td>1</td><td>0</td><td>Vanessa Cristina de Lima</td><td>2004-08-31</td><td>272</td><td>0</td></tr>
+<tr><td>0</td><td>1794</td><td>4</td><td>0</td><td>JOSE ROMEU CRESTO SOB</td><td>2004-09-02</td><td>273</td><td>0</td></tr>
+<tr><td>0</td><td>557</td><td>2</td><td>0</td><td>Ademar Serafim Junior</td><td>2004-09-08</td><td>274</td><td>0</td></tr>
+<tr><td>0</td><td>40</td><td>1</td><td>0</td><td>Iber&#234; Merhy Correia</td><td>2004-09-11</td><td>275</td><td>0</td></tr>
+<tr><td>0</td><td>9</td><td>1</td><td>0</td><td>Luiz Dittrich</td><td>2004-09-11</td><td>276</td><td>0</td></tr>
+<tr><td>0</td><td>1805</td><td>1</td><td>0</td><td>Josiane de Lima Dolemba</td><td>2004-09-17</td><td>277</td><td>0</td></tr>
+<tr><td>0</td><td>1805</td><td>1</td><td>0</td><td>Silvanira De Lima Dolemba</td><td>2004-09-17</td><td>278</td><td>1</td></tr>
+<tr><td>0</td><td>1846</td><td>3</td><td>0</td><td>JUARES ALVES DE MIRA</td><td>2004-10-06</td><td>279</td><td>0</td></tr>
+<tr><td>0</td><td>571</td><td>1</td><td>0</td><td>CARLA VIEIRA LOPES</td><td>2004-10-06</td><td>280</td><td>0</td></tr>
+<tr><td>0</td><td>1845</td><td>1</td><td>0</td><td>MARCELO DE OLIVEIRA ALVES</td><td>2004-10-07</td><td>281</td><td>0</td></tr>
+<tr><td>0</td><td>1844</td><td>1</td><td>1</td><td>JOSE THOMAZ FRANCA DE ALENCAR</td><td>2004-10-07</td><td>282</td><td>0</td></tr>
+<tr><td>0</td><td>1825</td><td>4</td><td>0</td><td>Joao Batista Piloneto</td><td>2004-10-07</td><td>283</td><td>0</td></tr>
+<tr><td>0</td><td>1823</td><td>2</td><td>0</td><td>Peterson Lopes de Oliveira</td><td>2004-10-11</td><td>284</td><td>0</td></tr>
+<tr><td>0</td><td>1917</td><td>2</td><td>0</td><td>MARCOS AUGUSTO CARBONEIRA</td><td>2004-10-14</td><td>285</td><td>0</td></tr>
+<tr><td>0</td><td>9</td><td>1</td><td>0</td><td>Luiz Dittrich</td><td>2004-10-16</td><td>286</td><td>0</td></tr>
+<tr><td>0</td><td>571</td><td>1</td><td>0</td><td>MARCELO FERNANDO CAMINHA DA LUZ FERREIRA</td><td>2004-10-26</td><td>287</td><td>0</td></tr>
+<tr><td>0</td><td>571</td><td>2</td><td>0</td><td>CARLOS ALEXANDRE VIEIRA LOPES</td><td>2004-10-26</td><td>288</td><td>0</td></tr>
+<tr><td>0</td><td>2022</td><td>2</td><td>0</td><td>LORENA CRISTINA ALVES DE OLIVEIRA</td><td>2004-10-29</td><td>289</td><td>2</td></tr>
+<tr><td>0</td><td>2037</td><td>2</td><td>0</td><td>Herivelton Lago Larroyd</td><td>2004-11-04</td><td>290</td><td>0</td></tr>
+<tr><td>0</td><td>97</td><td>3</td><td>0</td><td>Alvaro Cesar Portella Kosinski</td><td>2004-11-06</td><td>291</td><td>0</td></tr>
+<tr><td>0</td><td>574</td><td>1</td><td>0</td><td>Ana Carolina Paulicones</td><td>2004-11-07</td><td>292</td><td>0</td></tr>
+<tr><td>0</td><td>2054</td><td>2</td><td>0</td><td>MARCELO MAYER</td><td>2004-11-10</td><td>293</td><td>0</td></tr>
+<tr><td>0</td><td>2049</td><td>3</td><td>0</td><td>CLAUDIA FERNANDA HAUSER ZENI</td><td>2004-11-12</td><td>294</td><td>0</td></tr>
+<tr><td>0</td><td>512</td><td>1</td><td>0</td><td>Leo Varasin Goldenberg</td><td>2004-11-13</td><td>295</td><td>0</td></tr>
+<tr><td>0</td><td>2070</td><td>3</td><td>1</td><td>LEANDRO PECI GOMES CONTI</td><td>2004-11-18</td><td>296</td><td>0</td></tr>
+<tr><td>0</td><td>2069</td><td>4</td><td>0</td><td>Antonio  C Dornelas</td><td>2004-11-21</td><td>297</td><td>0</td></tr>
+<tr><td>0</td><td>2090</td><td>1</td><td>0</td><td>Fabiana Pires Trindade</td><td>2004-11-25</td><td>298</td><td>0</td></tr>
+<tr><td>0</td><td>2090</td><td>1</td><td>0</td><td>Sidnei Marcio Senhorini</td><td>2004-11-25</td><td>299</td><td>0</td></tr>
+<tr><td>0</td><td>2040</td><td>2</td><td>0</td><td>MARCOS VIANNA TRYLINSKI</td><td>2004-11-27</td><td>300</td><td>0</td></tr>
+<tr><td>0</td><td>2078</td><td>1</td><td>0</td><td>Araci Gracia Pereira</td><td>2004-11-30</td><td>301</td><td>0</td></tr>
+<tr><td>0</td><td>9</td><td>1</td><td>0</td><td>Luiz Dittrich</td><td>2004-12-08</td><td>302</td><td>0</td></tr>
+<tr><td>0</td><td>2140</td><td>2</td><td>0</td><td>RAFAEL HENN</td><td>2004-12-09</td><td>303</td><td>0</td></tr>
+<tr><td>0</td><td>2141</td><td>2</td><td>0</td><td>Jose Alberto Perez Castane</td><td>2004-12-09</td><td>304</td><td>0</td></tr>
+<tr><td>0</td><td>2137</td><td>4</td><td>0</td><td>CARMEN KUBACK DA FONSECA VIZOLLI</td><td>2004-12-14</td><td>305</td><td>0</td></tr>
+<tr><td>0</td><td>2143</td><td>4</td><td>0</td><td>MARINEI GABARDO DOS SANTOS</td><td>2004-12-15</td><td>306</td><td>1</td></tr>
+<tr><td>0</td><td>2123</td><td>4</td><td>0</td><td>Ricardo Miranda Aversa</td><td>2004-12-17</td><td>307</td><td>0</td></tr>
+<tr><td>0</td><td>2139</td><td>4</td><td>0</td><td>THELMO DOMINGUES BASTOS</td><td>2004-12-17</td><td>308</td><td>0</td></tr>
+<tr><td>0</td><td>2157</td><td>1</td><td>0</td><td>MARLY PENDIUK CHAMBERLAIN</td><td>2004-12-20</td><td>309</td><td>0</td></tr>
+<tr><td>0</td><td>2157</td><td>1</td><td>0</td><td>LAIS ALANA CHAMBERLAIN DE LIMA</td><td>2004-12-20</td><td>310</td><td>0</td></tr>
+<tr><td>0</td><td>2157</td><td>1</td><td>0</td><td>MARLENE DE OLIVEIRA SANTAREM</td><td>2004-12-20</td><td>311</td><td>0</td></tr>
+<tr><td>0</td><td>2157</td><td>1</td><td>0</td><td>FABIANO SANTAREM MACEDO</td><td>2004-12-20</td><td>312</td><td>0</td></tr>
+<tr><td>0</td><td>1623</td><td>3</td><td>0</td><td>MARLENE L. WIENHOENER</td><td>2004-12-20</td><td>313</td><td>0</td></tr>
+<tr><td>0</td><td>2152</td><td>2</td><td>0</td><td>ALEX ALBERTO DOS SANTOS</td><td>2004-12-26</td><td>314</td><td>1</td></tr>
+<tr><td>0</td><td>2161</td><td>4</td><td>0</td><td>Rosiclea Aparecida de Souza</td><td>2004-12-27</td><td>315</td><td>1</td></tr>
+<tr><td>0</td><td>2169</td><td>4</td><td>0</td><td>THIAGO BARBOSA CORDEIRO</td><td>2004-12-29</td><td>316</td><td>5</td></tr>
+<tr><td>0</td><td>2166</td><td>4</td><td>0</td><td>JUCELIA DOS SANTOS ALEXANDRE</td><td>2004-12-30</td><td>317</td><td>0</td></tr>
+<tr><td>0</td><td>2167</td><td>4</td><td>0</td><td>RONALDO FRANCISCO</td><td>2004-12-30</td><td>318</td><td>0</td></tr>
+<tr><td>0</td><td>2168</td><td>4</td><td>0</td><td>Dionizio Francisco</td><td>2004-12-30</td><td>319</td><td>0</td></tr>
+<tr><td>0</td><td>2176</td><td>3</td><td>0</td><td>LOURDES RORIGUES ZETOLIS</td><td>2004-12-30</td><td>320</td><td>0</td></tr>
+<tr><td>0</td><td>2191</td><td>3</td><td>0</td><td>MARCELO SILVEIRA COGUT</td><td>2004-12-30</td><td>321</td><td>0</td></tr>
+<tr><td>0</td><td>2175</td><td>3</td><td>0</td><td>ALVARINO PETTA</td><td>2004-12-30</td><td>322</td><td>0</td></tr>
+<tr><td>0</td><td>2174</td><td>2</td><td>0</td><td>CLAUDIA ROSA ALBERINI</td><td>2004-12-30</td><td>323</td><td>0</td></tr>
+<tr><td>0</td><td>2134</td><td>2</td><td>0</td><td>ALEX FELISBERTO BOAVENTURA</td><td>2004-12-31</td><td>324</td><td>0</td></tr>
+<tr><td>0</td><td>2196</td><td>4</td><td>0</td><td>Marli Terezinha Haus</td><td>2004-12-31</td><td>325</td><td>0</td></tr>
+<tr><td>0</td><td>2192</td><td>2</td><td>0</td><td>Fl&#225;vio C&#233;sar Costa Sales</td><td>2004-12-31</td><td>326</td><td>0</td></tr>
+<tr><td>0</td><td>2204</td><td>3</td><td>0</td><td>EDES DE ANDRADE</td><td>2005-01-03</td><td>327</td><td>0</td></tr>
+<tr><td>0</td><td>2195</td><td>1</td><td>0</td><td>FRANK AUGUSTO MICHELETTO KONO</td><td>2005-01-03</td><td>328</td><td>0</td></tr>
+<tr><td>0</td><td>1510</td><td>2</td><td>0</td><td>BRUNO M.G. DE MOURA</td><td>2005-01-06</td><td>329</td><td>0</td></tr>
+<tr><td>0</td><td>2206</td><td>1</td><td>0</td><td>Leticia Lenzi Dias</td><td>2005-01-08</td><td>330</td><td>0</td></tr>
+<tr><td>0</td><td>2215</td><td>4</td><td>0</td><td>GOIASE ROSALES</td><td>2005-01-12</td><td>331</td><td>0</td></tr>
+<tr><td>0</td><td>2216</td><td>4</td><td>0</td><td>SOCORRO SABAS ROSSALES SOTELO</td><td>2005-01-12</td><td>332</td><td>0</td></tr>
+<tr><td>0</td><td>2218</td><td>2</td><td>0</td><td>Georgiana Pacotto Amaral Moutinho dos Santos</td><td>2005-01-13</td><td>333</td><td>0</td></tr>
+<tr><td>0</td><td>2225</td><td>2</td><td>0</td><td>VALTER LOUREN&#199;O</td><td>2005-01-13</td><td>334</td><td>0</td></tr>
+<tr><td>0</td><td>778</td><td>3</td><td>0</td><td>Simone Silva Belo</td><td>2005-01-13</td><td>335</td><td>0</td></tr>
+<tr><td>0</td><td>2019</td><td>3</td><td>0</td><td>LAURINEI VIANA</td><td>2005-01-15</td><td>336</td><td>0</td></tr>
+<tr><td>0</td><td>2233</td><td>3</td><td>0</td><td>HERMES DANTAS DE ARAUJO</td><td>2005-01-24</td><td>337</td><td>0</td></tr>
+<tr><td>0</td><td>2237</td><td>4</td><td>0</td><td>Marcelo Rogerio Pinto</td><td>2005-01-26</td><td>338</td><td>0</td></tr>
+<tr><td>0</td><td>2213</td><td>2</td><td>0</td><td>Evelyn Raquel Carvalho</td><td>2005-01-31</td><td>339</td><td>0</td></tr>
+<tr><td>0</td><td>2247</td><td>1</td><td>0</td><td>LUCIANO LABRES</td><td>2005-01-31</td><td>340</td><td>0</td></tr>
+<tr><td>0</td><td>2246</td><td>4</td><td>0</td><td>ANDREIA CRISTIANE DALLABONA</td><td>2005-01-31</td><td>341</td><td>0</td></tr>
+<tr><td>0</td><td>1237</td><td>4</td><td>0</td><td>WILSON DE CAMPOS OLIVEIRA</td><td>2005-02-02</td><td>342</td><td>0</td></tr>
+<tr><td>0</td><td>2256</td><td>4</td><td>0</td><td>AM&#201;RICA SANTOS ALVES</td><td>2005-02-02</td><td>343</td><td>0</td></tr>
+<tr><td>0</td><td>2254</td><td>3</td><td>0</td><td>Dilvete Terezinha Ceccon Ribeiro</td><td>2005-02-04</td><td>344</td><td>0</td></tr>
+<tr><td>0</td><td>2260</td><td>4</td><td>0</td><td>ROSALINA SATIKO HAYASHI YAMAZAKI</td><td>2005-02-06</td><td>345</td><td>0</td></tr>
+<tr><td>0</td><td>2269</td><td>1</td><td>0</td><td>Jeferson Kaminski</td><td>2005-02-12</td><td>346</td><td>0</td></tr>
+<tr><td>0</td><td>2268</td><td>1</td><td>0</td><td>Daniela Maria Gora</td><td>2005-02-12</td><td>347</td><td>0</td></tr>
+<tr><td>0</td><td>2302</td><td>4</td><td>0</td><td>Nefertiti Sacramento Ferreira</td><td>2005-02-19</td><td>348</td><td>1</td></tr>
+<tr><td>0</td><td>2079</td><td>2</td><td>0</td><td>Luis Gustavo schaumloffel</td><td>2005-02-19</td><td>349</td><td>0</td></tr>
+<tr><td>0</td><td>2286</td><td>3</td><td>0</td><td>Carlos Gilberto Kaiser</td><td>2005-02-20</td><td>350</td><td>0</td></tr>
+<tr><td>0</td><td>529</td><td>1</td><td>0</td><td>Rosangela Maria Tulio</td><td>2005-02-28</td><td>351</td><td>0</td></tr>
+<tr><td>0</td><td>2324</td><td>3</td><td>0</td><td>Telma Satel Branco</td><td>2005-03-06</td><td>352</td><td>0</td></tr>
+<tr><td>0</td><td>2354</td><td>4</td><td>1</td><td>Heitor Daguer</td><td>2005-03-10</td><td>353</td><td>0</td></tr>
+<tr><td>0</td><td>2316</td><td>2</td><td>0</td><td>Kaciane Dalmaso Favero</td><td>2005-03-11</td><td>354</td><td>0</td></tr>
+<tr><td>0</td><td>1802</td><td>2</td><td>0</td><td>Alcide Cazarin</td><td>2005-03-13</td><td>355</td><td>0</td></tr>
+<tr><td>0</td><td>2379</td><td>3</td><td>0</td><td>ALEVIR LOUREN&#199;O JUNIOR</td><td>2005-03-18</td><td>356</td><td>0</td></tr>
+<tr><td>0</td><td>2376</td><td>1</td><td>0</td><td>MARIAM GARAU</td><td>2005-03-19</td><td>357</td><td>0</td></tr>
+<tr><td>0</td><td>2376</td><td>1</td><td>0</td><td>NORMAN BALDWIN</td><td>2005-03-19</td><td>358</td><td>0</td></tr>
+<tr><td>0</td><td>2383</td><td>1</td><td>0</td><td>RUY FRANCISCO THOMAZ</td><td>2005-03-19</td><td>359</td><td>0</td></tr>
+<tr><td>0</td><td>2383</td><td>1</td><td>0</td><td>MARIA INES BOHN THOMAZ</td><td>2005-03-19</td><td>360</td><td>0</td></tr>
+<tr><td>0</td><td>2383</td><td>1</td><td>0</td><td>VANESSA ALESSANDRA THOMAZ BOIKO</td><td>2005-03-19</td><td>361</td><td>0</td></tr>
+<tr><td>0</td><td>2383</td><td>1</td><td>0</td><td>ESTEFANO BOIKO JUNIOR</td><td>2005-03-19</td><td>362</td><td>0</td></tr>
+<tr><td>0</td><td>2384</td><td>1</td><td>0</td><td>PATRICIA THOMAZ</td><td>2005-03-19</td><td>363</td><td>0</td></tr>
+<tr><td>0</td><td>1237</td><td>4</td><td>0</td><td>WILSON DE CAMPOS OLIVEIRA</td><td>2005-03-24</td><td>364</td><td>0</td></tr>
+<tr><td>0</td><td>2256</td><td>1</td><td>0</td><td>AM&#201;RICA SANTOS ALVES</td><td>2005-03-24</td><td>365</td><td>0</td></tr>
+<tr><td>0</td><td>2294</td><td>2</td><td>0</td><td>Maria Odette Botelho Niemeyer</td><td>2005-03-28</td><td>366</td><td>0</td></tr>
+<tr><td>0</td><td>1506</td><td>3</td><td>0</td><td>Adriana Campos De Vasconcellos Capella</td><td>2005-04-29</td><td>367</td><td>0</td></tr>
+<tr><td>0</td><td>1107</td><td>3</td><td>0</td><td>SILVANA AP&#170; DE FRAN&#199;A ROCHA</td><td>2005-05-05</td><td>368</td><td>0</td></tr>
+<tr><td>0</td><td>1106</td><td>4</td><td>0</td><td>GIOVANE FERREIRA SIQUEIRA</td><td>2005-05-05</td><td>369</td><td>0</td></tr>
+<tr><td>0</td><td>2547</td><td>1</td><td>0</td><td>JANIELE MUNCKE</td><td>2005-05-13</td><td>370</td><td>0</td></tr>
+<tr><td>0</td><td>2547</td><td>1</td><td>0</td><td>MATEUS RHIAN MUNCKE JOAHANN</td><td>2005-05-13</td><td>371</td><td>0</td></tr>
+<tr><td>0</td><td>2541</td><td>4</td><td>0</td><td>MARCOS TEODORO SCHEREMETA</td><td>2005-05-13</td><td>372</td><td>0</td></tr>
+<tr><td>0</td><td>2548</td><td>3</td><td>0</td><td>JANAI O. F. DE FARIAS</td><td>2005-05-13</td><td>373</td><td>0</td></tr>
+<tr><td>0</td><td>2109</td><td>2</td><td>0</td><td>Rafael Carvalho Lara</td><td>2005-05-14</td><td>374</td><td>0</td></tr>
+<tr><td>0</td><td>2589</td><td>4</td><td>0</td><td>ELTON RODRIGO TRAMONTIN</td><td>2005-05-27</td><td>375</td><td>0</td></tr>
+<tr><td>0</td><td>2615</td><td>2</td><td>0</td><td>ROSELI MENDES DOMINGOS</td><td>2005-06-03</td><td>376</td><td>0</td></tr>
+<tr><td>0</td><td>2131</td><td>2</td><td>0</td><td>EDIVALDO LOPES PEIXOTO</td><td>2005-06-04</td><td>377</td><td>0</td></tr>
+<tr><td>0</td><td>2695</td><td>2</td><td>0</td><td>VANIA GLAUCE MARIA</td><td>2005-06-23</td><td>380</td><td>0</td></tr>
+<tr><td>0</td><td>2674</td><td>1</td><td>0</td><td>SERGIO RICARDO TRANCOSO OGIBOWSKI</td><td>2005-06-29</td><td>381</td><td>0</td></tr>
+<tr><td>0</td><td>53</td><td>2</td><td>0</td><td>Jose Cesario Neto</td><td>2005-07-02</td><td>382</td><td>0</td></tr>
+<tr><td>0</td><td>2730</td><td>2</td><td>0</td><td>Alberto Shinohara</td><td>2005-07-07</td><td>383</td><td>0</td></tr>
+<tr><td>0</td><td>2737</td><td>1</td><td>0</td><td>SUSI AKEMI K TAKASHIMA</td><td>2005-07-07</td><td>384</td><td>0</td></tr>
+<tr><td>0</td><td>2159</td><td>2</td><td>0</td><td>SILVIO CARVALHO</td><td>2005-07-07</td><td>385</td><td>0</td></tr>
+<tr><td>0</td><td>2744</td><td>3</td><td>0</td><td>ADEMIR ANTONIO ZANELATTO</td><td>2005-07-11</td><td>386</td><td>0</td></tr>
+<tr><td>0</td><td>2719</td><td>4</td><td>0</td><td>CARLOS ALBERTO DA SILVA GON&#199;ALVES</td><td>2005-07-14</td><td>387</td><td>0</td></tr>
+<tr><td>0</td><td>1505</td><td>3</td><td>0</td><td>Jackson Cleber Tavares</td><td>2005-07-16</td><td>388</td><td>0</td></tr>
+<tr><td>0</td><td>2769</td><td>3</td><td>0</td><td>CLEONIR DO NASCIMENTO</td><td>2005-07-19</td><td>389</td><td>0</td></tr>
+<tr><td>0</td><td>2768</td><td>2</td><td>0</td><td>Ana Claudia B Petz</td><td>2005-07-19</td><td>390</td><td>0</td></tr>
+<tr><td>0</td><td>2765</td><td>2</td><td>0</td><td>Marcos Braun Burger</td><td>2005-07-26</td><td>391</td><td>0</td></tr>
+<tr><td>0</td><td>2812</td><td>2</td><td>0</td><td>MARIA DO CARMO QUARTIN DE LIMA</td><td>2005-07-27</td><td>392</td><td>0</td></tr>
+<tr><td>0</td><td>2771</td><td>4</td><td>0</td><td>MARIO LUIZ SCHUBERT MEIRA</td><td>2005-07-28</td><td>393</td><td>0</td></tr>
+<tr><td>0</td><td>2808</td><td>2</td><td>0</td><td>Elisangela de Almeida Otto</td><td>2005-07-29</td><td>394</td><td>0</td></tr>
+<tr><td>0</td><td>2832</td><td>3</td><td>0</td><td>Karina Carvalho Nunes</td><td>2005-08-05</td><td>395</td><td>0</td></tr>
+<tr><td>0</td><td>2833</td><td>4</td><td>1</td><td>Chie Kuroda</td><td>2005-08-05</td><td>396</td><td>0</td></tr>
+<tr><td>1</td><td>2840</td><td>1</td><td>1</td><td>Antonio Maganhotte Junior</td><td>2005-08-09</td><td>398</td><td>1</td></tr>
+<tr><td>4</td><td>2841</td><td>4</td><td>0</td><td>Juliana Klemba Felipe</td><td>2005-08-12</td><td>399</td><td>0</td></tr>
+<tr><td>4</td><td>2843</td><td>1</td><td>0</td><td>Bruno Santos de Ara&#250;jo Fernandes</td><td>2005-08-12</td><td>400</td><td>0</td></tr>
+<tr><td>2</td><td>2844</td><td>2</td><td>0</td><td>Maria da Graca Rodrigues</td><td>2005-08-12</td><td>401</td><td>0</td></tr>
+<tr><td>9</td><td>2856</td><td>4</td><td>0</td><td>ANGELA MARIA BOSQUETT</td><td>2005-08-20</td><td>402</td><td>4</td></tr>
+<tr><td>9</td><td>2857</td><td>4</td><td>0</td><td>CELSO SILVA JUNIOR</td><td>2005-08-20</td><td>403</td><td>4</td></tr>
+<tr><td>9</td><td>2858</td><td>4</td><td>0</td><td>ANDREA BOSQUETT</td><td>2005-08-20</td><td>404</td><td>5</td></tr>
+<tr><td>9</td><td>2824</td><td>1</td><td>0</td><td>TIAGO SALLES ESCARASSATTI</td><td>2005-08-20</td><td>405</td><td>0</td></tr>
+<tr><td>10</td><td>2837</td><td>1</td><td>0</td><td>Claudia mori</td><td>2005-08-23</td><td>406</td><td>0</td></tr>
+<tr><td>10</td><td>2837</td><td>1</td><td>0</td><td>Raquel Akemi Mori</td><td>2005-08-23</td><td>407</td><td>0</td></tr>
+<tr><td>10</td><td>2828</td><td>3</td><td>0</td><td>HIDEU MORI</td><td>2005-08-23</td><td>408</td><td>0</td></tr>
+<tr><td>10</td><td>2828</td><td>1</td><td>0</td><td>Jos&#233; Saez Neto</td><td>2005-08-23</td><td>409</td><td>0</td></tr>
+<tr><td>2</td><td>2866</td><td>2</td><td>0</td><td>PRISCILA SANTOS MARTINELLI</td><td>2005-08-27</td><td>410</td><td>0</td></tr>
+<tr><td>9</td><td>2875</td><td>4</td><td>0</td><td>Daniele Silveira</td><td>2005-08-30</td><td>411</td><td>0</td></tr>
+<tr><td>9</td><td>2876</td><td>3</td><td>0</td><td>Edson Alves de Lima</td><td>2005-08-30</td><td>412</td><td>0</td></tr>
+<tr><td>9</td><td>2883</td><td>4</td><td>1</td><td>FABIO FERNANDES HERNANDES</td><td>2005-08-31</td><td>413</td><td>0</td></tr>
+<tr><td>9</td><td>2874</td><td>4</td><td>0</td><td>DANILO LUIZ PAGNONCELLI</td><td>2005-09-01</td><td>414</td><td>0</td></tr>
+<tr><td>9</td><td>2879</td><td>2</td><td>0</td><td>Diogo Luiz Muller Pagnoncelli</td><td>2005-09-01</td><td>415</td><td>0</td></tr>
+<tr><td>9</td><td>2892</td><td>1</td><td>0</td><td>JAQUELINE SCHWAB</td><td>2005-09-02</td><td>416</td><td>0</td></tr>
+<tr><td>9</td><td>2882</td><td>3</td><td>0</td><td>ADRIANA GUIMARAES BOIKO</td><td>2005-09-03</td><td>417</td><td>0</td></tr>
+<tr><td>10</td><td>2347</td><td>2</td><td>0</td><td>JOS&#201; EZILDO DE ALBUQUERQUE ARRUDA</td><td>2005-09-07</td><td>418</td><td>0</td></tr>
+<tr><td>8</td><td>2941</td><td>4</td><td>0</td><td>JOSE LUIZ SERRAO SCHEFFER</td><td>2005-09-23</td><td>419</td><td>0</td></tr>
+<tr><td>8</td><td>2949</td><td>3</td><td>0</td><td>LUIZ ROBERTO GON&#199;ALVES</td><td>2005-09-26</td><td>420</td><td>0</td></tr>
+<tr><td>8</td><td>2948</td><td>1</td><td>0</td><td>ANTONIO CARLOS SCHMAL MOREIRA</td><td>2005-09-26</td><td>421</td><td>0</td></tr>
+<tr><td>7</td><td>2951</td><td>1</td><td>0</td><td>Fabiola Santos</td><td>2005-09-29</td><td>422</td><td>0</td></tr>
+<tr><td>7</td><td>1917</td><td>2</td><td>0</td><td>DIEGO ROMERO</td><td>2005-09-30</td><td>423</td><td>2</td></tr>
+<tr><td>8</td><td>2954</td><td>2</td><td>0</td><td>Domingos dos Santos</td><td>2005-10-01</td><td>424</td><td>0</td></tr>
+<tr><td>7</td><td>2988</td><td>3</td><td>0</td><td>Anna Denize David Paiva</td><td>2005-10-11</td><td>425</td><td>0</td></tr>
+<tr><td>8</td><td>2985</td><td>3</td><td>0</td><td>S&#201;RGIO RICARDO REGUTA</td><td>2005-10-13</td><td>426</td><td>0</td></tr>
+<tr><td>8</td><td>3005</td><td>4</td><td>0</td><td>ANTONIO CARLOS DE LIMA</td><td>2005-10-13</td><td>427</td><td>0</td></tr>
+<tr><td>10</td><td>2155</td><td>1</td><td>0</td><td>LEANDRO FARIA</td><td>2005-10-29</td><td>428</td><td>0</td></tr>
+<tr><td>8</td><td>1448</td><td>1</td><td>0</td><td>LUIZA HELENA FLORENTINO PONTES</td><td>2005-11-03</td><td>429</td><td>0</td></tr>
+<tr><td>8</td><td>3080</td><td>2</td><td>0</td><td>Everson Zanini</td><td>2005-11-05</td><td>430</td><td>0</td></tr>
+<tr><td>4</td><td>3024</td><td>3</td><td>0</td><td>ANNIBAL LEANDRO VIEIRA</td><td>2005-11-07</td><td>431</td><td>0</td></tr>
+<tr><td>9</td><td>3173</td><td>4</td><td>1</td><td>NILTON CARDOSO DE LIMA</td><td>2005-11-09</td><td>432</td><td>0</td></tr>
+<tr><td>9</td><td>3174</td><td>2</td><td>1</td><td>HILTON CARDOSO DE ILMA JUNIOR</td><td>2005-11-09</td><td>433</td><td>0</td></tr>
+<tr><td>8</td><td>3175</td><td>2</td><td>1</td><td>FL&#193;VIO WAGNER NIEMEYER</td><td>2005-11-09</td><td>434</td><td>0</td></tr>
+<tr><td>9</td><td>1570</td><td>1</td><td>1</td><td>Rosil&#233;a Bahia Herrmann</td><td>2005-11-09</td><td>435</td><td>0</td></tr>
+<tr><td>10</td><td>3186</td><td>1</td><td>0</td><td>TANIA APARECIDA ALMEIDA DA CRUZ ZIGNANI</td><td>2005-11-10</td><td>436</td><td>0</td></tr>
+<tr><td>10</td><td>3186</td><td>1</td><td>0</td><td>ODAIR APARECIDO ZIGNANI</td><td>2005-11-10</td><td>437</td><td>0</td></tr>
+<tr><td>7</td><td>3183</td><td>4</td><td>1</td><td>MARCOS ROGERIO DOS SANTOS</td><td>2005-11-11</td><td>438</td><td>0</td></tr>
+<tr><td>9</td><td>3175</td><td>2</td><td>1</td><td>FRANK WELLINGTON BOBATO</td><td>2005-11-11</td><td>439</td><td>0</td></tr>
+<tr><td>7</td><td>536</td><td>4</td><td>0</td><td>Marcos Abilio Bosquetti</td><td>2005-11-11</td><td>440</td><td>0</td></tr>
+<tr><td>10</td><td>3226</td><td>2</td><td>0</td><td>NATASCHA PETRY LIGOCKI</td><td>2005-11-12</td><td>441</td><td>0</td></tr>
+<tr><td>10</td><td>3390</td><td>1</td><td>0</td><td>RICARDO GASPAR TEIXEIRA</td><td>2005-11-29</td><td>442</td><td>0</td></tr>
+<tr><td>6</td><td>3438</td><td>2</td><td>0</td><td>MARIO EUCLIDES MANDICAJU BITENCOURT</td><td>2005-12-08</td><td>443</td><td>0</td></tr>
+<tr><td>7</td><td>3436</td><td>2</td><td>0</td><td>Wilson Moreira di Martini Junior</td><td>2005-12-09</td><td>444</td><td>0</td></tr>
+<tr><td>6</td><td>3452</td><td>2</td><td>0</td><td>Wellington da Silva Guimar&#227;es</td><td>2005-12-14</td><td>445</td><td>0</td></tr>
+<tr><td>7</td><td>3450</td><td>3</td><td>0</td><td>MARIA FERNANDA AMARAL GON&#199;ALVES</td><td>2005-12-15</td><td>446</td><td>0</td></tr>
+<tr><td>7</td><td>3437</td><td>1</td><td>0</td><td>RICARDO PACHECO</td><td>2005-12-21</td><td>447</td><td>0</td></tr>
+<tr><td>7</td><td>3468</td><td>1</td><td>0</td><td>WALESKA CHAGAS SIECZKOWSKI</td><td>2005-12-21</td><td>448</td><td>0</td></tr>
+<tr><td>9</td><td>3465</td><td>1</td><td>0</td><td>MARIA DE LOURDES DE MORAIS</td><td>2005-12-21</td><td>449</td><td>0</td></tr>
+<tr><td>9</td><td>3483</td><td>2</td><td>0</td><td>ADRIANO WUTKE</td><td>2005-12-23</td><td>450</td><td>0</td></tr>
+<tr><td>9</td><td>3482</td><td>4</td><td>0</td><td>HILARIO WUTKE</td><td>2005-12-23</td><td>451</td><td>0</td></tr>
+<tr><td>9</td><td>3491</td><td>2</td><td>0</td><td>MARCIA DE FATIMA PRODO</td><td>2005-12-26</td><td>452</td><td>0</td></tr>
+<tr><td>9</td><td>3492</td><td>2</td><td>0</td><td>JOSE FILIZOLA MASCARENHAS DE ABREU</td><td>2005-12-26</td><td>453</td><td>0</td></tr>
+<tr><td>7</td><td>3500</td><td>4</td><td>0</td><td>HENRIQUE AFONSO KLEIN</td><td>2005-12-27</td><td>454</td><td>4</td></tr>
+<tr><td>9</td><td>3508</td><td>1</td><td>0</td><td>ELINEO ZANON</td><td>2005-12-28</td><td>455</td><td>0</td></tr>
+<tr><td>9</td><td>2169</td><td>4</td><td>0</td><td>THIAGO BARBOSA CORDEIRO</td><td>2005-12-29</td><td>456</td><td>3</td></tr>
+<tr><td>7</td><td>3554</td><td>2</td><td>0</td><td>DANIEL ALEXANDRE BARBOSA</td><td>2006-01-03</td><td>457</td><td>0</td></tr>
+<tr><td>7</td><td>3464</td><td>2</td><td>0</td><td>ENEIDA DESIREE SALGADO</td><td>2006-01-04</td><td>458</td><td>2</td></tr>
+<tr><td>7</td><td>3570</td><td>3</td><td>0</td><td>FABIO RAMOS DE MELLO</td><td>2006-01-05</td><td>459</td><td>0</td></tr>
+<tr><td>7</td><td>2313</td><td>4</td><td>0</td><td>Tamara Nudelman Rosenberg</td><td>2006-01-05</td><td>460</td><td>0</td></tr>
+<tr><td>9</td><td>3560</td><td>2</td><td>0</td><td>MARISA MASCARENHAS RABELLO PETINELLI</td><td>2006-01-07</td><td>461</td><td>0</td></tr>
+<tr><td>9</td><td>3561</td><td>4</td><td>0</td><td>THERESA CHRISTINA DE OLIVEIRA RABELL</td><td>2006-01-07</td><td>462</td><td>0</td></tr>
+<tr><td>7</td><td>2546</td><td>4</td><td>0</td><td>LELIS TERENCIO DE LARA</td><td>2006-01-10</td><td>463</td><td>0</td></tr>
+<tr><td>6</td><td>2261</td><td>3</td><td>0</td><td>RICARDO CLAUDIO LOEBINGER</td><td>2006-01-13</td><td>464</td><td>0</td></tr>
+<tr><td>7</td><td>3610</td><td>4</td><td>0</td><td>Elisabete Grande Fribe</td><td>2006-01-13</td><td>465</td><td>4</td></tr>
+<tr><td>6</td><td>3623</td><td>3</td><td>0</td><td>MARIA DO ROCIO CORREA DE ARAUJO</td><td>2006-01-18</td><td>466</td><td>0</td></tr>
+<tr><td>7</td><td>3644</td><td>3</td><td>0</td><td>ISABEL NIVARDO DIAS</td><td>2006-01-19</td><td>467</td><td>1</td></tr>
+<tr><td>7</td><td>3647</td><td>4</td><td>0</td><td>Tassiana Neves Teixeira</td><td>2006-01-20</td><td>468</td><td>0</td></tr>
+<tr><td>9</td><td>223</td><td>2</td><td>0</td><td>Lauro  Schulka</td><td>2006-01-21</td><td>469</td><td>1</td></tr>
+<tr><td>9</td><td>3642</td><td>3</td><td>0</td><td>Edson Luiz Ferreira</td><td>2006-01-21</td><td>470</td><td>2</td></tr>
+<tr><td>6</td><td>3601</td><td>2</td><td>0</td><td>Eliane Rufindno Barbosa</td><td>2006-01-23</td><td>471</td><td>0</td></tr>
+<tr><td>9</td><td>3666</td><td>2</td><td>0</td><td>SERGIO ESTEVES DA SILVA</td><td>2006-01-25</td><td>472</td><td>0</td></tr>
+<tr><td>9</td><td>3658</td><td>3</td><td>0</td><td>MARCILENE FERREIRA NUNES</td><td>2006-01-25</td><td>473</td><td>0</td></tr>
+<tr><td>6</td><td>3650</td><td>4</td><td>0</td><td>FERNANDO CESAR DA VEIGA NETO</td><td>2006-01-26</td><td>474</td><td>5</td></tr>
+<tr><td>9</td><td>3653</td><td>2</td><td>0</td><td>Ricardo Kosovski</td><td>2006-01-26</td><td>475</td><td>0</td></tr>
+<tr><td>9</td><td>3669</td><td>4</td><td>0</td><td>Valeria Barrim Chandoha</td><td>2006-01-26</td><td>476</td><td>0</td></tr>
+<tr><td>9</td><td>2262</td><td>2</td><td>0</td><td>LUCIANO CALHEIRO CALDAS</td><td>2006-01-26</td><td>477</td><td>0</td></tr>
+<tr><td>7</td><td>3597</td><td>4</td><td>0</td><td>AYRTON MARGARIDO</td><td>2006-01-26</td><td>478</td><td>0</td></tr>
+<tr><td>6</td><td>3700</td><td>3</td><td>0</td><td>IVONE MARIA BRAGA</td><td>2006-02-02</td><td>479</td><td>0</td></tr>
+<tr><td>9</td><td>2543</td><td>2</td><td>1</td><td>RICARDO VAZ MANNRICH</td><td>2006-02-03</td><td>480</td><td>0</td></tr>
+<tr><td>7</td><td>3698</td><td>3</td><td>0</td><td>MARCIO AUGUSTO VILELA PINTO</td><td>2006-02-03</td><td>481</td><td>0</td></tr>
+<tr><td>6</td><td>3249</td><td>3</td><td>0</td><td>ARMIN TEUBER</td><td>2006-02-06</td><td>482</td><td>0</td></tr>
+<tr><td>7</td><td>3654</td><td>1</td><td>0</td><td>ROBERTO STINGLIN SCHULTZ</td><td>2006-02-08</td><td>483</td><td>0</td></tr>
+<tr><td>7</td><td>3710</td><td>3</td><td>0</td><td>ALICE Y. KATAYAMA</td><td>2006-02-09</td><td>484</td><td>0</td></tr>
+<tr><td>9</td><td>3720</td><td>1</td><td>0</td><td>ISAAC FELIX CHUEKE</td><td>2006-02-14</td><td>485</td><td>1</td></tr>
+<tr><td>9</td><td>2919</td><td>2</td><td>0</td><td>FABIANO MILANO FRITZEN</td><td>2006-02-25</td><td>486</td><td>0</td></tr>
+<tr><td>7</td><td>3776</td><td>3</td><td>0</td><td>PAULO ROGERIO BATISTA NUNES</td><td>2006-02-27</td><td>487</td><td>0</td></tr>
+<tr><td>7</td><td>3790</td><td>3</td><td>0</td><td>EGON JOSE DE ASSIS</td><td>2006-03-08</td><td>488</td><td>0</td></tr>
+<tr><td>9</td><td>3801</td><td>2</td><td>0</td><td>Lorival Antunes da Silva Junior</td><td>2006-03-09</td><td>489</td><td>0</td></tr>
+<tr><td>9</td><td>3807</td><td>2</td><td>0</td><td>MARCELO ALBERTO REESE RIGHETTI</td><td>2006-03-17</td><td>490</td><td>1</td></tr>
+<tr><td>9</td><td>3875</td><td>2</td><td>0</td><td>Leonice da Aparecida Tonon</td><td>2006-04-12</td><td>491</td><td>0</td></tr>
+<tr><td>7</td><td>3907</td><td>3</td><td>1</td><td>SERGIO LUIZ MANZONI NUNES</td><td>2006-04-20</td><td>492</td><td>0</td></tr>
+<tr><td>24</td><td>3921</td><td>3</td><td>0</td><td>MARGARETE DE SOUZA FERREIRA</td><td>2006-04-25</td><td>493</td><td>0</td></tr>
+<tr><td>9</td><td>3912</td><td>2</td><td>0</td><td>KELLYN CHRISTINE BRICH</td><td>2006-04-27</td><td>494</td><td>0</td></tr>
+<tr><td>32</td><td>3936</td><td>3</td><td>0</td><td>LAURO POMIANOSKI JUNIOR</td><td>2006-04-27</td><td>495</td><td>0</td></tr>
+<tr><td>9</td><td>3930</td><td>2</td><td>0</td><td>LUCIO MARCELO CHRESTENZEN</td><td>2006-04-28</td><td>496</td><td>0</td></tr>
+<tr><td>7</td><td>3932</td><td>2</td><td>0</td><td>DORVALINO PEREIRA DE OLIVEIRA</td><td>2006-04-28</td><td>497</td><td>0</td></tr>
+<tr><td>9</td><td>3931</td><td>2</td><td>0</td><td>ANDERSON LUIZ DE FRAN&#199;A E SILVA</td><td>2006-05-02</td><td>498</td><td>0</td></tr>
+<tr><td>30</td><td>3966</td><td>2</td><td>0</td><td>MARCIA PAULA MUSIAL</td><td>2006-05-11</td><td>499</td><td>0</td></tr>
+<tr><td>9</td><td>3979</td><td>2</td><td>0</td><td>ANDREWS CLADSTON DEMANTOVA</td><td>2006-05-26</td><td>500</td><td>0</td></tr>
+<tr><td>7</td><td>3996</td><td>3</td><td>0</td><td>DIEGO ALEXANDRE STAVITZKI</td><td>2006-06-06</td><td>501</td><td>0</td></tr>
+<tr><td>23</td><td>3995</td><td>2</td><td>0</td><td>Jon Willian Taber</td><td>2006-06-07</td><td>502</td><td>0</td></tr>
+<tr><td>7</td><td>3993</td><td>2</td><td>0</td><td>Danyelle Gon&#231;alves</td><td>2006-06-08</td><td>503</td><td>0</td></tr>
+<tr><td>23</td><td>4026</td><td>4</td><td>0</td><td>JEFFERSON HEDER DOS REIS</td><td>2006-06-23</td><td>504</td><td>0</td></tr>
+<tr><td>23</td><td>2716</td><td>2</td><td>0</td><td>MARCOS CLEMENTE DUPCHAK</td><td>2006-06-25</td><td>505</td><td>0</td></tr>
+<tr><td>23</td><td>4062</td><td>2</td><td>0</td><td>PATRICIA CORREA DA SILVA</td><td>2006-07-12</td><td>506</td><td>0</td></tr>
+<tr><td>7</td><td>4073</td><td>3</td><td>0</td><td>PAULO CESAR FRANTIOZI</td><td>2006-07-12</td><td>507</td><td>0</td></tr>
+<tr><td>23</td><td>1357</td><td>4</td><td>1</td><td>JOS&#201; ELIAS DE CLARIS</td><td>2006-07-13</td><td>508</td><td>0</td></tr>
+<tr><td>23</td><td>4078</td><td>4</td><td>1</td><td>Nelson Rodrigues</td><td>2006-07-13</td><td>509</td><td>0</td></tr>
+<tr><td>7</td><td>4094</td><td>1</td><td>0</td><td>KARINA C. F. PEREIRA</td><td>2006-07-13</td><td>510</td><td>0</td></tr>
+<tr><td>23</td><td>4104</td><td>1</td><td>0</td><td>CANDIDA MARIA BARROS DE CASTRO RIBEIRO</td><td>2006-07-19</td><td>511</td><td>0</td></tr>
+<tr><td>7</td><td>2736</td><td>3</td><td>0</td><td>IVANI PEDRO</td><td>2006-07-21</td><td>512</td><td>0</td></tr>
+<tr><td>23</td><td>4148</td><td>4</td><td>0</td><td>SIMONE FINAU</td><td>2006-07-22</td><td>513</td><td>0</td></tr>
+<tr><td>23</td><td>4128</td><td>2</td><td>0</td><td>CASSSIA CANDIDA DA SILVA</td><td>2006-07-22</td><td>514</td><td>0</td></tr>
+<tr><td>23</td><td>4208</td><td>3</td><td>1</td><td>SALETE JAKELINE SILVANI</td><td>2006-08-12</td><td>515</td><td>0</td></tr>
+<tr><td>7</td><td>4307</td><td>4</td><td>0</td><td>Edwin Ramos de Camargo</td><td>2006-09-05</td><td>516</td><td>2</td></tr>
+<tr><td>7</td><td>4290</td><td>4</td><td>0</td><td>DENISE DE OLIVEIRA BOVOLIN</td><td>2006-09-05</td><td>517</td><td>0</td></tr>
+<tr><td>7</td><td>4291</td><td>1</td><td>0</td><td>LUIS ANTONIO PADILHA MOREIRA</td><td>2006-09-05</td><td>518</td><td>0</td></tr>
+<tr><td>7</td><td>4304</td><td>3</td><td>0</td><td>CLAUDIA SANTORO RIBEIRO HALUH</td><td>2006-09-06</td><td>519</td><td>0</td></tr>
+<tr><td>7</td><td>4303</td><td>4</td><td>0</td><td>PAULO S&#201;RGIO GAMERO PRADO</td><td>2006-09-08</td><td>520</td><td>1</td></tr>
+<tr><td>7</td><td>4297</td><td>4</td><td>0</td><td>MARCOS ANTONIO AZEVEDO GRABOWSKI</td><td>2006-09-09</td><td>521</td><td>0</td></tr>
+<tr><td>7</td><td>4298</td><td>1</td><td>0</td><td>OSVALDINA AZEVEDO GRABOWSKI</td><td>2006-09-09</td><td>522</td><td>0</td></tr>
+<tr><td>7</td><td>4318</td><td>2</td><td>0</td><td>RAFAEL ROLIM NUNES</td><td>2006-09-11</td><td>523</td><td>0</td></tr>
+<tr><td>34</td><td>40</td><td>1</td><td>0</td><td>Iber&#234; Merhy Correia</td><td>2006-10-07</td><td>524</td><td>0</td></tr>
+<tr><td>34</td><td>4352</td><td>3</td><td>0</td><td>DIRLEI JOSE KUCARZ</td><td>2006-10-15</td><td>525</td><td>0</td></tr>
+<tr><td>34</td><td>4353</td><td>1</td><td>0</td><td>TIAGO FERREIRA SENA</td><td>2006-10-15</td><td>526</td><td>0</td></tr>
+<tr><td>34</td><td>4352</td><td>1</td><td>0</td><td>FERNANDO JOSE CANTELE</td><td>2006-10-15</td><td>527</td><td>0</td></tr>
+<tr><td>34</td><td>4466</td><td>1</td><td>0</td><td>EDENILSON WICHINESCKI</td><td>2006-11-03</td><td>528</td><td>0</td></tr>
+<tr><td>37</td><td>4540</td><td>1</td><td>0</td><td>Jair Elmo Correia</td><td>2006-11-14</td><td>529</td><td>0</td></tr>
+<tr><td>37</td><td>3554</td><td>2</td><td>0</td><td>DANIEL ALEXANDRE BARBOSA</td><td>2006-12-04</td><td>530</td><td>2</td></tr>
+<tr><td>37</td><td>4609</td><td>3</td><td>0</td><td>CESAR AUGUSTO RODRIGUES CRAVO</td><td>2006-12-12</td><td>531</td><td>0</td></tr>
+<tr><td>37</td><td>1613</td><td>2</td><td>0</td><td>MARIA CLAUDIA BASTOS GALLINA</td><td>2006-12-21</td><td>532</td><td>0</td></tr>
+<tr><td>37</td><td>4734</td><td>2</td><td>0</td><td>LEONARDO PORTILHO</td><td>2007-01-18</td><td>533</td><td>0</td></tr>
+<tr><td>37</td><td>4792</td><td>4</td><td>0</td><td>IGOR CESAR RAMOS DE ANDRADE</td><td>2007-01-19</td><td>534</td><td>0</td></tr>
+<tr><td>37</td><td>4818</td><td>4</td><td>0</td><td>LUCIANA UKACHINSKI KRAUCHUKI</td><td>2007-01-19</td><td>535</td><td>0</td></tr>
+<tr><td>37</td><td>4817</td><td>3</td><td>0</td><td>VALDICEIA REGINA FAUST</td><td>2007-01-19</td><td>536</td><td>0</td></tr>
+<tr><td>37</td><td>4811</td><td>2</td><td>1</td><td>LUIS CLAUDIO DE OLIVEIRA PEREIRA</td><td>2007-01-19</td><td>537</td><td>0</td></tr>
+<tr><td>37</td><td>4774</td><td>4</td><td>0</td><td>ELISANDRA GALVAO DOS SANTOS BONUGLI</td><td>2007-01-20</td><td>538</td><td>0</td></tr>
+<tr><td>37</td><td>4956</td><td>1</td><td>0</td><td>LUIZ ALBERTO PUCCI</td><td>2007-02-19</td><td>539</td><td>0</td></tr>
+<tr><td>37</td><td>5036</td><td>2</td><td>0</td><td>RITA DE CASSIA DALL ALBA WENCESLAU</td><td>2007-03-10</td><td>540</td><td>0</td></tr>
+<tr><td>33</td><td>5069</td><td>2</td><td>1</td><td>NEUZA LUIZA DA SILVA XAVIER</td><td>2007-03-14</td><td>541</td><td>0</td></tr>
+<tr><td>33</td><td>3966</td><td>2</td><td>0</td><td>MARCIA PAULA MUSIAL</td><td>2007-04-21</td><td>542</td><td>0</td></tr>
+<tr><td>33</td><td>1800</td><td>2</td><td>0</td><td>Alba Maria Burigo de Souza</td><td>2007-08-12</td><td>543</td><td>0</td></tr>
+</tbody>
+</table>
+</body>
+</html>

